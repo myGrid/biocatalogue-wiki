@@ -1,0 +1,89 @@
+Date: Tuesday 27th Jan 2008
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending =====
+**Manchester:** Franck, Jits, Carole
+
+**EBI:** Thomas, Eric, Rodrigo
+
+
+
+===== Apologies =====
+
+
+
+===== Minuting =====
+
+
+
+====== Agenda ======
+
+   * Hackathon summary
+
+   * Actions from the last telcon 
+
+  * Progress with the pilot 
+
+  * Progress of [[development:20_questions|20 Questions]] (to clarify user requirements)
+
+  * Updating the BioCatalogue public wiki and announcement to friends list
+
+  * AOB
+
+===== Actions from Previous Meeting ===== 
+
+  * Franck : Provide an example of a semantically annotated service(using the SAWSDL model).
+  * Thomas: investigate 'home' link on the public wiki.
+  * Jits/Thomas/Eric: create developer section on the wiki.
+  * Franck: read through the revised requirements and planning doc and update the private wiki roadmap accordingly. Then after approval copy it to the public wiki.
+  * Franck: make an announcement about latest changes to schedule to the friends list.
+  * Action all : update the 20 questions section on the wiki 
+  * Action Jits/Eric : Investigate how to add some form of classification of the services
+
+  * Action David/Carole/Steve : Review the wiki pages intended for general public. It is important to free the public wiki of internal terminology
+  * Action Franck : Put up a service classification draft on the wiki
+  * Action Jits/Thomas/Eric/Franck : Prepare for the hackathon in Manchester. 
+
+====== Minutes ======
+Minutes from the hackathon: [[Meetings:F2F Jan 09|F2F Hackathon 21-22-23 January @ Manchester]] \\
+Other item we discuss during the meeting: 
+  * Test scripts need to go through a validation process 
+  * Policy Identification needed in relation: 
+    * taking down service
+    * curation best practices
+    * tagging best practices
+    * annotation best practices
+  * Annotation
+    * how mutable should annotations be? Allow user to make changes to their own annotations. Avoid over engineering the functionality
+    * delegation of privileges to other users to make changes to services(annotations) owned by the delegator
+    * most important thing is to keep the annotations up to date, that is what most users care about
+  * 20 Questions
+    * questions on statistics in the system, how many...
+    * questions on metrics, status
+    * question relations
+    * questions on editing and maintaining (house keeping) entries in the catalogue
+  * Advisory board meeting in March @ Manchester
+
+===== New Actions =====
+
+===== Upcoming Meetings ===== 
+ 
+
+
+===== AOB =====
+
+  * There will be a demo at the Strategic Advisory Board Meeting in February
+  * There is potential for collaboration with Microsoft. Initial discussions on-going with Carole
+  * Jit doing a presentation on BioCatalogue on the 29th  
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-01-20|Phone Conference Meeting on Jan 20 2009]] 
+
+Next meeting:  [[Meetings:PhoneConf:2009-02-03|Phone Conference Meeting on Feb 03 2009]]

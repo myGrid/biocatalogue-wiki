@@ -1,0 +1,49 @@
+Date: Monday 24th May 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** 
+
+**EBI:**
+
+===== Apologies =====
+
+====== Agenda ======
+
+  * Actions from the last telecom
+  * Progress report 
+     * Review of Monitoring 
+     * Review of Curation
+     * Service update checker     
+  * Publicity/outreach
+      * EMBRACE service provider workshop
+      * Franck is going to present the Function Unit paper at IEEE
+      * Jits is going to ISMB 2010
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting =====   
+  * Jits/Mannie: Write API and Mass curation tool via spreadsheets ** ongoing** 
+  * Eric: Investigate how to filter 'dead' service based on how long they are down. **completed** 
+  * Eric to check if the BioCatalogue https certificate has been activated **completed** 
+  * Eric to write down his latest idea about monitoring **ongoing** 
+
+===== Upcoming Meetings =====  
+
+===== AOB ===== 
+
+===== Minutes =====
+
+
+Previous meeting: [[Meetings:PhoneConf:2010-05-17|Phone Conference Meeting on May 17 2010]]
+
+Next meeting: [[Meetings:PhoneConf:2010-06-07|Phone Conference Meeting on Jun 07 2010]]

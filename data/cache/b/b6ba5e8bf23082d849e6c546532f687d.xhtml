@@ -1,0 +1,71 @@
+
+
+
+<h1><a name="caching" id="caching">Caching</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/nkallen/cache-money/tree/master" class="urlextern" target="_blank" title="http://github.com/nkallen/cache-money/tree/master"  rel="nofollow">cache-money</a> gem to handle AR caching</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Caching" [1-119] -->
+<h2><a name="dev_setup" id="dev_setup">Dev Setup</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> You will need to install <a href="http://www.danga.com/memcached/" class="urlextern" target="_blank" title="http://www.danga.com/memcached/"  rel="nofollow">memcached</a> (you can also install a cluster of these).</div>
+</li>
+<li class="level1"><div class="li"> Then update your /lib/initializers/biocat_local.rb with caching settings from /lib/initializers/biocat_local.rb.pre</div>
+</li>
+<li class="level1"><div class="li"> Copy /config/memcache.yml.pre to /config/memcache.yml and configure accordingly</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Dev Setup" [120-466] -->
+<h2><a name="info" id="info">Info</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Info" [467-484] -->
+<h3><a name="cache-money" id="cache-money">cache-money</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="http://magicscalingsprinkles.wordpress.com/2008/12/11/introducing-cache-money/" class="urlextern" target="_blank" title="http://magicscalingsprinkles.wordpress.com/2008/12/11/introducing-cache-money/"  rel="nofollow">http://magicscalingsprinkles.wordpress.com/2008/12/11/introducing-cache-money/</a></div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "cache-money" [485-591] -->
+<h3><a name="misc" id="misc">Misc</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="http://thewebfellas.com/blog/2008/6/9/rails-2-1-now-with-better-integrated-caching" class="urlextern" target="_blank" title="http://thewebfellas.com/blog/2008/6/9/rails-2-1-now-with-better-integrated-caching"  rel="nofollow">http://thewebfellas.com/blog/2008/6/9/rails-2-1-now-with-better-integrated-caching</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://guides.rubyonrails.org/caching_with_rails.html" class="urlextern" target="_blank" title="http://guides.rubyonrails.org/caching_with_rails.html"  rel="nofollow">http://guides.rubyonrails.org/caching_with_rails.html</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.jefdean.com/2008/7/5/rails-cache-memcached-development-mode-and-offline-cache-invalidation" class="urlextern" target="_blank" title="http://www.jefdean.com/2008/7/5/rails-cache-memcached-development-mode-and-offline-cache-invalidation"  rel="nofollow">http://www.jefdean.com/2008/7/5/rails-cache-memcached-development-mode-and-offline-cache-invalidation</a></div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Misc" [592-859] -->
+<h2><a name="clearing_caches" id="clearing_caches">Clearing Caches</a></h2>
+<div class="level2">
+
+<p>
+
+To clear page and fragment caches:
+
+</p>
+<pre class="code">rake tmp:cache:clear RAILS_ENV=production</pre>
+
+<p>
+
+To clear memcached:
+
+</p>
+<pre class="code">rake cache:clear_memcache RAILS_ENV=production</pre>
+
+</div>
+<!-- SECTION "Clearing Caches" [860-] -->

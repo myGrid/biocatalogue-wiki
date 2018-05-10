@@ -1,0 +1,63 @@
+Date: Thursday 19th Feb 2009
+
+Time: 2:00-15:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending ===== 
+**
+This meeting was posponed to Monday 23/02/09**
+
+**Manchester:** 
+
+**EBI:** 
+
+
+
+===== Apologies =====
+Jits, Rodrigo, Carole
+
+
+
+====== Agenda ======
+
+   * Actions from the last telcon
+   * Possible collaboration with Microsoft-meeting with Rudy
+   * Report from meeting with QBIOS team
+   * BioCatalogue plan revision- are we all ok with that? 
+   * Service Finder- what can we learn from?  http://demo.service-finder.eu/index 
+
+  * Progress with the pilot 
+    * Test infrastructure setup at EBI
+    * Progress of [[development:20_questions|20 Questions]]
+
+  * AOB - meeting dates moved to Mondays 3-4pm 
+  
+
+===== Actions from Previous Meeting ===== 
+
+  * Jits/Thomas/Eric: create developer section on the wiki. 
+  * Franck: start an FAQ on the wiki
+  
+
+====== Minutes ======
+
+===== New Actions =====
+
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+  * There will be a demo at the Strategic Advisory Board Meeting in February
+ 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-02-03|Phone Conference Meeting on Feb 03 2009]] 
+
+Next meeting:

@@ -1,0 +1,183 @@
+
+
+
+<h1><a name="mass_curatordeveloper_information" id="mass_curatordeveloper_information">Mass Curator: Developer Information</a></h1>
+<div class="level1">
+
+<p>
+
+The Mass Curator tool is developed using JRuby<sup><a href="#fn__1" name="fnt__1" id="fnt__1" class="fn_top">1)</a></sup> (v 1.5.1) and is licenced under <a href="http://www.gnu.org/licenses/gpl.html" class="urlextern" target="_blank" title="http://www.gnu.org/licenses/gpl.html"  rel="nofollow">GPL 3</a>.
+</p>
+
+<p>
+This project utilizes BioCatalogue&#039;s read <acronym title="Application Programming Interface">API</acronym> to GET all the services, and the write <acronym title="Application Programming Interface">API</acronym> to POST the annotations data.
+</p>
+
+<p>
+<strong>IMPORTANT</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> The project was only put into testing under the Mac <acronym title="Operating System">OS</acronym> X platform (10.5).  Testing on other platforms is <strong>required</strong>.</div>
+</li>
+<li class="level1"><div class="li"> Only Excel 97-2004 workbooks (.xls) are currently supported.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Mass Curator: Developer Information" [1-521] -->
+<h2><a name="building_mass_curator" id="building_mass_curator">Building Mass Curator</a></h2>
+<div class="level2">
+
+<p>
+
+The source code for this project is hosted on GitHub at <a href="http://github.com/myGrid/BioCatalogue-Mass-Curator" class="urlextern" target="_blank" title="http://github.com/myGrid/BioCatalogue-Mass-Curator"  rel="nofollow">http://github.com/myGrid/BioCatalogue-Mass-Curator</a>
+</p>
+
+<p>
+To build the project locally, checkout a copy of the the source code from the repository by running <code>git clone git://github.com/myGrid/BioCatalogue-Mass-Curator.git</code>
+</p>
+
+<p>
+The packaging for this tool is handled by the JRuby gem - RAWR<sup><a href="#fn__2" name="fnt__2" id="fnt__2" class="fn_top">2)</a></sup>.  To install this, run <code>sudo jruby -S gem install rawr</code>
+</p>
+
+<p>
+Mass Curator is dependant on the following libraries (all of which are included in the source&#039;s <code>lib</code> folder as JAR archives).
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>BrowserLauncher</code> <sup><a href="#fn__3" name="fnt__3" id="fnt__3" class="fn_top">3)</a></sup> (Java library)</div>
+</li>
+<li class="level1"><div class="li"> <code>spreadsheet</code> <sup><a href="#fn__4" name="fnt__4" id="fnt__4" class="fn_top">4)</a></sup> (JRuby gem)</div>
+</li>
+<li class="level1"><div class="li"> <code>parseconfig</code> <sup><a href="#fn__5" name="fnt__5" id="fnt__5" class="fn_top">5)</a></sup> (JRuby gem)</div>
+</li>
+<li class="level1"><div class="li"> <code>libxml-jruby</code> <sup><a href="#fn__6" name="fnt__6" id="fnt__6" class="fn_top">6)</a></sup> (JRuby gem)</div>
+</li>
+<li class="level1"><div class="li"> <code>json-jruby</code> <sup><a href="#fn__7" name="fnt__7" id="fnt__7" class="fn_top">7)</a></sup> (JRuby gem)</div>
+</li>
+</ul>
+
+<p>
+The application&#039;s configuration is done via a <code>mass-curator.conf</code> file.  This needs to be placed in the directory you wish to run the application from.  If no <code>mass-curator.conf</code> file is found, the default settings will be used, but they will not be saved.  To use the default settings and allow for the preferences to be saved, place an empty <code>mass-curator.conf</code> file in the application&#039;s directory.  You can also specify your own settings by placing something like this into the file: <sup><a href="#fn__8" name="fnt__8" id="fnt__8" class="fn_top">8)</a></sup>
+</p>
+<pre class="code">[application]
+biocatalogue-hostname = &quot;http://sandbox.biocatalogue.org&quot;
+services-per-page = 15
+search-results-per-page = 10
+
+[spreadsheet]
+include-help = false</pre>
+
+<p>
+
+If you wish to run the application using the uncompiled source, run the command <code>./run-dev.sh</code> from your working directory.
+</p>
+
+<p>
+To build an executable JAR archive, run <code>rake rawr:jar</code> from your working directory.  Make sure you are using the JRuby version of <code>rake</code>, otherwise the build will fail.  <em>There is no need to run <code>rawr install</code> as the configuration files come as part of the source.</em>
+</p>
+
+<p>
+To execute the created JAR from the top level working directory, run <code>java -jar package/jar/BioCatalogue-Mass-Curator.jar</code>
+</p>
+
+<p>
+For a complete list of commands, run <code>rake -T</code>
+</p>
+
+</div>
+<!-- SECTION "Building Mass Curator" [522-2810] -->
+<h2><a name="project_format" id="project_format">Project Format</a></h2>
+<div class="level2">
+
+<p>
+
+The code for the project is structured in the following manner:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>project root</code></div>
+<ul>
+<li class="level2"><div class="li"> <code>lib</code> <em>(contains all the Java libraries and gems required in JARs)</em></div>
+</li>
+<li class="level2"><div class="li"> <code>resources</code> <em>(contains all the images and other data resources)</em></div>
+</li>
+<li class="level2"><div class="li"> <code>package</code> <em>(where all the builds go by default, this is exempt from source control)</em></div>
+</li>
+<li class="level2"><div class="li"> <code>src</code> <em>(contains the actual code to drive the application)</em></div>
+<ul>
+<li class="level3"><div class="li"> <code>events</code> <em>(where event handlers and action listeners live)</em></div>
+</li>
+<li class="level3"><div class="li"> <code>models</code> <em>(the data models used by the application such as <code>Service</code>)</em></div>
+</li>
+<li class="level3"><div class="li"> <code>modules</code> <em>(common code used by the application, e.g error handling and logging, error/information dialogs, etc)</em></div>
+</li>
+<li class="level3"><div class="li"> <code>org</code> <em>(the is where the RAWR autogenerated application launcher file lives)</em></div>
+</li>
+<li class="level3"><div class="li"> <code>ui</code> <em>(all of the user interface components i.e. panels and windows)</em></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+Apart for the <code>run-dev.sh</code> script, the <code>Licence</code>, and the <code>ReadMe.rdoc</code> file, the top level of the <code>project root</code> contains 2 other files of interest: <code>build_configuration.rb</code> and <code>Rakefile</code>.  These 2 files are used by RAWR, together with <code>src/org/rubyforge/rawr/Main.rb</code> to drive the builds and execution of the compiled binaries.
+</p>
+
+<p>
+The top level of the <code>src</code> directory contains 3 important files: <code>main.rb</code>, <code>application_requires.rb</code> and <code>application_constants.rb</code>; <code>main.rb</code> serves as an entry point for the program, <code>application_constants.rb</code> declares which files and classes are needed by the application, and <code>application_requires.rb</code> does the actual loading of the JRuby application, libraries, and user configuration settings into memory.  Mass Curator uses eager loading for Java classes.  Lazy loading the Java classes increases the startup time by only a fraction of a second;  loading of all classes before hand, allows for slightly cleaner and manageable code.  As far as application events go, loading is done as needed.
+</p>
+
+<p>
+Logging facilities are provided by the logger from Ruby&#039;s core library, writing to <code>mass-curator.log</code> which appears in the same directory as the running instance.  For development purposes, the log&#039;s output can be redirected to the standard output (console) by providing the executable with the argument <code>–log-to-stdout</code> before launch (see <code>run-dev.sh</code>).
+</p>
+
+</div>
+<!-- SECTION "Project Format" [2811-5122] -->
+<h2><a name="data_model_and_relationships" id="data_model_and_relationships">Data Model and Relationships</a></h2>
+<div class="level2">
+
+<p>
+
+Mass Curator&#039;s data model consists of 3 objects: <code>Service</code>, <code>ServiceComponent</code>, and <code>ServiceComponentIO</code>.  <code>Service</code> is analogous to the <code>Service</code> model in the BioCatalogue.  Each <code>Service</code> has a collection of <code>ServiceComponent</code>s in the form of a hash mapping <code>id</code> ⇒ <code>ServiceComponent</code>.  A <code>ServiceComponent</code> is analogous to a BioCatalogue <acronym title="Simple Object Access Protocol">SOAP</acronym> operation and a REST endpoint<sup><a href="#fn__9" name="fnt__9" id="fnt__9" class="fn_top">9)</a></sup>.  A <code>ServiceComponent</code> contains hashes for the “inputs” and “outputs”, both mapping <code>id</code> to <code>ServiceComponentIO</code>.  <code>ServiceComponentIO</code> is anagolous to <acronym title="Simple Object Access Protocol">SOAP</acronym> inputs, <acronym title="Simple Object Access Protocol">SOAP</acronym> outputs, and REST input parameters<sup><a href="#fn__10" name="fnt__10" id="fnt__10" class="fn_top">10)</a></sup> in the BioCatalogue.
+</p>
+
+<p>
+<code>Service</code>s are only created as needed, and likewise for <code>ServiceComponent</code>s and <code>ServiceComponentIO</code>s.  When an <acronym title="Application Programming Interface">API</acronym> call is made to the BioCatalogue to retrieve some services, only the <code>Service</code> object is instantiated.  The <code>Service</code> model has a <code>fetchComponents</code> method, which will instantiate and build the relationships between the objects in the data model tree.  Each model tree contains a list of <code>descriptions</code>; this list is also populated when <code>fetchComponents</code> is called.
+</p>
+
+</div>
+<!-- SECTION "Data Model and Relationships" [5123-6351] -->
+<h2><a name="caching" id="caching">Caching</a></h2>
+<div class="level2">
+
+<p>
+
+<code>Services</code> are cached, and the cache is frequently updated to contain all the information available about that service; if <code>Service#fetchComponents</code> is called, the cached <code>Service</code> will contain all the descriptions and the relationships, otherwise it will just be the <code>Service</code> entry with the basic information.  The instance method <code>fetchComponents</code> is usually called when exporting <code>Service</code>s to a spreadsheet.  Caches have been implemented for the service browser and the current search results; a cache for all searches made may be required.
+
+</p>
+
+</div>
+<!-- SECTION "Caching" [6352-] --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" name="fn__1" class="fn_bot">1)</a></sup> 
+<a href="http://jruby.org" class="urlextern" target="_blank" title="http://jruby.org"  rel="nofollow">http://jruby.org</a></div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" name="fn__2" class="fn_bot">2)</a></sup> 
+<a href="http://rawr.rubyforge.org" class="urlextern" target="_blank" title="http://rawr.rubyforge.org"  rel="nofollow">http://rawr.rubyforge.org</a></div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" name="fn__3" class="fn_bot">3)</a></sup> 
+<a href="http://browserlaunch2.sourceforge.net" class="urlextern" target="_blank" title="http://browserlaunch2.sourceforge.net"  rel="nofollow">http://browserlaunch2.sourceforge.net</a></div>
+<div class="fn"><sup><a href="#fnt__4" id="fn__4" name="fn__4" class="fn_bot">4)</a></sup> 
+<a href="http://spreadsheet.rubyforge.org" class="urlextern" target="_blank" title="http://spreadsheet.rubyforge.org"  rel="nofollow">http://spreadsheet.rubyforge.org</a></div>
+<div class="fn"><sup><a href="#fnt__5" id="fn__5" name="fn__5" class="fn_bot">5)</a></sup> 
+<a href="http://rubyforge.org/projects/parseconfig" class="urlextern" target="_blank" title="http://rubyforge.org/projects/parseconfig"  rel="nofollow">http://rubyforge.org/projects/parseconfig</a></div>
+<div class="fn"><sup><a href="#fnt__6" id="fn__6" name="fn__6" class="fn_bot">6)</a></sup> 
+<a href="http://github.com/dylanvaughn/libxml-jruby" class="urlextern" target="_blank" title="http://github.com/dylanvaughn/libxml-jruby"  rel="nofollow">http://github.com/dylanvaughn/libxml-jruby</a></div>
+<div class="fn"><sup><a href="#fnt__7" id="fn__7" name="fn__7" class="fn_bot">7)</a></sup> 
+<a href="http://json-jruby.rubyforge.org" class="urlextern" target="_blank" title="http://json-jruby.rubyforge.org"  rel="nofollow">http://json-jruby.rubyforge.org</a></div>
+<div class="fn"><sup><a href="#fnt__8" id="fn__8" name="fn__8" class="fn_bot">8)</a></sup> 
+A full list of configuration options will be made available soon</div>
+<div class="fn"><sup><a href="#fnt__9" id="fn__9" name="fn__9" class="fn_bot">9)</a></sup> 
+, <sup><a href="#fnt__10" id="fn__10" name="fn__10" class="fn_bot">10)</a></sup> 
+not currently implemented</div>
+</div>

@@ -1,0 +1,210 @@
+
+
+
+<h2><a name="about_embrace_test_scripts" id="about_embrace_test_scripts">About EMBRACE Test Scripts</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "About EMBRACE Test Scripts" [1-40] -->
+<h3><a name="statistics" id="statistics">Statistics</a></h3>
+<div class="level3">
+
+<p>
+
+From the database dump of June 2009
+
+<table border="2">
+<th> Script Type </th>
+<th>Quantity</th>
+
+<tr> 
+   <td>DAS</td>
+   <td>37</td>
+</tr>
+
+<tr> 
+   <td>ReST</td>
+   <td>4</td>
+</tr>
+
+<tr> 
+   <td>Utopia</td>
+   <td>8</td>
+</tr>
+
+<tr> 
+   <td>Java</td>
+   <td>9</td>
+</tr>
+
+<tr> 
+   <td>Perl</td>
+   <td>799</td>
+</tr>
+
+<tr> 
+   <td>Python</td>
+   <td>64</td>
+</tr>
+
+<tr> 
+   <td>Ruby</td>
+   <td>0</td>
+</tr>
+
+</table>
+
+
+
+</p>
+
+</div>
+<!-- SECTION "Statistics" [41-499] -->
+<h3><a name="libraries" id="libraries">Libraries</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong><acronym title="Practical Extraction and Report Language">Perl</acronym></strong></div>
+<ul>
+<li class="level2"><div class="li"> <acronym title="Extensible Markup Language">XML</acronym>::LibXML</div>
+</li>
+<li class="level2"><div class="li"> <acronym title="Extensible Markup Language">XML</acronym>::Compile</div>
+</li>
+<li class="level2"><div class="li"> <acronym title="Extensible Markup Language">XML</acronym>::Compile::WSDL11 </div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+The EMBRACE test server is believed to be running <a href="http://search.cpan.org/~markov/XML-Compile-SOAP-0.78/" class="urlextern" target="_blank" title="http://search.cpan.org/~markov/XML-Compile-SOAP-0.78/"  rel="nofollow">version 0.78</a> of the WSDL11 library. This library versioning jumped from 0.78 to 2.00 in 2008. Although version 0.78 only dates from October 2008, there has been a significant re-write of this library since then, causing many clients to break against 2.0x versions. The library is currently at <a href="http://search.cpan.org/~markov/XML-Compile-SOAP-2.08/" class="urlextern" target="_blank" title="http://search.cpan.org/~markov/XML-Compile-SOAP-2.08/"  rel="nofollow">version 2.08</a>, which is the version that is installed on the test machine here at EBI. Some of these changes to the library are affecting scripts from the EMBRACE test suite. The question is what do we do in the face of client dependencies on library versions?
+</p>
+
+<p>
+It is not desirable or sometimes not even practical to maintain different versions of the same library on the test machines. We could therefore decide on versions of libraries against which clients should be written, publish these and hope people will be willing to migrate scripts that need migration and stick to those version while we only support them. Or we could take on the job to fix the scripts that have version dependencies now and in the future. This might turn out to be a substantial job depending on how often version changes to libraries occur that break clients and how often we need to upgrade the test machines. 
+</p>
+
+<p>
+Currently all Soaplab clients in the embrace registry suffer from this version dependency problem. I believe as part of the process of importing these scripts into BioCatalogue, we should also provide a fix to the scripts that are broken for the library dependency reasons given above. But going forward, we need a better solution to the problem. Generally , people will write clients against the libraries they work with and it will be great if they could write extra clients just to be in sync with the registry.
+</p>
+
+<p>
+For the particular WSDL11 version problem, Hamish(EBI) has produced some <a href="http://www.ebi.ac.uk/Tools/webservices/tutorials/perl#xmlcompilesoap" class="urlextern" target="_blank" title="http://www.ebi.ac.uk/Tools/webservices/tutorials/perl#xmlcompilesoap"  rel="nofollow">tutorial</a> on how to write clients that work with both 0.7x and 2.0x versions. We could follow that pattern to fix the current scripts. Hamish has also pointed me to some <a href="http://www.perl.com/pub/a/2003/03/18/only.html" class="urlextern" target="_blank" title="http://www.perl.com/pub/a/2003/03/18/only.html"  rel="nofollow">article</a> on how multiple versions of perl libraries could be managed.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Python</strong></div>
+<ul>
+<li class="level2"><div class="li"> PyXML</div>
+</li>
+<li class="level2"><div class="li"> fpconst</div>
+</li>
+<li class="level2"><div class="li"> ZSI</div>
+</li>
+<li class="level2"><div class="li"> SOAPpy</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Libraries" [500-2967] -->
+<h3><a name="database" id="database">Database</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="server" id="server">Server</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Mysql</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="tables_used" id="tables_used">Tables Used</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> DE_ws_test</div>
+</li>
+</ul>
+<pre class="code">
+  +----------------+------------------+------+-----+---------+-------+
+| Field          | Type             | Null | Key | Default | Extra |
++----------------+------------------+------+-----+---------+-------+
+| nid            | int(10) unsigned | NO   | PRI | 0       |       | 
+| snid           | int(10) unsigned | NO   |     | 0       |       | 
+| type_id        | int(10) unsigned | NO   |     | 0       |       | 
+| locality_id    | int(10) unsigned | NO   |     | 0       |       | 
+| binding_id     | int(10) unsigned | NO   |     | 0       |       | 
+| sample_request | text             | YES  |     | NULL    |       | 
+| package        | longblob         | YES  |     | NULL    |       | 
+| operation      | text             | YES  |     | NULL    |       | 
+| test_status    | int(11)          | NO   |     | NULL    |       | 
+| isrunning      | tinyint(4)       | NO   |     | 0       |       | 
+| daterunning    | datetime         | YES  |     | NULL    |       | 
+| isdeleted      | tinyint(4)       | NO   |     | 0       |       | 
+| datedeleted    | datetime         | YES  |     | NULL    |       | 
+| pseudo         | tinyint(1)       | NO   |     | 0       |       | 
+| wsdl_operation | varchar(256)     | NO   |     | NULL    |       | 
++----------------+------------------+------+-----+---------+-------+
+
+</pre>
+<ul>
+<li class="level1"><div class="li"> DE_ws_Service</div>
+</li>
+</ul>
+<pre class="code">
+ 
+  +----------------+------------------+------+-----+---------+-------+
+| Field          | Type             | Null | Key | Default | Extra |
++----------------+------------------+------+-----+---------+-------+
+| nid            | int(10) unsigned | NO   | PRI | 0       |       | 
+| version        | varchar(64)      | YES  |     | NULL    |       | 
+| url            | text             | YES  |     | NULL    |       | 
+| wsdl_url       | text             | YES  |     | NULL    |       | 
+| das_url        | text             | YES  |     | NULL    |       | 
+| rest_url       | text             | YES  |     | NULL    |       | 
+| service_status | int(11)          | NO   |     | NULL    |       | 
+| isdeleted      | tinyint(4)       | NO   |     | 0       |       | 
+| datedeleted    | datetime         | YES  |     | NULL    |       | 
++----------------+------------------+------+-----+---------+-------+
+
+</pre>
+<ul>
+<li class="level1"><div class="li"> DE_ws_testresults</div>
+</li>
+</ul>
+<pre class="code">
++-----------+------------+------+-----+---------+----------------+
+| Field     | Type       | Null | Key | Default | Extra          |
++-----------+------------+------+-----+---------+----------------+
+| result_id | bigint(20) | NO   | PRI | NULL    | auto_increment | 
+| tnid      | bigint(20) | YES  |     | NULL    |                | 
+| starttime | datetime   | YES  |     | NULL    |                | 
+| endtime   | datetime   | YES  |     | NULL    |                | 
+| result    | int(32)    | NO   |     | 0       |                | 
+| comments  | longblob   | YES  |     | NULL    |                | 
++-----------+------------+------+-----+---------+----------------+
+ 
+</pre>
+<ul>
+<li class="level1"><div class="li"> DE_ws_testevent</div>
+</li>
+</ul>
+<pre class="code">
+  
+   +------------------+---------+------+-----+---------+----------------+
+| Field            | Type    | Null | Key | Default | Extra          |
++------------------+---------+------+-----+---------+----------------+
+| event_id         | int(11) | NO   | PRI | NULL    | auto_increment | 
+| before_result_id | int(11) | NO   |     | NULL    |                | 
+| after_result_id  | int(11) | NO   |     | NULL    |                | 
++------------------+---------+------+-----+---------+----------------+
+
+
+</pre>
+
+</div>
+<!-- SECTION "Database" [2968-] -->

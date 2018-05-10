@@ -1,0 +1,61 @@
+Date: Monday 19th October 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** 
+
+
+**EBI:**
+
+===== Apologies =====
+
+
+===== Minuting =====
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Progress report 
+  * data model discussion report
+  * BBSRC report
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Jits: CLA proposal based on the Taverna one. 
+  * Eric: talk to Francois (the french team) about their service monitoring improvements. 
+  * ALL: add your Biocatalogue outreach on the wiki. 
+  * Franck: plan for focus group. 
+  * Franck: Send around 'who is doing what' for the BBSRC report
+
+===== Minutes ===== 
+
+
+===== New actions =====
+
+  
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+BBSRC report due 01/11/09
+
+BioCatalogue focus group meeting 29/10/09
+
+The BioCatalogue annotation jamboree 27/11/09
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-10-12|Phone Conference Meeting on Oct 12 2009]]
+
+Next meeting: [[Meetings:PhoneConf:2009-10-26|Phone Conference Meeting on Oct 26 2009]]

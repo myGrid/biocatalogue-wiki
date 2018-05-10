@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue public_staging</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2009-09-15T09:59:42+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:for_developers&amp;rev=1249487799&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:pilot&amp;rev=1238596903&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:pilot2&amp;rev=1233237799&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:roadmap&amp;rev=1251302712&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:for_developers&amp;rev=1249487799&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-08-05T16:56:39+01:00</dc:date>
+        <title>public_staging:for_developers</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public_staging:for_developers&amp;rev=1249487799&amp;do=diff</link>
+        <description>BioCatalogue on Rubyforge</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:pilot&amp;rev=1238596903&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-01T15:41:43+01:00</dc:date>
+        <title>public_staging:pilot</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public_staging:pilot&amp;rev=1238596903&amp;do=diff</link>
+        <description>The BioCatalogue is entering its pilot stage. This pilot is a “red beta”. After passing through a capability and stability review by our early adopters it will be launched as “green beta” for wider use in April 2009.
+
+The pilot will support a number of bioinformatics projects and networks, notably EMBRACE and BioSapiens who have temporarily produced service registries. These will be absorbed into the pilot and the BioCatalogue will then takeover from them.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:pilot2&amp;rev=1233237799&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-29T14:03:19+01:00</dc:date>
+        <title>public_staging:pilot2</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public_staging:pilot2&amp;rev=1233237799&amp;do=diff</link>
+        <description>BioCatalogue is entering its pilot stage. This pilot is currently in private beta. After passing through a capability and stability review by our early adopters it will be launched as a public beta for wider use in April 2009.
+
+The pilot will support a number of bioinformatics projects and networks, notably EMBRACE and BioSapiens who have temporarily produced service registries. These will be absorbed into the pilot and the BioCatalogue will then takeover from them.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public_staging:roadmap&amp;rev=1251302712&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-08-26T17:05:12+01:00</dc:date>
+        <title>public_staging:roadmap</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public_staging:roadmap&amp;rev=1251302712&amp;do=diff</link>
+        <description>Please note that the time scales listed are estimated. New requirements and changes driven by the user communities may affect features, delivery dates and schedule. 
+
+
+
+
+
+First quarter of 2009 (Jan - Mar)
+
+	*  Private pilot (private beta) - Basic SOAP services registration, discovery and annotation. Batch upload of soaplab services.</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,29 @@
+===== BioCatalogue Release , April 6th 2010 =====
+
+  * Previous release revision: 1814
+  * This release revision: 1829
+
+==== Steps To Take for Update ====
+
+In order...
+
+  * Run database update tasks:
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+  * Restart memcached servers
+
+=== Release Notes ===
+
+** Included in this release ** :
+
+  * Enabling service status change emails. Only to a select few(admins)
+  * Bug fixes

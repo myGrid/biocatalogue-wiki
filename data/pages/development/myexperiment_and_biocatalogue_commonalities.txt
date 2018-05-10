@@ -1,0 +1,87 @@
+=== Development Environment === 
+  * Ruby on Rails 
+    * **BioCatalogue Requires**
+    - version 2.0.x 
+    * **myExperiment Provides**
+    - version 1.x.x
+  * Ruby
+    * **BioCatalogue Requires**
+    - TBC
+    * **myExperiment Provides**
+    - TBC
+  * Web Servers and Configurations
+    * **BioCatalogue Requires**
+    - TBC
+    * **myExperiment Provides**
+    -
+
+
+=== User and User Administration ===
+
+  * Authentication
+    * **BioCatalogue Requires**
+    - authentication functionality through : OpenID /username + password combination
+    * **myExperiment Provides**
+    - authentication functionality through : OpenID /username + password combination
+    * **myExperiment Components implementing functionality**
+    - TBC
+    - TBC
+    - TBC
+
+  * Profile Management
+
+=== Service/Workflow Registration ===
+  * **BioCatalogue Requires**
+    - Service registion
+    - Registration duplication control
+
+  * **myExperiment Provides**
+    - TBC
+
+  * **myExperiment Components implementing functionality**
+    - TBC
+    - TBC
+    - TBC
+=== Service/Workflow Annotation ===
+  * **BioCatalogue Requires**
+    - Free form community annotation
+    - Controlled vocabulary annotations
+    - Annotation curation
+
+  * **myExperiment Provides**
+    - TBC
+
+  * **myExperiment Components implementing functionality**
+    - TBC
+    - TBC
+    - TBC
+
+=== Service/Workflow Versioning ===
+  * **BioCatalogue Requires**
+    - Service implementation versioning
+    - Service annotation versioning
+
+  * **myExperiment Provides**
+    - TBC
+
+  * **myExperiment Components implementing functionality**
+    - TBC
+    - TBC
+    - TBC
+
+=== Service/Workflow Search ===
+  * **BioCatalogue Requires**
+    - Full text search for services
+    - Multi-dimensional search filters
+
+  * **myExperiment Provides**
+    - Full text search for work flows
+
+  * **myExperiment Components implementing functionality**
+    - Solr server (java)
+    - acts_as_solr plugin(ruby)
+    -
+
+
+
+

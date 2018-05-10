@@ -1,0 +1,77 @@
+====== The Revised BioCatalogue Roadmap for 2010 ======
+
+Please note that the time scales listed are estimated. New requirements and changes driven by the user community may affect features, delivery dates and schedule.
+You can access the BioCatalogue 2009 roadmap here: [[Public Staging:roadmap2009|2009 roadmap]]
+
+
+===== First quarter of 2010 (Jan - Mar) =====
+
+  * **Public APIs (I)** - Basic RESTful APIs to BioCatalogue (mainly read).
+
+  * **Final merge of the EMBRACE registry**.
+
+  * **Service monitoring - testing** - Test scripts to test out service functionality can be provided by submitters and service providers. We will then run these regularly to provide us with metrics on the availability/reliability. A traffic light system (red, green, amber) gives users an at-a-glance view on status.
+
+  * **REST services support (II)** - Better support for REST services, with the ability to describe and annotate the exact Resources, Methods, Parameters and Representations of REST services.
+
+  * **Service changes monitoring** - Monitoring changes in the WSDLs of services and updating the BioCatalogue records and providing a log of changes.
+
+  * **UI improvements** - A revamped operations/inputs/outputs browser.
+
+  * **Integration with myExperiment (I)** - Services from BioCatalogue displayed in myExperiment so users of myExperiment can browse them. Also, workflows in myExperiment will have links to the relevant services, with metadata and monitoring status pulled from BioCatalogue.
+ 
+  * **Richer user profiles** - Ability to harvest your profile information from myExperiment.
+
+  * **Content curation** - Improvement of the quality of the content of the catalogue.
+
+  * **Outreach** - 
+
+
+===== Second quarter of 2010 (Apr - Jun) ===== 
+
+  * **Better service filtering and ranking** - Ability to filter or rank service based on annotations, quality, curators etc.
+ 
+  * **Service ownership** - Better management of who the provides a service and which people are maintainers / points of contacts.
+
+  * **Public APIs (II)** - More functional RESTful APIs to BioCatalogue (read and write).
+
+  * **Content curation** - Content quality improvement
+
+  * **Annotation status bar** - A status bar to display the overall annotation status of a service. The bar will take into account the description of the service, the description of its operations, inputs/outputs, example values etc.
+
+  * **myBioCatalogue** - Ability to set up your own local BioCatalogue registry.
+===== Third quarter 2010 (Jul - Sep) =====
+
+  * **Advanced search functionality (II)** - Similarity searches. Semantic search: search for services using terms from a defined ontology. Amazon-like search: people who searched for these also searched for those.
+
+  * **Integration with myExperiment (II)** - linking to (or displaying parts of) workflows from myExperiment that contain a service/operation in the BioCatalogue. Also, mining service connections from workflows in myExperiment.
+
+  * **Service mirrors** - Support for having mirrors (i.e.: many deployments of a service).  
+
+  * **Annotation Jamboree! (II)** - ISMB '10 or EBI Cambridge
+
+  * **Curation workbench/tools** - New curation tools designed for expert curators.
+
+  * **Better annotation and curation features (II)** - Curation reports, Curation assertions and more improvements for expert/community curators as well as casual annotators.
+
+  * **Integration with Taverna** - Ability to import Web Services and annotations to and from BioCatalogue and Taverna.
+
+===== Fourth quarter 2010 (Oct - Dec) =====
+
+  * **"Try it now" service functionality** - Ability to test and play with a service within the BioCatalogue interface before using it.
+
+  * **Semantic annotation support** - Ability to annotate service using ontologies and controlled vocabularies (possibly import/export semantically annotated services in different formats such as SAWSDL, SA-REST).
+
+  * **Notifications and news feeds per service** - RSS/ATOM feeds for services, providing information on all activity on a service within the BioCatalogue.
+
+  * **Better service availability reports** - Including filtering by service availability and "at-a-glance" summary reports for curators.
+
+  * **Curator stamp** - Members who contribute a lot to the curation of services in the BioCatalogue will have a curator badge display next to their name. 
+
+  * **Content curation** - Content quality improvement
+
+  * **Service versions** - Support for different versions of a service (i.e.: SOAP and REST versions of a single service).
+
+  * **Functional Units of Services**- Ability to present services in terms of their biological functions, biological data types and biological resources.
+
+  * **Content acquisition (III)** -  Better support for BioMoby and SADI services. Scavenge services from ProgrammableWeb and SeekDa.

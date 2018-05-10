@@ -1,0 +1,31 @@
+====== Favourites Plugin ======
+
+Available here: http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/favourites/
+
+IMPORTANT: you have to create a controller and model for favourites again in your app (but leaving them blank is fine though they can be used to extend the original ones from the plugin. AND use require_dependency (see examples of usage in BioCatalogue).
+
+  * Controller depends on the presence of login_required, logged_in? and current_user methods (these should be in your application controller). The current_user method MUST return nil if no user is currently logged in.
+
+  * Whilst running in development mode, if you get an error such as: "//A copy of ApplicationController has been removed from the module tree but is still active!//", then restart your server. This is due to the way Rails autoloads files in development mode, which affects the plugin and any extensions in the main app (eg: {app_root}/app/models/favourite.rb).
+
+
+===== Dependencies =====
+
+  * Gem: [[http://github.com/pluginaweek/plugin_test_helper/tree/master|plugin_test_helper]] (in order to run the tests for the plugin).
+
+
+===== Data Model =====
+
+==== Entities ====
+
+=== Favourites ===
+
+Table name: favourites
+
+Fields:
+  * id
+  * favouritable_type
+  * favouritable_id
+  * user_id
+  * created_at
+  * updated_at

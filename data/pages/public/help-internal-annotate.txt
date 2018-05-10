@@ -1,0 +1,53 @@
+==== This page is now deprecated. Please do not update! ====
+
+  * Anyone can describe, tag, recommend, comment on and annotate services
+  * Expert curators oversee the BioCatalogue
+  * The wider community participates in this effort through social curation
+
+
+====== Annotating Web Services in the BioCatalogue ======
+Web Service annotation can be defined as specific piece of metadata(text, image etc...) associated with a specific aspect of the Web Service. The annotations may be context specific and can be designed for human or for machine.\\
+The point of the annotation is to describe services and their components (operation, resources, inputs, outputs etc.) so that users or programs can find and use them.
+
+===== Who can annotate? =====
+Any registered user (Member) can annotate any service in the BioCatalogue whether they submitted it or not. Click [[http://test.biocatalogue.org/signup|here]] to become a Member of the BioCatalogue. \\
+Annotation can take the form of free text, tags, terms from selected ontology and examples values. 
+
+===== Web Service annotation best practice =====
+
+==== 1-Where is the documentation? ====
+The first thing to consider when you are annotating a service is to point to its documentation. 
+In the BioCatalogue you can use one or several URLs to point to the service documentation.  
+
+==== 2-What is it about? ==== 
+Define the purpose of the service. Clearly describe what the service does by giving clear and simple details of what the service is meant to do. 
+In the BioCatalogue use the description field provided. Add tags to the service. 
+
+==== 3-Can anyone use it? ====
+People will use a service if they find it useful. Are there any restrictions such as licenses, usage restriction applied to the service? Highlight them. 
+In the BioCatalogue use the required fields such as license, cost, usage restriction to highlight them. 
+
+==== 4-Who to contact? ====
+ 
+State the contact details of the provider of the service or the support team. This could be an e-mail address or a feedback form. 
+In the BioCatalogue use the contact info field. 
+
+==== 5-What does the operation do or what are the resources? ====
+Clearly describe each of the operations for SOAP services or the resources for REST services.  
+In the BioCatalogue, you can access SOAP Web Services operation description field from the operation tab. Note that you can tag individual operation. 
+
+==== 6-What is the input? ====
+Clearly describe each of the operations inputs and provide example values.  State the input formats. Note that example values are very important. They can later be used to test the service. 
+In the BioCatalogue use the fields provide for input description, data format and examples for these information. Note that you can tag individual inputs. 
+
+
+==== 7-What is the output? ====
+Clearly describe the output and provide examples. Also mention the format of the output. 
+In the BioCatalogue use the fields provide for output description, data format and examples for these information. Note that you can tag individual output. 
+
+===== Remarks =====
+  * You can assign one or more category to your services based on their functions.   
+  * You can give an alternative name to your service and promote it as a default service display name.
+  * You can update the service provider profile
+
+ 

@@ -1,0 +1,125 @@
+
+<h1 class="sectionedit1" id="caching">Caching</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <del><a href="http://github.com/nkallen/cache-money/tree/master" class="urlextern" target="_blank" title="http://github.com/nkallen/cache-money/tree/master"  rel="nofollow">cache-money</a> gem to handle AR caching</del></div>
+</li>
+<li class="level1"><div class="li"> <del><a href="http://github.com/onyx/cache-money/tree/master" class="urlextern" target="_blank" title="http://github.com/onyx/cache-money/tree/master"  rel="nofollow">onyx-cache-money</a></del></div>
+</li>
+</ul>
+
+<p>
+See the <strong><a href="http://biocatalogue.rubyforge.org/svn/trunk/lib/bio_catalogue/cache_helper.rb" class="urlextern" target="_blank" title="http://biocatalogue.rubyforge.org/svn/trunk/lib/bio_catalogue/cache_helper.rb"  rel="nofollow">cache_helper.rb file</a></strong> for more info
+</p>
+
+<p>
+Code has been put in place to allow both the ActionController cache (used by fragment and action caching) and the Rails.cache to use a consistent mechanism of accessing memcache (via a special, vendored version of memcache-client).
+</p>
+
+<p>
+ActionController caching only works properly in <strong>production</strong> mode. Bear this in mind when testing!
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Caching" [1-679] -->
+<h2 class="sectionedit2" id="dev_setup">Dev Setup</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> You will need to install <a href="http://www.danga.com/memcached/" class="urlextern" target="_blank" title="http://www.danga.com/memcached/"  rel="nofollow">memcached</a> (you can also install a cluster of these).</div>
+</li>
+<li class="level1"><div class="li"> Copy /config/memcache.yml.pre to /config/memcache.yml and configure accordingly.</div>
+</li>
+<li class="level1"><div class="li"> To disable memcache for any environment, leave the “servers: ” part blank in that environment&#039;s section.</div>
+<ul>
+<li class="level2"><div class="li"> <strong>IMPORTANT</strong>: it&#039;s absolutely crucial that you leave a space after “servers:” otherwise the app will refuse to start! (blame YAML!)</div>
+</li>
+<li class="level2"><div class="li"> NOTE: in some server set ups, using memcache for caching might actually be worse than just using in memory stores. If performance goes down when memcache is active then try it without memcache.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Dev Setup" [680-1355] -->
+<h2 class="sectionedit3" id="info">Info</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "Info" [1356-1373] -->
+<h3 class="sectionedit4" id="cache-money">cache-money</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <del><a href="http://magicscalingsprinkles.wordpress.com/2008/12/11/introducing-cache-money/" class="urlextern" target="_blank" title="http://magicscalingsprinkles.wordpress.com/2008/12/11/introducing-cache-money/"  rel="nofollow">Introducing Cache Money</a></del></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "cache-money" [1374-1519] -->
+<h3 class="sectionedit5" id="caching_in_rails">Caching in Rails</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="http://thewebfellas.com/blog/2008/6/9/rails-2-1-now-with-better-integrated-caching" class="urlextern" target="_blank" title="http://thewebfellas.com/blog/2008/6/9/rails-2-1-now-with-better-integrated-caching"  rel="nofollow">Rails 2.1: now with better integrated caching</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://guides.rubyonrails.org/caching_with_rails.html" class="urlextern" target="_blank" title="http://guides.rubyonrails.org/caching_with_rails.html"  rel="nofollow">Caching with Rails: An overview</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.jefdean.com/2008/7/5/rails-cache-memcached-development-mode-and-offline-cache-invalidation" class="urlextern" target="_blank" title="http://www.jefdean.com/2008/7/5/rails-cache-memcached-development-mode-and-offline-cache-invalidation"  rel="nofollow">Rails.cache: Memcached, development mode and offline cache invalidation</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.slideshare.net/guestac752c/caching-memcached-and-rails" class="urlextern" target="_blank" title="http://www.slideshare.net/guestac752c/caching-memcached-and-rails"  rel="nofollow">Caching, Memcached And Rails</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.ridingtheclutch.com/2009/01/08/cache-anything-easily-with-rails-and-memcached.html" class="urlextern" target="_blank" title="http://www.ridingtheclutch.com/2009/01/08/cache-anything-easily-with-rails-and-memcached.html"  rel="nofollow">Cache anything (easily) with Rails and memcached</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://info.michael-simons.eu/2009/03/23/phusion-passenger-and-memcache-client-revisited/" class="urlextern" target="_blank" title="http://info.michael-simons.eu/2009/03/23/phusion-passenger-and-memcache-client-revisited/"  rel="nofollow">Phusion Passenger and memcache-client revisited</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://kineticac.posterous.com/memcached-with-passenger-ree-and-the-memcache" class="urlextern" target="_blank" title="http://kineticac.posterous.com/memcached-with-passenger-ree-and-the-memcache"  rel="nofollow">memcached with passenger, ree, and the memcache-client gem</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://matt.blogs.it/entries/00002974.html" class="urlextern" target="_blank" title="http://matt.blogs.it/entries/00002974.html"  rel="nofollow">Expiring Rails cache from a background task</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "Caching in Rails" [1520-2603] -->
+<h2 class="sectionedit6" id="clearing_caches">Clearing Caches</h2>
+<div class="level2">
+
+<p>
+To clear page and fragment caches only:
+</p>
+<pre class="code">rake tmp:cache:clear RAILS_ENV=production</pre>
+
+<p>
+To clear memcached:
+</p>
+<ul>
+<li class="level1"><div class="li"> Restart ALL memcached instances.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "Clearing Caches" [2604-2777] -->
+<h2 class="sectionedit7" id="potential_issue_with_memcached_and_passenger">POTENTIAL ISSUE WITH MEMCACHED AND PASSENGER</h2>
+<div class="level2">
+
+<p>
+<a href="http://www.modrails.com/documentation/Users%20guide.html#_example_1_memcached_connection_sharing_harmful" class="urlextern" target="_blank" title="http://www.modrails.com/documentation/Users%20guide.html#_example_1_memcached_connection_sharing_harmful"  rel="nofollow">http://www.modrails.com/documentation/Users%20guide.html#_example_1_memcached_connection_sharing_harmful</a>
+</p>
+
+<p>
+A fix for this has been applied to the codebase in revision 761 onwards.
+</p>
+
+</div>
+<!-- EDIT7 SECTION "POTENTIAL ISSUE WITH MEMCACHED AND PASSENGER" [2778-3016] -->
+<h2 class="sectionedit8" id="troubleshooting">Troubleshooting</h2>
+<div class="level2">
+
+<p>
+If you get the exception message:
+</p>
+<pre class="code">can&#039;t convert Fixnum into String</pre>
+
+<p>
+… then the vendored memcache-client gem is not being used. The vendored memcache-client gem MUST be used and should be loaded at rails boot.
+</p>
+
+</div>
+<!-- EDIT8 SECTION "Troubleshooting" [3017-] -->

@@ -1,0 +1,7 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;annotation_attribute&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Description&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/annotation_attributes/1&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;identifier&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://purl.org/dc/elements/1.1/description&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

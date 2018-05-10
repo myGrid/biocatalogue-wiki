@@ -1,0 +1,97 @@
+Date: Wednesday 03rd February 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Franck, Jits, Manni
+
+**EBI:** Eric, Rodrigo
+
+===== Apologies =====
+
+
+===== Minuting =====
+
+
+====== Agenda ======
+
+  * Actions from the last telecom [SAB]
+  * Progress report
+     * Paper progress 
+     * Service execution
+  * Publicity/outreach 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+
+**Actions from SAB meeting**
+  * (Jits) To send to Mark detailed information on the APIs
+  * (All) Ensure that focus is placed on web2.0 aspects to demonstrate the utility of the service it provides. The APIs are keys elements to achieve that. 
+  * (SAB) To point to ontologies that can be used to provide richer annotation of services. 
+  * (Jits) To request data dump on service links in BioMoby in appropriate format. 
+  * (All) Revisit the Platinum, Gold, silver, bronze annotation model
+  * (All) To discuss with seekda team the minimum annotation required for services 
+  * (All) revisit MIAWS (Minimum Information About Web Service)
+  * (All) Talk to seekda about better integration between the BioCatalogue and seekda registry. 
+  * (Franck & Jonathan) BioCatalogue questionnaire to address who the BioCatalogue users are (Biologists, computer scientists, Bioinformaticians, etc)
+  * (All) Promote features like the APIs and the service testing harness and monitoring as advantages to registering services. 
+  * (All) Continue to promote BioCatalogue as the one stop shop for bio web service 
+
+**Actions last meeting**
+  * Possibility of exploring a REST modeling paper 
+  * Franck: Biological services to describe in different model: WSMO, SWASDL, FU, 
+  * Franck: Literature review for task mining
+  * Jits/Eric: Create a developer section on the wiki
+  * Franck: 5 key elements to bring in the community for annotation
+
+===== Minutes =====   
+**1. Need a content campaign - GUIDELINES.**
+  * Make annotation guideline more visible through the website 
+  * We need a developer section on the wiki 
+  * Provide WS annotation guidelines for service developers to encourage them to add annotations to WSDL. 
+  * Possible BioCatalogue day at the EBI 
+
+**2. Involvement of EMBL-EBI - OTT & Developers.**
+  * EBI advertises the catalogue at most of event they attend so does Manchester  
+  * Encourage service provider to link back to the BioCatalogue from their website
+  * ECCB submission deadline is for April
+
+**3. development of some simple curation protocols using simple tools (ties with 1).**
+  * Need to revisit the roadmap after the next updates (2-3 weeks)
+  * Curation wizard and spreadsheet to be added to the roadmap 
+
+**4-On-going work:**
+  * a. EMBRACE catalogue fully absorbed
+  * b. monitoring and profiling stuff in place to show added value
+  * c. API
+=>About 2-3 weeks to go to complete all this work 
+
+===== New actions ===== 
+  * Carole to send Rodrigo NAR papers reviewers  
+  * Eric/Franck make sure the annotation best practice is more visible on the site.
+  * Franck to ask service provider to link back to the catalogue
+  * Jits to send initial draft
+
+
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+JIRA will be used for bug tracking 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2010-01-25|Phone Conference Meeting on Jan 25 2010]]
+
+Next meeting: [[Meetings:PhoneConf:2010-02-18|Phone Conference Meeting on Feb 18 2010]]

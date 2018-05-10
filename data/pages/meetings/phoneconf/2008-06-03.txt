@@ -1,0 +1,68 @@
+====== Meeting Agenda/Minutes ======
+
+===== Attending =====
+
+Manchester: Franck, Katy, Jits
+EBI: Thomas, Hamish, Eric 
+
+===== Apologies =====
+
+Carole, Rodrigo 
+
+===== Minuting =====
+Franck 
+
+===== Agenda =====
+
+==== Actions from Previous Meeting ====
+
+    * EBI - Register domain name "biocatalogue.org" and contact the Korean institute about "biocatalog.org"  Not  sure if Rodrigo contacted the Korean
+    * Eric/Hamish/Thomas - Join the myexperiment skype chats Done
+    * Eric/Franck - Produce matrix of service types against bioinformatics domain coverage and properties, to generate a representative set of services to pilot with. Done
+    * Everybody - Dump all possible attributes/information that could be collected about services on to the mailing list in order to help Eric/Franck enhance the proposed curation model. Done
+    * Jiten/Eric/Thomas - Setup a myExperiment environment at EBI and walk through myExperiment codebase. Done
+    * Everyone - Decide the exact date of the next telecom meeting; preferably week starting the 26/05. next meeting on Tuesday 10/06
+    * Franck - select representative KEGG services to use. Done
+    * Franck - send out definition of "semantic type" to mailing list for further discussion and refinement. Done, definition is in the model
+    * Eric/Franck - work on the metatada levels for bronze/silver/gold/platinum compliance. Done, model is on the wiki
+ 
+==== Round-table ====
+
+Franck: worked on the platinum annotation model from which they've derived the bronze, silver and gold.
+These models are on the wiki. Selected a number of broadly used bioinformatics web services.
+will now describe selected services using the model.
+
+Jits: help Thomas and Eric to set up myexperiment code base at EBI. will meet Thomas and Eric to discuss the code base
+
+Katy: Attending a Web service metadata meeting in Australia, the report of the meeting is on the list and the wiki.
+discuss the annotation model with Franck
+
+Eric: worked on the annotation model, Familiarising himself with myExperiment code base. Joined myExperiment 5pm chat.
+Will look at the back end database.
+
+Thomas: Set up a private myExperiment code base at EBI. Joined myExperiment 5pm chat.
+
+Hamish: Encouraging service providers to describe their services.
+
+==== Upcoming Meetings  ====
+
+==== Meetings and deadlines that are coming up ====
+
+==== Any Other Business (AOB) ====
+We all agree to have at this stage weekly meeting. The next one is next Tuesday 3-5pm
+Everybody should start writing 'stories' about what they do
+Franck: looking for example of services with security/licensing/restrictions issues to use as example.
+Biocatalogue back end: Ruby on Rails or Java? Jits said Java would be better.
+Minutes
+
+==== New actions ====
+
+Everybody: read the services matrix and check out the annotations models
+Franck: post on the list example of stories
+Thomas: start advertising biocatalogue on the new domain
+
+===== Previous/Next Minutes =====
+
+Previous meeting: PhoneMeeting_13_05_2008 
+
+Next meeting: PhoneMeeting_13_06_2008 

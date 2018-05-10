@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.biocatalogue.org/wiki/feed.php">
+        <title>BioCatalogue</title>
+        <description></description>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico" />
+       <dc:date>2018-05-10T01:48:38+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/home?rev=1355394437&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public?rev=1355394513&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico">
+        <title>BioCatalogue</title>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <url>https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.biocatalogue.org/wiki/home?rev=1355394437&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-12-13T10:27:17+01:00</dc:date>
+        <title>home</title>
+        <link>https://www.biocatalogue.org/wiki/home?rev=1355394437&amp;do=diff</link>
+        <description>How To Get Involved
+
+	*  To contact us directly, email contact@biocatalogue.org
+
+	*  To be kept up-to-date of the development of the BioCatalogue or to request new features, please join the BioCatalogue-Friends Mailing List
+
+	*  For information about the BioCatalogue code base, APIs or to set up your own BioCatalogue, please join the BioCatalogue Hackers mailing list</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public?rev=1355394513&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-12-13T10:28:33+01:00</dc:date>
+        <title>public</title>
+        <link>https://www.biocatalogue.org/wiki/public?rev=1355394513&amp;do=diff</link>
+        <description>How To Get Involved
+
+	*  To contact us directly, email contact@biocatalogue.org
+
+	*  To be kept up-to-date of the development of the BioCatalogue or to request new features, please join the BioCatalogue-Friends Mailing List
+
+	*  For information about the BioCatalogue code base, APIs or to set up your own BioCatalogue, please join the BioCatalogue Hackers mailing list</description>
+    </item>
+</rdf:RDF>

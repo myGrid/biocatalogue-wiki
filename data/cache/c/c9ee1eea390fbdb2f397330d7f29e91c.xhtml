@@ -1,0 +1,425 @@
+
+<h1 class="sectionedit1" id="accounts_passwords">Accounts &amp; Passwords</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Accounts & Passwords" [1-36] -->
+<h2 class="sectionedit2" id="codebase_guidelines">Codebase Guidelines</h2>
+<div class="level2">
+
+<p>
+See: <a href="/wiki/doku.php?id=development:codebase_guidelines" class="wikilink1" title="development:codebase_guidelines">codebase_guidelines</a>
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Codebase Guidelines" [37-111] -->
+<h2 class="sectionedit3" id="disqus_integration">Disqus Integration</h2>
+<div class="level2">
+
+<p>
+The commenting/discussing facility uses the Disqus system (<a href="http://disqus.com/" class="urlextern" target="_blank" title="http://disqus.com/"  rel="nofollow">http://disqus.com/</a>).
+</p>
+
+<p>
+The admin/moderator/profile interface can be accessed on the Disqus website using:
+</p>
+<pre class="code">Username: biocatalogue
+Password: biocateatdogs
+Email: jits@cs.man.ac.uk</pre>
+
+<p>
+For the actual comments/discussions data, two separate website accounts have been set up:
+</p>
+<ol>
+<li class="level1"><div class="li"> Test/dev account to be used for testing purposes only</div>
+<ul>
+<li class="level2"><div class="li"> Account name: biocatalogue-test</div>
+</li>
+<li class="level2"><div class="li"> Community page: <a href="http://biocatalogue-test.disqus.com/" class="urlextern" target="_blank" title="http://biocatalogue-test.disqus.com/"  rel="nofollow">http://biocatalogue-test.disqus.com/</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Main account to be used for the main website only</div>
+<ul>
+<li class="level2"><div class="li"> Account name: biocatalogue</div>
+</li>
+<li class="level2"><div class="li"> Community page: <a href="http://biocatalogue.disqus.com/" class="urlextern" target="_blank" title="http://biocatalogue.disqus.com/"  rel="nofollow">http://biocatalogue.disqus.com/</a></div>
+</li>
+</ul>
+</li>
+</ol>
+
+<p>
+<br/>
+
+<strong>PLEASE NOTE:</strong>
+Make sure you copy the relevant settings from the local config template…
+</p>
+<pre class="code">/app/config/initializers/biocat_local.rb.pre</pre>
+
+<p>
+… to your local config file…
+</p>
+<pre class="code">/app/config/initializers/biocat_local.rb</pre>
+
+<p>
+It is crucial that the correct account name is configured here:
+</p>
+<ul>
+<li class="level1"><div class="li"> For the beta/main site it should be “biocatalogue”</div>
+</li>
+<li class="level1"><div class="li"> For local development/testing it should be “biocatalogue-test”.</div>
+</li>
+</ul>
+
+<p>
+<br/>
+
+<strong>Customising the look and feel of the comment thread etc:</strong> <a href="http://wiki.disqus.net/CustomCSS" class="urlextern" target="_blank" title="http://wiki.disqus.net/CustomCSS"  rel="nofollow">http://wiki.disqus.net/CustomCSS</a>
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Disqus Integration" [112-1281] -->
+<h2 class="sectionedit4" id="seekda_import">SeekDa Import</h2>
+<div class="level2">
+
+<p>
+See: script/biocatalogue/seekda_import.rb
+</p>
+
+<p>
+We have an account on rubyforge:
+</p>
+<pre class="code">Username: biocatalogue-developers@rubyforge.org
+Password: biocateatdogs</pre>
+
+</div>
+<!-- EDIT4 SECTION "SeekDa Import" [1282-1463] -->
+<h2 class="sectionedit5" id="recaptcha">reCAPTCHA</h2>
+<div class="level2">
+
+<p>
+We use reCAPTCHA to do captchas for things like the Contact Us page.
+</p>
+
+<p>
+Account details:
+</p>
+<pre class="code">Username: biocatalogue
+Password: biocateatdogs
+Email: biocatalogue-developers@rubyforge.org</pre>
+
+<p>
+Info:
+</p>
+<pre class="code">global-key.biocatalogue.org
+
+Domain Name: global-key.biocatalogue.org 
+This is a global key. It will work across all domains. 
+ 
+Public Key: 6Lff_QYAAAAAABdXktnhabbQguELRw5r6q2xaDTr 
+Use this in the JavaScript code that is served to your users
+ 
+Private Key: 6Lff_QYAAAAAANDXFRd76iB8jDd0DTxZEhd7Bvin 
+Use this when communicating between your server and our server. Because this key is a global key, it is OK if the private key is distributed to multiple users.</pre>
+
+</div>
+<!-- EDIT5 SECTION "reCAPTCHA" [1464-2163] -->
+<h2 class="sectionedit6" id="twitter_integration">Twitter integration</h2>
+<div class="level2">
+
+<p>
+Events in the BioCatalogue can be published to twitter.
+</p>
+
+<p>
+See /lib/bio_catalogue/twitter.rb
+</p>
+
+<p>
+Note the settings in config/initializers/biocat_local.rb.pre
+</p>
+
+<p>
+<strong>Accounts</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> For testing and local dev</div>
+</li>
+</ul>
+<pre class="code">URL: http://twitter.com/biocat_test
+Username: biocat_test
+Password: biocateatdogs
+Email: biocatalogue-developers@rubyforge.org</pre>
+<ul>
+<li class="level1"><div class="li"> For main site <strong>ONLY</strong></div>
+</li>
+</ul>
+<pre class="code">URL: http://twitter.com/biocatalogue
+Username: biocatalogue
+Password: biocateatdogs
+Email: jits@cs.man.ac.uk</pre>
+
+</div>
+<!-- EDIT6 SECTION "Twitter integration" [2164-2678] -->
+<h2 class="sectionedit7" id="bookmarking_widget_-_addthiscom">Bookmarking widget - addthis.com</h2>
+<div class="level2">
+
+<p>
+We use the service provided by <a href="http://www.addthis.com" class="urlextern" target="_blank" title="http://www.addthis.com"  rel="nofollow">http://www.addthis.com</a>.
+</p>
+
+<p>
+We have a registered account so that we can get analytics.
+</p>
+<pre class="code">Username: biocatalogue
+Password: biocateatdogs
+Email: jits@cs.man.ac.uk</pre>
+
+</div>
+<!-- EDIT7 SECTION "Bookmarking widget - addthis.com" [2679-2920] -->
+<h2 class="sectionedit8" id="google_analytics">Google Analytics</h2>
+<div class="level2">
+
+<p>
+Tracker ID:
+</p>
+<pre class="code">UA-5011049-1</pre>
+
+</div>
+<!-- EDIT8 SECTION "Google Analytics" [2921-2979] -->
+<h2 class="sectionedit9" id="rpx_for_single_sign_of_openid_facebook_google_etc_etc">RPX (for single sign of OpenID, Facebook, Google, etc etc)</h2>
+<div class="level2">
+
+<p>
+<a href="https://rpxnow.com/" class="urlextern" target="_blank" title="https://rpxnow.com/"  rel="nofollow">https://rpxnow.com/</a>
+</p>
+
+<p>
+We are signed up on the free package (as outlined here: <a href="https://rpxnow.com/get" class="urlextern" target="_blank" title="https://rpxnow.com/get"  rel="nofollow">https://rpxnow.com/get</a>) which only allows one administrator. Currently this is <strong>Jits&#039; Google Account for jits@cs.man.ac.uk</strong>.
+</p>
+<pre class="code">Realm: biocatalogue
+API Key (keep secret): {ask Jits}</pre>
+
+<p>
+This relies on having keys for other things, as below:
+</p>
+
+</div>
+<!-- EDIT9 SECTION "RPX (for single sign of OpenID, Facebook, Google, etc etc)" [2980-3371] -->
+<h2 class="sectionedit10" id="facebook_app_key">Facebook App Key</h2>
+<div class="level2">
+
+<p>
+This is currently under Jits&#039; Facebook account.
+</p>
+<pre class="code">Application name: BioCatalogue
+Application ID: 145570006525	
+Public API Key: 8d92828612317162aba64bbcadfafc69
+Secret: {ask Jits}</pre>
+
+</div>
+<!-- EDIT10 SECTION "Facebook App Key" [3372-3588] -->
+<h2 class="sectionedit11" id="twitter_app">Twitter App</h2>
+<div class="level2">
+
+<p>
+This is currently under the BioCatalogue Twitter account (as mentioned elsewhere on this page).
+</p>
+<pre class="code">Consumer key: wskROadxBisPqCF04iww
+Consumer secret: {ask Jits}
+Request token URL: http://twitter.com/oauth/request_token
+Access token URL: http://twitter.com/oauth/access_token
+Authorize URL: http://twitter.com/oauth/authorize</pre>
+
+</div>
+<!-- EDIT11 SECTION "Twitter App" [3589-3948] -->
+<h2 class="sectionedit12" id="slideshare">SlideShare</h2>
+<div class="level2">
+<pre class="code">http://www.slideshare.net/BioCatalogue
+Username: BioCatalogue
+Email: contact@biocatalogue.org
+Password: biocat</pre>
+
+</div>
+<!-- EDIT12 SECTION "SlideShare" [3949-4092] -->
+<h2 class="sectionedit13" id="dropbox">Dropbox</h2>
+<div class="level2">
+
+<p>
+Use this to share logs, files, etc. 
+</p>
+
+<p>
+Place everything in the <em><strong>BioCatalogue</strong></em> folder to have it shared with anyone else who has that folder shared with their accounts.
+</p>
+<pre class="code">http://www.dropbox.com
+Email : contact@biocatalogue.org
+Password: bi0cat</pre>
+
+</div>
+<!-- EDIT13 SECTION "Dropbox" [4093-4367] -->
+<h2 class="sectionedit14" id="mailing_lists">Mailing Lists</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT14 SECTION "Mailing Lists" [4368-4394] -->
+<h3 class="sectionedit15" id="internal_biocatalogue_list">Internal BioCatalogue list</h3>
+<div class="level3">
+<div class="table sectionedit16"><table class="inline">
+	<tr class="row0">
+		<td class="col0"> Email address </td><td class="col1"> biocatalogue@listserv.manchester.ac.uk </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Hosted by </td><td class="col1"> Manchester listerv </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> To subscribe </td><td class="col1"> must be done in the admin interface by an admin </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Admin interface </td><td class="col1"> log in to <a href="http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1" class="urlextern" target="_blank" title="http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1"  rel="nofollow">http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1</a> with Manchester credentials </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Current Admins </td><td class="col1"> Alex, Rob </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Archive </td><td class="col1"> N/A </td>
+	</tr>
+</table></div>
+<!-- EDIT16 TABLE [4433-4752] -->
+</div>
+<!-- EDIT15 SECTION "Internal BioCatalogue list" [4395-4753] -->
+<h3 class="sectionedit17" id="biocatalogue-developers">biocatalogue-developers</h3>
+<div class="level3">
+<div class="table sectionedit18"><table class="inline">
+	<tr class="row0">
+		<td class="col0"> Email address </td><td class="col1"> biocatalogue-developers@rubyforge.org </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Hosted by </td><td class="col1"> RubyForge </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> To subscribe </td><td class="col1"> <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-developers" class="urlextern" target="_blank" title="http://rubyforge.org/mailman/listinfo/biocatalogue-developers"  rel="nofollow">http://rubyforge.org/mailman/listinfo/biocatalogue-developers</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Admin interface </td><td class="col1"> <a href="http://rubyforge.org/mailman/admin/biocatalogue-developers" class="urlextern" target="_blank" title="http://rubyforge.org/mailman/admin/biocatalogue-developers"  rel="nofollow">http://rubyforge.org/mailman/admin/biocatalogue-developers</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Admin password </td><td class="col1"> 0091837da58bcf1f </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Current Admins </td><td class="col1"> Alex, Rob </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Archive </td><td class="col1"> <a href="http://rubyforge.org/pipermail/biocatalogue-developers/" class="urlextern" target="_blank" title="http://rubyforge.org/pipermail/biocatalogue-developers/"  rel="nofollow">http://rubyforge.org/pipermail/biocatalogue-developers/</a> </td>
+	</tr>
+</table></div>
+<!-- EDIT18 TABLE [4789-5173] -->
+</div>
+<!-- EDIT17 SECTION "biocatalogue-developers" [4754-5174] -->
+<h3 class="sectionedit19" id="biocatalogue-hackers">biocatalogue-hackers</h3>
+<div class="level3">
+<div class="table sectionedit20"><table class="inline">
+	<tr class="row0">
+		<td class="col0"> Email address </td><td class="col1"> biocatalogue-hackers@rubyforge.org </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Hosted by </td><td class="col1"> RubyForge </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> To subscribe </td><td class="col1"> <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" class="urlextern" target="_blank" title="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers"  rel="nofollow">http://rubyforge.org/mailman/listinfo/biocatalogue-hackers</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Admin interface </td><td class="col1"> <a href="http://rubyforge.org/mailman/admin/biocatalogue-hackers" class="urlextern" target="_blank" title="http://rubyforge.org/mailman/admin/biocatalogue-hackers"  rel="nofollow">http://rubyforge.org/mailman/admin/biocatalogue-hackers</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Admin password </td><td class="col1"> 4e0727fb3004afa9 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Current Admins </td><td class="col1"> Alex, Rob </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Archive </td><td class="col1"> <a href="http://rubyforge.org/pipermail/biocatalogue-hackers/" class="urlextern" target="_blank" title="http://rubyforge.org/pipermail/biocatalogue-hackers/"  rel="nofollow">http://rubyforge.org/pipermail/biocatalogue-hackers/</a> </td>
+	</tr>
+</table></div>
+<!-- EDIT20 TABLE [5207-5579] -->
+</div>
+<!-- EDIT19 SECTION "biocatalogue-hackers" [5175-5580] -->
+<h3 class="sectionedit21" id="biocatalogue-friends">biocatalogue-friends</h3>
+<div class="level3">
+<div class="table sectionedit22"><table class="inline">
+	<tr class="row0">
+		<td class="col0"> Email address </td><td class="col1"> biocatalogue-friends@listserv.manchester.ac.uk </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Hosted by </td><td class="col1"> Manchester listerv </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> To subscribe </td><td class="col1"> <a href="http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&amp;A=1" class="urlextern" target="_blank" title="http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&amp;A=1"  rel="nofollow">http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&amp;A=1</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Admin interface </td><td class="col1"> log in to <a href="http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1" class="urlextern" target="_blank" title="http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1"  rel="nofollow">http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1</a> with Manchester credentials </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Current Admins </td><td class="col1"> Alex, Rob </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Archive </td><td class="col1"> <a href="http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-FRIENDS" class="urlextern" target="_blank" title="http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-FRIENDS"  rel="nofollow">http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-FRIENDS</a> </td>
+	</tr>
+</table></div>
+<!-- EDIT22 TABLE [5613-6032] -->
+</div>
+<!-- EDIT21 SECTION "biocatalogue-friends" [5581-6033] -->
+<h3 class="sectionedit23" id="biocatalogue-support">biocatalogue-support</h3>
+<div class="level3">
+<div class="table sectionedit24"><table class="inline">
+	<tr class="row0">
+		<td class="col0"> Email address </td><td class="col1"> biocatalogue-support@rubyforge.org </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Hosted by </td><td class="col1"> RubyForge </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> To subscribe </td><td class="col1"> <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-support" class="urlextern" target="_blank" title="http://rubyforge.org/mailman/listinfo/biocatalogue-support"  rel="nofollow">http://rubyforge.org/mailman/listinfo/biocatalogue-support</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Admin interface </td><td class="col1"> <a href="http://rubyforge.org/mailman/admin/biocatalogue-support" class="urlextern" target="_blank" title="http://rubyforge.org/mailman/admin/biocatalogue-support"  rel="nofollow">http://rubyforge.org/mailman/admin/biocatalogue-support</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Admin password </td><td class="col1"> e0ff170ee283ea37 </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Current Admins </td><td class="col1"> Alex, Rob </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Archive </td><td class="col1"> <a href="http://rubyforge.org/mailman/private/biocatalogue-support/" class="urlextern" target="_blank" title="http://rubyforge.org/mailman/private/biocatalogue-support/"  rel="nofollow">http://rubyforge.org/mailman/private/biocatalogue-support/</a> (private) </td>
+	</tr>
+</table></div>
+<!-- EDIT24 TABLE [6066-6454] -->
+</div>
+<!-- EDIT23 SECTION "biocatalogue-support" [6034-6455] -->
+<h3 class="sectionedit25" id="biocatalogue-sab">biocatalogue-SAB</h3>
+<div class="level3">
+<div class="table sectionedit26"><table class="inline">
+	<tr class="row0">
+		<td class="col0"> Email address </td><td class="col1"> biocatalogue-sab@listserv.manchester.ac.uk </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Hosted by </td><td class="col1"> Manchester listerv </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> To subscribe </td><td class="col1"> must be done in the admin interface by an admin </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Admin interface </td><td class="col1"> log in to <a href="http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1" class="urlextern" target="_blank" title="http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1"  rel="nofollow">http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1</a> with Manchester credentials </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Current Admins </td><td class="col1"> Alex, Rob </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Archive </td><td class="col1"> <a href="http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-SAB" class="urlextern" target="_blank" title="http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-SAB"  rel="nofollow">http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-SAB</a> </td>
+	</tr>
+</table></div>
+<!-- EDIT26 TABLE [6484-6867] -->
+</div>
+<!-- EDIT25 SECTION "biocatalogue-SAB" [6456-] -->

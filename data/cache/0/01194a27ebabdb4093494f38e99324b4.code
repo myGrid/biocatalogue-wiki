@@ -1,0 +1,15 @@
+<span class="sc3"><span class="re1">&lt;search</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/search?q=dbfetch&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;query</span> <span class="re0">urlKey</span>=<span class="st0">&quot;q&quot;</span><span class="re2">&gt;</span></span>dbfetch<span class="sc3"><span class="re1">&lt;/query<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;scope</span> <span class="re0">urlValue</span>=<span class="st0">&quot;all&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;scope&quot;</span><span class="re2">&gt;</span></span>All<span class="sc3"><span class="re1">&lt;/scope<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;page</span> <span class="re0">urlKey</span>=<span class="st0">&quot;page&quot;</span><span class="re2">&gt;</span></span>1<span class="sc3"><span class="re1">&lt;/page<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;pageSize</span> <span class="re0">urlKey</span>=<span class="st0">&quot;per_page&quot;</span><span class="re2">&gt;</span></span>10<span class="sc3"><span class="re1">&lt;/pageSize<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;service<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;soapOperation<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/soapOperation<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/search<span class="re2">&gt;</span></span></span>

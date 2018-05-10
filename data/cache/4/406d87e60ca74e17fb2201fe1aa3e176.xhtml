@@ -1,0 +1,94 @@
+
+
+
+<h1><a name="codebase_testing" id="codebase_testing">Codebase Testing</a></h1>
+<div class="level1">
+
+<p>
+
+After the ISMB release of the BioCatalogue codebase, it is crucial that we have in place a systematic way of working with to the codebase in order to manage growth and development. Part of this is about having a disciplined development process but equally this requires a comprehensive suite of automated tests to test various aspects of the codebase.
+</p>
+
+</div>
+<!-- SECTION "Codebase Testing" [1-385] -->
+<h2><a name="things_to_test" id="things_to_test">Things to Test</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> WSDL parsing</div>
+</li>
+<li class="level1"><div class="li"> Service submission</div>
+</li>
+<li class="level1"><div class="li"> User management:</div>
+<ul>
+<li class="level2"><div class="li"> Registration</div>
+</li>
+<li class="level2"><div class="li"> Change password</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Search</div>
+</li>
+<li class="level1"><div class="li"> Event logging</div>
+</li>
+<li class="level1"><div class="li"> </div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Things to Test" [386-551] -->
+<h2><a name="tools" id="tools">Tools</a></h2>
+<div class="level2">
+
+<p>
+
+(ones in bold are the ones we use)
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://thoughtbot.com/projects/factory_girl" class="urlextern" target="_blank" title="http://thoughtbot.com/projects/factory_girl"  rel="nofollow">Factory Girl</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://thoughtbot.com/projects/shoulda" class="urlextern" target="_blank" title="http://thoughtbot.com/projects/shoulda"  rel="nofollow">Shoulda</a></div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Tools" [552-728] -->
+<h2><a name="running_tests" id="running_tests">Running Tests</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Install the necessary development gems.</div>
+</li>
+<li class="level1"><div class="li"> Create a test database.</div>
+</li>
+<li class="level1"><div class="li"> Configure the test environment in config/database.yml to use this test db.</div>
+</li>
+<li class="level1"><div class="li"> Run all tests:</div>
+</li>
+</ul>
+<pre class="code">rake</pre>
+
+<p>
+
+OR
+
+</p>
+<pre class="code">rake test</pre>
+<ul>
+<li class="level1"><div class="li"> To run unit tests or functional tests only:</div>
+</li>
+</ul>
+<pre class="code">rake test:units</pre>
+<pre class="code">rake test:functional</pre>
+<ul>
+<li class="level1"><div class="li"> To run a <strong>specific</strong> test, an example:</div>
+</li>
+</ul>
+<pre class="code">rake test:units TEST=test/unit/lib/bio_catalogue/tags_test.rb</pre>
+
+<p>
+<strong>NOTE</strong>: when running individual tests - errors can occur whilst running “rake test” that you don&#039;t get when running the individual test that contains the errors. Thus there might be errors on the individual test that only show up when ALL tests are run. Therefore, ensure that you run all tests as a final check.
+
+</p>
+
+</div>
+<!-- SECTION "Running Tests" [729-] -->

@@ -1,0 +1,14 @@
+====== Stories ======
+
+Collection of basic usecase "stories".
+
+  * [[.:stories:Basic Search]]
+  * [[.:stories:Catalogue Browsing]]
+  * [[.:stories:User Registration]]
+  * [[.:stories:Service Submission with Service Document]]
+  * [[.:stories:Service Submission without a Service Document]]
+  * [[.:stories:Search Result Alerting]]
+  * [[.:stories:Service Change Monitoring]]
+  * [[.:stories:Notification Aggregation]]
+  * [[.:stories:Deprecation of Service]]
+  * [[.:stories:Add annotation to existing service in the catalogue]]

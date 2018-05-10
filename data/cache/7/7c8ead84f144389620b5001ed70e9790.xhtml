@@ -1,0 +1,141 @@
+
+
+
+<h3><a name="v1.0.0_release_feb_2011" id="v1.0.0_release_feb_2011">v1.0.0 Release (Feb 2011)</a></h3>
+<div class="level3">
+
+<p>
+
+This is a major release which includes the following:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> The REST <acronym title="Application Programming Interface">API</acronym></div>
+<ul>
+<li class="level2"><div class="li"> Both read and write</div>
+</li>
+<li class="level2"><div class="li"> Full json and xml support</div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/wiki/doku.php?id=public:api" class="urlextern" target="_blank" title="http://www.biocatalogue.org/wiki/doku.php?id=public:api"  rel="nofollow"> Detailed API documentation </a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <del>Support for <acronym title="Secure Sockets Layer">SSL</acronym></del></div>
+<ul>
+<li class="level2"><div class="li"> <del>All sensitive data are now sent over secure(ssl) connections (to be confirmed)</del></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Monitoring improvements</div>
+<ul>
+<li class="level2"><div class="li"> Users can now delete their test scripts</div>
+</li>
+<li class="level2"><div class="li"> Users can upload soapUI test suits (xml project files)</div>
+</li>
+<li class="level2"><div class="li"> Show historical success rate of tests</div>
+</li>
+<li class="level2"><div class="li"> Email notification to users when test status changes</div>
+</li>
+<li class="level2"><div class="li"> Users can unsubscribe from notifications</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Rest Service support improvements</div>
+<ul>
+<li class="level2"><div class="li"> </div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Mass curation via spreadsheet application</div>
+</li>
+<li class="level1"><div class="li"> Streamlining protocol for setting up a private BioCatalogue instance</div>
+<ul>
+<li class="level2"><div class="li">  See <a href="http://www.biocatalogue.org/wiki/doku.php?id=development:installation" class="urlextern" target="_blank" title="http://www.biocatalogue.org/wiki/doku.php?id=development:installation"  rel="nofollow"> Installing the BioCatalogue System</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="updating_the_live_site" id="updating_the_live_site">Updating the Live Site</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Stop the live application (downtime expected to be just a few minutes)</div>
+</li>
+<li class="level1"><div class="li"> Run svn update</div>
+</li>
+<li class="level1"><div class="li"> Migrate the database</div>
+<ul>
+<li class="level2"><div class="li"> rake db:migrate RAILS_ENV=production</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Cache the success rates for service tests. This could take a little while</div>
+<ul>
+<li class="level2"><div class="li"> rake biocatalogue:monitoring:update_test_success_rate RAILS_ENV=production</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Restart memcached servers</div>
+</li>
+<li class="level1"><div class="li"> Restart the job workers</div>
+<ul>
+<li class="level2"><div class="li"> ruby script/worker stop|start</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Restart the application</div>
+</li>
+<li class="level1"><div class="li"> Reindex the application</div>
+</li>
+<li class="level1"><div class="li"> Setup cron job to update the service annotation levels</div>
+</li>
+<li class="level1"><div class="li"> Setup cron to update service test success rate</div>
+</li>
+<li class="level1"><div class="li"> Setup cron to update service test cached status</div>
+</li>
+<li class="level1"><div class="li"> Setup cron to generate a links checker report</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="test_cases_for_this_release" id="test_cases_for_this_release">Test Cases for this Release</a></h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Use the <a href="http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing" class="urlextern" target="_blank" title="http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing"  rel="nofollow">DRAMA</a> procedure to test the system</div>
+</li>
+<li class="level1"><div class="li"> Make sure that every service test has a success rate(unless it is unchecked)</div>
+</li>
+<li class="level1"><div class="li"> Make sure redirects to https happens for sensitive pages</div>
+<ul>
+<li class="level2"><div class="li"> session controller</div>
+</li>
+<li class="level2"><div class="li"> responsibility request controller</div>
+</li>
+<li class="level2"><div class="li"> contact controller</div>
+</li>
+<li class="level2"><div class="li"> oauthclients controller</div>
+</li>
+<li class="level2"><div class="li"> oauth controller</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Register a service</div>
+</li>
+<li class="level1"><div class="li"> Upload a test script to the registered service</div>
+</li>
+<li class="level1"><div class="li"> Delete your uploaded test script</div>
+</li>
+<li class="level1"><div class="li"> Create a new annotation attribute</div>
+</li>
+<li class="level1"><div class="li"> Request responsibility for a service</div>
+</li>
+<li class="level1"><div class="li"> Unsubscribe from receiving service status emails</div>
+</li>
+<li class="level1"><div class="li"> Resubscribe to receive service status emails</div>
+</li>
+</ol>
+
+</div>

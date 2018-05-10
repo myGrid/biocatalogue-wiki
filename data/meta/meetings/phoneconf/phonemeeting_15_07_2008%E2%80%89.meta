@@ -1,0 +1,19 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1216117003;s:8:"modified";i:1216117653;}s:7:"creator";s:4:"Eric";s:11:"last_change";a:7:{s:4:"date";i:1216117653;s:2:"ip";s:12:"172.22.68.72";s:4:"type";s:1:"E";s:2:"id";s:45:"meetings:phoneconf:phonemeeting_15_07_2008 ";s:4:"user";s:8:"ericnzuo";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:8:"ericnzuo";s:4:"Eric";}s:5:"title";s:22:"Meeting Agenda/Minutes";s:11:"description";a:2:{s:15:"tableofcontents";a:12:{i:0;a:4:{s:3:"hid";s:22:"meeting_agenda_minutes";s:5:"title";s:22:"Meeting Agenda/Minutes";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:9:"attending";s:5:"title";s:9:"Attending";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:9:"apologies";s:5:"title";s:9:"Apologies";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:8:"minuting";s:5:"title";s:8:"Minuting";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:6:"agenda";s:5:"title";s:6:"Agenda";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:29:"actions_from_previous_meeting";s:5:"title";s:29:"Actions from Previous Meeting";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:6;a:4:{s:3:"hid";s:11:"round-table";s:5:"title";s:11:"Round-table";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:7;a:4:{s:3:"hid";s:17:"upcoming_meetings";s:5:"title";s:17:"Upcoming Meetings";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:8;a:4:{s:3:"hid";s:7:"minutes";s:5:"title";s:7:"Minutes";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:9;a:4:{s:3:"hid";s:11:"agenda_item";s:5:"title";s:11:"Agenda item";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:10;a:4:{s:3:"hid";s:12:"action_items";s:5:"title";s:12:"Action Items";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:11;a:4:{s:3:"hid";s:21:"previous_next_minutes";s:5:"title";s:21:"Previous/Next Minutes";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:386:"Attending
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+Agenda
+
+Actions from Previous Meeting
+
+	*  Carole - To speak to Steve petefer about the pilot
+	*  Carole/Rodrigo - Schedule an advisery meeting
+	*  Rodrigo - To send dates EBI team is available for a Face 2 face meeting 
+	*  Franck - prepare a questionnaire for ISMB 
+	*  Khalid - To send more info about 'QASAR' on the mailing list.";}s:8:"relation";a:1:{s:10:"references";a:2:{s:32:"meetings:phoneconf:2008-07-08 ";b:0;s:32:"meetings:phoneconf:2008-07-22 ";b:0;}}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:4:{s:4:"date";a:2:{s:7:"created";i:1216117003;s:8:"modified";i:1216117653;}s:7:"creator";s:4:"Eric";s:11:"last_change";a:7:{s:4:"date";i:1216117653;s:2:"ip";s:12:"172.22.68.72";s:4:"type";s:1:"E";s:2:"id";s:45:"meetings:phoneconf:phonemeeting_15_07_2008 ";s:4:"user";s:8:"ericnzuo";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:8:"ericnzuo";s:4:"Eric";}}}

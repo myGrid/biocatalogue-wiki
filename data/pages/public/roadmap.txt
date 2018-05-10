@@ -1,0 +1,80 @@
+**Note : The 2011 Roadmap is under review and will be available soon. Please come back later. You may have a look at the 2010 roadmap below...**
+
+
+====== The BioCatalogue Roadmap for 2010 ======
+
+Please note that the time scales listed are estimated. New requirements and changes driven by the user community may affect features, delivery dates and schedule.
+
+You can access the previous roadmap here: [[Public:roadmap2009|2009 roadmap]]
+
+
+===== First quarter of 2010 (Jan - Mar) =====
+
+  * **Public APIs (I)** - Basic RESTful APIs to BioCatalogue (mainly read).
+
+  * **Service monitoring - testing** - Test scripts to test out service functionality can be provided by submitters and service providers. We will then run these regularly to provide us with metrics on the availability/reliability. A traffic light system (red, green, amber) gives users an at-a-glance view on status.
+
+  * **REST services support (II)** - Better support for REST services, with the ability to describe and annotate the exact Resources, Methods, Parameters and Representations of REST services.
+
+  * **Service changes monitoring** - Monitoring changes in the WSDLs of services and updating the BioCatalogue records and providing a log of changes.
+
+  * **User interface improvements** - A revamped operations/inputs/outputs browser to allow easy navigation and annotation of operations/inputs/outputs of services
+
+ ===== Second quarter of 2010 (Apr - Jun) ===== 
+
+  * **Service ownership** - Better management of who the provides a service and which people are maintainers / points of contacts.
+
+  * **Public APIs (II)** - More functional RESTful APIs to BioCatalogue (read).
+
+  * **Full EMBRACE import **: Import all services, metadata, users and test scripts from the EMBRACE registry
+  
+  * **REST service annotation improvement** Better support for describing REST services - Describe endpoints, parameters and representations
+
+  * **BioCatalogue plugin for Taverna**: Alpha version of the BioCatalogue plugin for Taverna 2.1.2
+
+  * **User interface improvement**: Improve user interface for browsing SOAP operations and REST endpoints
+
+  * **Search improvement**: Possibility to return matching SOAP operations in search
+
+
+
+
+===== Third quarter 2010 (Jul - Sep) =====
+
+  * **Annotation Jamboree! (II)** at the EMBRACE Workshop for Web Service Providers in Bioinformatics (June 2-4, 2010), Denmark
+
+  * **Curation workbench/tools** - New curation tools designed for expert curators.
+ 
+  * **Major curation of the service providers information in the Catalogue** - replace host name by actual service provider name 
+
+  * **Integration with Taverna** - Ability to import Web Services and annotations to and from BioCatalogue and Taverna.
+
+  * **myBioCatalogue** - Ability to set up your own local BioCatalogue registry.
+
+  * **Service Monitoring improvement** - Ability to update WSDLs entry in the BioCatalogue
+  
+  * **Service ownership** - Members may request responsibility for a service 
+
+  * **Implement an activity feed for services** 
+
+  * **Homepage improvement** - Activity feed for the homepage
+
+  * **Archiving mechanism for services, operations, inputs and outputs** 
+
+  * **Search improvement**: Return matching REST endpoints in search
+
+
+===== Fourth quarter 2010 (Oct - Dec) =====
+
+  * **API (III)**: JSON outputs for all API endpoints, Initial Write API and OAuth support for authentication and authorisation through the API
+
+  * **Support for HTTPS (SSL) connections**  
+
+  * ** Service monitoring improvement**: Support for SoapUI test suites (xml project files), Show historical success rate of tests and Email notification to users when test status changes
+
+  * **BioCatalogue Taverna plugin (II)**: New BioCatalogue plugin for Taverna 2.3 with a much more simplified user interface
+
+  * **Curation tools**: Mass curation desktop application ( e.g. using spreadsheets for mass curation of services)
+
+===== =====
+The features we plan to implement or improve for 2011 can be found here: [[Public:roadmap_2011|Work plan 2011]] 

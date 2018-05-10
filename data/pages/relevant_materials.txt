@@ -1,0 +1,32 @@
+====== Relevant Materials ======
+
+  * Marco Masseroli, Giorgio Ghisalberti, Stefano Ceri - **Bio Search Computing: Bioinformatics web service integration for data-driven answering of complex Life Science questions**. International Conference on Computational Science, ICCS 2011 Singapore, 1-3 June, 2011
+    * {{:iccs2011_masseroli.pdf|Slides}}
+    * Relevant to: search, ranking, Functional Units.
+
+  * [[publications_and_presentations:SOA Governance_2008|SOA Governance by Antoon]]
+
+  * [[publications_and_presentations:CODATA talk 2008|Carole's CODATA talk 2008]]
+
+  * [[http://www.dlib.org/dlib/september07/treloar/09treloar.html|Data Curation Continuum]]
+
+
+  * **The Bioinformatics Links Directory** ([[http://www.bioinformatics.ca/links_directory/]]) does not describe or invoke the services but is a useful source for the catalogue. 
+
+  * **MIBBI** ([[http://www.mibbi.org/]]) is a registry of scientific experiment reporting guidelines with the idea to foster a foundry of best practice to further develop and encourage modular development and re-use of reporting guidelines. 
+
+  * **SAWSDL** is a W3C Recommendation that defines mechanisms using which semantic annotations can be added to Web Service Description Language document components as annotations.
+
+  * [[http://www.mygrid.org.uk/ontology/|myGrid ontology]]
+
+  * [[http://www.ebi.ac.uk/~jison/edam.html|EDAM]]
+
+  * [[http://en.wikipedia.org/wiki/ISO/IEC_11179|ISO standard]]
+
+  * [[http://bioportal.bioontology.org/visualize/40656|bioportal]]
+
+  * [[http://lsdis.cs.uga.edu/projects/glycomics/propreo/| propreo ontology]]
+
+  
+
+

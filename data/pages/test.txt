@@ -1,0 +1,21 @@
+<box 150px center>
+
+**[[public:pilot|The Pilot]]**
+
+**[[public:team|The Team]]**
+
+**[[public:friends|Our Friends]]**
+
+**[[public:roadmap|The Roadmap]]**
+
+**[[public:publication_list|Publications]]**
+
+**[[public:related_links|Related Links]]**
+
+</box>
+
+<html>
+<div style="width:100%; border:1px #ff0000 solid;">
+test
+</div>
+</html>

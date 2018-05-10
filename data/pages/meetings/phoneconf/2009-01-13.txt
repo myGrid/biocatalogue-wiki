@@ -1,0 +1,87 @@
+Date: Tuesday 13th Jan 2008
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending =====
+**Manchester:**
+Jits, Carole
+
+**EBI:**
+
+Eric, Rodrigo, Thomas
+
+===== Apologies =====
+
+Frank, Katy, Hamish
+
+===== Minuting =====
+
+Eric
+
+====== Agenda ======
+
+  * New Year Stories 
+
+  * Actions from the last telcon 
+
+  * Progress with the pilot 
+
+  * New requirements and planning following the F2F at EBI 
+
+  * [[development:20_questions|20 Questions]](to clarify user requirements)
+
+  * Discuss the "tag types" (freeform, from ontology, from CV etc) mentioned by Carole
+
+  * Updating the BioCatalogue public wiki
+
+  * AOB
+
+===== Actions from Previous Meeting ===== 
+
+  * Franck : Provide an example of a semantically annotated service(using the SAWSDL model).
+  * Thomas: investigate 'home' link on the public wiki.
+  * Jits/Thomas/Eric: create developer section on the wiki.
+  * Eric: list the features of the current pilot (including annotations stuff), so that they can be used in a email announcing the private beta to the friends list.
+  * Franck: read through the revised requirements and planning doc and update the private wiki roadmap accordingly. Then after approval copy it to the public wiki.
+  * Franck: make an announcement about latest changes to schedule to the friends list.
+  * Thomas: possibly change the "Wiki" link on the main website and beta site to something more descriptive like "More info about the project". Also add this to the "About us" page.
+
+====== Minutes ======
+  * [[http://beta.biocatalogue.org|The beta site]] has been updated with the annotation functionality. This now permits annotations to be added to the inputs and outputs of operations
+  * Eric & Jits are modeling rest services backend. Model is abstract so that it can handle both wadl and wsdl 2.0 or any other specifications that we may have to support
+  * Work done on solr server interfacing with the application to enhance the search and remove some quirkiness of the plugin
+  * Updates have been made to the wiki on the road map and the new requirements (following the F2F at EBI). The target is to have a development freeze at the end of February, in order to enable consolidation in March and public
+  * People to come up with a set of 20 questions that would help clarify user requirements. My experiment is also doing this exercise so there is room to share some of the (relevant) questions. The answers to some of these question could be used to enrich the interface or even drive some of the design decisions
+  * There a suite of NCBO tools that could be very useful for BioCatalogue, especially the ontology service and the automatic annotation tools. These could help in answering questions about the source of an annotation for example. It is also worth looking at OLS
+  * 
+
+
+===== New Actions =====
+
+  * Action all : update the 20 questions section on the wiki
+  * Action Rodrigo & Carole : Check the public staging part of the wiki to approve content meant for general public
+  * Action Rodrigo : mail Eric his set of questions to put on the wiki
+  * Action Jits/Thomas/Eric : Plan for effort to spend developing know-how to effectively use solr. Possibly investigate other ways of using the server with/without the acts_as_solr plugin
+  * Action Jits/Eric : Investigate how to add some form of classification of the services
+
+===== Upcoming Meetings ===== 
+ 
+ * Developer F2F at Manchester, week of the 19th
+
+===== AOB =====
+
+  * There will be a demo at the Strategic Advisory Board Meeting in February
+  * There is potential for collaboration with Microsoft. Initial discussions on-going with Carole
+  * Jit doing a presentation on BioCatalogue on the 29th  
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-12-16|Phone Conference Meeting on Dec 16 2008]] 
+
+Next meeting:
+

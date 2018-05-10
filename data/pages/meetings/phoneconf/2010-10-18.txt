@@ -1,0 +1,52 @@
+Date: Monday 18 Oct 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** 
+
+**EBI:**
+
+
+===== Apologies =====
+
+
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * SAB meeting planing 
+  * Daily operations Report
+  * Review of public wiki and public facing material
+  * Review of Roadmap
+  * Planning of next release 
+  * Upcoming events and meetings 
+    * Bio-IT meeting report
+    * ENFIN workshop (Eric) 
+
+===== Actions from Previous Meeting =====   
+ 
+  * Rodrigo/Eric: Send EBI wiki template to Franck
+  * Rodrigo to handle BioXsD-EDAM contact 
+  * Mannie to send the bulk annotation via spreadsheet tool to Hamish for testing
+
+
+
+===== Upcoming Meetings =====  
+
+===== Minutes =====
+
+
+===== AOB =====
+
+There is an invitation for the ENFIN conference next year
+
+Eric: invited to give a talk on web services and BioCatalogue in Munich in October. http://www.enfin.org/page.php?page=sme_meeting_2010
+
+Previous meeting: [[Meetings:PhoneConf:2010-09-20|Phone Conference Meeting on Sept 20 2010]]

@@ -1,0 +1,46 @@
+BioCatalogue is entering its pilot stage. This pilot is currently in private beta. After passing through a capability and stability review by our early adopters it will be launched as a public beta for wider use in April 2009.
+
+The pilot will support a number of bioinformatics projects and networks, notably EMBRACE and BioSapiens who have temporarily produced service registries. These will be absorbed into the pilot and the BioCatalogue will then takeover from them.
+
+===== The pilot.... =====
+  * **supports user registration and user profiles** (for both regular users and service providers). The ability to declare one-self as an "owner" of a service, in order to add testing scripts and so on is <color #ff7400>[in progress]</color>.
+//
+//
+  * **covers SOAP services from:** [[http://xml.ddbj.nig.ac.jp/index.html|DDBJ]], [[http://www.ebi.ac.uk/Tools/webservices/wsdl/list|EBI]], [[http://eutils.ncbi.nlm.nih.gov/entrez/query/static/esoap_help.html|NCBI]] and community providers such as [[http://www.biomoby.org/|BioMOBY]], [[http://www.embracegrid.info/page.php?page=webservices|EMBRACE]] and BioSapiens and relevant services sourced from [[http://www.mygrid.org.uk/|myGrid]], [[http://seekda.com/|SeekDa]]!. Work on support for DAS and REST services is <color #ff7400>[in progress]</color>.
+//
+//
+  * **handles service discovery** by keywords or browsing the latest services submitted; filtering of search result by service location, category, provider, technology, usage and so on  is <color #ff7400>[in progress]</color>.
+//
+//
+   * **supports annotation of services** by tags, user comments, rates and text description. Annotated services or their parts (operations, inputs, outputs etc) will then become searchable. Annotations and services will also be harvested from existing registry such as the myGrid Feta registry, EMBRACE, BioMoby, SeekDA but still <color #ff7400>[in progress]</color>. 
+//
+//
+   * **supports RSS feeds** for the latest services submitted and the last updated services <color #ff7400>[in progress]</color>.
+//
+//   
+   * **exposes** an OpenSearch description document.
+//
+//  
+   * **supports service monitoring** by checking the availability of descriptor documents and endpoints as well as using test scripts to check functionality and availability of services <color #ff7400>[in progress]</color>.
+
+
+===== To Get Involved =====
+
+We are looking for early adopters and testers of the BioCatalogue pilot. You can be a service provider, a developer, a bioinformatician or just interested.
+
+Join our mailing list: \\
+[[http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&A=1|BioCatalogue-Friends Mailing List]]
+
+
+
+===== After the Pilot ... =====
+
+  * **Integration with myExperiment:** on the one hand services from BioCatalogue will be displayed in myExperiment so users of myExperiment can browse them. On the other hand services within workflows in myExperiment will reference the appropriate services in BioCatalogue so users can click through to the information in BioCatalogue.
+
+  * **Integration to Taverna:** users will be able to import Web Services and annotations to and from BioCatalogue and Taverna.
+
+  * **Public APIs:**  RESTful APIs to BioCatalogue.
+
+  * **myBioCatalogue:** setup your private BioCatalogue for your project or organisation
+
+For the list of complete features after the pilot see our [[Public Staging:Roadmap|Roadmap]] 

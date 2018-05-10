@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/feed.php">
+        <title>Biocatalogue development</title>
+        <description></description>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <image rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico" />
+       <dc:date>2008-11-18T12:38:52+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:best_practices&amp;rev=1217943204&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:biocatalogue_terms_of_use&amp;rev=1226929220&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:codebase_guidelines&amp;rev=1225378529&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:content_requirements_for_pilot&amp;rev=1220258188&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1226317375&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:eval_strategy_pilot&amp;rev=1223995828&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:feature_list_for_pilot&amp;rev=1225204292&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:glossary&amp;rev=1219072819&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:myexperiment_and_biocatalogue_commonalities&amp;rev=1218531507&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:nonfunctionalrequirements_pilot&amp;rev=1218814347&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1225991004&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:requirements_for_pilot&amp;rev=1224950400&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:roadmap&amp;rev=1227011219&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development&amp;rev=1220547031&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:stories&amp;rev=1218626400&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:users_requirement_stories&amp;rev=1224860109&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <url>http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:best_practices&amp;rev=1217943204&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-05T14:33:24+00:00</dc:date>
+        <title>development:best_practices</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:best_practices&amp;rev=1217943204&amp;do=diff</link>
+        <description>Other Guideline Suggestions
+
+	*  Taverna guidelines for web service providers
+	*  EMBRACE - Web Services development guide
+	*  XML.com - Implementing REST Web Services: Best Practices and Guidelines</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:biocatalogue_terms_of_use&amp;rev=1226929220&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-17T13:40:20+00:00</dc:date>
+        <title>development:biocatalogue_terms_of_use</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:biocatalogue_terms_of_use&amp;rev=1226929220&amp;do=diff</link>
+        <description>Proposed BioCatalogue Terms of Use
+
+These Terms of Use are copied from EMBL-EBI services terms of Use 
+
+
+	*  Glossary
+		*  User : Person, institution or program using the BioCatalogue
+		*  You : refers to the user as defined above 
+
+
+	*  The public services in BioCatalogue available free of charge to be used by any individual and for any purpose except where specific restriction are indicated.
+	*  You are free to use BioCatalogue source code consistent with the BSD License 
+	*  Users of the depl…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:codebase_guidelines&amp;rev=1225378529&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-30T14:55:29+00:00</dc:date>
+        <title>development:codebase_guidelines</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:codebase_guidelines&amp;rev=1225378529&amp;do=diff</link>
+        <description>The BioCatalogue codebase is:
+
+	*  hosted on Rubyforge (&lt;http://rubyforge.org/projects/biocatalogue/&gt;)
+	*  licensed under the BSD license
+	*  uses Subversion (SVN) (repository info: &lt;http://rubyforge.org/scm/?group_id=6901&gt;)
+	*  mainly written in Rails 2.1</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:content_requirements_for_pilot&amp;rev=1220258188&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-01T09:36:28+00:00</dc:date>
+        <title>development:content_requirements_for_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:content_requirements_for_pilot&amp;rev=1220258188&amp;do=diff</link>
+        <description>*  [Must] 12 already annotated services
+	*  [Must] All Feta services that have been annotated
+	*  [Must] Import some Soaplab services
+	*  [Must] Embrace services
+	*  [Should] EBI services
+	*  [Could] All Feta services that have NOT been annotated (taking into account overlap with other content requirements)
+	*  [Could] All Feta annotations
+	*  [Could] BioMoby (import through API) - ask BioMoby people ?</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1226317375&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-10T11:42:55+00:00</dc:date>
+        <title>development:data_model_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1226317375&amp;do=diff</link>
+        <description>Entities
+
+Service
+
+
+Table name: services
+
+Fields:
+
+	*  id
+	*  name
+	*  unique_code
+	*  submitter_id
+	*  created_at
+	*  updated_at
+
+Service Versions
+
+
+Table name: service_versions
+
+Fields:
+
+	*  id  
+	*  service_id
+	*  service_versionified_type  (e.g.: “SoapService”)
+	*  service_versionified_id
+	*  version
+	*  version_display_text
+	*  submitter_id
+	*  created_at
+	*  updated_at</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:eval_strategy_pilot&amp;rev=1223995828&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-14T15:50:28+00:00</dc:date>
+        <title>development:eval_strategy_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:eval_strategy_pilot&amp;rev=1223995828&amp;do=diff</link>
+        <description>*  Mark Wilkinson will be in Manchester so will test it as a provider 
+	*  We'll advertise or demo the pilot at the Semantic web service in November 
+	*  Show and tell at the EBI
+	*  Show and tell in Manchester
+	*  Testing by our PALS and friends.
+	*  Sit down evaluation by Advisory Board.
+	*  Katy in Holland at end of Nov.</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:feature_list_for_pilot&amp;rev=1225204292&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-28T14:31:32+00:00</dc:date>
+        <title>development:feature_list_for_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:feature_list_for_pilot&amp;rev=1225204292&amp;do=diff</link>
+        <description>User Registration and Management
+
+	*  User registration and user profiles (for both regular users and service providers).
+
+Service Registration and Management
+
+	*  Single submission of a SOAP service (registered users only).
+	*  Batch submission of many SOAP services (registered users only).
+	*  Submission of all services from a SOAPLab server (registered users only).
+	*  Duplicate checking of SOAP services, during submission.
+	*  Ability to preview basic information about a service before submi…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:glossary&amp;rev=1219072819&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-18T16:20:19+00:00</dc:date>
+        <title>development:glossary</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:glossary&amp;rev=1219072819&amp;do=diff</link>
+        <description>Web Service
+
+Set of functionality that is intended for programmatic access via web technologies.
+
+Operation
+
+Operation relates to units of functionality within the Web Service.
+
+Service Base
+
+In the context of REST Web Services, the longest common shared URI.</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:myexperiment_and_biocatalogue_commonalities&amp;rev=1218531507&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-12T09:58:27+00:00</dc:date>
+        <title>development:myexperiment_and_biocatalogue_commonalities</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:myexperiment_and_biocatalogue_commonalities&amp;rev=1218531507&amp;do=diff</link>
+        <description>Development Environment
+
+	*  Ruby on Rails 
+		*  BioCatalogue Requires
+
+		*  version 2.0.x 
+
+		*  myExperiment Provides
+
+		*  version 1.x.x
+
+	*  Ruby
+		*  BioCatalogue Requires
+
+		*  TBC
+
+		*  myExperiment Provides
+
+		*  TBC
+
+	*  Web Servers and Configurations
+		*  BioCatalogue Requires</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:nonfunctionalrequirements_pilot&amp;rev=1218814347&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-15T16:32:27+00:00</dc:date>
+        <title>development:nonfunctionalrequirements_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:nonfunctionalrequirements_pilot&amp;rev=1218814347&amp;do=diff</link>
+        <description>Scalability
+
+Processing times
+
+
+Maximum expected times for processing different types of requests:
+
+	*  Plain retrieval :: &lt; 5 seconds
+	*  Searching
+		*  Keyword search :: &lt; 10 seconds
+		*  Complex query search :: &lt; 20 seconds
+
+	*  Submission
+		*  pre-fetch of WSDL -- not under our control
+		*  parsing of pre-fetched WSDL :: &lt; 7.5 seconds
+		*  actual submission :: &lt; 15 seconds</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1225991004&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-06T17:03:24+00:00</dc:date>
+        <title>development:pilot_dev_notes</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1225991004&amp;do=diff</link>
+        <description>This page should be used to document (or link to) design decisions, data models, plugins/gems used and so on, during the development of the Pilot.
+
+Codebase Guidelines
+
+
+See: codebase_guidelines
+
+Gems (need to be installed seperately)
+
+	*  solr-ruby
+	*  addressable
+	*  dnsruby</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:requirements_for_pilot&amp;rev=1224950400&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-25T17:00:00+00:00</dc:date>
+        <title>development:requirements_for_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:requirements_for_pilot&amp;rev=1224950400&amp;do=diff</link>
+        <description>Note(1): annotations in '[]' are MoSCoW classifications.
+
+Note(2): estimated development and testing times ares included in the titles. These only take into account [Must] and [Should] requirements, and reflect “one FTE developer” days.
+
+Core Catalogue (48-67 days)
+
+User Management (3-5 days)
+
+
+Note: this is core information only. Additional information is covered by .</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:roadmap&amp;rev=1227011219&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-18T12:26:59+00:00</dc:date>
+        <title>development:roadmap</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:roadmap&amp;rev=1227011219&amp;do=diff</link>
+        <description>Please not that the time scales listed are estimated. New requirements and changes in the user community may affect the delivery dates and schedule. 
+
+Fourth quarter of 2008
+
+	*  Private beta - see The Pilot
+
+First quarter of 2009
+
+	*  Public beta - see The Pilot
+	*  Advanced search - faceted browsing, filtering and advanced search for services.
+	*  Public APIs - simple RESTful APIs to BioCatalogue.
+	*  REST services support - ability to register, search and annotate REST services.
+	*  Semantic …</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development&amp;rev=1220547031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-04T17:50:31+00:00</dc:date>
+        <title>development:software_development</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development&amp;rev=1220547031&amp;do=diff</link>
+        <description>*  Requirements
+	*  User Types
+	*  Questionnaire_results
+	*  Annotation models
+	*  Backend
+	*  Frontend
+	*  Middleware
+	*  Annotated pilot services</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:stories&amp;rev=1218626400&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-13T12:20:00+00:00</dc:date>
+        <title>development:stories</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:stories&amp;rev=1218626400&amp;do=diff</link>
+        <description>Collection of basic usecase “stories”.
+
+
+	*  Basic Search
+	*  Catalogue Browsing
+	*  User Registration
+	*  Service Submission with Service Document
+	*  Service Submission without a Service Document
+	*  Search Result Alerting
+	*  Service Change Monitoring
+	*  Notification Aggregation
+	*  Deprecation of Service
+	*  Add annotation to existing service in the catalogue</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:users_requirement_stories&amp;rev=1224860109&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-24T15:55:09+00:00</dc:date>
+        <title>development:users_requirement_stories</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:users_requirement_stories&amp;rev=1224860109&amp;do=diff</link>
+        <description>This section contains all the stories users tell us to outline their requirements. 
+
+
+Sent 05/08/08 on BioCatalogue mailing list
+
+Last week I experienced how version notification from BioCatalogue would be useful. My colleague Martijn Schuemie from Rotterdam had provided me with a service for human protein name synonyms. Only through our e-mails and skype chat I found out that he recently updated his service to include mouse and rat synonyms. How could BioCatalogue (BioNanny?) help here?</description>
+    </item>
+</rdf:RDF>

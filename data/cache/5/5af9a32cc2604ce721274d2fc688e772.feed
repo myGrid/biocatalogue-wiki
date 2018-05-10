@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2011-05-12T00:29:23+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:requirements_for_pilot&amp;rev=1224950400&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:requirements&amp;rev=1218186759&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:registering_web_services&amp;rev=1278080149&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-register&amp;rev=1260445679&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:api_requirements&amp;rev=1267548429&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:pre_release_notes&amp;rev=1274865281&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_2068&amp;rev=1275470238&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help:getting_started&amp;rev=1264677239&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing&amp;rev=1285923544&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap2009&amp;rev=1266421681&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:annotating_web_services&amp;rev=1260446895&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-annotate&amp;rev=1260445707&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:stories&amp;rev=1218626400&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:annotation&amp;rev=1270044484&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:installation&amp;rev=1305125998&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:glossary&amp;rev=1219072819&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:feature_list_for_pilot&amp;rev=1225204292&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1274102985&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:emory_2011-01-10&amp;rev=1295011318&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:rought_notes_on_write_api&amp;rev=1303396643&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1350&amp;rev=1259934892&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:paul_fisher_16_11_09&amp;rev=1263917536&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:integrating_das_services&amp;rev=1291025037&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:apps:mass_curator&amp;rev=1284115526&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:annotations&amp;rev=1268046500&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:requirements_for_pilot&amp;rev=1224950400&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-25T17:00:00+01:00</dc:date>
+        <title>development:requirements_for_pilot</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:requirements_for_pilot&amp;rev=1224950400&amp;do=diff</link>
+        <description>Note(1): annotations in '[]' are MoSCoW classifications.
+
+Note(2): estimated development and testing times ares included in the titles. These only take into account [Must] and [Should] requirements, and reflect “one FTE developer” days.
+
+Core Catalogue (48-67 days)
+
+User Management (3-5 days)
+
+
+Note: this is core information only. Additional information is covered by .</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:requirements&amp;rev=1218186759&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-08T10:12:39+01:00</dc:date>
+        <title>development:software_development:requirements</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:requirements&amp;rev=1218186759&amp;do=diff</link>
+        <description>Note: annotations in '[]' are MoSCoW classifcations.
+
+Core Catalogue
+
+User Details
+
+
+Note: this is core information only. Additional information is covered by .
+
+
+	*  [Must] User registration ([mockup1] [mockup2])
+		*  Authentication information
+			*  [Should] OpenID
+			*  [Must] E-mail address and password</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:registering_web_services&amp;rev=1278080149&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-02T15:15:49+01:00</dc:date>
+        <title>public:help:biocatalogue:registering_web_services</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:registering_web_services&amp;rev=1278080149&amp;do=diff</link>
+        <description>The Problem:  “My Web Services are not visible...”
+
+So...
+
+
+	*  Anyone can easily register Web Services in the BioCatalogue
+	*  These service are instantly available to the community, tool developers and search engines
+	*  Service providers can advertise, describe and monitor their services through the BioCatalogue</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-register&amp;rev=1260445679&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-10T11:47:59+01:00</dc:date>
+        <title>public:help-internal-register</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-register&amp;rev=1260445679&amp;do=diff</link>
+        <description>This page is now deprecated. Please do not update!
+
+	*  Anyone can easily register Web Services
+	*  Instantly available to the community, developers and search engines
+	*  Service providers can advertise, describe and monitor their services
+
+Any registered users (members) can submit any Web Service to the BioCatalogue.  
+You do not have to be the provider of the service to submit it to the BioCatalogue. Click here to become a Member of the BioCatalogue.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:api_requirements&amp;rev=1267548429&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-03-02T16:47:09+01:00</dc:date>
+        <title>development:api_requirements</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:api_requirements&amp;rev=1267548429&amp;do=diff</link>
+        <description>By Sergey and Jits
+
+
+At the moment the following is mainly for Taverna BioCatalogue plugin. The main priority for me is to be able to read the data first. I would like to able to read all the important data about a service (service details, operations along with inputs/outputs and data formats, most important annotations - tags, comments, etc) - this is required to complete the prototype I've shown, make it public and get the feedback on how to start integration with Taverna. When that is done, …</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:pre_release_notes&amp;rev=1274865281&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-05-26T10:14:41+01:00</dc:date>
+        <title>development:pre_release_notes</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:pre_release_notes&amp;rev=1274865281&amp;do=diff</link>
+        <description>Pre-release Notes for 24 May, 2010 Release
+
+
+ Instructions for updating the codebase 
+
+	*  Update codebase
+		*  svn update
+
+
+	*  Migrate database
+		*  rake db:migrate RAILS_ENV=production
+
+
+	*  Bring javascript files up to date
+		*  rake asset:packager:build_all</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_2068&amp;rev=1275470238&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-06-02T10:17:18+01:00</dc:date>
+        <title>development:release_notes:revision_2068</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_2068&amp;rev=1275470238&amp;do=diff</link>
+        <description>Release Notes for 26 May, 2010 Release
+
+
+ Instructions for updating the codebase 
+
+	*  Update codebase
+		*  svn update
+
+
+	*  Migrate database
+		*  rake db:migrate RAILS_ENV=production
+
+
+	*  Bring javascript files up to date
+		*  rake asset:packager:build_all</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help:getting_started&amp;rev=1264677239&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-28T11:13:59+01:00</dc:date>
+        <title>public:help:getting_started</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help:getting_started&amp;rev=1264677239&amp;do=diff</link>
+        <description>The BioCatalogue is a centralised registry of curated Life Science Web Services.
+
+It allows you to easily discover, register, annotate, monitor and use Web Services.
+
+Search (by Keywords)
+
+
+You can search for services using keywords...
+
+
+
+We find all matching services, providers, users and so on. We also automatically include results that have relevant terms. So for example, if you search for “microarray” you also get results that have the term “affymetrix”.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing&amp;rev=1285923544&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-10-01T09:59:04+01:00</dc:date>
+        <title>development:system_testing</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing&amp;rev=1285923544&amp;do=diff</link>
+        <description>Discover Register Annotate Monitor Aob (DRAMA)
+
+
+DRAMA is a procedure in place to functionally test the BioCatalogue features after every release. It has to be carried out on the BioCatalogue test site. Below are described the steps required. The aim is to automate the process using tools such as Molybdenum</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap2009&amp;rev=1266421681&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-17T15:48:01+01:00</dc:date>
+        <title>public:roadmap2009</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap2009&amp;rev=1266421681&amp;do=diff</link>
+        <description>First quarter of 2009 (Jan - Mar)
+
+	*  Private pilot (private beta) - Basic SOAP services registration, discovery and annotation. Batch upload of soaplab services. 
+
+	*  Advanced service discovery and filtering (I) - Sorting and filtering (by providers and services types) and more faceted browsing features. At a glance counts of annotations on services.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:annotating_web_services&amp;rev=1260446895&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-10T12:08:15+01:00</dc:date>
+        <title>public:help:biocatalogue:annotating_web_services</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:annotating_web_services&amp;rev=1260446895&amp;do=diff</link>
+        <description>The Problem:  “Web Services are poorly described...”
+
+So...
+
+
+	*  Anyone can describe, tag, recommend, comment on and annotate Web Services in the BioCatalogue
+	*  Expert curators oversee the BioCatalogue and organise “annotation jamborees”
+	*  The wider community participates in this effort through social curation</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-annotate&amp;rev=1260445707&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-10T11:48:27+01:00</dc:date>
+        <title>public:help-internal-annotate</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-annotate&amp;rev=1260445707&amp;do=diff</link>
+        <description>This page is now deprecated. Please do not update!
+
+	*  Anyone can describe, tag, recommend, comment on and annotate services
+	*  Expert curators oversee the BioCatalogue
+	*  The wider community participates in this effort through social curation
+
+Web Service annotation can be defined as specific piece of metadata(text, image etc...) associated with a specific aspect of the Web Service. The annotations may be context specific and can be designed for human or for machine.
+
+The point of the annota…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:stories&amp;rev=1218626400&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-13T12:20:00+01:00</dc:date>
+        <title>development:stories</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:stories&amp;rev=1218626400&amp;do=diff</link>
+        <description>Collection of basic usecase “stories”.
+
+
+	*  Basic Search
+	*  Catalogue Browsing
+	*  User Registration
+	*  Service Submission with Service Document
+	*  Service Submission without a Service Document
+	*  Search Result Alerting
+	*  Service Change Monitoring
+	*  Notification Aggregation
+	*  Deprecation of Service
+	*  Add annotation to existing service in the catalogue</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:annotation&amp;rev=1270044484&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-03-31T15:08:04+01:00</dc:date>
+        <title>development:annotation</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:annotation&amp;rev=1270044484&amp;do=diff</link>
+        <description>At a conceptual level, an Annotation consists of:
+
+
+	*  a link to the thing being annotated - the Annotatable
+		*  a link to the source of the annotation - the Source
+		*  a link to the attribute which specifies what kind of annotation this is - the Attribute
+		*  the value of the annotation (currently only free text and stored as a string) - the Value
+		*  the data type of the value (defaults to “String”) - the Value Type
+		*  version information - Version Info
+		*  timestamps for event time in…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:installation&amp;rev=1305125998&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-05-11T15:59:58+01:00</dc:date>
+        <title>development:installation</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:installation&amp;rev=1305125998&amp;do=diff</link>
+        <description>This page describes how to download, set up and run the BioCatalogue system on your own machine(s).
+
+Note: if you are setting up a development environment and working on the BioCatalogue codebase please also see the Codebase Guidelines.
+
+Getting Help
+
+
+For any assistance please join the biocatalogue-hackers mailing list and post your questions/feedback. Alternatively you can contact us directly at contact@biocatalogue.org.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:glossary&amp;rev=1219072819&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-18T16:20:19+01:00</dc:date>
+        <title>development:glossary</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:glossary&amp;rev=1219072819&amp;do=diff</link>
+        <description>Web Service
+
+Set of functionality that is intended for programmatic access via web technologies.
+
+Operation
+
+Operation relates to units of functionality within the Web Service.
+
+Service Base
+
+In the context of REST Web Services, the longest common shared URI.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:feature_list_for_pilot&amp;rev=1225204292&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-28T14:31:32+01:00</dc:date>
+        <title>development:feature_list_for_pilot</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:feature_list_for_pilot&amp;rev=1225204292&amp;do=diff</link>
+        <description>User Registration and Management
+
+	*  User registration and user profiles (for both regular users and service providers).
+
+Service Registration and Management
+
+	*  Single submission of a SOAP service (registered users only).
+	*  Batch submission of many SOAP services (registered users only).
+	*  Submission of all services from a SOAPLab server (registered users only).
+	*  Duplicate checking of SOAP services, during submission.
+	*  Ability to preview basic information about a service before submi…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1274102985&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-05-17T14:29:45+01:00</dc:date>
+        <title>development:background_processing</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1274102985&amp;do=diff</link>
+        <description>Tasks That Require Background Processing
+
+	*  Stats generation
+	*  Soaplab server submission
+	*  Updating the annotation counts
+	*  Solr optimisation
+	*  Running the service monitoring URLs checks
+	*  Updating the list of urls that should be monitoring
+	*  Sending out monitoring status change emails</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:emory_2011-01-10&amp;rev=1295011318&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-01-14T13:21:58+01:00</dc:date>
+        <title>meetings:emory_2011-01-10</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:emory_2011-01-10&amp;rev=1295011318&amp;do=diff</link>
+        <description>Format: telcon
+
+Date: Mon 10th Jan 2011
+
+Time: 15:00 - 16:00 (BST) / 10:00 - 11:00 (EST)
+
+Attendance
+
+	*  Emory - Stephen Wheat, Tod Jackson
+	*  Manchester - Carole Goble, Steve Petiffer, Shoaib Sufi, Jiten Bhagat, Mannie Tagagira
+	*  EBI - None
+
+Minutes
+
+
+Carole brought up two main areas of discussion:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-27T11:18:54+01:00</dc:date>
+        <title>public:howto:soap</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff</link>
+        <description>Given that most existing SOAP services have a WSDL document, registering a SOAP service entry into the BioCatalogue requires only the WSDL url. The BioCatalogue WSDL parser automatically structures the data from the WSDL file into the BioCatalogue conformant format.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:rought_notes_on_write_api&amp;rev=1303396643&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-04-21T15:37:23+01:00</dc:date>
+        <title>development:rought_notes_on_write_api</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:rought_notes_on_write_api&amp;rev=1303396643&amp;do=diff</link>
+        <description>Authentication
+
+
+All calls to the Write API MUST be authenticated and authorised.
+
+You can use basic authentication (using your BioCatalogue username and password).
+
+OAuth is currently in test.
+
+Example:
+
+curl --user {username}:{password} http://www.biocatalogue.org
+
+Or by providing the appropriate HTTP headers in your HTTP client:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1350&amp;rev=1259934892&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-04T13:54:52+01:00</dc:date>
+        <title>development:release_notes:revision_1350</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1350&amp;rev=1259934892&amp;do=diff</link>
+        <description>1st December 2009
+
+	*  Previous release revision: 1300
+	*  This release revision: 1350
+
+Steps To Take for Update
+
+
+In order...
+
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do: 
+ruby script/worker stop
+ruby script/worker start
+	*  Run the 'search by data script'</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:paul_fisher_16_11_09&amp;rev=1263917536&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-19T16:12:16+01:00</dc:date>
+        <title>development:paul_fisher_16_11_09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:paul_fisher_16_11_09&amp;rev=1263917536&amp;do=diff</link>
+        <description>*  Easy way to access my services or my stuff
+	*  What to do if i don't want everybody to see my services
+	*  The country flag should mention that it's the location of the service as some users might think that it's the location of the submitter 
+	*  The search within result would be nice if it's applicable to search result too not only filtering result 
+	*  It is not clear from the operation page where are the input and output of the services. It all over the place. Need a way to allow the user…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:integrating_das_services&amp;rev=1291025037&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-11-29T10:03:57+01:00</dc:date>
+        <title>development:integrating_das_services</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:integrating_das_services&amp;rev=1291025037&amp;do=diff</link>
+        <description>Integrating DAS Services into BioCatalogue
+
+About DAS
+
+The DAS registration service provides a repository for registry and discovery of DAS (Distributed Annotation System) services. DAS servers are described with meta data like who is providing a server, what DAS commands are being understood by it, what type of data is being provided, etc. DAS style XML-http as well as SOAP based web services can be used to interact with the DAS registry. This is used by DAS clients like EnsEMBL, SPICE, or Dast…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:apps:mass_curator&amp;rev=1284115526&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-09-10T11:45:26+01:00</dc:date>
+        <title>public:apps:mass_curator</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:apps:mass_curator&amp;rev=1284115526&amp;do=diff</link>
+        <description>The BioCatalogue Mass Curator application is a small tool which utilizes BioCatalogue's read/write API to handle batch annotation of web services via the use of spreadsheets
+
+BioCatalogue curators can use the tool to browse and/or search the catalogue for web services and select services they are interested in annotating.  The selected collection of services can then be exported into an annotation template (in the form of an Excel spreadsheet).  Curators can then add different types of annotatio…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:annotations&amp;rev=1268046500&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-03-08T11:08:20+01:00</dc:date>
+        <title>development:annotations</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:annotations&amp;rev=1268046500&amp;do=diff</link>
+        <description>Available here: &lt;http://github.com/jits/annotations&gt; (with full documentation)
+
+IMPORTANT: you have to create a controller and model for annotations again in your app (but leaving them blank is fine though they can be used to extend the original ones from the plugin. AND use require_dependency (see examples of usage in BioCatalogue).</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T15:02:34+01:00</dc:date>
+        <title>public:howto</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff</link>
+        <description>How to submit a soaplab service to the BioCatalogue?
+
+How to submit a SOAP service to BioCatalogue?
+
+How to add descriptions to web services in the BioCatalogue?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T15:09:58+01:00</dc:date>
+        <title>public:howto:annotation</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff</link>
+        <description>Anytime you see this icon  Click on it; a text box will pop up. Add your description and submit. Note that you need to sign in first before you can annotate a web service in BioCatalogue.</description>
+    </item>
+</rdf:RDF>

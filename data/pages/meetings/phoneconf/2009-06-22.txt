@@ -1,0 +1,50 @@
+Date: Monday 22th June 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503011
+===== Attending ===== 
+
+**Manchester:** 
+
+
+**EBI:**
+
+
+===== Apologies =====
+
+===== Minuting =====
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Progress/developement of the beta - are we rolling for ISMB?
+  * ISMB list of stuff to do or to have. 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Eric report on the detailed results of load and throughput testings including peak and average cases
+  * Jits and Franck and Steve: Import content of the Embrace registry.
+  * Franck - draft the demo. 
+====== Minutes ======
+
+===== New actions =====
+ 
+===== Upcoming Meetings =====  
+
+ISMB 
+
+===== AOB =====
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-06-15|Phone Conference Meeting on June 15 2009]]
+
+Next meeting: 

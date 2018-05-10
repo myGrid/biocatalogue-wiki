@@ -1,0 +1,18 @@
+<span class="br0">&#123;</span>
+  <span class="st0">&quot;rest_service&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;name&quot;</span> <span class="sy0">:</span> <span class="st0">&quot;Example REST service&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;endpoint&quot;</span> <span class="sy0">:</span> <span class="st0">&quot;http://www.example.com&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;rest_resources&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span>
+        <span class="st0">&quot;POST http://www.example.com/examples&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;GET http://www.example.com/examples&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;GET http://www.example.com/examples/{id}&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;PUT http://www.example.com/examples/{id}&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;DELETE http://www.example.com/examples/{id}&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;annotations&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+      <span class="st0">&quot;documentation_url&quot;</span> <span class="sy0">:</span> <span class="st0">&quot;http://www.example.com/docs.html&quot;</span><span class="sy0">,</span>	
+      <span class="st0">&quot;alternative_names&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">&quot;alternate name for web service&quot;</span><span class="sy0">,</span> <span class="st0">&quot;yet another name for web service&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+      <span class="st0">&quot;tags&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">&quot;example&quot;</span><span class="sy0">,</span> <span class="st0">&quot;test&quot;</span><span class="sy0">,</span> <span class="st0">&quot;delete me&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+      <span class="st0">&quot;description&quot;</span> <span class="sy0">:</span> <span class="st0">&quot;Put a description of the web service here&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;categories&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">&quot;http://www.biocatalogue.org/categories/1&quot;</span><span class="sy0">,</span> <span class="st0">&quot;http://www.biocatalogue.org/categories/6&quot;</span><span class="sy0">,</span> <span class="st0">&quot;http://www.biocatalogue.org/categories/17&quot;</span><span class="br0">&#93;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

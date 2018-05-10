@@ -1,0 +1,68 @@
+===== Telcon Meeting on June 13, 2008 =====
+==== Agenda ====
+  * Action Items from previous meeting
+  * Round table discussions
+  * Planning
+  * Any other Business
+
+==== Attendees ====
+EBI
+  * Thomas Laurent
+  * Eric Nzuobontane
+
+Manchester
+  * Jiten Baghat
+  * Corole Goble
+  * Frank Tanoh
+  * Katy Wolstencroft
+
+==== Apologies ====
+  * Rodrigo Lopez
+  * Hamish McWilliam
+
+==== Discussions ====
+
+=== Action Items from Previous Meeting ===
+  * Korean institute was contacted by Eric. They would not transfer 'biocatalog.org' domain to EBI but would permit links to 'biocatalogue.org' from their pages
+  * No critical examination of the annotation model yet. People to still look at it and send feedback to the mailing list
+  * Franck has posted sample stories to the mailing list and also put them up on the wiki for all to read (especially EBI people)
+  * Thomas has a put up a holding page on the biocatalogue.org domain
+  * Discussions on myexperiment code base between Jiten and EBI(Eric & Thomas) are on-going
+
+
+
+=== Round Table ===
+  * Carole -> There is a team of people doing work on semantic annotation of web services at Manchester that could be brought into the biocatalogue project
+
+  * Franck -> An explanation of the bronze/silver/gold/platinum annotation models that Eric and Franck worked on. Carole noted that from a user perspective, the one dimensional view of the model is fine, but in terms of capturing the information, we need to look are several dimensions[e.g- bronze,silver,gold against discovery, discrimination,execution].
+
+  * Thomas -> Had fruitful meeting with EMBRACE people who were contemplating development on a project similar to biocatalogue. Thomas convinced them to consider using biocatalogue instead. Waiting to hear from them about the discussion they had on the issue at recent meeting. There are strong indications they will be using the biocatalogue and they could provide biocatalogue with some useful tools and a user base.
+
+  * Jiten/Franck -> Had discussions with Alex and Eric on a security annotations for biocatalogue web services. From those discussions, two ways security annotations could be done: harvesting WS-Security policy files or using set of attributes provided by community. Alex to provide biocatalogue with a sample set of attributes (as used in taverna) and also biocatalogue to point to the WS-Security policy file(if it exists).
+
+  * Jiten -> On architecture,  need to consider scalability issues in biocatalogue in the long term. Jits suggested a possible use of Java for biocatalogue backend infrastructure. The requirements to setup a system quickly in order to have a tangible presence and to build a community suggest that rails is probably the way to go in the first instance.
+
+  
+==== Action Items ====
+  * Action All -> Read the paper on biocatalogue sent to the mailing list by Carole
+
+  * Action Carole -> Speak to Steve, of the Manchester EMBRACE team about biocatalogue
+
+  * Action Eric -> post database model to mailing list for comments 
+
+  * Action All -> Planning on prototype/to building a community/to building a highly scalable infrastructure
+
+  * Action All -> Read on building highly scalable web applications (links to sent to list by Jits) 
+
+  * Action Eric/Jits/Thomas -> Design to with possible replacement of components in mind
+
+  * Action All : Need flyer for  ISMB meeting
+
+==== Others ====
+  * Franck going to caBIG Annual General Meeting (23-25 June)
+
+  * Carole, Katy,Thomas,Hamish & Rodrigo going to ISMB meeting (20-23 July)
+
+  * Corole and Katy doing paper for the project kick-off meeting for our sysmo-db project
+
+  * Biocatalogue to Keep the logo & colors Thomas had for the mock-ups 

@@ -1,0 +1,3 @@
+**[[public:howto:soaplab|How to submit a soaplab service to the BioCatalogue?]]**\\
+**[[public:howto:SOAP|How to submit a SOAP service to BioCatalogue?]]**\\
+**[[public:howto:annotation|How to add descriptions to web services in the BioCatalogue?]]**

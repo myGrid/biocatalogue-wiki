@@ -1,0 +1,3 @@
+====== Notification Aggregation ======
+
+Some users may be monitoring many services at both [[Search Result Alerting]] and [[Service Change Monitoring]] and would prefer to be able to monitor a single feed. Building in aggregation features will make it simple to create a collection of monitors and alerts (possibly customised for specific requirements) which can be handled as a single "My BioCatalogue Alerts" feed.

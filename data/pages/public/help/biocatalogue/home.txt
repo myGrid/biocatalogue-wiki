@@ -1,0 +1,6 @@
+===== Using the BioCatalogue =====
+
+  * [[public:help:BioCatalogue:discovering web services|Discovering Web Services]]
+  * [[public:help:BioCatalogue:registering web services|Registering Web Services]]
+  * [[public:help:BioCatalogue:annotating web services|Annotating Web Services]]
+  * [[public:help:BioCatalogue:how we monitor web services|How we monitor Web Services]]

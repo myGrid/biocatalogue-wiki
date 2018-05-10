@@ -1,0 +1,22 @@
+====== Duplicates Policy ======
+
+One possible consequence of community based submission of services to the catatlogue is the risk of ending up with a catalogue which contains many entries desribing the same service (i.e. same interface, same location). This pollutes search results and makes service discovery more problematic.
+
+===== A Basic Model =====
+
+A basic model for picking up duplicate services is to, on submission, search the catatlogue for existing registered services with the same location (i.e. same service description document or service endpoint), and if such a service is found present the user with a message saying that the service has been previously registered and providing a link to the service details.
+
+This will not catch all duplicates, however it does avoid collapsing mirrors of a service.
+
+For example the following are all pointers to the WSDbfetch service at EBI:
+  * WSDL:
+    * http://www.ebi.ac.uk/Tools/webservices/wsdl/WSDbfetch.wsdl
+    * http://www.embl-ebi.ac.uk/Tools/webservices/wsdl/WSDbfetch.wsdl
+    * http://193.62.197.12/Tools/webservices/wsdl/WSDbfetch.wsdl
+    * http://www.ebi.ac.uk/ws/services/WSDbfetch?wsdl
+    * http://www.embl-ebi.ac.uk/ws/services/WSDbfetch?wsdl
+    * http://193.62.197.12/ws/services/WSDbfetch?wsdl
+  * Endpoint:
+    * http://www.ebi.ac.uk/ws/services/WSDbfetch
+    * http://www.embl-ebi.ac.uk/ws/services/WSDbfetch
+    * http://193.62.197.12/ws/services/WSDbfetch

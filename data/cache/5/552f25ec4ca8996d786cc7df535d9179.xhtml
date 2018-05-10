@@ -1,0 +1,272 @@
+
+<p>
+Location: /nfs/public/rw/es/projects/biocatalogue/live/config/initializers/biocat_local.rb<br/>
+
+<br/>
+
+ <br/>
+
+# BioCatalogue: app/config/initializers/biocat_local.rb.pre<br/>
+
+#<br/>
+
+# Copyright © 2008, University of Manchester, The European Bioinformatics<br/>
+
+# Institute (EMBL-EBI) and the University of Southampton.<br/>
+
+# See license.txt for details<br/>
+
+ <br/>
+
+# Private settings that apply to individual deployments.<br/>
+
+ <br/>
+
+# This setting determines where trashing (via the acts_as_trashable plugin) is used.<br/>
+
+ENABLE_TRASHING = true<br/>
+
+ <br/>
+
+# This setting determines whether search indexing is enabled or not. <br/>
+
+ENABLE_SEARCH = true<br/>
+
+ <br/>
+
+# Show the debug box at the end of the page or not.<br/>
+
+SHOW_DEBUG = false<br/>
+
+ <br/>
+
+# Switch event logging on or off.<br/>
+
+USE_EVENT_LOG = true<br/>
+
+ <br/>
+
+# Set a proxy for open-uri calls<br/>
+
+#If :proxy option is specified, the value should be String, <br/>
+
+#<acronym title="Uniform Resource Identifier">URI</acronym>, boolean or nil. When String or <acronym title="Uniform Resource Identifier">URI</acronym> is given, <br/>
+
+#it is treated as proxy <acronym title="Uniform Resource Identifier">URI</acronym>. <br/>
+
+#When true is given or the option itself is not specified, <br/>
+
+#environment variable `scheme_proxy’ is examined. `scheme’ <br/>
+
+#is replaced by `http’, `https’ or `ftp’. <br/>
+
+#When false or nil is given, the environment variables <br/>
+
+#are ignored and connection will be made to a server directly. <br/>
+
+<acronym title="Hyper Text Transfer Protocol">HTTP</acronym>_PROXY = &#039;<a href="http://www-proxy.ebi.ac.uk:3128" class="urlextern" target="_blank" title="http://www-proxy.ebi.ac.uk:3128"  rel="nofollow">http://www-proxy.ebi.ac.uk:3128</a>&#039;<br/>
+
+ <br/>
+
+PORT = &#039;8990&#039;<br/>
+
+ <br/>
+
+# Enable or disable endpoint status check icon in view<br/>
+
+ENABLE_STATUS_DISPLAY = true<br/>
+
+ <br/>
+
+# defaults to exception.notifier@default.com<br/>
+
+ExceptionNotifier.sender_address = %(“BioCatalogue Errors” <a href="mailto:&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x62;&#x69;&#x6f;&#x63;&#x61;&#x74;&#x61;&#x6c;&#x6f;&#x67;&#x75;&#x65;&#x2e;&#x6f;&#x72;&#x67;" class="mail JSnocheck" title="&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x62;&#x69;&#x6f;&#x63;&#x61;&#x74;&#x61;&#x6c;&#x6f;&#x67;&#x75;&#x65;&#x2e;&#x6f;&#x72;&#x67;">contact@biocatalogue.org</a>)<br/>
+
+ <br/>
+
+# defaults to ”[ERROR] “<br/>
+
+#ExceptionNotifier.email_prefix = ”[APP-#{RAILS_ENV.capitalize} ERROR] “<br/>
+
+ <br/>
+
+# defaults to false - meaning by default it sends email.  Setting true will cause it to only render the error pages, and NOT email.<br/>
+
+# For local development purposes this SHOULD be set to true.<br/>
+
+ExceptionNotifier.render_only = false<br/>
+
+ <br/>
+
+ExceptionNotifier.exception_recipients = %w(contact@biocatalogue.org)<br/>
+
+ <br/>
+
+# ==============================================================<br/>
+
+ <br/>
+
+# Enable or disable the cache-money plugin, which caches AR models in memcached.<br/>
+
+# This setting may be useful in instances when cache-money is not working as required/<br/>
+
+ENABLE_CACHE_MONEY = false<br/>
+
+ <br/>
+
+ <br/>
+
+# The sender email address for emails sent from the application.<br/>
+
+SENDER_EMAIL_ADDRESS = “contact@biocatalogue.org”<br/>
+
+ <br/>
+
+# The email address used for sending feedback from users to.<br/>
+
+FEEDBACK_EMAIL_ADDRESS = “contact@biocatalogue.org”<br/>
+
+ <br/>
+
+ <br/>
+
+# reCAPTCHA settings:<br/>
+
+ENV[“RECAPTCHA_PUBLIC_KEY”] = “6Lff_QYAAAAAABdXktnhabbQguELRw5r6q2xaDTr”<br/>
+
+ENV[“RECAPTCHA_PRIVATE_KEY”] = “6Lff_QYAAAAAANDXFRd76iB8jDd0DTxZEhd7Bvin”<br/>
+
+ <br/>
+
+ <br/>
+
+# The site&#039;s base host <acronym title="Uniform Resource Locator">URL</acronym> (for times when the base host cannot be obtained from controllers):<br/>
+
+SITE_BASE_HOST = “<a href="http://www.biocatalogue.org" class="urlextern" target="_blank" title="http://www.biocatalogue.org"  rel="nofollow">http://www.biocatalogue.org</a>“<br/>
+
+ <br/>
+
+ <br/>
+
+# Twitter integration:<br/>
+
+ENABLE_TWITTER = false<br/>
+
+TWITTER_ACCOUNT_<acronym title="Uniform Resource Locator">URL</acronym> = “<a href="http://twitter.com/biocat_test" class="urlextern" target="_blank" title="http://twitter.com/biocat_test"  rel="nofollow">http://twitter.com/biocat_test</a>“<br/>
+
+TWITTER_ACCOUNT_EMAIL = “biocatalogue-developers@rubyforge.org”;<br/>
+
+TWITTER_ACCOUNT_PASSWORD = “biocateatdogs”<br/>
+
+ <br/>
+
+ <br/>
+
+# Addthis.com bookmarking widget integration:<br/>
+
+ENABLE_BOOKMARKING_WIDGET = true<br/>
+
+ADDTHIS_USERNAME = “biocatalogue”<br/>
+
+ <br/>
+
+# Google Analytics:<br/>
+
+ENABLE_GOOGLE_ANALYTICS = true<br/>
+
+GOOGLE_ANALYTICS_TRACKER_ID = &#039;UA-5011049-1&#039;<br/>
+
+ <br/>
+
+# WSDLUtils base <acronym title="Uniform Resource Identifier">URI</acronym><br/>
+
+# E.g. WSDLUTILS_BASE_<acronym title="Uniform Resource Identifier">URI</acronym> = &#039;<a href="http://localhost/WSDLUtils/WSDLUtils.php" class="urlextern" target="_blank" title="http://localhost/WSDLUtils/WSDLUtils.php"  rel="nofollow">http://localhost/WSDLUtils/WSDLUtils.php</a>&#039;<br/>
+
+WSDLUTILS_BASE_<acronym title="Uniform Resource Identifier">URI</acronym> = &#039;<a href="http://www.biocatalogue.org/WSDLUtils/WSDLUtils.php" class="urlextern" target="_blank" title="http://www.biocatalogue.org/WSDLUtils/WSDLUtils.php"  rel="nofollow">http://www.biocatalogue.org/WSDLUtils/WSDLUtils.php</a>&#039;<br/>
+
+ <br/>
+
+ <br/>
+
+# ====================================================<br/>
+
+# Configure local settings for the RPX Single Sign-On <br/>
+
+# (for OpenID, Twitter, Facebook, etc logins - see <a href="https://rpxnow.com/" class="urlextern" target="_blank" title="https://rpxnow.com/"  rel="nofollow">https://rpxnow.com/</a>)<br/>
+
+# —————————————————-<br/>
+
+ <br/>
+
+ENABLE_RPX  = true<br/>
+
+RPX_REALM   = &#039;biocatalogue&#039;<br/>
+
+RPX_<acronym title="Application Programming Interface">API</acronym>_KEY = &#039;5d662627dfdf36fb50444f8b0b6c09cf82bcb08b&#039;<br/>
+
+ <br/>
+
+# ====================================================<br/>
+
+ <br/>
+
+ <br/>
+
+# Setting to determine whether mappings (eg: “give me the relevant service provider that might be related to this annotation”) <br/>
+
+# are carried out after getting the raw results from Solr.<br/>
+
+# If set to true, this may cause search to be slower but has the best chance of returning all relevant results.<br/>
+
+# If set to false, it is crucial that all relevant associated object IDs are indexed together with the items, in Solr.<br/>
+
+SEARCH_PERFORM_POST_SOLR_MAPPINGS = false<br/>
+
+ <br/>
+
+# The message to display at the very top of the page.<br/>
+
+# Use this for extra special messages like very important announcements and maintenance notices.<br/>
+
+# HEADER_MESSAGE = ”&lt;span style=&#039;font-size:153.1%; font-weight:bold;&#039;&gt;&lt;b&gt;PLEASE NOTE: The is the BioCatalogue instance running under REE &amp; VM.&lt;/b&gt;&lt;/span&gt;“<br/>
+
+ <br/>
+
+# The list of email addresses that ALL status change emails should be sent to.<br/>
+
+# This augments any other status change notification feature.<br/>
+
+# This MUST be an array of email addresses or a blank array.<br/>
+
+MONITORING_STATUS_CHANGE_RECIPIENTS = [“contact@biocatalogue.org” ]<br/>
+
+ <br/>
+
+# This setting determines whether notifications<br/>
+
+# about service status should be sent to service<br/>
+
+# submitters or anyone responsible for the service in <br/>
+
+# addition to those included in the status recipients list above.<br/>
+
+NOTIFY_SERVICE_RESPONSIBLE = true<br/>
+
+ <br/>
+
+# This setting determines whether <acronym title="Secure Sockets Layer">SSL</acronym> (via the ssl_requirement plugin) is used.<br/>
+
+ENABLE_<acronym title="Secure Sockets Layer">SSL</acronym> = false<br/>
+
+ <br/>
+
+# For cases where an &#039;identifier&#039; is not set for new annotation attributes,<br/>
+
+# this config setting is be used as the default “catch all” template for generating <br/>
+
+# an identifier.<br/>
+
+ANNOTATION_ATTRIBUTE_DEFAULT_IDENTIFIER_TEMPLATE = “<a href="http://biocatalogue.org/attribute/%s" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/%s"  rel="nofollow">http://biocatalogue.org/attribute/%s</a>“\\<br/>
+
+
+</p>

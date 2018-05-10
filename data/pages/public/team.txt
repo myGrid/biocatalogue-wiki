@@ -1,0 +1,44 @@
+====== The BioCatalogue Core Team ======
+ 
+  * **Carole Goble**: Project lead, Manchester
+  * **Niall Beard**: Software engineer, Manchester
+  * **Robert Haines**: Software engineer, Manchester
+  * **Mike Cornell**: Content curator, Manchester
+  * **Aleksandra Nenadic**: Project manager and software engineer, Manchester
+
+
+====== Past Team Members ======
+
+  * **Rodrigo Lopez**: Project lead, EBI
+  * **Franck Tanoh**: Bioinformatician and curator, Manchester
+  * **Eric Nzuobontane**: Software engineer, EBI
+  * **Thomas Laurent**: Software engineer, EBI
+  * **Mannie Tagarira**: Intern software engineer, Manchester
+  * **Sergejs Aleksevejs**: Intern software engineer, Manchester
+  * **Steve Pettifer**: Project lead, Manchester
+  * **Robert Stevens**: Project lead, Manchester
+  * **Jiten Bhagat**: Software engineer, Manchester
+  * **Robert Haines**: Software engineer, Manchester
+  * **Hamish McWilliam**: Service manager, EBI
+  * **Katy Wolstencroft**: Bioinformatician, Manchester
+
+====== The Focus Group ======
+
+See: [[public:focus_group|the Focus Group page]]
+
+
+====== Our Advisory Board ======
+
+The BioCatalogue Strategic Advisory Board (SAB) members:
+
+  * **Dr Robert Stevens**, School of Computer Science, University of Manchester, UK
+  * **Professor Chris Rawlings**, Rothamsted Research, UK, Bioinformatics.
+  * **Professor Anil Wipat**, Newcastle upon Tyne, UK, Bioinformatics.
+  * **Dr Jo Dicks**, John Innes Centre, UK, Computational and Systems Biology.
+  * **Dr Robert Gill**, Pronota nv, Belgium, Director of Bio-IT, previously at GSK.
+  * **Professor Steve Kemp**, University of Liverpool, UK, Biology.
+  * **Dr Mark Wilkinson**, U British Columbia, Canada, Bioinformatics, BioMOBY services.
+  * **Prof dr Antoine H.C. van Kampen**, Netherlands Bioinformatics Centre, Scientific Director, Bioinformatics.
+  * **Holger Lausen**, SeekDa OG, Austria, Web Service Search company, CTO and Co-Founder of web service discovery and matchmaking company. 
+  * **Dr Terry Payne**, University of Liverpool, UK, Computer Science, specialising in Semantic Web Services.
+ 

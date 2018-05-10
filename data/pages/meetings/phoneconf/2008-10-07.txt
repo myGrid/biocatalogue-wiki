@@ -1,0 +1,63 @@
+====== Meeting Agenda/Minutes ======
+
+Date: Tuesday 07th October 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** Franck, Jits, 
+
+**EBI:** Eric, Thomas
+
+===== Apologies =====
+Carole, Hamish, Rodrigo
+
+===== Minuting =====
+Jits
+
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Progress with the pilot - are we rolling? 
+
+  * AOB.
+
+
+===== Actions from Previous Meeting ===== 
+
+  * Franck: Gather requirement for the pilot... **DONE** during the EBI "designathon" (see: [[development:requirements_for_pilot]])
+  * Jits: Speak to Dave about the new privacy policy in myExperiment... **ONGOING**
+  * Everyone: read EBI privacy policy... **DONE**
+  * Franck: contact Eddie from BioMoby for help in registring BioMoby services.... **DONE**, Eddie has provided a script we could potentially use.
+
+====== Minutes ======
+
+Discussed how BioMoby services fit in. There are some complications here that need to be tackled once we have the basic SOAP service submission fully working. This brought up the idea of "service groupings", so people can see a list of all "BioMoby" services, for example.
+
+Agreed that we need to start deploying the pilot code somewhere so that we can show internal people, as well as get Franck to start populating the pilot content database. Eric and Thomas volunteered to be responsible for this (together with Hamish's help).
+
+Franck brought up and reminded us about the requirement for bulk submission of services. This is crucial to getting content in the pilot.
+
+We also discussed tagging and how it may fit in with the annotation model being developed. To users, though, we figured that they would be visualised differently to regular annotations.
+
+===== New Actions =====
+
+  * Franck (with devs): put together feature list for pilot, for end users.
+  * Jits: circulate myExp draft T&C's and privacy policy.
+  * Eric & Thomas: set up pilot.biocatalogue.org and deploy the current work on the pilot.
+ 
+===== Next Meeting =====
+
+Tues 14/10/2008
+
+===== Upcoming Meetings ===== 
+
+===== AOB =====
+ 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-09-30|Phone Conference Meeting on Sept 30 2008]]
+
+Next meeting: [[Meetings:PhoneConf:2008-10-14|Phone Conference Meeting on Oct 14 2008]]

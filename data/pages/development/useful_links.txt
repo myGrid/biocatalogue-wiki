@@ -1,0 +1,11 @@
+ The links below may help define more annotation predicates
+
+  * [[http://www.mygrid.org.uk/ontology/|myGrid ontology]]
+  * [[http://www.ebi.ac.uk/~jison/edam.html|EDAM]]
+  * [[http://en.wikipedia.org/wiki/ISO/IEC_11179|ISO standard]]
+  * [[http://bioportal.bioontology.org/visualize/40656|bioportal]]
+  * [[http://lsdis.cs.uga.edu/projects/glycomics/propreo/| propreo ontology]]
+ 
+
+
+

@@ -1,0 +1,19 @@
+====== George's feedback ======
+
+===== Search =====
+  * want to be able to sort search result e.g. by service history
+  * provider to be notified when a service is down
+  * for the search result want to see the number of member who annotated a given service
+  * the 'Switch to Detail view' can move up from it current place. This will reduce white space
+  
+===== Browsing =====
+  * Members should be able to view their own tag cloud.
+  * Personalise tag cloud. Be able to view what is interesting for you
+  * Translate the combination of filters into search query e.g. Filtering by service type(REST) and service category (Text mining) should automatically write in the search from: [REST] AND [Text mining]
+
+
+
+
+===== Annotation =====
+  * Find the annotation box annoying specially when there are no annotation
+  * If you click in an annotation box and don't supply any annotation the box just stays

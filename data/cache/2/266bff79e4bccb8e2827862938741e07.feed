@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2010-02-23T03:44:31+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1257763283&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:wsdl_parsing&amp;rev=1252572507&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:about_embrace_testscripts&amp;rev=1254906309&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:codebase_guidelines&amp;rev=1265197157&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:annotations&amp;rev=1244902682&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1300&amp;rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:service_testing&amp;rev=1247571942&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_faq&amp;rev=1244214981&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api&amp;rev=1266848637&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:faq&amp;rev=1265890266&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help:making_web_services&amp;rev=1265277000&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help:executing_web_services&amp;rev=1265104411&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:20_questions&amp;rev=1240408472&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-making-webservices&amp;rev=1260445902&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:application_load_testing&amp;rev=1246034053&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:caching&amp;rev=1245525179&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:data_model_pilot&amp;rev=1242980153&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:test_monitor&amp;rev=1234972611&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-generalinfo-webservices&amp;rev=1260445873&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help:general_info_on_web_services&amp;rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-executing-webservices&amp;rev=1260445926&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_terms_of_use&amp;rev=1226929220&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1259757841&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:color&amp;rev=1264502998&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1257763283&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-11-09T10:41:23+00:00</dc:date>
+        <title>development:background_processing</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1257763283&amp;do=diff</link>
+        <description>Tasks That Require Background Processing
+
+	*  Stats generation
+	*  Soaplab server submission
+	*  Updating the annotation counts
+	*  Solr optimisation
+	*  Running the service “ping” checks
+	*  Updating the list of urls that should be pinged
+
+Info
+
+Delayed::Job
+
+	*  Home - FAQ
+	*  Background job processing in Rails with delayed_job (blog post)
+	*  Handling Long-Running Tasks in Rails (presentation)
+	*  The New Queue (blog post)
+	*  rubyqueues - delayed_job (examples of using delayed_job)
+	*  Runni…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:wsdl_parsing&amp;rev=1252572507&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-09-10T08:48:27+00:00</dc:date>
+        <title>development:wsdl_parsing</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:wsdl_parsing&amp;rev=1252572507&amp;do=diff</link>
+        <description>WSDL parsing in BioCatalogue involves reading the contents of a WSDL file and structuring the data from it so that it can be mapped to the data model used internally in the BioCatalogue (which is subsequently persisted to a relational database). This structured way of storing the data contents allows for individual pieces of the data to be annotated separately.
+
+The main elements in the WSDL documents are :</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:about_embrace_testscripts&amp;rev=1254906309&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-10-07T09:05:09+00:00</dc:date>
+        <title>development:about_embrace_testscripts</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:about_embrace_testscripts&amp;rev=1254906309&amp;do=diff</link>
+        <description>About EMBRACE Test Scripts
+
+Statistics
+
+
+From the database dump of June 2009
+
+
+
+Libraries
+
+	*  Perl
+		*  XML::LibXML
+		*  XML::Compile
+		*  XML::Compile::WSDL11 
+
+
+
+The EMBRACE test server is believed to be running version 0.78 of the WSDL11 library. This library versioning jumped from 0.78 to 2.00 in 2008. Although version 0.78 only dates from October 2008, there has been a significant re-write of this library since then, causing many clients to break against 2.0x versions. The library is curre…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:codebase_guidelines&amp;rev=1265197157&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-03T11:39:17+00:00</dc:date>
+        <title>development:codebase_guidelines</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:codebase_guidelines&amp;rev=1265197157&amp;do=diff</link>
+        <description>The BioCatalogue codebase is:
+
+	*  hosted on Rubyforge (&lt;http://rubyforge.org/projects/biocatalogue/&gt;)
+	*  licensed under the BSD license
+	*  uses Subversion (SVN) (repository info: &lt;http://rubyforge.org/scm/?group_id=6901&gt;)
+	*  runs on Rails 2.3.2</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:annotations&amp;rev=1244902682&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-13T14:18:02+00:00</dc:date>
+        <title>development:annotations</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:annotations&amp;rev=1244902682&amp;do=diff</link>
+        <description>Available here: &lt;http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/annotations/&gt;
+
+IMPORTANT: you have to create a controller and model for annotations again in your app (but leaving them blank is fine though they can be used to extend the original ones from the plugin. AND use require_dependency (see examples of usage in BioCatalogue).</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1300&amp;rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+00:00</dc:date>
+        <title>development:release_notes:revision_1300</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1300&amp;rev=1260536560&amp;do=diff</link>
+        <description>19th November 2009 Release
+
+	*  Previous release revision: 1266
+	*  This release revision: 1300
+
+Steps To Take for Update
+
+
+In order...
+
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:service_testing&amp;rev=1247571942&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-07-14T11:45:42+00:00</dc:date>
+        <title>development:service_testing</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:service_testing&amp;rev=1247571942&amp;do=diff</link>
+        <description>*  Requirements
+	*  Development
+	*  What Next on Testing &amp; Monitoring
+
+Requirements
+
+Monitoring
+
+	*  Service Ping
+		*  Availability of descriptor document
+		*  Availability of endpoint
+
+	*  Test example(s)/workflow(s) to check functionality
+	*  Mail service maintainer about changes in service status
+	*  Ability to register interest in a service
+	*  Monitoring interfaces changes
+		*  Changes in the MD5 sum of the interface document(wsdl)
+		*  Changes in the number of operations in the wsdl
+		*  C…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_faq&amp;rev=1244214981&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-05T15:16:21+00:00</dc:date>
+        <title>development:biocatalogue_faq</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_faq&amp;rev=1244214981&amp;do=diff</link>
+        <description>1. Why BioCatalogue? 
+
+While biologist and Bioinformatician find the use of web services critical for their work, they also encounter a number of difficulties associated with the current state of many services and the access to these services. These problems include:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api&amp;rev=1266848637&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-22T14:23:57+00:00</dc:date>
+        <title>public:api</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api&amp;rev=1266848637&amp;do=diff</link>
+        <description>The BioCatalogue exposes a set of public REST based endpoints to allow people to consume the data from the BioCatalogue programmatically. Currently, XML and JSON outputs are provided.
+
+
+
+
+
+
+
+Changelog
+
+
+The full API changelog can be accessed here</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:faq&amp;rev=1265890266&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-11T12:11:06+00:00</dc:date>
+        <title>public:faq</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:faq&amp;rev=1265890266&amp;do=diff</link>
+        <description>1. Why the BioCatalogue?
+
+
+While biologists and Bioinformaticians find the use of web services critical for their work, they also encounter a number of difficulties associated with the current state of many services and the access to these services. These problems include:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help:making_web_services&amp;rev=1265277000&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-04T09:50:00+00:00</dc:date>
+        <title>public:help:making_web_services</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help:making_web_services&amp;rev=1265277000&amp;do=diff</link>
+        <description>I have a piece of code - how can I make it a web service - haw can I make it?
+
+There are different solutions based on which programming language you are using.
+It also depends on expected number of users. If you plan to have more than &gt;1000 calls a day, you should probably think about production servers instead of simple scripts.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help:executing_web_services&amp;rev=1265104411&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-02T09:53:31+00:00</dc:date>
+        <title>public:help:executing_web_services</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help:executing_web_services&amp;rev=1265104411&amp;do=diff</link>
+        <description>I found a nice service - how can I execute it?
+
+There are many ways ways on executing web services and there is no simple way of telling which one is the best in your case. This depends on:
+
+	*  The type of the service (SOAP, REST etc. )
+	*  The way you want to execute the service (in a browser, in a GUI, inside a program or in pipelining system)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:20_questions&amp;rev=1240408472&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-22T13:54:32+00:00</dc:date>
+        <title>development:20_questions</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:20_questions&amp;rev=1240408472&amp;do=diff</link>
+        <description>(ref: Jim Gray's 20 Questions [link])
+
+Similar to what is happening for myExperiment
+
+We have identified 4 categories of questions so far
+
+1- questions on statistics in the system, how many…
+
+	*  How many services has provider X? ...currently implemented but need to make sure it clear enough for users... How many of those are REST? How many of those are SOAP? ...different type of services should be clear on the site and users should know the number of each type after a search... implemented 
+	* …</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-making-webservices&amp;rev=1260445902&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-10T11:51:42+00:00</dc:date>
+        <title>public:help-external-making-webservices</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-making-webservices&amp;rev=1260445902&amp;do=diff</link>
+        <description>This page is now deprecated. Please do not update!
+
+I have a piece of code - how can I make it a web service - haw can I make it?
+
+There are different solutions based on which programming language you are using.
+It also depends on expected number of users. If you plan to have more than &gt;1000 calls a day, you should probably think about production servers instead of simple scripts.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:application_load_testing&amp;rev=1246034053&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-26T16:34:13+00:00</dc:date>
+        <title>development:application_load_testing</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:application_load_testing&amp;rev=1246034053&amp;do=diff</link>
+        <description>Objectives
+
+	*  Simulate users in order to estimate the number of concurrent users the application can support
+	*  Simulate web requests
+		*  access to specific web pages
+		*  form posts
+
+
+Procedure
+
+	*  Use JMeter to simulate both user instances and web requests
+	*  Record re-playable scenarios that can be used for regression testing</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:caching&amp;rev=1245525179&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-20T19:12:59+00:00</dc:date>
+        <title>development:caching</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:caching&amp;rev=1245525179&amp;do=diff</link>
+        <description>*  cache-money gem to handle AR caching
+	*  onyx-cache-money
+
+
+See /lib/bio_catalogue/cache_helper.rb for more info
+
+Code has been put in place to allow both the ActionController cache (used by fragment and action caching) and the Rails.cache to use a consistent mechanism of accessing memcache (via a special, vendored version of memcache-client).</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:data_model_pilot&amp;rev=1242980153&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-22T08:15:53+00:00</dc:date>
+        <title>development:data_model_pilot</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:data_model_pilot&amp;rev=1242980153&amp;do=diff</link>
+        <description>Data Modeling Process
+
+The data modeling approached adopted for BioCatalogue is the Agile Modeling Process which is  both evolutionary(iterative and incremental) and collaborative.
+
+
+Key aspects of this modeling approach include:
+
+	*  The model is developed in parallel with the application that uses the data
+	*  The project development iterations are in-line with the data model development iterations
+	*  The model is assumed to be 'good enough' to handle the the current application capabilities
+…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:test_monitor&amp;rev=1234972611&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-18T15:56:51+00:00</dc:date>
+        <title>development:test_monitor</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:test_monitor&amp;rev=1234972611&amp;do=diff</link>
+        <description>This page aims to monitor BioCatalogue codebase to ensure that test scripts are written for each code submited.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-generalinfo-webservices&amp;rev=1260445873&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-10T11:51:13+00:00</dc:date>
+        <title>public:help-external-generalinfo-webservices</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-generalinfo-webservices&amp;rev=1260445873&amp;do=diff</link>
+        <description>This page is now deprecated. Please do not update!
+
+What are Web Services?
+
+Web Service is a resource that can be programatically accessed over the Internet. The difference between Web Services and Web Servers is that Web Servers concentrate on user interface which is displayed in a browser and accessible to humans, whereas Web Services concentrate on execution by programs or scripts.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help:general_info_on_web_services&amp;rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+00:00</dc:date>
+        <title>public:help:general_info_on_web_services</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help:general_info_on_web_services&amp;rev=1260536560&amp;do=diff</link>
+        <description>What are Web Services?
+
+Web Service is a resource that can be programatically accessed over the Internet. The difference between Web Services and Web Servers is that Web Servers concentrate on user interface which is displayed in a browser and accessible to humans, whereas Web Services concentrate on execution by programs or scripts.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-executing-webservices&amp;rev=1260445926&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-10T11:52:06+00:00</dc:date>
+        <title>public:help-external-executing-webservices</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-executing-webservices&amp;rev=1260445926&amp;do=diff</link>
+        <description>This page is now deprecated. Please do not update!
+
+I found a nice service - how can I execute it?
+
+There are many ways ways on executing web services and there is no simple way of telling which one is the best in your case. This depends on:
+
+	*  The type of the service (SOAP, REST etc. )
+	*  The way you want to execute the service (in a browser, in a GUI, inside a program or in pipelining system)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_terms_of_use&amp;rev=1226929220&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-17T13:40:20+00:00</dc:date>
+        <title>development:biocatalogue_terms_of_use</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_terms_of_use&amp;rev=1226929220&amp;do=diff</link>
+        <description>Proposed BioCatalogue Terms of Use
+
+These Terms of Use are copied from EMBL-EBI services terms of Use 
+
+
+	*  Glossary
+		*  User : Person, institution or program using the BioCatalogue
+		*  You : refers to the user as defined above 
+
+
+	*  The public services in BioCatalogue available free of charge to be used by any individual and for any purpose except where specific restriction are indicated.
+	*  You are free to use BioCatalogue source code consistent with the BSD License 
+	*  Users of the depl…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1259757841&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-02T12:44:01+00:00</dc:date>
+        <title>public:friends</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1259757841&amp;do=diff</link>
+        <description>The following projects and consortia are actively collaborating with the BioCatalogue project:
+
+
+	*  EU EMBRACE network: The main objective of the EMBRACE Network of Excellence project is to integrate major databases and software tools in bioinformatics using existing integrating technologies and methods, and grid services (&lt;http://www.embracegrid.org&gt;). The deliverables of this project include a services registry (&lt;http://www.embraceregistry.net&gt;), which is aimed at helping users locate service…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:color&amp;rev=1264502998&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-26T10:49:58+00:00</dc:date>
+        <title>development:color</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:color&amp;rev=1264502998&amp;do=diff</link>
+        <description>Colour:  Hex Code:  RGB:  Dark Green  #C2E774  R:194 G:231 B:116  Light Green  #E9F7CC  R:233 G:247 B:204</description>
+    </item>
+</rdf:RDF>

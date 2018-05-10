@@ -1,0 +1,309 @@
+
+
+
+<h1><a name="application_load_stress_testing" id="application_load_stress_testing">Application Load/Stress Testing</a></h1>
+<div class="level1">
+
+</div>
+<!-- SECTION "Application Load/Stress Testing" [1-48] -->
+<h2><a name="objectives" id="objectives">Objectives</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Simulate users in order to estimate the number of concurrent users the application can support</div>
+</li>
+<li class="level1"><div class="li"> Simulate web requests</div>
+<ul>
+<li class="level2"><div class="li"> access to specific web pages</div>
+</li>
+<li class="level2"><div class="li"> form posts</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Objectives" [49-252] -->
+<h2><a name="procedure" id="procedure">Procedure</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Use JMeter to simulate both user instances and web requests</div>
+</li>
+<li class="level1"><div class="li"> Record re-playable scenarios that can be used for regression testing</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Procedure" [253-414] -->
+<h2><a name="setup" id="setup">Setup</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> 4 slave instances of JMeter controlled by one master. This permits the scaling of the load without hitting the no of thread limit from a single instance </div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Setup" [415-593] -->
+<h2><a name="expected_outputs" id="expected_outputs">Expected Outputs</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Behavior of the application under extreme conditions</div>
+<ul>
+<li class="level2"><div class="li"> graphs</div>
+</li>
+<li class="level2"><div class="li"> reports</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Expected Outputs" [594-709] -->
+<h2><a name="test_cases" id="test_cases">Test Cases</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Test Cases" [710-732] -->
+<h3><a name="test_case_1fairly_heavy_load_through_the_load_balancer" id="test_case_1fairly_heavy_load_through_the_load_balancer">Test Case 1: Fairly heavy load through the load balancer</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> 200 users taking about 400 second to ramp-up. This means at start up, every 400/200 seconds, an addition request is sent. Now running from 4 instances means 2 additional requests every second. </div>
+</li>
+</ul>
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_11.png" class="media" title="development:picture_11.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_11.png" class="media" alt="" /></a>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> pages included in the tests are home, services and tags</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="summary_report" id="summary_report">Summary Report</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> 200 users x 4 instances = 800 request made on each page. This is indicated by the sample column in the report</div>
+</li>
+<li class="level2"><div class="li"> # Samples - The number of samples with the same label</div>
+</li>
+<li class="level2"><div class="li"> Average - The average time of a set of results</div>
+</li>
+<li class="level2"><div class="li"> Median - The median is the time in the middle of a set of results. 50% of the samples took no more than this time; the remainder took at least as long.</div>
+</li>
+<li class="level2"><div class="li"> 90% Line - 90% of the samples took no more than this time. The remaining samples at least as long as this. (90 th percentile )</div>
+</li>
+<li class="level2"><div class="li"> Min - The shortest time for the samples with the same label</div>
+</li>
+<li class="level2"><div class="li"> Max - The longest time for the samples with the same label</div>
+</li>
+<li class="level2"><div class="li"> Error % - Percent of requests with errors</div>
+</li>
+<li class="level2"><div class="li"> Throughput - the Throughput is measured in requests per second/minute/hour. <br/>
+ <strong>Times are in milliseconds  except where specifically stated, like ramp-up</strong></div>
+</li>
+</ul>
+
+<p>
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_8.png" class="media" title="development:picture_8.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_8.png" class="media" alt="" /></a>
+</p>
+
+</div>
+
+<h4><a name="graph_of_test_run" id="graph_of_test_run">Graph of test run</a></h4>
+<div class="level4">
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_10.png" class="media" title="development:picture_10.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_10.png" class="media" alt="" /></a>
+</p>
+
+</div>
+
+<h4><a name="observation" id="observation">Observation</a></h4>
+<div class="level4">
+
+<p>
+
+This is very heavy lead on the server. It is equivalent to 800 users hitting the same pages every second. And initially the server holds up to this load reasonably well. Over 2000 samples the server throws 500 (server internal errors) errors intermittently. It will be amazing if we could attain such load levels.
+</p>
+
+</div>
+<!-- SECTION "Test Case 1: Fairly heavy load through the load balancer" [733-2412] -->
+<h3><a name="test_case_1_on_live_www.biocatalogue.orgfairly_heavy_load_through_the_load_balancer" id="test_case_1_on_live_www.biocatalogue.orgfairly_heavy_load_through_the_load_balancer">Test Case 1 On live www.biocatalogue.org: Fairly heavy load through the load balancer</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="summary_report1" id="summary_report1">Summary Report</a></h4>
+<div class="level4">
+
+<p>
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:load_test1_report_www_biocat.png" class="media" title="development:load_test1_report_www_biocat.png"><img src="/wiki/lib/exe/fetch.php?media=development:load_test1_report_www_biocat.png" class="media" alt="" /></a>
+</p>
+
+</div>
+
+<h4><a name="graph_of_test_run1" id="graph_of_test_run1">Graph of Test Run</a></h4>
+<div class="level4">
+
+<p>
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:load_test1_graph_www_biocat.png" class="media" title="development:load_test1_graph_www_biocat.png"><img src="/wiki/lib/exe/fetch.php?media=development:load_test1_graph_www_biocat.png" class="media" alt="" /></a>
+</p>
+
+</div>
+
+<h4><a name="observation1" id="observation1">Observation</a></h4>
+<div class="level4">
+
+<p>
+
+The server holds well to this load level. There is huge improvement compared to the previous code base. There are not sudden spikes in the response times for the request. It can also be observed that the max response time for the compute intensive pages like the service index page has greatly improved. From over 25 seconds to less that 6 seconds after hitting the cache. A very important note here is that the server does not break at this level.
+</p>
+
+</div>
+<!-- SECTION "Test Case 1 On live www.biocatalogue.org: Fairly heavy load through the load balancer" [2413-3133] -->
+<h3><a name="test_case_2" id="test_case_2">Test Case 2:</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> 200 users taking about 400 second to ramp-up</div>
+</li>
+<li class="level1"><div class="li"> Using the server machine directly without going through the load balancer</div>
+</li>
+</ul>
+
+<p>
+  <a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_11.png" class="media" title="development:picture_11.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_11.png" class="media" alt="" /></a> 
+</p>
+<ul>
+<li class="level1"><div class="li"> pages included in the tests are home, signup and tags </div>
+<ul>
+<li class="level2"><div class="li"> These pages are very lightweight in terms of db lookup</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="summary_report2" id="summary_report2">Summary Report</a></h4>
+<div class="level4">
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_13.png" class="media" title="development:picture_13.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_13.png" class="media" alt="" /></a>
+</p>
+
+</div>
+
+<h4><a name="graph_of_results" id="graph_of_results">Graph of Results</a></h4>
+<div class="level4">
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_12.png" class="media" title="development:picture_12.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_12.png" class="media" alt="" /></a>
+</p>
+
+</div>
+
+<h4><a name="observation2" id="observation2">Observation</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> The server handles this load very well. No noticeable degradation of service.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Test Case 2:" [3134-3664] -->
+<h3><a name="test_case_3" id="test_case_3">Test Case 3:</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="configurations" id="configurations">Configurations</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> site : beta.biocatalogue.org</div>
+</li>
+<li class="level1"><div class="li"> No of users 200</div>
+</li>
+<li class="level1"><div class="li"> ramp up time 200 secs</div>
+</li>
+<li class="level1"><div class="li"> Pages: home, services, tags, signup</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="report" id="report">Report</a></h4>
+<div class="level4">
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_14.png" class="media" title="development:picture_14.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_14.png" class="media" alt="" /></a> 
+</p>
+
+</div>
+
+<h4><a name="graph_of_results1" id="graph_of_results1">Graph of Results</a></h4>
+<div class="level4">
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_15.png" class="media" title="development:picture_15.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_15.png" class="media" alt="" /></a>
+</p>
+
+</div>
+<!-- SECTION "Test Case 3:" [3665-3944] -->
+<h3><a name="test_case_4" id="test_case_4">Test Case 4:</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="configurations1" id="configurations1">Configurations</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> site : beta.biocatalogue.org</div>
+</li>
+<li class="level1"><div class="li"> No of users 100</div>
+</li>
+<li class="level1"><div class="li"> ramp up time 10 secs</div>
+</li>
+<li class="level1"><div class="li"> Pages :login, new service, services, users</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="report1" id="report1">Report</a></h4>
+<div class="level4">
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_16.png" class="media" title="development:picture_16.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_16.png" class="media" alt="" /></a>
+</p>
+
+</div>
+<!-- SECTION "Test Case 4:" [3945-4169] -->
+<h3><a name="test_case_5" id="test_case_5">Test Case 5:</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Same as Test Case 1, but on beta.biocatalogue.org</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="report2" id="report2">Report</a></h4>
+<div class="level4">
+
+<p>
+
+<a href="/wiki/lib/exe/detail.php?id=development%3Aapplication_load_testing&amp;media=development:picture_17.png" class="media" title="development:picture_17.png"><img src="/wiki/lib/exe/fetch.php?media=development:picture_17.png" class="media" alt="" /></a>
+
+</p>
+
+</div>
+<!-- SECTION "Test Case 5:" [4170-] -->

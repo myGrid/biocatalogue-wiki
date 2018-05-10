@@ -1,0 +1,92 @@
+a:6:{s:2:"id";s:29:"meetings:phoneconf:2008-07-08";s:6:"prefix";s:0:"";s:4:"text";s:5640:"Meeting Agenda/Minutes
+{toc}
+
+ 
+Attending
+
+EBI  - Eric, Hamish, Thomas, Rodrigo 
+
+Manchester - Carole, Jiten, Katy 
+Apologies
+
+Franck(away on caBIG conference) 
+Minuting 
+
+Eric 
+Agenda
+Actions from Previous Meeting
+
+    * Action All -> Read the paper on biocatalogue sent to the mailing list by Carole
+    * Action Carole -> Speak to Steve, of the Manchester EMBRACE team about biocatalogue
+    * Action Eric -> post database model to mailing list for comments 
+    * Action All -> Planning on prototype/to building a community/to building a highly scalable infrastructure
+    * Action All -> Read on building highly scalable web applications (links to sent to list by Jits) 
+    * Action Eric/Jits/Thomas -> Design to with possible replacement of components in mind
+    * Action All : Need flyer for  ISMB meeting
+
+ 
+Round-table
+Upcoming Meetings
+
+Carole, Katy, Jits, Thomas, Hamish & Rodrigo going to ISMB meeting (20-23 July)
+
+Carole and Katy doing paper for the project kick-off meeting for our sysmo-db project
+Any Other Business (AOB)
+
+    * Shall we set up a developper blog at this stage of the project to interact with potential users?
+    * Can Manchester team access EBI ticket tracker?
+    * From Robert: can you make sure these two items are discussed at the BioCatalogue meeting:
+      1. Attempt to draw up a "how to approach annotating a service" -- a best practise document as a guide to people "out there" who want to attempt such an    action. this is a start for something we need for our Briefings in Bioinformatics paper
+      . Scheduling time for Franck to do some work on ONDEx workflows in the near future....
+
+Minutes
+
+On actions from previous meeting
+
+   1. Carole to resend paper to mailing list for reading and/or comments
+   2. Carole Spoke to Steve of the Manchester EMBRACE team. They want to implement some quick fix solution to catalogue EMBRACE services. They intend to use BioCatalogue in the future
+   3.  Eric put a db schema on the wiki. To repost to mailing list for comments
+   4. Agreement not to worry about the db model being rails driven for the prototype. However, the constraints introduced by rails should be clearly documented with possible solutions should migration to another backend model be necessary after the prototype. Jiten suggested that Passenger and Ruby Enterprise Edition be explored for the BioCatalogue prototype. Eric/Jiten/Thomas to come up with a technical road map for the BioCatalogue project
+   5. Katy is doing a (taverna) poster for the ISMB meeting. Biocatalogue will be mentioned on this poster
+
+On Round table
+
+    * Thomas worked with Hamish on the installation of rails and apache+mongrel cluster at EBI.
+    * Eric worked on extending the db model and understanding how rails handles db models. Concern was raised about db integrity in the absence of rails. Another concern was that rails handling of RDF is inadequate
+    * Jiten and Katy have been  busy preparing for the ISMB Meeting
+    * There is a student intern at Manchester that can be brought into the biocatalogue project. He could be a good candidate for doing the interfacing between myExperiment and BioCatalogue.
+    * Carole has a few publicity opportunities for the BioCatalogue project in the following weeks(Bonn -talking to Max-Planck people, UK e-Science All Hands, SYSMO). An expanded webpage will be needed to make these publicity opportunities more effective. Thomas and Rodrigo agreed to add content to the BioCatalogue holding page
+
+On Other Business
+
+    *  A developer blog for BioCatalogue is something that will not be done at the moment. But the issue can be revisited in the future
+    * Rodrigo will follow up the issue of giving access to the Manchester people on the EBI ticket tracking system
+    * Robert wanted assistance in writing some workflows. Robert also raised the question of best practice in annotating a service. There was a suggestion that an example driven minimum effort to effectively annotate a service was one way to go. It could also be modeled on the minimum effort for discovery, discrimination amongst the discovered services and invocation based on the bronze/silver/gold annotation model
+    * On publishing BioCatalogue interfaces, there was a suggestion on having BioCatalogue as a service within BioCatalogue.
+    * On wiki, there a suggestion from EBI on moving to a platform with BioCatalogue look, feel and control. Given that there is a dedicated team of people handling web issues at EBI who could set up a wiki very quickly, it was agreed that EBI should setup a biocatalogue wiki and circulate the link within the next few days.
+
+Action Items
+
+Action Carole -> Resend paper to mailing list
+
+Action Eric -> Send db schema to mailing list
+
+Action Eric/Thoman -> Investigate Passenger and Ruby Enterprise Edition for BioCatalogue pilot
+
+Action Eric/Jiten/Thomas -> Come up with a technical road map for the BioCatalogue project
+
+Action Rodrigo -> Provide access to the EBI ticketing system to BioCatalogue team in Manchester
+
+Action Nobody -> Assist in developing some workflows for Robert
+
+Action Thomas -> Setup BioCatalogue wiki and circulate link on the mailing list
+
+Action Rodrigo & Thomas -> Provide content for the BioCatalogue home page
+ Previous/Next Minutes
+
+Previous meeting: PhoneMeeting_13_06_2008 
+
+Next meeting: PhoneMeeting_10_07_2008 
+
+(Remember to create the next meeting page and copy over the actions. Go to Meetings minutes  and do Add Content -> Add Page. Keep the same style for the meeting name: PhoneMeeting_DD_MM_YYYY if it's a telecom meeting or FaceMeeting_DD_MM_YYYY if it is a face to face meeting)
+ ";s:6:"suffix";s:0:"";s:4:"date";s:0:"";s:6:"client";s:14:"130.88.209.119";}

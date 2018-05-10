@@ -1,0 +1,240 @@
+
+<h1 class="sectionedit1" id="testing_and_monitoring_of_services">Testing and Monitoring of Services</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <span class="curid"><a href="/wiki/development:service_testing#requirements" class="wikilink1" title="development:service_testing">Requirements</a></span></div>
+</li>
+<li class="level1"><div class="li"> <span class="curid"><a href="/wiki/development:service_testing#development" class="wikilink1" title="development:service_testing">Development</a></span></div>
+</li>
+<li class="level1"><div class="li"> <span class="curid"><a href="/wiki/development:service_testing#what_next" class="wikilink1" title="development:service_testing">What Next on Testing &amp; Monitoring</a></span></div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="requirements">Requirements</h5>
+<div class="level5">
+
+<p>
+<strong>Monitoring</strong>
+</p>
+<ol>
+<li class="level1"><div class="li"> Service Ping</div>
+<ol>
+<li class="level2"><div class="li"> Availability of descriptor document</div>
+</li>
+<li class="level2"><div class="li"> Availability of endpoint</div>
+</li>
+</ol>
+</li>
+<li class="level1"><div class="li"> Test example(s)/workflow(s) to check functionality</div>
+</li>
+<li class="level1"><div class="li"> Mail service maintainer about changes in service status</div>
+</li>
+<li class="level1"><div class="li"> Ability to register interest in a service</div>
+</li>
+<li class="level1"><div class="li"> Monitoring interfaces changes</div>
+<ol>
+<li class="level2"><div class="li"> Changes in the MD5 sum of the interface document(wsdl)</div>
+</li>
+<li class="level2"><div class="li"> Changes in the number of operations in the wsdl</div>
+</li>
+<li class="level2"><div class="li"> Changes in the interfaces of the operations</div>
+</li>
+</ol>
+</li>
+<li class="level1"><div class="li"> Curating endpoints to make them monitorable, especially for REST services</div>
+</li>
+<li class="level1"><div class="li"> Set up and integrate BioNanny:</div>
+</li>
+<li class="level1"><div class="li"> Collecting QoS metrics</div>
+</li>
+</ol>
+
+<p>
+<strong>Testing</strong>
+</p>
+<ol>
+<li class="level1"><div class="li"> Ability to run scripts as tests for services, as per the EMBRACE registry. The status of the scripts is use for the traffic light system </div>
+</li>
+<li class="level1"><div class="li"> ability to upload test script</div>
+</li>
+<li class="level1"><div class="li"> mailing test maintainer about service status changes</div>
+</li>
+<li class="level1"><div class="li"> <abbr title="Application Programming Interface">API</abbr> to query status of a particular service</div>
+</li>
+<li class="level1"><div class="li"> Distinction between tests and examples;</div>
+<ol>
+<li class="level2"><div class="li"> test provided by service provider</div>
+</li>
+<li class="level2"><div class="li"> examples by any user of the service (note by eric : this contradicts the requirement that only selected users, ie owners of the service should submit test scripts)</div>
+</li>
+</ol>
+</li>
+</ol>
+
+</div>
+
+<h5 id="development">Development</h5>
+<div class="level5">
+
+<p>
+It is essential to make the distinction between Monitoring and Testing. Monitoring would aim to provide answers to relatively straight forward questions like:
+</p>
+<ul>
+<li class="level1"><div class="li"> Can the description document be retrieved?</div>
+</li>
+<li class="level1"><div class="li"> Is the description document valid. Or more importantly can commonly used toolkits understand the document?</div>
+</li>
+<li class="level1"><div class="li"> Has the description document changed since we last checked this service. This may also be used to trigger an update of the service description in the catalogue, creating a new revision?</div>
+</li>
+<li class="level1"><div class="li"> Can the service be contacted, meaning is the endpoint available? </div>
+</li>
+<li class="level1"><div class="li"> how often has the service not been available over a period?</div>
+</li>
+</ul>
+
+<p>
+Testing of services on the other hand is more elaborate. It would extend into the sphere of service validation and possibly workflow validation which may not necessarily be scoped within the service. The question is whether this should be a core functionality of the catalogue. It would appear that the BioCatalogue effort should be more focused on monitoring because it is more transparent, would generate less overhead and can be scoped easily within the service boundaries.
+</p>
+
+<p>
+<strong>Initial Development</strong>
+</p>
+
+<p>
+Initial development effort was spent in fulfilling requirement 1 of the testing and requirement 1 of the monitoring. That means providing the backend pieces for checking service endpoint availability and modeling for the test scripts. The diagram below shows the current status of the backend model for the test scripts and the availability checks of the endpoint(urls) <a href="/wiki/_detail/development:servicetestdatamodel.png?id=development%3Aservice_testing" class="media" title="development:servicetestdatamodel.png"><img src="/wiki/_media/development:servicetestdatamodel.png" class="media" alt="" /></a>
+</p>
+
+<p>
+<strong>Endpoint Monitoring</strong>
+</p>
+
+<p>
+One of the attributes of the service deployment, which forms part of the service structure(see pilot DB), is the endpoint. The objective here is to monitor this endpoint at regular intervals and keep the status in the database. The latest status is shown in the UI with the time that the last check was made. The history of these checks can then be used to generate a profile of the service availability over a certain period.
+</p>
+
+<p>
+This is achieved by two rails background processes; one which collects the endpoints or urls to be monitored and one which checks the availability of the endpoints. For the soap services endpoints, data is sent to the service to generate a soap fault and the response is checked. For rest endpoints, it is checked whether the endpoints resolves to a valid <abbr title="Uniform Resource Locator">URL</abbr>. The utility used for this monitoring of the endpoint <a href="http://en.wikipedia.org/wiki/CURL" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/CURL"  rel="nofollow">CURL</a>. 
+ Currently the script would record one of three statuses : Online, Warning, Unchecked.
+</p>
+<ul>
+<li class="level1"><div class="li"> Online (green with a tick) : was able to get an expected response within 20 seconds of request</div>
+</li>
+<li class="level1"><div class="li"> Warning (yellow with exclamation sign ): did not get an expected response within 20 seconds</div>
+</li>
+<li class="level1"><div class="li"> Unchecked (blue with question mark): this services has not yet been checked. Usually from the time of registration of the service till the next time the process the checks the status runs.</div>
+</li>
+</ul>
+
+<p>
+<a href="/wiki/_detail/development:service_status_screen.png?id=development%3Aservice_testing" class="media" title="development:service_status_screen.png"><img src="/wiki/_media/development:service_status_screen.png" class="media" title="Sample Service Status" alt="Sample Service Status" /></a>
+</p>
+
+<p>
+<strong>WSDL Monitoring</strong>
+</p>
+
+<p>
+Currently monitoring also checks the accessibility of the WSDL document for SOAP services. The status is registered in the same way as the endpoint status, with different icons representing the states.
+</p>
+
+<p>
+<strong>Remarks on Current Monitoring</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> The overall status of the service is the AND of all the indicators monitored. So if an if any if the properties monitored generated a warning then the overall status will be a warning.</div>
+</li>
+<li class="level1"><div class="li"> It has been noted that the SOAP endpoint may not always return a SOAP fault even if it receives non-conforming xml. It is therefore necessary to supplement the automatic monitoring with a manual curation process for the endpoints. For REST service endpoints, they do not always point to a valid html page and may need parameters to generate a valid response. In this case as well, it would be necessary to curate the endpoint in order to have customized monitoring of the endpoint.</div>
+</li>
+<li class="level1"><div class="li"> Currently the status of the endpoint is shown on the service listing using the traffic light system. In the meeting of the 27/04/2009, it was suggested that the test scripts should be used as the basis of the traffic light system instead of the endpoint availability.</div>
+</li>
+</ul>
+
+<p>
+<strong>Uploading &amp; Running Test Scripts</strong> ( the EMBRACE idea)
+</p>
+
+<p>
+As a requirement for moving the EMBRACE registry content into the BioCatalogue, it was necessary to provide the functionality for users to upload test scripts which could be run against the service. The model above allows for such scripts to be uploaded into the catalogue database. However, it would be necessary for those scripts to be executed for the complete EMBRACE requirement to be fulfilled. This requirement was put on hold until after ISMB as EBI, the hosting Institute expressed security concerns with this approach and those could not be reasonable settled before the ISMB conference. This will now be revisited in future development.
+</p>
+
+<p>
+The objective here is to allow <strong>certain users</strong> to be able to upload test scripts to be run against the service. The uploaded scripts be run a very restricted environment and would have to pass a human check before they can be activated. This may be a single file or a bunch of related files. In the case of many files, the user will be required to archive (zip) them and upload them as a single archive. Uploading will put this files into the database from where a process to run them will fetch them asynchronously. The idea is to these tests at a regular interval and record the status in the database. The results of the latest status of the test will be shown in the UI along with the time of the last check.
+</p>
+
+<p>
+At the moment, in addition to the test file(s), the uploader is also required to provide a path to the script that will be executed, a name of the test and a description of the test. For the executable scripts themselves, they should not take any parameters and should be executable on the command line. The only expectation from the environment is to provide network access as they will essentially be testing web services located remotely. 
+<a href="/wiki/_detail/development:picture_6.png?id=development%3Aservice_testing" class="media" title="development:picture_6.png"><img src="/wiki/_media/development:picture_6.png" class="media" alt="" /></a>
+</p>
+
+<p>
+<strong>Constraints On Scripts</strong>
+</p>
+<ol>
+<li class="level1"><div class="li"> runnable by &#039;nobody&#039; without write permissions</div>
+</li>
+<li class="level1"><div class="li"> run under a safe file store</div>
+</li>
+<li class="level1"><div class="li"> run with an upper bound set on bandwidth usage</div>
+</li>
+<li class="level1"><div class="li"> run with max execution time and processor time set</div>
+</li>
+<li class="level1"><div class="li"> restrict source languages to perl, python, ruby and java</div>
+</li>
+</ol>
+
+</div>
+
+<h5 id="what_next">What Next</h5>
+<div class="level5">
+
+<p>
+Most of the services in the BioCatalogue at the moment are SOAP, so extending the monitoring for SOAP services maybe be a quick win for the monitoring piece. Some ideas that could easily be explored include:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>monitoring changes in the WSDL document</strong>.</div>
+<ul>
+<li class="level2"><div class="li"> monitoring changes in the md5 sum of the WSDL document</div>
+</li>
+<li class="level2"><div class="li"> monitoring changes in the number of operation in the WSDL file</div>
+</li>
+<li class="level2"><div class="li"> monitoring changes in the interfaces of the operations( this could be limited to just the number of parameters, NOT their types) </div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>propose to service provides to implement a generic monitoring interface</strong></div>
+<ul>
+<li class="level2"><div class="li"> this could be an operations with no parameters which returns some service metadata. This sort of operations would confirm the service availability but may also be used to inform users about the services changes, when it does change.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> For rest services, choose some parameters with light weight responses to use for endpoint availability checks. This will require a curation effort especially as the responses from these requests are likely to change over time.</div>
+</li>
+<li class="level1"><div class="li"> <strong>User External monitoring Framework</strong> <br/>
+</div>
+</li>
+</ul>
+
+<p>
+  Tools that come to mind for external monitoring include soapUI, Bionanny and QBIOS.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>soapUI</strong></div>
+</li>
+</ul>
+
+<p>
+      <a href="http://www.soapui.org/" class="urlextern" target="_blank" title="http://www.soapui.org/"  rel="nofollow">SoapUI</a> provides the facilities to create a suite of tests cases for a web service which can be exported as an xml file. One approach could be for users to generate this xml file and upload to the BioCatalogue. BioCatalogue could then use an instance of soapUI to run those tests against the services and then report the results. One way would be to use the command line tools provided by soapUI to run tests. Changes in the xml file describing the test cases could be monitored as well changes in the generated results. 
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Bionanny</strong></div>
+</li>
+</ul>
+
+<p>
+   According to <a href="http://bionanny.sourceforge.net/" class="urlextern" target="_blank" title="http://bionanny.sourceforge.net/"  rel="nofollow">Bionanny</a> documentation- ”<em>the purpose of Bionanny project is to measure how often and for how long are individual Web Services called without any need for changing their own code</em>. ”
+And the way that Bionanny achieves through a monitor or request interceptor. Here is how Bionanny documentation describes the interceptor - <em>A Monitor (or an Interceptor) is a specialized code that runs on the same machine where a Web Service is running, and all incoming requests and produced responses of such Web Service are redirected through this Monitor. Having such monitor allows to know about all requests without a Web Service knowing about their interception. It behave like a Big Brother</em>. It may be difficult to get service providers provide Bionanny instances from which we could collect results. What is appealing about Bionanny is that it is itself a web service and therefore access to any instance can be done through the SOAP interface.
+</p>
+
+</div>

@@ -1,0 +1,560 @@
+
+<h1 class="sectionedit1" id="software_requirements_specification_for_biocatalogue">Software Requirements Specification for BioCatalogue</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Software Requirements Specification for BioCatalogue" [1-67] -->
+<h2 class="sectionedit2" id="revision_history">Revision History</h2>
+<div class="level2">
+
+<p>
+<a href="/wiki/development:requirements_for_pilot" class="wikilink1" title="development:requirements_for_pilot">Initial Draft</a> - October 2008
+</p>
+
+<p>
+Revision 1 - April 2009
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Revision History" [68-192] -->
+<h2 class="sectionedit3" id="introduction">Introduction</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "Introduction" [193-218] -->
+<h3 class="sectionedit4" id="purpose">Purpose</h3>
+<div class="level3">
+
+<p>
+The purpose of the BioCatalogue is to provide an online resource for Web Service providers in the Life Sciences to publish their services and for users of those services to find enough information about those services to use them effectively
+</p>
+
+</div>
+<!-- EDIT4 SECTION "Purpose" [219-480] -->
+<h3 class="sectionedit5" id="scope">Scope</h3>
+<div class="level3">
+
+<p>
+The BioCatalogue will be accessible to the world. Anyone can register and submit data to the system
+</p>
+
+</div>
+<!-- EDIT5 SECTION "Scope" [481-598] -->
+<h3 class="sectionedit6" id="overview">Overview</h3>
+<div class="level3">
+
+<p>
+The BioCatalogue has the following main goals :
+</p>
+<ul>
+<li class="level1"><div class="li"> Provide a single registration point for Web Service providers and a single search site for scientists and developers.</div>
+</li>
+<li class="level1"><div class="li"> Provide a curated catalogue of life science web services</div>
+</li>
+<li class="level1"><div class="li"> Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.</div>
+</li>
+<li class="level1"><div class="li"> BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "Overview" [599-1111] -->
+<h3 class="sectionedit7" id="references">References</h3>
+<div class="level3">
+
+<p>
+<a href="/wiki/development:requirements_for_pilot" class="wikilink1" title="development:requirements_for_pilot">Initial Draft Requirements</a>
+</p>
+
+</div>
+<!-- EDIT7 SECTION "References" [1112-1201] -->
+<h2 class="sectionedit8" id="overall_description">Overall Description</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT8 SECTION "Overall Description" [1202-1234] -->
+<h3 class="sectionedit9" id="biocatalogue_perspective">BioCatalogue Perspective</h3>
+<div class="level3">
+
+<p>
+BioCatalogue should provide a very simple mechanism registration of Web Services. It should allow for easy update of the service entries. It should allow users to have a quick glance of the entries in the catalogue with the possibility of drilling down into a specific entries. BioCatalogue should permit anyone to register(have an account) and when logged-in, be able to submit data. BioCatalogue should remove or reduce the gaps of understanding between service-providers and service-users about the services.
+</p>
+
+</div>
+<!-- EDIT9 SECTION "BioCatalogue Perspective" [1235-1782] -->
+<h3 class="sectionedit10" id="biocatalogue_functions">BioCatalogue Functions</h3>
+<div class="level3">
+
+<p>
+
+<!--
+====== Revised Requirements for Pilot (April'09) ======
+
+IMPORTANT: This list discards the **completed** requirements from [[Development: Requirements for Pilot|Requirements (for Oct '08)]] and adds new requirements mainly raised from the  [[Meetings:F2F Dec 08|Dec '08 F2F @ EBI]].
+
+**Planning** for the pilot is in a [[Development:pilot_dev_planning|separate page]] (to include other tasks like public wiki updates, content acquisition, community liaising and so on).
+
+Note(1): annotations in '[]' are [[http://en.wikipedia.org/wiki/MoSCoW_Method|MoSCoW]] classifications.
+
+Note(2): estimated development and testing times ares included in the titles. These only take into account [Must] and [Should] requirements, and reflect "one FTE developer" days.
+
+===== Pending from Initial Requirements =====
+
+Ref: [[Development: Requirements for Pilot|Requirements (for Oct '08)]]
+
+Note: the requirements that have been crossed out are the ones that won't be done for April.
+
+-->
+
+</p>
+
+</div>
+
+<h4 id="user_management">User Management</h4>
+<div class="level4">
+
+<p>
+BioCatalogue will provide functionality for the creation of user accounts and the management of those accounts
+</p>
+
+</div>
+
+<h5 id="specific_requirements">Specific Requirements</h5>
+<div class="level5">
+
+<p>
+* [Must] <a href="/wiki/development:stories:user_registration" class="wikilink1" title="development:stories:user_registration">User registration</a> (<a href="/wiki/_media/create_account.jpg" class="media mediafile mf_jpg" title="create_account.jpg (59.8 KB)">mockup1</a> <a href="/wiki/_media/create_account_and_profile_2.jpg" class="media mediafile mf_jpg" title="create_account_and_profile_2.jpg (71.6 KB)">mockup2</a>)
+</p>
+<ul>
+<li class="level1"><div class="li"> Authentication information</div>
+<ul>
+<li class="level3"><div class="li"> [Could] <a href="http://openid.net/" class="urlextern" target="_blank" title="http://openid.net/"  rel="nofollow">OpenID</a></div>
+</li>
+<li class="level3"><div class="li"> [Must] E-mail address (will be used as username) and password</div>
+</li>
+<li class="level3"><div class="li"> [Must] E-mail confirmation </div>
+</li>
+<li class="level3"><div class="li"> [Could] Password reset, alternatively can be done through contacting system admin</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> User details</div>
+<ul>
+<li class="level3"><div class="li"> [Must] Name</div>
+</li>
+<li class="level3"><div class="li"> [Must] Organisation/affiliation</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> [Must] Login/logout</div>
+</li>
+<li class="level2"><div class="li"> [Must] Change details</div>
+</li>
+<li class="level2"><div class="li"> Specifically the core information. This may be integrated into User Profile management (see <a href="#user_profile" title="development:requirements_for_pilot_2 ↵" class="wikilink1">User Profile</a>).</div>
+</li>
+<li class="level2"><div class="li"> [Won&#039;t] Delete user account? <em>(Only by an admin, or when a user is deleted)</em></div>
+</li>
+<li class="level2"><div class="li"> [Must] When signing up, users have to accept Terms and Conditions and Privacy Policy.</div>
+</li>
+<li class="level2"><div class="li"> [Must] Provide user classification, with different permission levels to different classes of users</div>
+</li>
+<li class="level2"><div class="li"> [Must] Provide a privileged user class (admin)</div>
+</li>
+<li class="level2"><div class="li"> Show sign up date as part of profile</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="user_management_constraints">User Management constraints</h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Only admins can remove user accounts</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="additional_information_for_user_profile">Additional Information for User Profile</h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> [Could] Avatar</div>
+</li>
+<li class="level1"><div class="li"> [Should] About the user</div>
+<ul>
+<li class="level2"><div class="li"> [Could]Description</div>
+</li>
+<li class="level2"><div class="li"> [Must] Date of signup</div>
+</li>
+<li class="level2"><div class="li"> [Could] Date of last access</div>
+</li>
+<li class="level2"><div class="li"> [Could]Interests</div>
+</li>
+<li class="level2"><div class="li"> [Should]City &amp; Country</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h5 id="profile_management">Profile Management</h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> [Could] Profile link with other social networking sites</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="service_submission_and_management">Service Submission and Management</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Import SoapLab services</div>
+</li>
+<li class="level1"><div class="li"> REST</div>
+</li>
+<li class="level1"><div class="li"> <del>BioMART</del></div>
+</li>
+<li class="level1"><div class="li"> Duplicate checking</div>
+</li>
+<li class="level1"><div class="li"> Import EMBRACE registry services</div>
+</li>
+<li class="level1"><div class="li"> Batch submission (?) (Eric: we need a way of importing lots of data but that&#039;s not the same as batch submission functionality for users).</div>
+</li>
+<li class="level1"><div class="li"> Service annotation underlying model and mechanism</div>
+</li>
+<li class="level1"><div class="li"> <del>Versioning - detection of service changes</del></div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="search">Search</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Filtering</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="ontologies">Ontologies</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> <del>Using myGrid ontologies</del></div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="event_logging">Event Logging ...</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Logging of all internal actions</div>
+</li>
+<li class="level1"><div class="li"> Single notification system for news feeds</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="apis">APIs</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> <del>REST</del></div>
+</li>
+<li class="level1"><div class="li"> OpenSearch description doc</div>
+</li>
+<li class="level1"><div class="li"> <del>OpenSearch <abbr title="Application Programming Interface">API</abbr> with RSS/ATOM results</del></div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="extended">Extended</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Community annotations</div>
+</li>
+<li class="level1"><div class="li"> <del>myExp integration</del></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT10 SECTION "BioCatalogue Functions" [1783-5253] -->
+<h3 class="sectionedit11" id="new_clarified_requirements">New/Clarified Requirements</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="service_submission_management">Service Submission &amp; Management</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Handling ownership management (request, confirmation etc).</div>
+<ul>
+<li class="level2"><div class="li"> “Are you the owner?”</div>
+</li>
+<li class="level2"><div class="li"> “Why not notify the owner to submit this service and provide descriptions?”</div>
+</li>
+<li class="level2"><div class="li"> “Do you know the provider/owner of this service?”</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Submission support for:</div>
+<ul>
+<li class="level2"><div class="li"> REST (<abbr title="Uniform Resource Locator">URL</abbr> + descriptions + manual Resources).</div>
+</li>
+<li class="level2"><div class="li"> DAS (<abbr title="Uniform Resource Locator">URL</abbr> + descriptions + some parsing).</div>
+</li>
+<li class="level2"><div class="li"> General services (<abbr title="Uniform Resource Locator">URL</abbr> + plenty of descriptions).</div>
+</li>
+<li class="level2"><div class="li"> BioMoby</div>
+</li>
+<li class="level2"><div class="li"> <strong>?</strong> Do we need to allow different interfaces to be submitted at the same time, as one service?</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Submission incentives:</div>
+</li>
+<li class="level2"><div class="li"> Explain the benefits of adding extra information (eg: will show up in search listings).</div>
+</li>
+<li class="level2"><div class="li"> Give an indicator on how well annotated the service before submission.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> For duplication checks:</div>
+</li>
+<li class="level3"><div class="li"> We should detect the endpoint as well as WSDL <abbr title="Uniform Resource Locator">URL</abbr> as duplicates!</div>
+</li>
+</ul>
+
+<p>
+<strong> From Embrace Registry</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> DAS service submission with possible re-use of the DAS parser in bioruby or utopia</div>
+</li>
+<li class="level1"><div class="li"> REST service submission (url + resources + descriptions)</div>
+<ul>
+<li class="level2"><div class="li"> url to DAS collection, descriptions of resources</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Validation of wsdl before submission</div>
+</li>
+<li class="level1"><div class="li"> <abbr title="Application Programming Interface">API</abbr> for service submission</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="search_discovery">Search &amp; Discovery</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Sorting &amp; filtering (objective criteria):</div>
+<ul>
+<li class="level2"><div class="li"> Sorting:</div>
+</li>
+<li class="level2"><div class="li"> Creation date</div>
+</li>
+<li class="level2"><div class="li"> Modified date</div>
+</li>
+<li class="level2"><div class="li"> Provider</div>
+</li>
+<li class="level2"><div class="li"> Service type</div>
+</li>
+<li class="level2"><div class="li"> Location of WS</div>
+</li>
+<li class="level2"><div class="li"> Date modified/created range?</div>
+</li>
+<li class="level2"><div class="li"> Cost (free/non-free)</div>
+</li>
+<li class="level2"><div class="li"> Requires authentication</div>
+</li>
+<li class="level2"><div class="li"> Existence of usage conditions</div>
+</li>
+<li class="level2"><div class="li"> Level of annotation (Platinum, Gold, Silver, Bronze)</div>
+</li>
+<li class="level2"><div class="li"> Rating</div>
+</li>
+<li class="level2"><div class="li"> Last test status</div>
+</li>
+<li class="level2"><div class="li"> Last monitor status</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Being able to search URLs</div>
+</li>
+<li class="level1"><div class="li"> Listings (like EMBRACE registry)</div>
+<ul>
+<li class="level2"><div class="li"> all services</div>
+</li>
+<li class="level2"><div class="li"> my services</div>
+</li>
+<li class="level2"><div class="li"> top rated services</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h4 id="service_testing_infrastructure_and_ability">Service Testing Infrastructure and Ability</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Ability to run scripts as tests for services, as per the EMBRACE registry.</div>
+<ul>
+<li class="level2"><div class="li"> show service status (traffic light system)</div>
+</li>
+<li class="level2"><div class="li"> ability to upload test script</div>
+</li>
+<li class="level2"><div class="li"> mailing test maintainer about service status changes</div>
+</li>
+<li class="level2"><div class="li"> <abbr title="Application Programming Interface">API</abbr> to query status of a particular service</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Distinction between tests and examples;</div>
+<ul>
+<li class="level2"><div class="li"> test provided by service provider</div>
+</li>
+<li class="level2"><div class="li"> examples by any user of the service</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h4 id="service_monitoring">Service Monitoring</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Set up and integrate BioNanny:</div>
+<ul>
+<li class="level2"><div class="li"> Collecting QoS metrics</div>
+</li>
+<li class="level2"><div class="li"> Service Ping</div>
+</li>
+<li class="level2"><div class="li"> Availability of descriptor document</div>
+</li>
+<li class="level2"><div class="li"> Availability of endpoint</div>
+</li>
+<li class="level2"><div class="li"> Test example(s)/workflow(s) to check functionality</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Mail service maintainer about changes in service status</div>
+</li>
+<li class="level1"><div class="li"> Ability to register interest in a service</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="file_upload_download">File Upload/Download</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> test log view and download</div>
+</li>
+<li class="level1"><div class="li"> test auxiliary file upload</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="user_interface">User Interface</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Better search listings</div>
+</li>
+<li class="level1"><div class="li"> Discovery interface (with sorting and filtering)</div>
+</li>
+<li class="level1"><div class="li"> Service submission page</div>
+</li>
+<li class="level1"><div class="li"> User profile page needs to be improved</div>
+</li>
+<li class="level1"><div class="li"> Layering of annotations</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="annotations">Annotations</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Tags</div>
+</li>
+<li class="level1"><div class="li"> Description</div>
+</li>
+<li class="level1"><div class="li"> Ratings</div>
+</li>
+<li class="level1"><div class="li"> Reviews</div>
+</li>
+<li class="level1"><div class="li"> Comments</div>
+</li>
+<li class="level1"><div class="li"> Examples</div>
+</li>
+<li class="level1"><div class="li"> Hints</div>
+</li>
+<li class="level1"><div class="li"> Documentation Links</div>
+</li>
+<li class="level1"><div class="li"> Contact Details</div>
+</li>
+<li class="level1"><div class="li"> Download Site</div>
+</li>
+<li class="level1"><div class="li"> License / Terms of Use</div>
+</li>
+<li class="level1"><div class="li"> Cost</div>
+</li>
+<li class="level1"><div class="li"> Access Control</div>
+</li>
+<li class="level1"><div class="li"> Project associated with service</div>
+</li>
+<li class="level1"><div class="li"> Data used by service</div>
+</li>
+<li class="level1"><div class="li"> user provided  version information</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="content_acquisation">Content Acquisation</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Script to import EMBRACE services and annotations</div>
+</li>
+<li class="level1"><div class="li"> BioMoby</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="from_carole_07_12_08">From Carole [07/12/08]</h4>
+<div class="level4">
+
+<p>
+go to the front page of SeekDa!
+</p>
+<ul>
+<li class="level1"><div class="li"> see the “most recently found” and “most commonly used”</div>
+</li>
+<li class="level1"><div class="li"> see the sort selection box on search - that is what we were discussing on Thursday.</div>
+</li>
+<li class="level1"><div class="li"> see the “related search” box which uses a basic ontology (people who searched for X also searched for Y)</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="auto_suggested_tagging_from_ontologies">Auto / suggested tagging from ontologies</h4>
+<div class="level4">
+
+<p>
+As per discussions in Jan 09, and myExperiment work on this.
+</p>
+
+</div>
+<!-- EDIT11 SECTION "New/Clarified Requirements" [5254-] -->

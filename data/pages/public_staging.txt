@@ -1,0 +1,39 @@
+====== Public (Staging) ======
+<box 100% left green>
+
+The BioCatalogue is a curated registry of biological Web Services. [[http://www.biocatalogue.org|The BioCatalogue website]] is freely accessible to the world as it is searchable and indexable to search engines. It provides an open platform for biological Web Services registration, annotation and monitoring. 
+
+**Our Goals**
+  * Provide a single registration point for Web Service providers and a single search site for scientists and developers.
+  * Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.
+  * BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.
+
+</box>
+
+
+BioCatalogue is a BBSRC funded project and has been running since 1st June 2008. The project is a joint venture between the EMBL-EBI (led by Rodrigo Lopez) and the myGrid project at the University of Manchester (led by Carole Goble).
+
+\\
+Here we can build up content for the public wiki before making it public
+
+  * [[Public Staging:homepage|Home Page]]
+
+  * [[Public Staging:pilot|The Pilot]]
+
+  * [[Public Staging:Roadmap|Roadmap]]
+
+  * [[Public Staging:pilot2|The Pilot Review]]
+
+  * [[Public Staging:for_developers|For Developers]]
+
+  * [[Public Staging:BioCatalogue_focus_group|BioCatalogue Focus Group]]
+
+  * [[Public Staging:Getting_Started|Getting Started]]
+
+  * [[Public Staging: News_Event|News and events]]
+
+  * [[public:related_links|Related Links]]
+
+  * [[Public Staging:Revised_Roadmap|Revised Roadmap]]
+  
+  * [[Public Staging:roadmap_2011|roadmap 2011]]

@@ -1,0 +1,10 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1225817246;s:8:"modified";i:1274971176;}s:7:"creator";s:5:"Jiten";s:11:"last_change";a:7:{s:4:"date";i:1274971176;s:2:"ip";s:14:"130.88.195.202";s:4:"type";s:1:"E";s:2:"id";s:12:"public:pilot";s:4:"user";s:6:"franck";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:2:{s:4:"jits";s:5:"Jiten";s:6:"franck";s:6:"Franck";}s:4:"user";s:0:"";s:5:"title";s:28:"Features of the BioCatalogue";s:11:"description";a:2:{s:15:"tableofcontents";a:3:{i:0;a:4:{s:3:"hid";s:28:"features_of_the_biocatalogue";s:5:"title";s:28:"Features of the BioCatalogue";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:1;a:4:{s:3:"hid";s:15:"to_get_involved";s:5:"title";s:15:"To Get Involved";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:13:"still_to_come";s:5:"title";s:17:"Still to come ...";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:503:"Features of the BioCatalogue
+
+Web service discovery
+
+	*  Handles service discovery by keywords or browsing the latest services submitted; 
+	*  Handles service filtering by tags on services, operations, inputs, and outputs, as well as filtering by providers, submitters, and locations.
+	*  Exposes an OpenSearch description document.
+	*  Possibility to search the BioCatalogue with your data. Check it out
+	*  Possibility to search for individual SOAP operation 
+	*  Finds similar services given a sel…";}s:8:"relation";a:2:{s:10:"references";a:1:{s:14:"public:roadmap";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1225817246;s:8:"modified";i:1274971176;}s:7:"creator";s:5:"Jiten";s:11:"last_change";a:7:{s:4:"date";i:1274971176;s:2:"ip";s:14:"130.88.195.202";s:4:"type";s:1:"E";s:2:"id";s:12:"public:pilot";s:4:"user";s:6:"franck";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:2:{s:4:"jits";s:5:"Jiten";s:6:"franck";s:6:"Franck";}s:4:"user";s:0:"";}}

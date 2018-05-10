@@ -1,0 +1,88 @@
+====== Registering Web Services in the BioCatalogue ======
+
+**The Problem: ** //"My Web Services are not visible..."//
+
+**So...**
+
+  * Anyone can easily register Web Services in the BioCatalogue
+  * These service are instantly available to the community, tool developers and search engines
+  * Service providers can advertise, describe and monitor their services through the BioCatalogue
+
+
+Any registered users (members) can submit any Web Service to the BioCatalogue.  
+You do not have to be the provider of the service to submit it to the BioCatalogue. Click [[http://test.biocatalogue.org/signup|here]] to become a Member of the BioCatalogue. \\
+
+Currently the BioCatalogue support **SOAP**, **REST** and **Soaplab** services. 
+
+===== Submitting SOAP service to the BioCatalogue =====
+Given that most existing SOAP services have a WSDL document, registering a SOAP service entry into the BioCatalogue requires only the WSDL url. The BioCatalogue WSDL parser automatically structures the data from the WSDL file. To submit a SOAP service with a defined WSDL file:  
+  * Select 'SOAP' from the 'Register a Service' page in the BioCatalogue
+  * Paste your WSDL url in the form and click preview 
+  * Provide additional description to the service. This is optional but very useful. You may add these descriptions after you submit the service
+  * Click 'Submit' to submit your service
+Once the service is successfully submitted you can add more annotation (descriptions, tags, example values) to the service and its operations, inputs or outputs. 
+===== Submitting REST service to the BioCatalogue =====
+To submit a REST service all you need is the REST endpoint and the service name. 
+  * Select 'REST' from the 'Register a Service' page in the BioCatalogue
+  * Paste the base URL of the REST service
+  * Provide a name for the service
+  * Provide additional description for the service. This is optional but very useful. You may add these descriptions after you submit the service
+  * Click 'Submit' to submit your service 
+Once the service is successfully submitted you can add more annotation (descriptions, tags, example values) to the service.  You will also be able to add the different REST endpoints which make up the service.
+==== Adding REST Endpoints ====
+Below is an example on how to add these endpoints to a REST service; this example is based on the BioCatalogue's own REST API.
+Click on the 'Add New Endpoints' button, which is found under the 'REST Endpoints' tab.  This should bring up a pop-up with some help text and a text box to enter the endpoints.
+
+A REST endpoint takes in parameters, some of which are mandatory, some optional.  The endpoints I will register are:
+  * ''%%http://www.biocatalogue.org/search?q={query}%%''
+  * ''%%http://www.biocatalogue.org/services/{id}%%''
+  * ''%%http://www.biocatalogue.org/tags/{tagname}?namespace={namespace}%%''
+
+Provided the base URL does not contain a question mark "''?''", endpoints can be expressed as paths relative to the base URL:
+  * ''/search?q={query}''
+  * ''/services/{id}''
+  * ''/tags/{tagname}?namespace={the-namespace-of-the-tags}''
+
+Placing curly braces around a parameter tells the BioCatalogue that the parameter is mandatory.  In the above endpoints, ''q'', ''id'', ''tagname'', and ''namespace'' are mandatory parameters.  All other parameters without curly braces will be treated as part of the endpoint and not a parameter.
+
+After submitting the above entries, the BioCatalogue will register the following endpoints and associate them with the registered service:
+  * ''GET /search?q={query}''
+  * ''GET /services/{id}''
+  * ''GET /tags/{tagname}?namespace={the-namespace-of-the-tags}''
+
+Notice the HTTP ''GET'' at the the beginning of the registered endpoint; If you do not provide an HTTP method for an endpoint, the BioCatalogue assumes the default: ''GET''.  To register endpoints that use other HTTP methods, simply put the HTTP method, followed by a space, then the endpoint.  The supported methods are ''GET'', ''PUT'', ''POST'', and ''DELETE''.  For example:
+  * ''GET /{resource}/{id}'' //is the same as// ''/{resource}/{id}''
+  * ''POST /{resource}''
+  * ''PUT /{resource}/{id}''
+  * ''DELETE /{resource}/{id}?verbose={true_or_false}''
+
+The base URL of a REST service can also contain query parameters, but these query parameters are not configurable.  Using the DDBJ services as an example, the base URL would have to be registered as "''%%http://xml.nig.ac.jp/rest/Invoke?service=DDBJ%%''".
+
+With such a base URL, you cannot enter endpoints with a relative path, they must have the full URL:
+  * ''%%http://xml.nig.ac.jp/rest/Invoke?service=DDBJ&method=countBasePair&accession={accession}%%''
+  * ''%%http://xml.nig.ac.jp/rest/Invoke?service=DDBJ&method=getAllFeatures&accession={accession}%%''
+  * ''%%http://xml.nig.ac.jp/rest/Invoke?service=DDBJ&method=getFFEntry&accession={accession}%%''
+
+The above endpoint will result in the following BioCatalogue entries:
+  * ''GET /?method=countBasePair''
+  * ''GET /?method=getAllFeatures''
+  * ''GET /?method=getFFEntry''
+
+The "''/?''" in the registered endpoint is just a way of saying that the base URL for that service contains a query parameter; it can be renamed to "''?''", "''/&''", "''&''", or anything that makes sense to you.
+
+===== Submitting Soaplab service to the BioCatalogue =====
+[[http://en.wikipedia.org/wiki/Soaplab|Soaplab]] service are command line application wrapped as Web Services. 
+  * To submit a soaplab 1 service:
+     * From the soaplab server which may look like <base URL/axis/services> look for 'AnalysisFactory' and copy the corresponding WSDL
+     * Select 'Soaplab Server' from the 'Register a Service' page in the BioCatalogue
+     * Paste the WSDL URL you have copied in the form and click preview
+     * Click 'Submit' to submit your service
+  
+  * To submit a soaplab 2 service:
+    * From the soaplab server copy the WSDL ending with <services/list?wsdl>
+    * Select 'Soaplab Server' from the 'Register a Service' page in the BioCatalogue
+    * Paste the WSDL URL you have copied in the form and click preview
+    * Click 'Submit' to submit your service
+
+Note that it may take a little while for all services to be registered.\\
+Once the service is successfully submitted you can add more annotation (descriptions, tags, example values) to the service and its operations, inputs or outputs. 

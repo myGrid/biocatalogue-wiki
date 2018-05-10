@@ -1,0 +1,2287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue meetings:phoneconf</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2010-04-19T15:13:13+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-05-13&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-03&amp;rev=1221214723&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-13&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-24&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-03&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-08&amp;rev=1216118441&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-13&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-15&amp;rev=1216137320&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-22&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-24&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-08-01&amp;rev=1217604657&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-08-08&amp;rev=1221750594&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-09-19&amp;rev=1222085414&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-09-30&amp;rev=1224065717&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-07&amp;rev=1223978668&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-10&amp;rev=1223977026&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-14&amp;rev=1225123498&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-28&amp;rev=1225215004&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-04&amp;rev=1226927897&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-11&amp;rev=1226927831&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-18&amp;rev=1227617137&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-25&amp;rev=1228818393&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-12-09&amp;rev=1228839074&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-12-16&amp;rev=1228839062&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-06&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-13&amp;rev=1231870886&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-20&amp;rev=1233138968&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-27&amp;rev=1233594461&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-03&amp;rev=1233765967&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-18&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-19&amp;rev=1235143856&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-23&amp;rev=1235493509&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-05&amp;rev=1236272860&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-09&amp;rev=1236958138&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-16&amp;rev=1238170512&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-30&amp;rev=1238486792&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-06&amp;rev=1240220761&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-07&amp;rev=1238487871&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-20&amp;rev=1240220821&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-27&amp;rev=1240921234&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-05-11&amp;rev=1242051256&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-05-18&amp;rev=1243853013&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-03&amp;rev=1244452372&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-08&amp;rev=1244479437&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-15&amp;rev=1245665220&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-22&amp;rev=1245665274&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-06&amp;rev=1247479540&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-16&amp;rev=1248442709&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-27&amp;rev=1249041491&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-07&amp;rev=1252074636&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-21&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-28&amp;rev=1254155900&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-12&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-19&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-26&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-09&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-23&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-30&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-12-10&amp;rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-01-18&amp;rev=1263817522&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-01-25&amp;rev=1264418639&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-02-03&amp;rev=1265300258&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-02-18&amp;rev=1266495170&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-03-08&amp;rev=1268046074&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-03-15&amp;rev=1268655146&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-04-19&amp;rev=1271684817&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:home&amp;rev=1268655054&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:phone_conferences_manchester-ebi&amp;rev=1214835557&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:phonemeeting_15_07_2008%E2%80%89&amp;rev=1216117653&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-05-13&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2008-05-13</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-05-13&amp;rev=1260536559&amp;do=diff</link>
+        <description>1. Review documentation distributed from kick-off meeting and wiki,
+mailing lists and chats
+2. Report on Pilot Scenario Use Case development
+
+	* - Eric, Franck and Hamish on services to pilot with
+		* - Eric and Franck on experiments with schema, models and</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-03&amp;rev=1221214723&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-12T11:18:43+01:00</dc:date>
+        <title>meetings:phoneconf:2008-06-03</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-03&amp;rev=1221214723&amp;do=diff</link>
+        <description>Attending
+
+
+Manchester: Franck, Katy, Jits
+EBI: Thomas, Hamish, Eric 
+
+Apologies
+
+
+Carole, Rodrigo 
+
+Minuting
+
+Franck 
+
+Agenda
+
+Actions from Previous Meeting
+
+	*  EBI - Register domain name “biocatalogue.org” and contact the Korean institute about “biocatalog.org”  Not  sure if Rodrigo contacted the Korean
+		*  Eric/Hamish/Thomas - Join the myexperiment skype chats Done
+		*  Eric/Franck - Produce matrix of service types against bioinformatics domain coverage and properties, to generate a represe…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-13&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2008-06-13</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-13&amp;rev=1260536559&amp;do=diff</link>
+        <description>Agenda
+
+	*  Review documentation from kick-off meeting and wiki,mailing lists and chats
+	*  Report on Pilot Scenario Use Case development
+		*  Eric, Franck and Hamish on services to pilot with
+		*  Eric and Franck on experiments with schema, models and annotation migration
+		*  User categories  - Hamish
+		*  Jits on implications to myExperiment for pilot
+		*  Thomas and Rodrigo on first thoughts on a browser mockup
+		*  All: writing up the Use Case and splitting into stories and tasks</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-24&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2008-06-24</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-06-24&amp;rev=1260536559&amp;do=diff</link>
+        <description>Attending
+
+EBI  - Eric, Hamish, Thomas, Rodrigo 
+
+Manchester - Carole, Jiten, Katy 
+Apologies
+
+Franck(away on caBIG conference) 
+
+ 
+Eric 
+
+Actions from Previous Meeting
+
+	*  Action All -&gt; Read the paper on biocatalogue sent to the mailing list by Carole
+		*  Action Carole -&gt; Speak to Steve, of the Manchester EMBRACE team about biocatalogue
+		*  Action Eric -&gt; post database model to mailing list for comments 
+		*  Action All -&gt; Planning on prototype/to building a community/to building a highly sc…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-03&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2008-07-03</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-03&amp;rev=1260536559&amp;do=diff</link>
+        <description>Agenda
+
+Attendees
+
+	*  Manchester - Franck, Katy, Jits
+	*  EBI - Thomas, Hamish, Eric 
+
+Apologies
+
+	*  Manchester - Carole
+	*  EBI - Rodrigo
+
+Minuting
+
+	*  Franck
+
+Discussions
+
+Actions Items from Previous Meeting
+
+	*   EBI - Register domain name “biocatalogue.org” and contact the Korean institute about “biocatalog.org”  Not  sure if Rodrigo contacted the Korean
+		*  Eric/Hamish/Thomas - Join the myexperiment skype chats Done
+		*  Eric/Franck - Produce matrix of service types against bioinformati…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-08&amp;rev=1216118441&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-15T11:40:41+01:00</dc:date>
+        <title>meetings:phoneconf:2008-07-08</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-08&amp;rev=1216118441&amp;do=diff</link>
+        <description>Attending
+
+Manchester: Carole, Franck, Jits, Khalid, Wang
+
+EBI: Hamish, Rodrigo
+
+Apologies
+
+	*  Thomas (holiday until Thursday)
+	*  Eric (sick)
+	*  Katy( at University research day)
+
+Minuting
+
+Franck 
+ 
+
+
+Agenda
+
+	*  Agree on what to show at ISMB
+	*  Khalid's work on workflow and web services - can be useful for biocatalogue 
+	*  Using Open Search for the biocatalogue API - short term or longer term?
+	*  Dates for the face 2 face meeting at EBI
+	*  Biocatalogue position paper for 2008 Microsoft …</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-13&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2008-07-13</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-13&amp;rev=1260536559&amp;do=diff</link>
+        <description>Telcon Meeting on June 13, 2008
+
+Agenda
+
+	*  Action Items from previous meeting
+	*  Round table discussions
+	*  Planning
+	*  Any other Business
+
+Attendees
+
+EBI
+
+	*  Thomas Laurent
+	*  Eric Nzuobontane
+
+
+Manchester
+
+	*  Jiten Baghat
+	*  Corole Goble
+	*  Frank Tanoh
+	*  Katy Wolstencroft</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-15&amp;rev=1216137320&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-15T16:55:20+01:00</dc:date>
+        <title>meetings:phoneconf:2008-07-15</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-15&amp;rev=1216137320&amp;do=diff</link>
+        <description>Time : 15:00-17:00 (UK)
+
+Attending
+
+Manchester: Franck
+
+EBI: Eric, Hamish, Rodrigo, Thomas
+
+Apologies
+
+Carole, Jiten, Katy (away at ISMB )
+
+Minuting
+
+
+ Eric
+
+Agenda
+
+	*  Action Items from previous meeting 
+	*  progress on the interim service to serve EMBRACE etc
+	*  progress on the questionnaire
+	*  progress on the flyer
+	*  progress on the wiki
+	*  progress on the mock-ups
+	*  progress on the metadata model
+	*  review of the timetable (I sent round)
+	*  next two face to face meetings (Carole ca…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-22&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2008-07-22</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-22&amp;rev=1260536559&amp;do=diff</link>
+        <description>No meeting.
+
+See next meeting: Phone Conference Meeting on Aug 01 2008</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-24&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2008-07-24</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-07-24&amp;rev=1260536559&amp;do=diff</link>
+        <description>Telcon Meeting on Jun 24, 2008
+
+Agenda
+
+Attendees
+
+Apologies
+
+Discussion
+
+Action Items from previous meeting
+
+Round table discussion
+
+Action Items
+
+Others</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-08-01&amp;rev=1217604657&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-01T16:30:57+01:00</dc:date>
+        <title>meetings:phoneconf:2008-08-01</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-08-01&amp;rev=1217604657&amp;do=diff</link>
+        <description>Date: Friday 1st August 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester: Carole, Katy, Franck, Jits
+
+EBI: Eric, Hamish, Thomas
+
+Apologies
+
+Rodrigo (@ conference in Colombia)
+
+Minuting
+
+
+ Jits
+
+Agenda
+
+	*  [CANCELLED due to sickness] Guiseppe's talk ERGOT: combining DHTs and SONs for Semantic Based Service Discovery (will need video skype at the EBI). He is keen to present this to the BioCatalogue team before he leaves his placement with us.
+	*  Action Items from previous meeting 
+	*  Communi…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-08-08&amp;rev=1221750594&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-18T16:09:54+01:00</dc:date>
+        <title>meetings:phoneconf:2008-08-08</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-08-08&amp;rev=1221750594&amp;do=diff</link>
+        <description>Date: Friday 19th September 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Katy, Carole 
+
+Minuting
+
+Agenda
+
+	*  Action Items from previous meeting
+
+	*  Developement of the pilot 
+
+	*  Discussion: Beanshell repository in BioCatalogue</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-09-19&amp;rev=1222085414&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-22T13:10:14+01:00</dc:date>
+        <title>meetings:phoneconf:2008-09-19</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-09-19&amp;rev=1222085414&amp;do=diff</link>
+        <description>Date: Friday 19th September 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester: Jits, Franck 
+
+EBI: Eric, Hamish, Rodrigo, Thomas
+
+Apologies
+
+Katy, Carole 
+
+Minuting
+
+
+Franck 
+
+	*  Action Items from previous meeting
+
+	*  Developement of the pilot</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-09-30&amp;rev=1224065717&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-15T11:15:17+01:00</dc:date>
+        <title>meetings:phoneconf:2008-09-30</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-09-30&amp;rev=1224065717&amp;do=diff</link>
+        <description>Date: Tuesday 30th September 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester: Franck, Carole, Jits, Mike, Paolo
+
+EBI: Eric, Thomas
+
+Apologies
+
+Katy, Hamish, Rodrigo 
+
+Minuting
+
+Franck
+
+	*  Action from the last telcon.
+
+	*  Report from Eric's last visit.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-07&amp;rev=1223978668&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-14T11:04:28+01:00</dc:date>
+        <title>meetings:phoneconf:2008-10-07</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-07&amp;rev=1223978668&amp;do=diff</link>
+        <description>Date: Tuesday 07th October 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester: Franck, Jits, 
+
+EBI: Eric, Thomas
+
+Apologies
+
+Carole, Hamish, Rodrigo
+
+Minuting
+
+Jits
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-10&amp;rev=1223977026&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-14T10:37:06+01:00</dc:date>
+        <title>meetings:phoneconf:2008-10-10</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-10&amp;rev=1223977026&amp;do=diff</link>
+        <description>Date: Tuesday 10th October 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester: Franck, Jits, 
+
+EBI: Eric, Thomas, Rodrigo
+
+Apologies
+
+Minuting
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?
+
+	*  BioMoby web services</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-14&amp;rev=1225123498&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-27T16:04:58+01:00</dc:date>
+        <title>meetings:phoneconf:2008-10-14</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-14&amp;rev=1225123498&amp;do=diff</link>
+        <description>Date: Tuesday 14th October 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester: Franck, Jits, Carole 
+
+EBI: Eric, Thomas, Hamish
+
+Apologies
+
+	*  Rodrigo
+
+Minuting
+
+	*  Eric
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-28&amp;rev=1225215004&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-28T17:30:04+01:00</dc:date>
+        <title>meetings:phoneconf:2008-10-28</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-10-28&amp;rev=1225215004&amp;do=diff</link>
+        <description>Date: Tuesday 28th October 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester:  Franck, Jits
+
+EBI: Rodrigo, Eric
+
+Apologies
+
+ Carole, Hamish, Thomas, Katy
+
+Minuting
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-04&amp;rev=1226927897&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-17T13:18:17+01:00</dc:date>
+        <title>meetings:phoneconf:2008-11-04</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-04&amp;rev=1226927897&amp;do=diff</link>
+        <description>Date: Tuesday 04th Nov 2008
+
+Time: 15:00-17:00 (UK)
+
+Attending
+
+Manchester:  
+Jits, Franck, Katy and constantinos
+
+EBI: 
+Eric, Thomas and Rodrigo
+
+Apologies
+
+ Carole, Hamish
+
+Minuting
+
+Katy
+
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-11&amp;rev=1226927831&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-17T13:17:11+01:00</dc:date>
+        <title>meetings:phoneconf:2008-11-11</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-11&amp;rev=1226927831&amp;do=diff</link>
+        <description>Date: Tuesday 11th Nov 2008
+
+Time: 15:00-17:00 (UK)
+
+
+
+Attending
+
+Manchester:  
+Jiten, Franck, Constantinos
+
+EBI: 
+Thomas, Eric
+
+Apologies
+
+Carole, Rodrigo, Hamish, Katy
+
+Minuting
+
+Eric
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-18&amp;rev=1227617137&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-25T12:45:37+01:00</dc:date>
+        <title>meetings:phoneconf:2008-11-18</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-18&amp;rev=1227617137&amp;do=diff</link>
+        <description>Date: Tuesday 18th Nov 2008
+
+Time: 15:00-17:00 (UK)
+
+
+
+Attending
+
+Manchester:  Franck, Jits 
+
+EBI: Thomas
+
+Apologies
+
+Carole, Rodrigo, Eric, Hamish
+
+Minuting
+
+Franck
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?
+
+	*  BioCatalogue public wiki</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-25&amp;rev=1228818393&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-12-09T10:26:33+01:00</dc:date>
+        <title>meetings:phoneconf:2008-11-25</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-11-25&amp;rev=1228818393&amp;do=diff</link>
+        <description>Date: Tuesday 25th Nov 2008
+
+Time: 15:00-17:00 (UK)
+
+
+
+Attending
+
+Manchester: 
+
+EBI:
+
+
+Apologies
+
+Minuting
+
+Franck
+
+	*  Action from the last telcon.
+
+	*  Progress with the pilot - are we rolling?
+
+	*  BioCatalogue public wiki
+
+	*  Meeting in Edinburgh -</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-12-09&amp;rev=1228839074&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-12-09T16:11:14+01:00</dc:date>
+        <title>meetings:phoneconf:2008-12-09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-12-09&amp;rev=1228839074&amp;do=diff</link>
+        <description>Date: Tuesday 09th Dec 2008
+
+Time: 15:00-17:00 (UK)
+
+This was a skype chat instead of a telcon
+
+
+
+Attending
+
+Manchester: Jits, Franck
+
+EBI: Eric
+
+Apologies
+
+
+Thomas, Carole, Katy, Hamish, Rodrigo
+
+Minuting
+
+
+Jits
+
+	*  Actions from the last telcon
+
+	*  Progress with the pilot</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-12-16&amp;rev=1228839062&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-12-09T16:11:02+01:00</dc:date>
+        <title>meetings:phoneconf:2008-12-16</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2008-12-16&amp;rev=1228839062&amp;do=diff</link>
+        <description>Date: Tuesday 16th Dec 2008
+
+Time: 15:00-17:00 (UK)
+
+
+
+Attending
+
+Manchester:
+
+EBI:
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+
+	*  Progress with the pilot
+
+	*  New requirements timeline and planning
+
+	*  Updating the BioCatalogue public wiki</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-06&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-01-06</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-06&amp;rev=1260536559&amp;do=diff</link>
+        <description>BioCatalogue Telcon
+
+
+Postponed</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-13&amp;rev=1231870886&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-13T18:21:26+01:00</dc:date>
+        <title>meetings:phoneconf:2009-01-13</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-13&amp;rev=1231870886&amp;do=diff</link>
+        <description>Date: Tuesday 13th Jan 2008
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+Manchester:
+Jits, Carole
+
+EBI:
+
+Eric, Rodrigo, Thomas
+
+Apologies
+
+
+Frank, Katy, Hamish
+
+Minuting
+
+
+Eric
+
+	*  New Year Stories 
+
+	*  Actions from the last telcon</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-20&amp;rev=1233138968&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-28T10:36:08+01:00</dc:date>
+        <title>meetings:phoneconf:2009-01-20</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-20&amp;rev=1233138968&amp;do=diff</link>
+        <description>Date: Tuesday 20th Jan 2008
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+Manchester: Franck, Carole, Steve, David
+
+EBI: Thomas, Eric
+
+Apologies
+
+Rodrigo
+
+Minuting
+
+
+Eric
+
+	*  Franck had a baby! (well, not him exactly, his wife, but you know what I mean)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-27&amp;rev=1233594461&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-02T17:07:41+01:00</dc:date>
+        <title>meetings:phoneconf:2009-01-27</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-01-27&amp;rev=1233594461&amp;do=diff</link>
+        <description>Date: Tuesday 27th Jan 2008
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+Manchester: Franck, Jits, Carole
+
+EBI: Thomas, Eric, Rodrigo
+
+Apologies
+
+Minuting
+
+	*  Hackathon summary
+
+	*  Actions from the last telcon 
+
+	*  Progress with the pilot</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-03&amp;rev=1233765967&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-04T16:46:07+01:00</dc:date>
+        <title>meetings:phoneconf:2009-02-03</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-03&amp;rev=1233765967&amp;do=diff</link>
+        <description>Date: Tuesday 03rd Feb 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+Manchester: Franck, Jits
+
+EBI: 
+Eric, Thomas
+
+Apologies
+
+Rodrigo, Carole, Steve
+
+	*  Actions from the last telcon 
+
+	*  Progress with the pilot 
+		*  Test infrastructure setup at EBI
+		*  Review of January tasks
+		*  Next steps following release to friends list
+		*  Code releases(tags)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-18&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-02-18</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-18&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Tuesday 03rd Feb 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+Manchester: Franck, Jits
+
+EBI: 
+Eric, Thomas
+
+Apologies
+
+Rodrigo, Carole, Steve
+
+	*  Actions from the last telcon 
+
+	*  Progress with the pilot 
+		*  Test infrastructure setup at EBI
+		*  Review of January tasks
+		*  Next steps following release to friends list
+		*  Code releases(tags)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-19&amp;rev=1235143856&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-20T15:30:56+01:00</dc:date>
+        <title>meetings:phoneconf:2009-02-19</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-19&amp;rev=1235143856&amp;do=diff</link>
+        <description>Date: Thursday 19th Feb 2009
+
+Time: 2:00-15:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+This meeting was posponed to Monday 23/02/09
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Jits, Rodrigo, Carole
+
+	*  Actions from the last telcon
+	*  Possible collaboration with Microsoft-meeting with Rudy
+	*  Report from meeting with QBIOS team
+	*  BioCatalogue plan revision- are we all ok with that? 
+	*  Service Finder- what can we learn from?  &lt;http://demo.service-finder.eu/index&gt;</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-23&amp;rev=1235493509&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-02-24T16:38:29+01:00</dc:date>
+        <title>meetings:phoneconf:2009-02-23</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-02-23&amp;rev=1235493509&amp;do=diff</link>
+        <description>Date: Monday 23th Feb 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: Franck, Carole, Steve
+
+Malawi: Jits
+
+EBI: Eric
+
+Apologies
+
+Thomas, Rodrigo
+
+	*  Actions from the last telcon
+	*  Possible collaboration with Microsoft-meeting with Rudy
+	*  Report from meeting with QBIOS team
+	*  BioCatalogue plan revision- are we all ok with that? 
+	*  Service Finder- what can we learn from?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-05&amp;rev=1236272860&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-05T17:07:40+01:00</dc:date>
+        <title>meetings:phoneconf:2009-03-05</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-05&amp;rev=1236272860&amp;do=diff</link>
+        <description>Date: Thursday 05th Mar 2009
+
+Time: 14:00-15:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: Franck
+
+EBI: Rodrigo, Eric, Thomas
+
+Apologies
+
+
+Carole at OGF 
+ 
+Jits on the plane from Malawi 
+
+Steve not available
+
+	*  Actions from the last telcon
+	*  Possible collaboration with Microsoft-meeting with Rudy   
+	*  Progress/developement of the pilot - are we rolling? 
+	*  Test infrastructure setup at EBI</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-09&amp;rev=1236958138&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-13T15:28:58+01:00</dc:date>
+        <title>meetings:phoneconf:2009-03-09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-09&amp;rev=1236958138&amp;do=diff</link>
+        <description>Date: Monday 09th Mar 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+This meeting was canceled 
+
+ 
+
+Manchester:
+
+EBI:
+
+Apologies
+
+	*  Actions from the last telcon
+	*  Possible collaboration with Microsoft-meeting with Rudy   
+	*  Progress/developement of the pilot - are we rolling? 
+	*  Test infrastructure setup at EBI</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-16&amp;rev=1238170512&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-27T16:15:12+01:00</dc:date>
+        <title>meetings:phoneconf:2009-03-16</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-16&amp;rev=1238170512&amp;do=diff</link>
+        <description>Date: Monday 16th Mar 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: Jits, Carole, Franck
+
+EBI:
+
+Apologies
+
+
+Eric, Thomas, Rodrigo
+
+	*  Actions from the last telcon
+	*  Advisory board meeting - what are we presenting? draft  Agenda
+	*  Possible collaboration with Microsoft-meeting with Rudy   
+	*  Progress/developement of the pilot - are we rolling? 
+	*  Test infrastructure setup at EBI</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-30&amp;rev=1238486792&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-31T09:06:32+01:00</dc:date>
+        <title>meetings:phoneconf:2009-03-30</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-03-30&amp;rev=1238486792&amp;do=diff</link>
+        <description>Date: Monday 30th Mar 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: Carole, Jits
+
+EBI: Rodrigo, Thomas
+
+Apologies
+
+
+Franck, Eric, Steve
+
+Minuting
+
+
+Jits
+
+	*  Actions from the last telcon
+	*  what next after the SAB? 
+	*  Possible collaboration with Microsoft-meeting with Rudy   
+	*  Progress/developement of the pilot - are we rolling? 
+	*  Test infrastructure setup at EBI</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-06&amp;rev=1240220761&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-20T10:46:01+01:00</dc:date>
+        <title>meetings:phoneconf:2009-04-06</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-06&amp;rev=1240220761&amp;do=diff</link>
+        <description>Date: Monday 6th Apr 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: 
+Carole, Jiten
+
+EBI:
+Eric, Franck, Thomas
+
+Apologies
+
+Rodrigo
+
+Minuting
+
+
+Eric
+
+	*  Actions from the last telcon
+	*  Should we have a BioCatalogue Google Calendar (like myGrid do) for people to put holidays, events and so on?
+	*  Post SAB
+		*  Are we happy with the minutes? 
+		*  Are there any other tasks missing that we need to consider?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-07&amp;rev=1238487871&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-31T09:24:31+01:00</dc:date>
+        <title>meetings:phoneconf:2009-04-07</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-07&amp;rev=1238487871&amp;do=diff</link>
+        <description>Date: Monday 7th Apr 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: 
+
+EBI:
+
+Apologies
+
+Minuting
+
+
+?
+
+	*  Actions from the last telcon
+	*  Should be have a BioCatalogue Google Calendar (like myGrid do) for people to put holidays, events and so on?
+	*  Post SAB
+		*  Are we happy with the minutes? 
+		*  Are there any other tasks missing that we need to consider?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-20&amp;rev=1240220821&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-20T10:47:01+01:00</dc:date>
+        <title>meetings:phoneconf:2009-04-20</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-20&amp;rev=1240220821&amp;do=diff</link>
+        <description>Date: Monday 20th Apr 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: 
+
+
+EBI:
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Report back from Biocuration meeting
+	*  Post SAB
+		*  Are we happy with the minutes? 
+		*  Are there any other tasks missing that we need to consider?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-27&amp;rev=1240921234&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-28T13:20:34+01:00</dc:date>
+        <title>meetings:phoneconf:2009-04-27</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-04-27&amp;rev=1240921234&amp;do=diff</link>
+        <description>Date: Monday 27th Apr 2009
+
+Time: 14:30-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: Jits, Franck, Steve
+
+
+EBI: Eric, Thomas
+
+Apologies
+
+
+Carole, Rodrigo
+
+Minuting
+
+Franck
+
+	*  Actions from the last telcon
+	*  Report back from Biocuration meeting
+	*  SAB minutes? 
+	*  Annotation model document
+	*  Possible collaboration with Microsoft
+		*  Plan for the BioIT meeting</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-05-11&amp;rev=1242051256&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-11T15:14:16+01:00</dc:date>
+        <title>meetings:phoneconf:2009-05-11</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-05-11&amp;rev=1242051256&amp;do=diff</link>
+        <description>Date: Monday 11th May 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: 
+Jits, Franck
+
+EBI: 
+Eric, Thomas
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  SAB minutes? 
+	*  Annotation model document
+	*  Possible collaboration with Microsoft
+	*  Progress/developement of the pilot - are we rolling?
+		*  Report back from silent public release</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-05-18&amp;rev=1243853013&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-01T11:43:33+01:00</dc:date>
+        <title>meetings:phoneconf:2009-05-18</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-05-18&amp;rev=1243853013&amp;do=diff</link>
+        <description>Date: Monday 18th May 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester:  Jits, Franck, Steve
+
+
+EBI: Eric, Thomas, Rodrigo
+
+Apologies
+
+Carole
+
+Minuting
+
+
+Franck
+
+	*  Actions from the last telcon
+	*  Update on EMBRACE work, post AGM - SRP
+	*  Hackathon summary 
+	*  Annotation model document
+	*  Progress/developement of the pilot - are we rolling?
+		*  Report back from silent public release</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-03&amp;rev=1244452372&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-08T10:12:52+01:00</dc:date>
+        <title>meetings:phoneconf:2009-06-03</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-03&amp;rev=1244452372&amp;do=diff</link>
+        <description>Date: Wednesday 03rd June 2009
+
+Time: 14:00-15:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester:  Carole, Jits, Franck, Steve
+
+
+EBI: Eric, Rodrigo
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Actions from Carole's mail 
+	*  Embrace content acquisition 
+	*  Server load testing, what is the plan? 
+	*  Progress/developement of the beta
+	*  Test infrastructure setup at EBI and progress of service testing/monitoring piece.
+	*  Technical meeting 
+		*  Summary of …</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-08&amp;rev=1244479437&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-08T17:43:57+01:00</dc:date>
+        <title>meetings:phoneconf:2009-06-08</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-08&amp;rev=1244479437&amp;do=diff</link>
+        <description>Date: Monday 08th June 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester:  Jits, Franck, Steve
+
+
+EBI: Eric
+
+Apologies
+
+Carole, Rodrigo, Thomas
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Embrace content acquisition 
+	*  Progress/developement of the beta
+	*  progress on service monitoring
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-15&amp;rev=1245665220&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-22T11:07:00+01:00</dc:date>
+        <title>meetings:phoneconf:2009-06-15</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-15&amp;rev=1245665220&amp;do=diff</link>
+        <description>Date: Monday 15th June 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: Franck, Jits
+
+
+EBI: Eric, Thomas, Rodrigo
+
+Apologies
+
+
+Carole, Steve
+
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress/developement of the beta - feedback on the new beta release. 
+	*  progress on service monitoring
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-22&amp;rev=1245665274&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-22T11:07:54+01:00</dc:date>
+        <title>meetings:phoneconf:2009-06-22</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-06-22&amp;rev=1245665274&amp;do=diff</link>
+        <description>Date: Monday 22th June 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: 
+
+
+EBI:
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress/developement of the beta - are we rolling for ISMB?
+	*  ISMB list of stuff to do or to have. 
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-06&amp;rev=1247479540&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-07-13T11:05:40+01:00</dc:date>
+        <title>meetings:phoneconf:2009-07-06</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-06&amp;rev=1247479540&amp;do=diff</link>
+        <description>Date: Monday 06th July 2009 Wednesday 08th July 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: Jits, Franck, Carole
+
+
+EBI: 
+Rodrigo, Thomas, Eric
+
+Apologies
+
+Minuting
+
+
+Well done everyone for the successful launch at ISMB !</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-16&amp;rev=1248442709&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-07-24T14:38:29+01:00</dc:date>
+        <title>meetings:phoneconf:2009-07-16</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-16&amp;rev=1248442709&amp;do=diff</link>
+        <description>Date: Thursday 18th July 2009
+
+Time: 14:00-15:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester:
+
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  work packages
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-27&amp;rev=1249041491&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-07-31T12:58:11+01:00</dc:date>
+        <title>meetings:phoneconf:2009-07-27</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-07-27&amp;rev=1249041491&amp;do=diff</link>
+        <description>Date: Monday 27th July 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: Franck, Jits, Steve
+
+
+EBI: Eric, Thomas
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Test script report
+	*  SKOS integration meeting report 
+	*  DILS event report 
+	*  work packages
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-07&amp;rev=1252074636&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-09-04T15:30:36+01:00</dc:date>
+        <title>meetings:phoneconf:2009-09-07</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-07&amp;rev=1252074636&amp;do=diff</link>
+        <description>Date: Monday 07th September 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: 
+
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  F2F planing and agenda 
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-21&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-09-21</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-21&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Monday 21th September 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: Franck, Jits
+
+
+EBI: Eric, Thomas
+
+Apologies
+
+Carole, Rodrigo, Steve
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress report 
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-28&amp;rev=1254155900&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-09-28T17:38:20+01:00</dc:date>
+        <title>meetings:phoneconf:2009-09-28</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-09-28&amp;rev=1254155900&amp;do=diff</link>
+        <description>Date: Monday 28th September 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester: Franck, Jits, Carole
+
+
+EBI: Rodrigo, Thomas, Eric
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress report 
+	*  BBSRC report
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-12&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-10-12</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-12&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Monday 12th October 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: Steve, Jits, Carole, Franck, George
+
+
+EBI: Eric, Rodrigo
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress report 
+	*  BBSRC report
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-19&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-10-19</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-19&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Monday 19th October 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+
+EBI:
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress report 
+	*  data model discussion report
+	*  BBSRC report
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-26&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-10-26</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-10-26&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Monday 26th October 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+
+EBI:
+
+Apologies
+
+Minuting
+
+	*  BBSRC report - where are we?  
+	*  Actions from the last telcon
+	*  Progress report
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-09&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-11-09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-09&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Monday 09th November 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: Franck, Jits, Steve, George, Carole
+
+
+EBI: Eric
+
+Apologies
+
+Rodrigo
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress report
+	*  Publicity/outreach 
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-23&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-11-23</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-23&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Monday 23th November 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: Franck, Jits, George, Manni
+
+
+EBI: Eric
+
+Apologies
+
+Minuting
+
+	*  Jits: working on the API; an alpha version will be released before Xmas break
+	*  George: search by data will be deployed on the test site this week 
+	*  Manni: working on better support for REST services 
+	*  Franck: preparing materiel for the annotation jamboree</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-30&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-11-30</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-11-30&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Monday 30th November 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: Steve, Franck, Jits, Mannie, Jerzy
+
+EBI: Eric
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Jamboree report - Franck needs some numbers for complete report
+	*  Progress report
+		*  Paper progress (George)
+		*  Service execution (George)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-12-10&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>meetings:phoneconf:2009-12-10</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2009-12-10&amp;rev=1260536559&amp;do=diff</link>
+        <description>Date: Thursday 10th December 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester:
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon 
+	*  Progress report
+		*  Paper progress (George)
+		*  Service execution (George)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-01-18&amp;rev=1263817522&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-18T12:25:22+01:00</dc:date>
+        <title>meetings:phoneconf:2010-01-18</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-01-18&amp;rev=1263817522&amp;do=diff</link>
+        <description>Date: Monday 18th January 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: Franck, Jits, Steve, Carole
+
+EBI: Rodrigo
+
+Apologies
+
+Rodrigo
+
+Minuting
+
+Franck
+
+	*  Actions from the last telecom [SAB]
+	*  Progress report
+		*  Paper progress 
+		*  Service execution</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-01-25&amp;rev=1264418639&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-25T11:23:59+01:00</dc:date>
+        <title>meetings:phoneconf:2010-01-25</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-01-25&amp;rev=1264418639&amp;do=diff</link>
+        <description>Date: Monday 25th January 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telecom [SAB]
+	*  Progress report
+		*  Paper progress 
+		*  Service execution</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-02-03&amp;rev=1265300258&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-04T16:17:38+01:00</dc:date>
+        <title>meetings:phoneconf:2010-02-03</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-02-03&amp;rev=1265300258&amp;do=diff</link>
+        <description>Date: Wednesday 03rd February 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: Franck, Jits, Manni
+
+EBI: Eric, Rodrigo
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telecom [SAB]
+	*  Progress report
+		*  Paper progress 
+		*  Service execution</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-02-18&amp;rev=1266495170&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-18T12:12:50+01:00</dc:date>
+        <title>meetings:phoneconf:2010-02-18</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-02-18&amp;rev=1266495170&amp;do=diff</link>
+        <description>Date: Thursday 18th February 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telecom [SAB]
+	*  Progress report
+	*  Publicity/outreach 
+		*  EMBRACE service provider workshop</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-03-08&amp;rev=1268046074&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-03-08T11:01:14+01:00</dc:date>
+        <title>meetings:phoneconf:2010-03-08</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-03-08&amp;rev=1268046074&amp;do=diff</link>
+        <description>Date: Monday 08th March 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telecom
+	*  Progress report
+			*  New release
+			*  Functional testing  
+			*  Curation Roadmap
+			*  BioCatalogue hackers list?  
+			*  Next F2F</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-03-15&amp;rev=1268655146&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-03-15T12:12:26+01:00</dc:date>
+        <title>meetings:phoneconf:2010-03-15</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-03-15&amp;rev=1268655146&amp;do=diff</link>
+        <description>Date: Monday 15th March 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telecom
+	*  Progress report
+			*  New release
+			*  Functional testing  
+			*  Curation Roadmap
+			*  BioCatalogue hackers list?  
+			*  Next F2F</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-04-19&amp;rev=1271684817&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T14:46:57+01:00</dc:date>
+        <title>meetings:phoneconf:2010-04-19</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-04-19&amp;rev=1271684817&amp;do=diff</link>
+        <description>Date: Monday 19th April 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telecom
+	*  Progress report 
+		*  Review of Monitoring &amp; Curation    
+
+	*  Publicity/outreach
+			*  Integrative Bioinformatics March 22-24 in Cambridge (Poster accepted)
+			*  Plan for ISMB and ECCB 2010? 
+			*  EMBRACE service provider workshop</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:home&amp;rev=1268655054&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-03-15T12:10:54+01:00</dc:date>
+        <title>meetings:phoneconf:home</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:home&amp;rev=1268655054&amp;do=diff</link>
+        <description>*  Phone Conference Meeting on May 13 2008
+	*  Phone Conference Meeting on Jun 03 2008
+	*  Phone Conference Meeting on Jun 13 2008
+	*  Phone Conference Meeting on Jun 24 2008
+	*  Phone Conference Meeting on Jul 08 2008
+	*  Phone Conference Meeting on Jul 15 2008
+	*  Phone Conference Meeting on Aug 01 2008
+	*  Phone Conference Meeting on Aug 08 2008
+	*  Phone Conference Meeting on Sept 19 2008
+	*  Phone Conference Meeting on Sept 30 2008
+	*  Phone Conference Meeting on Oct 07 2008
+	*  Phone Confe…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:phone_conferences_manchester-ebi&amp;rev=1214835557&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-30T15:19:17+01:00</dc:date>
+        <title>meetings:phoneconf:phone_conferences_manchester-ebi</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:phone_conferences_manchester-ebi&amp;rev=1214835557&amp;do=diff</link>
+        <description>*  Phone Conference Meeting on May 13 2008
+	*  Phone Conference Meeting on Jun 03 2008
+	*  Phone Conference Meeting on Jun 13 2008
+	*  Phone Conference Meeting on Jun 24 2008</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:phonemeeting_15_07_2008%E2%80%89&amp;rev=1216117653&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-15T11:27:33+01:00</dc:date>
+        <title>meetings:phoneconf:phonemeeting_15_07_2008 </title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:phonemeeting_15_07_2008%E2%80%89&amp;rev=1216117653&amp;do=diff</link>
+        <description>Attending
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+Agenda
+
+Actions from Previous Meeting
+
+	*  Carole - To speak to Steve petefer about the pilot
+	*  Carole/Rodrigo - Schedule an advisery meeting
+	*  Rodrigo - To send dates EBI team is available for a Face 2 face meeting 
+	*  Franck - prepare a questionnaire for ISMB 
+	*  Khalid - To send more info about 'QASAR' on the mailing list.</description>
+    </item>
+</rdf:RDF>

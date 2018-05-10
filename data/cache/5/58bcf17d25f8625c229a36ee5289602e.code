@@ -1,0 +1,27 @@
+&nbsp;
+<span class="co1"># Require the necessary components</span>
+<span class="kw3">require</span> <span class="st0">'rubygems'</span>
+<span class="kw3">require</span> <span class="st0">'open-uri'</span>
+<span class="kw3">require</span> <span class="st0">'libxml'</span>
+&nbsp;
+<span class="kw1">include</span> LibXML
+&nbsp;
+<span class="co1"># Set up the endpoint URL you want to access</span>
+endpoint_url = <span class="st0">&quot;http://www.biocatalogue.org/services&quot;</span>
+&nbsp;
+<span class="co1"># Set up an informative HTTP USER AGENT</span>
+http_user_agent = <span class="st0">&quot;My test script; Ruby/#{RUBY_VERSION}&quot;</span> <span class="st0">&quot;MyTestScript/1.0 (X11; U; Linux x86_64; en-US) Ruby/#{RUBY_VERSION}&quot;</span>
+&nbsp;
+<span class="co1"># Fetch and parse the XML document</span>
+xml = <span class="kw3">open</span><span class="br0">&#40;</span>endpoint_url, <span class="st0">&quot;Accept&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;application/xml&quot;</span>, <span class="st0">&quot;User-Agent&quot;</span> <span class="sy0">=&gt;</span> http_user_agent<span class="br0">&#41;</span>.<span class="me1">read</span>
+document = <span class="re2">XML::Document</span>.<span class="kw3">string</span><span class="br0">&#40;</span>xml<span class="br0">&#41;</span>
+&nbsp;
+<span class="co1"># Validate the output against the schema</span>
+schema = <span class="re2">XML::Schema</span>.<span class="me1">new</span><span class="br0">&#40;</span>SCHEMA_FILE_PATH<span class="br0">&#41;</span>
+is_valid = document.<span class="me1">validate_schema</span><span class="br0">&#40;</span>schema<span class="br0">&#41;</span> <span class="kw1">do</span> |message,flag|
+  <span class="kw3">puts</span> <span class="st0">&quot;<span class="es0">\n</span>#{(flag ? 'ERROR' : 'WARNING')}: #{message}&quot;</span>
+<span class="kw1">end</span>
+<span class="kw3">puts</span> <span class="st0">&quot;<span class="es0">\n</span>Valid output? #{is_valid}<span class="es0">\n</span>&quot;</span>
+&nbsp;
+<span class="co1"># Do some other stuff with the XML document</span>
+...

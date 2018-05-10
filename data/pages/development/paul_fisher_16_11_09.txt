@@ -1,0 +1,14 @@
+====== Paul Fisher's feedback ======
+  * Easy way to access my services or my stuff
+  * What to do if i don't want everybody to see my services
+  * The country flag should mention that it's the location of the service as some users might think that it's the location of the submitter 
+  * The search within result would be nice if it's applicable to search result too not only filtering result 
+  * It is not clear from the operation page where are the input and output of the services. It all over the place. Need a way to allow the user to see just the basic something like [[http://rpc274.cs.man.ac.uk:8080/ondex/parser.html#kegg2Parser|here]]
+  * Possibility to collapse example input/output if there are too many
+  * Description box can be replaced by add description 
+  * Possibility to test services 
+  * Replace the term 'overview' by another word maybe 'Detail service view'
+  * Monitor picture is the most important but lost in the middle of load of texts. 
+  * Comment system is not too flexible. 
+  * Make soaplab submission easy 
+  * During submission if a service is already submitted should be able to see his overview without clicking on that service

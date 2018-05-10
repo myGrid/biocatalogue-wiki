@@ -1,0 +1,33 @@
+==== This page is now deprecated. Please do not update! ====
+
+
+  * Find the right Web Service
+  * Easy and powerful search and filtering
+  * Search across metadata by service providers, expert curators and the wider community
+
+
+====== Discovering Web Services in the BioCatalogue ======
+When searching for services in the BioCatalogue there is an auto suggestion based on the content of the catalogue and previous searches by users. 
+Search terms are case insensitive and can be combined with AND. e.g. Blast AND Protein 
+
+In addition, when searching for bioinformatic terms e.g. microarray, the BioCatalogue will automatically include in your search query any related terms e.g. affymetrix, probeset, etc. The [[http://www.mygrid.org.uk/tools/service-management/mygrid-ontology/|myGrid ontology]] is used to define the relationship between terms. 
+
+===== Search by Data =====
+You can search for services that might analyse or process your data using the [[http://www.biocatalogue.org/search/by_data|search for data]] feature. For example, given a sequence in fasta format, it returns a list of services that possibly consume sequences in fasta format. \\
+The "Search by data" depends on example inputs and outputs of service operations in BioCatalogue. 
+
+===== Service filtering =====
+Web Services in the BioCatalogue can be filter by: 
+  * Service type: SOAP or REST 
+  * Service category: services are grouped based on their functions. 
+  * Service provider: e.g NCBI, EBI, DDBJ
+  * Submitter: registries or Members who submitted the service 
+  * Country of Origin: where is the service hosted. 
+
+If you enable the tag filter, you can also filter services by: 
+  * Tags on services 
+  * Tags on service operations
+  * Tags on service inputs 
+  * Tags on service outputs 
+
+Note that you can combine different filter. e.g.

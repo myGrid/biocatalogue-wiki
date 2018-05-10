@@ -1,0 +1,45 @@
+==== Web Service ====
+Set of functionality that is intended for programmatic access via web technologies.
+
+=== Operation ===
+Operation relates to units of functionality within the Web Service.
+
+=== Service Base ===
+In the context of REST Web Services, the longest common shared URI.
+
+=== Service Endpoint ===
+URI associated with a particular operation of a Web Service. 
+
+=== REST ===
+REST in the context of Web Services is a method of defining the service in a particular way using a type of distributed architecture based on resources.
+
+== Resource ==
+  * In the context of REST. A primitive in the Web Architecture, and is used in the definition of its elements.
+  * A resource is an abstraction of a specific piece of application state or functionality.
+  * An end-point of the URI.
+  * For the purpose of Web Services, actions on Resources are analogous to Operations.
+
+=== SOAP ===
+A protocol for exchanging XML-based messages over computer networks, normally using HTTP/HTTPS. SOAP forms the foundation layer of the web services protocol stack providing a basic messaging framework upon which abstract layers can be built.
+
+There are two main types of SOAP Web Service encodings:
+  * RPC Encoded
+  * Document Literal
+
+== RPC Encoded ==
+A style of SOAP Web Service; a particular way of constructing the content of XML messages, based on not having a schema (unlike in Document Literal, where they are).
+
+== Document Literal ==
+A style of SOAP Web Service; the structure of the content of the XML messages is defined by an XML schema.
+
+=== WSDL ===
+Web Services Description Language, a standard format for describing the interface of SOAP-based Web Services and a certain class of REST Web Services.
+
+==== Annotation ====
+Annotation is a **specific** piece of metadata associated with a **specific** aspect of the Web Service. Annotations may have a type and a context.
+
+=== Semantic Annotation ===
+Semantic Annotation is a **specific** piece of metadata associated with a **specific** aspect of the Web Service. These Annotations are terms from a specific ontology or a controlled vocabulary. They also must have a type and context.
+
+=== Curation ===
+The act of moderating metadata and annotations often resulting in assertions that either add or agree/dispute existing annotations.

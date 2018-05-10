@@ -1,0 +1,135 @@
+a:6:{s:2:"id";s:29:"meetings:phoneconf:2008-08-01";s:6:"prefix";s:0:"";s:4:"text";s:4951:"====== Meeting Agenda/Minutes ======
+
+Date: Friday 1st August 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** Carole, Katy, Franck, Jits
+
+**EBI:** Eric, Hamish, Thomas
+
+===== Apologies =====
+  
+Rodrigo (@ conference in Colombia)
+
+===== Minuting =====
+
+ Jits
+
+===== Agenda =====
+  * [CANCELLED due to sickness] Guiseppe's talk ERGOT: combining DHTs and SONs for Semantic Based Service Discovery (will need video skype at the EBI). He is keen to present this to the BioCatalogue team before he leaves his placement with us.
+  * Action Items from previous meeting 
+  * Communications
+  * Review of requirements for first pilot, and deadline for pilot features spec.
+  * Relationship and overlaps with myExperiment of first pilot - discuss the proposed pilot architecture. 
+  * Planning of first pilot development and content
+  * De briefing of ISMB
+  * Review of focus group Pals liaison
+  * Scheduling and location of the next face to face meeting. I had suggested we meet at the e-Science All Hands meeting in Edinburgh.
+  * Scheduling and location of hackathon.
+  * Schedule for the Advisory Board (which Carole would not recommend until we have sorted out differences) 
+
+===== Actions from Previous Meeting ===== 
+  * **Action EBI** : Suggest dates for the face-2-face meeting at EBI
+  * **Action Franck** : Send flyer and questionnaire to the mailing list before EBI team flies to ISMB on Friday
+  * **Action Eric/Franck** : Agree on database model for the pilot
+  * **Action Thomas** : Create individual wiki accounts for the Manchester team
+
+===== Minutes =====
+
+** Previous Actions **
+
+
+All actions tackled.
+
+
+** Communications **
+
+
+EBI folk need to be kept up to date with myExperiment - they need more information about how it works, how it affects BioCatalogue, what the future, vision and so on is.
+
+
+Carole: we need face to face, whiteboards, watercooler meetings!!
+
+
+Everyone agrees that we need to meet face to face soon - so meet @ EBI on Thu 14th and Fri 15th Aug (Jits stays on Mon and Tue as well). This is mainly a designathon and bit of a hackathon.
+
+
+We need to use the wiki more. Especially to document ad hoc communications via skype, voice and so on.
+
+
+** Pilot (for October) **
+
+
+Carole: need substantial work on requirements doc before F2F meeting.
+
+
+We should all work on this before next meeting.
+
+
+Carole: need a highly synergistic implementation between BioCatalogue and myExperiment. Very important not to duplicate effort and code.
+
+
+After F2F meeting:
+
+  * Content requirements
+  * Design document of the system
+  * Beginnings of code
+  * Clear and unambiguous definitions and documentation on requirements, what components to use, what is 'in' myExperiment, what is 'in' BioCatalogue, a plan and so on.
+  * Some information on expected performance, scalability, support and so on for the pilot.
+
+
+
+We should be able to source services from places we already know, e.g: EMBRACE (must), FETA (should).
+
+
+Carole: suggest we use the MoSCoW (Must Should Coulud Wont) requirements classification method for the requirements doc.
+
+
+Could have a hackathon 27th - 28th Aug in Southampton just before myExp management meeting (29th Aug)? YES - Eric, Thomas and Jits, in Southampton.
+
+
+Do a review at AHM (2nd week of Sept).
+
+
+** ISMB debrief + PALs/Friends liason planning **
+
+
+Very successful for all!
+
+
+Questionnaires should be put on wiki and analysed.
+
+
+We need to contact people interested and get them on the BioCatalogue-Friends mailing list. Use as the PALs mailing list. Mention that we have the meeting on the 14th and that now is the time to get requirements in.
+
+
+Had a gathering, mainly with some NBIC people. They came up with a set of things they would like to see in an early catalogue. Simple stuff. They would like to be part of the friends/PALs set up. They particularly would like to "newsfeed" information about their services/systems to us - we become an aggregator.
+
+
+Hamish: based around exporting the quality score and other metrics (eg: percentage uptime).
+
+
+Franck: will be the Friends Handler!
+
+===== New Actions =====
+  * ALL: work on [[development:software_development:requirements|requirements document]] before next week's meeting
+  * ALL: plan agenda etc for big F2F meeting on 14th Aug.
+  * Jits: get documentation together for EBI folks.
+  * Franck & Eric: put questionnaires + results + analysis on wiki.
+  * Franck: contact interested parties and get them on BioCatalogue-Friends and get them involved.
+
+===== Next Meeting =====
+Friday 8th August 2008 @ 14:00 - 16:00
+
+===== Upcoming Meetings ===== 
+  * F2F: 14th Aug - 15th Aug 2008 @ EBI, Cambridge.
+  * Hackathon: 27th - 28th Aug 2008 @ Southampton.
+  * e-Science All Hands Meeting (2nd week of Sept).
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-07-15|Phone Conference Meeting on Jul 15 2008]]
+
+Next meeting: [[Meetings:PhoneConf:2008-08-08|Phone Conference Meeting on Aug 08 2008]]";s:6:"suffix";s:0:"";s:4:"date";s:10:"1217604657";s:6:"client";s:12:"biocat-guest";}

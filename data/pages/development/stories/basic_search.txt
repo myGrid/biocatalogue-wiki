@@ -1,0 +1,19 @@
+====== Basic Search ======
+
+Search by a casual user is in the Google style using a simple set of search terms possibly with simple modifers. By default it is expected that the search terms are case insensitive and combined with AND. Results are a list of matching items with either brief descriptions or matched terms in context.
+
+//(Which fields should be returned ? If only brief descriptions, do we want the information "Match found in <field_name_1> and <field_name_2>" ?)//
+
+==== APIs ====
+For this basic search and extended search, existing tools could be leveraged, such as:
+  * [[http://www.ebi.ac.uk/ebisearch/|EB-eye]] search engine based on Lucene 
+  * Rails Plugins
+     -  [[http://projects.jkraemer.net/acts_as_ferret/wiki|acts_as_ferret]] which builds of Ferret
+     -  [[http://acts-as-solr.rubyforge.org/|acts_as_solr]] which builds of Solr
+     -  [[http://www.datanoise.com/articles/2007/3/23/acts_as_sphinx-plugin|acts_as_sphinx]] which builds on Sphinx
+     -  [[http://github.com/frabcus/acts_as_xapian/tree/master|acts_as_xapian]] which builds on Xapian
+
+
+
+
+

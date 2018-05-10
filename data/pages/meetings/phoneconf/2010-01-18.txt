@@ -1,0 +1,80 @@
+Date: Monday 18th January 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Franck, Jits, Steve, Carole
+
+**EBI:** Rodrigo
+
+===== Apologies =====
+Rodrigo
+
+===== Minuting =====
+Franck
+
+====== Agenda ======
+
+  * Actions from the last telecom [SAB]
+  * Progress report
+     * Paper progress 
+     * Service execution
+  * Publicity/outreach 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * (Jits) To send to Mark detailed information on the APIs
+  * (All) Ensure that focus is placed on web2.0 aspects to demonstrate the utility of the service it provides. The APIs are keys elements to achieve that. 
+  * (SAB) To point to ontologies that can be used to provide richer annotation of services. 
+  * (Jits) To request data dump on service links in BioMoby in appropriate format. 
+  * (All) Revisit the Platinum, Gold, silver, bronze annotation model
+  * (All) To discuss with seekda team the minimum annotation required for services 
+  * (All) revisit MIAWS (Minimum Information About Web Service)
+  * (All) Talk to seekda about better integration between the BioCatalogue and seekda registry. 
+  * (Franck & Jonathan) BioCatalogue questionnaire to address who the BioCatalogue users are (Biologists, computer scientists, Bioinformaticians, etc)
+  * (All) Promote features like the APIs and the service testing harness and monitoring as advantages to registering services. 
+  * (All) Continue to promote BioCatalogue as the one stop shop for bio web service 
+  * (Rodrigo & Carole) Explore BBR bid within BBSRC... **not possible** 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+===== Minutes =====   
+
+===== New actions ===== 
+
+  * Possibility of exploring a REST modeling paper 
+  * Franck: Biological services to describe in different model: WSMO, SWASDL, FU, 
+  * Franck: Literature review for task mining
+  * Jits/Eric: Create a developer section on the wiki
+  * Franck: 5 key elements to bring in the community for annotation
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-12-10|Phone Conference Meeting on Dec 10 2009]]
+
+Next meeting: 

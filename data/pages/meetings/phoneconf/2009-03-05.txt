@@ -1,0 +1,75 @@
+Date: Thursday 05th Mar 2009
+
+Time: 14:00-15:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending ===== 
+
+**Manchester:** Franck
+
+**EBI:** Rodrigo, Eric, Thomas
+
+
+
+===== Apologies =====
+
+Carole at OGF \\ 
+Jits on the plane from Malawi \\
+Steve not available
+
+====== Agenda ======
+
+   * Actions from the last telcon
+   * Possible collaboration with Microsoft-meeting with Rudy   
+   * Progress/developement of the pilot - are we rolling? 
+   * Test infrastructure setup at EBI
+      
+  * AOB 
+    * [[http://projects.eml.org/sdbv/events/BiocurationMeeting/index.html|Biocuration]] meeting 16-19 april 
+    * BioCatalogue at ISMB!!!
+    * Advisory board
+
+  * Technical meeting 
+    * Summary of tasks on rubyForge and who they are allocated to. 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+
+  * Carole/Steve: to look into hiring a summer student for BioCatalogue - **Carole/Steve not here**
+  * Franck submit a abstract for poster presentation at ISMB 2009 **completed**
+  * Franck: start a [[Development:BioCatalogue FAQ|FAQ]] on the wiki **ongoing** - 1 question from Rodrigo: what time of service do you support? This is a very general question but can split it into different questions. 
+  
+
+====== Minutes ======
+  * Possible collaboration with Microsoft-meeting with Rudy: Rodrigo is waiting for updates from Carole to see how that fits with EBI policies and 'politics'. 
+
+  * Progress/development of the pilot - are we rolling? 
+Yes, we're rolling. Soaplab submission is 80% completed, service testing/monitoring is on the right track, we have more than 140 services registered.... Rodrigo insisted that we should keep to the requirements we outlined during the F2F at the EBI. 
+
+  * Test infrastructure setup at EBI: infrastructure not clearly discussed yet. We should probability do it a la 'Embrace'. Further discussion needed.  
+  
+  * Technical meeting 
+    * Summary of tasks on rubyForge and who they are allocated to.: complete review of the current task list on Monday.      
+    * BioCatalogue support review: 1 mail from the DDBJ team regarding the submission of REST services to Embrace catalogue, still outstanding. We've forwarded it to Steve but no response yet. Eric will attempt to respond.     
+    * 20 questions analysis [[development:20_questions|20 Questions]]: Check out the brand new 20 questions and send your feedback to Franck. For the next couple of days we're going to split them into interface/backend/documentation related issues. 
+
+  
+
+===== Upcoming Meetings =====  
+  * [[http://projects.eml.org/sdbv/events/BiocurationMeeting/index.html|Biocuration]] meeting 16-19 april - Franck to produce a poster for that event
+
+  * ISMB: Eric, Rodrigo, Carole, Katy, .... are going - Franck has submitted an abstract for a poster presentation. 
+
+===== AOB =====
+The EBI team will be in Manchester on the 19th for the advisory board meeting the next day. 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-02-23|Phone Conference Meeting on Feb 23 2009]] 
+
+Next meeting:[[Meetings:PhoneConf:2009-03-09|Phone Conference Meeting on Mar 09 2009]]

@@ -1,0 +1,27 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;service</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Service&quot;</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/4&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Service - DBFetch<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>DBFetch<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+  ...
+  <span class="sc3"><span class="re1">&lt;deployments</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Service&quot;</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/4/deployments&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;serviceDeployment</span> <span class="re0">resourceType</span>=<span class="st0">&quot;ServiceDeployment&quot;</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/service_deployments/4&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;endpoint<span class="re2">&gt;</span></span></span>http://www.ebi.ac.uk/ws/services/WSDbfetch<span class="sc3"><span class="re1">&lt;/endpoint<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;serviceProvider</span> <span class="re0">resourceType</span>=<span class="st0">&quot;ServiceProvider&quot;</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/service_providers/1&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Service Provider - European Bioinformatics Institute (EBI)&quot;</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Service Provider - European Bioinformatics Institute (EBI)<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>European Bioinformatics Institute (EBI)<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+        ...
+      <span class="sc3"><span class="re1">&lt;/serviceProvider<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;location<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;city<span class="re2">&gt;</span></span><span class="re1">&lt;/city<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;country<span class="re2">&gt;</span></span></span>United Kingdom<span class="sc3"><span class="re1">&lt;/country<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;iso3166CountryCode<span class="re2">&gt;</span></span></span>GB<span class="sc3"><span class="re1">&lt;/iso3166CountryCode<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;flag</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/images/flags/gb.png?1267710900&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Flag icon for this location&quot;</span><span class="re2">&gt;</span><span class="re1">&lt;/flag<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;/location<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;submitter</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/users/26&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Rodrigo Lopez&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Member - Rodrigo Lopez&quot;</span><span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2008-11-14T12:05:19Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/serviceDeployment<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/deployments<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>

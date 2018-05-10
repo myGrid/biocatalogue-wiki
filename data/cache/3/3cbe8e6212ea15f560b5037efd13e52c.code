@@ -1,0 +1,28 @@
+<span class="br0">&#91;</span>
+    <span class="br0">&#123;</span>
+        <span class="st0">&quot;group&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;filter_types&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+                <span class="br0">&#123;</span>
+                    <span class="st0">&quot;filter_type&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+                        <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Annotation Attributes&quot;</span><span class="sy0">,</span>
+                        <span class="st0">&quot;filters&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+                            <span class="br0">&#123;</span>
+                                <span class="st0">&quot;filter&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+                                    <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://biocatalogue.org/attribute/tag&quot;</span><span class="sy0">,</span>
+                                    <span class="st0">&quot;id&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2&quot;</span><span class="sy0">,</span>
+                                    <span class="st0">&quot;count&quot;</span><span class="sy0">:</span> <span class="nu0">6893</span>
+                                <span class="br0">&#125;</span>
+                            <span class="br0">&#125;</span><span class="sy0">,</span>
+                            ...
+                        <span class="br0">&#93;</span><span class="sy0">,</span>
+                        ...
+                    <span class="br0">&#125;</span><span class="sy0">,</span>
+                    ...
+                <span class="br0">&#125;</span><span class="sy0">,</span>
+                ...
+            <span class="br0">&#93;</span><span class="sy0">,</span>
+            ...<span class="sy0">,</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span> 
+    ...
+<span class="br0">&#93;</span>

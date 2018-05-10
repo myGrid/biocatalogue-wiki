@@ -1,0 +1,62 @@
+Date: Thursday 18th February 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** 
+
+**EBI:** 
+
+===== Apologies =====
+
+
+===== Minuting =====
+====== Agenda ======
+
+  * Actions from the last telecom [SAB]
+  * Progress report
+  * Publicity/outreach 
+    * EMBRACE service provider workshop
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+
+**Actions from SAB meeting**
+  * (SAB) To point to ontologies that can be used to provide richer annotation of services. 
+  * (Jits) To request data dump on service links in BioMoby in appropriate format. 
+  * (All) Revisit the Platinum, Gold, silver, bronze annotation model
+  * (All) To discuss with seekda team the minimum annotation required for services 
+  * (All) revisit MIAWS (Minimum Information About Web Service)
+
+**Actions last meeting**
+  * Possibility of exploring a REST modeling paper 
+  * Franck: Biological services to describe in different model: WSMO, SWASDL, FU, 
+  * Franck: Literature review for task mining
+  * Jits/Eric: Create a developer section on the wiki
+  * Franck: 5 key elements to bring in the community for annotation
+  * Make annotation guideline more visible through the website 
+  * We need a developer section on the wiki 
+  * Provide WS annotation guidelines for service developers to encourage them to add annotations to WSDL. 
+  * Carole to send Rodrigo NAR papers reviewers  
+  * Eric/Franck make sure the annotation best practice is more visible on the site.
+  * Franck to ask service provider to link back to the catalogue
+
+===== Upcoming Meetings =====  
+
+
+===== AOB ===== 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2010-02-03|Phone Conference Meeting on Feb 03 2010]]
+
+Next meeting: [[Meetings:PhoneConf:2010-03-08|Phone Conference Meeting on Mar 08 2010]]

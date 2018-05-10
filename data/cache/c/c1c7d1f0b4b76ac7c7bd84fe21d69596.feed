@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <image rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico" />
+       <dc:date>2009-04-23T16:03:57+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:20_questions&amp;rev=1240408472&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1240405730&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-04-20&amp;rev=1240220821&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-04-06&amp;rev=1240220761&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:home&amp;rev=1240220505&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:annotations&amp;rev=1239887653&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1239189376&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:soaplab&amp;rev=1238680315&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <url>http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:20_questions&amp;rev=1240408472&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-22T14:54:32+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>development:20_questions</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:20_questions&amp;rev=1240408472&amp;do=diff</link>
+        <description>(ref: Jim Gray's 20 Questions [link])
+
+Similar to what is happening for myExperiment
+
+We have identified 4 categories of questions so far
+
+1- questions on statistics in the system, how many…
+
+	*  How many services has provider X? ...currently implemented but need to make sure it clear enough for users... How many of those are REST? How many of those are SOAP? ...different type of services should be clear on the site and users should know the number of each type after a search... implemented 
+	* …</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1240405730&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-22T14:08:50+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:pilot_dev_notes</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1240405730&amp;do=diff</link>
+        <description>This page should be used to document (or link to) design decisions, data models, plugins/gems used and so on, during the development of the Pilot.
+
+Codebase Guidelines
+
+
+See: codebase_guidelines
+
+Gems (need to be installed seperately)
+
+	*  solr-ruby</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-04-20&amp;rev=1240220821&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-20T10:47:01+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>meetings:phoneconf:2009-04-20</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-04-20&amp;rev=1240220821&amp;do=diff</link>
+        <description>Date: Monday 20th Apr 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: 
+
+
+EBI:
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Report back from Biocuration meeting
+	*  Post SAB
+		*  Are we happy with the minutes? 
+		*  Are there any other tasks missing that we need to consider?</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-04-06&amp;rev=1240220761&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-20T10:46:01+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>meetings:phoneconf:2009-04-06</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-04-06&amp;rev=1240220761&amp;do=diff</link>
+        <description>Date: Monday 6th Apr 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503010
+
+
+
+Attending
+
+
+Manchester: 
+Carole, Jiten
+
+EBI:
+Eric, Franck, Thomas
+
+Apologies
+
+Rodrigo
+
+Minuting
+
+
+Eric
+
+	*  Actions from the last telcon
+	*  Should we have a BioCatalogue Google Calendar (like myGrid do) for people to put holidays, events and so on?
+	*  Post SAB
+		*  Are we happy with the minutes? 
+		*  Are there any other tasks missing that we need to consider?</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:home&amp;rev=1240220505&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-20T10:41:45+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>meetings:phoneconf:home</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:home&amp;rev=1240220505&amp;do=diff</link>
+        <description>*  Phone Conference Meeting on May 13 2008
+	*  Phone Conference Meeting on Jun 03 2008
+	*  Phone Conference Meeting on Jun 13 2008
+	*  Phone Conference Meeting on Jun 24 2008
+	*  Phone Conference Meeting on Jul 08 2008
+	*  Phone Conference Meeting on Jul 15 2008
+	*  Phone Conference Meeting on Aug 01 2008
+	*  Phone Conference Meeting on Aug 08 2008
+	*  Phone Conference Meeting on Sept 19 2008
+	*  Phone Conference Meeting on Sept 30 2008
+	*  Phone Conference Meeting on Oct 07 2008
+	*  Phone Confe…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:annotations&amp;rev=1239887653&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-16T14:14:13+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:annotations</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:annotations&amp;rev=1239887653&amp;do=diff</link>
+        <description>*  Controller depends on the presence of logged_in? and current_user methods. The current_user method MUST return nil if no user is currently logged in.
+
+	*  Whilst running in development mode, if you get an error such as: ”A copy of ApplicationController has been removed from the module tree but is still active!”, then restart your server. This is due to the way Rails autoloads files in development mode, which affects the plugin and any extensions in the main app (eg: {app_root}/app/models/anno…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1239189376&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-08T12:16:16+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:data_model_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1239189376&amp;do=diff</link>
+        <description>Data Modeling Process
+
+The data modeling approached adopted for BioCatalogue is the Agile Modeling Process which is  both evolutionary(iterative and incremental) and collaborative.
+
+
+Key aspects of this modeling approach include:
+
+	*  The model is developed in parallel with the application that uses the data
+	*  The project development iterations are in-line with the data model development iterations
+	*  The model is assumed to be 'good enough' to handle the the current application capabilities
+…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:soaplab&amp;rev=1238680315&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-02T14:51:55+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public:howto:soaplab - created</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:soaplab&amp;rev=1238680315&amp;do=diff</link>
+        <description>What is Soaplab?
+
+	*  Soaplab is a specialised Web Services software framework for command-line bioinformatics programs. It includes a  library for running command-line programs and provides support to generate Java Web Services web applications based on this library. An important part of the library is a container that manages life cycle of the jobs effectively. Soaplab generic interface[1] makes it possible to use the same interface for all programs deployed. Soaplab is well known to many bioi…</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,108 @@
+====== The BioCatalogue  2009 Roadmap ======
+
+\\
+===== First quarter of 2009 (Jan - Mar) =====
+
+  * **//Private pilot//** (private beta) - Basic SOAP services registration, discovery and annotation. Batch upload of soaplab services. 
+  
+  * **Advanced service discovery and filtering (I)** - Sorting and filtering (by providers and services types) and more faceted browsing features. At a glance counts of annotations on services. 
+
+  * **Service annotation support** - Simple tagging and functional description of services, operations, their inputs and outputs. Support for service operation inputs and outputs examples. Support for comments and discussion threads about services. Annotation provided by submitters, providers, expert curators and automated agents.
+
+  * **REST services support (I)** - Ability to register, describe and search for REST services in BioCatalogue.
+
+  * **Content acquisition (I)** - Import Feta annotation. Providers, experts and users' service registration and annotation. 
+
+\\
+
+===== Second quarter of 2009 (Apr - Jun) =====
+
+  * **//Public pilot//** (public beta) - [[http://www.biocatalogue.org/|First public release]] (at ISMB 09) - see [[public:pilot|BioCatalogue beta]]
+
+  * **Service monitoring - availability** - We will regularly monitor services, by checking the host, endpoints, WSDL and so on.
+
+  * **Content acquisition (II)** - EMBRACE registry content acquisition (initial). Scavenge services from SeekDa.
+
+  * **Advanced service discovery and filtering (II)** - Filtering by tags, providers, submitters, service types, locations, and so on.
+
+  * **More metadata support** - Ability to provide many different types of annotations to describe and categorise services.
+
+  * **Advanced search functionality (I)** - Search takes into account synonyms (taken from an ontology) to provide more relevant results.
+
+  * **User interface improvements** - To provide intuitive ways to submit, browse, discover and annotate services.
+
+  * **Favouriting** - Favourite the services that you use or like the most.
+
+\\
+
+===== Third quarter 2009 (Jul - Sep) =====
+
+  * **Content acquisition (II)** - Full EMBRACE registry import. 
+  
+  * **Public APIs (I)** - Basic RESTful APIs to BioCatalogue (mainly read).
+ 
+  * **Soaplab services support** - Better support for Soaplab services
+
+  * **Better WSDL parsing** - Deeper parsing of WSDLs, including linked schemas which include more typed information on ports, inputs and outputs.
+
+  * **Better annotation and curation features (I)** - annotations forms, in-situ annotating.
+
+  * **Content curation** - Develop and improve tools for expert and community curation
+
+  * **Outreach** - 
+\\
+
+===== Fourth quarter 2009 (Oct - Dec) =====
+
+  * **Service monitoring - testing** - Test scripts to test out service functionality can be provided by submitters and service providers. We will then run these regularly to provide us with metrics on the availability/reliability. A traffic light system (red, green, amber) gives users an at-a-glance view on status.
+
+  * **Service changes monitoring** - Monitoring changes in the WSDLs of services and updating the BioCatalogue records and providing a log of changes.
+
+  * **Final merge of the EMBRACE registry**.
+
+  * **Better annotation and curation features (II)** - Curation reports, Curation assertions and more improvements for expert/community curators as well as casual annotators.
+
+  * **REST services support (II)** - Better support for REST services, with the ability to describe and annotate the exact Resources, Methods, Parameters and Representations of REST services.
+
+  * **Public APIs (II)** - More functional RESTful APIs to BioCatalogue (read and write).
+
+  * **Active homepage** - A more dynamic homepage with content on the latest things going on in the BioCatalogue (with news feeds, announcements, and so on).
+
+  * **Notifications and news feeds per service** - RSS/ATOM feeds for services, providing information on all activity on a service within the BioCatalogue.
+
+  * **Better service availability reports** - Including filtering by service availability and "at-a-glance" summary reports for curators.
+
+  * **Richer service provider profiles** - Ability to add more details for service providers.
+
+  * **Richer user profiles** - Ability to harvest your profile information from myExperiment.
+
+  * **Content acquisition (III)** - Scavenge services from ProgrammableWeb, BioMOBY and more from SeekDa.
+
+  * **Annotation Jamboree! (I)**  - A community driven Web Service annotation event in Manchester.
+
+  * **Content curation** -  Ongoing curation of the content in the BioCatalogue.
+
+  * **Outreach**
+ 
+
+===== 2010 =====
+
+  * **Annotation Jamboree! (II)** - possibly at ISMB '10
+
+  * **Integration with myExperiment** - Services from BioCatalogue displayed in myExperiment so users of myExperiment can browse them.
+
+  * **Integration with Taverna** - Ability to import Web Services and annotations to and from BioCatalogue and Taverna.
+
+  * **myBioCatalogue** - Ability to set up your own local BioCatalogue registry.
+  
+  * **Curation workbench/tools** - New curation tools designed for expert curators.
+
+  * **"Try it now" service functionality** - Ability to test and play with a service within the BioCatalogue interface before using it.
+
+  * **Semantic annotation support)** - Ability to annotate service using ontologies and controlled vocabularies (possibly import/export semantically annotated services in different formats such as SAWSDL, SA-REST).
+
+  * **Advanced search functionality (II)** - Similarity searches. Semantic search: search for services using terms from a defined ontology. Amazon-like search: people who searched for these also searched for those.
+
+  * **BioMoby and SADI services support** - Better support for BioMoby and SADI services 
+  
+  * **Functional Unit of Services**- Ability to present services in terms of their biological functions, biological data types and biological resources.

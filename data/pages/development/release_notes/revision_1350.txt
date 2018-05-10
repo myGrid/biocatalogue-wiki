@@ -1,0 +1,65 @@
+===== 1st December 2009 =====
+
+  * Previous release revision: 1300
+  * This release revision: 1350
+
+==== Steps To Take for Update ====
+
+In order...
+
+  * Run database update tasks:
+
+  rake db:migrate RAILS_ENV=production
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Run the 'search by data script'
+
+  ruby script/biocatalogue/import_annotations_io_examples_nov09.rb
+
+  * Set up a cron job to update annotation properties
+
+  rake biocatalogue:submit:update_annotation_properties_full RAILS_ENV=production
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+
+==== Release Notes ====
+
+Email for the friends' list:
+
+By George:
+
+  Hi all
+  
+  We have just released a brand new "Search by data" feature. It allows
+  you to query for services that might analyze or process a given real
+  data. For example, given a Fasta file, it returns a list of services
+  that possibly consume sequences in Fasta format.
+  
+  To access the feature go to:
+  www.biocatalogue.org/search/by_data
+  or click on a drop-down button just on the right site of "Providers" link.
+  
+  We would appreciate any suggestions or comments which will help us to
+  improve this feature.
+  Note that "Search by data" depends on example inputs and outputs for
+  service operations in BioCatalogue.
+  If you add a new service or annotate one, please add example inputs and
+  outputs to improve the visibility of the service.
+  
+  Note also that we are logging your queries, which enables us to monitor
+  and improve the quality on results. We hope to use this data to develop
+  automatic tools for service annotation in the future. Meanwhile, we
+  suggest you not to use secure or confidential data while searching for
+  services.
+  
+  Regards,
+  
+  The BioCatalogue Team 

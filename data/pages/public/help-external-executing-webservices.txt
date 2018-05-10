@@ -1,0 +1,38 @@
+==== This page is now deprecated. Please do not update! ====
+
+
+====== Executing Web Services ======
+I found a nice service - how can I execute it?
+
+There are many ways ways on executing web services and there is no simple way of telling which one is the best in your case. This depends on:
+  * The type of the service (SOAP, REST etc. )
+  * The way you want to execute the service (in a browser, in a GUI, inside a program or in pipelining system)
+Nice tutorials on how to write clients can be found on [[http://www.ebi.ac.uk/Tools/webservices/help/faq|on soaplab web pages]]
+ 
+
+==== SOAP Services ====
+  * **In GUI:** Use tools such as [[http://www.soapui.org/|SoapUI]] or [[ http://ditchnet.org/soapclient/|Mac SOAP Client ]]
+  * **In a pipelining system:** Use systems such as [[http://www.taverna.org|Taverna]] or [[https://kepler-project.org/|Kepler]]
+  * **In a web browser:** We are currently working on it!
+  * **Inside yuor code** 
+    - **Python**: Use [[https://fedorahosted.org/suds/wiki/Documentation|Suds]]
+    - **Java**: Use [[http://www.apl.jhu.edu/~hall/java/Servlet-Tutorial/Servlet-Tutorial-First-Servlets.html|javax.servlet package]]
+    - Perl
+    - C++
+    - PHP
+
+==== REST Services ====
+Coming soon
+
+==== Soaplab Services ====
+Soaplab services are command line applications, wrapped as SOAP services, and served from a Soaplab server. All Soaplab services have the same generic set of SOAP operations (depending on the Soaplab version) as they all share a standardised interface.
+
+Certain tools, like the Taverna workflow workbench, provide automatic support for the Soaplab way of executing these services. In some cases you will need to use the Soaplab Server Base URL rather than the WSDL location in these tools.
+More information on Soaplab clients is available here.
+
+Further documentation on Soaplab services is available:
+  * [[http://www.ebi.ac.uk/Tools/webservices/soaplab/overview|Soaplab overview]]
+  * [[http://www.ebi.ac.uk/Tools/webservices/soaplab/guide|Soaplab client guide page]]
+  * [[http://www.ebi.ac.uk/soaplab|EBI Soaplab server documentation]]
+  * [[http://soaplab.sourceforge.net/soaplab2/|Soaplab 2]]
+  * [[http://emboss.sourceforge.net/apps/release/6.0/emboss/apps/index.html|Sourceforge site for EMBOSS Soaplab services]]

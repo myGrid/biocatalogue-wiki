@@ -1,0 +1,11 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;service_provider&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;European Bioinformatics Institute (EBI)&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/service_providers/1&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;hostnames&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+            <span class="st0">&quot;www.ebi.ac.uk&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;srs.ebi.ac.uk&quot;</span>
+        <span class="br0">&#93;</span><span class="sy0">,</span>
+        <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;The European Bioinformatics Institute (EBI) is a non-profit academic organisation that forms part of the European Molecular Biology Laboratory (EMBL) ( http://www.embl.org/).<span class="es0">\n</span>The EBI is a centre for research and services in bioinformatics. The Institute manages databases of biological data including nucleic acid, protein sequences and macromolecular structures.&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

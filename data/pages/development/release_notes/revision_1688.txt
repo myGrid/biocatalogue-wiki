@@ -1,0 +1,60 @@
+===== BioCatalogue Release , 9th March 2010 =====
+
+  * Previous release revision: 1368
+  * This release revision: 1688
+
+==== Steps To Take for Update ====
+
+In order...
+
+  * Run database update tasks:
+
+  rake db:migrate RAILS_ENV=production
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+  * Restart memcached servers
+
+  * Run embrace services & users import
+  
+  In the application root directory, create a directory called embrace and download the datafiles from dropbox into this directory. The files needed are:
+    * services.xml
+    * users.xml
+    * tags.xml
+
+  ruby script/biocatalogue/embrace_import RAILS_ENV=production
+
+  * Run embrace test scripts import
+
+  ruby script/biocatalogue/embrace_test_scripts_import RAILS_ENV=production
+
+  * Run indexing
+
+  rake solr:reindex RAILS_ENV=production
+
+  * Rebuild query suggestions
+
+  rake biocatalogue:submit:update_search_query_suggestions RAILS_ENV=production
+
+==== Release Notes ====
+
+** In this release : **
+
+  * [[public:api|The REST API]] which enables programmatic access to the BioCatalogue
+  * EMBRACE Imports
+
+   This import merges the EMBRACE registry with the BioCatalogue registry. This includes :
+    * the services and metadata
+    * the users 
+    * the test scripts
+
+  * Monitoring of services via test scripts
+  

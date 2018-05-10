@@ -1,0 +1,15 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;test_result&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;status&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;message&quot;</span><span class="sy0">:</span> <span class="st0">&quot;This check was successful&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;symbol&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/images/tick-sphere-50.png&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;small_symbol&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/images/small-tick-sphere-50.png&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;last_checked&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2010-04-07T04:42:45Z&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;label&quot;</span><span class="sy0">:</span> <span class="st0">&quot;PASSED&quot;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/test_results/963049&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;test_action&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http_head&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;result_code&quot;</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">,</span>
+        <span class="st0">&quot;created_at&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2010-04-07T04:42:45Z&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

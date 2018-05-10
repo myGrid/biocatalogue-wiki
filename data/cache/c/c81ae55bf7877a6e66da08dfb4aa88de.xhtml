@@ -1,0 +1,44 @@
+
+<p>
+Test Harness Machine (ves-hx-2c ):
+
+</p>
+<pre class="code">  Machine Name : ves-hx-2c
+  Operating System : Fedora 14
+  Users : root &amp; biocat</pre>
+
+<p>
+
+This machine runs the biocatalogue test harness. The harness is located under two directories : development and production running against the test and live sites respectively. The corresponding directories are shown below with the directory structure shown for production only since they are identical:
+
+</p>
+<pre class="code">  /home/biocat/projects/biocatalogue/harness/development
+  /home/biocat/projects/biocatalogue/harness/production</pre>
+<pre class="code">                      /archive</pre>
+<pre class="code">                      /config</pre>
+<pre class="code">                      /crons</pre>
+<pre class="code">                      /log</pre>
+<pre class="code">                      /servicetests</pre>
+<pre class="code">                      /src                    </pre>
+<pre class="code">  archive
+      This is used to archive the logs of the harness so that the individual job log directories can be clean up
+      A cron job does the archiving of the logs
+  config
+      This contains the configuration files for running the harness. There are two main configuration files. An xml file to that lists the jobs to run and .config file that controls the general behavior of the harness
+  crons
+      Contains some shell scripts which are run as crons jobs
+      Also contains a file to use for generating a crontable
+  log
+      Directory to store harness logs
+  servicetests
+      Directory keep the individual job scripts. They are launched from here
+  src
+      The source directory of the harness scripts. These are written in python
+       </pre>
+
+<p>
+
+To run the harness, a cron table is setup with the configuration of the crons available in crons/crontable under the harness directories. To install a new cron, simply modify this file and run the command
+
+</p>
+<pre class="code">  crontab &lt;path to crontable file&gt;</pre>

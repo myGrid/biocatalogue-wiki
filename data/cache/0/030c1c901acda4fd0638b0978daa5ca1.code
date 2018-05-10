@@ -1,0 +1,39 @@
+&nbsp;
+<span class="kw3">require</span> <span class="st0">'rubygems'</span>
+<span class="kw3">require</span> <span class="st0">'oauth'</span>
+<span class="kw3">require</span> <span class="st0">&quot;json/ext&quot;</span>
+&nbsp;
+key = <span class="st0">&quot;...&quot;</span> <span class="co1"># get your consumer key from the BioCatalogue</span>
+secret = <span class="st0">&quot;...&quot;</span> <span class="co1"># get your consumer key from the BioCatalogue</span>
+&nbsp;
+site = <span class="st0">&quot;http://www.biocatalogue.org&quot;</span>
+&nbsp;
+<span class="co1"># ===== the tedious one time setup ===== #</span>
+&nbsp;
+<span class="co1"># the first time you use OAuth, you will need to get an access token; you only need to do this once</span>
+consumer = <span class="re2">OAuth::Consumer</span>.<span class="me1">new</span><span class="br0">&#40;</span>key, secret, <span class="br0">&#123;</span> <span class="re3">:site</span> <span class="sy0">=&gt;</span> site <span class="br0">&#125;</span><span class="br0">&#41;</span>
+request_token = consumer.<span class="me1">get_request_token</span>
+&nbsp;
+<span class="co1"># the user needs to ask users to allow you application/script to access their BioCatalogue content</span>
+<span class="co1"># after authorisation the user will receive a token which your application/script needs for the next step! make sure you have a way to capture this token :-)</span>
+request_token.<span class="me1">authorize_url</span> <span class="co1"># point your browser to this URL</span>
+...
+&nbsp;
+<span class="co1"># :oauth_verifier is the key that was provided to the user in the last step</span>
+access_token = request_token.<span class="me1">get_access_token</span><span class="br0">&#40;</span><span class="re3">:oauth_verifier</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;...&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="co1"># store your access token (access_token)</span>
+...
+&nbsp;
+<span class="co1"># in future, all you need to do is recall your access token and you are ready to go :-)</span>
+&nbsp;
+<span class="co1"># =======================================#</span>
+&nbsp;
+response = access_token.<span class="me1">get</span><span class="br0">&#40;</span>site <span class="sy0">+</span> <span class="st0">'/users/738.json'</span><span class="br0">&#41;</span>
+json_doc = JSON.<span class="me1">parse</span><span class="br0">&#40;</span>response.<span class="me1">body</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="co1"># Do some stuff with the JSON document (json_doc)</span>
+name = json_doc<span class="br0">&#91;</span><span class="st0">&quot;user&quot;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="st0">&quot;name&quot;</span><span class="br0">&#93;</span>
+&nbsp;
+<span class="co1"># Do some other stuff with the JSON document (json_doc)</span>
+...

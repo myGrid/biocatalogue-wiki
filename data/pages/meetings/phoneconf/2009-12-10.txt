@@ -1,0 +1,58 @@
+Date: Thursday 10th December 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:**
+
+**EBI:** 
+
+===== Apologies =====
+
+===== Minuting =====
+
+====== Agenda ======
+
+  * Actions from the last telcon 
+  * Progress report
+     * Paper progress (George)
+     * Service execution (George)
+  * Publicity/outreach 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Franck: organise a SAB telecom meeting for the 2nd week of January (from 11th). **completed** 
+  * Franck: put on the task link <make type of complex services annotatable>. **completed** 
+  * Steve to talk to Carole about EMBRACE logo on the main site. **completed** 
+  * Eric to send jamboree stats to Franck. **completed** 
+
+
+===== Minutes =====   
+
+===== New actions ===== 
+  
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+BioCatalogue Nucleic Acids paper 
+
+Next SAB virtual meeting 
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-11-23|Phone Conference Meeting on Nov 23 2009]]
+
+Next meeting: 

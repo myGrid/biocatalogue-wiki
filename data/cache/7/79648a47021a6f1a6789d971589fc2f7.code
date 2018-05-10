@@ -1,0 +1,18 @@
+<span class="br0">&#123;</span>
+  resource : <span class="br0">&#123;</span>
+    per_page: ... ,
+    current_page: ... ,
+    pages: ... ,
+    total: ... ,
+    search_query: ... ,
+    per_page: <span class="br0">&#91;</span> 
+      <span class="br0">&#123;</span>
+        resource_property_1: ...,
+        resource_property_2: ...,
+        resource_property_3: ...,
+        ...
+      <span class="br0">&#125;</span>,
+      ...
+    <span class="br0">&#93;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

@@ -1,0 +1,1726 @@
+
+<p>
+
+<style type="text/css">
+
+.wikilink1 {
+font-weight: bold;
+}
+
+p { text-align: left !important; }
+
+</style>
+
+</p>
+
+<p>
+
+<div class="box_important" style="margin-top: 0";>
+Current status is <b>BETA</b> so expect improvements and additions. Breaking changes will be mentioned in the <a href="#changelog" class="wikilink1">changelog</a> and on the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a>.
+</div>
+
+</p>
+
+<h1 class="sectionedit1" id="the_biocatalogue_rest_api">The BioCatalogue REST API</h1>
+<div class="level1">
+
+<p>
+The <a href="http://www.biocatalogue.org" class="urlextern" target="_blank" title="http://www.biocatalogue.org"  rel="nofollow">BioCatalogue</a> provides a set of public <strong>RESTful</strong> <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup> endpoints that allow you to query the registry programmatically and integrate the data and functionality into your own scripts, workflows, apps, tools and mashups. XML is the primary output format, with support for JSON <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup> as the secondary format. We are also looking into having RDF, FOAF, SKOS and others output formats in the future and where applicable.
+</p>
+
+<p>
+The BioCatalogue <abbr title="Application Programming Interface">API</abbr> is <strong>read only</strong>, with write support for submission of REST and SOAP services, as well as annotations.
+</p>
+
+<p>
+The <abbr title="Application Programming Interface">API</abbr> follows a consistent <abbr title="Uniform Resource Identifier">URI</abbr> scheme and Linked Data principles. Content Negotiation <sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup> is the recommended way to access the outputs (though for purposes of this documentation and testing in a browser you may see URIs with &#039;.xml&#039; in them). <span class="curid"><a href="/wiki/public:api#uris_linked_data_and_content_negotiation" class="wikilink1" title="public:api">More detailed information</a></span> is available on this.
+</p>
+
+<p>
+One key notion in the <span class="curid"><a href="/wiki/public:api#data_model" class="wikilink1" title="public:api">data model</a></span> presented by the REST <abbr title="Application Programming Interface">API</abbr> is that a <code>Service</code> in the BioCatalogue is really a <em>container</em> for one or more <code>ServiceDeployment</code>s and one or more variants, where a variant is either a <code>SoapService</code> or <code>RestService</code>. 
+</p>
+
+<p>
+ <!--
+<div class="box_important">
+<b>Note</b>: please use the sandbox site (<b><a href="http://sandbox.biocatalogue.org" target="_blank">http://sandbox.biocatalogue.org</a></b>) whilst building and testing (when you can). The sandbox site will also be used to try out the latest API. For updates please join the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a>.
+</div>
+--> 
+</p>
+
+<p>
+Jump to the <span class="curid"><a href="/wiki/public:api#quick_examples_xml" class="wikilink1" title="public:api">Quick Examples</a></span>
+</p>
+
+<p>
+Jump to the <span class="curid"><a href="/wiki/public:api#table_of_endpoints" class="wikilink1" title="public:api">Table of Endpoints</a></span>
+</p>
+
+<p>
+Go to the <a href="/wiki/public:api:endpoints" class="wikilink1" title="public:api:endpoints">Endpoints Detailed Docs</a>
+</p>
+
+<p>
+
+<div class="box_note">
+If you have any questions, feedback or would like any assistance please join the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a> or contact Jiten Bhagat (<a href="javascript:location='mailto:\u006a\u0069\u0074\u0073\u0040\u0063\u0073\u002e\u006d\u0061\u006e\u002e\u0061\u0063\u002e\u0075\u006b';void 0"><script type="text/javascript">document.write('\u006a\u0069\u0074\u0073\u0040\u0063\u0073\u002e\u006d\u0061\u006e\u002e\u0061\u0063\u002e\u0075\u006b')</script></a>)
+</div>
+
+</p>
+
+</div>
+<!-- EDIT1 SECTION "The BioCatalogue REST API" [493-3115] -->
+<h2 class="sectionedit2" id="changelog">Changelog</h2>
+<div class="level2">
+
+<p>
+The last change to the <abbr title="Application Programming Interface">API</abbr> (for the <a href="http://www.biocatalogue.org" class="urlextern" target="_blank" title="http://www.biocatalogue.org"  rel="nofollow">main BioCatalogue site</a>) was: 
+</p>
+
+<p>
+<strong>v1.1.0b</strong> - 25th June 2010
+</p>
+<ul>
+<li class="level1"><div class="li"> Added <strong>viewings</strong> and <strong>favourites</strong> counts to the /services/{id} endpoint (in the <code>&lt;summary&gt;</code> section).</div>
+</li>
+<li class="level1"><div class="li"> New endpoint - <strong>/soap_services/wsdl_locations</strong>. Allows you to get a list of all the WSDL locations of all the SOAP based services in the catalogue.</div>
+</li>
+</ul>
+
+<p>
+See the <a href="/wiki/public:api:changelog" class="wikilink1" title="public:api:changelog">full changelog</a> for more details
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Changelog" [3116-3599] -->
+<h2 class="sectionedit3" id="quick_examples">Quick Examples</h2>
+<div class="level2">
+
+<p>
+<strong>Search</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> For things with the keyword “ebi”</div>
+<ul>
+<li class="level2"><div class="li"><a href="http://www.biocatalogue.org/search.xml?q=ebi" class="urlextern" target="_blank" title="http://www.biocatalogue.org/search.xml?q=ebi"  rel="nofollow">http://www.biocatalogue.org/search.xml?q=ebi</a></div>
+</li>
+<li class="level2"><div class="li"><a href="http://www.biocatalogue.org/search.json?q=ebi" class="urlextern" target="_blank" title="http://www.biocatalogue.org/search.json?q=ebi"  rel="nofollow">http://www.biocatalogue.org/search.json?q=ebi</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> For <code>Service</code>s and <code>SoapOperation</code>s with the keywords “blast sequence”</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/search.xml?q=blast+sequence&amp;scope=services,soap_operations" class="urlextern" target="_blank" title="http://www.biocatalogue.org/search.xml?q=blast+sequence&amp;scope=services,soap_operations"  rel="nofollow">http://www.biocatalogue.org/search.xml?q=blast+sequence&amp;scope=services,soap_operations</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/search.json?q=blast+sequence&amp;scope=services,soap_operations" class="urlextern" target="_blank" title="http://www.biocatalogue.org/search.json?q=blast+sequence&amp;scope=services,soap_operations"  rel="nofollow">http://www.biocatalogue.org/search.json?q=blast+sequence&amp;scope=services,soap_operations</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> For <code>User</code>s with the keyword “franck”</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/search.xml?q=franck&amp;scope=users" class="urlextern" target="_blank" title="http://www.biocatalogue.org/search.xml?q=franck&amp;scope=users"  rel="nofollow">http://www.biocatalogue.org/search.xml?q=franck&amp;scope=users</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/search.json?q=franck&amp;scope=users" class="urlextern" target="_blank" title="http://www.biocatalogue.org/search.json?q=franck&amp;scope=users"  rel="nofollow">http://www.biocatalogue.org/search.json?q=franck&amp;scope=users</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>Lookup</strong>
+</p>
+
+<p>
+For a particular WSDL <a href="http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl" class="urlextern" target="_blank" title="http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl"  rel="nofollow">http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl</a>…
+</p>
+<ul>
+<li class="level1"><div class="li"> Get the relevant <code>SoapService</code></div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A" class="urlextern" target="_blank" title="http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A"  rel="nofollow">http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A" class="urlextern" target="_blank" title="http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A"  rel="nofollow">http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Get the <code>SoapOperation</code> “streamContent”</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent" class="urlextern" target="_blank" title="http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent"  rel="nofollow">http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent" class="urlextern" target="_blank" title="http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent"  rel="nofollow">http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Get the <code>SoapInput</code> “generateContent” for the <code>SoapOperation</code> “streamContent”</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent&amp;input_name=generateContent" class="urlextern" target="_blank" title="http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent&amp;input_name=generateContent"  rel="nofollow">http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent&amp;input_name=generateContent</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent&amp;input_name=generateContent" class="urlextern" target="_blank" title="http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent&amp;input_name=generateContent"  rel="nofollow">http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&amp;operation_name=streamContent&amp;input_name=generateContent</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>Services</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Latest</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.xml"  rel="nofollow">http://www.biocatalogue.org/services.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.json"  rel="nofollow">http://www.biocatalogue.org/services.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Filtered by service type SOAP</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d"  rel="nofollow">http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services.json?t=%5bSOAP%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.json?t=%5bSOAP%5d"  rel="nofollow">http://www.biocatalogue.org/services.json?t=%5bSOAP%5d</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Filtered by service type SOAP, and provided by the EBI or NCBI, and with the keyword “fetch” in them somewhere</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d&amp;p=%5b1%5d%2c%5b6%5d&amp;q=fetch" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d&amp;p=%5b1%5d%2c%5b6%5d&amp;q=fetch"  rel="nofollow">http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d&amp;p=%5b1%5d%2c%5b6%5d&amp;q=fetch</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services.json?t=%5bSOAP%5d&amp;p=%5b1%5d%2c%5b6%5d&amp;q=fetch" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.json?t=%5bSOAP%5d&amp;p=%5b1%5d%2c%5b6%5d&amp;q=fetch"  rel="nofollow">http://www.biocatalogue.org/services.json?t=%5bSOAP%5d&amp;p=%5b1%5d%2c%5b6%5d&amp;q=fetch</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> All the possible filters that can be applied to the <code>Services</code> index</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/filters.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/filters.xml"  rel="nofollow">http://www.biocatalogue.org/services/filters.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/filters.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/filters.json"  rel="nofollow">http://www.biocatalogue.org/services/filters.json</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>SOAP operations</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Latest</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations.xml"  rel="nofollow">http://www.biocatalogue.org/soap_operations.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations.json"  rel="nofollow">http://www.biocatalogue.org/soap_operations.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Filtered by the tags “blast” or “sequence” anywhere within the operation and it&#039;s inputs and outputs</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations.xml?tag=%5bblast%5d%2c%5bsequence%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations.xml?tag=%5bblast%5d%2c%5bsequence%5d"  rel="nofollow">http://www.biocatalogue.org/soap_operations.xml?tag=%5bblast%5d%2c%5bsequence%5d</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations.json?tag=%5bblast%5d%2c%5bsequence%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations.json?tag=%5bblast%5d%2c%5bsequence%5d"  rel="nofollow">http://www.biocatalogue.org/soap_operations.json?tag=%5bblast%5d%2c%5bsequence%5d</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Filtered by the tag “protein_database” anywhere within the operation and it&#039;s inputs</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations.xml?tag_ins=%5bprotein_database%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations.xml?tag_ins=%5bprotein_database%5d"  rel="nofollow">http://www.biocatalogue.org/soap_operations.xml?tag_ins=%5bprotein_database%5d</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations.json?tag_ins=%5bprotein_database%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations.json?tag_ins=%5bprotein_database%5d"  rel="nofollow">http://www.biocatalogue.org/soap_operations.json?tag_ins=%5bprotein_database%5d</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> All the possible filters that can be applied to the <code>SoapOperations</code> index</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations/filters.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations/filters.xml"  rel="nofollow">http://www.biocatalogue.org/soap_operations/filters.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/soap_operations/filters.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/soap_operations/filters.json"  rel="nofollow">http://www.biocatalogue.org/soap_operations/filters.json</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>REST methods</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Latest</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods.xml"  rel="nofollow">http://www.biocatalogue.org/rest_methods.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods.json"  rel="nofollow">http://www.biocatalogue.org/rest_methods.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Filtered by the tags “blast” or “sequence” anywhere within the REST method and it&#039;s REST input and output parameters and representations</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods.xml?tag=%5bblast%5d%2c%5bsequence%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods.xml?tag=%5bblast%5d%2c%5bsequence%5d"  rel="nofollow">http://www.biocatalogue.org/rest_methods.xml?tag=%5bblast%5d%2c%5bsequence%5d</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods.json?tag=%5bblast%5d%2c%5bsequence%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods.json?tag=%5bblast%5d%2c%5bsequence%5d"  rel="nofollow">http://www.biocatalogue.org/rest_methods.json?tag=%5bblast%5d%2c%5bsequence%5d</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Filtered by the tag “database” anywhere within the operation and it&#039;s REST input parameters and representations</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods.xml?tag_ins=%5bdatabase%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods.xml?tag_ins=%5bdatabase%5d"  rel="nofollow">http://www.biocatalogue.org/rest_methods.xml?tag_ins=%5bdatabase%5d</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods.json?tag_ins=%5bdatabase%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods.json?tag_ins=%5bdatabase%5d"  rel="nofollow">http://www.biocatalogue.org/rest_methods.json?tag_ins=%5bdatabase%5d</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> All the possible filters that can be applied to the <code>RestMethods</code> index</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods/filters.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods/filters.xml"  rel="nofollow">http://www.biocatalogue.org/rest_methods/filters.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/rest_methods/filters.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/rest_methods/filters.json"  rel="nofollow">http://www.biocatalogue.org/rest_methods/filters.json</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>Details of a <code>Service</code></strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Default view</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4.xml"  rel="nofollow">http://www.biocatalogue.org/services/4.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4.json"  rel="nofollow">http://www.biocatalogue.org/services/4.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Summary only</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4/summary.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4/summary.xml"  rel="nofollow">http://www.biocatalogue.org/services/4/summary.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4/summary.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4/summary.json"  rel="nofollow">http://www.biocatalogue.org/services/4/summary.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Monitoring info only</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4/monitoring.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4/monitoring.xml"  rel="nofollow">http://www.biocatalogue.org/services/4/monitoring.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4/monitoring.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4/monitoring.json"  rel="nofollow">http://www.biocatalogue.org/services/4/monitoring.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Annotations on the <code>Service</code> (not including the annotations on the other parts of the service, like the <code>ServiceDeployment</code>s, <code>SoapService</code>s, etc)</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4/annotations.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4/annotations.xml"  rel="nofollow">http://www.biocatalogue.org/services/4/annotations.xml</a> </div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/services/4/annotations.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4/annotations.json"  rel="nofollow">http://www.biocatalogue.org/services/4/annotations.json</a> </div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>Categories and Tags</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Top level service categories</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/categories.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/categories.xml"  rel="nofollow">http://www.biocatalogue.org/categories.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/categories.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/categories.json"  rel="nofollow">http://www.biocatalogue.org/categories.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> The <code>Services</code> that have a particular category (and all other categories narrower/below that category)</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/categories/5/services.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/categories/5/services.xml"  rel="nofollow">http://www.biocatalogue.org/categories/5/services.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/categories/5/services.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/categories/5/services.json"  rel="nofollow">http://www.biocatalogue.org/categories/5/services.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Get the top 10 tags</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/tags.xml?limit=10" class="urlextern" target="_blank" title="http://www.biocatalogue.org/tags.xml?limit=10"  rel="nofollow">http://www.biocatalogue.org/tags.xml?limit=10</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/tags.json?limit=10" class="urlextern" target="_blank" title="http://www.biocatalogue.org/tags.json?limit=10"  rel="nofollow">http://www.biocatalogue.org/tags.json?limit=10</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Get more information about a regular keyword tag</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/tags/soaplab.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/tags/soaplab.xml"  rel="nofollow">http://www.biocatalogue.org/tags/soaplab.xml</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/tags/soaplab.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/tags/soaplab.json"  rel="nofollow">http://www.biocatalogue.org/tags/soaplab.json</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Get more information about a controlled vocabulary term tag (currently only supported for the myGrid ontology)</div>
+<ul>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/tags/retrieving.xml?namespace=mygrid-domain-ontology" class="urlextern" target="_blank" title="http://www.biocatalogue.org/tags/retrieving.xml?namespace=mygrid-domain-ontology"  rel="nofollow">http://www.biocatalogue.org/tags/retrieving.xml?namespace=mygrid-domain-ontology</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.biocatalogue.org/tags/retrieving.json?namespace=mygrid-domain-ontology" class="urlextern" target="_blank" title="http://www.biocatalogue.org/tags/retrieving.json?namespace=mygrid-domain-ontology"  rel="nofollow">http://www.biocatalogue.org/tags/retrieving.json?namespace=mygrid-domain-ontology</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Quick Examples" [3600-9689] -->
+<h2 class="sectionedit4" id="key_principles">Key Principles</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <strong>Balance</strong> - between simplicity and utility. A number of different <a href="/wiki/public:api:use_cases" class="wikilink1" title="public:api:use_cases">use cases</a> for the <abbr title="Application Programming Interface">API</abbr> have been considered and an attempt has been made to balance simplicity and utility of the <abbr title="Application Programming Interface">API</abbr>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Consistency</strong> - in the URIs and outputs of the <abbr title="Application Programming Interface">API</abbr>. Consistent <span class="curid"><a href="/wiki/public:api#uris_linked_data_and_content_negotiation" class="wikilink1" title="public:api">URIs</a></span> and <span class="curid"><a href="/wiki/public:api#commonalities" class="wikilink1" title="public:api">patterns</a></span> are used throughout.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Discoverability</strong> - of related resources, next pages of results, and so on. Additional links to resources are added to outputs wherever possible and appropriate.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Manageability</strong> - of URIs, outputs and data schemas. We aim to provide a stable and manageable experience for <abbr title="Application Programming Interface">API</abbr> consumers. Breaking changes will be avoided as much as possible, but in the event where they are absolutely necessary they will be trialled and announced in the appropriate places. The XML outputs are fully schema driven so that changes to client code can be done in a manageable way.</div>
+</li>
+</ul>
+
+<p>
+
+<div class="box_important">
+<b>Note</b>: the JSON outputs are an <i>exception to the rule</i> for some of the above since JSON is geared more towards AJAX usage, where leaner and simpler data outputs are beneficial. See the <a href="#xml_vs_json_outputs" class="wikilink1">comparison</a> between the XML and JSON outputs for more info.
+</div>
+
+</p>
+
+</div>
+<!-- EDIT4 SECTION "Key Principles" [9690-11063] -->
+<h2 class="sectionedit5" id="data_model">Data Model</h2>
+<div class="level2">
+
+<p>
+The data model exposed by the <abbr title="Application Programming Interface">API</abbr> is shown below.
+</p>
+
+<p>
+
+<div class="box_important">
+<b>Key point</b>: a <code>Service</code> in the BioCatalogue is really a <i>container</i> for <code>ServiceDeployment</code>s and variants, where a variant is either a <code>SoapService</code> or <code>RestService</code>. 
+</div>
+
+</p>
+
+<p>
+<a href="/wiki/_detail/public:rest_api_data_model.png?id=public%3Aapi" class="media" title="public:rest_api_data_model.png"><img src="/wiki/_media/public:rest_api_data_model.png?w=800&amp;tok=e33d1d" class="mediacenter" title=" BioCatalogue REST API Data Model" alt=" BioCatalogue REST API Data Model" width="800" /></a>
+</p>
+
+<p>
+<strong>Key:</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> The orange boxes represent logical groups.</div>
+</li>
+<li class="level1"><div class="li"> The blue boxes represent actual entities exposed in the <abbr title="Application Programming Interface">API</abbr>.</div>
+</li>
+<li class="level1"><div class="li"> The purple boxes represent polymorphic references to entities and not actual entities.</div>
+<ul>
+<li class="level2"><div class="li"> For example, an <code>Annotation</code> has a <code>Source</code>, but no actual <code>Source</code> entity exists. This is just a reference to another entity type that can be the source of the annotation (see more information about Annotations, below).</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+<div class="box_important">
+<b>Note</b>: this is intended to give the high level view of the resources and relationships exposed by the API. It doesn't include ALL the individual data fields within each resource nor all possible relationships. The <a href="http://www.biocatalogue.org/2009/xml/rest/schema-v1.xsd" target="_blank">XML schema document</a> provides a more detailed data model (specific to the XML endpoints)
+</div>
+
+</p>
+
+</div>
+<!-- EDIT5 SECTION "Data Model" [11064-12379] -->
+<h3 class="sectionedit6" id="entities">Entities</h3>
+<div class="level3">
+
+<p>
+The table below details the various entities that make up this data model. It also specifies whether the <abbr title="Application Programming Interface">API</abbr> exposes them as <strong><em>resources</em></strong> or not, and whether a corresponding index/collection resource is available.
+</p>
+
+<p>
+A <strong><em>resource</em></strong> is defined as: something that has a <em>unique dereferenceable <abbr title="Uniform Resource Identifier">URI</abbr></em> that can be accessed to retrieve a representation of that thing, via the <abbr title="Application Programming Interface">API</abbr>.
+</p>
+<div class="table sectionedit7"><table class="inline">
+	<tr class="row0">
+		<th class="col0"> Entity </th><th class="col1"> Description </th><th class="col2"> Resources in <abbr title="Application Programming Interface">API</abbr>? </th><th class="col3"> Has Index Resource? </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> <code>Service</code> </td><td class="col1"> Main resource type in the system. Container for all things to do with a particular service registered in the BioCatalogue. This includes variants (<code>SoapService</code> and/or <code>RestService</code>), <code>ServiceDeployment</code>s, <code>ServiceTest</code>s and so on. </td><td class="col2"> YES </td><td class="col3"> YES (<code>Services</code>) </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> <code>ServiceDeployment</code> </td><td class="col1"> A particular running instance of the service that provides either the <code>SoapService</code> or <code>RestService</code>, and that is managed by a <code>ServiceProvider</code>. The data model allows for multiple <code>ServiceDeployment</code>s, akin to service <strong>mirrors</strong>, by multiple <code>ServiceProvider</code>s. </td><td class="col2"> YES </td><td class="col3"> NO </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> <code>SoapService</code> </td><td class="col1"> A SOAP <sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup> variant of a service. </td><td class="col2"> YES </td><td class="col3"> YES (<code>SoapServices</code>) </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> <code>SoapOperation</code> </td><td class="col1"> A SOAP operation for a particular <code>SoapService</code>. </td><td class="col2"> YES </td><td class="col3"> YES (<code>SoapOperations</code>) </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> <code>SoapInput</code> </td><td class="col1"> A SOAP input for a particular <code>SoapOperation</code>. </td><td class="col2"> YES </td><td class="col3"> NO </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> <code>SoapOutput</code> </td><td class="col1"> A SOAP output for a particular <code>SoapOperation</code>. </td><td class="col2"> YES </td><td class="col3"> NO </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> <code>RestService</code> </td><td class="col1"> A REST <sup><a href="#fn__5" id="fnt__5" class="fn_top">5)</a></sup> variant of a service. </td><td class="col2"> YES </td><td class="col3"> YES (<code>RestServices</code>) </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> <code>RestResource</code> </td><td class="col1"> A REST resource for a particular <code>RestService</code>. </td><td class="col2"> YES </td><td class="col3"> YES (<code>RestResources</code>) </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> <code>RestMethod</code> </td><td class="col1"> A REST resource for a particular <code>RestResource</code>. </td><td class="col2"> YES </td><td class="col3"> YES (<code>RestMethods</code>) </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> <code>RestParameter</code> </td><td class="col1"> A REST parameter for a particular <code>RestMethod</code>. </td><td class="col2"> YES </td><td class="col3"> NO </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> <code>RestRepresentation</code> </td><td class="col1"> A REST representation for a particular <code>RestMethod</code>. </td><td class="col2"> YES </td><td class="col3"> NO </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> <code>MonitoringStatus</code> </td><td class="col1"> Monitoring status information (to specify a pass, fail, etc. and with additional information). This can be at the level of a <code>TestResult</code>, a <code>ServiceTest</code> or on a whole <code>Service</code> (in which case it is an aggregation of the statuses of the different tests). </td><td class="col2"> NO </td><td class="col3"> - </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> <code>ServiceTest</code> </td><td class="col1"> A particular test configured for a <code>Service</code> in order to carry out monitoring of that <code>Service</code>. This abstracts out what the test actually does, thus allowing different types of monitoring tests to be handled in a consistent manner. </td><td class="col2"> YES </td><td class="col3"> NO </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> <code>UrlMonitor</code> </td><td class="col1"> A service test type that monitors a <abbr title="Uniform Resource Locator">URL</abbr>. Currently, service endpoints and WSDL locations are monitored using this particular test type. </td><td class="col2"> NO </td><td class="col3"> - </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> <code>TestScript</code> </td><td class="col1"> A service test type that executes a test script on a regular basis, to help determine the monitoring status of a <code>Service</code> </td><td class="col2"> NO </td><td class="col3"> - </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> <code>TestResult</code> </td><td class="col1"> A particular result of the execution of a <code>ServiceTest</code>. This provides a common results model that isn&#039;t dependant on the type of test carried out. </td><td class="col2"> YES </td><td class="col3"> YES (<code>TestResults</code>) </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0"> <code>Category</code> </td><td class="col1 leftalign"> An abstraction over “category” annotations, this is a particular service category from the service categories controlled vocabulary.  </td><td class="col2"> YES </td><td class="col3"> YES (<code>Categories</code>) </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0"> <code>Tag</code> </td><td class="col1"> An abstraction over “tag” annotations, that allows building of tag clouds and searching by tags. </td><td class="col2"> YES </td><td class="col3"> YES (<code>Tags</code>) </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0"> <code>ServiceProvider</code> </td><td class="col1"> A particular provider of <code>ServiceDeployment</code>s. </td><td class="col2"> YES </td><td class="col3"> YES (<code>ServiceProviders</code>) </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0"> <code>User</code> </td><td class="col1"> A registered user of the BioCatalogue, who can submit services, contribute annotations and so on. In the web interface, <code>User</code>s are referred to as <strong>Members</strong>. This is to distinguish between anonymous users and registered users. </td><td class="col2"> YES </td><td class="col3"> YES (<code>Users</code>) </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0"> <code>Registry</code> </td><td class="col1"> An external registry or portal that is used as a source of services and/or annotations. </td><td class="col2"> YES </td><td class="col3"> YES (<code>Registries</code>) </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0"> <code>Agent</code> </td><td class="col1"> An automated entity that can perform actions within the BioCatalogue, such as creating annotations and performing automated curation. </td><td class="col2"> YES </td><td class="col3"> YES(<code>Agents</code>) </td>
+	</tr>
+	<tr class="row23">
+		<td class="col0"> <code>AnnotationAttribute</code> </td><td class="col1"> A particular class/type/group of <code>Annotation</code>s. For example, “tag”, “description”, etc. This allows for an extensible data model for metadata. </td><td class="col2"> YES </td><td class="col3"> YES (<code>AnnotationAttributes</code>) </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0"> <code>Annotation</code> </td><td class="col1"> See the <span class="curid"><a href="/wiki/public:api#annotations" class="wikilink1" title="public:api">Annotations</a></span> section below. </td><td class="col2"> YES </td><td class="col3"> YES (<code>Annotations</code>) </td>
+	</tr>
+</table></div>
+<!-- EDIT7 TABLE [12785-16791] -->
+</div>
+<!-- EDIT6 SECTION "Entities" [12380-16792] -->
+<h3 class="sectionedit8" id="annotations">Annotations</h3>
+<div class="level3">
+
+<p>
+
+<div class="box_important">
+<b>Important:</b> the term "annotations" is used interchangeably on the BioCatalogue web interface and other places (like papers about the BioCatalogue) to mean:
+<ul>
+<li>A. metadata in general within the BioCatalogue.</li>
+<li>B. the <code>Annotation</code> resource, which is something much more specific: a piece of additional metadata about something, usually provided by an external party, that is added on top of the existing data/metadata model.</li>
+</ul>
+
+<b>The API specifically deals with B.</b>
+</div>
+
+</p>
+
+<p>
+<code>Annotation</code>s are the extensible mechanism by which additional metadata is added about services (or their constituents) in the BioCatalogue, to incrementally document services at various levels of granularities.
+</p>
+
+<p>
+Things like…
+</p>
+<ul>
+<li class="level1"><div class="li"> Tags</div>
+</li>
+<li class="level1"><div class="li"> Categories</div>
+</li>
+<li class="level1"><div class="li"> Additional descriptions</div>
+</li>
+<li class="level1"><div class="li"> Documentation URLs</div>
+</li>
+<li class="level1"><div class="li"> Example data</div>
+</li>
+</ul>
+
+<p>
+… and so on, are stored and exposed using the generic <code>Annotation</code>s mechanism.
+</p>
+
+<p>
+The common principle we attempt to follow: metadata from service description documents and from service monitoring are part of the core model, but all other metadata is stored and exposed using <code>Annotation</code>s.
+</p>
+
+<p>
+Each resource has it&#039;s own set of annotations. This allows different levels granularity. E.g.: &#039;tag&#039; annotations on a <code>Service</code> apply to the whole service whereas &#039;tag&#039; annotations on a <code>SoapOperation</code> are specific to that SOAP operation. See the <span class="curid"><a href="/wiki/public:api#annotation_fields_breakdown" class="wikilink1" title="public:api">breakdown</a></span> of what main annotation fields are on what resource types.
+</p>
+
+<p>
+
+<div class="box_note">
+<b>tag</b> and <b>category</b> <code>Annotation</code>s are also treated as first class resources in the API (<code>Tag</code> and <code>Category</code> resources respectively), in order to provide a richer API for these.
+</div>
+
+</p>
+
+<p>
+At a conceptual level, an <code>Annotation</code> consists of:
+</p>
+<ul>
+<li class="level1"><div class="li"> a link to the thing that the <code>Annotation</code> is about - the <code>annotatable</code>.</div>
+</li>
+<li class="level2"><div class="li"> a link to the source of the <code>Annotation</code> - the <code>source</code>.</div>
+</li>
+<li class="level2"><div class="li"> a link to the <code>annotationAttribute</code> which specifies what kind of <code>Annotation</code> this is (i.e.: what field).</div>
+</li>
+<li class="level2"><div class="li"> the <code>value</code> of the annotation (some textual content with an optional reference to an entity that is the actual value).</div>
+</li>
+<li class="level2"><div class="li"> the latest <code>version</code> number of the <code>Annotation</code>.</div>
+</li>
+<li class="level2"><div class="li"> timestamps for when the <code>Annotation</code> was <code>created</code> and last <code>modified</code>.</div>
+</li>
+</ul>
+
+<p>
+The following resource types can be the <code>source</code> of <code>Annotation</code>s:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>User</code></div>
+</li>
+<li class="level1"><div class="li"> <code>ServiceProvider</code></div>
+</li>
+<li class="level1"><div class="li"> <code>Registry</code></div>
+</li>
+<li class="level1"><div class="li"> <code>Agent</code></div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="annotation_fields_breakdown">Annotation Fields Breakdown</h4>
+<div class="level4">
+
+<p>
+Below are the main annotation fields (i.e.: annotation attributes) for all the possible <code>annotatable</code> resource types within the BioCatalogue:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>Service</code>:</div>
+<ul>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> category</div>
+</li>
+<li class="level2"><div class="li"> display_name</div>
+</li>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> rating.<em>xx</em></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <code>ServiceDeployment</code>:</div>
+<ul>
+<li class="level2"><div class="li"> cost</div>
+</li>
+<li class="level2"><div class="li"> usage_condition</div>
+</li>
+<li class="level2"><div class="li"> contact</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <code>SoapService</code>, <code>RestService</code>:</div>
+<ul>
+<li class="level2"><div class="li"> documentation_url</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> license</div>
+</li>
+<li class="level2"><div class="li"> publication</div>
+</li>
+<li class="level2"><div class="li"> citation</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <code>SoapOperation</code>:</div>
+<ul>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <code>SoapInput</code>:</div>
+<ul>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> format</div>
+</li>
+<li class="level2"><div class="li"> example_data</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <code>SoapOutput</code>:</div>
+<ul>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> format</div>
+</li>
+<li class="level2"><div class="li"> example_data</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <code>ServiceProvider</code>:</div>
+<ul>
+<li class="level2"><div class="li"> display_name</div>
+</li>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> website</div>
+</li>
+<li class="level2"><div class="li"> contact </div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT8 SECTION "Annotations" [16793-20242] -->
+<h2 class="sectionedit9" id="uris_linked_data_and_content_negotiation">URIs, Linked Data and Content Negotiation</h2>
+<div class="level2">
+
+<p>
+The BioCatalogue maintains a consistent <abbr title="Uniform Resource Identifier">URI</abbr> scheme and currently the <abbr title="Application Programming Interface">API</abbr> (XML, JSON, ATOM outputs) follows Linked Data <sup><a href="#fn__6" id="fnt__6" class="fn_top">6)</a></sup> principles <sup><a href="#fn__7" id="fnt__7" class="fn_top">7)</a></sup>. We use the <strong><em>extensions</em></strong> way of defining the URIs for the different representations (see below for more info).
+</p>
+
+<p>
+Content Negotiation <sup><a href="#fn__8" id="fnt__8" class="fn_top">8)</a></sup> is the recommended way to access the outputs. I.e.: by using the HTTP <code>Accept</code> header and not calling the ”.xml” etc URLs directly.
+</p>
+
+<p>
+This means that, for example:
+</p>
+
+<p>
+The following is a <strong><em>non-information resource <abbr title="Uniform Resource Identifier">URI</abbr></em></strong> for the services index:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.biocatalogue.org/services" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services"  rel="nofollow">http://www.biocatalogue.org/services</a></div>
+</li>
+</ul>
+
+<p>
+This <abbr title="Uniform Resource Identifier">URI</abbr> is considered to be the <em>unique dereferenceable <abbr title="Uniform Resource Identifier">URI</abbr></em> (aka identifier) for that particular resource.
+</p>
+
+<p>
+Which then has the following representations:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.biocatalogue.org/services.html" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.html"  rel="nofollow">http://www.biocatalogue.org/services.html</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.biocatalogue.org/services.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.xml"  rel="nofollow">http://www.biocatalogue.org/services.xml</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.biocatalogue.org/services.atom" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.atom"  rel="nofollow">http://www.biocatalogue.org/services.atom</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.biocatalogue.org/services.json" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.json"  rel="nofollow">http://www.biocatalogue.org/services.json</a></div>
+</li>
+</ul>
+
+<p>
+All data outputs from the <abbr title="Application Programming Interface">API</abbr> only ever contain identifiers (that are the non-information resource URIs). Content negotiation can then be used to access specific representations of these identifiers (via an HTTP 303 redirect).
+</p>
+
+<p>
+The figure below illustrates another example of how this works, showing the relevant 303 redirect:
+</p>
+
+<p>
+<a href="/wiki/_detail/public:rest_api_linked_data_example.png?id=public%3Aapi" class="media" title="public:rest_api_linked_data_example.png"><img src="/wiki/_media/public:rest_api_linked_data_example.png?w=800&amp;tok=c4dca7" class="mediacenter" title=" BioCatalogue REST API Linked Data Example" alt=" BioCatalogue REST API Linked Data Example" width="800" /></a>
+</p>
+
+<p>
+
+<div class="box_important">
+<b>Note</b>: technically, accessing the non-information resource URI in a browser will still give back the HTML without performing a 303, since the web interface is not yet Linked Data "friendly".
+</div>
+
+</p>
+
+</div>
+<!-- EDIT9 SECTION "URIs, Linked Data and Content Negotiation" [20243-22012] -->
+<h2 class="sectionedit10" id="table_of_endpoints">Table of Endpoints</h2>
+<div class="level2">
+
+<p>
+The table below enumerates all the main endpoints that can be used to access resources via the <abbr title="Application Programming Interface">API</abbr>.
+</p>
+
+<p>
+Note:
+</p>
+<ul>
+<li class="level1"><div class="li"> Template parameters are shown in curly brackets, e.g.: {id} needs to be replaced with a value, in order to specify a specific resource.</div>
+</li>
+<li class="level1"><div class="li"> Not all endpoints have an <abbr title="HyperText Markup Language">HTML</abbr> output representation, but all will have at least XML.</div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/public:api:endpoints" class="wikilink1" title="public:api:endpoints">Detailed docs</a> for each endpoint are available and each entry in the table has a corresponding link to these docs.</div>
+</li>
+</ul>
+<div class="table sectionedit11"><table class="inline">
+	<tr class="row0">
+		<th class="col0"> Endpoint </th><th class="col1"> Formats </th><th class="col2"> Description </th><th class="col3"> Docs </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> / </td><td class="col1"> XML, JSON </td><td class="col2"> The root resource that provides information on the <abbr title="Application Programming Interface">API</abbr>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> /search?q={query} </td><td class="col1"> XML, JSON </td><td class="col2"> Keyword search to retrieve relevant <code>Service</code>, <code>SoapOperation</code>, <code>ServiceProvider</code>, <code>User</code> and <code>Registry</code> resources. </td><td class="col3"> <a href="/wiki/public:api:endpoints?q={query}#get_search" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> /lookup </td><td class="col1"> N/A <sup><a href="#fn__9" id="fnt__9" class="fn_top">9)</a></sup> </td><td class="col2"> A special <abbr title="Application Programming Interface">API</abbr> endpoint to find one particular resource based on some criteria. E.g.: this gets one specific <code>SoapOperation</code> - <a href="http://www.biocatalogue.org/lookup?wsdl_location=http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl&amp;operation_name=streamContent" class="urlextern" target="_blank" title="http://www.biocatalogue.org/lookup?wsdl_location=http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl&amp;operation_name=streamContent"  rel="nofollow">http://www.biocatalogue.org/lookup?wsdl_location=http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl&amp;operation_name=streamContent</a> </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_lookup" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> /services </td><td class="col1"> XML, JSON, ATOM </td><td class="col2"> <code>Services</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_services" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> /services/filters </td><td class="col1"> XML, JSON </td><td class="col2"> Filters that can be applied to the <code>Services</code> index. These include filters for categories, tags, countries, submitters and service providers. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_services_filters" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> /services/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>Service</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_services_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> /services/{id}/summary </td><td class="col1"> XML, JSON </td><td class="col2"> A metadata summary of a specific <code>Service</code>. </td><td class="col3 leftalign">  </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> /services/{id}/deployments </td><td class="col1"> XML, JSON </td><td class="col2"> <code>ServiceDeployment</code>s for a specific <code>Service</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_services_id_deployments" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> /services/{id}/variants </td><td class="col1"> XML, JSON </td><td class="col2"> Variants (i.e.: SOAP and/or REST) for a specific <code>Service</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_services_id_variants" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> /services/{id}/monitoring </td><td class="col1"> XML, JSON </td><td class="col2"> Monitoring details for a specific <code>Service</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_services_id_monitoring" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> /services/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>Service</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_services_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> /service_deployments/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>ServiceDeployment</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_deployments_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> /service_deployments/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>ServiceDeployment</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_deployments_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> /soap_services </td><td class="col1"> XML, JSON </td><td class="col2"> <code>SoapServices</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_services" class="wikilink1" title="public:api:endpoints">GET</a>, <a href="/wiki/public:api:endpoints#post_soap_services" class="wikilink1" title="public:api:endpoints">POST</a> </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> /soap_services/wsdl_location </td><td class="col1"> XML, JSON </td><td class="col2"> A list of all the <code>SoapService</code> WSDL locations. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_services_wsdl_location" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> /soap_services/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>SoapService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_services_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0"> /soap_services/{id}/deployments </td><td class="col1"> XML, JSON </td><td class="col2"> <code>ServiceDeployment</code>s running a specific <code>SoapService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_services_id_deployments" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0"> /soap_services/{id}/operations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>SoapOperation</code>s on a specific <code>SoapService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_services_id_operations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0"> /soap_services/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>SoapService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_services_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0"> /soap_operations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>SoapOperations</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_operations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0"> /soap_operations/filters </td><td class="col1"> XML, JSON </td><td class="col2"> Filters that can be applied to the <code>SoapOperations</code> index. These include filters for tags on inputs and outputs. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_operations_filters" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0"> /soap_operations/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>SoapOperation</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_operations_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row23">
+		<td class="col0"> /soap_operations/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2 leftalign"> <code>Annotation</code>s on a specific  <code>SoapOperation</code>.  </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_operations_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0"> /soap_operations/{id}/inputs </td><td class="col1"> XML, JSON </td><td class="col2 leftalign"> <code>SoapInput</code>s for a particular  <code>SoapOperation</code>.  </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_operations_id_inputs" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row25">
+		<td class="col0"> /soap_operations/{id}/outputs </td><td class="col1"> XML, JSON </td><td class="col2 leftalign"> <code>SoapOutput</code>s for a particular  <code>SoapOperation</code>.  </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_operations_id_outputs" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row26">
+		<td class="col0"> /soap_inputs/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>SoapInput</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_inputs_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row27">
+		<td class="col0"> /soap_inputs/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>SoapInput</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_inputs_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row28">
+		<td class="col0"> /soap_outputs/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>SoapOutput</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_outputs_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row29">
+		<td class="col0"> /soap_outputs/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>SoapOutput</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_soap_outputs_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row30">
+		<td class="col0"> /rest_services </td><td class="col1"> XML, JSON </td><td class="col2"> <code>RestServices</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_services" class="wikilink1" title="public:api:endpoints">GET</a>, <a href="/wiki/public:api:endpoints#post_rest_services" class="wikilink1" title="public:api:endpoints"> POST</a> </td>
+	</tr>
+	<tr class="row31">
+		<td class="col0"> /rest_services/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>RestService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_services_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row32">
+		<td class="col0"> /rest_services/{id}/deployments </td><td class="col1"> XML, JSON </td><td class="col2"> <code>ServiceDeployment</code>s running a specific <code>RestService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_services_id_deployments" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row33">
+		<td class="col0"> /rest_services/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>RestService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_services_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row34">
+		<td class="col0"> /rest_services/{id}/resources </td><td class="col1"> XML, JSON </td><td class="col2"> <code>RestResources</code>s on a specific <code>RestService</code> variant. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_services_id_resources" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row35">
+		<td class="col0"> /rest_services/{id}/methods </td><td class="col1"> XML, JSON </td><td class="col2"> <code>RestMethods</code>s associated with this <code>RestService</code> variant.  <strong>NB</strong>: This is a convenience endpoint. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_services_id_resources" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row36">
+		<td class="col0"> /rest_resources </td><td class="col1"> XML, JSON </td><td class="col2"> <code>RestResources</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_resources" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row37">
+		<td class="col0"> /rest_resources/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>RestResource</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_resources_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row38">
+		<td class="col0"> /rest_resources/{id}/methods </td><td class="col1"> XML, JSON </td><td class="col2"> <code>RestMethod</code>s on a specific <code>RestResource</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_resources_id_methods" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row39">
+		<td class="col0"> /rest_resources/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>RestResource</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_resources_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row40">
+		<td class="col0"> /rest_methods </td><td class="col1"> XML, JSON </td><td class="col2"> <code>RestMethods</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_methods" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row41">
+		<td class="col0"> /rest_methods/filters </td><td class="col1"> XML, JSON </td><td class="col2"> Filters that can be applied to the <code>RestMethods</code> index. These include filters for tags on inputs and outputs. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_methods_filters" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row42">
+		<td class="col0"> /rest_methods/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>RestMethod</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_methods_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row43">
+		<td class="col0"> /rest_methods/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2 leftalign"> <code>Annotation</code>s on a specific  <code>RestMethod</code>.  </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_methods_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row44">
+		<td class="col0"> /rest_methods/{id}/inputs </td><td class="col1"> XML, JSON </td><td class="col2 leftalign"> <code>RestParameter</code>s and <code>RestRepresentation</code>s that act as inputs on a specific  <code>RestMethod</code>.  </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_methods_id_inputs" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row45">
+		<td class="col0"> /rest_methods/{id}/outputs </td><td class="col1"> XML, JSON </td><td class="col2 leftalign"> <code>RestParameter</code>s and <code>RestRepresentation</code>s that act as outputs on a specific  <code>RestMethod</code>.  </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_methods_id_outputs" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row46">
+		<td class="col0"> /rest_parameters/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>RestParameter</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_parameters_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row47">
+		<td class="col0"> /rest_parameters/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>RestParameter</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_parameters_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row48">
+		<td class="col0"> /rest_representations/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>RestRepresentation</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_representations_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row49">
+		<td class="col0"> /rest_representations/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>RestRepresentation</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_rest_representations_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row50">
+		<td class="col0"> /service_tests/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>ServiceTest</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_tests_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row51">
+		<td class="col0"> /service_tests/{id}/results </td><td class="col1"> XML, JSON </td><td class="col2"> Monitoring <code>TestResult</code>s for a specific <code>ServiceTest</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_tests_id_results" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row52">
+		<td class="col0"> /test_results </td><td class="col1"> XML, JSON </td><td class="col2"> <code>TestResults</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_test_results" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row53">
+		<td class="col0"> /test_results/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific monitoring <code>TestResult</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_test_results_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row54">
+		<td class="col0"> /categories </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Categories</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_categories" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row55">
+		<td class="col0"> /categories/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>Category</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_categories_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row56">
+		<td class="col0"> /categories/{id}/services </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Service</code>s for a specific <code>Category</code>. I.e.: the <code>Service</code>s that have been assigned a specified <code>Category</code> </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_categories_id_services" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row57">
+		<td class="col0"> /tags </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Tags</code> index/collection resource. Can be used to build tag clouds / lists. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_tags" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row58">
+		<td class="col0"> /tags/{tagname} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>Tag</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_tags_tagname" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row59">
+		<td class="col0"> /tags/{tagname}?namespace={namespace} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>Tag</code> that comes from a controlled vocabulary (currently only supports tags from the myGrid ontology). </td><td class="col3"> <a href="/wiki/public:api:endpoints?namespace={namespace}#get_tags_tagname" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row60">
+		<td class="col0"> /service_providers </td><td class="col1"> XML, JSON </td><td class="col2"> <code>ServiceProviders</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_providers" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row61">
+		<td class="col0"> /service_providers/filters </td><td class="col1"> XML, JSON </td><td class="col2"> Filters that can be applied to the <code>ServiceProviders</code> index. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_providers_filters" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row62">
+		<td class="col0"> /service_providers/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>ServiceProvider</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_providers_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row63">
+		<td class="col0"> /service_providers/{id}/services </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Service</code>s that are provided by a specific <code>ServiceProvider</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_providers_id_services" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row64">
+		<td class="col0"> /service_providers/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s on a specific <code>ServiceProvider</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_providers_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row65">
+		<td class="col0"> /service_providers/{id}/annotations_by </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s by a specific <code>ServiceProvider</code>. I.e.: the <code>Annotation</code>s that have the <code>ServiceProvider</code> as the “source”. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_service_providers_id_annotations_by" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row66">
+		<td class="col0"> /users </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Users</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_users" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row67">
+		<td class="col0"> /users/filters </td><td class="col1"> XML, JSON </td><td class="col2"> Filters that can be applied to the <code>Users</code> index. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_users_filters" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row68">
+		<td class="col0"> /users/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>User</code> (aka “member”). </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_users_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row69">
+		<td class="col0"> /users/{id}/services </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Service</code>s submitted by a specific <code>User</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_users_id_services" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row70">
+		<td class="col0"> /users/{id}/annotations_by </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s by a specific <code>User</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_users_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row71">
+		<td class="col0"> /registries </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Registries</code> index/collection resource (other registries that the BioCatalogue sources services and annotations from). </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_registries" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row72">
+		<td class="col0"> /registries/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>Registry</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_registries_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row73">
+		<td class="col0"> /registries/{id}/services </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Service</code>s sourced from a specific <code>Registry</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_registries_id_services" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row74">
+		<td class="col0"> /registries/{id}/annotations_by </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s sourced from a specific <code>Registry</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_registries_id_annotations_by" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row75">
+		<td class="col0"> /agents </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Agents</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_agents" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row76">
+		<td class="col0"> /agents/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>Agent</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_agents_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row77">
+		<td class="col0"> /agents/{id}/annotations_by </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s by a specific <code>Agent</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_agents_id_annotations_by" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row78">
+		<td class="col0"> /annotation_attributes </td><td class="col1"> XML, JSON </td><td class="col2"> <code>AnnotationAttributes</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_annotation_attributes" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row79">
+		<td class="col0"> /annotation_attributes/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>AnnotationAttribute</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_annotation_attributes_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row80">
+		<td class="col0"> /annotation_attributes/{id}/annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotation</code>s that have the specified <code>AnnotationAttribute</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_annotation_attributes_id_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row81">
+		<td class="col0"> /annotations </td><td class="col1"> XML, JSON </td><td class="col2"> <code>Annotations</code> index/collection resource. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_annotations" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row82">
+		<td class="col0"> /annotations/bulk_create </td><td class="col1"> JSON </td><td class="col2"> Submission of multiple <code>Annotation</code> resources. </td><td class="col3"> <a href="/wiki/public:api:endpoint#post_annotations_bulk_create" class="wikilink2" title="public:api:endpoint" rel="nofollow">POST</a> </td>
+	</tr>
+	<tr class="row83">
+		<td class="col0"> /annotations/filters </td><td class="col1"> XML, JSON </td><td class="col2"> Filters that can be applied to the <code>Annotations</code> index. These include filters for the sources and attributes. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_annotations_filters" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+	<tr class="row84">
+		<td class="col0"> /annotations/{id} </td><td class="col1"> XML, JSON </td><td class="col2"> Details about a specific <code>Annotation</code>. </td><td class="col3"> <a href="/wiki/public:api:endpoints#get_annotations_id" class="wikilink1" title="public:api:endpoints">GET</a> </td>
+	</tr>
+</table></div>
+<!-- EDIT11 TABLE [22526-36181] -->
+</div>
+<!-- EDIT10 SECTION "Table of Endpoints" [22013-36182] -->
+<h2 class="sectionedit12" id="xml_vs_json_outputs">XML vs JSON Outputs</h2>
+<div class="level2">
+
+<p>
+
+<div class="box_important">
+<b>Note</b>: JSON outputs are only available for <code>Annotations</code> and <code>AnnotationAttributes</code> at the moment. See the <a href="http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage" class="wikilink1">API coverage page</a> for more information.
+</div>
+
+</p>
+<div class="table sectionedit13"><table class="inline">
+	<tr class="row0">
+		<th class="col0"> XML </th><th class="col1"> JSON </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> More heavyweight </td><td class="col1"> More lightweight </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Verbose markup-based outputs </td><td class="col1"> Leaner hash-like outputs </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> All outputs are defined in a schema (<a href="http://www.biocatalogue.org/2009/xml/rest/schema-v1.xsd" class="urlextern" target="_blank" title="http://www.biocatalogue.org/2009/xml/rest/schema-v1.xsd"  rel="nofollow">link</a>) </td><td class="col1"> No official schema for outputs </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> More descriptive outputs </td><td class="col1"> Minimum required outputs </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Collection resources have extra information about the results (like parameters, statistics and related links) </td><td class="col1"> Collection resources only have the results </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Contains links to additional “related” resources as well as the associated resources </td><td class="col1"> Links to the only the essential associated resources </td>
+	</tr>
+</table></div>
+<!-- EDIT13 TABLE [36540-37153] -->
+</div>
+<!-- EDIT12 SECTION "XML vs JSON Outputs" [36183-37153] -->
+<h2 class="sectionedit14" id="commonalities">Commonalities</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT14 SECTION "Commonalities" [37154-37181] -->
+<h3 class="sectionedit15" id="index_resources_xml_structure">Index Resources XML Structure</h3>
+<div class="level3">
+
+<p>
+The XML output for all index/collection resources have the following structure:
+</p>
+<pre class="code xml"><span class="sc3"><span class="re1">&lt;resource<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/resource<span class="re2">&gt;</span></span></span></pre>
+
+<p>
+This allows for additional information to be present, to aid consistency and manageability of the outputs, as well discoverability of further associated resources.
+</p>
+
+</div>
+<!-- EDIT15 SECTION "Index Resources XML Structure" [37182-37623] -->
+<h3 class="sectionedit16" id="index_resources_json_structure">Index Resources JSON Structure</h3>
+<div class="level3">
+
+<p>
+The JSON output for all index/collection resources have the following structure:
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">'resource'</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">'per_page'</span> <span class="sy0">:</span> ... <span class="sy0">,</span>
+    <span class="st0">'current_page'</span> <span class="sy0">:</span> ... <span class="sy0">,</span>
+    <span class="st0">'pages'</span> <span class="sy0">:</span> ... <span class="sy0">,</span>
+    <span class="st0">'total'</span> <span class="sy0">:</span> ... <span class="sy0">,</span>
+    <span class="st0">'search_query'</span> <span class="sy0">:</span> ... <span class="sy0">,</span>
+    <span class="st0">'results'</span> <span class="sy0">:</span> <span class="br0">&#91;</span> 
+      <span class="br0">&#123;</span>
+        <span class="st0">'resource_property_x'</span> <span class="sy0">:</span> ...<span class="sy0">,</span>
+        <span class="st0">'resource_property_y'</span> <span class="sy0">:</span> ...<span class="sy0">,</span>
+        <span class="st0">'resource_property_z'</span> <span class="sy0">:</span> ...<span class="sy0">,</span>
+        ...
+      <span class="br0">&#125;</span><span class="sy0">,</span>
+      ...
+    <span class="br0">&#93;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+This allows for key information to be present, to aid consistency and manageability of the outputs.
+</p>
+
+<p>
+These index/collection resources will contain the following properties:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>per_page</code> - the number of result items to show per page..</div>
+</li>
+<li class="level1"><div class="li"> <code>current_page</code> - the current page being viewed.</div>
+</li>
+<li class="level1"><div class="li"> <code>pages</code> - the total number of pages of results.</div>
+</li>
+<li class="level1"><div class="li"> <code>total</code> - the total number of items of that resource type found for that particular resource call.</div>
+</li>
+<li class="level1"><div class="li"> <code>search_query</code> - the search query applied where applicable.</div>
+</li>
+<li class="level1"><div class="li"> <code>results</code> - the list of result items found for that particular resource call.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT16 SECTION "Index Resources JSON Structure" [37624-38694] -->
+<h3 class="sectionedit17" id="related_section">&lt;related&gt; Section</h3>
+<div class="level3">
+
+<p>
+The majority of the XML outputs have a <code>&lt;related&gt;</code> section with links to other associated resources.
+</p>
+
+<p>
+In the case of index/collection resources (like /services) there will be a <code>&lt;related&gt;</code> section for associated links/resources to the index/collection, and usually there will also be individual <code>&lt;related&gt;</code> sections for the resources mentioned in the <code>&lt;results&gt;</code>. 
+</p>
+
+</div>
+<!-- EDIT17 SECTION "<related> Section" [38695-39098] -->
+<h3 class="sectionedit18" id="statistics_section_in_index_resources">&lt;statistics&gt; Section in Index Resources</h3>
+<div class="level3">
+
+<p>
+The <code>&lt;statistics&gt;</code> section within index/collection resources will usually contain at least the following:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>&lt;pages&gt;</code> - the total number of pages of results.</div>
+</li>
+<li class="level1"><div class="li"> <code>&lt;results&gt;</code> - the total number of result items found for that particular resource call.</div>
+</li>
+<li class="level1"><div class="li"> <code>&lt;total&gt;</code> - the total number of items of that resource type available in the system. Note that this is only shown for index/collection resources that are about a single resource type (e.g.: /services but NOT /search). </div>
+</li>
+</ul>
+
+<p>
+This allows you to get information like “1585 out of 1628 services are SOAP based services” from a filtered /services index.
+</p>
+
+</div>
+<!-- EDIT18 SECTION "<statistics> Section in Index Resources" [39099-39761] -->
+<h3 class="sectionedit19" id="reuse_index_resources_for_sub-collections">Reuse Index Resources for Sub-Collections</h3>
+<div class="level3">
+
+<p>
+Whenever possible, sub-collections on a resource take you to a filtered index/collection resource.
+</p>
+
+<p>
+For example: 
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/services/1928/annotations.xml" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/1928/annotations.xml"  rel="nofollow">http://www.biocatalogue.org/services/1928/annotations.xml</a> (the <code>Annotation</code>s on the <code>Service</code> with ID 1928) 
+</p>
+
+<p>
+… will redirect you to <a href="http://www.biocatalogue.org/annotations.xml?as=%5b1928%5d" class="urlextern" target="_blank" title="http://www.biocatalogue.org/annotations.xml?as=%5b1928%5d"  rel="nofollow">http://www.biocatalogue.org/annotations.xml?as=%5b1928%5d</a>
+</p>
+
+<p>
+This means that client code only needs to be able to parse the index resource and be aware of filtering, in order to handle the majority of sub-collections.
+</p>
+
+</div>
+<!-- EDIT19 SECTION "Reuse Index Resources for Sub-Collections" [39762-40286] -->
+<h3 class="sectionedit20" id="urlkey_and_urlvalue_attributes">&#039;urlKey&#039; and &#039;urlValue&#039; Attributes</h3>
+<div class="level3">
+
+<p>
+In places, you will see the presence of <code>urlKey</code> and <code>urlValue</code> attributes. These specify what <abbr title="Uniform Resource Locator">URL</abbr> query parameters can be used (or have been used, in the case of <code>&lt;parameters&gt;</code>) on the resource that the output is about.
+</p>
+
+<p>
+Note that for <span class="curid"><a href="/wiki/public:api#filtering" class="wikilink1" title="public:api">filtering</a></span>, <code>urlValue</code> should be used in a different way (more information about this below).
+</p>
+
+</div>
+<!-- EDIT20 SECTION "'urlKey' and 'urlValue' Attributes" [40287-40684] -->
+<h3 class="sectionedit21" id="pagination">Pagination</h3>
+<div class="level3">
+
+<p>
+All index/collection resources are <strong><em>paged</em></strong> by default, meaning that the whole result set is split into pages of a certain size and only one page is returned at a time. Subsequent pages can then be accessed by new requests. 
+</p>
+
+<p>
+In order to assist with pagination, the XML outputs provide:
+</p>
+<ul>
+<li class="level1"><div class="li"> Current <code>&lt;page&gt;</code> and <code>&lt;pageSize&gt;</code> values, within the <code>&lt;parameters&gt;</code> section (together with what <code>urlKey</code> to use for the query parameters).</div>
+</li>
+<li class="level1"><div class="li"> <code>&lt;pages&gt;</code> value, within the <code>&lt;statistics&gt;</code> section.</div>
+</li>
+<li class="level1"><div class="li"> <code>&lt;previous&gt;</code> and <code>&lt;next&gt;</code> links (where applicable), within the <code>&lt;related&gt;</code> section.</div>
+</li>
+</ul>
+
+<p>
+In JSON, the following elements are available:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>per_page</code></div>
+</li>
+<li class="level1"><div class="li"> <code>current_page</code></div>
+</li>
+<li class="level1"><div class="li"> <code>pages</code></div>
+</li>
+</ul>
+
+<p>
+The relevant <abbr title="Uniform Resource Locator">URL</abbr> query parameters are:
+</p>
+<div class="table sectionedit22"><table class="inline">
+	<tr class="row0">
+		<th class="col0"> Parameter Name </th><th class="col1"> Description </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> <code>page</code> </td><td class="col1"> The page number required </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> <code>per_page</code> </td><td class="col1"> The  page size to output (number of items per page). Default maximum page size is: 50 </td>
+	</tr>
+</table></div>
+<!-- EDIT22 TABLE [41445-41622] -->
+<p>
+So for example, the following <abbr title="Uniform Resource Locator">URL</abbr> gets the 5th page of the <code>Services</code> index and asks for 20 items per page:
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/services.xml?page=5&amp;per_page=20" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.xml?page=5&amp;per_page=20"  rel="nofollow">http://www.biocatalogue.org/services.xml?page=5&amp;per_page=20</a>
+<a href="http://www.biocatalogue.org/services.json?page=5&amp;per_page=20" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.json?page=5&amp;per_page=20"  rel="nofollow">http://www.biocatalogue.org/services.json?page=5&amp;per_page=20</a>
+</p>
+
+</div>
+<!-- EDIT21 SECTION "Pagination" [40685-41856] -->
+<h3 class="sectionedit23" id="sorting">Sorting</h3>
+<div class="level3">
+
+<p>
+Most of the index/collection resources allow for sorting of the results.
+</p>
+<div class="table sectionedit24"><table class="inline">
+	<tr class="row0">
+		<th class="col0"> Parameter Name </th><th class="col1"> Description </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> <code>sort_by</code> </td><td class="col1"> The criteria by which to sort </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> <code>sort_order</code> </td><td class="col1"> The order in which to perform the search (&#039;asc&#039; or &#039;desc&#039;) </td>
+	</tr>
+</table></div>
+<!-- EDIT24 TABLE [41950-42110] -->
+</div>
+<!-- EDIT23 SECTION "Sorting" [41857-42111] -->
+<h3 class="sectionedit25" id="include_parameter">&#039;include&#039; Parameter</h3>
+<div class="level3">
+
+<p>
+The <code>include</code> <abbr title="Uniform Resource Locator">URL</abbr> query parameter can be used to include certain sub-sections of data, that are not normally shown, within the outputs.
+</p>
+
+<p>
+This works in two different ways depending on the type of resource:
+</p>
+<ol>
+<li class="level1"><div class="li"> For index/collection resources, <code>include</code> acts on the resources returned within the <code>&lt;results&gt;</code> section. </div>
+<ul>
+<li class="level2"><div class="li"> For example, <a href="http://www.biocatalogue.org/services.xml?include=summary" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services.xml?include=summary"  rel="nofollow">http://www.biocatalogue.org/services.xml?include=summary</a> would give you back the first page of the <code>Services</code> index with the <code>&lt;summary&gt;</code> sections included for each <code>&lt;service&gt;</code> within <code>&lt;results&gt;</code>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> For single resources, <code>include</code> just includes the specified sub-section(s). </div>
+<ul>
+<li class="level2"><div class="li"> For example, <a href="http://www.biocatalogue.org/services/4.xml?include=summary" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4.xml?include=summary"  rel="nofollow">http://www.biocatalogue.org/services/4.xml?include=summary</a> would give the <code>Service</code> resource with it&#039;s <code>&lt;summary&gt;</code> sub-section also included.</div>
+</li>
+</ul>
+</li>
+</ol>
+
+<p>
+To include multiple sub-sections, separate out the names with commas. E.g.:
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/services/4.xml?include=summary,monitoring" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4.xml?include=summary,monitoring"  rel="nofollow">http://www.biocatalogue.org/services/4.xml?include=summary,monitoring</a>
+</p>
+
+<p>
+To include <strong>all</strong> possible sub-sections, use <code>include=all</code>. E.g.:
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/services/4.xml?include=all" class="urlextern" target="_blank" title="http://www.biocatalogue.org/services/4.xml?include=all"  rel="nofollow">http://www.biocatalogue.org/services/4.xml?include=all</a>
+</p>
+
+</div>
+<!-- EDIT25 SECTION "'include' Parameter" [42112-43208] -->
+<h3 class="sectionedit26" id="filtering">Filtering</h3>
+<div class="level3">
+
+<p>
+The structure of Filters (i.e.: the <code>&lt;filters&gt;</code> top level resource and <code>&lt;filters&gt;</code> in <code>&lt;parameters&gt;</code> have the following structure:
+</p>
+<pre class="code xml"><span class="sc3"><span class="re1">&lt;filters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;group<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;type<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;filter<span class="re2">&gt;</span></span></span>...
+      <span class="sc3"><span class="re1">&lt;filter<span class="re2">&gt;</span></span></span>...
+      ...
+    <span class="sc3"><span class="re1">&lt;/type<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/group<span class="re2">&gt;</span></span></span>
+  ...
+<span class="sc3"><span class="re1">&lt;/filters<span class="re2">&gt;</span></span></span></pre>
+
+<p>
+When combining filters, the following logic applies:
+</p>
+<ul>
+<li class="level1"><div class="li"> all <code>&lt;filter&gt;</code> within a <code>&lt;type&gt;</code> are <strong>OR&#039;ed</strong></div>
+</li>
+<li class="level1"><div class="li"> all <code>&lt;type&gt;</code> within a <code>&lt;group&gt;</code> are <strong>OR&#039;ed</strong></div>
+</li>
+<li class="level1"><div class="li"> all <code>&lt;group&gt;</code> are <strong>AND&#039;ed</strong></div>
+</li>
+</ul>
+
+<p>
+<strong>NB</strong>: All filtered indexes allow for allow for query based filtering via the <code>q</code> query parameter:
+</p>
+<ul>
+<li class="level1"><div class="li"> GET /services?q={query}</div>
+</li>
+<li class="level1"><div class="li"> GET /soap_operations?q={query}</div>
+</li>
+<li class="level1"><div class="li"> GET /rest_methods?q={query}</div>
+</li>
+<li class="level1"><div class="li"> GET /users?q={query}</div>
+</li>
+<li class="level1"><div class="li"> GET /service_providers?q={query}</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT26 SECTION "Filtering" [43209-43972] -->
+<h2 class="sectionedit27" id="error_responses">Error Responses</h2>
+<div class="level2">
+
+<p>
+Errors in <abbr title="Application Programming Interface">API</abbr> calls will result in a response with an appropriate <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" class="urlextern" target="_blank" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"  rel="nofollow">HTTP/1.1 Status Code</a>.
+</p>
+
+<p>
+The following table shows the relevant status codes:
+</p>
+<div class="table sectionedit28"><table class="inline">
+	<tr class="row0">
+		<th class="col0"> HTTP Status Code </th><th class="col1"> Reason </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5" class="urlextern" target="_blank" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5"  rel="nofollow">404</a> </td><td class="col1"> Resource not found. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4" class="urlextern" target="_blank" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4"  rel="nofollow">403</a> </td><td class="col1"> Not authorised to perform that request. May meed authentication. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7" class="urlextern" target="_blank" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7"  rel="nofollow">406</a> </td><td class="col1"> Not acceptable. This is usually used for endpoints and content types that are not implemented / not available yet. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.4" class="urlextern" target="_blank" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.4"  rel="nofollow">503</a> </td><td class="col1"> Service unavailable. </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1" class="urlextern" target="_blank" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1"  rel="nofollow">500</a> </td><td class="col1"> An unknown/unexpected error has occurred. </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> <a href="http://www.zvon.org/tmRFC/RFC2518/Output/chapter10.html#sub3" class="urlextern" target="_blank" title="http://www.zvon.org/tmRFC/RFC2518/Output/chapter10.html#sub3"  rel="nofollow">422</a>     </td><td class="col1"> Unprocessable entity. This code is used in response to POST requests to indicate that the request was well-formed, but a semantic error prevented it from being fulfilled e.g. a required field was blank.</td>
+	</tr>
+</table></div>
+<!-- EDIT28 TABLE [44204-45172] -->
+<p>
+Wherever possible, the body of an error response will contain an <code>Errors</code> structure like below, to provide more information on the error(s) raised:
+</p>
+<pre class="code xml"><span class="sc3"><span class="re1">&lt;errors<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;error<span class="re2">&gt;</span></span></span>Error message<span class="sc3"><span class="re1">&lt;/error<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;error<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/error<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/errors<span class="re2">&gt;</span></span></span></pre>
+
+</div>
+<!-- EDIT27 SECTION "Error Responses" [43973-45412] -->
+<h2 class="sectionedit29" id="example_usage">Example Usage</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT29 SECTION "Example Usage" [45413-45439] -->
+<h3 class="sectionedit30" id="curl">Curl</h3>
+<div class="level3">
+
+<p>
+You can use a command line tool like <a href="http://curl.haxx.se/" class="urlextern" target="_blank" title="http://curl.haxx.se/"  rel="nofollow">curl</a> to quickly test out <abbr title="Application Programming Interface">API</abbr> endpoints:
+</p>
+<pre class="code">curl -i -H &quot;Accept: application/xml&quot; http://www.biocatalogue.org/services.xml</pre>
+
+</div>
+<!-- EDIT30 SECTION "Curl" [45440-45638] -->
+<h3 class="sectionedit31" id="ruby">Ruby</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="oauth_and_json">OAuth and JSON</h4>
+<div class="level4">
+
+<p>
+Below is an example of how to access JSON endpoints in a <a href="http://www.ruby-lang.org/en/" class="urlextern" target="_blank" title="http://www.ruby-lang.org/en/"  rel="nofollow">Ruby</a> script/application using <strong>OAuth</strong>…
+</p>
+
+<p>
+Firstly, <a href="http://www.biocatalogue.org/oauth_clients/new" class="urlextern" target="_blank" title="http://www.biocatalogue.org/oauth_clients/new"  rel="nofollow">register your application</a> on the BioCatalogue website.  Please note your <strong>consumer key</strong> and <strong>consumer secret</strong> as these will be required by your application/script.
+</p>
+
+<p>
+Then, install the JSON and OAuth gems:
+</p>
+<pre class="code">gem install json oauth</pre>
+
+<p>
+After this, you can then use code like:
+</p>
+<pre class="code ruby"><span class="kw3">require</span> <span class="st0">'rubygems'</span>
+<span class="kw3">require</span> <span class="st0">'oauth'</span>
+<span class="kw3">require</span> <span class="st0">&quot;json/ext&quot;</span>
+&nbsp;
+key = <span class="st0">&quot;...&quot;</span> <span class="co1"># get your consumer key from the BioCatalogue</span>
+secret = <span class="st0">&quot;...&quot;</span> <span class="co1"># get your consumer key from the BioCatalogue</span>
+&nbsp;
+site = <span class="st0">&quot;http://www.biocatalogue.org&quot;</span>
+&nbsp;
+<span class="co1"># ===== the tedious one time setup ===== #</span>
+&nbsp;
+<span class="co1"># the first time you use OAuth, you will need to get an access token; you only need to do this once</span>
+consumer = <span class="re2">OAuth::Consumer</span>.<span class="me1">new</span><span class="br0">&#40;</span>key, secret, <span class="br0">&#123;</span> <span class="re3">:site</span> <span class="sy0">=&gt;</span> site <span class="br0">&#125;</span><span class="br0">&#41;</span>
+request_token = consumer.<span class="me1">get_request_token</span>
+&nbsp;
+<span class="co1"># the user needs to ask users to allow you application/script to access their BioCatalogue content</span>
+<span class="co1"># after authorisation the user will receive a token which your application/script needs for the next step! make sure you have a way to capture this token :-)</span>
+request_token.<span class="me1">authorize_url</span> <span class="co1"># point your browser to this URL</span>
+...
+&nbsp;
+<span class="co1"># :oauth_verifier is the key that was provided to the user in the last step</span>
+access_token = request_token.<span class="me1">get_access_token</span><span class="br0">&#40;</span><span class="re3">:oauth_verifier</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;...&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="co1"># store your access token (access_token)</span>
+...
+&nbsp;
+<span class="co1"># in future, all you need to do is recall your access token and you are ready to go :-)</span>
+&nbsp;
+<span class="co1"># =======================================#</span>
+&nbsp;
+response = access_token.<span class="me1">get</span><span class="br0">&#40;</span>site <span class="sy0">+</span> <span class="st0">'/users/738.json'</span><span class="br0">&#41;</span>
+json_doc = JSON.<span class="me1">parse</span><span class="br0">&#40;</span>response.<span class="me1">body</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="co1"># Do some stuff with the JSON document (json_doc)</span>
+name = json_doc<span class="br0">&#91;</span><span class="st0">&quot;user&quot;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="st0">&quot;name&quot;</span><span class="br0">&#93;</span>
+&nbsp;
+<span class="co1"># Do some other stuff with the JSON document (json_doc)</span>
+...</pre>
+
+</div>
+
+<h4 id="json">JSON</h4>
+<div class="level4">
+
+<p>
+Below is an example of how to access JSON endpoints in a <a href="http://www.ruby-lang.org/en/" class="urlextern" target="_blank" title="http://www.ruby-lang.org/en/"  rel="nofollow">Ruby</a> script/application…
+</p>
+
+<p>
+First, install the JSON gem:
+</p>
+<pre class="code">gem install json</pre>
+
+<p>
+Then you can use code like:
+</p>
+<pre class="code ruby"><span class="co1"># Require the necessary components</span>
+<span class="kw3">require</span> <span class="st0">'rubygems'</span>
+<span class="kw3">require</span> <span class="st0">'open-uri'</span>
+<span class="kw3">require</span> <span class="st0">'json/ext'</span>
+&nbsp;
+<span class="co1"># Set up the endpoint URL you want to access</span>
+endpoint_url = <span class="st0">&quot;http://www.biocatalogue.org/services&quot;</span>
+&nbsp;
+<span class="co1"># Set up an informative HTTP USER AGENT</span>
+http_user_agent = <span class="st0">&quot;My test script; Ruby/#{RUBY_VERSION}&quot;</span> <span class="st0">&quot;MyTestScript/1.0 (X11; U; Linux x86_64; en-US) Ruby/#{RUBY_VERSION}&quot;</span>
+&nbsp;
+<span class="co1"># Fetch and parse the JSON document</span>
+json = <span class="kw3">open</span><span class="br0">&#40;</span>endpoint_url, <span class="st0">&quot;Accept&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;application/json&quot;</span>, <span class="st0">&quot;User-Agent&quot;</span> <span class="sy0">=&gt;</span> http_user_agent<span class="br0">&#41;</span>.<span class="me1">read</span>
+document = JSON<span class="br0">&#40;</span>json<span class="br0">&#41;</span>
+&nbsp;
+<span class="kw3">puts</span> <span class="st0">&quot;The #{document['services']['per_page']} latest results provided by '#{endpoint_url}' are:&quot;</span>
+&nbsp;
+document<span class="br0">&#91;</span><span class="st0">'services'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="st0">'results'</span><span class="br0">&#93;</span>.<span class="me1">each</span> <span class="br0">&#123;</span> <span class="sy0">|</span>service<span class="sy0">|</span>
+  <span class="co1"># Do some stuff with the object</span>
+  ...
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1"># Do some other stuff with the JSON document</span>
+...</pre>
+
+</div>
+
+<h4 id="xml">XML</h4>
+<div class="level4">
+
+<p>
+Below is an example of how to access XML endpoints in a <a href="http://www.ruby-lang.org/en/" class="urlextern" target="_blank" title="http://www.ruby-lang.org/en/"  rel="nofollow">Ruby</a> script/app…
+</p>
+
+<p>
+First, install the libxml gem:
+</p>
+<pre class="code">gem install libxml-ruby</pre>
+
+<p>
+Then you can use code like:
+</p>
+<pre class="code ruby"><span class="co1"># Require the necessary components</span>
+<span class="kw3">require</span> <span class="st0">'rubygems'</span>
+<span class="kw3">require</span> <span class="st0">'open-uri'</span>
+<span class="kw3">require</span> <span class="st0">'libxml'</span>
+&nbsp;
+<span class="kw1">include</span> LibXML
+&nbsp;
+<span class="co1"># Set up the endpoint URL you want to access</span>
+endpoint_url = <span class="st0">&quot;http://www.biocatalogue.org/services&quot;</span>
+&nbsp;
+<span class="co1"># Set up an informative HTTP USER AGENT</span>
+http_user_agent = <span class="st0">&quot;My test script; Ruby/#{RUBY_VERSION}&quot;</span> <span class="st0">&quot;MyTestScript/1.0 (X11; U; Linux x86_64; en-US) Ruby/#{RUBY_VERSION}&quot;</span>
+&nbsp;
+<span class="co1"># Fetch and parse the XML document</span>
+xml = <span class="kw3">open</span><span class="br0">&#40;</span>endpoint_url, <span class="st0">&quot;Accept&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;application/xml&quot;</span>, <span class="st0">&quot;User-Agent&quot;</span> <span class="sy0">=&gt;</span> http_user_agent<span class="br0">&#41;</span>.<span class="me1">read</span>
+document = <span class="re2">XML::Document</span>.<span class="kw3">string</span><span class="br0">&#40;</span>xml<span class="br0">&#41;</span>
+&nbsp;
+<span class="co1"># Validate the output against the schema</span>
+schema = <span class="re2">XML::Schema</span>.<span class="me1">new</span><span class="br0">&#40;</span>SCHEMA_FILE_PATH<span class="br0">&#41;</span>
+is_valid = document.<span class="me1">validate_schema</span><span class="br0">&#40;</span>schema<span class="br0">&#41;</span> <span class="kw1">do</span> <span class="sy0">|</span>message,flag<span class="sy0">|</span>
+  <span class="kw3">puts</span> <span class="st0">&quot;<span class="es0">\n</span>#{(flag ? 'ERROR' : 'WARNING')}: #{message}&quot;</span>
+<span class="kw1">end</span>
+<span class="kw3">puts</span> <span class="st0">&quot;<span class="es0">\n</span>Valid output? #{is_valid}<span class="es0">\n</span>&quot;</span>
+&nbsp;
+<span class="co1"># Do some other stuff with the XML document</span>
+...</pre>
+
+</div>
+<!-- EDIT31 SECTION "Ruby" [45639-49579] -->
+<h3 class="sectionedit32" id="in_java">In Java</h3>
+<div class="level3">
+
+<p>
+Download this <a href="/wiki/_media/public:using_biocatalogue_api_in_java.pdf" class="media mediafile mf_pdf" title="public:using_biocatalogue_api_in_java.pdf (116.3 KB)">document</a> to get detailed usage information on calling and using the BioCatalogue <abbr title="Application Programming Interface">API</abbr> in Java. This includes instructions on using XmlBeans to automatically generate the <abbr title="Application Programming Interface">API</abbr> binding classes from the XSD, which removes the need to manually parse the XML files yourself. 
+</p>
+
+<p>
+This document is authored by <strong>Sergejs Aleksejevs</strong> (who is building the BioCatalogue plugin for Taverna).
+</p>
+
+</div>
+<!-- EDIT32 SECTION "In Java" [49580-50036] -->
+<h2 class="sectionedit33" id="projects">Projects</h2>
+<div class="level2">
+
+<p>
+The following projects currently make use of the BioCatalogue <abbr title="Application Programming Interface">API</abbr>:
+</p>
+<ul>
+<li class="level1"><div class="li"> An alpha version BioCatalogue plugin for <strong>Taverna</strong> has been released. See the <a href="http://www.taverna.org.uk/documentation/taverna-plugins/taverna-2-x-plugins/" class="urlextern" target="_blank" title="http://www.taverna.org.uk/documentation/taverna-plugins/taverna-2-x-plugins/"  rel="nofollow">Taverna plugins page</a> for more info.</div>
+</li>
+<li class="level1"><div class="li"> The BioCatalogue official iOS application. See the <a href="http://github.com/myGrid/BioCatalogue-iOS" class="urlextern" target="_blank" title="http://github.com/myGrid/BioCatalogue-iOS"  rel="nofollow">github page</a> for more information.</div>
+</li>
+<li class="level1"><div class="li"> The <strong><a href="http://www.ncri-onix.org.uk/portal/#S1" class="urlextern" target="_blank" title="http://www.ncri-onix.org.uk/portal/#S1"  rel="nofollow">ONIX Portal</a></strong> by the NCRI harvests all the information about web services from the BioCatalogue and makes it searchable and browsable.</div>
+</li>
+<li class="level1"><div class="li"> We are currently integrating BioCatalogue into <strong><a href="http://www.myexperiment.org" class="urlextern" target="_blank" title="http://www.myexperiment.org"  rel="nofollow">myExperiment</a></strong> by harvesting the service data and making them searchable and viewable in myExperiment. Also, linking workflows with services.</div>
+</li>
+<li class="level1"><div class="li"> An alpha version application for mass curation. See the <a href="http://github.com/myGrid/BioCatalogue-Mass-Curator" class="urlextern" target="_blank" title="http://github.com/myGrid/BioCatalogue-Mass-Curator"  rel="nofollow">Mass Curator github page</a> for more information.</div>
+</li>
+<li class="level1"><div class="li"> The BioCatalogue iPhone app developed by Emory University.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT33 SECTION "Projects" [50037-51106] -->
+<h2 class="sectionedit34" id="api_coverage">API Coverage</h2>
+<div class="level2">
+
+<p>
+The <a href="/wiki/public:api:coverage" class="wikilink1" title="public:api:coverage">API coverage page</a> details current and planned <abbr title="Application Programming Interface">API</abbr> coverage.
+</p>
+
+</div>
+<!-- EDIT34 SECTION "API Coverage" [51107-51221] -->
+<h2 class="sectionedit35" id="credits">Credits</h2>
+<div class="level2">
+
+<p>
+The BioCatalogue <abbr title="Application Programming Interface">API</abbr> is being actively development and maintained by:
+</p>
+<ul>
+<li class="level1"><div class="li"> Jiten Bhagat (Jits)</div>
+</li>
+<li class="level1"><div class="li"> Mannie Tagarira</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT35 SECTION "Credits" [51222-51358] -->
+<h2 class="sectionedit36" id="acknowledgements">Acknowledgements</h2>
+<div class="level2">
+
+<p>
+A number of people have helped drive the requirements and design of the BioCatalogue <abbr title="Application Programming Interface">API</abbr>. In particular:
+</p>
+<ul>
+<li class="level1"><div class="li"> Sergejs Aleksejevs</div>
+</li>
+<li class="level1"><div class="li"> Stian Soiland-Reyes</div>
+</li>
+<li class="level1"><div class="li"> The NCRI ONIX team</div>
+</li>
+<li class="level1"><div class="li"> The myExperiment Team</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT36 SECTION "Acknowledgements" [51359-] --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+, <sup><a href="#fnt__5" id="fn__5" class="fn_bot">5)</a></sup> 
+<a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/Representational_State_Transfer"  rel="nofollow">http://en.wikipedia.org/wiki/Representational_State_Transfer</a></div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+<a href="http://www.json.org/" class="urlextern" target="_blank" title="http://www.json.org/"  rel="nofollow">http://www.json.org/</a></div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+, <sup><a href="#fnt__8" id="fn__8" class="fn_bot">8)</a></sup> 
+<a href="http://en.wikipedia.org/wiki/Content_negotiation" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/Content_negotiation"  rel="nofollow">http://en.wikipedia.org/wiki/Content_negotiation</a></div>
+<div class="fn"><sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
+<a href="http://www.w3.org/TR/soap/" class="urlextern" target="_blank" title="http://www.w3.org/TR/soap/"  rel="nofollow">http://www.w3.org/TR/soap/</a></div>
+<div class="fn"><sup><a href="#fnt__6" id="fn__6" class="fn_bot">6)</a></sup> 
+<a href="http://linkeddata.org/" class="urlextern" target="_blank" title="http://linkeddata.org/"  rel="nofollow">http://linkeddata.org/</a></div>
+<div class="fn"><sup><a href="#fnt__7" id="fn__7" class="fn_bot">7)</a></sup> 
+<a href="http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/" class="urlextern" target="_blank" title="http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/"  rel="nofollow">http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/</a></div>
+<div class="fn"><sup><a href="#fnt__9" id="fn__9" class="fn_bot">9)</a></sup> 
+This depends on the resource that you are redirected to from /lookup.</div>
+</div>

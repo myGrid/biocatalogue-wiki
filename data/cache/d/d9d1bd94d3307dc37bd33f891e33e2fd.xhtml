@@ -1,0 +1,233 @@
+
+
+
+<h1><a name="registering_web_services_in_the_biocatalogue" id="registering_web_services_in_the_biocatalogue">Registering Web Services in the BioCatalogue</a></h1>
+<div class="level1">
+
+<p>
+
+<strong>The Problem: </strong> <em>“My Web Services are not visible…”</em>
+</p>
+
+<p>
+<strong>So…</strong>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Anyone can easily register Web Services in the BioCatalogue</div>
+</li>
+<li class="level1"><div class="li"> These service are instantly available to the community, tool developers and search engines</div>
+</li>
+<li class="level1"><div class="li"> Service providers can advertise, describe and monitor their services through the BioCatalogue</div>
+</li>
+</ul>
+
+<p>
+Any registered users (members) can submit any Web Service to the BioCatalogue.  
+You do not have to be the provider of the service to submit it to the BioCatalogue. Click <a href="http://test.biocatalogue.org/signup" class="urlextern" target="_blank" title="http://test.biocatalogue.org/signup"  rel="nofollow">here</a> to become a Member of the BioCatalogue. <br/>
+
+</p>
+
+<p>
+Currently the BioCatalogue support <strong><acronym title="Simple Object Access Protocol">SOAP</acronym></strong>, <strong>REST</strong> and <strong>Soaplab</strong> services. 
+</p>
+
+</div>
+<!-- SECTION "Registering Web Services in the BioCatalogue" [1-732] -->
+<h2><a name="submitting_soap_service_to_the_biocatalogue" id="submitting_soap_service_to_the_biocatalogue">Submitting SOAP service to the BioCatalogue</a></h2>
+<div class="level2">
+
+<p>
+Given that most existing <acronym title="Simple Object Access Protocol">SOAP</acronym> services have a WSDL document, registering a <acronym title="Simple Object Access Protocol">SOAP</acronym> service entry into the BioCatalogue requires only the WSDL url. The BioCatalogue WSDL parser automatically structures the data from the WSDL file. To submit a <acronym title="Simple Object Access Protocol">SOAP</acronym> service with a defined WSDL file:  
+</p>
+<ul>
+<li class="level1"><div class="li"> Select &#039;<acronym title="Simple Object Access Protocol">SOAP</acronym>&#039; from the &#039;Register a Service&#039; page in the BioCatalogue</div>
+</li>
+<li class="level1"><div class="li"> Paste your WSDL url in the form and click preview </div>
+</li>
+<li class="level1"><div class="li"> Provide additional description to the service. This is optional but very useful. You may add these descriptions after you submit the service</div>
+</li>
+<li class="level1"><div class="li"> Click &#039;Submit&#039; to submit your service</div>
+</li>
+</ul>
+
+<p>
+Once the service is successfully submitted you can add more annotation (descriptions, tags, example values) to the service and its operations, inputs or outputs. 
+
+</p>
+
+</div>
+<!-- SECTION "Submitting SOAP service to the BioCatalogue" [733-1546] -->
+<h2><a name="submitting_rest_service_to_the_biocatalogue" id="submitting_rest_service_to_the_biocatalogue">Submitting REST service to the BioCatalogue</a></h2>
+<div class="level2">
+
+<p>
+To submit a REST service all you need is the REST endpoint and the service name. 
+</p>
+<ul>
+<li class="level1"><div class="li"> Select &#039;REST&#039; from the &#039;Register a Service&#039; page in the BioCatalogue</div>
+</li>
+<li class="level1"><div class="li"> Paste the base <acronym title="Uniform Resource Locator">URL</acronym> of the REST service</div>
+</li>
+<li class="level1"><div class="li"> Provide a name for the service</div>
+</li>
+<li class="level1"><div class="li"> Provide additional description for the service. This is optional but very useful. You may add these descriptions after you submit the service</div>
+</li>
+<li class="level1"><div class="li"> Click &#039;Submit&#039; to submit your service </div>
+</li>
+</ul>
+
+<p>
+Once the service is successfully submitted you can add more annotation (descriptions, tags, example values) to the service.  You will also be able to add the different REST endpoints which make up the service.
+
+</p>
+
+</div>
+<!-- SECTION "Submitting REST service to the BioCatalogue" [1547-2234] -->
+<h3><a name="adding_rest_endpoints" id="adding_rest_endpoints">Adding REST Endpoints</a></h3>
+<div class="level3">
+
+<p>
+Below is an example on how to add these endpoints to a REST service; this example is based on the BioCatalogue&#039;s own REST <acronym title="Application Programming Interface">API</acronym>.
+Click on the &#039;Add New Endpoints&#039; button, which is found under the &#039;REST Endpoints&#039; tab.  This should bring up a pop-up with some help text and a text box to enter the endpoints.
+</p>
+
+<p>
+A REST endpoint takes in parameters, some of which are mandatory, some optional.  The endpoints I will register are:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>http://www.biocatalogue.org/search?q={query}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>http://www.biocatalogue.org/services/{id}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>http://www.biocatalogue.org/tags/{tagname}?namespace={namespace}</code></div>
+</li>
+</ul>
+
+<p>
+
+Provided the base <acronym title="Uniform Resource Locator">URL</acronym> does not contain a question mark ”<code>?</code>”, endpoints can be expressed as paths relative to the base <acronym title="Uniform Resource Locator">URL</acronym>:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>/search?q={query}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>/services/{id}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>/tags/{tagname}?namespace={the-namespace-of-the-tags}</code></div>
+</li>
+</ul>
+
+<p>
+
+Placing curly braces around a parameter tells the BioCatalogue that the parameter is mandatory.  In the above endpoints, <code>q</code>, <code>id</code>, <code>tagname</code>, and <code>namespace</code> are mandatory parameters.  All other parameters without curly braces will be treated as part of the endpoint and not a parameter.
+</p>
+
+<p>
+After submitting the above entries, the BioCatalogue will register the following endpoints and associate them with the registered service:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>GET /search?q={query}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>GET /services/{id}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>GET /tags/{tagname}?namespace={the-namespace-of-the-tags}</code></div>
+</li>
+</ul>
+
+<p>
+
+Notice the <acronym title="Hyper Text Transfer Protocol">HTTP</acronym> <code>GET</code> at the the beginning of the registered endpoint; If you do not provide an <acronym title="Hyper Text Transfer Protocol">HTTP</acronym> method for an endpoint, the BioCatalogue assumes the default: <code>GET</code>.  To register endpoints that use other <acronym title="Hyper Text Transfer Protocol">HTTP</acronym> methods, simply put the <acronym title="Hyper Text Transfer Protocol">HTTP</acronym> method, followed by a space, then the endpoint.  The supported methods are <code>GET</code>, <code>PUT</code>, <code>POST</code>, and <code>DELETE</code>.  For example:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>GET /{resource}/{id}</code> <em>is the same as</em> <code>/{resource}/{id}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>POST /{resource}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>PUT /{resource}/{id}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>DELETE /{resource}/{id}?verbose={true_or_false}</code></div>
+</li>
+</ul>
+
+<p>
+
+The base <acronym title="Uniform Resource Locator">URL</acronym> of a REST service can also contain query parameters, but these query parameters are not configurable.  Using the DDBJ services as an example, the base <acronym title="Uniform Resource Locator">URL</acronym> would have to be registered as ”<code>http://xml.nig.ac.jp/rest/Invoke?service=DDBJ</code>”.
+</p>
+
+<p>
+With such a base <acronym title="Uniform Resource Locator">URL</acronym>, you cannot enter endpoints with a relative path, they must have the full <acronym title="Uniform Resource Locator">URL</acronym>:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>http://xml.nig.ac.jp/rest/Invoke?service=DDBJ&amp;method=countBasePair&amp;accession={accession}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>http://xml.nig.ac.jp/rest/Invoke?service=DDBJ&amp;method=getAllFeatures&amp;accession={accession}</code></div>
+</li>
+<li class="level1"><div class="li"> <code>http://xml.nig.ac.jp/rest/Invoke?service=DDBJ&amp;method=getFFEntry&amp;accession={accession}</code></div>
+</li>
+</ul>
+
+<p>
+
+The above endpoint will result in the following BioCatalogue entries:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>GET /?method=countBasePair</code></div>
+</li>
+<li class="level1"><div class="li"> <code>GET /?method=getAllFeatures</code></div>
+</li>
+<li class="level1"><div class="li"> <code>GET /?method=getFFEntry</code></div>
+</li>
+</ul>
+
+<p>
+
+The ”<code>/?</code>” in the registered endpoint is just a way of saying that the base <acronym title="Uniform Resource Locator">URL</acronym> for that service contains a query parameter; it can be renamed to ”<code>?</code>”, ”<code>/&amp;</code>”, ”<code>&amp;</code>”, or anything that makes sense to you.
+</p>
+
+</div>
+<!-- SECTION "Adding REST Endpoints" [2235-5283] -->
+<h2><a name="submitting_soaplab_service_to_the_biocatalogue" id="submitting_soaplab_service_to_the_biocatalogue">Submitting Soaplab service to the BioCatalogue</a></h2>
+<div class="level2">
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Soaplab" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/Soaplab"  rel="nofollow">Soaplab</a> service are command line application wrapped as Web Services. 
+</p>
+<ul>
+<li class="level1"><div class="li"> To submit a soaplab 1 service:</div>
+<ul>
+<li class="level2"><div class="li"> From the soaplab server which may look like &lt;base <acronym title="Uniform Resource Locator">URL</acronym>/axis/services&gt; look for &#039;AnalysisFactory&#039; and copy the corresponding WSDL</div>
+</li>
+<li class="level2"><div class="li"> Select &#039;Soaplab Server&#039; from the &#039;Register a Service&#039; page in the BioCatalogue</div>
+</li>
+<li class="level2"><div class="li"> Paste the WSDL <acronym title="Uniform Resource Locator">URL</acronym> you have copied in the form and click preview</div>
+</li>
+<li class="level2"><div class="li"> Click &#039;Submit&#039; to submit your service</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> To submit a soaplab 2 service:</div>
+<ul>
+<li class="level2"><div class="li"> From the soaplab server copy the WSDL ending with &lt;services/list?wsdl&gt;</div>
+</li>
+<li class="level2"><div class="li"> Select &#039;Soaplab Server&#039; from the &#039;Register a Service&#039; page in the BioCatalogue</div>
+</li>
+<li class="level2"><div class="li"> Paste the WSDL <acronym title="Uniform Resource Locator">URL</acronym> you have copied in the form and click preview</div>
+</li>
+<li class="level2"><div class="li"> Click &#039;Submit&#039; to submit your service</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+Note that it may take a little while for all services to be registered.<br/>
+
+Once the service is successfully submitted you can add more annotation (descriptions, tags, example values) to the service and its operations, inputs or outputs. 
+
+</p>
+
+</div>
+<!-- SECTION "Submitting Soaplab service to the BioCatalogue" [5284-] -->

@@ -1,0 +1,550 @@
+
+
+
+<h1><a name="f2f_hackathon_designathon_21-22-23_january_manchester" id="f2f_hackathon_designathon_21-22-23_january_manchester">F2F Hackathon/Designathon 21-22-23 January @ Manchester</a></h1>
+<div class="level1">
+
+</div>
+<!-- SECTION "F2F Hackathon/Designathon 21-22-23 January @ Manchester" [1-72] -->
+<h2><a name="attending" id="attending">Attending</a></h2>
+<div class="level2">
+
+<p>
+
+Thomas, Eric, Jits
+</p>
+
+<p>
+<strong>Drifting in and out:</strong> Franck, Steve, Carole
+</p>
+
+</div>
+<!-- SECTION "Attending" [73-165] -->
+<h2><a name="agenda" id="agenda">Agenda</a></h2>
+<div class="level2">
+<ol>
+<li class="level1"><div class="li"> Annotations</div>
+</li>
+<li class="level1"><div class="li"> Service testing infrastructure (based on EMBRACE capabilities)</div>
+</li>
+<li class="level1"><div class="li"> Automated testing and continuous integration of codebase</div>
+</li>
+<li class="level1"><div class="li"> EMBRACE + discussions with Steve</div>
+</li>
+<li class="level1"><div class="li"> Soaplab server submission</div>
+</li>
+<li class="level1"><div class="li"> UI</div>
+</li>
+<li class="level1"><div class="li"> Service submission page</div>
+</li>
+<li class="level1"><div class="li"> BioMoby support</div>
+</li>
+<li class="level1"><div class="li"> Updating the public wiki</div>
+</li>
+<li class="level1"><div class="li"> Ownership/provider management</div>
+</li>
+<li class="level1"><div class="li"> DAS</div>
+</li>
+<li class="level1"><div class="li"> Search/Browse/Filtering</div>
+</li>
+</ol>
+
+</div>
+<!-- SECTION "Agenda" [166-552] -->
+<h2><a name="notes" id="notes">Notes</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Notes" [553-571] -->
+<h3><a name="annotations" id="annotations">Annotations</a></h3>
+<div class="level3">
+
+<p>
+
+What happened to the different types of annotation? (operational, etc)
+</p>
+
+<p>
+→ we need to revisit this and figure out a way of being able to display this in the UI in an effective way (possibly using icons or labels to show what kind of annotation is being shown/added).
+</p>
+
+<p>
+What happened to the different levels of annotation? (platinum, etc)
+</p>
+
+<p>
+→ discussed this with Steve: why do users care about the different levels of annotations?? Is it only for service providers? Is it possible to make the levels of colours meaningful to users?? We need to make it clear that this is not necessarily an indication of usefulness. It&#039;s more a badge / certification thing.
+</p>
+
+<p>
+→   It could be just another “badge” on services.
+</p>
+
+<p>
+How to handle duplicate annotations?
+</p>
+
+<p>
+→ facility in the plugin to specify which attribute names (or all) must be checked for duplication.
+</p>
+
+<p>
+Idea: “One stop annotation form”:
+</p>
+<ul>
+<li class="level1"><div class="li"> Used in post submit (see service submission page notes) as well as anytime someone wants to add many annotations.</div>
+</li>
+<li class="level1"><div class="li"> Provides a comprehensive number of fields to fill in, categorised into the different types of annotations (operational, etc)</div>
+</li>
+<li class="level1"><div class="li"> Shows the level of annotation currently on the service and highlights what fields need to be filled in to achieve the different levels.</div>
+</li>
+</ul>
+
+<p>
+
+<br/>
+
+Feedback from Franck:
+</p>
+<ul>
+<li class="level1"><div class="li"> Very good</div>
+</li>
+<li class="level1"><div class="li"> Can&#039;t edit own annotations when mistakes have been made!</div>
+</li>
+</ul>
+
+<p>
+
+→ we&#039;ve had a very long discussion about immutability and the bottom line is that the whole curation pipeline (with curation assertions) might be nice and clever and useful for the future, but for now the urgent requirements of being able to edit and add to annotations needs to be met. Ie: make annotations editable (but store last edited versions).
+</p>
+
+<p>
+→ simple way of editing an annotation - clever stuff later.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> The annotation popup UI (with dark background) thing is not the best for usability. Can&#039;t copy/paste or check other annotations.</div>
+</li>
+</ul>
+
+<p>
+
+→ possibly have inline adds/edits (users can then copy/paste). Steve: need to make it more lightweight and inline, with button to go into modal mode if required. 
+</p>
+
+<p>
+→ we discussed whether it should have an active save or close/cancel button or both.
+</p>
+
+<p>
+Need the ability to add name aliases for operations/input/outputs.
+</p>
+
+<p>
+Need to fix: after annotation, tab changes back to default one.
+</p>
+
+<p>
+Fix centering bug for modal window.
+</p>
+
+</div>
+<!-- SECTION "Annotations" [572-2937] -->
+<h3><a name="automated_testing_and_continuous_integration_of_codebase" id="automated_testing_and_continuous_integration_of_codebase">Automated testing and continuous integration of codebase</a></h3>
+<div class="level3">
+
+<p>
+
+Need automated tests for at least the models in the codebase as well as more coverage for newer functionality. Candidates tools:
+</p>
+<ul>
+<li class="level1"><div class="li"> Rspec (more behavioural - higher learning curve)</div>
+</li>
+<li class="level1"><div class="li"> Runit (more standard unit testing) ← we will stick to this.</div>
+</li>
+</ul>
+
+<p>
+
+Need continuous integration. Candidate server tools:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://cerberus.rubyforge.org/" class="urlextern" title="http://cerberus.rubyforge.org/"  rel="nofollow">Cerberus</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://studios.thoughtworks.com/cruise-continuous-integration" class="urlextern" title="http://studios.thoughtworks.com/cruise-continuous-integration"  rel="nofollow">Cruise</a></div>
+</li>
+<li class="level1"><div class="li"> Hudson</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.rubyinside.com/cruisecontrolrb-continuous-integration-for-ruby-and-rails-436.html" class="urlextern" title="http://www.rubyinside.com/cruisecontrolrb-continuous-integration-for-ruby-and-rails-436.html"  rel="nofollow">CruiseControl.rb</a></div>
+</li>
+</ul>
+
+<p>
+
+Need server to run it on (could do at EBI).
+</p>
+
+<p>
+Policy agreed: 
+</p>
+<ul>
+<li class="level1"><div class="li"> write basic unit tests for existing models.</div>
+</li>
+<li class="level1"><div class="li"> write tests for any new features from now on. Especially new models.</div>
+</li>
+<li class="level1"><div class="li"> set up and maintain a continuous integration server (Feb 09).</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Automated testing and continuous integration of codebase" [2938-3811] -->
+<h3><a name="soaplab_server_submission" id="soaplab_server_submission">Soaplab server submission</a></h3>
+<div class="level3">
+
+<p>
+
+Franck: 
+</p>
+<ul>
+<li class="level1"><div class="li"> “utilities bundled/packaged into just <acronym title="Simple Object Access Protocol">SOAP</acronym> services”</div>
+</li>
+<li class="level1"><div class="li"> “automatically generated”</div>
+</li>
+<li class="level1"><div class="li"> “Soaplab server → Tools”</div>
+</li>
+</ul>
+
+<p>
+
+<br/>
+
+<strong>CONCLUSION</strong> - each indidvidual “tool” in a Soaplab server is just a <acronym title="Simple Object Access Protocol">SOAP</acronym> Service + extra metadata to show it is part of grouping. I.e.: Soaplab is more a grouping structure, NOT a service type.
+</p>
+
+<p>
+We need the notion of ServiceGroups - these are applicable to other things, not just Soaplab servers.
+</p>
+
+<p>
+Do we need relationships? Is “part of group” just a kind of relationship? Other relationships like alternates and so on will also be required in the future.
+</p>
+
+<p>
+→ Yes and yes.
+</p>
+
+<p>
+Duplication checks handled in the existing <acronym title="Simple Object Access Protocol">SOAP</acronym> manner.
+</p>
+
+<p>
+Can we determine when a user is submitting a <acronym title="Simple Object Access Protocol">SOAP</acronym> service that it is actually part of a Soaplab server?
+</p>
+
+<p>
+→ we should probably have a check in case someone wants to register a service in a Soaplab server as a <acronym title="Simple Object Access Protocol">SOAP</acronym> service (maybe check for &lt;xsd:import namespace=“<a href="http://soaplab.org/typedws" class="urlextern" title="http://soaplab.org/typedws"  rel="nofollow">http://soaplab.org/typedws</a>” line).
+</p>
+
+<p>
+SPECIAL CASE: An issue is in the way EMBOSS names the tools - it embeds subgrouping of tooling (aka classification) within the URLs of the WSDL, and the endpoints, of each <acronym title="Simple Object Access Protocol">SOAP</acronym> service generated. E.g.: <a href="http://www.ebi.ac.uk/soaplab/typed/services/edit.aligncopy?wsdl" class="urlextern" title="http://www.ebi.ac.uk/soaplab/typed/services/edit.aligncopy?wsdl"  rel="nofollow">http://www.ebi.ac.uk/soaplab/typed/services/edit.aligncopy?wsdl</a> and <a href="http://www.ebi.ac.uk/soaplab/typed/services/edit.aligncopy" class="urlextern" title="http://www.ebi.ac.uk/soaplab/typed/services/edit.aligncopy"  rel="nofollow">http://www.ebi.ac.uk/soaplab/typed/services/edit.aligncopy</a> … where “edit.aligncopy” means that the tool is “aligncopy” and it belongs to the “edit” subgroup (ie: category) of tools. This allows them to generate documentation like this: <a href="http://www.ebi.ac.uk/soaplab/" class="urlextern" title="http://www.ebi.ac.uk/soaplab/"  rel="nofollow">http://www.ebi.ac.uk/soaplab/</a>. Also the real name of the service is extrapolated from this (using: subgroup.toolname).
+</p>
+
+<p>
+→ we can translate these to classification annotations (or just plain tags) and the names can be used to replace the name in the WSDL (which often aren&#039;t very useful).
+</p>
+
+<p>
+So from some Soaplab servers we can get:
+</p>
+<ul>
+<li class="level1"><div class="li"> Category annotations on each individual soap service</div>
+</li>
+<li class="level1"><div class="li"> The “real name” of each individual soap service (the name in wsdl will become aliases [ie: name annotations])</div>
+</li>
+</ul>
+
+<p>
+	
+Eric to research more and produce a proposed model. He will also try and figure out how to get back the list of all tools (services) within a Soaplab server in a programmatic manner.
+</p>
+
+<p>
+Steve: do the subgroups thing have any meaning outside of EMBOSS?? If not, why should we treat them separately?
+</p>
+
+<p>
+We could possibly register Soaplab as a service with children services. But not making exceptions, just tagging as being a Soaplab service.
+</p>
+
+<p>
+<strong>Comment by Jits [2009-01-27 13:32]:</strong> just spoke to Katy and she said that what EMBOSS do (ie: category.name) is very common to all Soaplab servers, but she is happy with the way we are treating it, ie: <acronym title="Simple Object Access Protocol">SOAP</acronym> services with extra annotations and metadata to say it is part of a group.
+</p>
+
+</div>
+<!-- SECTION "Soaplab server submission" [3812-6549] -->
+<h3><a name="rest_services_support" id="rest_services_support">REST services support</a></h3>
+<div class="level3">
+
+<p>
+
+Thomas and Steve are happy with the model developed by Jits and Eric.
+</p>
+
+<p>
+The structure information needs to be given by the submitter (can&#039;t be extracted from a description document as we&#039;re not using WADLs). BUT we need to keep track of the fact that the submitter gave this information! As previously, all “service structure” information had to be specified only by a provider. Now it is possible (and essential actually) that users can submit information about a service&#039;s structure.
+</p>
+
+<p>
+→ we need to add a “source” to all service structure models
+</p>
+
+<p>
+In the UI, for now, we can allow users to add to the service structure for REST but not <acronym title="Simple Object Access Protocol">SOAP</acronym> etc (as it doesn&#039;t make sense for services that do have a description document).
+</p>
+
+</div>
+<!-- SECTION "REST services support" [6550-7306] -->
+<h3><a name="service_submission" id="service_submission">Service submission</a></h3>
+<div class="level3">
+
+<p>
+
+What is generic in that process (for all service types):
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Annotations:</div>
+<ul>
+<li class="level2"><div class="li"> Name alias</div>
+</li>
+<li class="level2"><div class="li"> Description</div>
+</li>
+<li class="level2"><div class="li"> Documentation <acronym title="Uniform Resource Locator">URL</acronym></div>
+</li>
+<li class="level2"><div class="li"> Classification (<strong>?</strong> see notes on discussion with Steve)</div>
+</li>
+<li class="level2"><div class="li"> Related projects</div>
+</li>
+<li class="level2"><div class="li"> Type(s) of data the service deals with</div>
+</li>
+<li class="level2"><div class="li"> Tags</div>
+</li>
+<li class="level2"><div class="li"> Version identifier</div>
+</li>
+<li class="level2"><div class="li"> Cost (free or not?)</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+IDEA: after submission, have a generic annotations page that be used to add many annotations at once (the “one stop annotation form” - see notes on annotations above).
+</p>
+
+<p>
+SO: we need to do a very quick/minimalist 1 step submission THEN provide a form to add annotations (+ links like “remind me later”, “send to someone else to fill in for me” etc).
+</p>
+
+<p>
+Maybe not go for a preset of classifications, as it might be hard to get right.
+</p>
+
+<p>
+Also see notes on ownership/provider management below.
+</p>
+
+</div>
+<!-- SECTION "Service submission" [7307-8152] -->
+<h3><a name="ownership_provider_management" id="ownership_provider_management">Ownership/provider management</a></h3>
+<div class="level3">
+
+<p>
+
+Agree to keep the notion of ServiceProviders “virtual” but have users assigned as “owners” or “maintainers” of services.
+</p>
+
+<p>
+Possibly: manual approval process for owners of a service? Where user fills in a form and we approve it.
+</p>
+<ul>
+<li class="level1"><div class="li"> Would probably be a 2 step process:</div>
+<ol>
+<li class="level2"><div class="li"> Verify identity of the user.</div>
+</li>
+<li class="level2"><div class="li"> Verify that they are indeed in the capacity to be the owner/maintainer of the service on BioCatalogue.</div>
+</li>
+</ol>
+</li>
+</ul>
+
+<p>
+
+Or alternatively: Thomas: google asking to put a small file on your domain so they can verify. Is this feasible for us?
+</p>
+
+<p>
+FOR NOW:
+</p>
+<ul>
+<li class="level1"><div class="li"> Have check box on service submission asking “Are you the owner/maintainer of this?”</div>
+</li>
+<li class="level1"><div class="li"> Then UI show them as “unverified” owner/maintainer.</div>
+</li>
+<li class="level1"><div class="li"> Then afterwards verify their identity and show them as “verified”.</div>
+</li>
+</ul>
+
+<p>
+	
+Verification of a user&#039;s global identity on BioCatalogue could be stored (to prevent from having to ascertain their actual identity each time).
+</p>
+
+<p>
+Thomas: what about “contacts”? “Can you be contacted about issues to do with this Service?”
+</p>
+
+<p>
+Eric: users can select what relationship they have to a service (“user”, “maintainer”, etc)
+</p>
+
+<p>
+Is this an owner of a service? or a service deployment?
+</p>
+
+<p>
+→ Actually they are really the owner of a service deployment. So one service on BioCatalogue could have multiple owners.
+</p>
+
+</div>
+<!-- SECTION "Ownership/provider management" [8153-9464] -->
+<h3><a name="service_testing" id="service_testing">Service testing</a></h3>
+<div class="level3">
+
+<p>
+
+Steve (on EMBRACE&#039;s service testing):
+</p>
+<ul>
+<li class="level1"><div class="li"> Service test infrastructure separate from Drupal.</div>
+</li>
+<li class="level1"><div class="li"> Drupal is just aware of the tables that the service test populates (ie: mysql is the common data source).</div>
+</li>
+<li class="level1"><div class="li"> “Scheduler” (run by cron) in a separate test server runs the tests and populates the db.</div>
+</li>
+<li class="level1"><div class="li"> Just scripts that can be populated from command line, return 0, 1, anything (latter is “something strange happened”). Any output is accumulated in a log file and stored in db to show.</div>
+</li>
+<li class="level1"><div class="li"> Around this is a wrapper (harness executes wrapper with script as argument… tries to trap any bad behaviour. The wrapper talks to the db in terms of putting results into the db.</div>
+</li>
+<li class="level1"><div class="li"> The wrapper/harness needs to know about users at one point - in order to inform users of a change in status (ie: emails the email submitter). Possibly use event logging + background process to do this in the future.</div>
+</li>
+<li class="level1"><div class="li"> What we haven&#039;t done a good job of is - uploading of zips of tests + specify command to execute (ie: name of the script). Zip allows upload of extra code together with script.</div>
+</li>
+<li class="level1"><div class="li"> What we would like to do is automatic tests…. ping? parse wsdl (is it still valid)? Suite of tests…</div>
+</li>
+</ul>
+
+<p>
+
+Additional notes:
+</p>
+
+<p>
+CRON ask for tests not running currently, and run them sequentially.
+</p>
+
+<p>
+Test are scripts which run from command line with no parameters returning 0,1,something else (0=ok, 1=fail, other=something strange happened).
+</p>
+
+<p>
+Wrapper will talk to the db and run the scripts. If scripts segfault or go bonkers, the wrapper will be fine and know something went wrong.
+</p>
+
+<p>
+Wrapper or harness need to know about users to be able to mail the person who registered the service when something goes wrong.
+</p>
+
+<p>
+EBI to check if we can open Mysql access to unique host outside (Man. Uni.).
+</p>
+
+<p>
+Scripts are also a good start for developing own client.
+</p>
+
+<p>
+Scripts are uploaded as zip with script or whatever is needed for the script to run + command to run.
+</p>
+
+</div>
+<!-- SECTION "Service testing" [9465-11410] -->
+<h3><a name="embrace_discussions_with_steve" id="embrace_discussions_with_steve">EMBRACE + discussions with Steve</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> cache wsdl 1st time uploaded to check if it changed. If changed, then put the service in amber and mail the provider/owner and give them a link asking them to verify any changes. “We&#039;ve noticed people modifying the wsdl and not updating the docs.” This has helped catch out some service changes.</div>
+</li>
+<li class="level2"><div class="li"> validate wsdl</div>
+</li>
+<li class="level2"><div class="li"> ping service</div>
+</li>
+<li class="level2"><div class="li"> WSI compliant test script (already done &amp; working in EMBRACE registry)</div>
+</li>
+<li class="level2"><div class="li"> DAS document validator</div>
+</li>
+<li class="level2"><div class="li"> tag suggestion very important</div>
+</li>
+<li class="level2"><div class="li"> maybe SOAPLAB should just be shown as a tag</div>
+</li>
+<li class="level2"><div class="li"> we need a generic relationship mechanism (“I&#039;m part of a group…”, “I&#039;m similar/identical to…”, “I&#039;m an alternative version to…”, “I&#039;m related to…”)</div>
+</li>
+<li class="level2"><div class="li"> nice to have 2 types of tests: from owner and from users (possibility to promote user tests by owner)</div>
+</li>
+<li class="level2"><div class="li"> annotations: could use revisions instead of editing but making looks like it&#039;s a simple edit (doing revision in the background)</div>
+</li>
+<li class="level2"><div class="li"> public part of the wiki should be dumped on to the website as static pages</div>
+</li>
+<li class="level2"><div class="li"> OR try to make the wiki look like the website</div>
+</li>
+<li class="level2"><div class="li"> basic filtering is needed (provider/type/tags)</div>
+</li>
+<li class="level2"><div class="li"> metallic code is for provider, not for user (capture quality of annotation)</div>
+</li>
+<li class="level2"><div class="li"> traffic light capture reliability</div>
+</li>
+<li class="level2"><div class="li"> star rating capture usefullness/quality/value ?</div>
+</li>
+<li class="level2"><div class="li"> can we really do classification services? Classification only works only if we know the classifications beforehand. Can we not just use tags?</div>
+</li>
+<li class="level2"><div class="li"> we need to find some biologists and ask them how they find services.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "EMBRACE + discussions with Steve" [11411-12978] -->
+<h3><a name="ui" id="ui">UI</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> bottom links don&#039;t stay at the bottom when click on tabs in <acronym title="Internet Explorer">IE</acronym> (content not pushing )</div>
+</li>
+<li class="level2"><div class="li"> next step for me would be to finish off the user “area” (password, profile…)</div>
+</li>
+<li class="level2"><div class="li"> check in the annotation icon relocation</div>
+</li>
+<li class="level2"><div class="li"> move side boxes inside body content &amp; stop using sidebar layout for now</div>
+</li>
+<li class="level2"><div class="li"> for annotations, we&#039;ll provide a Save and Cancel buttons → active saving for annotations</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "UI" [12979-13391] -->
+<h3><a name="search_browse_filtering" id="search_browse_filtering">Search/Browse/Filtering</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Browse: Need to be able to dynamically harvest the tags from subset to present them as categories/cloud</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Search/Browse/Filtering" [13392-] -->

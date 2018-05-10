@@ -1,0 +1,59 @@
+Date: Monday 16th Mar 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending ===== 
+
+**Manchester:** Jits, Carole, Franck
+
+**EBI:**
+
+
+
+===== Apologies =====
+
+Eric, Thomas, Rodrigo
+
+====== Agenda ======
+
+   * Actions from the last telcon
+   * Advisory board meeting - what are we presenting? draft [[Meetings:Advisory Board Mar 09| Agenda]]
+   * Possible collaboration with Microsoft-meeting with Rudy   
+   * Progress/developement of the pilot - are we rolling? 
+   * Test infrastructure setup at EBI         
+
+  * Technical meeting 
+    * Summary of tasks on rubyForge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+
+  * Carole/Steve: to look into hiring a summer student for BioCatalogue 
+
+====== Minutes ======
+ 
+This meeting focused on the SAB meeting next Friday 20-03-009. We updated the [[Meetings:Advisory Board Mar 09| Agenda]]
+
+Carole will send her draft slides around for comments
+
+===== Upcoming Meetings =====  
+  * BioCatalogue advisory board meeting
+
+  * [[http://projects.eml.org/sdbv/events/BiocurationMeeting/index.html|Biocuration]] meeting 16-19 april 
+
+  * ISMB - Franck has submitted a poster for that event. 
+
+===== AOB =====
+The EBI team will be in Manchester on the 19th for the advisory board meeting the next day. 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-03-05|Phone Conference Meeting on Mar 05 2009]] 
+
+Next meeting: [[Meetings:PhoneConf:2009-03-30|Phone Conference Meeting on Mar 30 2009]] 

@@ -1,0 +1,23 @@
+====== The BioCatalogue Focus group======
+The BioCatalogue focus group is composed of a key set of individuals, who provide guidelines, usage feedback and requirements that may arise from the user community. An area the group is actively focused on is the annotation and curation of web services in the BioCatalogue. 
+By choosing these individuals we recognize the value of the community in achieving the goal of the BioCatalogue, a curated catalogue of Life Science Web Service. 
+
+**Benjamin Good** \\
+Benjamin Good is interested in the construction of knowledge-based systems that get better with use.  Along these lines, his PhD research focused on open, mass-collaborative approaches for generating the ontologies and semantic annotations needed to drive the formation of the Semantic Web.  PhD 2009, University of British Columbia, Bioinformatics.   MSc 2000, University of Sussex, Evolutionary and Adaptive Systems. BS 1998, University of California San Diego, Cognitive Science.
+\\
+\\
+**Chrysanthi Ainali** \\
+Chrysanthi Ainali studied Applied Informatics at the University of Macedonia, in Greece. In Autumn 2007, she received a MRes in Bioinformatics at the University of York, after which she worked at the Bioinformatics Group of Mammalian Genetics Unit, in Medical Research Council, Harwell, UK. As part of ENFIN European project, she started developing the ENFIN Registry of Databases, which mainly focuses on the integration and sustainability of system biology databases. Since October 2008, she started a PhD in network inference and classification techniques aiming at personalized medicine at the Center for Bioinformatics at King's College University in London.
+\\
+\\
+**Duncan Hull** \\
+Duncan Hull is a software engineer in [[http://www.ebi.ac.uk/steinbeck/|Christoph Steinbeck's group]] at the European Bioinformatics Institute (EBI) working on research and development of the Chemical Entities of Biological Interest (ChEBI) ontology.
+\\
+\\
+**Marco Roos** \\
+Marco Roos performs integrative bioinformatics research at the Faculty of Science at the University of Amsterdam. He is currently part of the Dutch Virtual Laboratory for e-Science projects and the associated BioRange project. Marco’s main interest is the development of e-Science technology to research the function and structure of DNA in the cell. Apart from requiring detailed computational knowledge, Marco feels that current e-Science technology produces results that are difficult to interpret biologically. In addition, poor documentation makes it difficult to perform reliable and reproducible computer analysis. 
+\\
+\\
+**Olivier Sallou** \\
+Since 2 years, Olivier Sallou is in charge of the software developments for the GenOUEST platform. He also develops software for the Symbiose research team (INRIA), focused on pattern search/discovery in DNA/protein sequences. Before, he worked 9 years as a project manager at Alcatel Lucent in telecommunications field, mainly on VoIP and media servers. 
+

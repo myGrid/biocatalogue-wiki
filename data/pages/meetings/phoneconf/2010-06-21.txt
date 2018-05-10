@@ -1,0 +1,56 @@
+Date: Monday 21th June 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Jits, Manni, Franck
+
+**EBI:**
+
+Eric
+
+===== Apologies =====
+
+Rodrigo
+
+
+====== Agenda ======
+
+  * Actions from the last telecom
+  * Progress report 
+     * Review of Monitoring 
+     * Review of Curation
+     * Functional Unit (FU) in BioCatalogue     
+  * Publicity/outreach
+      * Franck presenting the Function Unit paper at IEEE
+      * Jits- BioCatalogue demo at ISMB 2010
+      * ECCB 2010 poster submitted 
+  * Technical meeting 
+    * Jira task list
+      * Priority tasks
+      * Tasks for next release 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+===== Actions from Previous Meeting =====   
+
+  * Eric to write down his latest idea about monitoring **completed** 
+  This is not really a new idea. It is more about sustainability of the current infrastructure and how a higher reliability and better coverage of the monitoring could be achieved. Documentation on this is available under [[development:next_steps_for_service_monitoring|developer notes]]
+
+  * Eric to send around a mail about endpoint monitoring **completed** 
+
+===== Upcoming Meetings =====  
+
+===== AOB ===== 
+
+===== Minutes =====
+Updating Carole with what's been going on with the BioCatalogue. 
+
+Previous meeting: [[Meetings:PhoneConf:2010-06-07|Phone Conference Meeting on June 07 2010]]
+
+Next meeting: [[Meetings:PhoneConf:2010-06-28|Phone Conference Meeting on June 28 2010]]

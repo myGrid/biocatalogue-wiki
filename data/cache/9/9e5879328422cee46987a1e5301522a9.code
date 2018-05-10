@@ -1,0 +1,38 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;annotations</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Annotations&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;filters<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;group</span> <span class="re0">name</span>=<span class="st0">&quot;Annotatables&quot;</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;type</span> <span class="re0">name</span>=<span class="st0">&quot;SOAP Services&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;ass&quot;</span> <span class="re0">description</span>=<span class="st0">&quot;&quot;</span><span class="re2">&gt;</span></span>
+          <span class="sc3"><span class="re1">&lt;filter</span> <span class="re0">urlValue</span>=<span class="st0">&quot;4&quot;</span><span class="re2">&gt;</span></span>WSDBFetchServerLegacyService<span class="sc3"><span class="re1">&lt;/filter<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;/type<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;/group<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/filters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sortBy</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort_by&quot;</span> <span class="re0">urlValue</span>=<span class="st0">&quot;created&quot;</span><span class="re2">&gt;</span></span>Created at date<span class="sc3"><span class="re1">&lt;/sortBy<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>4<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>19432<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;annotation</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Annotation&quot;</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/annotations/45714&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;annotatable</span> <span class="re0">resourceType</span>=<span class="st0">&quot;SoapService&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;WSDBFetchServerLegacyService&quot;</span> ...<span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;source</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Franck Tanoh&quot;</span> ...<span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;version<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/version<span class="re2">&gt;</span></span></span>
+      ...
+      <span class="sc3"><span class="re1">&lt;value<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;type<span class="re2">&gt;</span></span></span>String<span class="sc3"><span class="re1">&lt;/type<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;content<span class="re2">&gt;</span></span></span>
+          ...
+        <span class="sc3"><span class="re1">&lt;/content<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;/value<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2009-07-30T14:56:04Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/annotation<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;filters</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Filters&quot;</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/annotations/filters&quot;</span> ...<span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/annotations<span class="re2">&gt;</span></span></span>

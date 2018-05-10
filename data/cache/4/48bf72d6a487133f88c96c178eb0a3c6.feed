@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue public:api</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2013-07-28T00:51:11+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api:changelog&amp;rev=1277472988&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage&amp;rev=1270724547&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api:endpoints&amp;rev=1337328603&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api:use_cases&amp;rev=1272976315&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api:changelog&amp;rev=1277472988&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-06-25T14:36:28+01:00</dc:date>
+        <title>public:api:changelog</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api:changelog&amp;rev=1277472988&amp;do=diff</link>
+        <description>v1.1.0b - 25th June 2010
+
+	*  Added viewings and favourites counts to the /services/{id} endpoint (in the &lt;summary&gt; section).
+	*  New endpoint - /soap_services/wsdl_locations. Allows you to get a list of all the WSDL locations of all the SOAP based services in the catalogue.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage&amp;rev=1270724547&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-08T12:02:27+01:00</dc:date>
+        <title>public:api:coverage</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage&amp;rev=1270724547&amp;do=diff</link>
+        <description>COMING SOON!</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api:endpoints&amp;rev=1337328603&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2012-05-18T09:10:03+01:00</dc:date>
+        <title>public:api:endpoints</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api:endpoints&amp;rev=1337328603&amp;do=diff</link>
+        <description>Back to Main API docs page
+
+Back to Table of Endpoints
+
+It is recommended that you have a look at the information about the data model exposed by the REST API before utilising the endpoints.
+
+GET /
+
+
+OR: /api
+
+The root resource that provides information on the API.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api:use_cases&amp;rev=1272976315&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-05-04T13:31:55+01:00</dc:date>
+        <title>public:api:use_cases</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api:use_cases&amp;rev=1272976315&amp;do=diff</link>
+        <description>Various use cases have been taken into account in order to build an API that provides a balance between utility and simplicity. 
+
+This includes scenarios ranging from building simple scripts and mashups to integration with scientific workflow workbenches (like Taverna) and other repositories/registries.</description>
+    </item>
+</rdf:RDF>

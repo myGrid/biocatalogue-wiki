@@ -1,0 +1,1 @@
+Anytime you see this icon {{add_annotation.gif}} Click on it; a text box will pop up. Add your description and submit. Note that you need to sign in first before you can annotate a web service in BioCatalogue.

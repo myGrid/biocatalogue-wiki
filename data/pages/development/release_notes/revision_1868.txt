@@ -1,0 +1,40 @@
+===== BioCatalogue Release , April 22nd 2010 =====
+
+  * Previous release revision: 1842
+  * This release revision: 1868
+
+=== Steps To Take for Update ===
+
+In order...
+
+  * Update code base
+
+  * Run database update tasks:
+
+  rake db:migrate RAILS_ENV=production
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+  * reindex application
+
+  rake solr:reindex --trace RAILS_ENV=production
+
+=== Release Notes ===
+
+** Included in this release ** :
+
+  * Refactoring the test script enable/disable mechanism
+  * Providing UI for enabling disabling tests so that curators and administrators can manage tests included in the monitoring
+  * Fixed a bug where curators and admins could not delete other's tags
+  * Fixed a search bug that did not take into account the if condition for indexing of unactivated user
+  * Added functionality to allow specification of constrained values for REST parameters
+  * Functionality to edit the path of an endpoint
+  * Other Bug fixes

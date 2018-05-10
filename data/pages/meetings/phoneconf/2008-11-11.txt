@@ -1,0 +1,66 @@
+Date: Tuesday 11th Nov 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:**  
+Jiten, Franck, Constantinos
+
+**EBI:** 
+Thomas, Eric
+
+===== Apologies =====
+Carole, Rodrigo, Hamish, Katy
+
+===== Minuting =====
+Eric
+
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Progress with the pilot - are we rolling?
+
+  * BioCatalogue public wiki
+
+  * Next BioCatalogue F2F
+
+  * support for SAWSDL/WSMO/SA-REST
+
+  * AOB.
+
+===== Actions from Previous Meeting ===== 
+
+  * Eric: read EBI privacy policy and make sure we have a version appropriate for BioCatalogue - incorporate commments from Sergejs (and others, if any).
+  * Jits and Franck: add content to the Biocatalogue wiki
+  * Franck: mail the friends list with features for the pilot and when it will be available, along with a roadmap for after the pilot.
+  * Jits: Ask Carole what is happening on the 27th November - is there a Biocatalogue meeting in Edinburgh to meet up with Mark W
+  
+
+====== Minutes ======
+ 
+  * The urgency to release the pilot BioCatalogue was the main issue for discussion. The developers indicated that they were doing all they could to get the pilot released as soon as possible. Unfortunately, there were a few problems with the deployment which they were putting every effort into solving. The expectation was that the pilot will be release before the end of the week for internal use, and and beginning of next week to BioCatalogue friends.
+
+===== New Actions =====
+  * Action Thomas :  link the public wiki from the main biocatalogue.org site
+  * Action Eric : read through wiki content and send comments to Frank/Jiten
+  * Action Eric and Thomas : join the meeting with Steve from Embrace on Wednesday, Nov 19th
+  * Action Eric, Jiten, Thomas : Release the internal pilot with release notes
+  * Action Jiten, Franck : Prioritize the roadmap items and add time estimates
+  * Action Franck : email the list of possible dates for the project F2F so that people can indicate their availability
+  * Action Franck : Provide an example of a semantically annotated service(using the SAWSDL model)
+  Action Everyone : Read the SA-REST proposal and comment on how we can participate
+
+===== Upcoming Meetings ===== 
+Semantic Web Applications and Tools for Life Sciences - 28/11/08
+http://www.swat4ls.org/
+
+Syngenta 12 November - Franck to describe and possibly demo Biocatalogue. If the pilot is not ready, he will show screenshots
+
+===== AOB =====
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting:[[Meetings:PhoneConf:2008-11-04|Phone Conference Meeting on Nov 04 2008]] 
+
+Next meeting:[[Meetings:PhoneConf:2008-11-18|Phone Conference Meeting on Nov 18 2008]] 

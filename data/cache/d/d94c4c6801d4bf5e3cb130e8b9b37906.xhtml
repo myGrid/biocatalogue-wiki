@@ -1,0 +1,258 @@
+
+
+
+<h3><a name="database_model" id="database_model">Database Model</a></h3>
+<div class="level3">
+
+<p>
+
+A database backend will drive the BioCatalogue. What sort of metadata will this database hold? Generally, it will be about the users of the system and the services within the system. There are several user types as detailed under <a href="/wiki/doku.php?id=development:software_development:user_types" class="wikilink1" title="development:software_development:user_types">User Types</a>. A good share of the metadata about the users will be built over time and collected automatically. For example, what services they use or whether they have been annotating any services.
+</p>
+
+</div>
+<!-- SECTION "Database Model" [1-458] -->
+<h3><a name="pilot_entities" id="pilot_entities">Pilot Entities</a></h3>
+<div class="level3">
+<hr />
+
+</div>
+
+<h5><a name="user" id="user">User</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> As outline under <a href="/wiki/doku.php?id=development:software_development:requirements#user_details" class="wikilink1" title="development:software_development:requirements">user_details</a> , the catalogue will provide an authentication mechanism. The database will therefore hold information about the user to enable this. The information held will include:</div>
+</li>
+<li class="level1"><div class="li"> user name / password combination, with password stored in encrypted form</div>
+</li>
+<li class="level1"><div class="li"> email for contact (this could also be used as user name, which would make user names unique)</div>
+</li>
+<li class="level1"><div class="li"> openID</div>
+</li>
+<li class="level1"><div class="li"> First name/Surname</div>
+</li>
+</ul>
+<hr />
+
+</div>
+
+<h5><a name="profile" id="profile">Profile</a></h5>
+<div class="level5">
+
+<p>
+
+A profile could be created automatically for each registered user, with users encouraged to complete it. The profile information would provide further details about the user. This would include:
+</p>
+<ul>
+<li class="level1"><div class="li"> Institution</div>
+</li>
+<li class="level1"><div class="li"> Academic background</div>
+</li>
+<li class="level1"><div class="li"> Research interests</div>
+</li>
+<li class="level1"><div class="li"> Web page</div>
+</li>
+</ul>
+<hr />
+
+</div>
+
+<h5><a name="web_service" id="web_service">Web Service</a></h5>
+<div class="level5">
+
+<p>
+
+ In the case of a soap, a web service would be the envelop of the operations provided by that service and in the case of rest, the base <acronym title="Uniform Resource Locator">URL</acronym> to the &#039;resources&#039; exposed by that service. In the case of soap, the service would:
+</p>
+<ul>
+<li class="level1"><div class="li"> have at least one operation</div>
+</li>
+<li class="level1"><div class="li"> (an operation)take zero or more inputs and may or may not return an output. (It could also be argued that an operation always takes an input and always returns an output)</div>
+</li>
+<li class="level1"><div class="li"> have a location( a wsdl would define such a location )</div>
+</li>
+<li class="level1"><div class="li"> have a purpose, which would be detailed in the description of the service</div>
+</li>
+<li class="level1"><div class="li"> be of one of type <acronym title="Simple Object Access Protocol">SOAP</acronym></div>
+</li>
+<li class="level1"><div class="li"> be registered and annotated by some user</div>
+</li>
+</ul>
+<hr />
+
+</div>
+
+<h5><a name="operation_action" id="operation_action">Operation/Action</a></h5>
+<div class="level5">
+
+<p>
+
+The term operation here is not limited to its use in the soap documentation. It is also includes performing an action to expose a REST resource for example. (Maybe we need another term which avoids the potential confusion). An operation cannot exist in isolation. It MUST to be part of a web service. An operation would :
+</p>
+<ul>
+<li class="level1"><div class="li"> have a name</div>
+</li>
+<li class="level1"><div class="li"> belong to some parent service</div>
+</li>
+<li class="level1"><div class="li"> have a description</div>
+</li>
+<li class="level1"><div class="li"> possibly specify some constraints/ require certain resources</div>
+</li>
+<li class="level1"><div class="li"> possible take some inputs and possibly return some output</div>
+</li>
+<li class="level1"><div class="li"> be annotated by some user</div>
+</li>
+</ul>
+
+<p>
+
+Some of this meta data could be harvested at service registration time, say from a wsdl. We could write custom harvesters for that sort of information or explore libraries like soap4r to see if they can be leveraged for such a task
+ 
+</p>
+<hr />
+
+</div>
+
+<h5><a name="resource" id="resource">Resource</a></h5>
+<div class="level5">
+
+<p>
+
+Resources are here understood to be the set of dependencies that enable normal functionality of the service. These would include both physical dependencies such as software libraries and logical dependencies such as algorithms
+
+</p>
+<hr />
+
+</div>
+
+<h5><a name="web_service_type" id="web_service_type">Web Service Type</a></h5>
+<div class="level5">
+
+<p>
+The web service types that the systems would handle in the first instance would be :
+</p>
+<ul>
+<li class="level1"><div class="li"> <acronym title="Simple Object Access Protocol">SOAP</acronym></div>
+</li>
+<li class="level1"><div class="li"> REST</div>
+</li>
+<li class="level1"><div class="li"> DAS</div>
+</li>
+</ul>
+
+<p>
+
+There could be other service types in the future but most of the currently existing life science web services fall under these three categories 
+
+</p>
+<hr />
+
+</div>
+
+<h5><a name="input" id="input">Input</a></h5>
+<div class="level5">
+
+<p>
+
+The metadata about the input could include:
+</p>
+<ul>
+<li class="level1"><div class="li"> name, what is the input called?</div>
+</li>
+<li class="level1"><div class="li"> format, eg fasta</div>
+</li>
+<li class="level1"><div class="li"> how it is used computationally( e.g as a string)</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> annotations</div>
+</li>
+</ul>
+<hr />
+
+</div>
+
+<h5><a name="output" id="output">Output</a></h5>
+<div class="level5">
+
+<p>
+
+Similar to the metadata collected for inputs,outputs would also have names, format, computational type, &#039;semantic type&#039;,possible mime types, description, references to the operations that generate the kind of output, annotations of the input
+
+</p>
+<hr />
+
+</div>
+
+<h5><a name="type_computational_semantic_mime" id="type_computational_semantic_mime">Type (Computational, Semantic, Mime)</a></h5>
+<div class="level5">
+<hr />
+
+</div>
+
+<h5><a name="workflow" id="workflow">Workflow</a></h5>
+<div class="level5">
+<hr />
+
+</div>
+
+<h5><a name="tag" id="tag">Tag</a></h5>
+<div class="level5">
+
+<p>
+
+Freely annotatable entities are essentially taggable. An issue could arise on how appropriate tags are, as they could easily mean different things to different people. There may not be a simple solution to these kinds of conflits, but they may be limited by the use of &#039;constrained language&#039;. The database however, simply stores tags and could well keep references to who generated the tags.
+
+</p>
+<hr />
+
+</div>
+<!-- SECTION "Pilot Entities" [459-4206] -->
+<h3><a name="pilot_relationships" id="pilot_relationships">Pilot Relationships</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> User HAS Profile</div>
+</li>
+<li class="level1"><div class="li"> User REGISTERS  Web Services</div>
+</li>
+<li class="level1"><div class="li"> User INVOKES  Web Services</div>
+</li>
+<li class="level1"><div class="li"> User ANNOTATES/CURATES  Web Services</div>
+</li>
+<li class="level1"><div class="li"> User ANNOTATES/CURATES an Operation/Action</div>
+</li>
+<li class="level1"><div class="li"> User ANNOTATES/CURATES  Inputs</div>
+</li>
+<li class="level1"><div class="li"> User ANNOTATES/CURATES  Outputs</div>
+</li>
+<li class="level1"><div class="li"> Web Service HAS Operations</div>
+</li>
+<li class="level1"><div class="li"> Web Service USES Resources</div>
+</li>
+<li class="level1"><div class="li"> Web Service IS of a certain Type (<acronym title="Simple Object Access Protocol">SOAP</acronym>,REST, DAS)</div>
+</li>
+<li class="level1"><div class="li"> Web Service IS USED in Workflows</div>
+</li>
+<li class="level1"><div class="li"> Operation/Action HAS Inputs</div>
+</li>
+<li class="level1"><div class="li"> Operation/Action GENERATES Outputs</div>
+</li>
+<li class="level1"><div class="li"> Operation/Action USES Resources</div>
+</li>
+<li class="level1"><div class="li"> Input/Out IS of certain Type (Computational, Semantic, Mime)</div>
+</li>
+<li class="level1"><div class="li"> Tag IS an Annotation</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Pilot Relationships" [4207-4831] -->
+<h3><a name="data_integrity" id="data_integrity">Data Integrity</a></h3>
+<div class="level3">
+
+<p>
+
+The catalogue requires a mechanism to ensure data integrity. This integrity can be enforced at either the database level or the application level or both. There are advantages and disadvantages with the different approaches. The main advantage with enforcing consistency at the application level, is the level of flexibility it then allows to the database. As this is the development phase of the catalogue, there is a very high probably that database will be changing rather often. This would favor defining the consistency constraints at the application level initially and probably (partially or completely)using the DDL level integrity definitions later when the data model becomes fairly stable.
+</p>
+
+</div>
+<!-- SECTION "Data Integrity" [4832-] -->

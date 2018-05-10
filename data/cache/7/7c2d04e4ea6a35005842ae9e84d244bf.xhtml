@@ -1,0 +1,69 @@
+
+<p>
+This section contains all the stories users tell us to outline their requirements. 
+
+</p>
+
+<h1><a name="marco_s_story" id="marco_s_story">Marco&#039;s story</a></h1>
+<div class="level1">
+
+<p>
+Sent 05/08/08 on BioCatalogue mailing list
+</p>
+
+<p>
+Last week I experienced how version notification from BioCatalogue would be useful. My colleague Martijn Schuemie from Rotterdam had provided me with a service for human protein name synonyms. Only through our e-mails and skype chat I found out that he recently updated his service to include mouse and rat synonyms. How could BioCatalogue (BioNanny?) help here?
+</p>
+
+<p>
+Martijn suggested to request service providers to always include methods such as getVersion() and getLastModifiedDate(). Assuming we can&#039;t (and probably shouldn&#039;t) enforce that, perhaps we can persuade users to do so by adding the inclusion of these methods in an automatic quality metric?
+Is this what &#039;BioNanny&#039; is also about? I already started to imagine a picture of BioNanny looking stern when such elements are lacking, and happy when you&#039;ve been good <img src="/ebiwiki/biocatalogue/lib/images/smileys/icon_wink.gif" class="middle" alt=";-)" />
+</p>
+
+<p>
+Another idea is perhaps to see if the communication Martijn and I had can somehow be done with BioCatalogue as an intermediate, a sort-of agent. I imagine Martijn adding update information to his registered service; information that I would be notified of automatically when I use his service.
+</p>
+
+</div>
+<!-- SECTION "Marco's story" [85-1278] -->
+<h1><a name="david_de_rourehow_i_would_build_biocatalogue" id="david_de_rourehow_i_would_build_biocatalogue">David De Roure: How i would build BioCatalogue</a></h1>
+<div class="level1">
+
+<p>
+Hi - I braindumped some thoughts on Biocatalogue earlier this week in Edinburgh, and have now typed them up - feel free to circulate as you wish.
+</p>
+
+<p>
+First, service provision.  I come from a world where service providers have complex IT infrastructure supporting multiple sets of customers (ie I used to work for BT!).  This is the world of <acronym title="Open Source Software">OSS</acronym>/BSS systems (Operations and Business Support Systems). <acronym title="Open Source Software">OSS</acronym> systems look after service provision, network components and configuration, inventory, fault handling (and in BSS, the B is for business and billing).  So you can get a lot of service information from an <acronym title="Open Source Software">OSS</acronym> system.
+</p>
+
+<p>
+However they may implement it, the service providers in biocatalogue potentially carry a similar set of information - service descriptions, availability, capacity, fault handling, even billing.  Operationally they probably have service availability monitoring in place, and they probably have a means of documenting their services and of informing customers about faults and about scheduled changes.  Every provider may do some or all of these things and they may do it differently. So I see whole wealth of service metadata being provided by the service providers, in a variety of formats and through a variety of mechanisms.
+</p>
+
+<p>
+On the consumer side we also gather lots of information about a service, through usage (eg running workflow), through testing (eg the OMII-UK “workflow decay” batch service monitor, monitors like nagios, cronjobs, and the many tools for web site testing).  Again, a wealth of info in a variety of formats and through a variety of mechanisms.  And somewhere in between we have Franck generating a stream of annotations!
+</p>
+
+<p>
+The goal is to do something with all this info so that users can find out what they need to know about services. The great thing about all the info is that, although it&#039;s diverse, there is a bit of structure to it, some common vocabulary, some vaguely consistent practices, maybe even some common IDs.  So we stand a chance of doing something with it! But it ain&#039;t perfect - we also need to be careful about errors, inconsistencies and data explosion.
+</p>
+
+<p>
+One of the candidate off-the-shelf technologies to apply to this problem is <acronym title="Resource Description Framework">RDF</acronym>.  Each of the sources can be converted to <acronym title="Resource Description Framework">RDF</acronym> (being filtered in the process) and validated.  The appropriate info can then be dropped into an <acronym title="Resource Description Framework">RDF</acronym> store or stores, where it constitutes de facto the service model (as we learned in myExperiment, this can be pragmatic - no need to follow any particular service model standard, just be able to export compliant info as demanded).  That store is then the basis of the catalogue, and can be queried programmatically (eg sparql endpoint, REST <acronym title="Application Programming Interface">API</acronym>) or through a UI (which could be built in e.g. RoR, i.e. the pilot!)
+</p>
+
+<p>
+This approach basically says take some existing tools and configure them rather that writing from scratch. There are some known challenges.  <acronym title="Resource Description Framework">RDF</acronym> stores don&#039;t scale beyond a certain size, so we need to do some back-of-envelope sums.  Checking and querying them can make use of reasoners, and these aren&#039;t all production quality just yet (even if the semantic task is within scope, they&#039;re not all coded for industrial use). Converting and validating the <acronym title="Resource Description Framework">RDF</acronym> is fiddly and can be fragile.
+</p>
+
+<p>
+So aside from the pilot, I think a really illuminating exercise would be to go through this process manually; i.e. take a load of service metadata based on what&#039;s currently available and what&#039;s being set up for the pilot, convert by hand to <acronym title="Resource Description Framework">RDF</acronym>, store and query.  This would enable us to make an informed decision as to whether biocatalogue is principally a coding task or a tool configuration task (it will be both I&#039;m sure!)
+</p>
+
+<p>
+What are the other ways?  A fixed schema that providers need to comply with?  These need to be on the table too.
+</p>
+
+</div>
+<!-- SECTION "David De Roure: How i would build BioCatalogue" [1279-] -->

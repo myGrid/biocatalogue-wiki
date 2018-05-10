@@ -1,0 +1,10 @@
+<span class="sc3"><span class="re1">&lt;search</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/search?q=dbfetch&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;service</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/608&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Service&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Service - DBFetch&quot;</span><span class="re2">&gt;</span></span>...<span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;soapOperation</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/soap_operations/607&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;SoapOperation&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Soap Operation - fetchData&quot;</span><span class="re2">&gt;</span></span>...<span class="sc3"><span class="re1">&lt;/soapOperation<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/search<span class="re2">&gt;</span></span></span>

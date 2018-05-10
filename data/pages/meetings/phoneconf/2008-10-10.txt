@@ -1,0 +1,51 @@
+====== Meeting Agenda/Minutes ======
+
+Date: Tuesday 10th October 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** Franck, Jits, 
+
+**EBI:** Eric, Thomas, Rodrigo
+
+===== Apologies =====
+
+
+===== Minuting =====
+
+
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Progress with the pilot - are we rolling?
+  
+  * BioMoby web services 
+
+  * AOB.
+
+
+===== Actions from Previous Meeting ===== 
+
+  * Eric: to look at the BioMoby code Eddy sent 
+  * Jits: Speak to Dave about the new privacy policy in myExperiment 
+  * Everyone: read EBI privacy policy.
+  *   
+
+====== Minutes ======
+
+===== New Actions =====
+ 
+===== Next Meeting =====
+
+===== Upcoming Meetings ===== 
+
+===== AOB =====
+ 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-09-30|Phone Conference Meeting on Sept 30 2008]]
+
+Next meeting: 

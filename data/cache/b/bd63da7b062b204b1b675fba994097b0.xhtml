@@ -1,0 +1,68 @@
+
+<h1 class="sectionedit1" id="favourites_plugin">Favourites Plugin</h1>
+<div class="level1">
+
+<p>
+Available here: <a href="http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/favourites/" class="urlextern" target="_blank" title="http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/favourites/"  rel="nofollow">http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/favourites/</a>
+</p>
+
+<p>
+IMPORTANT: you have to create a controller and model for favourites again in your app (but leaving them blank is fine though they can be used to extend the original ones from the plugin. AND use require_dependency (see examples of usage in BioCatalogue).
+</p>
+<ul>
+<li class="level1"><div class="li"> Controller depends on the presence of login_required, logged_in? and current_user methods (these should be in your application controller). The current_user method MUST return nil if no user is currently logged in.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Whilst running in development mode, if you get an error such as: ”<em>A copy of ApplicationController has been removed from the module tree but is still active!</em>”, then restart your server. This is due to the way Rails autoloads files in development mode, which affects the plugin and any extensions in the main app (eg: {app_root}/app/models/favourite.rb).</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Favourites Plugin" [1-960] -->
+<h2 class="sectionedit2" id="dependencies">Dependencies</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Gem: <a href="http://github.com/pluginaweek/plugin_test_helper/tree/master" class="urlextern" target="_blank" title="http://github.com/pluginaweek/plugin_test_helper/tree/master"  rel="nofollow">plugin_test_helper</a> (in order to run the tests for the plugin).</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Dependencies" [961-1125] -->
+<h2 class="sectionedit3" id="data_model">Data Model</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "Data Model" [1126-1149] -->
+<h3 class="sectionedit4" id="entities">Entities</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="favourites">Favourites</h4>
+<div class="level4">
+
+<p>
+Table name: favourites
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> favouritable_type</div>
+</li>
+<li class="level1"><div class="li"> favouritable_id</div>
+</li>
+<li class="level1"><div class="li"> user_id</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "Entities" [1150-] -->

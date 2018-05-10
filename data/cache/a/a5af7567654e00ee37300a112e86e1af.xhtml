@@ -1,0 +1,78 @@
+
+
+
+<h2><a name="biocatalogue_release_april_22nd_2010" id="biocatalogue_release_april_22nd_2010">BioCatalogue Release , April 22nd 2010</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Previous release revision: 1842</div>
+</li>
+<li class="level1"><div class="li"> This release revision: 1868</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="steps_to_take_for_update" id="steps_to_take_for_update">Steps To Take for Update</a></h4>
+<div class="level4">
+
+<p>
+
+In order…
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Update code base</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Run database update tasks:</div>
+</li>
+</ul>
+<pre class="code">rake db:migrate RAILS_ENV=production</pre>
+<ul>
+<li class="level1"><div class="li"> Restart the worker(s). For each, do: </div>
+</li>
+</ul>
+<pre class="code">ruby script/worker stop
+ruby script/worker start</pre>
+<ul>
+<li class="level1"><div class="li"> Rebuild assets</div>
+</li>
+</ul>
+<pre class="code">rake asset:packager:build_all</pre>
+<ul>
+<li class="level1"><div class="li"> Restart application instance(s)</div>
+</li>
+<li class="level1"><div class="li"> reindex application</div>
+</li>
+</ul>
+<pre class="code">rake solr:reindex --trace RAILS_ENV=production</pre>
+
+</div>
+
+<h4><a name="release_notes" id="release_notes">Release Notes</a></h4>
+<div class="level4">
+
+<p>
+
+<strong> Included in this release </strong> :
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Refactoring the test script enable/disable mechanism</div>
+</li>
+<li class="level1"><div class="li"> Providing UI for enabling disabling tests so that curators and administrators can manage tests included in the monitoring</div>
+</li>
+<li class="level1"><div class="li"> Fixed a bug where curators and admins could not delete other&#039;s tags</div>
+</li>
+<li class="level1"><div class="li"> Fixed a search bug that did not take into account the if condition for indexing of unactivated user</div>
+</li>
+<li class="level1"><div class="li"> Added functionality to allow specification of constrained values for REST parameters</div>
+</li>
+<li class="level1"><div class="li"> Functionality to edit the path of an endpoint</div>
+</li>
+<li class="level1"><div class="li"> Other Bug fixes</div>
+</li>
+</ul>
+
+</div>

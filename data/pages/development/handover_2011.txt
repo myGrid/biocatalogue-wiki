@@ -1,0 +1,34 @@
+====== Handover (Aug - Sep 2011) ======
+
+This page will document everything that is done to handover the BioCatalogue stuff mainly to Robert Haines, under the BioVel project.
+
+===== IMPORTANT =====
+
+  * [[development:pilot_dev_notes|Accounts, Passwords, Mailing Lists info page]]
+
+===== Misc =====
+
+==== On 2011-08-03 ====
+
+Added Rob to: 
+
+  * BioCatalogue Google **Calendar** (but maybe we this can be subsumed into another calendar?)
+  * As an admin to the **[[http://rubyforge.org/projects/biocatalogue/|RubyForge repository]]**
+  * The **[[http://wiki.biocatalogue.org|wiki]]**
+  * The **internal BioCatalogue mailing list** - project management decisions and discussions (fairly low traffic).
+    * The admin page for this: http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1
+  * The **[[http://rubyforge.org/mailman/listinfo/biocatalogue-developers|biocatalogue-developers]]** mailing list - code commit reports; JIRA bug reports and changes; service monitoring emails; biocat error emails; internal developer discussions and so on (very high traffic) [I tend to filter these into about 4 different folders depending on the emails].
+    * The admin page for this: http://rubyforge.org/mailman/admin/biocatalogue-developers
+  * The **[[http://rubyforge.org/mailman/listinfo/biocatalogue-hackers|biocatalogue-hackers]]** mailing list - public API/tool hackers list (practically no traffic at the mo; maybe should be disbanded).
+    * The admin page for this: http://rubyforge.org/mailman/admin/biocatalogue-hackers
+  * The **[[http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&A=1|biocatalogue-friends]]** mailing list - community mailing list for the biocatalogue (practically no traffic at the mo).
+    * The admin page for this: http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1
+  * The **[[http://rubyforge.org/mailman/listinfo/biocatalogue-support|biocatalogue-support]]** mailing list - support list for responding to people who email contact@biocatalogue.org or contact us via the website; also receives some systems emails from EBI (fairly low traffic).
+    * The admin page for this: http://rubyforge.org/mailman/admin/biocatalogue-support
+  * **biocatalogue-SAB** mailing list admin: http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1
+  * The new **[[http://www.biocatalogue.org/docs|docs site]]**
+  * **[TODO]** The **[[http://www.mygrid.org.uk/dev/issues/browse/BIOCAT|JIRA bug tracker]]**
+  * The BioCatalogue shared **dropbox** folder.
+
+
+

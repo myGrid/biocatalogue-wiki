@@ -1,0 +1,263 @@
+====== Software Requirements Specification for BioCatalogue ======
+===== Revision History =====
+
+[[Development: Requirements for Pilot|Initial Draft]] - October 2008
+
+Revision 1 - April 2009
+
+===== Introduction =====
+
+==== Purpose ==== 
+The purpose of the BioCatalogue is to provide an online resource for Web Service providers in the Life Sciences to publish their services and for users of those services to find enough information about those services to use them effectively
+
+==== Scope ====
+
+The BioCatalogue will be accessible to the world. Anyone can register and submit data to the system
+
+==== Overview ====
+
+The BioCatalogue has the following main goals :
+
+  * Provide a single registration point for Web Service providers and a single search site for scientists and developers.
+  * Provide a curated catalogue of life science web services
+  * Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.
+  * BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.
+
+==== References ====
+
+[[Development: Requirements for Pilot|Initial Draft Requirements]]
+
+===== Overall Description =====
+
+==== BioCatalogue Perspective ====
+BioCatalogue should provide a very simple mechanism registration of Web Services. It should allow for easy update of the service entries. It should allow users to have a quick glance of the entries in the catalogue with the possibility of drilling down into a specific entries. BioCatalogue should permit anyone to register(have an account) and when logged-in, be able to submit data. BioCatalogue should remove or reduce the gaps of understanding between service-providers and service-users about the services.
+
+==== BioCatalogue Functions ====
+
+<html>
+<!--
+====== Revised Requirements for Pilot (April'09) ======
+
+IMPORTANT: This list discards the **completed** requirements from [[Development: Requirements for Pilot|Requirements (for Oct '08)]] and adds new requirements mainly raised from the  [[Meetings:F2F Dec 08|Dec '08 F2F @ EBI]].
+
+**Planning** for the pilot is in a [[Development:pilot_dev_planning|separate page]] (to include other tasks like public wiki updates, content acquisition, community liaising and so on).
+
+Note(1): annotations in '[]' are [[http://en.wikipedia.org/wiki/MoSCoW_Method|MoSCoW]] classifications.
+
+Note(2): estimated development and testing times ares included in the titles. These only take into account [Must] and [Should] requirements, and reflect "one FTE developer" days.
+
+===== Pending from Initial Requirements =====
+
+Ref: [[Development: Requirements for Pilot|Requirements (for Oct '08)]]
+
+Note: the requirements that have been crossed out are the ones that won't be done for April.
+
+-->
+</html>
+
+=== User Management ===
+ 
+BioCatalogue will provide functionality for the creation of user accounts and the management of those accounts
+
+== Specific Requirements ==
+ 
+* [Must] [[development:stories:user_registration|User registration]] ({{:create_account.jpg?linkonly|mockup1}} {{:create_account_and_profile_2.jpg?linkonly|mockup2}})
+    * Authentication information
+      * [Could] [[http://openid.net/|OpenID]]
+      * [Must] E-mail address (will be used as username) and password
+      * [Must] E-mail confirmation 
+      * [Could] Password reset, alternatively can be done through contacting system admin
+    * User details
+      * [Must] Name
+      * [Must] Organisation/affiliation
+  * [Must] Login/logout
+  * [Must] Change details
+    * Specifically the core information. This may be integrated into User Profile management (see [[#User Profile]]).
+  * [Won't] Delete user account? //(Only by an admin, or when a user is deleted)//
+  * [Must] When signing up, users have to accept Terms and Conditions and Privacy Policy.
+  * [Must] Provide user classification, with different permission levels to different classes of users
+  * [Must] Provide a privileged user class (admin)
+  * Show sign up date as part of profile
+
+== User Management constraints ==
+  * Only admins can remove user accounts
+
+== Additional Information for User Profile ==
+
+  * [Could] Avatar
+  * [Should] About the user
+    * [Could]Description
+    * [Must] Date of signup
+    * [Could] Date of last access
+    * [Could]Interests
+    * [Should]City & Country
+
+== Profile Management ==
+
+  * [Could] Profile link with other social networking sites
+
+=== Service Submission and Management ===
+
+  * Import SoapLab services
+  * REST
+  * <del>BioMART</del>
+  * Duplicate checking
+  * Import EMBRACE registry services
+  * Batch submission (?) (Eric: we need a way of importing lots of data but that's not the same as batch submission functionality for users).
+  * Service annotation underlying model and mechanism
+  * <del>Versioning - detection of service changes</del>
+
+
+=== Search ===
+
+  * Filtering
+  
+
+=== Ontologies ===
+
+  * <del>Using myGrid ontologies</del>
+
+=== Event Logging ... ===
+
+  * Logging of all internal actions
+  * Single notification system for news feeds
+
+=== APIs ===
+
+  * <del>REST</del>
+  * OpenSearch description doc
+  * <del>OpenSearch API with RSS/ATOM results</del>
+
+=== Extended ===
+
+  * Community annotations
+  * <del>myExp integration</del>
+
+
+==== New/Clarified Requirements ====
+
+=== Service Submission & Management ===
+
+  * Handling ownership management (request, confirmation etc).
+    * "Are you the owner?"
+    * "Why not notify the owner to submit this service and provide descriptions?"
+    * "Do you know the provider/owner of this service?"
+  * Submission support for:
+    * REST (URL + descriptions + manual Resources).
+    * DAS (URL + descriptions + some parsing).
+    * General services (URL + plenty of descriptions).
+    * BioMoby
+    * **?** Do we need to allow different interfaces to be submitted at the same time, as one service?
+  
+  * Submission incentives:
+    * Explain the benefits of adding extra information (eg: will show up in search listings).
+    * Give an indicator on how well annotated the service before submission.
+    
+  * For duplication checks:
+    * We should detect the endpoint as well as WSDL URL as duplicates!
+    
+** From Embrace Registry**
+  * DAS service submission with possible re-use of the DAS parser in bioruby or utopia
+  * REST service submission (url + resources + descriptions)
+    * url to DAS collection, descriptions of resources
+  * Validation of wsdl before submission
+  * API for service submission
+
+=== Search & Discovery ===
+
+  * Sorting & filtering (objective criteria):
+    * Sorting:
+    * Creation date
+    * Modified date
+    * Provider
+    * Service type
+    * Location of WS
+    * Date modified/created range?
+    * Cost (free/non-free)
+    * Requires authentication
+    * Existence of usage conditions
+    * Level of annotation (Platinum, Gold, Silver, Bronze)
+    * Rating
+    * Last test status
+    * Last monitor status
+  * Being able to search URLs
+  * Listings (like EMBRACE registry)
+    * all services
+    * my services
+    * top rated services
+
+
+=== Service Testing Infrastructure and Ability ===
+
+  * Ability to run scripts as tests for services, as per the EMBRACE registry.
+    * show service status (traffic light system)
+    * ability to upload test script
+    * mailing test maintainer about service status changes
+    * API to query status of a particular service
+  * Distinction between tests and examples;
+    * test provided by service provider
+    * examples by any user of the service
+
+
+=== Service Monitoring ===
+
+  * Set up and integrate BioNanny:
+    * Collecting QoS metrics
+    * Service Ping
+    * Availability of descriptor document
+    * Availability of endpoint
+    * Test example(s)/workflow(s) to check functionality
+  * Mail service maintainer about changes in service status
+  * Ability to register interest in a service
+
+=== File Upload/Download ===
+  * test log view and download
+  * test auxiliary file upload
+
+
+=== User Interface ===
+
+  * Better search listings
+  * Discovery interface (with sorting and filtering)
+  * Service submission page
+  * User profile page needs to be improved
+  * Layering of annotations
+
+
+=== Annotations ===
+
+  * Tags
+  * Description
+  * Ratings
+  * Reviews
+  * Comments
+  * Examples
+  * Hints
+  * Documentation Links
+  * Contact Details
+  * Download Site
+  * License / Terms of Use
+  * Cost
+  * Access Control
+  * Project associated with service
+  * Data used by service
+  * user provided  version information
+  
+
+=== Content Acquisation ===
+
+  * Script to import EMBRACE services and annotations
+  * BioMoby
+
+
+=== From Carole [07/12/08] ===
+
+go to the front page of SeekDa!
+
+  * see the "most recently found" and "most commonly used"
+  * see the sort selection box on search - that is what we were discussing on Thursday.
+  * see the "related search" box which uses a basic ontology (people who searched for X also searched for Y)
+
+=== Auto / suggested tagging from ontologies ===
+
+As per discussions in Jan 09, and myExperiment work on this.

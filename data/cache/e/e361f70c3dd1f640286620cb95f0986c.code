@@ -1,0 +1,25 @@
+&nbsp;
+<span class="co1"># Require the necessary components</span>
+<span class="kw3">require</span> <span class="st0">'rubygems'</span>
+<span class="kw3">require</span> <span class="st0">'open-uri'</span>
+<span class="kw3">require</span> <span class="st0">'json/ext'</span>
+&nbsp;
+<span class="co1"># Set up the endpoint URL you want to access</span>
+endpoint_url = <span class="st0">&quot;http://www.biocatalogue.org/services&quot;</span>
+&nbsp;
+<span class="co1"># Set up an informative HTTP USER AGENT</span>
+http_user_agent = <span class="st0">&quot;My test script; Ruby/#{RUBY_VERSION}&quot;</span> <span class="st0">&quot;MyTestScript/1.0 (X11; U; Linux x86_64; en-US) Ruby/#{RUBY_VERSION}&quot;</span>
+&nbsp;
+<span class="co1"># Fetch and parse the JSON document</span>
+json = <span class="kw3">open</span><span class="br0">&#40;</span>endpoint_url, <span class="st0">&quot;Accept&quot;</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;application/json&quot;</span>, <span class="st0">&quot;User-Agent&quot;</span> <span class="sy0">=&gt;</span> http_user_agent<span class="br0">&#41;</span>.<span class="me1">read</span>
+document = JSON<span class="br0">&#40;</span>json<span class="br0">&#41;</span>
+&nbsp;
+<span class="kw3">puts</span> <span class="st0">&quot;The #{document['services']['per_page']} latest results provided by '#{endpoint_url}' are:&quot;</span>
+&nbsp;
+document<span class="br0">&#91;</span><span class="st0">'services'</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="st0">'results'</span><span class="br0">&#93;</span>.<span class="me1">each</span> <span class="br0">&#123;</span> |service|
+  <span class="co1"># Do some stuff with the object</span>
+  ...
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co1"># Do some other stuff with the JSON document</span>
+...

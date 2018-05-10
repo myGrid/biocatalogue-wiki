@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <image rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico" />
+       <dc:date>2008-06-30T18:22:52+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=collaborations&amp;rev=1214837157&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development&amp;rev=1214836362&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=home&amp;rev=1214385522&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings&amp;rev=1214835821&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=publications_and_presentations&amp;rev=1214837180&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=sidebar&amp;rev=1214837349&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=start&amp;rev=1214239727&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <url>http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=collaborations&amp;rev=1214837157&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-30T15:45:57+01:00</dc:date>
+        <title>collaborations</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=collaborations&amp;rev=1214837157&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development&amp;rev=1214836362&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-30T15:32:42+01:00</dc:date>
+        <title>development</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development&amp;rev=1214836362&amp;do=diff</link>
+        <description>*  Software Development
+	*  Infrastructure Development</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=home&amp;rev=1214385522&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-25T10:18:42+01:00</dc:date>
+        <title>home</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=home&amp;rev=1214385522&amp;do=diff</link>
+        <description>This is the wiki home page of the BioCatalogue Project.
+
+BioCatalogue will provide a curated and comprehensive catalogue of biological web services, thereby enabling users (people and programs) to discover and use these services easily. It also aims to provide a platform with several (standardized) interfaces and a suite of tools for registration of services by the community of users as well empower the community to extend and enhance the system. BioCatalogue will provide a centralized biologica…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings&amp;rev=1214835821&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-30T15:23:41+01:00</dc:date>
+        <title>meetings</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings&amp;rev=1214835821&amp;do=diff</link>
+        <description>*  Project Kick-Off Meeting/Manchester/April 28-29 2008
+	*  Phone Conferences (Manchester-EBI)
+	*  Joint myExperiment-BioCatalogue Meetings</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=publications_and_presentations&amp;rev=1214837180&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-30T15:46:20+01:00</dc:date>
+        <title>publications_and_presentations</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=publications_and_presentations&amp;rev=1214837180&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=sidebar&amp;rev=1214837349&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-30T15:49:09+01:00</dc:date>
+        <title>sidebar</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=sidebar&amp;rev=1214837349&amp;do=diff</link>
+        <description>Home
+
+Development
+
+Meetings
+
+Collaborations
+
+Publications and Presentations
+
+
+
+Wiki help</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=start&amp;rev=1214239727&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-23T17:48:47+01:00</dc:date>
+        <title>start</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=start&amp;rev=1214239727&amp;do=diff</link>
+        <description>This is the wiki home page of the BioCatalogue Project.
+
+BioCatalogue will provide a curated and comprehensive catalogue of biological web services, thereby enabling users (people and programs) to discover and use these services easily. It also aims to provide a platform with several (standardized) interfaces and a suite of tools for registration of services by the community of users as well empower the community to extend and enhance the system. BioCatalogue will provide a centralized biologica…</description>
+    </item>
+</rdf:RDF>

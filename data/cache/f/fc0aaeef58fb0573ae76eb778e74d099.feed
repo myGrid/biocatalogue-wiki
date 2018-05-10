@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2013-07-04T17:40:45+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:test_harness_documentation&amp;rev=1372255962&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_logs&amp;rev=1372255916&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:installing_a_new_release&amp;rev=1372255872&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:istalled_ruby_gems&amp;rev=1372255824&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:file_sharing&amp;rev=1372255786&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:databases&amp;rev=1372255730&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_application_stack_specs&amp;rev=1372255646&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:background_tasks&amp;rev=1372255554&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:application_directory&amp;rev=1372255398&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:live_site&amp;rev=1372255143&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:test_site&amp;rev=1372255033&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:application_configuration&amp;rev=1372252095&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:test_harness_documentation&amp;rev=1372255962&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:12:42+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:test_harness_documentation - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:test_harness_documentation&amp;rev=1372255962&amp;do=diff</link>
+        <description>Test Harness Machine (ves-hx-2c ):
+
+  Machine Name : ves-hx-2c
+  Operating System : Fedora 14
+  Users : root &amp; biocat
+
+This machine runs the biocatalogue test harness. The harness is located under two directories : development and production running against the test and live sites respectively. The corresponding directories are shown below with the directory structure shown for production only since they are identical:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_logs&amp;rev=1372255916&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:11:56+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:release_logs - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_logs&amp;rev=1372255916&amp;do=diff</link>
+        <description>Live Site
+
+ 
+v1.0.1 - Jun 2011
+
+Release Notes
+
+SVN revision: 
+
+ 
+v1.0.0 - sometime in Mar 2011
+
+Release Notes
+
+SVN revision: 2375
+
+ 
+Test Site
+
+ 
+v1.0.0 - sometime in Feb/Mar 2011
+
+Release Notes
+
+SVN revision: 2371</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:installing_a_new_release&amp;rev=1372255872&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:11:12+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:installing_a_new_release - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:installing_a_new_release&amp;rev=1372255872&amp;do=diff</link>
+        <description>Every new BioCatalogue release has to to go through validation on the test site first before being put into production. The procedure for installing a new release on the test site should be the same as for the live site. The basic protocol is to run the biocatalogue check out script which is available in the bin directory of the test and live application directories. This script checks out a new release(lastest) if it has not been checked out already then configures it by creating symlinks from …</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:istalled_ruby_gems&amp;rev=1372255824&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:10:24+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:istalled_ruby_gems - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:istalled_ruby_gems&amp;rev=1372255824&amp;do=diff</link>
+        <description>Below is the list of gems that have been installed on the server machines:
+
+* LOCAL GEMS *
+
+  abstract (1.0.0)
+  actionmailer (2.3.2)
+  actionpack (2.3.2)
+  activerecord (2.3.2)
+  activeresource (2.3.2)
+  activesupport (2.3.2)
+  addressable (2.2.2)
+  arel (2.0.6)
+  authlogic (2.1.1)
+  builder (2.1.2)
+  bundler (1.0.7)
+  chriseppstein-compass (0.6.6)
+  crack (0.1.2)
+  daemon_controller (0.2.5)
+  daemons (1.1.0)
+  diff-lcs (1.1.2)
+  disqus (1.0.1)
+  Dnsruby (1.0)
+  dnsruby (1.51)
+  erubis (2.6.6)
+…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:file_sharing&amp;rev=1372255786&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:09:46+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:file_sharing - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:file_sharing&amp;rev=1372255786&amp;do=diff</link>
+        <description>The BioCatalogue team at EBI shares file like application logs and db dumps with the team at Manchester using dropbox. 
+
+Dropbox credentials
+
+
+email : contact@biocatalogue.org
+
+
+password: bi0cat</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:databases&amp;rev=1372255730&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:08:50+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:databases - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:databases&amp;rev=1372255730&amp;do=diff</link>
+        <description>BioCatalogue Databases
+
+
+
+The BioCatalogue runs of mysql databases that are maintained by systems group at EMBL-EBI.  The two instances that run the live and test sites are respectively mysql-biocat-prod and mysql-biocat-dev
+
+Live Database
+
+
+
+Instance Details
+
+
+
+host : mysql-biocat-prod</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_application_stack_specs&amp;rev=1372255646&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:07:26+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:biocatalogue_application_stack_specs - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:biocatalogue_application_stack_specs&amp;rev=1372255646&amp;do=diff</link>
+        <description>Host Servers(Live &amp; Test)
+
+
+
+  Operating System : CentOS release 5.5 (Final) x86_64\\
+  Virtual Machine     : KVM\\
+  Virtual CPU            : 1\\
+  RAM                        : 2 GB  (can be easily increased)\\
+  Local Disk              : 20 GB\\
+  File system             : NFS (has access to TB sized file system) \\
+
+
+Search Server
+
+
+
+On each of the servers there is also a Tomcat running localhost:8080 which hosts the solr application. The solr application is used for the search and apart form…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:background_tasks&amp;rev=1372255554&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:05:54+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:background_tasks - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:background_tasks&amp;rev=1372255554&amp;do=diff</link>
+        <description>This page will be used to document all the background tasks being run via cron on the EBI servers</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:application_directory&amp;rev=1372255398&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:03:18+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:application_directory</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:application_directory&amp;rev=1372255398&amp;do=diff</link>
+        <description>The Directory Structure
+
+
+
+The directory structure for the BioCatalogue application is as follows:
+
+
+
+/nfs/public/rw/es/projects/biocatalogue/
+
+
+
+      /live\\
+
+
+      /test\\
+
+
+The /live and /test directories have a very similar structure. They contain the files which will power the live and test biocatalogue site respectively. The layout of these directories is as follows:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:live_site&amp;rev=1372255143&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T14:59:03+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:live_site - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:live_site&amp;rev=1372255143&amp;do=diff</link>
+        <description>Location: /nfs/public/rw/es/projects/biocatalogue/live/config/initializers/biocat_local.rb
+
+
+
+ 
+
+# BioCatalogue: app/config/initializers/biocat_local.rb.pre
+
+#
+
+# Copyright (c) 2008, University of Manchester, The European Bioinformatics
+
+# Institute (EMBL-EBI) and the University of Southampton.
+
+# See license.txt for details
+
+ 
+
+# Private settings that apply to individual deployments.
+
+ 
+
+# This setting determines where trashing (via the acts_as_trashable plugin) is used.
+
+ENABLE_TRASHING = true…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:test_site&amp;rev=1372255033&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T14:57:13+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:test_site</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:test_site&amp;rev=1372255033&amp;do=diff</link>
+        <description>Location: /nfs/public/rw/es/projects/biocatalogue/test/config/initializers/biocat_local.rb
+
+
+
+ 
+
+# BioCatalogue: app/config/initializers/biocat_local.rb.pre
+
+#
+
+# Copyright (c) 2008, University of Manchester, The European Bioinformatics
+
+# Institute (EMBL-EBI) and the University of Southampton.
+
+# See license.txt for details
+
+ 
+
+# Private settings that apply to individual deployments.
+
+ 
+
+# This setting determines where trashing (via the acts_as_trashable plugin) is used.
+
+ENABLE_TRASHING = true…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:application_configuration&amp;rev=1372252095&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T14:08:15+01:00</dc:date>
+        <dc:creator>Philip Lewis</dc:creator>
+        <title>development:application_configuration - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:application_configuration&amp;rev=1372252095&amp;do=diff</link>
+        <description>Live Site
+
+Test Site</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,57 @@
+====== What could we do to involve people in curating the BioCatalogue ? ======
+
+**Curators** are after all only **human beings** (sorry to break it to you like that Franck !). And like all human beings they have **weaknesses** we can try to exploit to make them participate to the curation effort:
+  * **lust**: this one has a lot of potential but could lead us in **jail**, so maybe not such a good idea...
+  * **greed**: "a free **ipod** for any new annotation !". That's bound to be a winner ! On the other hand, I'm kind of concerned about our **budget**...
+  * **gluttony**: I'd do anything for a **cake** and I guess a few curators would too, but again, **budget** might be an issue...
+  * **sloth**: this one is kind of the **opposite** of want we want to do, so let's skip it...
+  * **wrath**: from all the sins, this one is the most **pointless**, so I don't even want to waste more words on it...
+  * **envy/pride**: here we go, this one(s) is the most **widespread** in the scientific community. That's probably our **best angle of attack**.
+
+===== How to exploit people's pride/envy ? =====
+
+2 of the biggest names on internet relies heavily on added contents by their users: **amazon** and **ebay**.
+Amazon is providing invaluable additional information about products through their user **reviews**, and ebay has based his **"trusting" mechanism** on the biggest part on users providing feedback on sellers/buyers. Ebay is also rating reviewers for the "ebay reviews" section.\\
+
+{{:development:amazon_badges.gif?linkonly|Amazon badges}} {{:development:ebay_badges.gif?linkonly|Ebay badges}}\\
+
+Both websites ranks reviewers according to the **helpfulness of their reviews** rather there on the sheer amount they produced.
+
+I think if it's good enough for these 2 heavyweights of internet, it's probably **good enough** for the BioCatalogue. People like to be recognised as being a **"Top something"**, it flatters their ego.
+My **concern** would be on the ranking of reviewers: do we adopt the same system than amazon/ebay, and rank on the **relevance** of the extra information ? Or on the **volume** produced by an annotator ?
+
+I see caveats in both schemes:
+  * rank on **quality**: 
+    * we rely on **other people** to rank the annotation (hence the annotator), so we need a certain **volume of users** so that the number of votes has any **"statistical relevance"** (not a pb for amazon/ebay).
+    * we need to provide a "did you find this annotation useful" functionality (buttons) for every single annotation. That seems overkill and will heavily **clutter** the UI. Or do we only provide this functionality on **description fields** (for web service, operations, inputs, outputs) ? It'd make it more manageable. But then, what about the curator who had loads of valuable informations which are not descriptions ? It's a bit **unfair**.
+
+  * rank on **quantity**:
+    * would be easier to put in place as **we already keep the provenance of all annotations**. But what about if a curator puts 100's of rubbish annotations ? He'll end with a "Top XX curator" badge while he **wouldn't deserve one**. Can this scenario happen ? I don't think it's very likely, people don't want to be playing with their reputation just for a badge, they know it could make them more harm than good in the long term. One solution could be: "if you want to be eligible for a badge, you have to provide your real name" and we'd tag them as well like amazon does with a **"real name" badge**, which makes people want to trust this source more than a semi-anonymous one. But I'm not sure that's a good idea and once again probably overkill.
+
+
+==== how to get provider involved in the annotation? ====
+
+Providers have been very reactive to the green/amber light on the current site.
+We have for example seen people emailing us to update their services or ask what wrong with their services. 
+So we should use the same idea for annotation, that is, have a kind of annotation meter on the overview page. 
+The meter will display the percentage of the current annotation of the service. 
+
+{{:development:annotation_status2.png|}}   \\
+
+
+
+===== Conclusion =====
+
+After weighting all these different options, here are my views:
+  * Having an "ubber-trustworthy" badge (like amazon's "Amazon Official" abdge): **"BioCatalogue certified curator"** that we manually assign to a select number of people (starting with Franck)
+  * Having several **"Top XX curator"** badges: like amazon/ebay BUT based on **volume** of annotations produced. Basing it on quality seems too complicated and overkill for the BioCatalogue.
+
+  * The meter will be use as a quantitative measurement of service annotation. 
+For quality of annotation we could use the biocatalogue curation badge as defined by Thomas.
+
+After discussion with the group we're going to have a 2 way meter. So the meter will give a level of annotation of absolutely necessary metadata and the level of other metadata about the service. 
+in order to do that we need to define the 'absolutely necessary metadata'. 
+
+
+This should be enough to get provide a small incentive and appeal to the users ego to **get involved** in the BioCatalogue curation.
+

@@ -1,0 +1,72 @@
+Date: Tuesday 03rd Feb 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending =====
+**Manchester:** Franck, Jits
+
+**EBI:** 
+Eric, Thomas
+
+
+
+===== Apologies =====
+Rodrigo, Carole, Steve
+
+
+
+
+
+
+====== Agenda ======
+
+   * Actions from the last telcon 
+
+  * Progress with the pilot 
+    * Test infrastructure setup at EBI
+    * Review of January tasks
+    * Next steps following release to friends list
+    * Code releases(tags)
+
+  * Progress of [[development:20_questions|20 Questions]] (to clarify user requirements)
+
+  * AOB - meeting date to be moved ???
+  
+
+===== Actions from Previous Meeting ===== 
+
+  * Franck : Provide an example of a semantically annotated service(using the SAWSDL model). **completed** 
+  * Jits/Thomas/Eric: create developer section on the wiki. **ongoing**
+  * Franck: make an announcement about latest changes to schedule to the friends list.** completed**
+  * Action all : update the 20 questions section on the wiki **ongoing**
+  * Action Jits/Eric : Investigate how to add some form of classification of the services. **will use tag instead...action completed**
+  * Action Franck : Put up a service classification draft on the wiki. **cancel**
+  
+
+====== Minutes ======
+From now on we should announce on the friend list anytime we add new features or do update of the beta site. 
+Also anything happening within the project should be announced on the friend list. 
+
+we need to discuss with Rodrigo the test infrastructure setup at EBI. should we re-use EMBRACE infrastructures?
+
+===== New Actions =====
+Franck: start an FAQ on the wiki
+
+===== Upcoming Meetings =====  
+Meeting with Francois from INRA about service monitoring 12/02/09
+
+===== AOB =====
+
+  * There will be a demo at the Strategic Advisory Board Meeting in February
+  * There is potential for collaboration with Microsoft. Initial discussions on-going with Carole
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-01-27|Phone Conference Meeting on Jan 27 2009]] 
+
+Next meeting:

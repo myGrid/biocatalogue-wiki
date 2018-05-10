@@ -1,0 +1,34 @@
+<span class="br0">&#123;</span>
+  <span class="st0">&quot;bulk_annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+    <span class="br0">&#123;</span>
+      <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://sandbox.biocatalogue.org/soap_services/2591&quot;</span><span class="sy0">,</span>
+      <span class="st0">&quot;annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+        <span class="br0">&#123;</span>
+          <span class="st0">&quot;annotatable&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;SOAP access to http://chebi.bio2rdf.org SPARQL endpoint&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://sandbox.biocatalogue.org/soap_services/2591&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;SoapService&quot;</span>
+          <span class="br0">&#125;</span><span class="sy0">,</span>
+          <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://sandbox.biocatalogue.org/annotations/53657&quot;</span><span class="sy0">,</span>
+          <span class="st0">&quot;version&quot;</span><span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+          <span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="kw2">null</span><span class="sy0">,</span>
+            <span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;String&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;content&quot;</span><span class="sy0">:</span> <span class="st0">&quot;THIS IS MY AWESOME ANNOTATION DESCRIPTION&quot;</span>
+          <span class="br0">&#125;</span><span class="sy0">,</span>
+          <span class="st0">&quot;created&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2010-09-02T10:51:05Z&quot;</span><span class="sy0">,</span>
+          <span class="st0">&quot;source&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;mannie&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://sandbox.biocatalogue.org/users/537&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;User&quot;</span>
+          <span class="br0">&#125;</span><span class="sy0">,</span>
+          <span class="st0">&quot;attribute&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;description&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://sandbox.biocatalogue.org/annotation_attributes/1&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;identifier&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://purl.org/dc/elements/1.1/description&quot;</span>
+          <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span>
+      <span class="br0">&#93;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#93;</span>
+<span class="br0">&#125;</span>

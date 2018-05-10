@@ -1,0 +1,73 @@
+a:6:{s:2:"id";s:29:"meetings:phoneconf:2008-07-15";s:6:"prefix";s:0:"";s:4:"text";s:3241:"====== Meeting Agenda/Minutes ======
+
+Time : 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** Carole, Katy, Franck, Jits
+
+**EBI:** Eric, Hamish, Rodrigo, Thomas
+
+===== Minuting =====
+
+ Jits
+
+===== Agenda =====
+  * Action Items from previous meeting 
+  * progress on the interim service to serve EMBRACE etc
+  * progress on the questionnaire
+  * progress on the flyer
+  * progress on the wiki
+  * progress on the mock-ups
+  * progress on the metadata model
+  * review of the timetable (I sent round)
+  * next two face to face meetings (Carole can only do 28-30 July)
+
+
+===== Actions from Previous Meeting ===== 
+
+  * Carole - To speak to Steve Petefer about the pilot
+  * Carole/Rodrigo - Schedule an advisery meeting
+  * Rodrigo - To send dates EBI team is available for a Face 2 face meeting 
+  * Franck - prepare a questionnaire for ISMB 
+  * Khalid - To send more info about 'QASAR' on the mailing list.
+
+
+===== Round-table =====
+
+===== Upcoming Meetings ===== 
+  * ISMB
+  * EBI-Manchester face-2-face
+
+
+
+===== Minutes =====
+Given that it was only Franck participating from Manchester, there was agreement to discuss only ISMB related issues
+
+==== Agenda Items ====
+ 
+  * Alan and Franck are preparing a BioCatalogue specific flyer for the ISMB meeting. Rodrigo wanted to know if it was possible to have a preview of the flyer before the ISMB. Franck agreed to post the flyer to the mailing list. 
+  * Thomas presented mock-ups for some BioCatalogue interfaces(search, browse, register service, register user ).
+  * There has been no feedback yet from Carole on the expanded website content. It is not clear to Thomas if he should go ahead and put the content he has at the moment on the website. Another reminder to be sent to Carole/Katy to comment on the content
+  * No functional material will be shown at ISMB, not even to specific communities like EMBRACE. EMBRACE will do a pre-BioCatalogue as the project requirements warrant them to do something now. They are expecting to adopt the BioCatalogue afterwards( by end of 2008). Several other projects are known to have catalogue related requirements. But there is a discussion to be had as to whether the BioCatalogue will/should cover the scope of all of those projects.
+  * Franck and Eric to agree on a database model, based on the annotation model, with the aim to help the development start as soon as possible. Feedback from ISMB should be used to prioritize development activities
+  * EBI to suggest dates for the face-2-face meeting at EBI. It would be necessary to have 'developer specific' face-2-face meetings as well. This is to be further discussed with the whole team after ISMB.
+
+
+
+ 
+
+==== Action Items ====
+  
+
+  * **Action EBI** : Suggest dates for the face-2-face meeting at EBI
+  * **Action Franck** : Send flyer and questionnaire to the mailing list before EBI team flies to ISMB on Friday
+  * **Action Eric/Franck** : Agree on database model for the pilot
+  * **Action Thomas** : Create individual wiki accounts for the Manchester team
+
+
+===== Previous/Next Minutes =====
+
+
+Previous meeting: [[Meetings:PhoneConf:2008-07-08|Phone Conference Meeting on Jul 08 2008]]
+
+Next meeting: [[Meetings:PhoneConf:2008-07-22|Phone Conference Meeting on Jul 22 2008]]";s:6:"suffix";s:0:"";s:4:"date";s:10:"1216137320";s:6:"client";s:4:"jits";}

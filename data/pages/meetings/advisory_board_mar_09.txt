@@ -1,0 +1,39 @@
+=== BioCatalogue Advisory Board Meeting === 
+Manchester 20/03/09 
+
+
+12:00 - Lunch
+
+13.00 - Introductions
+
+13.05 - Brief Introduction to the BioCatalogue project, and issues for discussion.	(Carole Goble and Rodrigo Lopez)
+
+13.25 - Demo of the BioCatalogue Pilot (Jiten Bhagat, Franck Tanoh, Thomas Laurent and Eric Nzuobontane) 
+
+14.00 - Update on SeekDa, relationship to BioCatalogue and discussion (Holger Lausen) 
+
+14.30 - The EMBRACE registry lessons learned (Steve Pettifer)
+
+14.45 - Update BioMOBY (Mark Wilkinson)
+
+
+15.00 - Coffee Break
+
+
+15.30 - Discussion and Advice (including further demos and presentations as necessary)
+  * Publicity, Dissemination and Launch 
+  * Technical Roadmap
+  * Political Roadmap - BioIT Alliance
+  * Curation Roadmap and User engagement
+  * Project and developer engagements
+  * Project management
+  * SAB procedures and terms of reference
+
+17.00 - Feedback from SAB and actions.
+
+17.30 - End.
+
+
+
+
+

@@ -1,0 +1,10 @@
+<span class="sc3"><span class="re1">&lt;search</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/search?q=dbfetch&quot;</span> <span class="re0">xsi:schemaLocation</span>=<span class="st0">&quot;http://www.biocatalogue.org/2009/xml/rest http://www.biocatalogue.org/2009/xml/rest/schema-v1.xsd&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Search&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;service<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;soapOperation<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/soapOperation<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/search<span class="re2">&gt;</span></span></span>

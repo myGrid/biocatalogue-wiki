@@ -1,0 +1,90 @@
+Date: Monday 27th Apr 2009
+
+Time: 14:30-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Jits, Franck, Steve
+
+
+**EBI:** Eric, Thomas
+
+===== Apologies =====
+
+Carole, Rodrigo
+
+===== Minuting =====
+
+
+Franck
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Report back from [[http://projects.eml.org/sdbv/events/BiocurationMeeting/index.html|Biocuration]] meeting
+  * SAB minutes? 
+  * Annotation model document
+  * Possible collaboration with Microsoft
+    * Plan for the BioIT meeting
+  * Progress/developement of the pilot - are we rolling?
+    * Report back from silent public release 
+  * Test infrastructure setup at EBI and progress of service testing/monitoring piece.
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+
+  * Thomas, Franck: update the [[meetings:strategy_advisory_board_mar_09|SAB minutes]] and make them more comprehensive minutes... **ongoing** 
+  * Carole: ring BBSRC programme manager to inform her that the SAB has taken place and then see what they have to say...**completed**
+  * Eric: provide an update on what is happening with the test scripts execution environment...**ongoing**
+    * Update on decision on the script running environment...**ongoing**
+    * Investigate background processing for long running tasks... **assigned to Jits**
+    * Re-prioritize work on the API for service monitoring... **assigned to jits**
+  * Franck & Eric : Produce elaborate document on the BioCatalogue data model ...**ongoing**: we've set up the outline of the document and writing it up. 
+  * All : Decide on how to go forward with the ratings [ on whether we make that available to the public at this stage or not] ... **ongoing**
+
+====== Minutes ======
+
+   * Testing environment at the EBI
+The EBI wants a explicit document of the type of the test we'll harvest, 
+   * Service monitoring 
+We questioned the use of the traffic light system for the monitor piece only. Pinging a service endpoint and not getting a response back does not necessarily mean that the service is dead (i.e DDBJ). Other criteria such as host name, wsdl availability may also be misleading. We(Eric, Franck, Jits and Thomas) think that the traffic light system should be the result of a careful test (with tests scripts provided by service providers).  
+There is therefore a need to find other ways to present(interface wise) the result of a monitored service. Or the traffic light system could be the result of service monitoring + testing\\
+The service monitor should include:  1-soap connect, 2-wget, 3-pinging host, 4-pinging endpoing 
+   * Merge BioCatalogue - Embrace
+The merge will happen when all the features in Embrace are implemented in BioCatalogue. 2 left: testing infrastructure and APIs. 
+
+   * SAB minutes? 
+Thomas will send it to the list. 
+   * Annotation model document
+Franck & Eric are writing it up. 
+   * Progress/developement of the pilot
+We had good feedback from the friend list. The beta site is no more password protected. \\
+Jits has produced a page to gather metric information. 
+
+===== Action Items =====
+
+  * Eric: update the list on issue related to testing and monitoring 
+  * Franck: Create a wiki page for testing and monitoring issues.
+ 
+
+
+===== Upcoming Meetings =====  
+ISMB
+
+===== AOB =====
+
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-04-20|Phone Conference Meeting on Apr 20 2009]]
+
+Next meeting: 

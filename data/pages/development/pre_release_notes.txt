@@ -1,0 +1,105 @@
+==== Pre-release Notes for 24 May, 2010 Release ====
+
+** Instructions for updating the codebase **
+  
+
+  * Update codebase
+    * svn update
+
+  * Migrate database
+    * rake db:migrate RAILS_ENV=production
+
+  * Bring javascript files up to date
+    * rake asset:packager:build_all 
+
+  * Curate service providers by clustering them
+    * copy the service-provider.csv file into the /data directory
+    * ruby script/biocatalogue/cluster_service_providers_apr10.rb production
+
+  * Run the service update checker for all services
+    * rake biocatalogue:submit:run_service_updater_for_all production
+
+  * Fix activity logs for status change
+    * ruby script/biocatalogue/fix_activity_logs_for_status_change_may10.rb production
+
+  * Restart memcached servers
+    //**Note** : Restart the memcache servers **before** restarting the app and any
+workers//
+
+  * Restart the job workers
+    * ruby script/worker stop|start
+ 
+  * Restart the application
+
+  * Reindex
+    * rake solr:reindex RAILS_ENV=production
+
+** Included in the release : **
+
+  * Service Ownership/Responsibility request mechanism
+  * Service update checker
+  * Archival of services, operations, inputs and outputs (only services can be archived in the UI though)
+  * REST endpoint shown in search now
+  * (TBD) new "News" tab for services with an activity feed and changes from WSDL sections
+  * Clustering of service providers
+  * Changes to Service monitoring URI 
+    * Now showing which URI is being monitored
+    * Now showing since when a UI is being monitored
+    * Admin now able to enable/disable availability checks
+  * Improvements to REST service monitoring
+    * Now monitoring example endpoints automatically
+
+** To be tested for this release **
+  * Create a new example end point for a rest service and check that it is added to the monitoring
+  * Check that WSDL changed since the last check/upload is updated accordingly by the checker
+  * Check that non-admin users are able to request for responsibility of any service which they did not submit
+  * Check that the task responsibility button does not show up for admin users
+
+**Discover Register Annotate Monitor Aob (DRAMA)** \\
+DRAMA is a procedure in place to functionally test the BioCatalogue features after every release. It has to be carried out on the [[http://test.biocatalogue.org/|BioCatalogue test site]]. Below are described the steps required. The aim is to automate the process using tools such as [[http://www.molyb.org/confluence/display/molyb/Home|Molybdenum]]
+
+1- Discovery  
+  * From the BioCatalogue home page search for ‘protein’ 
+  * Click ‘Next page of results’ 
+  * Click ‘Switch to detail view’ 
+  * Search for ‘protein sequence’ 
+  * Select ‘KEGG’ service 
+  * Click one of the service tag (e.g. enzyme)
+  * Back to KEGG service using the back arrow 
+  * Click one of the similar service on the right (e.g DDBJ)
+  * Back to KEGG 
+  * Select one of the Category of the KEGG service (e.g Motifs)
+  * Combine different filter using the panel on the left (e.g member = franck, service type = soap)
+  * In the search within box, search for ‘KEGG’. 
+  * Clear filter 
+  * Select ‘bioinformatics in the tag cloud 
+  * Select ‘Search by data’ search for the following example data: MSSRIARALALVVTLLHLTRLALSTCPAACHCPLEAPKCAPGVGLVRDGCGCCKVCAKQL
+
+2- Register
+  * Create an account 
+  * Sign in using Google, Yahoo, FaceBook 
+  * Submit a SOAP service (e.g. http://webservices.genouest.org/typedservices/Xref.wsdl); fill all the fields, no need to worry about the meanings 
+  * Register a REST Service 
+  * Register a Soaplab service if possible 
+
+3- Annotate
+  * Go back to the soap service you’ve registered
+  * Annotate each of the components in the service overview (documentation url, description, contact etc…). Don’t worry about the meaning of the terms. 
+  * Add tags to the same service
+  * Go to the operation tab and add annotation and tags to the operations and inputs/outputs
+  * Go back to the KEGG service 
+  * Add annotations to the service and operations/inputs/outputs
+  * Add several categories to the KEGG service or the service you registered 
+  * Add an alternative name
+  * Promote one the alternative name as service display name
+
+4- Monitor
+  * Disable a test script from a selected service 
+  * Check the outcome 
+  * Enable the test script again 
+
+5- Aob
+  * Favorite a service 
+  * Delete service 
+
+  

@@ -1,0 +1,133 @@
+====== REST API Requirements ======
+//By Sergey and Jits//
+
+
+At the moment the following is mainly for Taverna BioCatalogue plugin. The main priority for me is to be able to read the data first. I would like to able to read all the important data about a service (service details, operations along with inputs/outputs and data formats, most important annotations - tags, comments, etc) - this is required to complete the prototype I've shown, make it public and get the feedback on how to start integration with Taverna. When that is done, I'd like to have basic 'write' operations - at the beginning for the annotations (tags, comments, example output data).
+
+
+==== Content ====
+
+  * **Services index --- /services.xml :**
+    * **[DONE]** Enrich the services index to provide sufficient data for various listings in applications;
+      * [Jits]: the summary XML document now contains a lot of useful data
+    * **[DONE]** Include things like service name (already available), provider and very high-level monitoring (e.g. for the "traffic light" icon next to the service);
+      * [Jits]: Not sure about provider. Is this really necessary? Also, provider is associated with a ServiceDeployment.
+    * **[DONE]** Add related links - for example, link to the summary XML document
+
+
+  * **Service details --- /services/{id}.xml :**
+    * **[DONE]** Inside <versions> element instead of <instance> elements use <soap_instance> and <rest_instance> to show soap/rest service info inline
+      * [Jits]: NOTE: I've "flattened" the <versions> section so that now there is no more the notion of a "ServiceVersion".
+    * This document should display just the service structure (soap/rest + all operations) -- all annotations will be provided in a separate resource which is to be referenced from the <related> section;
+
+  * **Service summary --- /services/{id}/summary.xml :** The idea of the summary document is to serve as a lightweight fusion of the service structure and simplified collection of annotations. This document has to supply enough information for a quick preview of a service.
+    * **[DONE]** Add resource URIs to summary (categories, service types, tags, etc)
+      * [Jits]: Not sure what to do with service types, so left that for now.
+    * **[DONE]** <names> section should have the "main name" and "also known as" names distinguished - otherwise difficult to use
+
+  * **Categories API**
+    * **[DONE]** /categories
+    * **[DONE]** /categories/{id} 
+
+  * **Annotations API**
+    * /annotations index (paged + filtered)
+
+  * ** Search API **
+    * **[DONE]** Can't combine scope when searching (e.g. need to be able to select 'users' and 'services' at the same time, not just one at a time).
+    * [Jits]: All search strings will be processed using all "special characters" contained in them (e.g. wildcards, etc); to avoid this behaviour and get direct matches ("as is"), search strings need to be quoted. This will allow for proper search for WSDL URLs, etc.
+    * [Sergey]: It could be useful to add rankings to search result items. This way the client will be able to fetch multiple result pages in parallel to get all result set quicker - and rankings will allow to reconstruct the correct ordering of results independently of the order that these parallel requests deliver data to the client.
+
+  * ** Lookup API **
+    * **[DONE]** Need a separate API endpoint for 'looking' up known objects by specifying their specific details. E.g. "give me an operation 'getQuery' from WSDL 'http://...'" which will return a concrete object - <soapOperation>..</soapOperation>.
+
+  http://sandbox.biocatalogue.org/lookup?...
+
+E.g.:
+
+  http://sandbox.biocatalogue.org/lookup.xml?wsdl_location=http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl&operation_name=streamContent
+
+  * **Tags API**
+    * **[DONE]** Tag cloud data seems to be present in XML format, but the schema doesn't have details about it.
+    * **[DONE]** Can't search by tags (e.g. /tags/<tag_name>.xml).
+    * As discussed - only services (and their components) are taggable, but need to have an option to fetch either the actual tagged component or the parent service of that component.
+    * **[DONE]** With respect to mapping namespaces - we decided to have "namespace" and "name" attributes for each tag with the view to be able to "join" these into a full tag URL somehow.
+    * For /tags.xml:
+      * **[DONE]** limit returned result count by default; 
+      * **[DONE]** "limit=none" for all tags;
+      * **[DONE]** remove "none" option from allowed "sort" attribute value list;
+      * **[DONE]** add pagination of results;
+      * **[DONE]** higher default page size needed than for services or other objects;
+        * At the moment this is the same as all others (ie: 10) BUT a custom per_page size can be set (max: 50).
+      * add "scope" - parent services or actual tagged objects.
+      * [Jits]: mixing page / page-size and limit is not consistent. Maybe don't need limit? Instead stick with paging metaphors?
+        * Now supports either pagination OR limit (with pagination taking precedence).
+    * For /tag/<tagname>.xml:
+      * In the <related> section add link to filtered list of objects:
+        * **[DONE]** <taggedServices>
+        * <taggedSoapOperations>
+        * <taggedSoapOperationInputs>
+        * <taggedSoapOperationOutputs>
+
+  * **SOAP Operations/Inputs/Outputs API**
+    * **[DONE]** /soap_operations/{id}
+    * /soap_operations/{id}/annotations
+    * **[DONE]** /soap_inputs/{id}
+    * /soap_inputs/{id}/annotations
+    * **[DONE]** /soap_outputs/{id}
+    * /soap_outputs/{id}/annotations
+
+  * **Monitoring API**
+    * **[DONE]** To start with it would be good to have a very basic service state in service summary (and then in service details) document.
+      * [Jits]: there is now a <latestMonitoringStatus> as part of the core elements of <service>.
+
+  * **Service Providers API**
+    * **[DONE]** /service_providers
+    * **[DONE]** /service_providers/{id}
+    * /service_providers/{id}/annotations
+    * /service_providers/{id}/annotations_by
+    * /service_providers/{id}/services
+
+  * **Registries API**
+    * **[DONE]** /registries
+    * **[DONE]** /registries/{id}
+    * /registries/{id}/annotations
+    * /registries/{id}/annotations_by
+    * /registries/{id}/services
+
+  * **Users API**
+    * **[DONE]** /users
+    * **[DONE]** /users/{id}
+    * /users/{id}/annotations_by
+    * /users/{id}/service
+
+  * **Write API**
+    * Ideally, all parts of the API should support 'write' operation;
+    * The first priority is to be able to submit annotations of various kinds to existing services (e.g. tags, documentation URLs, sample output data, ports of operations, etc);
+    * Possibly service submission via the API could be useful;
+  
+
+==== Other ====
+
+  * All annotatable resources must have an {resource_type}/{id}/annotations endpoint and subsequent links in main docs
+  * All annotation source resources must have an {resource_type}/{id}/annotations_by endpoint and subsequent links in main docs
+  * **[DONE]** There's no mention - anywhere in the returned data - of what the actual size of the search results page is (currently it's set to 10). Also, can't request a specific number of items - by this I mean that the results page size could be variable - this way the user could select that 25 results at a time should be fetched, and on request of the next results page the next 25 would be returned (by following a link in the <related> section).
+  * Not all the resources can always be reached by following 'related' links - it would be very useful if a convention existed to aid generation of links within applications. Especially required for filtering and searching. It can be manually done now using 'urlKey' values for filtering, for example.
+    * **//[Jits - 2009-10-27]//** Having this type of convention goes against the principles of REST, but there are notable exceptions like for filtering. Could you give examples of resources that cannot be reached by following 'related' links? That way I can add them as related links. In some cases I would have to create a convention (eg: for sorting).
+  * Another requirement is that the content of the XML documents should correspond to the XSD schema, otherwise it is unreachable from applications via automatic binding.
+
+==== Feature Request Priority ====
+
+  - **[DONE]** Basic monitoring data in the service summary item.
+    * [Jits]: This is now part of core elements of <service>
+  - **[DONE]** "Lookup" endpoint.
+  - **[DONE]** Full tags API - I will need to have this in order to finish with the search functionality in the prototype.
+    * [Jits]: I've done most of the things required, except for the taggedOperations, taggedOperationInputs and taggedOperationOutputs.
+  - **[DONE]** Basic support for retrieving information about users, providers and registries - so that it would be possible to click through to these from the search results.
+  - **[DONE]** Ability to combine search scopes for regular "search by query".
+  - **[DONE]** Ability to get full information about service operations (inputs, outputs, data types, etc).
+  - Annotations API - ability to fetch all available annotations about a service
+  - Write API - ability to contribute service annotations first
+
+==== For API Documentation ====
+
+  - Explain in detail that Services found by tags might be tagged on any their part (e.g. service itself, operations, ports, etc); however, tags on other objects (like operations, ports, etc) would only be 'direct matches' - meaning that it's that object itself which was tagged.

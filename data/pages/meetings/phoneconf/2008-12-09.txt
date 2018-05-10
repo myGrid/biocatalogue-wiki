@@ -1,0 +1,76 @@
+Date: Tuesday 09th Dec 2008
+
+Time: 15:00-17:00 (UK)
+
+**This was a skype chat instead of a telcon**
+
+===== Attending =====
+**Manchester:** Jits, Franck
+
+**EBI:** Eric
+
+===== Apologies =====
+
+Thomas, Carole, Katy, Hamish, Rodrigo
+
+===== Minuting =====
+
+Jits
+
+====== Agenda ======
+
+  * Actions from the last telcon
+
+  * Progress with the pilot
+
+  * New requirements timeline and planning
+
+  * Updating the BioCatalogue public wiki
+
+  * AOB
+
+===== Actions from Previous Meeting ===== 
+
+  * Action Eric, Jiten, Thomas : Release the internal pilot with release notes. **Cancelled**
+  * Action Franck : Provide an example of a semantically annotated service(using the SAWSDL model). **Ongoing**
+  * Jits: add number of service in the catalogue to the index page. **Done**
+  * Jits: add Franck to support list. **Done**
+  * Thomas: investigate 'home' link on the public wiki. **Ongoing**
+  * Jits/Thomas/Eric: create developer section on the wiki. **Ongoing**
+
+====== Minutes ======
+
+**Progress with the pilot**
+
+Jits: merged annotations work into trunk. This includes some UI work so now tags and descriptions can be added, and will be shown. Next thing is to have tags and descriptions for operations. Also, comments. Also working on annotations plugin documentation.
+
+Eric: wrapping all of service submission into one transaction. Also, OpenSearch description doc implemented.
+
+Franck: what about bulk submission of services? - we have that functionality in the codebase but needs to be enabled and tested properly first, if prioritised.
+
+**New requirements timeline and planning**
+
+[[development:requirements_for_pilot_2|Revised requirements]] list and [[development:pilot_dev_planning|planning]] document started last Friday (day after F2F meeting).
+
+Jits: suggest we plan for rest of Dec and early Jan, for now. Then early Jan we do a planning activity to flesh out the rest.
+
+**Updating the BioCatalogue public wiki**
+
+Franck will update the roadmap and rest of wiki, but do we need to something about the website at this stage? Fine for now.
+
+===== New Actions =====
+
+  * Eric: list the features of the current pilot (including annotations stuff), so that they can be used in a email announcing the private beta to the friends list.
+  * Franck: read through the revised requirements and planning doc and update the private wiki roadmap accordingly. Then after approval copy it to the public wiki.
+  * Franck: make an announcement about latest changes to schedule to the friends list.
+  * Thomas: possibly change the "Wiki" link on the main website and beta site to something more descriptive like "More info about the project". Also add this to the "About us" page.
+
+===== Upcoming Meetings ===== 
+
+===== AOB =====
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-11-25|Phone Conference Meeting on Nov 25 2008]] 
+
+Next meeting: [[Meetings:PhoneConf:2008-12-16|Phone Conference Meeting on Dec 16 2008]] 

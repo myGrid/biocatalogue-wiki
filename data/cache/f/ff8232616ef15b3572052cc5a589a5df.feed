@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2010-04-19T15:13:13+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-04-19&amp;rev=1271684817&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1271683920&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:testscripts_in_biocatalogue&amp;rev=1271683884&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:about_embrace_testscripts&amp;rev=1271683792&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1838&amp;rev=1271670744&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1829&amp;rev=1271670708&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1688&amp;rev=1271670662&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1808&amp;rev=1271670633&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes&amp;rev=1271332211&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1271086655&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api:endpoints&amp;rev=1270728307&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api&amp;rev=1270728193&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api:use_cases&amp;rev=1270724570&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage&amp;rev=1270724547&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-04-19&amp;rev=1271684817&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T14:46:57+01:00</dc:date>
+        <dc:creator>Franck</dc:creator>
+        <title>meetings:phoneconf:2010-04-19</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:phoneconf:2010-04-19&amp;rev=1271684817&amp;do=diff</link>
+        <description>Date: Monday 19th April 2010
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08444737630
+
+Pin: 70503011
+
+
+
+Attending
+
+
+Manchester: 
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telecom
+	*  Progress report 
+		*  Review of Monitoring &amp; Curation    
+
+	*  Publicity/outreach
+			*  Integrative Bioinformatics March 22-24 in Cambridge (Poster accepted)
+			*  Plan for ISMB and ECCB 2010? 
+			*  EMBRACE service provider workshop</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1271683920&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T14:32:00+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1271683920&amp;do=diff</link>
+        <description>From Public Wiki
+
+	*  For Developers
+	*  REST API documentation
+	*  Help Pages
+
+Pilot
+
+Requirements
+
+	*  Requirements (for Oct '08)
+	*  Revised Requirements (for Apr '09)
+	*   Content Requirements for Pilot
+	*  Expected performance, scalability, support and so on for the Pilot
+	*  Embrace Registry Capabilities
+	*  20 Questions
+	*  REST API Requirements</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:testscripts_in_biocatalogue&amp;rev=1271683884&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T14:31:24+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development:testscripts_in_biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:testscripts_in_biocatalogue&amp;rev=1271683884&amp;do=diff</link>
+        <description>Test Scripts in BioCatalogue
+
+What Are Test Script?
+
+
+Test scripts are simple clients to web services which can be uploaded to the BioCatalogue to be run by the BioCatalogue system. The purpose of the test scripts is double fold:
+
+	*  they provide the users  with an example client of how to use the service
+	*  they enable the biocalogue system to monitor the status of the service by running these sample clients regularly</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:about_embrace_testscripts&amp;rev=1271683792&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T14:29:52+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development:about_embrace_testscripts</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:about_embrace_testscripts&amp;rev=1271683792&amp;do=diff</link>
+        <description>About EMBRACE Test Scripts
+
+Statistics
+
+
+From the database dump of June 2009
+
+
+
+Libraries
+
+	*  Perl
+		*  XML::LibXML
+		*  XML::Compile
+		*  XML::Compile::WSDL11 
+
+
+
+The EMBRACE test server is believed to be running version 0.78 of the WSDL11 library. This library versioning jumped from 0.78 to 2.00 in 2008. Although version 0.78 only dates from October 2008, there has been a significant re-write of this library since then, causing many clients to break against 2.0x versions. The library is curre…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1838&amp;rev=1271670744&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:52:24+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development:release_notes:revision_1838</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1838&amp;rev=1271670744&amp;do=diff</link>
+        <description>BioCatalogue Release , April 6th 2010
+
+	*  Previous release revision: 1829
+	*  This release revision: 1842
+
+Steps To Take for Update
+
+
+In order...
+
+
+	*  Update the biocat_local config file with
+
+
+    # This setting determines whether notifications
+    # about service status should be sent to service
+    # submitters or anyone responsible for the service in 
+    # addition to those included in the status recipients list above.
+    NOTIFY_SERVICE_RESPONSIBLE = false</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1829&amp;rev=1271670708&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:51:48+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development:release_notes:revision_1829</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1829&amp;rev=1271670708&amp;do=diff</link>
+        <description>BioCatalogue Release , April 6th 2010
+
+	*  Previous release revision: 1814
+	*  This release revision: 1829
+
+Steps To Take for Update
+
+
+In order...
+
+
+	*  Run database update tasks:
+
+	*  Restart the worker(s). For each, do: 
+ruby script/worker stop
+ruby script/worker start
+	*  Rebuild assets</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1688&amp;rev=1271670662&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:51:02+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development:release_notes:revision_1688</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1688&amp;rev=1271670662&amp;do=diff</link>
+        <description>BioCatalogue Release , 9th March 2010
+
+	*  Previous release revision: 1368
+	*  This release revision: 1688
+
+Steps To Take for Update
+
+
+In order...
+
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1808&amp;rev=1271670633&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:50:33+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development:release_notes:revision_1808</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1808&amp;rev=1271670633&amp;do=diff</link>
+        <description>BioCatalogue Release , April 6th 2010
+
+	*  Previous release revision: 1688
+	*  This release revision: 1814
+
+Steps To Take for Update
+
+
+In order...
+
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes&amp;rev=1271332211&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-15T12:50:11+01:00</dc:date>
+        <dc:creator>Eric</dc:creator>
+        <title>development:release_notes</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes&amp;rev=1271332211&amp;do=diff</link>
+        <description>*  5th November 2009 Release
+	*  19th November 2009 Release
+	*  1st December 2009 Release
+	*  10th December 2009 Release
+	*  9th March 2010 Release
+	*  6th April 2010 Release
+	*  12th April 2010 Release
+	*  15th April 2010 Release</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1271086655&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-12T16:37:35+01:00</dc:date>
+        <dc:creator>Jiten</dc:creator>
+        <title>development:background_processing</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:background_processing&amp;rev=1271086655&amp;do=diff</link>
+        <description>Tasks That Require Background Processing
+
+	*  Stats generation
+	*  Soaplab server submission
+	*  Updating the annotation counts
+	*  Solr optimisation
+	*  Running the service monitoring URLs checks
+	*  Updating the list of urls that should be monitoring
+	*  Sending out monitoring status change emails</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api:endpoints&amp;rev=1270728307&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-08T13:05:07+01:00</dc:date>
+        <dc:creator>Jiten</dc:creator>
+        <title>public:api:endpoints</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api:endpoints&amp;rev=1270728307&amp;do=diff</link>
+        <description>Back to Main API docs page
+
+Back to Table of Endpoints
+
+It is recommended that you have a look at the information about the data model exposed by the REST API before utilising the endpoints.
+
+GET /
+
+
+OR: /api.xml
+
+The root resource that provides information on the API.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api&amp;rev=1270728193&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-08T13:03:13+01:00</dc:date>
+        <dc:creator>Jiten</dc:creator>
+        <title>public:api</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api&amp;rev=1270728193&amp;do=diff</link>
+        <description>The BioCatalogue provides a set of public RESTful  endpoints that allow you to query the registry programmatically and integrate the data and functionality into your own scripts, workflows, apps, tools and mashups. XML is the main output format, with JSON  currently available for the Annotations endpoints. We are also looking into having RDF, FOAF, SKOS and others output formats in the future and where applicable.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api:use_cases&amp;rev=1270724570&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-08T12:02:50+01:00</dc:date>
+        <dc:creator>Jiten</dc:creator>
+        <title>public:api:use_cases</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api:use_cases&amp;rev=1270724570&amp;do=diff</link>
+        <description>Various use cases have been taken into account in order to build an API that provides a balance between utility and simplicity. 
+
+This includes scenarios ranging from building simple scripts and mashups to integration with scientific workflow workbenches (like Taverna) and other repositories/registries.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage&amp;rev=1270724547&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-08T12:02:27+01:00</dc:date>
+        <dc:creator>Jiten</dc:creator>
+        <title>public:api:coverage</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage&amp;rev=1270724547&amp;do=diff</link>
+        <description>COMING SOON!</description>
+    </item>
+</rdf:RDF>

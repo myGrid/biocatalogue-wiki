@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue public:howto</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2013-04-29T22:55:05+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soaplab&amp;rev=1260536560&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T15:09:58+01:00</dc:date>
+        <title>public:howto:annotation</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff</link>
+        <description>Anytime you see this icon  Click on it; a text box will pop up. Add your description and submit. Note that you need to sign in first before you can annotate a web service in BioCatalogue.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-27T11:18:54+01:00</dc:date>
+        <title>public:howto:soap</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff</link>
+        <description>Given that most existing SOAP services have a WSDL document, registering a SOAP service entry into the BioCatalogue requires only the WSDL url. The BioCatalogue WSDL parser automatically structures the data from the WSDL file into the BioCatalogue conformant format.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soaplab&amp;rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+01:00</dc:date>
+        <title>public:howto:soaplab</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:howto:soaplab&amp;rev=1260536560&amp;do=diff</link>
+        <description>What is Soaplab?
+
+	*  Soaplab is a specialised Web Services software framework for command-line bioinformatics programs. It includes a  library for running command-line programs and provides support to generate Java Web Services web applications based on this library. An important part of the library is a container that manages life cycle of the jobs effectively. Soaplab generic interface[1] makes it possible to use the same interface for all programs deployed. Soaplab is well known to many bioi…</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,398 @@
+BioCatalogue Home
+
+
+
+BioCatalogue Development Pages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How To Get Involved
+
+
+
+
+
+
+
+Requirements Overview
+
+
+Collaborations
+
+
+
+
+
+
+Stories
+
+User Registration
+
+Service Submission without a Service Document
+
+Service Change Monitoring
+Notification Aggregation
+Deprecation of Service
+
+
+
+
+
+
+
+
+
+
+
+Versioning Policy
+
+
+Best Practice Guidelines
+
+
+
+
+Development Environment
+
+
+Web Service
+Requirements for Pilot (October '08)
+Content Requirements for BioCatalogue Pilot
+Expected performance, scalability, support and so on for the pilot
+Data Modeling Process
+Codebase Guidelines
+1-Plantinum annotation
+
+
+
+
+
+Accounts & Passwords
+
+
+
+
+
+Evaluation strategy for the pilot
+
+The BioCatalogue Roadmap
+
+How To Get Involved
+Feature List for the Pilot
+
+Current BioCatalogue Terms of Use
+
+The BioCatalogue Core Team
+The BioCatalogue Partners & Friends
+
+News & Events
+Features of the BioCatalogue
+The BioCatalogue Roadmap for 2010
+Publications
+
+
+acts_as_annotatable Plugin
+
+Annotations Plugin
+
+Embrace Registry Capabilities (existing)
+
+Software Requirements Specification for BioCatalogue
+Planning for the Pilot
+
+
+
+
+
+
+
+20 Questions for BioCatalogue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Soaplab service in BioCatalogue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Testing and Monitoring of Services
+Background Processing
+
+Caching
+
+
+
+
+Favourites Plugin
+Application Load/Stress Testing
+
+1. Why the BioCatalogue?
+
+Pseudo-Synonyms for Search
+
+
+To Get Involved
+
+What could we do to involve people in curating the BioCatalogue ?
+BioCatalogue Outreach Activities
+
+Codebase Testing
+
+
+WSDL Parsing
+
+
+
+
+
+About EMBRACE Test Scripts
+
+
+The BioCatalogue Focus group
+
+
+The BioCatalogue REST API
+BioCatalogue Live Site Releases
+REST API Requirements
+
+One to one Meeting with users
+
+BioCatalogue annotation jamboree
+
+
+Core Colours
+
+
+Help Pages
+This page is now deprecated. Please do not update!
+This page is now deprecated. Please do not update!
+This page is now deprecated. Please do not update!
+This page is now deprecated. Please do not update!
+This page is now deprecated. Please do not update!
+This page is now deprecated. Please do not update!
+This page is now deprecated. Please do not update!
+This page is now deprecated. Please do not update!
+5th November 2009
+19th November 2009 Release
+1st December 2009
+
+Getting Started with the BioCatalogue
+Discovering Web Services in the BioCatalogue
+Using the BioCatalogue
+Registering Web Services in the BioCatalogue
+Annotating Web Services in the BioCatalogue
+How We Monitor Web Services in the BioCatalogue
+General Info on Web Services
+Making Web Services
+Executing Web Services
+
+10th December 2009
+George's feedback
+Paul Fisher's feedback
+
+
+Jan2010 Integration Branch Help
+The BioCatalogue REST API - Changelog
+
+Attending
+For Developers
+Annotations Model
+
+
+The BioCatalogue Roadmap for 2009
+
+
+Curation roadmap
+
+
+Taking Responsibility for a Service
+The BioCatalogue REST API - Use Cases
+The BioCatalogue REST API - Coverage and Future Plans
+The BioCatalogue REST API - Endpoints Detailed Docs
+
+BioCatalogue Release , 9th March 2010
+BioCatalogue Release , April 6th 2010
+BioCatalogue Release , April 6th 2010
+BioCatalogue Release , April 6th 2010
+
+Test Scripts in BioCatalogue
+BioCatalogue Release , April 22nd 2010
+BioCatalogue System Architecture
+
+
+
+
+Pre-release Notes for 24 May, 2010 Release
+
+Release Notes for 26 May, 2010 Release
+
+
+Next Steps for Service Monitoring
+
+
+
+BioCatalogue Mass Curator
+Mass Curator: Developer Information
+
+Installing and Running the BioCatalogue
+
+
+Service Life Cycle States
+
+v1.0.0 Release (Feb 2011)
+Discover Register Annotate Monitor Aob (DRAMA)
+
+
+
+
+
+
+
+BioCatalogue Server Configuration
+Integrating DAS Services into BioCatalogue
+
+
+
+The BioCatalogue work plan for 2011
+Collaboration Meeting with Emory - January 10, 2011
+Successes
+BioCatalogue Write API
+
+v1.0.1 Release (Jun 2011)
+Handover (Aug - Sep 2011)
+v1.1.0 Release (Sep 2011)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

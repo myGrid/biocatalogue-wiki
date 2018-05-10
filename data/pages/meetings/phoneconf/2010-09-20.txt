@@ -1,0 +1,54 @@
+Date: Monday 20 Sept 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** 
+
+**EBI:**
+
+
+===== Apologies =====
+
+
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * SAB meeting date
+  * Daily operations Report
+  * Review of public wiki and public facing material
+  * Review of Roadmap
+  * Planning of next release 
+  * Upcoming events and meetings 
+
+===== Actions from Previous Meeting =====   
+
+  * Jits to recycle Taverna CLA for BioCatalogue  
+  * Rodrigo to check if there are any contributions license at the EBI we need to consider
+  * Rodrigo/Eric: Send EBI wiki template to Franck
+  * Rodrigo to handle BioXsD-EDAM contact 
+  * Mannie to send the bulk annotation via spreadsheet tool to Hamish for testing
+  * Eric/Rodrigo to talk to the sys admin team at the EBI about the BioCatalogue back-end
+
+
+===== Upcoming Meetings =====  
+
+===== Minutes =====
+
+
+===== AOB =====
+
+There is an invitation for the ENFIN conference next year
+
+Eric: invited to give a talk web services and BioCatalogue in Munich in October. http://www.enfin.org/page.php?page=sme_meeting_2010
+
+Previous meeting: [[Meetings:PhoneConf:2010-06-28|Phone Conference Meeting on June 28 2010]]
+
+Next meeting:

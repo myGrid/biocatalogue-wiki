@@ -1,0 +1,69 @@
+====== Meeting Agenda/Minutes ======
+
+Date: Tuesday 14th October 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** Franck, Jits, Carole 
+
+**EBI:** Eric, Thomas, Hamish
+
+===== Apologies =====
+  * Rodrigo
+
+===== Minuting =====
+  * Eric
+
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Progress with the pilot - are we rolling?
+
+  * BioMoby web services
+
+  * Annual Report (Carole)
+
+  * AOB.
+
+
+===== Actions from Previous Meeting ===== 
+
+  * Jits: Speak to Dave about the new privacy policy in myExperiment 
+  * Jits: circulate myExp draft T&C's and privacy policy.
+  * Franck (with devs): put together feature list for pilot, for end users.
+  * Eric & Thomas: set up pilot.biocatalogue.org and deploy the current work on the pilot. 
+
+====== Minutes ======
+  * Jits spoke to Dave about myExperiment privacy policy. Though one has been written it has not been in use so could not be circulated. The EBI [[http://www.ebi.ac.uk/Information/termsofuse.html|terms of use]] are available as a basis for writing the BioCatalogue terms of use
+  * On progress on pilot development
+    * functionality available for user registration and management
+    * on-going work on service submission and management, with emphasis on soap services
+    * event logging plugin being done for my experiment that will be used for BioCatalogue as well
+  * On release strategy for the pilot
+    * soft and silent release at the end of October to a small community
+    * open beta release at the end of November( beginning of December)
+    * organize user experience/show and tell activities during November to feed into beta release for December
+    * use press release, blogs(Duncan) and possibly bbsrc announcement as publicity channels
+
+
+===== New Actions =====
+  * Action Thomas : Create a public space on BioCatalogue wiki
+  * Action Eric, Jits, Thomas, Franck : Establish the list of features for the pilot and road map for future development
+  * Action Thomas : Configure the mailer on the BioCatalogue beta site
+  * Action Eric  : Investigate Biomoby script from Eddie
+  * Action Carole : Complete Annual Report
+  * Action Robert : Organize the advisory board meeting. Could be at EBI or Manchester and would be desirable for the whole team to be there.
+ 
+
+
+===== Upcoming Meetings ===== 
+
+===== AOB =====
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-10-07|Phone Conference Meeting on Oct 7 2008]]
+
+Next meeting: [[Meetings:PhoneConf:2008-10-28|Phone Conference Meeting on Oct 28 2008]]

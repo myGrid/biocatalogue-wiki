@@ -1,0 +1,35 @@
+===== BioCatalogue Release , April 6th 2010 =====
+
+  * Previous release revision: 1688
+  * This release revision: 1814
+
+==== Steps To Take for Update ====
+
+In order...
+
+  * Run database update tasks:
+
+  rake db:migrate RAILS_ENV=production
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+  * Restart memcached servers
+
+=== Release Notes ===
+
+** Included in this release ** :
+
+  * REST services registration enhancements
+  * [[public:api|REST API]] enhancements
+  * New UI for Soap Operations
+  * Bug fixes
+
+

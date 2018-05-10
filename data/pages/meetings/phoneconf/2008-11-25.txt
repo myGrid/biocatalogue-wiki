@@ -1,0 +1,54 @@
+Date: Tuesday 25th Nov 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** 
+
+**EBI:**
+===== Apologies =====
+
+
+===== Minuting =====
+Franck
+
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Progress with the pilot - are we rolling?
+
+  * BioCatalogue public wiki
+  
+  * Meeting in Edinburgh - 
+
+  * Next BioCatalogue F2F
+
+  * AOB.
+
+===== Actions from Previous Meeting ===== 
+
+  * Action Eric, Jiten, Thomas : Release the internal pilot with release notes
+  * Action Franck : Provide an example of a semantically annotated service(using the SAWSDL model)  
+  * Jits: add number of service in the catalogue to the index page
+  * Jits: add Franck to support list 
+  * Thomas: investigate 'home' link on the public wiki
+  * Jits/Thomas/Eric: create developer section on the wiki
+
+====== Minutes ======
+ 
+
+===== New Actions =====
+
+
+===== Upcoming Meetings ===== 
+Semantic Web Applications and Tools for Life Sciences - 28/11/08
+http://www.swat4ls.org/
+
+===== AOB =====
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting:[[Meetings:PhoneConf:2008-11-18|Phone Conference Meeting on Nov 18 2008]] 
+
+Next meeting: [[Meetings:PhoneConf:2008-12-09|Phone Conference Meeting on Dec 09 2008]]

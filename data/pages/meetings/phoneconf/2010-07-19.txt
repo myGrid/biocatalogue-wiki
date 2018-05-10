@@ -1,0 +1,78 @@
+Date: Monday 19 July 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Carole, Jits, Mannie, Franck
+
+**EBI:** Eric, Rodrigo, Hamish 
+
+
+===== Apologies =====
+
+
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Report from ISMB
+  * Report from IEEE conference
+  * Daily operations Report
+  * Review of public wiki and public facing material
+  * Review of Roadmap
+  * Planning of next release 
+
+   
+===== Actions from Previous Meeting =====   
+
+  * Jits, Eric: Contributors license for BioCatalogue...  **ongoing** 
+  * Franck: Organise next SAB meeting. Possibly end of September 2010... **ongoing**  October might be a better date 
+
+
+===== Upcoming Meetings =====  
+
+===== Minutes =====
+
+=== Report from ISMB ===
+
+Demo and presentation went well. A lot of interest in the BioCatalogue. 
+We should now focus on analysis of the content and a SPARQL endpoint for the BioCatalogue
+
+=== Report from IEEE conference ===
+Presentation of the Functional Unit went well, now need to focus on the implementation.
+
+=== Daily operations Report ===
+  * New members joining the BioCatalogue. 
+  * Lots of dead INB services. 
+  * the site was a bit slow but it's now fine 
+
+=== Review of public wiki and public facing material ===
+We need a new template for the wiki but because EBI is moving to drupal we might as well wait to avoid doing it twice. 
+
+=== Sustainability of the BioCatalogue ===
+  * Carole talking to Pistoia and PFIZER about the content curation 
+  * BioCatalogue has been proposed as a ELIXIR node.
+  * We might consider include BioCatalogue as part of the apache foundation
+
+==== New actions ====
+  * Jits to recycle Taverna CLA for BioCatalogue **ongoing ... we'll reuse the Taverna one. EBI is ok with that.** 
+  * Rodrigo to check if there are any contributions license at the EBI we need to consider ... **ongoing**
+  * Jits: send Emory contact details to Carole. **Done** 
+  * Rodrigo to check if we can get some money from the EBI to organise next SAB f2f...**ongoing**
+  * Franck: Take a look at INB services and archive the dead ones...**ongoing**
+  * Rodrigo/Eric: Send EBI wiki template to Franck... **ongoing** 
+  * Rodrigo to handle BioXsD-EDAM contact... ** ongoing**  
+  * Mannie to send the bulk annotation via spreadsheet tool to Hamish for testing... **ongoing**
+  * Eric/Rodrigo to talk to the sys admin team at the EBI about the BioCatalogue back-end... **ongoing**
+
+========
+
+Previous meeting: [[Meetings:PhoneConf:2010-06-28|Phone Conference Meeting on June 28 2010]]
+
+Next meeting:

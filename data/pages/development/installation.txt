@@ -1,0 +1,387 @@
+====== Installing and Running the BioCatalogue ======
+
+This page describes how to download, set up and run the BioCatalogue system on your own machine(s).
+
+**Note:** if you are setting up a development environment and working on the BioCatalogue codebase please also see the [[development:codebase_guidelines|Codebase Guidelines]].
+
+===== Getting Help =====
+
+For any assistance please join the **[[http://rubyforge.org/mailman/listinfo/biocatalogue-hackers|biocatalogue-hackers mailing list]]** and post your questions/feedback. Alternatively you can contact us directly at contact@biocatalogue.org.
+
+===== General Requirements =====
+
+  * *nix based system  (not fully tested on MS Windows yet)
+  * Subversion v1.6+
+  * Ruby v1.8.5, v1.8.6 or v1.8.7
+  * RubyGems v1.4 (> v1.4.2 not supported)
+  * Oracle/Sun Java v1.6+
+  * MySQL database v5.0+
+
+===== Prerequisites =====
+
+==== Ubuntu 10.04 ====
+
+**NOTES**
+
+  * The instructions below assume you have the following package repos enabled and have all your packages up to date:
+    * Canonical supported Open Source software (main)
+    * Community maintained Open Source software (universe)
+    * Software restricted by copyright or legal issues (multiverse)
+    * Partner repository (for Java)
+  * Ubuntu 10.04 has Ruby 1.8.7 as it's default Ruby package. The BioCatalogue software has not been thoroughly tested with this version of Ruby but "should just work". If you encounter any issues with this set up please contact us.
+  * Do not install the RubyGems package that comes by default. Manual installation instructions for the required RubyGems are described below.
+
+=== Install Ruby, Java, MySQL, memcached and other packages required ===
+
+  sudo apt-get install subversion build-essential curl ruby rdoc irb ruby-dev libreadline-ruby1.8 libruby1.8 libopenssl-ruby libmysql-ruby libmysqlclient-dev zlib1g zlib1g-dev libxml2 libxml2-dev libxslt-dev libssl-dev sun-java6-jdk mysql-server memcached
+
+=== Setup Oracle/Sun Java to be the default ===
+
+  sudo update-java-alternatives -s java-6-sun
+  java -version
+
+=== Install RubyGems ===
+
+<html>
+<div class="box_important" style="margin-top: 0";>
+<b>Please note:</b> currently, due to breaking changes, RubyGems versions greater than 1.4.2 WILL NOT work.
+</div>
+</html>
+
+  cd /tmp
+  wget http://production.cf.rubygems.org/rubygems/rubygems-1.4.2.tgz
+  tar zfxv rubygems-1.4.2.tgz
+  cd rubygems-1.4.2/
+  sudo ruby ./setup.rb
+  cd /usr/bin/
+  sudo ln -s gem1.8 gem
+
+=== Start up the required services (if required) ===
+
+  sudo service memcached start
+  sudo service mysql start
+
+
+
+==== Debian 5 ====
+
+**NOTES**
+
+  * The instructions below assume you have the following package repos enabled and have all your packages up to date:
+    * "Officially supported (main)"
+    * "DFSG-compatible Software with Non-Free Dependencies (contrib)"
+    * "Non-DFSG-compatible Software (non-Free)"
+  * Debian 5 has Ruby 1.8.7 as it's default Ruby package. The BioCatalogue software has not been thoroughly tested with this version of Ruby but "should just work". If you encounter any issues with this set up please contact us.
+  * Do not install the RubyGems package that comes by default. Manual installation instructions for the required RubyGems are described below.
+
+=== Install Ruby, Java, MySQL, memcached and other packages required ===
+
+  sudo apt-get install subversion ruby rdoc ri irb libopenssl-ruby ruby-dev mysql-server libssl-dev libmysqlclient15-dev libmagick++9-dev build-essential curl libxml++2.6-dev sun-java6-jdk memcached
+
+=== Setup Oracle/Sun Java to be the default ===
+
+  sudo update-java-alternatives -s java-6-sun
+  java -version
+
+=== Install RubyGems ===
+
+<html>
+<div class="box_important" style="margin-top: 0";>
+<b>Please note:</b> currently, due to breaking changes, RubyGems versions greater than 1.4.2 WILL NOT work.
+</div>
+</html>
+
+  cd /tmp
+  wget http://production.cf.rubygems.org/rubygems/rubygems-1.4.2.tgz
+  tar zfxv rubygems-1.4.2.tgz
+  cd rubygems-1.4.2/
+  sudo ruby ./setup.rb
+  cd /usr/bin/
+  sudo ln -s gem1.8 gem
+  cd -
+
+=== Start up the required services (if required) ===
+
+  sudo /etc/init.d/memcached start
+  sudo /etc/init.d/mysql start
+
+
+==== Mac OS X 10.6 Snow Leopard ====
+
+**NOTES**
+
+  * The instructions below assume you have the following installed on your system:
+    * Xcode Tools (available from Apple ((http://developer.apple.com))
+    * A 64 bit version of MySQL 5.1.x (available from ((http://dev.mysql.com/downloads/mysql))).  Please note that your Mac needs to be running in 64 bit mode as well; the 32 bit config has not been tested yet.
+  * Do not use the Ruby and RubyGems packages that comes by default. Manual installation instructions are described below.
+
+Before installing any of the packages, the following line needs to be added to the end of your ''~/.profile'' file:
+  export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+
+=== Install Ruby ===
+
+  cd /tmp
+  curl -O ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p174.tar.gz
+  tar xzvf ruby-1.8.7-p174.tar.gz
+  cd ruby-1.8.7-p174
+  ./configure --enable-shared --enable-pthread CFLAGS=-D_XOPEN_SOURCE=1
+  make
+  sudo make install
+  cd -
+
+=== Install RubyGems ===
+
+<html>
+<div class="box_important" style="margin-top: 0";>
+<b>Please note:</b> currently, due to breaking changes, RubyGems versions greater than 1.4.2 WILL NOT work.
+</div>
+</html>
+
+  cd /tmp
+  curl -O http://files.rubyforge.vm.bytemark.co.uk/rubygems/rubygems-1.4.2.tgz
+  tar xzvf rubygems-1.4.2.tgz
+  cd rubygems-1.4.2
+  sudo /usr/local/bin/ruby setup.rb
+  cd -
+
+=== Install MySQL Gem ===
+
+  sudo gem install mysql -- --with-mysql-dir=$(which mysql)
+
+=== Start up the required services (if required) ===
+
+  sudo service memcached start
+  sudo service mysql start
+
+===== Setting up the BioCatalogue System =====
+
+**NOTES**
+
+  * For production set ups always add **RAILS_ENV=production** to the end of the command (or add this as a global environment variable in your set up). For the server and console you can also do:
+
+  ruby script/server -e production
+
+  ruby script/console production
+
+=== Install the required Ruby Gems ===
+
+  gem install solr-ruby dnsruby tzinfo
+  gem install libxml-ruby -v 1.1.4
+  gem install addressable -v 2.2.2
+  gem install daemons -v 1.1.3
+  gem install SystemTimer -v 1.2.3
+  gem install ZenTest -v 4.3.3
+  gem install RubyInline -v 3.8.6
+  gem install json -v 1.4.6
+  gem install mysql -v 2.8.1
+  gem install mongrel -v 1.1.5
+
+=== Get the source code ===
+
+In the folder you want BioCatalogue to be set up in, check out the source code:
+
+  cd ~
+  git clone https://github.com/myGrid/biocatalogue
+
+=== Set up MySQL ===
+
+In a MySQL shell do:
+
+  create database biocat_dev;
+  create database biocat_prod;
+  create database biocat_test;
+
+=== Set up configurations and folders ===
+
+**Note:** spaces and tabs are very important in .yml files. They must be used consistently.
+
+In the application's directory:
+
+  * Copy **config/database.yml.pre** to **config/database.yml** and configure accordingly (see file for more help)
+
+  * Copy **config/solr.yml.pre** to **config/solr.yml** and configure accordingly (see file for more help)
+
+  * Copy **config/preinitializer.rb.pre** to **config/preinitializer.rb** and configure accordingly (see file for more help)
+
+  * Copy **config/memcache.yml.pre** to **config/memcache.yml** and configure accordingly. Example:
+
+  test:
+    ttl: 604800
+    sessions: false
+    debug: false
+    namespace: biocat_test
+    servers: localhost:11211
+  
+  development:
+    ttl: 604800
+    sessions: false
+    debug: false
+    namespace: biocat_dev
+    servers: localhost:11211
+  
+  production:
+    ttl: 604800
+    sessions: false
+    debug: false
+    namespace: biocat_prod
+    servers: localhost:11211
+
+  * Copy **config/initializers/biocat_local.rb.pre** to **config/initializers/biocat_local.rb** and configure accordingly
+
+  * Copy **config/initializers/mail.rb.pre** to **config/initializers/mail.rb** and configure accordingly
+
+  * Copy **data/service_categories.yml.pre** to **data/service_categories.yml** and configure your categories if required.
+
+  * Copy **public/stylesheets/colour-override.css.pre** to **public/stylesheets/colour-override.css** and configure the main site colours as required.
+
+  * Create some required folders. In the application's directory:
+
+  mkdir log tmp
+  cd tmp
+  mkdir cache pids sessions sockets
+  
+=== Set up the BioCatalogue database schema ===
+
+  * **First, temporarily set ENABLE_SEARCH to ''false'' in config/initializers/biocat_local.rb.** 
+  * Then:
+
+  rake db:migrate
+
+  * If that doesn't work, see the section [[development:installation#production_database|Production Database]].
+
+=== Search server ===
+
+The search server (Solr) is embedded within the application (for more info, see the section [[development:installation#Search Server (Solr)|Search Server (Solr)]]).
+
+To start the search server (in a separate terminal):
+
+  rake solr:start
+
+To stop the search server:
+
+  rake solr:stop
+
+=== Run the asset packager (for production mode only) ===
+
+We have a mechanism to package up all CSS and JS files together to improve on performance. This works in (and is required for) production mode only.
+
+  rake asset:packager:build_all
+
+=== WSDL Parsing Service ===
+
+Set up the [[https://github.com/myGrid/WSDLUtils|WSDL Parser Service]] by following the instructions in the README.txt. 
+
+You will then need to modify the relevant setting in config/initializers/biocat_local.rb. 
+
+Alternatively you can use the BioCatalogue test site one (not guaranteed to always be available):
+
+  WSDLUTILS_BASE_URI = 'http://test.biocatalogue.org/WSDLUtils/WSDLUtils.php'
+
+===== Running the BioCatalogue System =====
+
+To start up a server, in the application's directory (i.e. the "biocatalogue" directory):
+
+  ruby script/server
+
+Then open up the web page at:
+
+  http://localhost:3000
+
+
+===== Running the BioCatalogue Monitoring =====
+
+Monitoring in BioCatalogue is done at two levels:
+
+  * Availability monitoring, which is integrated with application
+  * Functional monitoring, which is run as an external service
+
+==== Availability Monitoring ====
+
+The first step in setting this up is making sure that job workers are running as monitoring is done in a background process. Run the following:
+
+<code> ruby script/worker start </code>
+
+**Note:** By default, this runs the job workers in production mode.
+
+Then run the following two rake tasks:
+
+<code> rake biocatalogue:submit:update_urls_to_monitor  RAILS_ENV="your environment"
+rake biocatalogue:submit:check_url_status RAILS_ENV="your environment"</code>
+
+That is it for the availability monitoring. 
+
+To run the monitoring on a regular basis, you could setup a cron job to run the two rake task given above
+
+==== Functional Monitoring ====
+
+Requires :
+  * Python 2.5 or higher
+
+This is done via test scripts. These can be either perl or python scripts or soapUI project files (xml). The package for running these is available in
+
+<code> vendor/embrace_scripts </code>
+
+The instructions for setting this up are available in the README file in that package
+
+
+===== More Info =====
+
+==== Adding an Initial Admin User ====
+
+Run the application and sign up for a new user via the web interface.
+
+Then, on the command line, start the Rails console in the application's directory (i.e. the "biocatalogue" directory):
+
+  ruby script/console production
+
+And type the following:
+
+  u = User.first    # Assuming the user you signed up is the first one in the catalogue
+  u.activate!       # This activates the user
+  u.role_id = 1     # This makes the user an Admin
+  u.save!
+  
+
+==== Production Database ====
+
+Before: **temporarily set ENABLE_SEARCH to ''false'' in config/initializers/biocat_local.rb.**
+
+In order to create the production database you can do:
+
+  rake db:schema:load RAILS_ENV=production
+
+This will load the schema up from /db/schema.rb (which should be kept up to date with the command "rake db:schema:dump").
+
+Then import the data (or use it empty).
+
+NOTE: this does mean that the initial Registry entries for Feta and SeekDa will not be in there. We need a proper mechanism for importing initial data.
+
+==== Search Server (Solr) ====
+
+The solr service comes with the acts_as_solr plugin in our codebase so nothing has to be installed in order to have search enabled.
+
+  * To start the search server open a command line in the root of the application and type:
+
+  rake solr:start
+
+  * To stop the search server:
+
+  rake solr:stop
+
+  * To reindex everything in the production database:
+ 
+  rake solr:reindex RAILS_ENV=production --trace
+  
+(make sure that the production solr instance has been started)
+
+  * To reindex everything in the development database:
+ 
+  rake solr:reindex --trace
+
+  * To optimise the production mode index:
+
+  ruby script/runner -e production "Service.solr_optimize"
+
+  * To optimise the development mode index:
+
+  ruby script/runner "Service.solr_optimize"

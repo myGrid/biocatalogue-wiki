@@ -1,0 +1,71 @@
+Date: Monday 12th October 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Steve, Jits, Carole, Franck, George
+
+
+**EBI:** Eric, Rodrigo
+
+===== Apologies =====
+
+
+===== Minuting =====
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Progress report 
+  * BBSRC report
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Jits: CLA proposal based on the Taverna one. **ongoing** 
+  * Eric: talk to Francois (the french team) about their service monitoring improvements. **ongoing** 
+  * ALL: add your Biocatalogue outreach on the wiki. **ongoing** 
+  * Franck: plan for focus group. **ongoing** 
+  * Rodrigo: identify group at the EBI which could provide us with feedback about the BioCatalogue. **completed** 
+
+===== Minutes ===== 
+
+Steve highlighted the EDAM ontology from embrace. The BioCatalogue can use that. 
+Jon from the EMBRACE group will be in Manchester for the BioCatalogue annotation jamboree. 
+
+Eric: test script up and running. has some issues with library versions; which library to select for a specific language? Soaplab team will update their test script to work with the latest library. 
+
+Jits: Enhanced search performance. Working on the API 
+
+Franck: writing annotation best practice. Sent invitation for the BioCatalogue annotation jamboree. 
+
+===== New actions =====
+
+  * Franck: Send around who is doing what for the BBSRC report
+  * Eric/Jits: to talk about script written by Jits for the Embrace import
+
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+BioCatalogue annotation model meeting 14/10/09
+
+BBSRC report due 01/11/09
+
+The BioCatalogue annotation jamboree 29/11/09
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-09-28|Phone Conference Meeting on Sept 28 2009]]
+
+Next meeting: [[Meetings:PhoneConf:2009-10-19|Phone Conference Meeting on Oct 19 2009]]

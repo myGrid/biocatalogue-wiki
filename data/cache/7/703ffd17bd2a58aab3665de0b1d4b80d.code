@@ -1,0 +1,31 @@
+<span class="sc3"><span class="re1">&lt;search</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/search?q=dbfetch&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;query</span> <span class="re0">urlKey</span>=<span class="st0">&quot;q&quot;</span><span class="re2">&gt;</span></span>dbfetch<span class="sc3"><span class="re1">&lt;/query<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;scope</span> <span class="re0">urlValue</span>=<span class="st0">&quot;all&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;scope&quot;</span><span class="re2">&gt;</span></span>All<span class="sc3"><span class="re1">&lt;/scope<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;page</span> <span class="re0">urlKey</span>=<span class="st0">&quot;page&quot;</span><span class="re2">&gt;</span></span>1<span class="sc3"><span class="re1">&lt;/page<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pageSize</span> <span class="re0">urlKey</span>=<span class="st0">&quot;per_page&quot;</span><span class="re2">&gt;</span></span>10<span class="sc3"><span class="re1">&lt;/pageSize<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>3<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>30<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;scopedResults</span> <span class="re0">scope</span>=<span class="st0">&quot;Services&quot;</span><span class="re2">&gt;</span></span>8<span class="sc3"><span class="re1">&lt;/scopedResults<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;scopedResults</span> <span class="re0">scope</span>=<span class="st0">&quot;Soap Operations&quot;</span><span class="re2">&gt;</span></span>22<span class="sc3"><span class="re1">&lt;/scopedResults<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;service</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/608&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Service&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Service - DBFetch&quot;</span><span class="re2">&gt;</span></span>
+      ...
+    <span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;soapOperation</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/soap_operations/607&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;SoapOperation&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Soap Operation - fetchData&quot;</span><span class="re2">&gt;</span></span>
+      ...
+    <span class="sc3"><span class="re1">&lt;/soapOperation<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;next</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/search?page=2&amp;q=dbfetch&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Search&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Next page of results&quot;</span><span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;searches<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;scoped</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/search?q=dbfetch&amp;scope=services&quot;</span> <span class="re0">scope</span>=<span class="st0">&quot;Services&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Search results for Services&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Search&quot;</span><span class="re2">/&gt;</span></span>
+&nbsp;
+    <span class="sc3"><span class="re1">&lt;/searches<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/search<span class="re2">&gt;</span></span></span>

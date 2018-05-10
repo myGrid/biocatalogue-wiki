@@ -1,0 +1,87 @@
+===== 5th November 2009 =====
+
+  * Previous release revision:
+  * This release revision: 1266
+
+==== Steps To Take for Update ====
+
+In order...
+
+  * Run database update tasks:
+
+  rake db:sessions:clear RAILS_ENV=production
+  rake db:migrate RAILS_ENV=production
+
+  * Restart memcached server(s)
+
+  * Run latest update scripts: 
+  
+  ruby script/biocatalogue/update_activity_logs_aug09.rb
+  ruby script/biocatalogue/update_providers_sep09.rb
+  ruby script/biocatalogue/update_soaplab_sep09.rb -e production
+
+  * Update config/initializers/biocat_local.rb with new settings
+    * Including new RPX settings
+
+  * Make sure the Solr schema.xml file is updated
+
+  * Restart Solr service(s)
+
+  * Reindex the search engine:
+
+  rake solr:reindex RAILS_ENV=production --trace
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Delete public/stats.html
+
+  * Update the search query suggestions list:
+
+  rake biocatalogue:submit:update_search_query_suggestions RAILS_ENV=production
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+
+
+==== Release Notes ====
+
+Email sent to the friends list on 6th Nov 09:
+
+  Hi all,
+  
+  After our successful public beta launch at ISMB 09 we've been working hard on improving the BioCatalogue. We've recently updated the BioCatalogue live site (http://www.biocatalogue.org) with the following:
+  
+  - Improved WSDL parsing with the ability to parse and store information on complex types of SOAP inputs and outputs (including complex types defined in external schema files).
+  - New user interface for viewing the information on complex types of SOAP inputs and outputs.
+  - Significant performance improvements to search, the service index and filtering.
+  - New user interface for quickly adding annotations (when signed in).
+  - Support for OpenID, Google, Yahoo, Twitter and Facebook accounts. At the moment you can only link one of these external accounts with your BioCatalogue account (or open a new BioCatalogue account with one of these accounts).
+  - Simple/detailed service listings views for the search results and service index.
+  - More help text and guidance for Soaplab services.
+  - Better user interface for viewing example data annotations.
+  - Better user interface for filtering by service categories.
+  - Revamped user sign in, sign up and edit profile pages.
+  - Many more user interface tweaks and bug fixes.
+  - More work on our underlying infrastructure and systems.
+  
+  Please note that we have also updated our Terms of Use (http://www.biocatalogue.org/termsofuse) in which we:
+  - Make a clear distinction between Members and Users of the BioCatalogue.
+  - Clarify the definitions of the key terms used.
+  - Clarify our policies regarding content and the BioCatalogue website and services.
+  - Clarify our data preservation policy.
+  - Outline our take down / withdrawal policy.
+  
+  To find out what we will be working on for the rest of the year and next year please see: <http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap#fourth_quarter_2009_oct_-_dec>
+  
+  We also have a pre-alpha REST API to access the content of the BioCatalogue that we are testing at the moment. If you are interested in getting involved with this, please contact Jiten Bhagat <jits@cs.man.ac.uk>. We are hoping to release the initial version of the API before the end of the year.
+  
+  As always, we value your feedback, ideas and discussion, so please feel free to get in touch with us with your thoughts.
+  
+  Regards,
+  The BioCatalogue Team

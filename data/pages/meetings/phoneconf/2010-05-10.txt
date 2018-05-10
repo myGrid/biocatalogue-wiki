@@ -1,0 +1,68 @@
+Date: Monday 10th May 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Franck, Manni
+
+**EBI:** Eric
+
+===== Apologies =====
+
+====== Agenda ======
+
+  * Actions from the last telecom
+  * Progress report 
+     * Review of Monitoring 
+     * Review of Curation
+     * Service update checker     
+  * Publicity/outreach
+      * Plan for the EMBRACE service provider workshop
+      * Plan for ISMB 2010? Who is going? 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Eric: remove orphan service providers **completed**
+  * Eric: Fix ‘localhost’ provider **ongoing** Eric to ping Steve 
+  * Franck: Roster of people to contact for service providers and the material required to do that. **completed** 
+  * Jits/Mannie: Write API and Mass curation tool via spreadsheets **ongoing**
+
+===== Upcoming Meetings =====  
+
+===== AOB ===== 
+
+===== Minutes =====
+
+==== Review monitoring ====
+  * Eric is constantly monitoring the activity and test monitor to make sure they are working fine. 
+  * Eric is tackling the monitoring of REST endpoints. 
+  * Franck is monitoring dead services and sending e-mail to provider when possible. 
+
+==== Curation review ====
+
+  * Ongoing curation activity and effort to involve service providers. 
+  * Franck sent a mail to Paolo Romano last week about his soaplab service. Still waiting for a reply. If no reply, will ping him again by the end of the week  
+  * Service hosts are being clustered into service providers
+  * Duplicate Biomoby service description to operation too. 
+  * Franck removed unwanted tags 
+
+==== New action ====
+  * Eric: Investigate how to filter 'dead' service based on how long they're down.
+
+==== Outreach ====
+  * Franck is going to present the Function Unit paper at IEEE
+  * Franck will reuse the Jamboree material for the EMBRACE workshop 
+  * Because Carole/Rodrigo are unavailable we're unable to decide who is going or how many people we are sending for ISMB 
+
+Previous meeting: [[Meetings:PhoneConf:2010-04-26|Phone Conference Meeting on Apr 26 2010]]
+
+Next meeting: [[Meetings:PhoneConf:2010-05-17|Phone Conference Meeting on May 17 2010]]

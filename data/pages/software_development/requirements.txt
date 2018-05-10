@@ -1,0 +1,44 @@
+==== User Types ====
+From a service provider's perspective there are three broad categories of user, with lots of overlap and a forth type of usage which cuts across all usr types.
+
+1. End User
+
+    * Each use of the service is effectively in isolation
+    * Access is via a user interface, most often via an HTML form or an application GUI, although some use is command-line orientated.
+    * Domain knowledge is often high, but may not extend to the specifics of the service used.
+
+Example:
+
+    * Bench scientist with a sequence to analyse
+    * Database curator with an entry to annotate
+
+2. Developer
+
+    * Producing applications/workflows which use one or more services
+    * Domain knowledge often low. This is counterbalanced by the use of domain experts in testing and feature requests.
+    * Service knowledge limited to that provided in the documentation
+    * Service usage guidelines and examples are most useful to this group
+
+3. Systematic User
+
+    * Automated bulk analysis in workflows and scripts
+    * User responsible for these processes may not be the workflow designer or process developer so domain and service knowlege can be very varible.
+    * Service behavior important to this group specifically:
+          o Reliability: is the service going to be there for the 1st job and the 1000st job?
+          o Stability: is the service going to be different tomorrow?
+          o Consitancy: are the results I get today comparable with the results I got yesterday?
+          o Updatedness: is this the current stable version of the software, is it using the current releases of the databases?
+    * Service documentation:
+          o Announcments: downtime, problems, new versions, etc.
+          o Usage policies: what are the limitations on service usage (e.g. max number of parallel processes, max. number of submissions per day, etc.).
+
+4. Teaching
+
+    * Demonstration/illustration of service usage
+    * Students perform one of the other roles above (end-user, developer and/or systematic user), however the class as a whole behaves more like a systematic user
+    * Service behavior important to this group specifically:
+          o Reliability: is the service going to be available while teaching?
+          o Stability/consitancy: are the results I get today different from those the students will get tomorrow?
+    * Service documentation:
+          o Announcments: downtime, version changes, retirement
+          o Couse guidelines: E.g. read the help, don't submit all at the same time, use suitable input data, search suitable databases, be considerate, etc. 

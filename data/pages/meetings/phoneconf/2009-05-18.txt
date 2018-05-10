@@ -1,0 +1,81 @@
+Date: Monday 18th May 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503011
+===== Attending ===== 
+
+**Manchester:**  Jits, Franck, Steve
+
+
+**EBI:** Eric, Thomas, Rodrigo
+
+
+
+
+===== Apologies =====
+
+
+Carole
+
+===== Minuting =====
+
+Franck
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Update on EMBRACE work, post AGM - SRP
+  * Hackathon summary 
+  * Annotation model document
+  * Progress/developement of the pilot - are we rolling?
+    * Report back from silent public release 
+  * Test infrastructure setup at EBI and progress of service testing/monitoring piece.
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Eric: provide an update on what is happening with the test scripts execution environment. **completed**
+  * Franck & Eric : Produce elaborate document on the BioCatalogue data model - **ongoing** 
+  * Franck: identify all the non-bio service form the seekDa import - **ongoing**
+
+====== Minutes ======
+
+  * Update on EMBRACE work, post AGM - SRP
+The Embrace registry has achieved its goals so can now be merged to BioCatalogue. The project will be supported till summer  
+  * Hackathon summary  
+All went down well. Eric to look into the workflow monitor with Dan. BioCatalogue and myExperiment integration scheduled for August. 
+  * Annotation model document
+Still ongoing. there are some comments in the document to address. A new logial view of the model also needed 
+  * Progress/developement of the beta - are we rolling?
+Test infrastructure setup at EBI and progress of service testing/monitoring piece.
+Ebi agreed to have the tests script provided we take responsibility by manually checking and monitoring all the scripts.
+ 
+===== New actions =====
+
+  * Rodrigo: find out with Peter Rice what the Biosapien ontology. Anything we can learn from? 
+  * Steve: Check if it is possible to come up with a classification from the Embrace registry tags
+
+ 
+
+
+
+===== Upcoming Meetings =====  
+ISMB launch strategy: before the conference we should announce that we are launching BioCatalogue at ISMB. \\
+Ebi will target a number of list: EMBnet, bionet, admins, etc... \\
+Manchester will also target list such myExperiment mailing list, Taverna list etc...\\
+Item to take to the conference: leaflet, poster, sticker, t-shirt(if possible). 
+
+===== AOB =====
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-04-27|Phone Conference Meeting on Apr 27 2009]]
+
+Next meeting: [[Meetings:PhoneConf:2009-06-03|Phone Conference Meeting on June 06 2009]]

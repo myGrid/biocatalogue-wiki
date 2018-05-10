@@ -1,0 +1,58 @@
+==== v1.0.0 Release (Feb 2011) ====
+
+This is a major release which includes the following:
+
+  * The REST API
+    * Both read and write
+    * Full json and xml support
+    * [[http://www.biocatalogue.org/wiki/doku.php?id=public:api| Detailed API documentation ]]
+  * <del>Support for SSL</del>
+    * <del>All sensitive data are now sent over secure(ssl) connections (to be confirmed)</del>
+  * Monitoring improvements
+    * Users can now delete their test scripts
+    * Users can upload soapUI test suits (xml project files)
+    * Show historical success rate of tests
+    * Email notification to users when test status changes
+    * Users can unsubscribe from notifications
+  * Rest Service support improvements
+    * 
+  * Mass curation via spreadsheet application
+  * Streamlining protocol for setting up a private BioCatalogue instance
+    *  See [[http://www.biocatalogue.org/wiki/doku.php?id=development:installation| Installing the BioCatalogue System]]
+
+=== Updating the Live Site ===
+
+  * Stop the live application (downtime expected to be just a few minutes)
+  * Run svn update
+  * Migrate the database
+    * rake db:migrate RAILS_ENV=production
+  * Cache the success rates for service tests. This could take a little while
+    * rake biocatalogue:monitoring:update_test_success_rate RAILS_ENV=production
+  * Restart memcached servers
+  * Restart the job workers
+    * ruby script/worker stop|start
+  * Restart the application
+  * Reindex the application
+  * Setup cron job to update the service annotation levels
+  * Setup cron to update service test success rate
+  * Setup cron to update service test cached status
+  * Setup cron to generate a links checker report
+
+
+=== Test Cases for this Release ===
+  - Use the [[http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing|DRAMA]] procedure to test the system
+  - Make sure that every service test has a success rate(unless it is unchecked)
+  - Make sure redirects to https happens for sensitive pages
+    * session controller
+    * responsibility request controller
+    * contact controller
+    * oauthclients controller
+    * oauth controller
+  - Register a service
+  - Upload a test script to the registered service
+  - Delete your uploaded test script
+  - Create a new annotation attribute
+  - Request responsibility for a service
+  - Unsubscribe from receiving service status emails
+  - Resubscribe to receive service status emails
+  

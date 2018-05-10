@@ -1,0 +1,6 @@
+====== Core Colours ======
+
+^ Colour: ^ Hex Code: ^ RGB: ^
+| Dark Green | #C2E774 | R:194 G:231 B:116 |
+| Light Green | #E9F7CC | R:233 G:247 B:204 |
+

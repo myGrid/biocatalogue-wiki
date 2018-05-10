@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2009-12-08T15:23:54+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=collaborations&amp;rev=1218629404&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1259674166&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=home&amp;rev=1240855953&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=ismb_2008&amp;rev=1216289380&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings&amp;rev=1252884031&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=mockups&amp;rev=1216136470&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public&amp;rev=1257870705&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public_staging&amp;rev=1260285815&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations&amp;rev=1227715971&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=questionnaire&amp;rev=1216296402&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=sidebar&amp;rev=1231761017&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=start&amp;rev=1214239727&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=test&amp;rev=1246023590&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=test2&amp;rev=1244206356&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=collaborations&amp;rev=1218629404&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-13T12:10:04+00:00</dc:date>
+        <title>collaborations</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=collaborations&amp;rev=1218629404&amp;do=diff</link>
+        <description>*  BioCatalogue friends</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1259674166&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-01T13:29:26+00:00</dc:date>
+        <title>development</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1259674166&amp;do=diff</link>
+        <description>From Public Wiki
+
+	*  REST API documentation
+	*  Help Pages
+
+Pilot
+
+Requirements
+
+	*  Requirements (for Oct '08)
+	*  Revised Requirements (for Apr '09)
+	*   Content Requirements for Pilot
+	*  Expected performance, scalability, support and so on for the Pilot
+	*  Embrace Registry Capabilities
+	*  20 Questions
+	*  REST API Requirements</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=home&amp;rev=1240855953&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-27T18:12:33+00:00</dc:date>
+        <title>home</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=home&amp;rev=1240855953&amp;do=diff</link>
+        <description>BioCatalogue
+
+
+
+BioCatalogue is a BBSRC funded project and has been running since 1st June 2008. The project is a joint venture between the EMBL-EBI (led by Rodrigo Lopez) and the myGrid project at the University of Manchester (led by Carole Goble).</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=ismb_2008&amp;rev=1216289380&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-17T10:09:40+00:00</dc:date>
+        <title>ismb_2008</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=ismb_2008&amp;rev=1216289380&amp;do=diff</link>
+        <description>Preparation
+
+	*  Mockups
+	*  Questionnaire</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings&amp;rev=1252884031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-09-13T23:20:31+00:00</dc:date>
+        <title>meetings</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings&amp;rev=1252884031&amp;do=diff</link>
+        <description>*  Project Kick-Off Meeting/Manchester/April 28-29 2008
+	*  Phone Conferences (Manchester-EBI)
+	*  Joint myExperiment-BioCatalogue Meetings
+	*  F2F design-a-thon 14th-15th August 2008 @ EBI, Cambridge
+	*  F2F Pilot Development Review 04 December 2008 @ EBI, Cambridge
+	*  F2F Hackathon 21-22-23 January @ Manchester
+	*  Advisory Board meeting Agenda
+	*  Advisory Board meeting Minutes
+	*  F2F Meeting at EBI - September 14, 2009</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=mockups&amp;rev=1216136470&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-15T15:41:10+00:00</dc:date>
+        <title>mockups</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=mockups&amp;rev=1216136470&amp;do=diff</link>
+        <description>WARNING!!! If you use Firefox, the image might be resized automatically and look blurry because of that. You'll need to click on the image for it to go back to its original size and look sharper.
+
+
+	*  [Home page]
+	*  [Result page]
+	*  [Entry page]
+	*  [Browse]
+	*  [Simple account creation]
+	*  [Account creation + minimum profile]
+	*  [Simple service registration form]
+	*  [Simple service registration form + descriptor test]</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public&amp;rev=1257870705&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-11-10T16:31:45+00:00</dc:date>
+        <title>public</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public&amp;rev=1257870705&amp;do=diff</link>
+        <description>BioCatalogue
+
+
+
+
+BioCatalogue is a BBSRC funded project and has been running since 1st June 2008. The project is a joint venture between the EMBL-EBI (led by Rodrigo Lopez) and the myGrid project at the University of Manchester (led by Carole Goble).</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public_staging&amp;rev=1260285815&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-08T15:23:35+00:00</dc:date>
+        <title>public_staging</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public_staging&amp;rev=1260285815&amp;do=diff</link>
+        <description>The BioCatalogue website
+
+Our Goals
+
+	*  Provide a single registration point for Web Service providers and a single search site for scientists and developers.
+	*  Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.
+	*  BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations&amp;rev=1227715971&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-26T16:12:51+00:00</dc:date>
+        <title>publications_and_presentations</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations&amp;rev=1227715971&amp;do=diff</link>
+        <description>*  ISMB 2008
+	*  SOA Governance by Antoon
+	*  Carole's CODATA talk 2008
+	*  Data Curation Continuum</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=questionnaire&amp;rev=1216296402&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-17T12:06:42+00:00</dc:date>
+        <title>questionnaire</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=questionnaire&amp;rev=1216296402&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=sidebar&amp;rev=1231761017&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-12T11:50:17+00:00</dc:date>
+        <title>sidebar</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=sidebar&amp;rev=1231761017&amp;do=diff</link>
+        <description>Home
+
+Development
+
+Meetings
+
+Collaborations
+
+Publications and Presentations
+
+
+
+Public (Staging)
+
+
+
+Public
+
+
+
+Wiki help</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=start&amp;rev=1214239727&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-06-23T16:48:47+00:00</dc:date>
+        <title>start</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=start&amp;rev=1214239727&amp;do=diff</link>
+        <description>This is the wiki home page of the BioCatalogue Project.
+
+BioCatalogue will provide a curated and comprehensive catalogue of biological web services, thereby enabling users (people and programs) to discover and use these services easily. It also aims to provide a platform with several (standardized) interfaces and a suite of tools for registration of services by the community of users as well empower the community to extend and enhance the system. BioCatalogue will provide a centralized biologica…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=test&amp;rev=1246023590&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-26T13:39:50+00:00</dc:date>
+        <title>test</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=test&amp;rev=1246023590&amp;do=diff</link>
+        <description>The Pilot
+
+The Team
+
+Our Friends
+
+The Roadmap
+
+Publications
+
+Related Links</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=test2&amp;rev=1244206356&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-05T12:52:36+00:00</dc:date>
+        <title>test2</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=test2&amp;rev=1244206356&amp;do=diff</link>
+        <description></description>
+    </item>
+</rdf:RDF>

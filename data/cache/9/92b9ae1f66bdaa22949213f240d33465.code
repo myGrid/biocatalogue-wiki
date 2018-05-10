@@ -1,0 +1,9 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;rest_representation&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;content_type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text/plain&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/rest_representations/7&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;submitter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/users/27&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="kw2">null</span><span class="sy0">,</span>
+        <span class="st0">&quot;created_at&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2010-05-04T15:49:48Z&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

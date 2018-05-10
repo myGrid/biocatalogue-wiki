@@ -1,0 +1,19 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;filters</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/SoapOperations/filters&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;group</span> <span class="re0">name</span>=<span class="st0">&quot;Tags&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;type</span> <span class="re0">name</span>=<span class="st0">&quot;Tags&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;tag&quot;</span> <span class="re0">description</span>=<span class="st0">&quot;&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;filter</span> <span class="re0">name</span>=<span class="st0">&quot;&amp;lt;http://www.mygrid.org.uk/mygrid-moby-service#simpleParameter&amp;gt;&quot;</span> ... <span class="re0">resourceType</span>=<span class="st0">&quot;SoapOperations&quot;</span> <span class="re0">count</span>=<span class="st0">&quot;21&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;/filter<span class="re2">&gt;</span></span></span>
+      ...
+    <span class="sc3"><span class="re1">&lt;/type<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/group<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;group</span> <span class="re0">name</span>=<span class="st0">&quot;Tags (on Operations)&quot;</span><span class="re2">&gt;</span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/group<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;group</span> <span class="re0">name</span>=<span class="st0">&quot;Tags (on Inputs)&quot;</span><span class="re2">&gt;</span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/group<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;group</span> <span class="re0">name</span>=<span class="st0">&quot;Tags (on Outputs)&quot;</span><span class="re2">&gt;</span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/group<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/filters<span class="re2">&gt;</span></span></span>

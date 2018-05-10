@@ -1,0 +1,2 @@
+A number of services was selected for the pilot catalogue. {{:development:software_development:biocatpilotservices.pdf|}}.
+These services will be annotated using the platinum model   

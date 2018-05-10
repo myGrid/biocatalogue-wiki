@@ -1,0 +1,135 @@
+====== 1st BioCatalogue Strategy Advisory Board meeting ======
+
+**Date:** 20th March 2009
+
+**Location:** University of Manchester
+
+**Attending:** Carole Goble, Jiten Bhagat, Steve Pettifer, Franck Tanoh, Rodrigo Lopez, Thomas Laurent, Eric Nzuobontane, Chris Rawlings, Anil Wipat, Jo Dicks, Steve Kemp, Antoine H.C. van Kampen, Holger Lausen, Terry Payne
+
+**Apologies:** Robert Stevens, Mark Wilkinson, Robert Gill, Katy Wolstencroft
+
+**Agenda**
+  * Presentation of the BioCatalogue project (Carole Goble)
+  * Presentation of the Seekda project (Holger Lausen)
+  * Demonstration of the BioCatalogue private release (Jiten Bhagat, Eric Nzuobontane)
+  * Discussion about current state of the project as well as about its future development
+
+===== 1. Presentation of the BioCatalogue project =====
+
+{{:meetings:sab_-_biocatalogue.ppt|BioCatalogue presentation}}
+
+===== 2. Presentation of the Seekda project =====
+
+{{:meetings:sab_-_2009-03-20-holger.pdf|Seekda presentation}}
+
+===== 3. Demonstration of the BioCatalogue private release =====
+
+[[http://beta.biocatalogue.org|BioCatalogue private release]]
+
+===== 4. Discussion =====
+
+==== BBSRC evaluation ====
+
+Criteria on which the [[http://www.bbsrc.ac.uk/|BBSRC]] will evaluate the success of the project:
+  * Number of people using it
+  * Level of content
+  * Importance in the community
+  * Coverage of the field
+
+==== Review of Features and Functionalities ====
+
+=== Searching ===
+
+  * Search terms should be matched to **ontologies** to allow for richer searches
+  * **Thesaurus** based search term expansion and presentation of results
+  * BioCatalogue should be searchable by [[http://www.google.com|Google]] and the [[http://www.ebi.ac.uk/ebisearch/|EBI search engine]]
+  * BioCatalogue should use standard tools for search expansion
+  * We need to have a look at the **clustering** engine [[http://project.carrot2.org/|carrot2]] to enhance the search results returned by [[http://lucene.apache.org/solr/|SOLR]]
+  * We also need to investigate [[http://cohse.cs.manchester.ac.uk/|COHSE]] to get broader terms and narrower terms
+
+=== Browsing ===
+ 
+  * **Facetted browsing:** we need classification of services based on domains e.g. proteomic, genomic, metabolomic...    
+  * **Sourcing from ontology:** [[http://www.mygrid.org.uk/tools/service-management/mygrid-ontology/|myGrid ontology]] may not be enough to annotate all services. We need to source from other ontologies as well
+ 
+=== Web Service Registration ===
+
+  * **Terms & Conditions:** when registering a service the user/provider needs to agree with the T&C (need advice on that matter, maybe from Manchester Business School)
+  * **Service ownership:**
+    * we should also ask if the submitter is the provider/owner of the service
+    * we need to think about the process of the transfer of ownership
+    * if owner, we should give a choice of notifications at registration time (when service fails its tests...)
+  * **Notifications:** feedback loop to users and service providers need to be more explicit
+
+=== Annotation ===
+ 
+  * **Ontologies:** possibility to use additional ontologies
+  * **Metadata:** need to make it clear to the providers what is the benefit from providing more metadata (better visibility...) 
+  * We need to make sure we don’t mislead people about services having a lot of metadata but with a bad quality service
+
+=== Quality of service / Metrics ===
+
+  * we need to **separate the measurements**:
+    * subjective vs objective
+    * machine vs human
+  * We should be careful with subjective ratings not to offend providers 
+  * **Speed** of a service is difficult to measure and very subjective
+  * **Feedback** to providers is an important aspect of the monitoring piece
+  * Additional valuable feedback we should allow users to provide:
+    * "Did the service do what I want it to do?"
+    * "Did the service do what it said it would do?"
+  * We could display how many times a Web Service has been seen/visited
+  * We could check how e-commerce websites handle ranking (in literature, with business school...)
+
+
+=== Social networking ===
+  * We need to be careful not to appear to support any comment post to the BioCatalogue (write **disclaimer**)
+  * Provide service providers clear paths and opportunities to **respond** to negative comments
+  * Should we consider using **multiple discussion threads** (using [[http://disqus.com/|DISQUS]]) to be able to separate general comments from technical issues with a Web Service ?
+  * We probably shouldn’t allow **anonymous** comments
+  * We should provide a "did you find this comment useful" functionality
+  * We should also provide a "did you find the Web Service you were looking for" functionality for both anonymous and registered users
+
+=== Testing ===
+  * **Test scripts:** they are very valuable as they also serve as example of how to run the service
+  * **Feedback:** tests are a valuable information for users but also an important feedback for service providers as it allows them to test that their service is working and reachable by the outside world. We should emphasize this point to providers to encourage them to submit test scripts
+
+
+
+ 
+
+==== Launch strategy ====
+
+  * [[http://www.biocurator.org|BioCuration]]/[[http://bioitalliance.org/|BioIT]] - silent launch (open up the [[http://beta.biocatalogue.org|beta site]])
+  * [[http://www.iscb.org/ismbeccb2009/|ISMB/ECCB]] in July, is the real launch target. A poster has already been submitted and a demo will be submitted as well (Taverna integration will be ready by then)
+  * We could investigate using Google ads but it is very VERY expensive
+  * We need to find out what are the mailing lists we should advertise the launch on
+  * Press releases: talk to journals/publishers about BioCatalogue
+  * BBSRC Newsletter 
+  * Students and teaching – Anil’s help
+  * EU networks
+  * Sponsorship of activities
+
+==== Long term recognition of BioCatalogue ====
+
+  * BioCatalogue should become the place where publishers such as [[http://nar.oxfordjournals.org/|NAR]] point their submitters to register their Web Services
+  * BioCatalogue should become the number one Web Service registry for Life Sciences
+
+==== Term of reference SAB ====
+
+  * A quarterly report should be send to the SAB team
+  * Meeting once a year
+  * Create a SAB mailing list for contact
+                                    
+
+==== Actions ====
+ 
+  * Franck: submit an ISMB demo abstract by 20th April
+  * Carole: talk at the BioIT meeting about our policy
+  * Carole: seek advice from Manchester Business School on the issue of terms & conditions when registering a service
+  * All, Holger: invitation for a meeting between the BioCatalogue team and service finder team
+  * Rodrigo: DDBJ, NCBI – ownership and diplomacy 
+  * Franck: sourcing from ontology to be added to the task list 
+  * Jiten: create a mailing list for the SAB team
+
+

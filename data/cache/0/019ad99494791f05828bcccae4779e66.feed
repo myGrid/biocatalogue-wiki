@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.biocatalogue.org/wiki/feed.php">
+        <title>BioCatalogue public:apps:mass_curator</title>
+        <description></description>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico" />
+       <dc:date>2018-05-06T14:26:29+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:apps:mass_curator:development?rev=1307445402&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico">
+        <title>BioCatalogue</title>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <url>https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:apps:mass_curator:development?rev=1307445402&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-06-07T12:16:42+01:00</dc:date>
+        <title>public:apps:mass_curator:development</title>
+        <link>https://www.biocatalogue.org/wiki/public:apps:mass_curator:development?rev=1307445402&amp;do=diff</link>
+        <description>The Mass Curator tool is developed using JRuby (v 1.5.1) and is licenced under GPL 3.
+
+This project utilizes BioCatalogue's read API to GET all the services, and the write API to POST the annotations data.
+
+IMPORTANT
+
+	*  The project was only put into testing under the Mac OS X platform (10.5).  Testing on other platforms is required.
+	*  Only Excel 97-2004 workbooks (.xls) are currently supported.</description>
+    </item>
+</rdf:RDF>

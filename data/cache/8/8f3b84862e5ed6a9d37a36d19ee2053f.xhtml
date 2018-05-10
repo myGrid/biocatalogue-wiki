@@ -1,0 +1,114 @@
+
+<h3 class="sectionedit1" id="v110_release_sep_2011">v1.1.0 Release (Sep 2011)</h3>
+<div class="level3">
+
+<p>
+This will be a major release with some new features and major improvements.
+</p>
+
+<p>
+This will include:
+</p>
+<ul>
+<li class="level1"><div class="li"> New “examples” tab for services. Surfaces all existing example data and scripts for a service, and provides simple abilities to add examples.</div>
+</li>
+<li class="level1"><div class="li"> Richer annotation values support. This will improve semantic annotation capabilities and improve performance in certain areas (like generating tag filters in the Taverna plugin).</div>
+</li>
+<li class="level1"><div class="li"> Support for custom monitoring of REST services - maintainer of the service can provide a custom <abbr title="Uniform Resource Locator">URL</abbr> to monitor (which can include secret info like an <abbr title="Application Programming Interface">API</abbr> key).</div>
+</li>
+<li class="level1"><div class="li"> (possibly) Secure web pages - site will run with SSL turned on for all pages.</div>
+</li>
+<li class="level1"><div class="li"> Users can now see the list of people who have been granted responsibility for a service.</div>
+</li>
+<li class="level1"><div class="li"> Some UI and performance tweaks.</div>
+</li>
+</ul>
+
+<p>
+
+<div class="box_important">
+<b>IMPORTANT:</b> this releases includes a major change in the way annotations work and thus requires a big data migration of all the Annotations data. When running "rake db:migrate" this could take over 3 hours to complete, and it's important to check the output of this to make sure everything ran OK.
+</div>
+
+</p>
+
+</div>
+
+<h4 id="update_instructions_for_local_and_manchester_servers">Update instructions (for local and Manchester servers):</h4>
+<div class="level4">
+
+<p>
+<strong>NOTE:</strong> when running in production environments make sure to set/add <code>RAILS_ENV=production</code> to any ruby/rake commands below.
+</p>
+
+<p>
+Run:
+</p>
+<pre class="code">svn update
+rake db:migrate
+rake db:test:prepare RAILS_ENV=test
+ruby script/biocatalogue/migrate_display_names_jul11.rb
+  Expected output (something like):
+  &gt; 1184 display names moved to the parent Service
+  &gt; 0 display_name annotations remaining in the db
+ruby script/biocatalogue/fix_url_monitors_using_annotations_sep11.rb
+  Expected output (something like):
+  &gt; 43 URL monitors updated</pre>
+
+<p>
+You <strong>may</strong> need to reindex your search index if you experience problems - <code>rake solr solr:reindex</code>, but note that it will take a long time to run.
+</p>
+
+<p>
+Additionally, for production environments:
+</p>
+<pre class="code">rake asset:packager:build_all RAILS_ENV=production</pre>
+
+<p>
+To restart an app deployed under apache and phusion passenger:
+</p>
+<pre class="code">touch tmp/restart.txt</pre>
+
+</div>
+
+<h4 id="update_instructions_for_ebi_servers">Update instructions (for EBI servers):</h4>
+<div class="level4">
+
+<p>
+First, follow instructions here:
+<a href="http://www.biocatalogue.org/docs/installing-new-release" class="urlextern" target="_blank" title="http://www.biocatalogue.org/docs/installing-new-release"  rel="nofollow">http://www.biocatalogue.org/docs/installing-new-release</a>
+</p>
+
+<p>
+<strong>Note</strong>: it&#039;s <strong>CRUCIAL</strong> that the full output of the update script is viewed to ensure the migration went ahead smoothly.
+</p>
+
+<p>
+Then run the following (in the directory where the code is deployed):
+</p>
+<pre class="code">ruby script/biocatalogue/migrate_display_names_jul11.rb
+ruby script/biocatalogue/fix_url_monitors_using_annotations_sep11.rb
+rake asset:packager:build_all RAILS_ENV=production
+touch tmp/restart.txt</pre>
+
+</div>
+
+<h4 id="testing">Testing</h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Run the Rails tests:</div>
+</li>
+</ol>
+<pre class="code">rake test:units RAILS_ENV=test
+rake test:functionals RAILS_ENV=test
+rake test:integration RAILS_ENV=test</pre>
+<ol>
+<li class="level1"><div class="li"> Run <a href="/wiki/development:api_tests" class="wikilink2" title="development:api_tests" rel="nofollow">API tests</a></div>
+</li>
+</ol>
+<ol>
+<li class="level1"><div class="li"> Use the <a href="http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing" class="urlextern" target="_blank" title="http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing"  rel="nofollow">DRAMA</a> procedure to test the system</div>
+</li>
+</ol>
+
+</div>

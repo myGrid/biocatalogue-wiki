@@ -1,0 +1,59 @@
+1219849386	152.78.61.181	C	development:data_model_pilot	jits	created	
+1219851979	152.78.61.181	E	development:data_model_pilot	jits		
+1219856526	152.78.61.45	E	development:data_model_pilot	ericnzuo		
+1219915611	152.78.61.45	E	development:data_model_pilot	ericnzuo		
+1219915768	152.78.61.45	E	development:data_model_pilot	ericnzuo		
+1219916530	152.78.61.45	E	development:data_model_pilot	ericnzuo		
+1219918641	152.78.61.45	E	development:data_model_pilot	ericnzuo		
+1219920939	152.78.61.45	E	development:data_model_pilot	ericnzuo		
+1219937187	152.78.61.45	E	development:data_model_pilot	ericnzuo		
+1220610809	130.88.195.121	E	development:data_model_pilot	jits		
+1222423925	130.88.208.196	E	development:data_model_pilot	ericnzuo		
+1222424487	130.88.208.196	E	development:data_model_pilot	ericnzuo		
+1222424965	130.88.208.196	E	development:data_model_pilot	ericnzuo		
+1222447843	130.88.195.121	E	development:data_model_pilot	jits		
+1222860843	130.88.195.121	E	development:data_model_pilot	jits	Added new types based on discussions with Franck and Eric	
+1222866092	130.88.195.121	E	development:data_model_pilot	jits		
+1222867876	130.88.195.121	E	development:data_model_pilot	jits		
+1222868944	130.88.195.121	E	development:data_model_pilot	jits	Removed service_types table	
+1222875986	130.88.195.121	e	development:data_model_pilot	jits		
+1222876704	130.88.195.121	E	development:data_model_pilot	jits		
+1222894383	78.105.175.212	E	development:data_model_pilot	jits		
+1222895962	78.105.175.212	E	development:data_model_pilot	jits	Crossed out the Service Deployments table (ie: mapping table between Service Instances and Service Versions).	
+1222897601	78.105.175.212	e	development:data_model_pilot	jits		
+1222940003	130.88.208.191	E	development:data_model_pilot	jits	Renamed Service Instances to Service Deployments	
+1222940798	130.88.208.191	e	development:data_model_pilot	jits	Removed is_active from service_deployment as this should prob be an annotation	
+1222941331	130.88.208.191	E	development:data_model_pilot	jits		
+1225117967	130.88.195.113	E	development:data_model_pilot	jits		
+1225119192	130.88.195.113	E	development:data_model_pilot	jits		
+1225288638	78.105.175.212	E	development:data_model_pilot	jits		
+1225289657	78.105.175.212	E	development:data_model_pilot	jits		
+1225711538	152.78.61.101	E	development:data_model_pilot	jits		
+1225986701	130.88.69.80	E	development:data_model_pilot	jits		
+1226316924	130.88.195.113	E	development:data_model_pilot	jits		
+1226317375	130.88.195.113	E	development:data_model_pilot	jits		
+1228210357	130.88.208.150	E	development:data_model_pilot	jits		
+1228210416	130.88.208.150	E	development:data_model_pilot	jits		
+1228241550	172.22.68.57	E	development:data_model_pilot	ericnzuo		
+1228242579	172.22.68.57	E	development:data_model_pilot	ericnzuo		
+1228243100	172.22.68.57	E	development:data_model_pilot	ericnzuo		
+1228380039	172.22.68.57	E	development:data_model_pilot	ericnzuo		
+1231321244	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231325664	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231326442	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231327139	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231328068	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231421197	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231421794	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231754315	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1231858573	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1232108316	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1232110416	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1232452267	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1232452427	172.22.68.87	E	development:data_model_pilot	ericnzuo		
+1235473473	41.190.95.237	E	development:data_model_pilot	jits		
+1235484784	41.190.95.237	E	development:data_model_pilot	jits		
+1238591589	130.88.195.165	E	development:data_model_pilot	jits		
+1238592414	130.88.195.165	E	development:data_model_pilot	jits		
+1239189376	130.88.195.165	E	development:data_model_pilot	jits		
+1242980153	172.22.68.38	E	development:data_model_pilot	ericnzuo		

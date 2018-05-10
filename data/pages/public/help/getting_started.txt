@@ -1,0 +1,137 @@
+====== Getting Started with the BioCatalogue ======
+
+**The [[http://www.biocatalogue.org/|BioCatalogue]] is a centralised registry of curated Life Science Web Services.**
+
+**It allows you to easily discover, register, annotate, monitor and use Web Services.**
+
+===== Search (by Keywords) =====
+
+You can search for services using keywords...
+
+{{:public:search-1.png|}}
+
+We find all matching services, providers, users and so on. We also automatically include results that have relevant terms. So for example, if you search for "microarray" you also get results that have the term "affymetrix".
+
+{{:public:search-2.png|}}
+
+See [[public:help:BioCatalogue:discovering web services|Discovering Web Services]] for more info
+
+===== Search (by Data) =====
+
+You can also search using your input/output data. We find all the operations that you can potentially use to process/analyse it...
+
+{{:public:search-by-data-nav.png|}}
+
+{{:public:search-by-data-1.png|}}
+
+See [[public:help:BioCatalogue:discovering web services|Discovering Web Services]] for more info
+
+===== Browse and Filter =====
+
+You can browse the full list of services by clicking on "Services" (next to the search box). This will take you to the browse services page...
+
+{{:public:services-index-with-labels.png|}}
+
+Here you can also filter down the list of services to find the service(s) you want. You can apply one or more filters based on service types, service categories, service providers, submitters, countries, tags, tags on services, tags on operations, tags on inputs and tags on outputs...
+
+{{:public:services-index-filtered-with-labels.png|}}
+
+See [[public:help:BioCatalogue:discovering web services|Discovering Web Services]] for more info
+
+
+===== View Full Details of a Service =====
+
+Click on a service's title in the listings to view the full details of a service...
+
+{{:public:show-service-with-labels.png|}}
+
+
+===== Become a Member of the BioCatalogue =====
+
+Anyone can be a member of the BioCatalogue by signing up (for free). By becoming a member of the BioCatalogue you can:
+
+  * Submit services
+  * Annotate (describe, tag etc) and curate your services as well as any other services in the BioCatalogue
+  * Rate services
+  * Favourite the services you use the most or like
+
+You can register for a new account...
+
+{{:public:sign-up-nav.png|}}
+
+.. or use an existing OpenID, Google, Facebook, Twitter, Yahoo! or Verisign account to easily sign up / sign in...
+
+{{:public:sign-in-rpx.png|}}
+
+===== Register Services =====
+
+You can register services easily into the BioCatalogue. We currently support SOAP, Soaplab and REST based services...
+
+{{:public:register-service-1.png|}}
+
+You need to be a member of the BioCatalogue and signed in to register services.
+
+See [[public:help:BioCatalogue:registering web services|Registering Web Services]] for more info
+
+==== Register a SOAP (WSDL) service ====
+
+{{:public:register-service-2.png|}}
+
+  - Provide the URL to the WSDL file
+  - **//Preview//** it to check it's the right one
+  - If the service is already in the BioCatalogue we point you to it. If not...
+  - We recommend that you then provide more information (description, documentation URL, tags, etc) so that it is easy to find and use the service
+  - Submit the service
+  - We try to figure out where the service is hosted and we pull out as much information as we can find from the WSDL
+
+\\
+
+==== Register a REST service ====
+
+{{:public:register-service-3.png|}}
+
+  - Provide the base endpoint URL to the REST service
+  - Provide the official or common name for the service
+  - We recommend that you then provide more information (description, documentation URL, tags, etc) so that it is easy to find and use the service
+  - Submit the service
+
+**Coming Soon**: better support for registering and describing the exact endpoints and parameters of a REST service.
+
+
+===== Annotate Services =====
+
+The BioCatalogue has a full time curator and a community of expert curators who regularly provide oversight, monitor the BioCatalogue and provide high quality annotations for services. 
+
+You can help too! Adding annotations to services (ones submitted by you or any other ones) is simple to do. You are credited with each bit of info you provide in the BioCatalogue.
+
+Add tags...
+
+{{:public:annotate-tags.png|}}
+
+Add descriptions, cost info, documentation URLs, etc...
+
+{{:public:annotate-descriptions-etc.png|}}
+
+Add example data to input/output ports...
+
+{{:public:annotate-example-data.png|}}
+
+See [[public:help:BioCatalogue:annotating web services|Annotating Web Services]] for more info
+
+===== Your Profile =====
+
+Your member profile allows you to publicise who you are and allows you and others to see the services you have submitted, annotated and favourited.
+
+{{:public:member-profile-with-labels.png|}}
+
+**Coming Soon**: link to and bring in information from your [[http://www.myexperiment.org/|myExperiment]] profile.
+
+===== Homepage =====
+
+The [[http://www.biocatalogue.org/|BioCatalogue homepage]] gives you information about the project and shows the latest announcements, latest activity, latest services, top curators and helpful links.
+
+{{:public:homepage-montage.png|}}
+
+\\
+Please do [[http://www.biocatalogue.org/contact|give us feedback]]
+

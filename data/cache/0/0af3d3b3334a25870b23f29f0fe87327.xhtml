@@ -1,0 +1,93 @@
+
+
+
+<h3><a name="jan2010_integration_branch_help" id="jan2010_integration_branch_help">Jan2010 Integration Branch Help</a></h3>
+<div class="level3">
+
+<p>
+
+<strong>Plan:</strong>
+
+</p>
+<ol>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> Jits to merge Eric&#039;s branch into a new branch (integration-jan10) with Eric&#039;s help.</div>
+</li>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> Jits to then merge Mannie&#039;s branch into integration branch.</div>
+</li>
+<li class="level1"><div class="li"> We then ALL work off this integration branch.</div>
+</li>
+<li class="level1"><div class="li"> We set up a solid testing framework (mocha, factory girl, rspec, cucumber etc)</div>
+</li>
+<li class="level1"><div class="li"> We write loads of tests.</div>
+</li>
+<li class="level1"><div class="li"> We finish all new work and make it production ready.</div>
+</li>
+<li class="level1"><div class="li"> We merge into trunk.</div>
+</li>
+</ol>
+
+<p>
+
+<strong>Service Overall Status Algorithm</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> ignore all ServiceTests NOT run by the BioCatalogue</div>
+</li>
+<li class="level1"><div class="li"> for all ServiceTests that are run by the BioCatalogue, go through the latest TestResult</div>
+</li>
+<li class="level1"><div class="li"> if there are none, status is “blue”</div>
+</li>
+<li class="level1"><div class="li"> if at least one has failed, status is “amber” and relevant failure messages should be appended to the overal status message</div>
+</li>
+<li class="level1"><div class="li"> if all tests pass then status is “green”</div>
+</li>
+</ul>
+
+<p>
+
+<br/>
+
+<br/>
+
+To use the Integration Branch do :
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Checkout the new  integration-jan2010 branch</div>
+</li>
+<li class="level1"><div class="li"> Set up config files</div>
+<ul>
+<li class="level2"><div class="li"> Note especially that you <strong>SHOULD</strong> create a new biocat_local.rb file from the template in the repository. Some initialization constants have been renamed.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Make sure the <strong>namespace</strong> sections in the memcache.yml are different to everything else and unique per environment (to prevent cache clashes)</div>
+</li>
+<li class="level1"><div class="li"> Set up a separate dev database just for this integration branch work. Use the latest data snapshot in the BioCatalogue folder in DropBox.</div>
+</li>
+<li class="level1"><div class="li"> Note that the <strong>test_results</strong> table is missing. So you need to go into the schema_migrations tables and delete the entry with the “version” value “20090517060157”, and then run db:migrate.</div>
+</li>
+<li class="level1"><div class="li"> Set up a separate, EMPTY test database just for this integration branch work</div>
+</li>
+<li class="level1"><div class="li"> Run rake db:migrate</div>
+</li>
+<li class="level1"><div class="li"> Don&#039;t eat yellow snow</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"><strong>Running the embrace import</strong></div>
+</li>
+<li class="level1"><div class="li"> Get the latest services.xml, tags.xml and users.xml from Dropbox BioCatalogue/Embrace/ImportData</div>
+</li>
+<li class="level1"><div class="li"> Create a directory in application root called &#039;embrace&#039; and put these import files in there</div>
+</li>
+<li class="level1"><div class="li"> <strong>Turn off mailing from the application</strong>. This should only be switched on on live site. All test &amp; development environments should turn off mailing by default</div>
+</li>
+<li class="level1"><div class="li"> Turn off tweeting. </div>
+</li>
+<li class="level1"><div class="li"> run <pre class="code">script/biocatalogue/embrace_import.rb -e &lt;environment&gt; </pre>
+</div>
+</li>
+</ul>
+
+</div>

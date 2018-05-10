@@ -1,0 +1,49 @@
+====== BioCatalogue annotation jamboree ======
+
+Date: Nov 27 2009 \\
+Where:  Atlas 1, Kilburn building, University of Manchester
+
+===== Participants =====
+
+  - Jon Ison …Cambridge 
+  - Nick juty ...Cambridge 
+  - Mahmut Uludag …Cambridge 
+  - Marco Roos …Amsterdam
+  - Anika Joecker …Berlin
+  - Pieter Neerincx …Amsterdam 
+  - Iga ikorneta  … Poland 
+  - Jerzy  …Manchester 
+  - Neil Swainston … Manchester 
+  - Archit Puri … Manchester
+  - Peter Li… Manchester
+
+===== Goals =====
+
+  * Annotate web service in a group effort
+  * Discuss how bio web services could and should be annotated (annotation guidelines)
+  * Encourage providers and Users to annotate services
+  * Promote the BioCatalogue through each of the participant
+  * See whether an annotation jamboree can be successful
+
+===== Agenda =====
+ 
+  * 9.30 – 9.45     Coffee
+  * 9.45 – 10.00   Introduction 
+  * 10.00 – 12.30 Annotation Annotation Annotation 
+  * 12.30 – 1.15   Lunch break 
+  * 1.15 – 2.15     Annotation Annotation 
+  * 2.15 – 2.30     Coffee break 
+  * 2.30 – 3.45     *Break out session  
+  * 3.45 – 4.00     Report from the break out session 
+  * 4.00 – 4.15     Wrap up
+
+*Break out session topics\\
+1.How to encourage providers and users to annotate services?\\
+2.How should services be annotated (best practices)?
+
+===== Minutes =====
+Full report available here: {{:development:jamboree_report.pdf|}}
+
+Best practice: {{:development:best_practice_web_service_annotation.doc|}} \\
+
+List of services: {{:development:services_list.doc|}}

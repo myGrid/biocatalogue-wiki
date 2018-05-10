@@ -1,0 +1,39 @@
+====Jan2010 Integration Branch Help ====
+
+**Plan:**
+
+  - **[DONE]** Jits to merge Eric's branch into a new branch (integration-jan10) with Eric's help.
+  - **[DONE]** Jits to then merge Mannie's branch into integration branch.
+  - We then ALL work off this integration branch.
+  - We set up a solid testing framework (mocha, factory girl, rspec, cucumber etc)
+  - We write loads of tests.
+  - We finish all new work and make it production ready.
+  - We merge into trunk.
+
+**Service Overall Status Algorithm**
+  * ignore all ServiceTests NOT run by the BioCatalogue
+  * for all ServiceTests that are run by the BioCatalogue, go through the latest TestResult
+  * if there are none, status is "blue"
+  * if at least one has failed, status is "amber" and relevant failure messages should be appended to the overal status message
+  * if all tests pass then status is "green"
+
+\\
+\\
+To use the Integration Branch do :
+
+  * Checkout the new  integration-jan2010 branch
+  * Set up config files
+    * Note especially that you **SHOULD** create a new biocat_local.rb file from the template in the repository. Some initialization constants have been renamed.
+  * Make sure the **namespace** sections in the memcache.yml are different to everything else and unique per environment (to prevent cache clashes)
+  * Set up a separate dev database just for this integration branch work. Use the latest data snapshot in the BioCatalogue folder in DropBox.
+  * Note that the **test_results** table is missing. So you need to go into the schema_migrations tables and delete the entry with the "version" value "20090517060157", and then run db:migrate.
+  * Set up a separate, EMPTY test database just for this integration branch work
+  * Run rake db:migrate
+  * Don't eat yellow snow
+
+  ***Running the embrace import**
+  * Get the latest services.xml, tags.xml and users.xml from Dropbox BioCatalogue/Embrace/ImportData
+  * Create a directory in application root called 'embrace' and put these import files in there
+  * **Turn off mailing from the application**. This should only be switched on on live site. All test & development environments should turn off mailing by default
+  * Turn off tweeting. 
+  * run <code>script/biocatalogue/embrace_import.rb -e <environment> </code>

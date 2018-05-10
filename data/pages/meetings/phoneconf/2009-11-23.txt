@@ -1,0 +1,66 @@
+Date: Monday 23th November 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Franck, Jits, George, Manni
+
+
+**EBI:** Eric
+
+===== Apologies =====
+
+
+===== Minuting =====
+  * Jits: working on the API; an alpha version will be released before Xmas break
+  * George: search by data will be deployed on the test site this week 
+  * Manni: working on better support for REST services 
+  * Franck: preparing materiel for the annotation jamboree
+
+There is a meeting with the GenePattern team this Wednesday
+
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Progress report
+  * Publicity/outreach 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Franck: organise a SAB telecom meeting for the 2nd week of January (from 11th) **Ongoing** 
+  * Franck: add publicity/outreach item on the agenda    **completed** 
+
+===== Minutes =====   
+
+===== New actions ===== 
+
+  * All: send useful links to Jits
+  * Franck: put on the task link <make type of complex services annotatable>
+  * George: produce check list of the NAR paper
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+BioCatalogue Nucleic Acids paper 
+
+Next SAB virtual meeting 
+
+The BioCatalogue annotation jamboree 27/11/09
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-11-09|Phone Conference Meeting on Nov 09 2009]]
+
+Next meeting: [[Meetings:PhoneConf:2009-11-30|Phone Conference Meeting on Nov 30 2009]]

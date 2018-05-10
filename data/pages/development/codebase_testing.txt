@@ -1,0 +1,49 @@
+====== Codebase Testing ======
+
+After the ISMB release of the BioCatalogue codebase, it is crucial that we have in place a systematic way of working with to the codebase in order to manage growth and development. Part of this is about having a disciplined development process but equally this requires a comprehensive suite of automated tests to test various aspects of the codebase.
+
+===== Things to Test =====
+
+  * WSDL parsing
+  * Service submission
+  * User management:
+    * Registration
+    * Change password
+  * Search
+  * Event logging
+  * 
+
+
+===== Tools =====
+
+(ones in bold are the ones we use)
+
+  * [[http://thoughtbot.com/projects/factory_girl|Factory Girl]]
+  * [[http://thoughtbot.com/projects/shoulda|Shoulda]]
+
+
+===== Running Tests =====
+
+  * Install the necessary development gems.
+  * Create a test database.
+  * Configure the test environment in config/database.yml to use this test db.
+  * Run all tests:
+
+  rake
+
+OR
+
+  rake test
+
+  * To run unit tests or functional tests only:
+
+  rake test:units
+
+  rake test:functional
+
+  * To run a **specific** test, an example:
+
+  rake test:units TEST=test/unit/lib/bio_catalogue/tags_test.rb
+
+
+**NOTE**: when running individual tests - errors can occur whilst running "rake test" that you don't get when running the individual test that contains the errors. Thus there might be errors on the individual test that only show up when ALL tests are run. Therefore, ensure that you run all tests as a final check.

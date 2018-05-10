@@ -1,0 +1,21 @@
+====== General Info on Web Services ======
+
+===== What are Web Services? =====
+Web Services make it possible to get automated access to data from the Internet without using a browser. Technically a Web Service is a software system designed to support interoperable machine-to-machine interaction over a network. Software applications written in various programming languages and running on various platforms can use Web Services to exchange data over computer networks like the Internet.\\
+The difference between Web Services and Web Servers is that Web Servers concentrate on user interface which is displayed in a browser and accessible to humans, whereas Web Services concentrate on execution by programs or scripts. 
+
+This does not mean that Web Services cannot be executed by humans. Contrary, there are many tools that automatically generate graphical interfaces for Web Services, which saves time spent on building the interface by service providers.
+
+Find more info about Web Service [[http://www.tutorialspoint.com/webservices/index.htm|here]]
+
+===== Why should I use Web Services or turn my resources into Web Services? =====
+There are many advantages on using web services:
+  * **Web Services are easy to execute:** Once you've set up a Web Service, you can execute them by various tools that will automatically generate the input forms and display the results. You can also incorporate the service in any code in any programming language in any place in the World without the need of program installation. Finally, you can use several services in one analysis by incorporate Web Services into pipelining systems. For details see: [[public:help-external-executing-webservices|Help on executing Web Serices]]
+  * **Web Services are easy to create:** There are easy-to-use state of art tools for making services out of websites, command line applications and functions in any of commonly used programming languages, for details look at [[public:help-external-making-webservices| Help on creating Web Services]]
+  * **Web Services are easy to publish:** You don't have to worry how to make your service visible to the public. After registering them in a popular public repository such as [[http://www.biocatalogue.org|BioCatalogue]] makes it easy to find based on its type, category, location, descriptions, tags, input type etc. BioCatalogue will parse and expose your automatically generated service documentation stored in a WSDL file. Moreover, you will benefit from curated community support while maintaining the possibility of adding descriptions and example data in the future.
+
+===== Different types of web services =====
+There are different types of web services:
+  * ** [[http://en.wikipedia.org/wiki/SOAP|SOAP]]: **
+  * ** [[http://en.wikipedia.org/wiki/Representational_State_Transfer|REST]]: **
+  * ** [[http://www.ebi.ac.uk/Tools/webservices/soaplab/overview|Soaplab]]: ** specific type of SOAP services developed by EBI

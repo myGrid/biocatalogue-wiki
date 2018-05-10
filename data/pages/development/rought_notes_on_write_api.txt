@@ -1,0 +1,217 @@
+====== BioCatalogue Write API ======
+
+===== Authentication =====
+
+All calls to the Write API MUST be authenticated and authorised.
+
+You can use basic authentication (using your BioCatalogue username and password).
+
+OAuth is currently in test.
+
+Example using ''curl'' to perform basic authentication (only returns headers, not content):
+
+  curl -I --user {username}:{password} -H "Accept: application/json" http://www.biocatalogue.org/url_that_needs_authentication
+
+You will get an HTTP 403 Forbidden if authentication fails.
+
+Basic authentication can also be done by providing the appropriate HTTP headers in your HTTP client. **NOTE: make sure to set the appropriate ''Accept'' and ''Content-Type'' headers too!**
+
+NOTE: basic authentication is only required on pages that require you to be logged in. It will be ignored on all other pages.
+
+===== Submitting Services =====
+==== SOAP Services ====
+
+**Endpoint**: POST /soap_services
+
+
+=== Input (Content Template) ===
+
+**Content type**: application/json
+
+== Without Annotations ==
+<code javascript>
+{
+  "soap_service" : {
+    "wsdl_location" : <url_to_soap_service_wsdl>
+  }
+}
+</code>
+
+== With Annotations ==
+<code javascript>
+{
+  "annotations" : {
+    "documentation_url" : <documentation_url>,
+    "alternative_names" : [ <alternative_name>, <alternative_name> ],
+    "tags" : [ <tag>, <tag>, <tag> ],
+    "description" : <description>,
+    "categories" : [ <category_uri>, <category_uri>, <category_uri> ] 
+  },
+  "soap_service" : {
+    "wsdl_location" : <url_to_soap_service_wsdl>
+  }
+}
+</code>
+
+
+
+=== Output (Content Template) ===
+
+**Content type**: application/json
+
+== On Error ==
+
+If the service already exists, you will get back an **HTTP 403 Forbidden** with the //location// header set to the location of the existing service. The body of the response will be set to the JSON content of the service.
+
+<code javascript>
+{
+  "errors": [ <error_message>, <error_message> ]
+}
+</code>
+
+== On Success ==
+<code javascript>
+{
+  "success": {
+    "resource": <uri_to_created_resource>,
+    "message": <message>
+  }
+}
+</code>
+
+**Successful submission example output**:
+<code javascript>
+{
+  "success": {
+    "message": "The SOAP Service 'MiriamProviderService' has been successfully submitted.",
+    "resource": "http://test.biocatalogue.org/services/4"
+  }
+}
+</code>
+
+
+==== REST Services ====
+
+**Endpoint**: POST /rest_services
+
+=== Input (Content Template) ===
+
+**Content type**: application/json
+
+== Without Annotations ==
+<code javascript>
+{
+  "rest_service" : {
+    "name" : <rest_service_name> 
+  },
+  "endpoint" : <base_url_of_the_rest_service>
+}
+</code>
+
+== With Annotations ==
+<code javascript>
+{
+  "annotations" : {
+    "documentation_url" : <documentation_url>,
+    "alternative_names" : [ <alternative_name>, <alternative_name> ],
+    "tags" : [ <tag>, <tag>, <tag> ],
+    "description" : <description>,
+    "categories" : [ <category_uri>, <category_uri>, <category_uri> ] 
+  },
+  "rest_service" : {
+    "name" : <rest_service_name> 
+  },
+  "endpoint" : <base_url_of_the_rest_service>
+}
+</code>
+
+=== Output (Content Template) ===
+
+**Content type**: application/json
+**NB**: If the service already exists, any annotations provided will be added to the REST service.
+
+== On Error ==
+<code javascript>
+{
+  "errors": [ <error_message>, <error_message> ]
+}
+</code>
+
+== On Success ==
+<code javascript>
+{
+  "success": {
+    "resource": <uri_to_created_resource>,
+    "message": <message>
+  }
+}
+</code>
+===== Submitting Annotations in Bulk =====
+
+**IMPORTANT**: please see the information on [[http://www.biocatalogue.org/wiki/doku.php?id=public:api#annotations|Annotations]] and the [[http://www.biocatalogue.org/wiki/doku.php?id=public:api#annotation_fields_breakdown|Annotations fields breakdown]] before submitting any annotations.
+
+**Endpoint**: POST /annotations/bulk_create
+
+=== Input ===
+
+**Content type**: application/json
+
+**Content template**:
+<code javascript>
+{
+  "bulk_annotations": [ {
+    "resource": "<< resource URI for resource to be annotated >>",
+    "annotations": {
+    "<< annotation attribute name >>": [ "<< value 1 >>", "<< value 2 >>", "<< value 3 >>" ],
+    "<< annotation attribute name >>": "<< value >>"
+    }
+  },
+  ... ]
+}
+</code>
+
+**Example**:
+<code javascript>
+{
+  "bulk_annotations": [ {
+    "resource": "http://www.biocatalogue.org/soap_inputs/23",
+    "annotations": {
+    "tag": [ "x", "y", "z" ],
+    "description": "ihouh uh ouho ouh"
+    }
+  },
+  {
+    "resource": "http://www.biocatalogue.org/soap_operations/237",
+    "annotations": {
+    "tag": [ "x", "y", "z" ],
+    "description": "ihouh uh ouho ouh"
+    }
+  } ]
+}
+</code>
+
+=== Output ===
+
+**Content type**: application/json
+
+**Example output**:
+<code javascript>
+{
+  "bulk_annotations": [ {
+    "resource": "http://www.biocatalogue.org/soap_inputs/23",
+    "annotations": [
+    << new annotations created, in the Annotation resource JSON format >>
+    ]
+  },
+  {
+    "resource": "http://www.biocatalogue.org/soap_operations/237",
+    "annotations": [
+    << new annotations created, in the Annotation resource JSON formatt >>
+    ] 
+  } ]
+}
+</code>
+
+=== Errors ===
+
+Duplicate annotations (i.e. annotations that already exist for attributes that disallow duplicates) will not get created and therefore will not show up in the output.

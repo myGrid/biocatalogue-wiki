@@ -1,0 +1,70 @@
+Date: Friday, April 9th 2010 in Manchester  
+Time: 9.30-18.00 
+
+==== Review of the current BioCatalogue ====
+ 
+=== Developer report ===
+  * Release of REST API
+  * API development was driven by Onyx portal and Taverna-BioCatalogue plug-in
+  * API mainly XML output, some have JSON (all endpoints do not have JSON outputs due to time)
+  * REST support work, and service monitoring 
+  * Moving to a cycle of fortnightly releases
+  * Search engine updated to show services and SOAP operations where available
+
+**Actions:**
+  * Eric: Need to monitor the service monitor
+
+**Suggestion:** 
+  * Carole: WSDL and WADL parsers can be packaged as different product
+
+=== User and curation report ===
+
+  * Curation stats not very good, only 30% curated 
+  * We need to solve the problem of how to understand service. We have solved partially how to find it. 
+  * Serious need to address content
+  * Get the community involved; e.g. use EBI cloud to contract providers and projects .
+  * Find out how many service providers BioCatalogue actually has. 
+  * Check the possibility to automate brute force poking to check for example data for inputs/outputs for soap operations 
+  * Cluster services based on annotation quality and contact providers directly
+  * Clone annotation of same services 
+  * Better curation tools: Curation workbench and bulk curation toolkit
+
+**Actions:** 
+  * Franck: finish the provider chart 
+  * Eric/Jits/Franck: Get data from myExperiment
+  * Eric/Jits: Only show preferred description
+
+=== Collaborating projects ===
+
+  * **Embrace registry** :For a complete handover of the Embrace registry we need the write API. Need also to make sure the test script monitoring works fine
+  * **NCRI**: Currently using the BioCatalogue API
+  * **Taverna**: Alpha version of the Taverna-BioCatalogue plug-in exists. Improvements due in the summer. 
+  * **GenePattern**: Interested in the functional unit implementation
+  * **myExperiment**: More integration BioCatalogue-myExperiment is currently ongoing 
+  * **BioMoby/SADI**: David Withers to work on the SPARQL endpoint for BioCatalogue
+
+=== Project planning ===
+
+More emphasis on curation and curation tools 
+
+=== Outreach ===
+ 
+  * Embrace meeting in Denmark 
+  * ISMB 2010
+  * ECCB 2010
+
+=== More Actions ===
+ 
+  * Jits: Service status changes email to developers 
+  * Jits/Mannie: Service update checker (WSDL checker)
+  * Eric: remove orphaned service providers
+  * Eric: Fix ‘localhost’ provider
+  * Franck: Roster of people to contact for service providers and the material required to do that. 
+  * Jits/Mannie: Write API and Mass curation tool via spreadsheets
+
+
+
+
+
+
+

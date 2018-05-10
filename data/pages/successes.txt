@@ -1,0 +1,10 @@
+====== Successes ======
+
+This page points to and documents all the successes we've had with the BioCatalogue, largely for report writing.
+
+  * [[collaborations|Collaborations]]
+  * [[public:news|News & Events]]
+  * [[public:publication_list|Publications & Papers]]
+  * [[http://www.slideshare.net/BioCatalogue/presentations|Presentations on SlideShare]]
+  * [[http://www.odesk.com/jobs/Implement-customized-redesign-biocatalogue-org_~~0e506f50b0980c88|Job description from an external unknown company for a BioCatalogue engineer]]
+

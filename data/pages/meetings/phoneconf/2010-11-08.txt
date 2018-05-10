@@ -1,0 +1,48 @@
+Date: Monday 08 Nov 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** 
+
+**EBI:**
+
+
+===== Apologies =====
+
+
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Daily operations Report
+  * Review of public wiki and public facing material
+  * Review of Roadmap
+  * Planning of next release 
+  * Upcoming events and meetings  
+===== Actions from Previous Meeting =====   
+ 
+  * Rodrigo/Eric: Send EBI wiki template to Franck
+    * There is a custom drupal configuration at EBI that is used for documentation. The idea here was to move from the wiki setup that we have now to a CMS installation that would make the documentation more maintainable & consistently navigable. So there is actually no template to be sent to Franck, however if time permits, we may move the wiki documentation to drupal. But that is a resourcing issue.
+  * Rodrigo to handle BioXsD-EDAM contact 
+  * Mannie to send the bulk annotation via spreadsheet tool to Hamish for testing
+
+
+
+===== Upcoming Meetings =====  
+
+===== Minutes =====
+
+
+===== AOB =====
+
+Book chapter for BioCatalogue
+
+
+Previous meeting: [[Meetings:PhoneConf:2010-10-18|Phone Conference Meeting on Oct 18 2010]]

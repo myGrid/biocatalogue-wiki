@@ -1,0 +1,399 @@
+==== Data Modeling Process ====
+The data modeling approached adopted for BioCatalogue is the **Agile Modeling Process** which is  both evolutionary(iterative and incremental) and collaborative.\\
+
+**Key aspects of this modeling approach include**:
+  * The model is developed in parallel with the application that uses the data
+  * The project development iterations are in-line with the data model development iterations
+  * The model is assumed to be 'good enough' to handle the the current application capabilities
+  * The modeling approach encourages the development of a high level domain model which identifies main entities and relationships without getting into the specifics of those entities
+  * The modeling process STRONGLY discourages attempts to comprehensively develop the data model upfront. 
+
+==== Data source Distinction ====
+  
+In the design of the model, we have made a distinction between the service structure and meta-data about the service structure. The service structure comes from trusted source, like the service interface document(wsdl document for soap services) while other other meta comes from the community and system
+
+==== Service Structure ====
+
+The pilot model introduces an abstract service container. This service container groups different implementations of a particular service as well as different deployments of the same service. The implementations envisaged for the pilot are 
+  * soap
+  * rest
+  * das
+  * simple scripts
+Each service container will have at least one implementation(and deployment) of a service.
+
+**Soap Service Structure**\\
+According to this model, a soap service structure has 4 nodes
+  * the service envelop, which is a grouping of operations
+  * operations, which can take inputs and produce outputs
+  * inputs , which have well defined properties
+  * outputs, which have will defined properties
+
+**Rest Service Structure**\\
+This has not been defined as it is not clear yet what the trusted source of the data from which to build the structure should be. It has been proposed that using the [[https://wadl.dev.java.net/wadl20061109.pdf|wadl]] ([[http://www.wsper.org/wadl2006.jpg|meta model]]) is probably the way to go. According to the wadl specification we could have, 
+  * the service envelop( or base URL ), which is a grouping of the resources
+  * the resources
+  * the methods
+  * the parameters (of requests and responses )
+  * the representations (of the resources)
+see {{:development:modelling_rest_v25.pdf|}}
+
+** Das Service Structure **\\
+TBD
+
+Diagram shows how annotations relate to a (soap) service structure\\ \\
+{{:development:biocatalogue_domain.jpeg|}}
+
+==== Annotations ====
+Annotations have been abstractly designed as attribute-value pairs that can be attached to any node of a service structure as well as to the service container. According to this annotation method, nodes of the service structure are the annotatable objects, properties of the nodes are the annotation attributes, and the values assigned to these are the annotation values. For implementation details of the annotation component, see: [[development:annotations]]\\
+
+The attached diagram shows examples of properties of a service that can be annotated\\ \\ \\
+{{:development:annotation_model.jpeg|}}
+==== Entities ====
+
+=== Services ===
+
+Table name: services
+
+Fields:
+  * id
+  * name
+  * unique_code
+  * submitter_type
+  * submitter_id
+  * created_at
+  * updated_at
+
+
+=== Service Versions ===
+
+Table name: service_versions
+
+Fields:
+  * id  
+  * service_id
+  * service_versionified_type  (e.g.: "SoapService")
+  * service_versionified_id
+  * version
+  * version_display_text
+  * submitter_type
+  * submitter_id
+  * created_at
+  * updated_at
+
+
+=== Service Deployments ===
+
+Table name: service_deployments
+
+Fields:
+  * id
+  * service_id
+  * service_version_id  (instead of a mapping table for services deployments and service versions).
+  * endpoint  (see [[development:requirements_for_pilot]]).
+  * service_provider_id
+  * city
+  * country
+  * submitter_type
+  * submitter_id
+  * created_at
+  * updated_at
+
+
+=== SOAP Services ===
+
+Table name: soap_services
+
+Fields:
+  * id
+  * name
+  * wsdl_location
+  * wsdl_file_id
+  * description
+  * documentation_url
+  * created_at
+  * updated_at
+
+
+=== SOAP Operations ===
+
+Table name: soap_operations
+
+Fields:
+  * id
+  * soap_service_id
+  * name
+  * description
+  * parameter_order
+  * parent_port_type
+  * created_at
+  * updated_at
+
+
+=== SOAP Inputs ===
+
+
+Table name: soap_inputs
+
+Fields:
+  * id
+  * soap_operation_id
+  * name
+  * description
+  * computational_type
+  * min_occurs
+  * max_occurs
+  * created_at
+  * updated_at
+
+
+=== SOAP Outputs ===
+
+Table name: soap_outputs
+
+Fields:
+  * id
+  * soap_operation_id
+  * name
+  * description
+  * computational_type
+  * min_occurs
+  * max_occurs
+  * created_at
+  * updated_at
+
+
+=== Service Providers ===
+
+Table name: service_providers
+
+Fields:
+  * id
+  * name
+  * created_at
+  * updated_at
+
+
+=== Users ===
+
+Table name: users
+
+Fields:
+  * id
+  * email   (acts as the username as well)
+  * crypted_password
+  * salt
+  * activated_at
+  * security_token
+  * display_name
+  * openid_url
+  * role_id
+  * affiliation
+  * country
+  * created_at
+  * updated_at
+
+
+=== Schema Migrations ===
+
+Table name : schema_migrations
+
+Fields:
+  * version
+
+
+=== Sessions ===
+
+Table name : sessions
+
+Fields:
+  * id
+  * session_id
+  * data
+  * created_at
+  * updated_at
+
+
+=== Soaplab Servers ===
+
+Table name: soaplab_servers
+
+Fields:
+  * id
+  * name
+  * location
+  * created_at
+  * updated_at
+
+
+=== Content Blobs ===
+
+Table name: content_blobs
+
+Fields:
+  * id
+  * data   (50MB limit)
+  * created_at
+  * updated_at
+
+
+=== Rest Services ===
+
+Table name: rest_services
+
+Fields:
+  * id
+  * name
+  * description
+  * interface_doc_url
+  * documentation_url
+  * created_at
+  * updated_at
+
+
+=== Rest Resources ===
+
+Table name: rest_resources
+
+Fields:
+  * id
+  * rest_service_id
+  * path
+  * description
+  * parent_resource_id
+  * created_at
+  * updated_at
+
+
+=== Rest Methods (HTTP based) ===
+
+Table name: rest_methods
+
+Fields:
+  * id
+  * rest_resource_id
+  * method_type
+  * description
+  * created_at
+  * updated_at
+
+
+=== Rest Parameters ===
+
+Table name: rest_parameters
+
+Fields:
+  * id
+  * name
+  * description
+  * param_style
+  * computational_type
+  * default_value
+  * required
+  * multiple
+  * constrained
+  * constrained_options
+  * created_at
+  * updated_at
+
+=== Rest Representations ===
+
+Table name: rest_representations
+
+Fields:
+  * id
+  * content_type
+  * http_status
+  * description
+  * created_at
+  * updated_at
+
+
+=== Rest Method Parameters (joining model) ===
+
+Table name: rest_method_parameters
+
+Fields:
+  * id
+  * rest_method_id
+  * rest_parameter_id
+  * http_cycle
+  * created_at
+  * updated_at
+
+=== Rest Method Representations (joining model) ===
+
+Table name: rest_method_representations
+
+Fields:
+  * id
+  * rest_method_id
+  * rest_representation_id
+  * http_cycle  
+  * created_at
+  * updated_at
+
+=== Agents ===
+
+Table name: agents
+
+Fields:
+  * id
+  * name
+  * display_name
+  * created_at
+  * updated_at
+
+=== Registries ===
+
+Table name: registries
+
+Fields:
+  * id
+  * name
+  * description
+  * homepage
+  * created_at
+  * updated_at
+
+=== UrlMonitors ===
+
+Table name : url_monitors
+
+Fields
+  * id
+  * parent_id
+  * parent_type
+  * property
+
+=== Test Results ===
+
+Table name : test_results
+
+Fields:
+  * id
+  * test_id
+  * test_type
+  * result
+  * action
+  * message
+
+=== Service Tests ===
+
+Table name : service_tests
+
+Field:
+  * id
+  * name
+  * exec_name
+  * running_status
+  * testable_id
+  * testable_type
+  * description
+  * filename
+  * content_type
+  * content_blob_id
+  * user_id
+  * binding
+  * activated_at
+
+

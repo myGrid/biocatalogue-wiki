@@ -1,0 +1,3 @@
+a:7:{i:0;a:3:{i:0;s:14:"document_start";i:1;a:0:{}i:2;i:0;}i:1;a:3:{i:0;s:6:"p_open";i:1;a:0:{}i:2;i:0;}i:2;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:73:"Users will want to add annotation (descriptions, tags, examples, comments";}i:2;i:1;}i:3;a:3:{i:0;s:6:"entity";i:1;a:1:{i:0;s:3:"...";}i:2;i:74;}i:4;a:3:{i:0;s:5:"cdata";i:1;a:1:{i:0;s:207:") to existing services in the catalogue. 
+who? and what? are important aspects we should be able to capture. The default annotation displayed should be the one from the provider or Expert or trusted users. 
+";}i:2;i:77;}i:5;a:3:{i:0;s:7:"p_close";i:1;a:0:{}i:2;i:283;}i:6;a:3:{i:0;s:12:"document_end";i:1;a:0:{}i:2;i:283;}}

@@ -1,0 +1,3 @@
+==== v1.0.1 Release (Jun 2011) ====
+
+This is mainly a big fix release, which includes some important API fixes for the Taverna plugin.

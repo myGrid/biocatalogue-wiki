@@ -1,0 +1,75 @@
+
+<h1 class="sectionedit1" id="how_we_monitor_web_services_in_the_biocatalogue">How We Monitor Web Services in the BioCatalogue</h1>
+<div class="level1">
+
+<p>
+<strong>The Problem: </strong> <em>“Web Services are volatile…”</em>
+</p>
+
+<p>
+ Web Services can change their location, capabilities, become outdated or simply disappear.
+</p>
+
+<p>
+<strong>BioCatalogue Approach to minimize the Effects of the Problem</strong>
+</p>
+
+<p>
+BioCatalogue performs a set of tests on the services to find out if they are still responding to requests in an expected mannner. These tests are run on a regular basis enabling the BioCatalogue to collect historical information on the availability of these services. BioCatalogue displays the latest status of each test, and the statuses of the test over the last 4 days.
+</p>
+
+<p>
+<strong>What does BioCatalogue monitor? </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> If the service has an interface document, like the WSDL, then BioCatalogue checks if this is accessible</div>
+</li>
+<li class="level1"><div class="li"> BioCatalogue also checks that the service endpoint responds to simple requests. </div>
+<ul>
+<li class="level2"><div class="li"> For <a href="http://www.w3schools.com/w3c/w3c_soap.asp" class="urlextern" target="_blank" title="http://www.w3schools.com/w3c/w3c_soap.asp"  rel="nofollow">SOAP</a> services, a check is made to see if a soap response is returned from sending some message to the service </div>
+</li>
+<li class="level2"><div class="li"> For <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" class="urlextern" target="_blank" title="http://en.wikipedia.org/wiki/Representational_State_Transfer"  rel="nofollow">REST</a> services, an <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html" class="urlextern" target="_blank" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html"  rel="nofollow">HTTP head</a> request is made to the base endpoint/url (and to an example endpoint if one is available) and the response status is checked. </div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Functional monitoring of services is done via test scripts. These are (simple) sample clients to the services written a scripting language (perl, python, ruby) or soapUI project file which are uploaded against the service to be run by the BioCatalogue System. </div>
+</li>
+</ul>
+
+<p>
+<strong> How Does BioCatalogue display the Monitoring Results? </strong>
+</p>
+
+<p>
+Each test in BioCatalogue is associated with a status icon. The overall status of the service is calculated from the statuses of the individual tests for that service. 
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="/wiki/_detail/public:help:biocatalogue:tick-sphere-50.png?id=public%3Ahelp%3Abiocatalogue%3Ahow_we_monitor_web_services" class="media" title="public:help:biocatalogue:tick-sphere-50.png"><img src="/wiki/_media/public:help:biocatalogue:tick-sphere-50.png" class="media" alt="" /></a> Passed : BioCatalogue executed this test and got the expected results( E.g. WSDL was accessible )</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="/wiki/_detail/public:help:biocatalogue:pling-sphere-50.png?id=public%3Ahelp%3Abiocatalogue%3Ahow_we_monitor_web_services" class="media" title="public:help:biocatalogue:pling-sphere-50.png"><img src="/wiki/_media/public:help:biocatalogue:pling-sphere-50.png" class="media" alt="" /></a> Warning : BioCatalogue executed this test but got some unexpected result ( E.g. A timeout was hit )</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="/wiki/_detail/public:help:biocatalogue:cross-sphere-50.png?id=public%3Ahelp%3Abiocatalogue%3Ahow_we_monitor_web_services" class="media" title="public:help:biocatalogue:cross-sphere-50.png"><img src="/wiki/_media/public:help:biocatalogue:cross-sphere-50.png" class="media" alt="" /></a> Failed : BioCatalogue determined that this test failed ( E.g. Accessing a WSDL file returned a 404 status code )</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="/wiki/_detail/public:help:biocatalogue:query-sphere-50.png?id=public%3Ahelp%3Abiocatalogue%3Ahow_we_monitor_web_services" class="media" title="public:help:biocatalogue:query-sphere-50.png"><img src="/wiki/_media/public:help:biocatalogue:query-sphere-50.png" class="media" alt="" /></a> Unchecked : BioCatalogue has not yet executed this test</div>
+</li>
+</ul>
+
+<p>
+When a services is first registered, all its tests will have the &#039;Unchecked&#039; status until the next time the monitoring process runs. The overall status of the service will be &#039;Unchecked&#039;. After the monitoring runs, if any of the test does not succeed, the overall status will be Warning( amber icon) otherwise it will be Passed (green icon).
+</p>
+
+<p>
+<strong> How are Services added to the Monitoring? </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Automatically</div>
+</li>
+</ul>
+
+</div>

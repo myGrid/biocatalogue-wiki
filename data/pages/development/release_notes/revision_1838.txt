@@ -1,0 +1,41 @@
+===== BioCatalogue Release , April 6th 2010 =====
+
+  * Previous release revision: 1829
+  * This release revision: 1842
+
+=== Steps To Take for Update ===
+
+In order...
+
+  * Update the biocat_local config file with
+  <code>
+    # This setting determines whether notifications
+    # about service status should be sent to service
+    # submitters or anyone responsible for the service in 
+    # addition to those included in the status recipients list above.
+    NOTIFY_SERVICE_RESPONSIBLE = false
+   </code>
+
+  * Run database update tasks:
+
+  rake db:migrate RAILS_ENV=production
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+  * Restart memcached servers
+
+=== Release Notes ===
+
+** Included in this release ** :
+
+  * Adding submitter to the list status change email recipients
+  * Disabling tests so that their result no longer affect service overall status
+  * Bug fixes

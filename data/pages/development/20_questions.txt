@@ -1,0 +1,53 @@
+====== 20 Questions for BioCatalogue ======
+
+(ref: Jim Gray's 20 Questions [link])
+
+**Similar to what is happening for myExperiment**
+
+We have identified 4 categories of questions so far
+
+== 1- questions on statistics in the system, how many… ==
+  - How many services has provider X? ...currently implemented but need to make sure it clear enough for users... How many of those are REST? How many of those are SOAP? ...different type of services should be clear on the site and users should know the number of each type after a search... **implemented** 
+  - How many submitters does provider X have?...number of submitter from a provider must be clear
+  - How many services are annotated at bronze, silver, gold and platinum standards? ... should be possible to filter service using the different level of annotation.
+
+== 2- questions on metrics, status ==
+  - What is the reliability profile of service X? Can I see the usage history of service X? who is the provider? is it free... Each service should have a profile (reliability, history of use, free, licenses etc) 
+  - Which are the most recently updated services? Which are the most recently registered services? Most search services? ...possibility to filter services based on these factors. 
+
+ 
+
+
+== 3- questions about relations/functions of services (this section requires rich annotations) ==
+  - Which services consume given input/output?... possible if we have a semantic annotation in place
+  - Which service takes input X and generates output Y (under conditions x,y, z)?
+  - Which services perform a given biological function?
+  - Which service can I use in place of a given service?
+  - Which other service is using the same data as service X?
+  - What paper(DOI) or myExperiment workflows are available for this service?... possibility to point to external resources for service description.
+
+
+== 4-housekeeping questions ==
+The questions here are about: \\
+
+A- How to use BioCatalogue 
+  - How do I report misinformation in the registry? ... how can users contact us?...**ongoing** 
+  - Can i access the catalogue in any other way? ... use our code/APIs ...**ongoing**
+  - What 'functions' are available? ... list of thing user can do 
+  - Will my account be deactivated, after some period(how long?) of inactivity?
+  - Do I have to register?... justify the need for registration for service submission
+  - Who do I contact for more information about service X?... internal messaging. \\
+
+B- Capability
+  - Can I filter tags by service, operation, parameters? can I find operations? 
+  - Do I have access to the output in JSON and/or RDF/XML, SAWSDL ...
+  - Are there any restrictions in the number of calls I an make? \\
+
+C- Sustainability 
+  - Who are you? ... who is behind BioCatalogue 
+  - Will you be around next year time? ... 
+  - How can I get involved in BioCatalogue? ... 
+ 
+  
+ 
+  

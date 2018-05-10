@@ -1,0 +1,16 @@
+====== BioCatalogue Live Site Releases ======
+  * [[development:release_notes:revision_1266|5th November 2009 Release]]
+  * [[development:release_notes:revision_1300|19th November 2009 Release]]
+  * [[development:release_notes:revision_1350|1st December 2009 Release]]
+  * [[development:release_notes:revision_1367|10th December 2009 Release]]
+  * [[development:release_notes:revision_1688|9th March 2010 Release]]
+  * [[development:release_notes:revision_1808|6th April 2010 Release]]
+  * [[development:release_notes:revision_1829|12th April 2010 Release]]
+  * [[development:release_notes:revision_1838|15th April 2010 Release]]
+  * [[development:release_notes:revision_1868|22th April 2010 Release]]
+  * [[development:release_notes:revision_2068|26th May 2010 Release]]
+
+\\
+  * [[development:release_notes:revision_oct_2010|v1.0.0 Release (Feb 2011)]]
+  * [[development:release_notes:v1.0.1|v1.0.1 Release (Jun 2011)]]
+  * [[development:release_notes:v1.1.0|v1.1.0 Release (Sep 2011)]]

@@ -1,0 +1,18 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;soap_operation&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;fetchBatch&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_operations/12&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;parameter_order&quot;</span><span class="sy0">:</span> <span class="st0">&quot;db ids format style&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Get a set of database entries (see http://www.ebi.ac.uk/Tools/webservices/services/dbfetch#fetchbatch_db_ids_format_style)&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;outputs&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+            <span class="br0">&#123;</span>
+                <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;fetchBatchReturn&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;computational_type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;xsd:string&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_outputs/12&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Returns your entries in specified format. Generally this will contain only one item which contains the set of entries.&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;created_at&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2008-11-14T12:05:17Z&quot;</span>
+            <span class="br0">&#125;</span>
+        <span class="br0">&#93;</span><span class="sy0">,</span>
+        <span class="st0">&quot;created_at&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2008-11-14T12:05:16Z&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

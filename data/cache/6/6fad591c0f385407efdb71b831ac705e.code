@@ -1,0 +1,10 @@
+<span class="sc3"><span class="re1">&lt;search</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;service<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;soapOperation<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/soapOperation<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>...<span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/search<span class="re2">&gt;</span></span></span>

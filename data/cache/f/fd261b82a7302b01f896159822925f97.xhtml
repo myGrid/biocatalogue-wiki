@@ -1,0 +1,64 @@
+
+
+
+<h1><a name="soaplab_service_in_biocatalogue" id="soaplab_service_in_biocatalogue">Soaplab service in BioCatalogue</a></h1>
+<div class="level1">
+
+</div>
+
+<h4><a name="what_is_soaplab" id="what_is_soaplab">What is Soaplab?</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Soaplab is a specialised Web Services software framework for command-line bioinformatics programs. It includes a  library for running command-line programs and provides support to generate Java Web Services web applications based on this library. An important part of the library is a container that manages life cycle of the jobs effectively. Soaplab generic interface[1] makes it possible to use the same interface for all programs deployed. Soaplab is well known to many bioinformaticians since it has built-in support for EMBOSS programs and also because the European Bioinformatics Institute where Soaplab was developed has had an active Soaplab server since year 2003. It can be said that initial development of Soaplab was supported by the UK e-Science program, and it was part of the myGrid project [source: wikipedia].</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="submit_a_soaplab_server_to_biocatalogue" id="submit_a_soaplab_server_to_biocatalogue">Submit a Soaplab Server to BioCatalogue</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> To submit a Soaplab server you need to be logged-in. If you do not have an account then please sign up and login.</div>
+</li>
+<li class="level1"><div class="li"> Click on the “Register a Service” link on the top menu bar</div>
+</li>
+<li class="level1"><div class="li"> On the next screen, there will be a SOAPLAB button. Click on it to get a page like this<br/>
+   <a href="/ebiwiki/biocatalogue/lib/exe/detail.php?id=development%3Ahowto&amp;cache=cache&amp;media=development:soaplab_submit.jpg" class="media" title="development:soaplab_submit.jpg"><img src="/ebiwiki/biocatalogue/lib/exe/fetch.php?w=&amp;h=&amp;cache=cache&amp;media=development:soaplab_submit.jpg" class="media" alt="" /></a><br/>
+</div>
+</li>
+<li class="level1"><div class="li"> In the text box provided, type the wsdl <acronym title="Uniform Resource Locator">URL</acronym> of the service which knows about all the analysis in the soaplab server. </div>
+<ul>
+<li class="level2"><div class="li"> For soaplab1 servers, this will take the form<br/>
+ <br/>
+</div>
+<ul>
+<li class="level3"><div class="li"> http:://&lt;my/soaplab/server/base/url&gt;/<strong>services/AnalysisFactory?wsdl</strong> <br/>
+ as shown in one of the examples provided on the soaplab submission screen above.</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> For soaplab2 servers, this will take the form <br/>
+ <br/>
+ </div>
+<ul>
+<li class="level3"><div class="li"> http:://&lt;my/soaplab/server/base/url&gt;/<strong>typed/services/list?wsdl</strong></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Click on preview to get a list of the analyses the soaplab server</div>
+</li>
+<li class="level1"><div class="li"> At the bottom of the screen is the submit button( you may have to scroll down the page is the list of the analyses is long). Click on the submit button to submit the services to BioCatalague.</div>
+</li>
+</ul>
+
+<p>
+<strong>Note</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> It may take a little while for all services(analyses) to be registered. </div>
+</li>
+</ul>
+
+</div>

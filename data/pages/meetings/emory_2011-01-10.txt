@@ -1,0 +1,104 @@
+====== Collaboration Meeting with Emory - January 10, 2011 ======
+
+Format: telcon
+
+Date: Mon 10th Jan 2011
+
+Time: 15:00 - 16:00 (BST) / 10:00 - 11:00 (EST)
+
+===== Attendance =====
+
+  * **Emory** - Stephen Wheat, Tod Jackson
+  * **Manchester** - Carole Goble, Steve Petiffer, Shoaib Sufi, Jiten Bhagat, Mannie Tagagira
+  * **EBI** - None
+
+===== Minutes =====
+
+Carole brought up two main areas of discussion:
+
+  - The software - contribution protocol, common roadmap, common development, etc.
+  - The BioCatalogue service and content
+
+We discussed the points individually...
+
+==== 1. Software ====
+
+Bring together collaboration on the various components that comprise the BioCatalogue software, as well as the external apps being built by both sides (Mass Curator app, iPhone and iPad apps, and so on).
+
+The focus of PESC work was particularly on customisation configuration machinary and security/sharing permissions
+
+We discussed the need for a CLA and governance model to get us started, with the longer term aim to have the Emory folks on board as first class project members.
+
+Stephen mentioned that they are very familiar with CLAs and working as contributors and are happy for us to start off with a CLA and goverance model they can look over
+
+**ACTION:** Shoaib to send Stephen a CLA and governance model based on the Taverna ones.
+
+Tod mentioned that collaboration on the roadmap is the first and key thing we need to do. Very important! Need to align common goals and requirements and figure out where to make things more extensible/configurable for niche needs.
+
+Stephen: Tod's point is important in the context of the existing deployments and continual running of these instances (e.g.: the internal BioCat instance they are running for EdUnify).
+
+Stephen and Tod both emphasised that one (of many) points is that of a "virtual private registry" - people are worried about the perceived security and visibility of their services. Some communities want to be able to hide services as they are developing and annotating them, and then incrementally reveal them. And even then, some only want to reveal to certain groups and sub-sets of people.
+
+Security objects from biomedical community CIOs - non-sensible vs sensible (mistaking the information about the service with the running of the service and information about the service giving outsiders a potential advantage)
+
+Jits suggested that we get Tod involved with the current 2011 roadmapping work asap. First figure out the developer roadmap and then distil a user facing roadmap from that.
+
+**ACTION:** Jits to add Tod to internal developer list and wiki and then point him to 2011 roadmap WIP page.
+
+**ACTION:** Jits to arrange a roadmapping meeting with Tod (and who else?)
+
+==== 2. Existing content + services ====
+
+This was about providing curation help for the existing BioCat service and improving it's content.
+
+Discussion brought about methods to improve on curation, using things such as:
+
+- User leaderboards and mini games (using points systems like how stackoverflow.com and others do).
+- Service annotation levels (to visually depict how well services are annotated).
+- More focus on example data.
+- Ability to run services directly in the catalogue, to be able to figure how they work, and to be able to generate example data.
+
+These are examples of things to discuss in the roadmapping meeting.
+
+==== Any Other Business ====
+
+Stephen: education, research and health sciences are all interested. They have lots of services! The biohealth/biomedical folks may be able to help curation of the BioCatalogue.org service.
+
+**ACTION:** Stephen to speak with the Research Health Sciences group with a view to assisting the curation of the public BioCatalogue
+
+**ACTION:** Stephen to invite Manchester to give seminars to various groups (RHS, Joel's group)
+
+Any other business:
+
+Stephen mentioned conference opportunities.
+
+The conferences mentioned to submit jointly to are:
+  * ISMB/ECCB
+  * HCISC
+  * Educause
+  * SOA/Java
+  * IEEE ICWS
+  * (and we could also try DCC)
+
+Journals could include Nature BioTech
+
+We also discussed that PESC may need to develop a business plan and charge fees.
+
+**ACTION:** Stephen will contact us if this occurs for our views
+
+**ACTION:** Carole to formally get the agreement of the EBI for opening up the complete mailing lists to Emory 
+
+===== Actions =====
+
+  * **Shoaib** to send Stephen a CLA and governance model based on the Taverna ones.
+  * **Jits** to add Tod to internal developer list and wiki and then point him to 2011 roadmap WIP page.
+  * **Jits** to arrange a roadmapping meeting with Tod (and anyone else interested).
+  * **Stephen** to speak with the Research Health Sciences group with a view to assisting the curation of the public BioCatalogue.
+  * **Stephen** to invite Manchester to give seminars to various groups (RHS, Joel's group).
+  * **Stephen** will contact us if/when PESC have a business plan for their installation.
+  * **Carole** to formally get the agreement of the EBI for opening up the complete mailing lists to Emory.
+
+ 
+
+
+

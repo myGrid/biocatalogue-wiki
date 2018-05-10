@@ -1,0 +1,27 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;users&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;results&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+            <span class="br0">&#123;</span>
+                <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;mannie&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;joined&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2010-06-03T09:53:02Z&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/users/537&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;public_email&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;affiliation&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+                <span class="st0">&quot;location&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+                    <span class="st0">&quot;city&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+                    <span class="st0">&quot;country_code&quot;</span><span class="sy0">:</span> <span class="kw2">null</span><span class="sy0">,</span>
+                    <span class="st0">&quot;country&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+                    <span class="st0">&quot;flag&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+            ...
+        <span class="br0">&#93;</span><span class="sy0">,</span>
+        <span class="st0">&quot;sort_order&quot;</span><span class="sy0">:</span> <span class="st0">&quot;desc&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;sort_by&quot;</span><span class="sy0">:</span> <span class="st0">&quot;activated&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;total&quot;</span><span class="sy0">:</span> <span class="nu0">351</span><span class="sy0">,</span>
+        <span class="st0">&quot;per_page&quot;</span><span class="sy0">:</span> <span class="nu0">10</span><span class="sy0">,</span>
+        <span class="st0">&quot;search_query&quot;</span><span class="sy0">:</span> <span class="kw2">null</span><span class="sy0">,</span>
+        <span class="st0">&quot;pages&quot;</span><span class="sy0">:</span> <span class="nu0">36</span><span class="sy0">,</span>
+        <span class="st0">&quot;current_page&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

@@ -1,0 +1,45 @@
+====== Embrace Registry Capabilities (existing) ======
+
+  * DAS (re-use DAS parsing script from Steve, url)
+    * (it may make more sense to use the DAS parser available in BioRuby -- the one from Utopia is written in python, but is available if its useful - SRP)
+  * REST (url)
+  * SOAP support ( url + list operation(s))
+    * (validation-before-submit WSDL coming soon! - SRP) 
+  * Testing infrastructure (potentially re-use embrace setup)
+    * need to think carefully about scalability and security here
+  * Ability to uploading test script
+  * Service status (traffic lights)
+    * latest service updates
+  * Service Submission 
+    * Type(s) of data the service deals with
+    * Project(s) most relevant to the service
+    * Tags
+    * Web service description (with some formatting allowed)
+    * Version(provided by submitter)
+    * Optional url to further information
+    * url to wsdl
+    * base url to DAS
+    * url to REST collection
+    * file attachments
+  * comments
+  * forums 
+  * ratings (almost completely meaningless so far... need to think about this a bit! - SRP)
+  * all services
+  * my services
+  * top rated services
+  * test log view and download 
+  * mail service maintainer when change of status
+
+====== 'In Development' but known to be important ======
+
+
+  * WS API for batch upload / edit of services and tests
+  * WS API for query of catalogue 
+  * WS API to query status of particular services / tests
+  * allow users to register interest in particular services in order to receive updates
+
+
+
+  
+  
+  

@@ -1,0 +1,77 @@
+Date: Tuesday 18th Nov 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:**  Franck, Jits 
+
+**EBI:** Thomas
+
+===== Apologies =====
+Carole, Rodrigo, Eric, Hamish
+
+===== Minuting =====
+Franck
+
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Progress with the pilot - are we rolling?
+
+  * BioCatalogue public wiki
+  
+  * Meeting in Edinburgh - to clarify 
+
+  * Next BioCatalogue F2F
+
+  * AOB.
+
+===== Actions from Previous Meeting ===== 
+
+  * Eric: read EBI privacy policy and make sure we have a version appropriate for BioCatalogue - incorporate commments from Sergejs (and others, if any). **completed**
+  
+  * Jits: Ask Carole what is happening on the 27th November - is there a Biocatalogue meeting in Edinburgh to meet up with Mark W **Completed**
+  * Action Thomas :  link the public wiki from the main biocatalogue.org site **completed**
+  * Action Eric : read through wiki content and send comments to Frank/Jiten **completed**
+  * Action Eric and Thomas : join the meeting with Steve from Embrace on Wednesday, Nov 19th  **completed**
+  * Action Eric, Jiten, Thomas : Release the internal pilot with release notes **Ongoing**
+  * Action Jiten, Franck : Prioritize the roadmap items and add time estimates**completed**
+  * Action Franck : email the list of possible dates for the project F2F so that people can indicate their availability: **completed**
+  * Action Franck : Provide an example of a semantically annotated service(using the SAWSDL model)**Ongoing**
+  * Action Everyone : Read the SA-REST proposal and comment on how we can participate **completed**
+  
+
+====== Minutes ======
+ 
+  * Progress with the pilot:
+Beta version of the pilot released for testing. Only for SOAP service submission
+
+  * Next BioCatalogue F2F
+   04/12/08 at EBI
+
+  * Meeting in Edinburgh 
+27/11/08 at NeSC
+
+===== New Actions =====
+ 
+  * Jits: add number of service in the catalogue to the index page
+  * Jits: add Franck to support list 
+  * Thomas: investigate 'home' link on the public wiki
+  * Jits/Thomas/Eric: create developer section on the wiki
+
+
+
+
+
+===== Upcoming Meetings ===== 
+Semantic Web Applications and Tools for Life Sciences - 28/11/08
+http://www.swat4ls.org/
+
+===== AOB =====
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting:[[Meetings:PhoneConf:2008-11-11|Phone Conference Meeting on Nov 11 2008]] 
+
+Next meeting:[[Meetings:PhoneConf:2008-11-25|Phone Conference Meeting on Nov 25 2008]] 

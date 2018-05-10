@@ -1,0 +1,845 @@
+<html>
+<style type="text/css">
+
+.wikilink1 {
+font-weight: bold;
+}
+
+p { text-align: left !important; }
+
+</style>
+</html>
+
+<html>
+<div class="box_important" style="margin-top: 0";>
+Current status is <b>BETA</b> so expect improvements and additions. Breaking changes will be mentioned in the <a href="#changelog" class="wikilink1">changelog</a> and on the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a>.
+</div>
+</html>
+====== The BioCatalogue REST API ======
+
+The [[http://www.biocatalogue.org|BioCatalogue]] provides a set of public **RESTful** ((http://en.wikipedia.org/wiki/Representational_State_Transfer)) endpoints that allow you to query the registry programmatically and integrate the data and functionality into your own scripts, workflows, apps, tools and mashups. XML is the primary output format, with support for JSON ((http://www.json.org/)) as the secondary format. We are also looking into having RDF, FOAF, SKOS and others output formats in the future and where applicable.
+
+The BioCatalogue API is **read only**, with write support for submission of REST and SOAP services, as well as annotations.
+
+The API follows a consistent URI scheme and Linked Data principles. Content Negotiation ((http://en.wikipedia.org/wiki/Content_negotiation)) is the recommended way to access the outputs (though for purposes of this documentation and testing in a browser you may see URIs with '.xml' in them). [[public:api#URIs, Linked Data and Content Negotiation|More detailed information]] is available on this.
+
+One key notion in the [[public:api#data model|data model]] presented by the REST API is that a ''Service'' in the BioCatalogue is really a //container// for one or more ''ServiceDeployment''s and one or more variants, where a variant is either a ''SoapService'' or ''RestService''. 
+
+<html> <!--
+<div class="box_important">
+<b>Note</b>: please use the sandbox site (<b><a href="http://sandbox.biocatalogue.org" target="_blank">http://sandbox.biocatalogue.org</a></b>) whilst building and testing (when you can). The sandbox site will also be used to try out the latest API. For updates please join the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a>.
+</div>
+--> </html>
+
+Jump to the [[public:api#Quick Examples (XML)|Quick Examples]]
+
+Jump to the [[public:api#Table of Endpoints|Table of Endpoints]]
+
+Go to the [[public:api:endpoints|Endpoints Detailed Docs]]
+
+<html>
+<div class="box_note">
+If you have any questions, feedback or would like any assistance please join the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a> or contact Jiten Bhagat (<a href="javascript:location='mailto:\u006a\u0069\u0074\u0073\u0040\u0063\u0073\u002e\u006d\u0061\u006e\u002e\u0061\u0063\u002e\u0075\u006b';void 0"><script type="text/javascript">document.write('\u006a\u0069\u0074\u0073\u0040\u0063\u0073\u002e\u006d\u0061\u006e\u002e\u0061\u0063\u002e\u0075\u006b')</script></a>)
+</div>
+</html>
+
+===== Changelog =====
+
+The last change to the API (for the [[http://www.biocatalogue.org|main BioCatalogue site]]) was: 
+
+**v1.1.0b** - 25th June 2010
+
+  * Added **viewings** and **favourites** counts to the /services/{id} endpoint (in the ''<summary>'' section).
+  * New endpoint - **/soap_services/wsdl_locations**. Allows you to get a list of all the WSDL locations of all the SOAP based services in the catalogue.
+
+See the [[public:api:changelog|full changelog]] for more details
+===== Quick Examples ====
+
+**Search** 
+  * For things with the keyword "ebi"
+    *http://www.biocatalogue.org/search.xml?q=ebi
+    *http://www.biocatalogue.org/search.json?q=ebi
+  * For ''Service''s and ''SoapOperation''s with the keywords "blast sequence"
+    * http://www.biocatalogue.org/search.xml?q=blast+sequence&scope=services,soap_operations
+    * http://www.biocatalogue.org/search.json?q=blast+sequence&scope=services,soap_operations
+  * For ''User''s with the keyword "franck"
+    * http://www.biocatalogue.org/search.xml?q=franck&scope=users
+    * http://www.biocatalogue.org/search.json?q=franck&scope=users
+
+**Lookup**
+
+For a particular WSDL http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl...
+  * Get the relevant ''SoapService''
+    * http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A
+    * http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A
+  * Get the ''SoapOperation'' "streamContent"
+    * http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&operation_name=streamContent
+    * http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&operation_name=streamContent
+  * Get the ''SoapInput'' "generateContent" for the ''SoapOperation'' "streamContent"
+    * http://www.biocatalogue.org/lookup.xml?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&operation_name=streamContent&input_name=generateContent
+    * http://www.biocatalogue.org/lookup.json?wsdl_location=http%3A%2F%2Fws.adaptivedisclosure.org%2Faxis%2Fservices%2FIndexWS%3Fwsdl%0A&operation_name=streamContent&input_name=generateContent
+
+**Services**
+  * Latest
+    * http://www.biocatalogue.org/services.xml
+    * http://www.biocatalogue.org/services.json
+  * Filtered by service type SOAP
+    * http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d
+    * http://www.biocatalogue.org/services.json?t=%5bSOAP%5d
+  * Filtered by service type SOAP, and provided by the EBI or NCBI, and with the keyword "fetch" in them somewhere
+    * http://www.biocatalogue.org/services.xml?t=%5bSOAP%5d&p=%5b1%5d%2c%5b6%5d&q=fetch
+    * http://www.biocatalogue.org/services.json?t=%5bSOAP%5d&p=%5b1%5d%2c%5b6%5d&q=fetch
+  * All the possible filters that can be applied to the ''Services'' index
+    * http://www.biocatalogue.org/services/filters.xml
+    * http://www.biocatalogue.org/services/filters.json
+
+**SOAP operations**
+  * Latest
+    * http://www.biocatalogue.org/soap_operations.xml
+    * http://www.biocatalogue.org/soap_operations.json
+  * Filtered by the tags "blast" or "sequence" anywhere within the operation and it's inputs and outputs
+    * http://www.biocatalogue.org/soap_operations.xml?tag=%5bblast%5d%2c%5bsequence%5d
+    * http://www.biocatalogue.org/soap_operations.json?tag=%5bblast%5d%2c%5bsequence%5d
+  * Filtered by the tag "protein_database" anywhere within the operation and it's inputs
+    * http://www.biocatalogue.org/soap_operations.xml?tag_ins=%5bprotein_database%5d
+    * http://www.biocatalogue.org/soap_operations.json?tag_ins=%5bprotein_database%5d
+  * All the possible filters that can be applied to the ''SoapOperations'' index
+    * http://www.biocatalogue.org/soap_operations/filters.xml
+    * http://www.biocatalogue.org/soap_operations/filters.json
+
+**REST methods**
+  * Latest
+    * http://www.biocatalogue.org/rest_methods.xml
+    * http://www.biocatalogue.org/rest_methods.json
+  * Filtered by the tags "blast" or "sequence" anywhere within the REST method and it's REST input and output parameters and representations
+    * http://www.biocatalogue.org/rest_methods.xml?tag=%5bblast%5d%2c%5bsequence%5d
+    * http://www.biocatalogue.org/rest_methods.json?tag=%5bblast%5d%2c%5bsequence%5d
+  * Filtered by the tag "database" anywhere within the operation and it's REST input parameters and representations
+    * http://www.biocatalogue.org/rest_methods.xml?tag_ins=%5bdatabase%5d
+    * http://www.biocatalogue.org/rest_methods.json?tag_ins=%5bdatabase%5d
+  * All the possible filters that can be applied to the ''RestMethods'' index
+    * http://www.biocatalogue.org/rest_methods/filters.xml
+    * http://www.biocatalogue.org/rest_methods/filters.json
+
+**Details of a ''Service''**
+  * Default view
+    * http://www.biocatalogue.org/services/4.xml
+    * http://www.biocatalogue.org/services/4.json
+  * Summary only
+    * http://www.biocatalogue.org/services/4/summary.xml
+    * http://www.biocatalogue.org/services/4/summary.json
+  * Monitoring info only
+    * http://www.biocatalogue.org/services/4/monitoring.xml
+    * http://www.biocatalogue.org/services/4/monitoring.json
+  * Annotations on the ''Service'' (not including the annotations on the other parts of the service, like the ''ServiceDeployment''s, ''SoapService''s, etc)
+    * http://www.biocatalogue.org/services/4/annotations.xml 
+    * http://www.biocatalogue.org/services/4/annotations.json 
+
+**Categories and Tags**
+  * Top level service categories
+    * http://www.biocatalogue.org/categories.xml
+    * http://www.biocatalogue.org/categories.json
+  * The ''Services'' that have a particular category (and all other categories narrower/below that category)
+    * http://www.biocatalogue.org/categories/5/services.xml
+    * http://www.biocatalogue.org/categories/5/services.json
+  * Get the top 10 tags
+    * http://www.biocatalogue.org/tags.xml?limit=10
+    * http://www.biocatalogue.org/tags.json?limit=10
+  * Get more information about a regular keyword tag
+    * http://www.biocatalogue.org/tags/soaplab.xml
+    * http://www.biocatalogue.org/tags/soaplab.json
+  * Get more information about a controlled vocabulary term tag (currently only supported for the myGrid ontology)
+    * http://www.biocatalogue.org/tags/retrieving.xml?namespace=mygrid-domain-ontology
+    * http://www.biocatalogue.org/tags/retrieving.json?namespace=mygrid-domain-ontology
+
+===== Key Principles =====
+
+  * **Balance** - between simplicity and utility. A number of different [[public:api:use_cases|use cases]] for the API have been considered and an attempt has been made to balance simplicity and utility of the API.
+
+  * **Consistency** - in the URIs and outputs of the API. Consistent [[public:api#URIs, Linked Data and Content Negotiation|URIs]] and [[public:api#Commonalities|patterns]] are used throughout.
+
+  * **Discoverability** - of related resources, next pages of results, and so on. Additional links to resources are added to outputs wherever possible and appropriate.
+
+  * **Manageability** - of URIs, outputs and data schemas. We aim to provide a stable and manageable experience for API consumers. Breaking changes will be avoided as much as possible, but in the event where they are absolutely necessary they will be trialled and announced in the appropriate places. The XML outputs are fully schema driven so that changes to client code can be done in a manageable way.
+
+<html>
+<div class="box_important">
+<b>Note</b>: the JSON outputs are an <i>exception to the rule</i> for some of the above since JSON is geared more towards AJAX usage, where leaner and simpler data outputs are beneficial. See the <a href="#xml_vs_json_outputs" class="wikilink1">comparison</a> between the XML and JSON outputs for more info.
+</div>
+</html>
+
+
+===== Data Model =====
+
+The data model exposed by the API is shown below.
+
+<html>
+<div class="box_important">
+<b>Key point</b>: a <code>Service</code> in the BioCatalogue is really a <i>container</i> for <code>ServiceDeployment</code>s and variants, where a variant is either a <code>SoapService</code> or <code>RestService</code>. 
+</div>
+</html>
+
+{{ :public:rest_api_data_model.png?800 | BioCatalogue REST API Data Model}}
+
+**Key:**
+  * The orange boxes represent logical groups.
+  * The blue boxes represent actual entities exposed in the API.
+  * The purple boxes represent polymorphic references to entities and not actual entities.
+    * For example, an ''Annotation'' has a ''Source'', but no actual ''Source'' entity exists. This is just a reference to another entity type that can be the source of the annotation (see more information about Annotations, below).
+
+<html>
+<div class="box_important">
+<b>Note</b>: this is intended to give the high level view of the resources and relationships exposed by the API. It doesn't include ALL the individual data fields within each resource nor all possible relationships. The <a href="http://www.biocatalogue.org/2009/xml/rest/schema-v1.xsd" target="_blank">XML schema document</a> provides a more detailed data model (specific to the XML endpoints)
+</div>
+</html>
+==== Entities ====
+
+The table below details the various entities that make up this data model. It also specifies whether the API exposes them as **//resources//** or not, and whether a corresponding index/collection resource is available.
+
+A **//resource//** is defined as: something that has a //unique dereferenceable URI// that can be accessed to retrieve a representation of that thing, via the API.
+
+^ Entity ^ Description ^ Resources in API? ^ Has Index Resource? ^
+| ''Service'' | Main resource type in the system. Container for all things to do with a particular service registered in the BioCatalogue. This includes variants (''SoapService'' and/or ''RestService''), ''ServiceDeployment''s, ''ServiceTest''s and so on. | YES | YES (''Services'') | 
+| ''ServiceDeployment'' | A particular running instance of the service that provides either the ''SoapService'' or ''RestService'', and that is managed by a ''ServiceProvider''. The data model allows for multiple ''ServiceDeployment''s, akin to service **mirrors**, by multiple ''ServiceProvider''s. | YES | NO |
+| ''SoapService'' | A SOAP ((http://www.w3.org/TR/soap/)) variant of a service. | YES | YES (''SoapServices'') |
+| ''SoapOperation'' | A SOAP operation for a particular ''SoapService''. | YES | YES (''SoapOperations'') |
+| ''SoapInput'' | A SOAP input for a particular ''SoapOperation''. | YES | NO |
+| ''SoapOutput'' | A SOAP output for a particular ''SoapOperation''. | YES | NO |
+| ''RestService'' | A REST ((http://en.wikipedia.org/wiki/Representational_State_Transfer)) variant of a service. | YES | YES (''RestServices'') |
+| ''RestResource'' | A REST resource for a particular ''RestService''. | YES | YES (''RestResources'') |
+| ''RestMethod'' | A REST resource for a particular ''RestResource''. | YES | YES (''RestMethods'') |
+| ''RestParameter'' | A REST parameter for a particular ''RestMethod''. | YES | NO |
+| ''RestRepresentation'' | A REST representation for a particular ''RestMethod''. | YES | NO |
+| ''MonitoringStatus'' | Monitoring status information (to specify a pass, fail, etc. and with additional information). This can be at the level of a ''TestResult'', a ''ServiceTest'' or on a whole ''Service'' (in which case it is an aggregation of the statuses of the different tests). | NO | - |
+| ''ServiceTest'' | A particular test configured for a ''Service'' in order to carry out monitoring of that ''Service''. This abstracts out what the test actually does, thus allowing different types of monitoring tests to be handled in a consistent manner. | YES | NO |
+| ''UrlMonitor'' | A service test type that monitors a URL. Currently, service endpoints and WSDL locations are monitored using this particular test type. | NO | - |
+| ''TestScript'' | A service test type that executes a test script on a regular basis, to help determine the monitoring status of a ''Service'' | NO | - |
+| ''TestResult'' | A particular result of the execution of a ''ServiceTest''. This provides a common results model that isn't dependant on the type of test carried out. | YES | YES (''TestResults'') |
+| ''Category'' | An abstraction over "category" annotations, this is a particular service category from the service categories controlled vocabulary.  | YES | YES (''Categories'') |
+| ''Tag'' | An abstraction over "tag" annotations, that allows building of tag clouds and searching by tags. | YES | YES (''Tags'') |
+| ''ServiceProvider'' | A particular provider of ''ServiceDeployment''s. | YES | YES (''ServiceProviders'') |
+| ''User'' | A registered user of the BioCatalogue, who can submit services, contribute annotations and so on. In the web interface, ''User''s are referred to as **Members**. This is to distinguish between anonymous users and registered users. | YES | YES (''Users'') | 
+| ''Registry'' | An external registry or portal that is used as a source of services and/or annotations. | YES | YES (''Registries'') |
+| ''Agent'' | An automated entity that can perform actions within the BioCatalogue, such as creating annotations and performing automated curation. | YES | YES(''Agents'') |
+| ''AnnotationAttribute'' | A particular class/type/group of ''Annotation''s. For example, "tag", "description", etc. This allows for an extensible data model for metadata. | YES | YES (''AnnotationAttributes'') |
+| ''Annotation'' | See the [[public:api#annotations|Annotations]] section below. | YES | YES (''Annotations'') |
+
+==== Annotations ====
+
+<html>
+<div class="box_important">
+<b>Important:</b> the term "annotations" is used interchangeably on the BioCatalogue web interface and other places (like papers about the BioCatalogue) to mean:
+<ul>
+<li>A. metadata in general within the BioCatalogue.</li>
+<li>B. the <code>Annotation</code> resource, which is something much more specific: a piece of additional metadata about something, usually provided by an external party, that is added on top of the existing data/metadata model.</li>
+</ul>
+
+<b>The API specifically deals with B.</b>
+</div>
+</html>
+
+''Annotation''s are the extensible mechanism by which additional metadata is added about services (or their constituents) in the BioCatalogue, to incrementally document services at various levels of granularities.
+
+Things like...
+
+  * Tags
+  * Categories
+  * Additional descriptions
+  * Documentation URLs
+  * Example data
+
+... and so on, are stored and exposed using the generic ''Annotation''s mechanism.
+
+The common principle we attempt to follow: metadata from service description documents and from service monitoring are part of the core model, but all other metadata is stored and exposed using ''Annotation''s.
+
+Each resource has it's own set of annotations. This allows different levels granularity. E.g.: 'tag' annotations on a ''Service'' apply to the whole service whereas 'tag' annotations on a ''SoapOperation'' are specific to that SOAP operation. See the [[public:api#Annotation Fields Breakdown|breakdown]] of what main annotation fields are on what resource types.
+
+<html>
+<div class="box_note">
+<b>tag</b> and <b>category</b> <code>Annotation</code>s are also treated as first class resources in the API (<code>Tag</code> and <code>Category</code> resources respectively), in order to provide a richer API for these.
+</div>
+</html>
+
+At a conceptual level, an ''Annotation'' consists of:
+
+    * a link to the thing that the ''Annotation'' is about - the ''annotatable''.
+    * a link to the source of the ''Annotation'' - the ''source''.
+    * a link to the ''annotationAttribute'' which specifies what kind of ''Annotation'' this is (i.e.: what field).
+    * the ''value'' of the annotation (some textual content with an optional reference to an entity that is the actual value).
+    * the latest ''version'' number of the ''Annotation''.
+    * timestamps for when the ''Annotation'' was ''created'' and last ''modified''.
+
+The following resource types can be the ''source'' of ''Annotation''s:
+  * ''User''
+  * ''ServiceProvider''
+  * ''Registry''
+  * ''Agent''
+
+=== Annotation Fields Breakdown ===
+
+Below are the main annotation fields (i.e.: annotation attributes) for all the possible ''annotatable'' resource types within the BioCatalogue:
+
+  * ''Service'':
+    * tag
+    * category
+    * display_name
+    * alternative_name
+    * rating.//xx//
+
+  * ''ServiceDeployment'':
+    * cost
+    * usage_condition
+    * contact
+
+  * ''SoapService'', ''RestService'':
+    * documentation_url
+    * description
+    * license
+    * publication
+    * citation
+
+  * ''SoapOperation'':
+    * alternative_name
+    * tag
+    * description
+
+  * ''SoapInput'':
+    * alternative_name
+    * tag
+    * description
+    * format
+    * example_data
+
+  * ''SoapOutput'':
+    * alternative_name
+    * tag
+    * description
+    * format
+    * example_data
+
+  * ''ServiceProvider'':
+    * display_name
+    * alternative_name
+    * description
+    * website
+    * contact 
+===== URIs, Linked Data and Content Negotiation =====
+
+The BioCatalogue maintains a consistent URI scheme and currently the API (XML, JSON, ATOM outputs) follows Linked Data ((http://linkeddata.org/)) principles ((http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/)). We use the **//extensions//** way of defining the URIs for the different representations (see below for more info).
+
+Content Negotiation ((http://en.wikipedia.org/wiki/Content_negotiation)) is the recommended way to access the outputs. I.e.: by using the HTTP ''Accept'' header and not calling the ".xml" etc URLs directly.
+
+This means that, for example:
+
+The following is a **//non-information resource URI//** for the services index:
+  * http://www.biocatalogue.org/services
+
+This URI is considered to be the //unique dereferenceable URI// (aka identifier) for that particular resource.
+
+Which then has the following representations:
+
+  * http://www.biocatalogue.org/services.html
+  * http://www.biocatalogue.org/services.xml
+  * http://www.biocatalogue.org/services.atom
+  * http://www.biocatalogue.org/services.json
+
+All data outputs from the API only ever contain identifiers (that are the non-information resource URIs). Content negotiation can then be used to access specific representations of these identifiers (via an HTTP 303 redirect).
+
+The figure below illustrates another example of how this works, showing the relevant 303 redirect:
+
+{{ :public:rest_api_linked_data_example.png?800 | BioCatalogue REST API Linked Data Example}}
+
+<html>
+<div class="box_important">
+<b>Note</b>: technically, accessing the non-information resource URI in a browser will still give back the HTML without performing a 303, since the web interface is not yet Linked Data "friendly".
+</div>
+</html>
+===== Table of Endpoints =====
+
+The table below enumerates all the main endpoints that can be used to access resources via the API.
+
+Note:
+  * Template parameters are shown in curly brackets, e.g.: {id} needs to be replaced with a value, in order to specify a specific resource.
+  * Not all endpoints have an HTML output representation, but all will have at least XML.
+  * [[public:api:endpoints|Detailed docs]] for each endpoint are available and each entry in the table has a corresponding link to these docs.
+
+^ Endpoint ^ Formats ^ Description ^ Docs ^
+| / | XML, JSON | The root resource that provides information on the API. | [[public:api:endpoints#GET /|GET]] |
+| /search?q={query} | XML, JSON | Keyword search to retrieve relevant ''Service'', ''SoapOperation'', ''ServiceProvider'', ''User'' and ''Registry'' resources. | [[public:api:endpoints#GET /search?q={query}|GET]] |
+| /lookup | N/A ((This depends on the resource that you are redirected to from /lookup.)) | A special API endpoint to find one particular resource based on some criteria. E.g.: this gets one specific ''SoapOperation'' - http://www.biocatalogue.org/lookup?wsdl_location=http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl&operation_name=streamContent | [[public:api:endpoints#GET /lookup|GET]] |
+| /services | XML, JSON, ATOM | ''Services'' index/collection resource. | [[public:api:endpoints#GET /services|GET]] |
+| /services/filters | XML, JSON | Filters that can be applied to the ''Services'' index. These include filters for categories, tags, countries, submitters and service providers. | [[public:api:endpoints#GET /services/filters|GET]] |
+| /services/{id} | XML, JSON | Details about a specific ''Service''. | [[public:api:endpoints#GET /services/{id}|GET]] |
+| /services/{id}/summary | XML, JSON | A metadata summary of a specific ''Service''. |  |
+| /services/{id}/deployments | XML, JSON | ''ServiceDeployment''s for a specific ''Service''. | [[public:api:endpoints#GET /services/{id}/deployments|GET]] |
+| /services/{id}/variants | XML, JSON | Variants (i.e.: SOAP and/or REST) for a specific ''Service''. | [[public:api:endpoints#GET /services/{id}/variants|GET]] |
+| /services/{id}/monitoring | XML, JSON | Monitoring details for a specific ''Service''. | [[public:api:endpoints#GET /services/{id}/monitoring|GET]] |
+| /services/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''Service''. | [[public:api:endpoints#GET /services/{id}/annotations|GET]] |
+| /service_deployments/{id} | XML, JSON | Details about a specific ''ServiceDeployment''. | [[public:api:endpoints#GET /service_deployments/{id}|GET]] |
+| /service_deployments/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''ServiceDeployment''. | [[public:api:endpoints#GET /service_deployments/{id}/annotations|GET]] |
+| /soap_services | XML, JSON | ''SoapServices'' index/collection resource. | [[public:api:endpoints#GET /soap_services |GET]], [[public:api:endpoints#POST /soap_services |POST]] |
+| /soap_services/wsdl_location | XML, JSON | A list of all the ''SoapService'' WSDL locations. | [[public:api:endpoints#GET /soap_services/wsdl_location|GET]] |
+| /soap_services/{id} | XML, JSON | Details about a specific ''SoapService'' variant. | [[public:api:endpoints#GET /soap_services/{id}|GET]] |
+| /soap_services/{id}/deployments | XML, JSON | ''ServiceDeployment''s running a specific ''SoapService'' variant. | [[public:api:endpoints#GET /soap_services/{id}/deployments|GET]] |
+| /soap_services/{id}/operations | XML, JSON | ''SoapOperation''s on a specific ''SoapService'' variant. | [[public:api:endpoints#GET /soap_services/{id}/operations|GET]] |
+| /soap_services/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''SoapService'' variant. | [[public:api:endpoints#GET /soap_services/{id}/annotations|GET]] |
+| /soap_operations | XML, JSON | ''SoapOperations'' index/collection resource. | [[public:api:endpoints#GET /soap_operations|GET]] |
+| /soap_operations/filters | XML, JSON | Filters that can be applied to the ''SoapOperations'' index. These include filters for tags on inputs and outputs. | [[public:api:endpoints#GET /soap_operations/filters|GET]] |
+| /soap_operations/{id} | XML, JSON | Details about a specific ''SoapOperation''. | [[public:api:endpoints#GET /soap_operations/{id}|GET]] |
+| /soap_operations/{id}/annotations | XML, JSON | ''Annotation''s on a specific  ''SoapOperation''.  | [[public:api:endpoints#GET /soap_operations/{id}/annotations|GET]] |
+| /soap_operations/{id}/inputs | XML, JSON | ''SoapInput''s for a particular  ''SoapOperation''.  | [[public:api:endpoints#GET /soap_operations/{id}/inputs|GET]] |
+| /soap_operations/{id}/outputs | XML, JSON | ''SoapOutput''s for a particular  ''SoapOperation''.  | [[public:api:endpoints#GET /soap_operations/{id}/outputs|GET]] |
+| /soap_inputs/{id} | XML, JSON | Details about a specific ''SoapInput''. | [[public:api:endpoints#GET /soap_inputs/{id}|GET]] |
+| /soap_inputs/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''SoapInput''. | [[public:api:endpoints#GET /soap_inputs/{id}/annotations|GET]] |
+| /soap_outputs/{id} | XML, JSON | Details about a specific ''SoapOutput''. | [[public:api:endpoints#GET /soap_outputs/{id}|GET]] |
+| /soap_outputs/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''SoapOutput''. | [[public:api:endpoints#GET /soap_outputs/{id}/annotations|GET]] |
+| /rest_services | XML, JSON | ''RestServices'' index/collection resource. | [[public:api:endpoints#GET /rest_services |GET]], [[public:api:endpoints#POST /rest_services | POST]] |
+| /rest_services/{id} | XML, JSON | Details about a specific ''RestService'' variant. | [[public:api:endpoints#GET /rest_services/{id}|GET]] |
+| /rest_services/{id}/deployments | XML, JSON | ''ServiceDeployment''s running a specific ''RestService'' variant. | [[public:api:endpoints#GET /rest_services/{id}/deployments|GET]] |
+| /rest_services/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''RestService'' variant. | [[public:api:endpoints#GET /rest_services/{id}/annotations|GET]] |
+| /rest_services/{id}/resources | XML, JSON | ''RestResources''s on a specific ''RestService'' variant. | [[public:api:endpoints#GET /rest_services/{id}/resources |GET]] |
+| /rest_services/{id}/methods | XML, JSON | ''RestMethods''s associated with this ''RestService'' variant.  **NB**: This is a convenience endpoint. | [[public:api:endpoints#GET /rest_services/{id}/resources |GET]] |
+| /rest_resources | XML, JSON | ''RestResources'' index/collection resource. | [[public:api:endpoints#GET /rest_resources|GET]] |
+| /rest_resources/{id} | XML, JSON | Details about a specific ''RestResource''. | [[public:api:endpoints#GET /rest_resources/{id}|GET]] |
+| /rest_resources/{id}/methods | XML, JSON | ''RestMethod''s on a specific ''RestResource''. | [[public:api:endpoints#GET /rest_resources/{id}/methods|GET]] |
+| /rest_resources/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''RestResource''. | [[public:api:endpoints#GET /rest_resources/{id}/annotations|GET]] |
+| /rest_methods | XML, JSON | ''RestMethods'' index/collection resource. | [[public:api:endpoints#GET /rest_methods |GET]] |
+| /rest_methods/filters | XML, JSON | Filters that can be applied to the ''RestMethods'' index. These include filters for tags on inputs and outputs. | [[public:api:endpoints#GET /rest_methods/filters|GET]] |
+| /rest_methods/{id} | XML, JSON | Details about a specific ''RestMethod''. | [[public:api:endpoints#GET /rest_methods/{id}|GET]] |
+| /rest_methods/{id}/annotations | XML, JSON | ''Annotation''s on a specific  ''RestMethod''.  | [[public:api:endpoints#GET /rest_methods/{id}/annotations|GET]] |
+| /rest_methods/{id}/inputs | XML, JSON | ''RestParameter''s and ''RestRepresentation''s that act as inputs on a specific  ''RestMethod''.  | [[public:api:endpoints#GET /rest_methods/{id}/inputs|GET]] |
+| /rest_methods/{id}/outputs | XML, JSON | ''RestParameter''s and ''RestRepresentation''s that act as outputs on a specific  ''RestMethod''.  | [[public:api:endpoints#GET /rest_methods/{id}/outputs|GET]] |
+| /rest_parameters/{id} | XML, JSON | Details about a specific ''RestParameter''. | [[public:api:endpoints#GET /rest_parameters/{id}|GET]] |
+| /rest_parameters/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''RestParameter''. | [[public:api:endpoints#GET /rest_parameters/{id}/annotations|GET]] |
+| /rest_representations/{id} | XML, JSON | Details about a specific ''RestRepresentation''. | [[public:api:endpoints#GET /rest_representations/{id}|GET]] |
+| /rest_representations/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''RestRepresentation''. | [[public:api:endpoints#GET /rest_representations/{id}/annotations|GET]] |
+| /service_tests/{id} | XML, JSON | Details about a specific ''ServiceTest''. | [[public:api:endpoints#GET /service_tests/{id}|GET]] |
+| /service_tests/{id}/results | XML, JSON | Monitoring ''TestResult''s for a specific ''ServiceTest''. | [[public:api:endpoints#GET /service_tests/{id}/results|GET]] |
+| /test_results | XML, JSON | ''TestResults'' index/collection resource. | [[public:api:endpoints#GET /test_results|GET]] |
+| /test_results/{id} | XML, JSON | Details about a specific monitoring ''TestResult''. | [[public:api:endpoints#GET /test_results/{id}|GET]] |
+| /categories | XML, JSON | ''Categories'' index/collection resource. | [[public:api:endpoints#GET /categories|GET]] |
+| /categories/{id} | XML, JSON | Details about a specific ''Category''. | [[public:api:endpoints#GET /categories/{id}|GET]] |
+| /categories/{id}/services | XML, JSON | ''Service''s for a specific ''Category''. I.e.: the ''Service''s that have been assigned a specified ''Category'' | [[public:api:endpoints#GET /categories/{id}/services|GET]] |
+| /tags | XML, JSON | ''Tags'' index/collection resource. Can be used to build tag clouds / lists. | [[public:api:endpoints#GET /tags|GET]] |
+| /tags/{tagname} | XML, JSON | Details about a specific ''Tag''. | [[public:api:endpoints#GET /tags/{tagname}|GET]] |
+| /tags/{tagname}?namespace={namespace} | XML, JSON | Details about a specific ''Tag'' that comes from a controlled vocabulary (currently only supports tags from the myGrid ontology). | [[public:api:endpoints#GET /tags/{tagname}?namespace={namespace}|GET]] |
+| /service_providers | XML, JSON | ''ServiceProviders'' index/collection resource. | [[public:api:endpoints#GET /service_providers|GET]] |
+| /service_providers/filters | XML, JSON | Filters that can be applied to the ''ServiceProviders'' index. | [[public:api:endpoints#GET /service_providers/filters|GET]] |
+| /service_providers/{id} | XML, JSON | Details about a specific ''ServiceProvider''. | [[public:api:endpoints#GET /service_providers/{id}|GET]] |
+| /service_providers/{id}/services | XML, JSON | ''Service''s that are provided by a specific ''ServiceProvider''. | [[public:api:endpoints#GET /service_providers/{id}/services|GET]] |
+| /service_providers/{id}/annotations | XML, JSON | ''Annotation''s on a specific ''ServiceProvider''. | [[public:api:endpoints#GET /service_providers/{id}/annotations|GET]] |
+| /service_providers/{id}/annotations_by | XML, JSON | ''Annotation''s by a specific ''ServiceProvider''. I.e.: the ''Annotation''s that have the ''ServiceProvider'' as the "source". | [[public:api:endpoints#GET /service_providers/{id}/annotations_by|GET]] |
+| /users | XML, JSON | ''Users'' index/collection resource. | [[public:api:endpoints#GET /users|GET]] |
+| /users/filters | XML, JSON | Filters that can be applied to the ''Users'' index. | [[public:api:endpoints#GET /users/filters|GET]] |
+| /users/{id} | XML, JSON | Details about a specific ''User'' (aka "member"). | [[public:api:endpoints#GET /users/{id}|GET]] |
+| /users/{id}/services | XML, JSON | ''Service''s submitted by a specific ''User''. | [[public:api:endpoints#GET /users/{id}/services|GET]] |
+| /users/{id}/annotations_by | XML, JSON | ''Annotation''s by a specific ''User''. | [[public:api:endpoints#GET /users/{id}/annotations|GET]] |
+| /registries | XML, JSON | ''Registries'' index/collection resource (other registries that the BioCatalogue sources services and annotations from). | [[public:api:endpoints#GET /registries|GET]] |
+| /registries/{id} | XML, JSON | Details about a specific ''Registry''. | [[public:api:endpoints#GET /registries/{id}|GET]] |
+| /registries/{id}/services | XML, JSON | ''Service''s sourced from a specific ''Registry''. | [[public:api:endpoints#GET /registries/{id}/services|GET]] |
+| /registries/{id}/annotations_by | XML, JSON | ''Annotation''s sourced from a specific ''Registry''. | [[public:api:endpoints#GET /registries/{id}/annotations_by|GET]] |
+| /agents | XML, JSON | ''Agents'' index/collection resource. | [[public:api:endpoints#GET /agents|GET]] |
+| /agents/{id} | XML, JSON | Details about a specific ''Agent''. | [[public:api:endpoints#GET /agents/{id}|GET]] |
+| /agents/{id}/annotations_by | XML, JSON | ''Annotation''s by a specific ''Agent''. | [[public:api:endpoints#GET /agents/{id}/annotations_by|GET]] |
+| /annotation_attributes | XML, JSON | ''AnnotationAttributes'' index/collection resource. | [[public:api:endpoints#GET /annotation_attributes|GET]] |
+| /annotation_attributes/{id} | XML, JSON | Details about a specific ''AnnotationAttribute''. | [[public:api:endpoints#GET /annotation_attributes/{id}|GET]] |
+| /annotation_attributes/{id}/annotations | XML, JSON | ''Annotation''s that have the specified ''AnnotationAttribute''. | [[public:api:endpoints#GET /annotation_attributes/{id}/annotations|GET]] |
+| /annotations | XML, JSON | ''Annotations'' index/collection resource. | [[public:api:endpoints#GET /annotations|GET]] |
+| /annotations/bulk_create | JSON | Submission of multiple ''Annotation'' resources. | [[public:api:endpoint#POST /annotations/bulk_create|POST]] |
+| /annotations/filters | XML, JSON | Filters that can be applied to the ''Annotations'' index. These include filters for the sources and attributes. | [[public:api:endpoints#GET /annotations/filters|GET]] |
+| /annotations/{id} | XML, JSON | Details about a specific ''Annotation''. | [[public:api:endpoints#GET /annotations/{id}|GET]] |
+
+===== XML vs JSON Outputs =====
+
+<html>
+<div class="box_important">
+<b>Note</b>: JSON outputs are only available for <code>Annotations</code> and <code>AnnotationAttributes</code> at the moment. See the <a href="http://www.biocatalogue.org/wiki/doku.php?id=public:api:coverage" class="wikilink1">API coverage page</a> for more information.
+</div>
+</html>
+
+
+^ XML ^ JSON ^
+| More heavyweight | More lightweight |
+| Verbose markup-based outputs | Leaner hash-like outputs |
+| All outputs are defined in a schema ([[http://www.biocatalogue.org/2009/xml/rest/schema-v1.xsd|link]]) | No official schema for outputs |
+| More descriptive outputs | Minimum required outputs |
+| Collection resources have extra information about the results (like parameters, statistics and related links) | Collection resources only have the results |
+| Contains links to additional "related" resources as well as the associated resources | Links to the only the essential associated resources |
+===== Commonalities =====
+
+
+==== Index Resources XML Structure ====
+
+The XML output for all index/collection resources have the following structure:
+
+<code xml>
+<resource>
+  <parameters>...</parameters>
+  <statistics>...</statistics>
+  <results>...</results>
+  <related>...</related>
+</resource>
+</code>
+
+This allows for additional information to be present, to aid consistency and manageability of the outputs, as well discoverability of further associated resources.
+
+==== Index Resources JSON Structure ====
+
+The JSON output for all index/collection resources have the following structure:
+
+<code javascript>
+{
+  'resource' : {
+    'per_page' : ... ,
+    'current_page' : ... ,
+    'pages' : ... ,
+    'total' : ... ,
+    'search_query' : ... ,
+    'results' : [ 
+      {
+        'resource_property_x' : ...,
+        'resource_property_y' : ...,
+        'resource_property_z' : ...,
+        ...
+      },
+      ...
+    ]
+  }
+}
+</code>
+
+This allows for key information to be present, to aid consistency and manageability of the outputs.
+
+These index/collection resources will contain the following properties:
+
+  * ''per_page'' - the number of result items to show per page..
+  * ''current_page'' - the current page being viewed.
+  * ''pages'' - the total number of pages of results.
+  * ''total'' - the total number of items of that resource type found for that particular resource call.
+  * ''search_query'' - the search query applied where applicable.
+  * ''results'' - the list of result items found for that particular resource call.
+
+==== <related> Section ====
+
+The majority of the XML outputs have a ''<related>'' section with links to other associated resources.
+
+In the case of index/collection resources (like /services) there will be a ''<related>'' section for associated links/resources to the index/collection, and usually there will also be individual ''<related>'' sections for the resources mentioned in the ''<results>''. 
+
+
+==== <statistics> Section in Index Resources ====
+
+The ''<statistics>'' section within index/collection resources will usually contain at least the following:
+
+  * ''<pages>'' - the total number of pages of results.
+  * ''<results>'' - the total number of result items found for that particular resource call.
+  * ''<total>'' - the total number of items of that resource type available in the system. Note that this is only shown for index/collection resources that are about a single resource type (e.g.: /services but NOT /search). 
+
+This allows you to get information like "1585 out of 1628 services are SOAP based services" from a filtered /services index.
+
+
+==== Reuse Index Resources for Sub-Collections ====
+
+Whenever possible, sub-collections on a resource take you to a filtered index/collection resource.
+
+For example: 
+
+http://www.biocatalogue.org/services/1928/annotations.xml (the ''Annotation''s on the ''Service'' with ID 1928) 
+
+... will redirect you to http://www.biocatalogue.org/annotations.xml?as=%5b1928%5d
+
+This means that client code only needs to be able to parse the index resource and be aware of filtering, in order to handle the majority of sub-collections.
+
+
+==== 'urlKey' and 'urlValue' Attributes ====
+
+In places, you will see the presence of ''urlKey'' and ''urlValue'' attributes. These specify what URL query parameters can be used (or have been used, in the case of ''<parameters>'') on the resource that the output is about.
+
+Note that for [[public:api#filtering]], ''urlValue'' should be used in a different way (more information about this below).
+==== Pagination ====
+
+All index/collection resources are **//paged//** by default, meaning that the whole result set is split into pages of a certain size and only one page is returned at a time. Subsequent pages can then be accessed by new requests. 
+
+In order to assist with pagination, the XML outputs provide:
+  * Current ''<page>'' and ''<pageSize>'' values, within the ''<parameters>'' section (together with what ''urlKey'' to use for the query parameters).
+  * ''<pages>'' value, within the ''<statistics>'' section.
+  * ''<previous>'' and ''<next>'' links (where applicable), within the ''<related>'' section.
+
+In JSON, the following elements are available:
+  * ''per_page''
+  * ''current_page''
+  * ''pages''
+
+The relevant URL query parameters are:
+
+^ Parameter Name ^ Description ^
+| ''page'' | The page number required |
+| ''per_page'' | The  page size to output (number of items per page). Default maximum page size is: 50 |
+
+So for example, the following URL gets the 5th page of the ''Services'' index and asks for 20 items per page:
+
+http://www.biocatalogue.org/services.xml?page=5&per_page=20
+http://www.biocatalogue.org/services.json?page=5&per_page=20
+
+==== Sorting ====
+
+Most of the index/collection resources allow for sorting of the results.
+
+^ Parameter Name ^ Description ^
+| ''sort_by'' | The criteria by which to sort |
+| ''sort_order'' | The order in which to perform the search ('asc' or 'desc') |
+
+==== 'include' Parameter ====
+
+The ''include'' URL query parameter can be used to include certain sub-sections of data, that are not normally shown, within the outputs.
+
+This works in two different ways depending on the type of resource:
+  - For index/collection resources, ''include'' acts on the resources returned within the ''<results>'' section. 
+    * For example, http://www.biocatalogue.org/services.xml?include=summary would give you back the first page of the ''Services'' index with the ''<summary>'' sections included for each ''<service>'' within ''<results>''.
+  - For single resources, ''include'' just includes the specified sub-section(s). 
+    * For example, http://www.biocatalogue.org/services/4.xml?include=summary would give the ''Service'' resource with it's ''<summary>'' sub-section also included.
+
+To include multiple sub-sections, separate out the names with commas. E.g.:
+
+http://www.biocatalogue.org/services/4.xml?include=summary,monitoring
+
+To include **all** possible sub-sections, use ''include=all''. E.g.:
+
+http://www.biocatalogue.org/services/4.xml?include=all
+==== Filtering ====
+
+The structure of Filters (i.e.: the ''<filters>'' top level resource and ''<filters>'' in ''<parameters>'' have the following structure:
+
+<code xml>
+<filters>
+  <group>
+    <type>
+      <filter>...
+      <filter>...
+      ...
+    </type>
+    ...
+  </group>
+  ...
+</filters>
+</code>
+
+When combining filters, the following logic applies:
+
+  * all ''<filter>'' within a ''<type>'' are **OR'ed**
+  * all ''<type>'' within a ''<group>'' are **OR'ed**
+  * all ''<group>'' are **AND'ed**
+
+**NB**: All filtered indexes allow for allow for query based filtering via the ''q'' query parameter:
+  * GET /services?q={query}
+  * GET /soap_operations?q={query}
+  * GET /rest_methods?q={query}
+  * GET /users?q={query}
+  * GET /service_providers?q={query}
+
+
+===== Error Responses =====
+
+Errors in API calls will result in a response with an appropriate [[http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html|HTTP/1.1 Status Code]].
+
+The following table shows the relevant status codes:
+
+^ HTTP Status Code ^ Reason ^
+| [[http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5|404]] | Resource not found. |
+| [[http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4|403]] | Not authorised to perform that request. May meed authentication. |
+| [[http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7|406]] | Not acceptable. This is usually used for endpoints and content types that are not implemented / not available yet. |
+| [[http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.4|503]] | Service unavailable. |
+| [[http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1|500]] | An unknown/unexpected error has occurred. |
+| [[http://www.zvon.org/tmRFC/RFC2518/Output/chapter10.html#sub3|422]]     | Unprocessable entity. This code is used in response to POST requests to indicate that the request was well-formed, but a semantic error prevented it from being fulfilled e.g. a required field was blank.|
+
+Wherever possible, the body of an error response will contain an ''Errors'' structure like below, to provide more information on the error(s) raised:
+
+<code xml>
+<errors>
+<error>Error message</error>
+<error>...</error>
+</errors>
+</code>
+
+
+===== Example Usage =====
+
+==== Curl ====
+
+You can use a command line tool like [[http://curl.haxx.se/|curl]] to quickly test out API endpoints:
+
+  curl -i -H "Accept: application/xml" http://www.biocatalogue.org/services.xml
+==== Ruby ====
+
+=== OAuth and JSON ===
+
+Below is an example of how to access JSON endpoints in a [[http://www.ruby-lang.org/en/|Ruby]] script/application using **OAuth**...
+
+Firstly, [[http://www.biocatalogue.org/oauth_clients/new|register your application]] on the BioCatalogue website.  Please note your **consumer key** and **consumer secret** as these will be required by your application/script.
+
+Then, install the JSON and OAuth gems:
+
+  gem install json oauth
+
+After this, you can then use code like:
+
+<code ruby>
+
+require 'rubygems'
+require 'oauth'
+require "json/ext"
+
+key = "..." # get your consumer key from the BioCatalogue
+secret = "..." # get your consumer key from the BioCatalogue
+
+site = "http://www.biocatalogue.org"
+
+# ===== the tedious one time setup ===== #
+
+# the first time you use OAuth, you will need to get an access token; you only need to do this once
+consumer = OAuth::Consumer.new(key, secret, { :site => site })
+request_token = consumer.get_request_token
+
+# the user needs to ask users to allow you application/script to access their BioCatalogue content
+# after authorisation the user will receive a token which your application/script needs for the next step! make sure you have a way to capture this token :-)
+request_token.authorize_url # point your browser to this URL
+...
+
+# :oauth_verifier is the key that was provided to the user in the last step
+access_token = request_token.get_access_token(:oauth_verifier => "...")
+
+# store your access token (access_token)
+...
+
+# in future, all you need to do is recall your access token and you are ready to go :-)
+
+# =======================================#
+
+response = access_token.get(site + '/users/738.json')
+json_doc = JSON.parse(response.body)
+
+# Do some stuff with the JSON document (json_doc)
+name = json_doc["user"]["name"]
+
+# Do some other stuff with the JSON document (json_doc)
+...
+
+</code>
+
+=== JSON ===
+
+Below is an example of how to access JSON endpoints in a [[http://www.ruby-lang.org/en/|Ruby]] script/application...
+
+First, install the JSON gem:
+
+  gem install json
+
+Then you can use code like:
+
+<code ruby>
+
+# Require the necessary components
+require 'rubygems'
+require 'open-uri'
+require 'json/ext'
+
+# Set up the endpoint URL you want to access
+endpoint_url = "http://www.biocatalogue.org/services"
+
+# Set up an informative HTTP USER AGENT
+http_user_agent = "My test script; Ruby/#{RUBY_VERSION}" "MyTestScript/1.0 (X11; U; Linux x86_64; en-US) Ruby/#{RUBY_VERSION}"
+
+# Fetch and parse the JSON document
+json = open(endpoint_url, "Accept" => "application/json", "User-Agent" => http_user_agent).read
+document = JSON(json)
+
+puts "The #{document['services']['per_page']} latest results provided by '#{endpoint_url}' are:"
+
+document['services']['results'].each { |service|
+  # Do some stuff with the object
+  ...
+}
+
+# Do some other stuff with the JSON document
+...
+
+</code>
+
+
+
+=== XML ===
+
+Below is an example of how to access XML endpoints in a [[http://www.ruby-lang.org/en/|Ruby]] script/app...
+
+First, install the libxml gem:
+
+  gem install libxml-ruby
+
+Then you can use code like:
+
+<code ruby>
+
+# Require the necessary components
+require 'rubygems'
+require 'open-uri'
+require 'libxml'
+
+include LibXML
+
+# Set up the endpoint URL you want to access
+endpoint_url = "http://www.biocatalogue.org/services"
+
+# Set up an informative HTTP USER AGENT
+http_user_agent = "My test script; Ruby/#{RUBY_VERSION}" "MyTestScript/1.0 (X11; U; Linux x86_64; en-US) Ruby/#{RUBY_VERSION}"
+
+# Fetch and parse the XML document
+xml = open(endpoint_url, "Accept" => "application/xml", "User-Agent" => http_user_agent).read
+document = XML::Document.string(xml)
+
+# Validate the output against the schema
+schema = XML::Schema.new(SCHEMA_FILE_PATH)
+is_valid = document.validate_schema(schema) do |message,flag|
+  puts "\n#{(flag ? 'ERROR' : 'WARNING')}: #{message}"
+end
+puts "\nValid output? #{is_valid}\n"
+
+# Do some other stuff with the XML document
+...
+
+</code>
+
+==== In Java ====
+
+Download this {{:public:using_biocatalogue_api_in_java.pdf|document}} to get detailed usage information on calling and using the BioCatalogue API in Java. This includes instructions on using XmlBeans to automatically generate the API binding classes from the XSD, which removes the need to manually parse the XML files yourself. 
+
+This document is authored by **Sergejs Aleksejevs** (who is building the BioCatalogue plugin for Taverna).
+===== Projects =====
+
+The following projects currently make use of the BioCatalogue API:
+
+  * An alpha version BioCatalogue plugin for **Taverna** has been released. See the [[http://www.taverna.org.uk/documentation/taverna-plugins/taverna-2-x-plugins/|Taverna plugins page]] for more info.
+  * The BioCatalogue official iOS application. See the [[http://github.com/myGrid/BioCatalogue-iOS|github page]] for more information.
+  * The **[[http://www.ncri-onix.org.uk/portal/#S1|ONIX Portal]]** by the NCRI harvests all the information about web services from the BioCatalogue and makes it searchable and browsable.
+  * We are currently integrating BioCatalogue into **[[http://www.myexperiment.org|myExperiment]]** by harvesting the service data and making them searchable and viewable in myExperiment. Also, linking workflows with services.
+  * An alpha version application for mass curation. See the [[http://github.com/myGrid/BioCatalogue-Mass-Curator|Mass Curator github page]] for more information.
+  * The BioCatalogue iPhone app developed by Emory University.
+  
+
+===== API Coverage =====
+
+The [[public:api:coverage|API coverage page]] details current and planned API coverage.
+
+===== Credits =====
+
+The BioCatalogue API is being actively development and maintained by:
+
+  * Jiten Bhagat (Jits)
+  * Mannie Tagarira
+
+===== Acknowledgements =====
+
+A number of people have helped drive the requirements and design of the BioCatalogue API. In particular:
+
+  * Sergejs Aleksejevs
+  * Stian Soiland-Reyes
+  * The NCRI ONIX team
+  * The myExperiment Team

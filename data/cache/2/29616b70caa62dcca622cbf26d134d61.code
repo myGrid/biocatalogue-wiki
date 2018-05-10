@@ -1,0 +1,28 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;service_deployment&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/service_deployments/4&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;provided_variant&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;WSDBFetchServerLegacyService&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;submitter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/users/26&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;documentation_url&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.ebi.ac.uk/Tools/webservices/services/dbfetch&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_services/4&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;wsdl_location&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.ebi.ac.uk/Tools/webservices/wsdl/WSDbfetch.wsdl&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;WSDbfetch: Database entry retrieval using entry identifiers (see http://www.ebi.ac.uk/Tools/webservices/services/dbfetch)&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;created_at&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2008-11-14T12:05:15Z&quot;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+        <span class="st0">&quot;submitter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/users/26&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;provider&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;European Bioinformatics Institute (EBI)&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/service_providers/1&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;The European Bioinformatics Institute (EBI) is a non-profit academic organisation that forms part of the European Molecular Biology Laboratory (EMBL) ( http://www.embl.org/).<span class="es0">\n</span>The EBI is a centre for research and services in bioinformatics. The Institute manages databases of biological data including nucleic acid, protein sequences and macromolecular structures.&quot;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+        <span class="st0">&quot;location&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;country_code&quot;</span><span class="sy0">:</span> <span class="st0">&quot;GB&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;city&quot;</span><span class="sy0">:</span> <span class="kw2">null</span><span class="sy0">,</span>
+            <span class="st0">&quot;country&quot;</span><span class="sy0">:</span> <span class="st0">&quot;United Kingdom&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;flag&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/images/flags/gb.png&quot;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+        <span class="st0">&quot;created_at&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2008-11-14T12:05:19Z&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;endpoint&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.ebi.ac.uk/ws/services/WSDbfetch&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

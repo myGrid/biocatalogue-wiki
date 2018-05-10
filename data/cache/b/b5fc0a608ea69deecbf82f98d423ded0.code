@@ -1,0 +1,9 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;soap_output&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;computational_type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;impl:ArrayOf_xsd_string&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;getSupportedDBsReturn&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_outputs/13&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;Returns format names. &quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;created_at&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2008-11-14T12:05:17Z&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

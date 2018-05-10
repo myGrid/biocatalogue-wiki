@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue public</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2009-08-25T15:40:07+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:faq&amp;rev=1244460245&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1226916118&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:getinvolved&amp;rev=1246355336&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:news&amp;rev=1231954618&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:pilot&amp;rev=1241016281&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:publication_list&amp;rev=1232365941&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:related_links&amp;rev=1225815881&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap&amp;rev=1247482215&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:team&amp;rev=1244210128&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:faq&amp;rev=1244460245&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-08T12:24:05+01:00</dc:date>
+        <title>public:faq</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:faq&amp;rev=1244460245&amp;do=diff</link>
+        <description>1. Why the BioCatalogue?
+
+
+While biologists and Bioinformaticians find the use of web services critical for their work, they also encounter a number of difficulties associated with the current state of many services and the access to these services. These problems include:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1226916118&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-17T10:01:58+01:00</dc:date>
+        <title>public:friends</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1226916118&amp;do=diff</link>
+        <description>The following projects and consortia are actively collaborating with the BioCatalogue project:
+
+
+	*  myExperiment (&lt;http://www.myexperiment.org&gt;) is a popular, JISC-funded, Virtual Research Environment focusing on scientific social networking, social content-sourcing and social curation for scientific workflows and other, increasingly, scientific protocols. The project is a joint venture between the Universities of Manchester (Carole Goble) and Southampton (David De Roure). myExperiment is the i…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:getinvolved&amp;rev=1246355336&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-30T10:48:56+01:00</dc:date>
+        <title>public:getinvolved</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:getinvolved&amp;rev=1246355336&amp;do=diff</link>
+        <description>To Get Involved
+
+
+To be kept up-to-date of the development of the BioCatalogue, please join the BioCatalogue mailing list: 
+
+BioCatalogue-Friends Mailing List</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T15:02:34+01:00</dc:date>
+        <title>public:howto</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff</link>
+        <description>How to submit a soaplab service to the BioCatalogue?
+
+How to submit a SOAP service to BioCatalogue?
+
+How to add descriptions to web services in the BioCatalogue?</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:news&amp;rev=1231954618&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-14T17:36:58+01:00</dc:date>
+        <title>public:news</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:news&amp;rev=1231954618&amp;do=diff</link>
+        <description>As we are trying hard to engage with the service providers as well as the consumer communities, we have traveled around the globe to promote our cause. We have been present at these following major events and plan more in the near future:
+
+
+	*  Carole Goble presented Biocatalogue: A Curated Web Service Registry for the Life Science Community at the IEEE and Microsoft e-Science conference 2008, Indianapolis, USA (December 2008). 
+		* Slides: [Powerpoint 97-2003] or [PDF]</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:pilot&amp;rev=1241016281&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-29T15:44:41+01:00</dc:date>
+        <title>public:pilot</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:pilot&amp;rev=1241016281&amp;do=diff</link>
+        <description>The BioCatalogue team has released his first public beta. The BioCatalogue beta has the following features: 
+
+
+
+BioCatalogue beta....
+
+	*  supports user registration and user profiles for both regular users and service providers. 
+
+	*  Supports registration for SOAP, REST and soaplab services.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:publication_list&amp;rev=1232365941&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-19T11:52:21+01:00</dc:date>
+        <title>public:publication_list</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:publication_list&amp;rev=1232365941&amp;do=diff</link>
+        <description>1-Goble CA and De Roure D Curating Scientific Web Services and Workflows EDUCAUSE Review, vol. 43, no. 5 (September/October 2008)&lt;http://eprints.ecs.soton.ac.uk/16561/&gt;
+
+2-Goble CA, Stevens RD, Hull D, Wolstencroft K, Lopez R Data Curation + Process Curation = Data Integration + Science, Briefings in Bioinformatics, 2008 &lt;http://bib.oxfordjournals.org/cgi/content/short/bbn034v1?rss=1&gt;</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:related_links&amp;rev=1225815881&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-04T16:24:41+01:00</dc:date>
+        <title>public:related_links</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:related_links&amp;rev=1225815881&amp;do=diff</link>
+        <description>*  The Bioinformatics Links Directory (&lt;http://www.bioinformatics.ca/links_directory/&gt;) does not describe or invoke the services but is a useful source for the catalogue. 
+
+	*  MIBBI (&lt;http://www.mibbi.org/&gt;) is a registry of scientific experiment reporting guidelines with the idea to foster a foundry of best practice to further develop and encourage modular development and re-use of reporting guidelines.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap&amp;rev=1247482215&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-07-13T11:50:15+01:00</dc:date>
+        <title>public:roadmap</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap&amp;rev=1247482215&amp;do=diff</link>
+        <description>Please note that the time scales listed are estimated. New requirements and changes driven by the user communities may affect features, delivery dates and schedule. 
+
+
+
+
+
+First quarter of 2009 (Jan - Mar)
+
+	*  Private pilot (private beta) - Basic SOAP services registration, discovery and annotation. Batch upload of soaplab services.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:team&amp;rev=1244210128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-05T14:55:28+01:00</dc:date>
+        <title>public:team</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:team&amp;rev=1244210128&amp;do=diff</link>
+        <description>*  Carole Goble: Project lead, Manchester.
+	*  Rodrigo Lopez: Project lead, EBI. 
+	*  Hamish McWilliam: Service manager, EBI. 
+	*  Thomas Laurent: Software engineer, EBI.
+	*  Eric Nzuobontane: Software engineer, EBI.
+	*  Jiten Bhagat: Software engineer, Manchester.
+	*  Franck Tanoh: Bioinformatician and curator, Manchester.
+	*  Katy Wolstencroft: Bioinformatician, Manchester.</description>
+    </item>
+</rdf:RDF>

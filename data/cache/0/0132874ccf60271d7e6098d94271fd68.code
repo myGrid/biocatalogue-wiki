@@ -1,0 +1,30 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;registries</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Registries&quot;</span> ... <span class="re0">xmlns:dcterms</span>=<span class="st0">&quot;http://purl.org/dc/terms/&quot;</span><span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sortBy</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort_by&quot;</span> <span class="re0">urlValue</span>=<span class="st0">&quot;created&quot;</span><span class="re2">&gt;</span></span>Created at date<span class="sc3"><span class="re1">&lt;/sortBy<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sortOrder</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort_order&quot;</span> <span class="re0">urlValue</span>=<span class="st0">&quot;desc&quot;</span><span class="re2">&gt;</span></span>Descending<span class="sc3"><span class="re1">&lt;/sortOrder<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;page</span> <span class="re0">urlKey</span>=<span class="st0">&quot;page&quot;</span><span class="re2">&gt;</span></span>1<span class="sc3"><span class="re1">&lt;/page<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pageSize</span> <span class="re0">urlKey</span>=<span class="st0">&quot;per_page&quot;</span><span class="re2">&gt;</span></span>10<span class="sc3"><span class="re1">&lt;/pageSize<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>3<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>3<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;registry</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Registry&quot;</span> ... <span class="re0">xlink:title</span>=<span class="st0">&quot;Registry - The EMBRACE Registry&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Registry - The EMBRACE Registry<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>The EMBRACE Registry<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;dc:description<span class="re2">&gt;</span></span><span class="re1">&lt;/dc:description<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;homepage<span class="re2">&gt;</span></span></span>http://www.embraceregistry.net/<span class="sc3"><span class="re1">&lt;/homepage<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2009-06-26T10:58:15Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;annotationsBy</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Annotations&quot;</span> ...<span class="re2">/&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;services</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Services&quot;</span> ...<span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/registry<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/registries<span class="re2">&gt;</span></span></span>

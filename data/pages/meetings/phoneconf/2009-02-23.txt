@@ -1,0 +1,91 @@
+Date: Monday 23th Feb 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending ===== 
+
+**Manchester:** Franck, Carole, Steve
+
+**Malawi:** Jits
+
+**EBI:** Eric
+
+
+
+===== Apologies =====
+
+
+Thomas, Rodrigo
+
+====== Agenda ======
+
+   * Actions from the last telcon
+   * Possible collaboration with Microsoft-meeting with Rudy
+   * Report from meeting with QBIOS team
+   * BioCatalogue plan revision- are we all ok with that? 
+   * [[ http://demo.service-finder.eu/index |Service Finder]]- what can we learn from?  
+
+  * Progress/developement of the pilot 
+    * Test infrastructure setup at EBI
+    * 20 questions analysis [[development:20_questions|20 Questions]]
+    * Summary of tasks on rubyForge and who they are allocated to. 
+    * BioCatalogue support review
+
+  * AOB 
+    * meeting dates moved to Mondays 3-4pm 
+    * [[http://projects.eml.org/sdbv/events/BiocurationMeeting/index.html|Biocuration]] meeting 16-19 april 
+    * BioCatalogue at ISMB!!!
+    * Advisory board
+  
+  
+
+===== Actions from Previous Meeting ===== 
+
+  * Jits/Thomas/Eric: create developer section on the wiki **droped**
+  * Franck: start an FAQ on the wiki **ongoing**
+  
+
+====== Minutes ======
+There is a possible collaboration with Microsoft. Carole, Rodrigo and Rudy will have a meeting in about 2 weeks time. 3 things we should take into account for the collaboration: 
+  - can we handle success ... imagine industries submitting 1000s of 1000s of services
+  - what are EBI policies on such collaboration? 
+  - what help do we need? 
+
+Service Finder has a good interface we can learn from. The main difference between this registry and BioCatalogue should be the quality of our service monitor and the quality of the annotation. Carole insisted on that. 
+
+Service monitor test going well according to Eric
+
+20 questions, Franck to look for patterns in the current 50 questions. Steve pointed out that some of the questions are similar.
+
+Franck is going to the biocuration workshop. He will prepare a poster for that event. 
+
+ISMB: who at the EBI is going? Carole and Katy will go. Carole will skip glastonbury festivals this year in order to go...:-( \\
+Franck will submit an abstract for a poster presentation. 
+
+Carole to take some time to prepare the advisory board. she also pointed out that we are out of money for travelling so we should 'travel cheap' whenever possible...no first class ticket, no luxury hotels etc.  
+
+===== New Actions =====
+
+  * Carole/Steve: to look into hiring a summer student for BioCatalogue
+  * Franck submit a abstract for poster presentation at ISMB 2009
+
+
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+  * There will be a demo at the Strategic Advisory Board Meeting in February
+ 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-02-03|Phone Conference Meeting on Feb 03 2009]] 
+
+Next meeting:

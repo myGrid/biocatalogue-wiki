@@ -1,0 +1,6 @@
+The BioCatalogue team at EBI shares file like application logs and db dumps with the team at Manchester using dropbox. \\
+Dropbox credentials\\
+
+email : contact@biocatalogue.org\\
+
+password: bi0cat\\

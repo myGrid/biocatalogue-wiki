@@ -1,0 +1,118 @@
+Date: <del>Monday 06th July 2009</del> Wednesday 08th July 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503011
+===== Attending ===== 
+
+**Manchester:** Jits, Franck, Carole
+
+
+**EBI:** 
+Rodrigo, Thomas, Eric
+
+
+===== Apologies =====
+
+===== Minuting =====
+
+====== Agenda ======
+
+**Well done everyone for the successful launch at ISMB !** 
+
+  * Actions from the last telcon
+  * feedback from ISMB 
+  * Priorities after ISMB- what next? 
+  * CLA and governance model for contributions from external entities (Jits)
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Eric report on the detailed results of load and throughput testings including peak and average cases
+
+
+====== Minutes ======
+
+=== feedback from ISMB ===
+ISMB was a great success. The demo was well received. The poster was unofficially the best.\\
+**General comments:** \\
+People want to programmatically access the BioCatalogue => need of APIs \\
+A lot of interest in hosting a stand alone catalogue for an organisation or company. \\ 
+Rodrigo: Service providers seem to turn back to SOAP\\
+
+ 
+
+==== work package priority ====
+
+**Developement**
+  - BioCatalogue API 
+  - Consolidation activities: code consolidation
+  - Admin task: service update, delete
+  - service version support
+  - Curation tools 
+  
+**Content and curation**
+  - Embrace registry import
+  - Soaplab better support
+  - BioMoby better support
+  - REST better support
+  - DAS support
+  - Service ownership and management  
+  - Functional unit
+  - SKOS integration 
+
+**Monitoring** 
+  - Ongoing load testing
+  - Service testing and monitoring 
+  
+  
+
+
+
+
+
+
+  
+  
+
+
+
+===== New actions =====
+  * All: find a date for the next face 2 face in September (Sustainability plan of the BioCatalogue to be added to the agenda) 
+  * Carole, Rodrigo to submit a proposal BioCatalogue related to BBSRC
+  * Carole: send on the list the term classification she came across a healthgrid.
+  * Jits: CLA proposal based on the Taverna one. Can reuse the myExperiment one.  
+  * Thomas/Franck: look into how we can encourage services providers, users to submit their services. 
+  * Eric: come up with a proposal for service testing
+  * Eric: talk to Francois (the french team) about their service monitoring improvements.  
+  * Franck: create a page on the wiki for outreach
+  * Franck: Marketing of the catalogue (blogs, content curation, google feed…)
+
+
+
+
+
+
+
+
+
+ 
+
+
+===== Upcoming Meetings =====  
+
+[[http://www.cs.manchester.ac.uk/DILS09/|DILS 2009]]
+
+===== AOB =====
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-06-22|Phone Conference Meeting on June 22 2009]]
+
+Next meeting: 

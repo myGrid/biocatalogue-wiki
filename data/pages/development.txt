@@ -1,0 +1,97 @@
+<html>
+<div class="box_important">
+<b>Please note:</b> the majority of the pages here are a <b>work in progress</b> and/or rough notes. We will be improving the quality and breadth of these over time. If you would like any clarification on anything here please join the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a> and post your question there. Or <a href="http://www.biocatalogue.org/contact" target="_blank">contact us</a>.
+</div>
+</html>
+
+====== BioCatalogue Development Pages ======
+
+  * [[Development:Handover_2011|Handover (Aug-Sep 2011)]]
+
+  * [[Development:Installation|Installing the BioCatalogue system]]
+
+===== From Public Wiki =====
+
+  * [[Public:For Developers|For Developers]]
+  * [[Public:API|REST API documentation]]
+  * [[Public:Help|Help Pages]]
+
+===== Apps =====
+
+  * [[Public:Apps:Mass Curator|BioCatalogue Mass Curator]]
+  * [[Public:Apps:iPad|iPad App]]
+
+===== Pilot =====
+==== Requirements ====
+
+  * [[Development: Requirements for Pilot|Requirements (for Oct '08)]]
+  * [[Development: Requirements for Pilot 2|Revised Requirements (for Apr '09)]]
+  * [[Development: Content Requirements for Pilot]]
+  * [[Development: nonfunctionalrequirements_pilot|Expected performance, scalability, support and so on for the Pilot]]
+  * [[Development:Capabilities of the Embrace Catalogue|Embrace Registry Capabilities]]
+  * [[Development:20_questions|20 Questions]]
+  * [[Development:API_requirements|REST API Requirements]]  
+ 
+==== Other ====
+
+  * [[Development: Glossary]]
+  * [[Development:pilot_dev_planning|Planning]]
+  * [[Development: data_model_pilot|Rails/DB Data Model for Pilot]]
+  * [[Development:eval_strategy_pilot|Evaluation strategy for the pilot]]
+  * [[Development:Feature List for Pilot]]
+  * [[Development:BioCatalogue Terms of Use]]
+  * [[Development:Service Testing|Service Testing and Monitoring ]]
+  * [[Development:HowTo|Soaplab]]
+  
+===== Developer Notes =====
+
+  * [[Development: Codebase Guidelines]]
+  * [[Development: Pilot Dev Notes|Accounts & Passwords]]
+  * [[Development: System Architecture]]
+  * [[Development: Background Processing]]
+  * [[Development: Caching]]
+  * [[Development: Application Load Testing]]
+  * [[Development:pseudo_synonyms_search|Pseudo-Synonyms for Search]]
+  * [[Development:codebase_testing|Codebase Testing]]
+  * [[Development:wsdl_parsing|WSDL Parsing]]
+  * [[Development:testscripts_in_biocatalogue| Test Scripts in BioCatalogue]]
+  * [[Development:release_notes|Release Notes]]
+  * [[Development:jan2010_code_integration|January 2010 Code Integration]]
+  * [[Development:service_responsibility|Taking Responsibility for a Service]]
+  * [[Development:service_states|Service Life Cycle States]]
+  * [[Development:system_testing|System(User) Testing]]
+  * [[Development:server_configuration|Server Configuration]]
+  
+
+===== Reusable Components Developed =====
+
+   * [[Development:Annotations|Annotations Plugin]]
+   * [[Development:Favourites_Plugin|Favourites Plugin]]
+
+===== Feedback  =====
+   * [[Development:PALs feedback]]
+   * [[Development:Users feedback]]
+
+===== Annotations ======
+  * [[Development:Annotation|Annotations Model]]
+  * [[development:software_development:Annotation models|Annotation Levels (OLD)]]
+  * [[Development:Useful links]]
+  * [[Development:Content curation roadmap]]
+===== Other / Unsorted ======
+
+  * [[Development:Software Development]]
+  * [[Development:Stories]]
+  * [[Development:Best Practices]]
+  * [[Development: Users requirement stories]]
+  * [[Development: myExperiment and BioCatalogue Commonalities]]
+  * [[Development:Curators incentives|How to involve people in curation ?]]
+  * [[Development:Outreach|The BioCatalogue outreach]]
+  * [[Development:stats|The BioCatalogue statistics]]
+  * [[Development:jamboree|The BioCatalogue annotation jamboree]]
+  * [[Development:color|BioCatalogue site template colors]]
+  * [[development:about_embrace_testscripts|About EMBRACE Test Scripts]]
+  * [[development:pre_release_notes| Pre Release Notes ( For 24 May, 2010 Release]]
+  * [[development:next_steps_for_service_monitoring | Next Steps For Service Monitoring]]
+  * [[development:integrating_das_services | Integrating DAS Services into BioCatalogue]]
+  * [[development:rought_notes_on_write_api|Rough Notes on the Write API]]
+  * [[Development:EBI Server Documentation]]

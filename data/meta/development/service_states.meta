@@ -1,0 +1,11 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1285083005;s:8:"modified";i:1285083005;}s:7:"creator";s:4:"Eric";s:11:"last_change";a:7:{s:4:"date";i:1285083005;s:2:"ip";s:13:"172.22.68.220";s:4:"type";s:1:"C";s:2:"id";s:26:"development:service_states";s:4:"user";s:8:"ericnzuo";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";}s:4:"user";s:0:"";s:5:"title";s:25:"Service Life Cycle States";s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:333:"Service Life Cycle States
+
+Web Service go through an existence life cycle with different states which need to be reflected in BioCatalogue. These states may include:
+
+	*  development
+	*  production
+	*  deprecated
+	*  discontinued
+	*  dead
+
+To allow BioCatalogue to handle these states, the following requirements will need to be met:";}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1285083005;}s:7:"creator";s:4:"Eric";s:11:"last_change";a:7:{s:4:"date";i:1285083005;s:2:"ip";s:13:"172.22.68.220";s:4:"type";s:1:"C";s:2:"id";s:26:"development:service_states";s:4:"user";s:8:"ericnzuo";s:3:"sum";s:7:"created";s:5:"extra";s:0:"";}s:4:"user";s:0:"";}}

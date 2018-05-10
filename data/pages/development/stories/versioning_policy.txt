@@ -1,0 +1,23 @@
+====== Versioning Policy ======
+
+The catalogue requires a mechanism for users to find out the details of a service (and its annoation) at a particular time point. This is akin to the versioning methods in in source control systems (e.g. CVS, Subversion, etc.) and in wiki systems. However there are potential issues with the granularity of versioning, the complexity of versioning visible to the user and clarity of conflicts between versions from different sources.
+
+===== Service Version =====
+
+Where a service description document is supplied we in effect have service details and annotations from the service provider. If we assume that changes to the service description document indicate changes to the service, then the service document can be used as a method to produce a "service version", which is incremented for each change to the service document. To be able to reconstruct the service document at a particlar point in time, the catalogue will have to cache the document in some way, and provide an appropriate way to vide the changes.
+
+For services without a service description document, the versioning model above would not apply, although a similar technique could be used in cases where a documentation URL is available.
+
+===== Community/Curator Annotation Version =====
+
+It is expected that the community/curator produced annotation will change faster than the provider supplied annotations. It is also expected that in some cases revisions to the service and the provider supplied annotations will invalidate or conflict with these annotations. Thus we need to be able to track these annotations independantly of the service itself, and highlight potential issues when they arise.
+
+===== Two Version Model =====
+
+This suggests that each service will have two versions in the catalogue:
+  - Service version: based on service desription documents or documentation from the service provider
+  - Annotation Version: tracking of the additional annotations provided by the BioCatalogue curators and community
+
+This is akin to the versioning model in the sequence databases, where there is a sequence version which refers solely to the sequence itself and an entry or annotation version which refers to the annotation attached to the sequence. The classic example of this is UniProtKB (see [[http://www.ebi.ac.uk/uniprot/unisave/|UniSave]] for details).
+
+However the use of two version numbers can be very confusing for users, one possible solution is to use a combined version number similar to that used for software where the major version is used for the service and the minor number for the annotation. For example: for service version 2 and annotation version 10 we could have the simpler 2.10 as the version displayed.

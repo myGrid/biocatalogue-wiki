@@ -1,0 +1,24 @@
+====== The BioCatalogue REST API - Changelog ======
+
+<html>
+<div class="box_important">
+<b>Note</b>: This changelog only applies to the API on the <a href="http://www.biocatalogue.org" target="_blank">main BioCatalogue site</a>. <!-- The <a href="http://sandbox.biocatalogue.org" target="_blank">sandbox site</a> is different and may have new or breaking things. --> For latest updates please join the <a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target="_blank">biocatalogue-hackers mailing list</a> or <a href="http://www.biocatalogue.org/contact" target="_blank">contact us</a>.
+</div>
+</html>
+
+<html>
+<div class="box_note">
+We use the <a href="http://semver.org/" target="_blank">Semantic Versioning</a> scheme for our version numbers
+</div>
+</html>
+
+==== v1.1.0b - 25th June 2010 ====
+
+  * Added **viewings** and **favourites** counts to the /services/{id} endpoint (in the ''<summary>'' section).
+  * New endpoint - **/soap_services/wsdl_locations**. Allows you to get a list of all the WSDL locations of all the SOAP based services in the catalogue.
+
+==== v1.0.0b - 6th April 2010 ====
+
+  * **Initial release** of the public API
+
+

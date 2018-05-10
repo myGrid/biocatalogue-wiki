@@ -1,0 +1,61 @@
+
+<h2 class="sectionedit1" id="th_november_2009_release">19th November 2009 Release</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Previous release revision: 1266</div>
+</li>
+<li class="level1"><div class="li"> This release revision: 1300</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "19th November 2009 Release" [1-109] -->
+<h3 class="sectionedit2" id="steps_to_take_for_update">Steps To Take for Update</h3>
+<div class="level3">
+
+<p>
+In order…
+</p>
+<ul>
+<li class="level1"><div class="li"> Run database update tasks:</div>
+</li>
+</ul>
+<pre class="code">rake db:migrate RAILS_ENV=production</pre>
+<ul>
+<li class="level1"><div class="li"> Restart the worker(s). For each, do: </div>
+</li>
+</ul>
+<pre class="code">ruby script/worker stop
+ruby script/worker start</pre>
+<ul>
+<li class="level1"><div class="li"> Rebuild assets</div>
+</li>
+</ul>
+<pre class="code">rake asset:packager:build_all</pre>
+<ul>
+<li class="level1"><div class="li"> Restart application instance(s)</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Set Franck as admin</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Steps To Take for Update" [110-441] -->
+<h3 class="sectionedit3" id="release_notes">Release Notes</h3>
+<div class="level3">
+
+<p>
+Email for the friends&#039; list:
+</p>
+<pre class="code">Dear all,
+
+We updated the BioCatalogue on Friday 21 November 2009 with the following:
+ - Allow submitters or curators to set alternative names as the preferred display name of a service (so that you can show more descriptive names for service)
+ - User experience improvements for the submission of Soaplab servers. 
+ - Using the classification of the soaplab tools(determined from the wsdl file names) to set the preferred names automatically
+</pre>
+
+</div>
+<!-- EDIT3 SECTION "Release Notes" [442-] -->

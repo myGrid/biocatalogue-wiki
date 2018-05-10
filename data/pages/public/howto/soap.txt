@@ -1,0 +1,10 @@
+Given that most existing SOAP services have a WSDL document, registering a SOAP service entry into the BioCatalogue requires only the WSDL url. The BioCatalogue WSDL parser automatically structures the data from the WSDL file into the BioCatalogue conformant format.
+
+**4 steps to submit your Soap service to BioCatalogue:** 
+
+  * Step 1: Select 'SOAP' from the 'Register a Service' page 
+  * Step 2: Paste your WSDL url in the text form and click preview 
+  * Step 3: Add additional description to the service (optional but very useful)
+  * Step 4: Submit your service 
+
+Once your service is successfully submitted you can add more annotation (descriptions, tags, example values) to its operations, inputs or outputs. 

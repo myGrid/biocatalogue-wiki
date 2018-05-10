@@ -1,0 +1,69 @@
+Date: Monday 07th June 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Franck, Jits, Mannie 
+
+**EBI:** Eric, Hamish 
+
+===== Apologies =====
+
+====== Agenda ======
+
+  * Actions from the last telecom
+  * Progress report 
+     * Review of Monitoring 
+     * Review of Curation
+     * Service update checker     
+  * Publicity/outreach
+      * EMBRACE service provider workshop - feedback from Hamish 
+      * Franck presenting the Function Unit paper at IEEE
+      * Jits- BioCatalogue demo at ISMB 2010
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting =====   
+
+  * Eric to write down his latest idea about monitoring **ongoing** 
+  * Jits/Mannie: Write API and Mass curation tool via spreadsheets **ongoing**
+
+===== Upcoming Meetings =====  
+
+===== AOB ===== 
+
+===== Minutes =====
+
+  * Review of Monitoring: 
+-How best can we monitor web service enpoints? The current approach assumes that a service endpoint is fine if it returns a 'xml' or 'html' page when it's pinged.  That doesn't seem to be the case for some services.(e.g. DDBJ). We probably need to tune the monitoring test according to the service. \\
+-During the Embrace workshop 2 different ways of monitoring came across: in the first instance, monitor services with a redirect wsdl location, in this case the agreement is that we should automatically pick the new location; in the second instance, when a wsdl changes(e.g functional changes) but the previous version is still working the agreement is that we should keep both copies but point to the latest. 
+
+  * Review of curation: 
+-Franck is clearing up the registry and archiving deprecated services. \\
+-Jits has started to work on the curation dashboard. Currently curators can identify which operation within a service are similar based on their name. Annotation can be copied across from operation to operation. \\
+
+  * Report from the Embrace service provider meeting: 
+-The general feedback is that the BioCatalogue is a good product and very useful too. \\
+-Need to support semantic annotation using EDAM for example; Jon is writing down how this can be achieved.\\ 
+-Need to support SAWSDL and BioSXD. There is growing number of services providers supporting BioXSD \\
+-Find better rating of the service. A metric for service provider to see how their service is being used. \\
+-Possibility to view more services per page (at the moment too much scrolling when using a laptop. \\
+-Reduce white space\\
+-Atom feed with category for service providers
+
+==== New actions ====
+ 
+Eric to send around a mail about endpoint monitoring 
+
+=======
+Previous meeting: [[Meetings:PhoneConf:2010-05-17|Phone Conference Meeting on May 17 2010]]
+
+Next meeting: [[Meetings:PhoneConf:2010-06-14|Phone Conference Meeting on June 14 2010]]

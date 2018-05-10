@@ -1,0 +1,9 @@
+======  Evaluation strategy for the pilot ======
+
+  * Mark Wilkinson will be in Manchester so will test it as a provider 
+  * We'll advertise or demo the pilot at the Semantic web service in November 
+  * Show and tell at the EBI
+  * Show and tell in Manchester
+  * Testing by our PALS and friends.
+  * Sit down evaluation by Advisory Board.
+  * Katy in Holland at end of Nov.

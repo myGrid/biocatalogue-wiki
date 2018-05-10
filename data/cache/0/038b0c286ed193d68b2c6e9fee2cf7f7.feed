@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.biocatalogue.org/wiki/feed.php">
+        <title>BioCatalogue</title>
+        <description></description>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico" />
+       <dc:date>2018-05-10T07:31:02+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:codebase_guidelines?rev=1520875676&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:installation?rev=1520875540&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:team?rev=1400493085&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:test_harness_documentation?rev=1372255962&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_logs?rev=1372255916&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:installing_a_new_release?rev=1372255872&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:istalled_ruby_gems?rev=1372255824&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:file_sharing?rev=1372255786&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:databases?rev=1372255730&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:biocatalogue_application_stack_specs?rev=1372255646&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:background_tasks?rev=1372255554&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:application_directory?rev=1372255398&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:live_site?rev=1372255143&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:test_site?rev=1372255033&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/?image=public%3Athe_functional_units_paper.pdf&amp;ns=public&amp;rev=1279535872&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/?image=public%3Ahelp%3Abiocatalogue%3Across-sphere-50.png&amp;ns=public%3Ahelp%3Abiocatalogue&amp;rev=1274953858&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/?image=public%3Arest_api_data_model.png&amp;ns=public&amp;rev=1272300488&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/?image=development%3Asystem_architecture.png&amp;ns=development&amp;rev=1272011948&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/?image=development%3Awsdltoolsrest.pdf&amp;ns=development&amp;rev=1271162654&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/?image=public%3Ausing_biocatalogue_api_in_java.pdf&amp;ns=public&amp;rev=1270632115&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico">
+        <title>BioCatalogue</title>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <url>https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:codebase_guidelines?rev=1520875676&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-12T17:27:56+01:00</dc:date>
+        <dc:creator>niall</dc:creator>
+        <title>development:codebase_guidelines - [Codebase Guidelines] </title>
+        <link>https://www.biocatalogue.org/wiki/development:codebase_guidelines?rev=1520875676&amp;do=diff</link>
+        <description>The BioCatalogue codebase is:
+
+	*  hosted on GitHub
+	*  licensed under the BSD license
+	*  runs on Rails 2.3.2 and Ruby 1.8.5 / 1.8.6
+
+Important!
+
+	*  In the Rails application, NEVER commit the following to the repository (svn:ignore properties should ensure that this doesn't happen, but be vigilant!)
+		*  anything in 
+			*  /log/
+			*  /tmp/
+			*  /var/</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:installation?rev=1520875540&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2018-03-12T17:25:40+01:00</dc:date>
+        <dc:creator>niall</dc:creator>
+        <title>development:installation - [Setting up the BioCatalogue System] </title>
+        <link>https://www.biocatalogue.org/wiki/development:installation?rev=1520875540&amp;do=diff</link>
+        <description>This page describes how to download, set up and run the BioCatalogue system on your own machine(s).
+
+Note: if you are setting up a development environment and working on the BioCatalogue codebase please also see the Codebase Guidelines.
+
+Getting Help
+
+For any assistance please join the biocatalogue-hackers mailing list and post your questions/feedback. Alternatively you can contact us directly at contact@biocatalogue.org.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:team?rev=1400493085&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2014-05-19T10:51:25+01:00</dc:date>
+        <dc:creator>alex</dc:creator>
+        <title>public:team - [The BioCatalogue Core Team] </title>
+        <link>https://www.biocatalogue.org/wiki/public:team?rev=1400493085&amp;do=diff</link>
+        <description>*  Carole Goble: Project lead, Manchester
+	*  Niall Beard: Software engineer, Manchester
+	*  Robert Haines: Software engineer, Manchester
+	*  Mike Cornell: Content curator, Manchester
+	*  Aleksandra Nenadic: Project manager and software engineer, Manchester</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:test_harness_documentation?rev=1372255962&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:12:42+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:test_harness_documentation - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:test_harness_documentation?rev=1372255962&amp;do=diff</link>
+        <description>Test Harness Machine (ves-hx-2c ):
+  Machine Name : ves-hx-2c
+  Operating System : Fedora 14
+  Users : root &amp; biocat
+This machine runs the biocatalogue test harness. The harness is located under two directories : development and production running against the test and live sites respectively. The corresponding directories are shown below with the directory structure shown for production only since they are identical:</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_logs?rev=1372255916&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:11:56+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:release_logs - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_logs?rev=1372255916&amp;do=diff</link>
+        <description>Live Site
+
+v1.0.1 - Jun 2011
+
+Release Notes
+
+SVN revision: 
+
+v1.0.0 - sometime in Mar 2011
+
+Release Notes
+
+SVN revision: 2375
+
+Test Site
+
+v1.0.0 - sometime in Feb/Mar 2011
+
+Release Notes
+
+SVN revision: 2371</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:installing_a_new_release?rev=1372255872&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:11:12+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:installing_a_new_release - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:installing_a_new_release?rev=1372255872&amp;do=diff</link>
+        <description>Every new BioCatalogue release has to to go through validation on the test site first before being put into production. The procedure for installing a new release on the test site should be the same as for the live site. The basic protocol is to run the biocatalogue check out script which is available in the bin directory of the test and live application directories. This script checks out a new release(lastest) if it has not been checked out already then configures it by creating symlinks from …</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:istalled_ruby_gems?rev=1372255824&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:10:24+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:istalled_ruby_gems - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:istalled_ruby_gems?rev=1372255824&amp;do=diff</link>
+        <description>Below is the list of gems that have been installed on the server machines:
+
+* LOCAL GEMS *
+  abstract (1.0.0)
+  actionmailer (2.3.2)
+  actionpack (2.3.2)
+  activerecord (2.3.2)
+  activeresource (2.3.2)
+  activesupport (2.3.2)
+  addressable (2.2.2)
+  arel (2.0.6)
+  authlogic (2.1.1)
+  builder (2.1.2)
+  bundler (1.0.7)
+  chriseppstein-compass (0.6.6)
+  crack (0.1.2)
+  daemon_controller (0.2.5)
+  daemons (1.1.0)
+  diff-lcs (1.1.2)
+  disqus (1.0.1)
+  Dnsruby (1.0)
+  dnsruby (1.51)
+  erubis (2.6.6)
+ …</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:file_sharing?rev=1372255786&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:09:46+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:file_sharing - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:file_sharing?rev=1372255786&amp;do=diff</link>
+        <description>The BioCatalogue team at EBI shares file like application logs and db dumps with the team at Manchester using dropbox. 
+
+Dropbox credentials
+
+
+email : contact@biocatalogue.org
+
+
+password: bi0cat</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:databases?rev=1372255730&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:08:50+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:databases - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:databases?rev=1372255730&amp;do=diff</link>
+        <description>BioCatalogue Databases
+
+
+
+The BioCatalogue runs of mysql databases that are maintained by systems group at EMBL-EBI.  The two instances that run the live and test sites are respectively mysql-biocat-prod and mysql-biocat-dev
+
+Live Database
+
+
+
+Instance Details
+
+
+
+host : mysql-biocat-prod</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:biocatalogue_application_stack_specs?rev=1372255646&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:07:26+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:biocatalogue_application_stack_specs - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:biocatalogue_application_stack_specs?rev=1372255646&amp;do=diff</link>
+        <description>Host Servers(Live &amp; Test)
+
+
+
+  Operating System : CentOS release 5.5 (Final) x86_64\\
+  Virtual Machine     : KVM\\
+  Virtual CPU            : 1\\
+  RAM                        : 2 GB  (can be easily increased)\\
+  Local Disk              : 20 GB\\
+  File system             : NFS (has access to TB sized file system) \\
+
+
+Search Server
+
+
+
+On each of the servers there is also a Tomcat running localhost:8080 which hosts the solr application. The solr application is used for the search and apart form…</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:background_tasks?rev=1372255554&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:05:54+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:background_tasks - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:background_tasks?rev=1372255554&amp;do=diff</link>
+        <description>This page will be used to document all the background tasks being run via cron on the EBI servers</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:application_directory?rev=1372255398&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T15:03:18+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:application_directory</title>
+        <link>https://www.biocatalogue.org/wiki/development:application_directory?rev=1372255398&amp;do=diff</link>
+        <description>The Directory Structure
+
+
+
+The directory structure for the BioCatalogue application is as follows:
+
+
+
+/nfs/public/rw/es/projects/biocatalogue/
+
+
+
+      /live\\
+
+
+      /test\\
+
+
+The /live and /test directories have a very similar structure. They contain the files which will power the live and test biocatalogue site respectively. The layout of these directories is as follows:</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:live_site?rev=1372255143&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T14:59:03+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:live_site - created</title>
+        <link>https://www.biocatalogue.org/wiki/development:live_site?rev=1372255143&amp;do=diff</link>
+        <description>Location: /nfs/public/rw/es/projects/biocatalogue/live/config/initializers/biocat_local.rb
+
+
+
+ 
+
+# BioCatalogue: app/config/initializers/biocat_local.rb.pre
+
+#
+
+# Copyright (c) 2008, University of Manchester, The European Bioinformatics
+
+# Institute (EMBL-EBI) and the University of Southampton.
+
+# See license.txt for details
+
+ 
+
+# Private settings that apply to individual deployments.
+
+ 
+
+# This setting determines where trashing (via the acts_as_trashable plugin) is used.
+
+ENABLE_TRASHING = true…</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:test_site?rev=1372255033&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2013-06-26T14:57:13+01:00</dc:date>
+        <dc:creator>plewis</dc:creator>
+        <title>development:test_site</title>
+        <link>https://www.biocatalogue.org/wiki/development:test_site?rev=1372255033&amp;do=diff</link>
+        <description>Location: /nfs/public/rw/es/projects/biocatalogue/test/config/initializers/biocat_local.rb
+
+
+
+ 
+
+# BioCatalogue: app/config/initializers/biocat_local.rb.pre
+
+#
+
+# Copyright (c) 2008, University of Manchester, The European Bioinformatics
+
+# Institute (EMBL-EBI) and the University of Southampton.
+
+# See license.txt for details
+
+ 
+
+# Private settings that apply to individual deployments.
+
+ 
+
+# This setting determines where trashing (via the acts_as_trashable plugin) is used.
+
+ENABLE_TRASHING = true…</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/?image=public%3Athe_functional_units_paper.pdf&amp;ns=public&amp;rev=1279535872&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-19T11:37:52+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public:the_functional_units_paper.pdf</title>
+        <link>https://www.biocatalogue.org/wiki/?image=public%3Athe_functional_units_paper.pdf&amp;ns=public&amp;rev=1279535872&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/?image=public%3Ahelp%3Abiocatalogue%3Across-sphere-50.png&amp;ns=public%3Ahelp%3Abiocatalogue&amp;rev=1274953858&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-05-27T10:50:58+01:00</dc:date>
+        <dc:creator>ericnzuo</dc:creator>
+        <title>public:help:biocatalogue:cross-sphere-50.png</title>
+        <link>https://www.biocatalogue.org/wiki/?image=public%3Ahelp%3Abiocatalogue%3Across-sphere-50.png&amp;ns=public%3Ahelp%3Abiocatalogue&amp;rev=1274953858&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;/wiki/_media/public:help:biocatalogue:cross-sphere-50.png?w=50&amp;h=50t=1274953858&amp;amp;tok=559aed&quot; alt=&quot;public:help:biocatalogue:cross-sphere-50.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/?image=public%3Arest_api_data_model.png&amp;ns=public&amp;rev=1272300488&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-26T17:48:08+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:rest_api_data_model.png</title>
+        <link>https://www.biocatalogue.org/wiki/?image=public%3Arest_api_data_model.png&amp;ns=public&amp;rev=1272300488&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;/wiki/_media/public:rest_api_data_model.png?w=499&amp;h=466t=1272300488&amp;amp;tok=e1d606&quot; alt=&quot;public:rest_api_data_model.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/?image=development%3Asystem_architecture.png&amp;ns=development&amp;rev=1272011948&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-23T09:39:08+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:system_architecture.png</title>
+        <link>https://www.biocatalogue.org/wiki/?image=development%3Asystem_architecture.png&amp;ns=development&amp;rev=1272011948&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;/wiki/_media/development:system_architecture.png?w=389&amp;h=500t=1272011948&amp;amp;tok=2b58b4&quot; alt=&quot;development:system_architecture.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/?image=development%3Awsdltoolsrest.pdf&amp;ns=development&amp;rev=1271162654&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-13T13:44:14+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:wsdltoolsrest.pdf</title>
+        <link>https://www.biocatalogue.org/wiki/?image=development%3Awsdltoolsrest.pdf&amp;ns=development&amp;rev=1271162654&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/?image=public%3Ausing_biocatalogue_api_in_java.pdf&amp;ns=public&amp;rev=1270632115&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-07T10:21:55+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:using_biocatalogue_api_in_java.pdf</title>
+        <link>https://www.biocatalogue.org/wiki/?image=public%3Ausing_biocatalogue_api_in_java.pdf&amp;ns=public&amp;rev=1270632115&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+</rdf:RDF>

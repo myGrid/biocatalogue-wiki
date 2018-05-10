@@ -1,0 +1,60 @@
+Date: Monday 21th September 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+===== Attending ===== 
+
+**Manchester:** Franck, Jits
+
+
+**EBI:** Eric, Thomas
+
+===== Apologies =====
+Carole, Rodrigo, Steve
+
+===== Minuting =====
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Progress report 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Carole, Rodrigo to submit an 'expression of interest' proposal to BBSRC ...**ongoing** 
+  * Jits: CLA proposal based on the Taverna one. Can reuse the myExperiment ...**ongoing**
+  * Eric: talk to Francois (the french team) about their service monitoring improvements...**ongoing**
+  * ALL: add your Biocatalogue outreach on the wiki ...**ongoing**
+ 
+===== Minutes ===== 
+
+  * Franck: 4 BioCatalogue PALs so far awaiting few more people to join. 
+  * Jits: working on the APIs and the annotation UI. 
+  * Eric: Test script going well 
+
+
+
+
+===== New actions =====
+
+
+Franck: plan for focus group 
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-07-27|Phone Conference Meeting on July 27 2009]]
+
+Next meeting: [[Meetings:PhoneConf:2009-09-28|Phone Conference Meeting on Sept 28 2009]]

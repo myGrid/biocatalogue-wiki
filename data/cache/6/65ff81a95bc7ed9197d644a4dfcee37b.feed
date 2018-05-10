@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.biocatalogue.org/wiki/feed.php">
+        <title>BioCatalogue public:help</title>
+        <description></description>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico" />
+       <dc:date>2018-05-10T01:56:45+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:executing_web_services?rev=1265104439&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:general_info_on_web_services?rev=1277976317&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:getting_started?rev=1264677239&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:making_web_services?rev=1265286216&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico">
+        <title>BioCatalogue</title>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <url>https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:executing_web_services?rev=1265104439&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-02T09:53:59+01:00</dc:date>
+        <title>public:help:executing_web_services</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:executing_web_services?rev=1265104439&amp;do=diff</link>
+        <description>I found a nice service - how can I execute it?
+
+There are many ways ways on executing web services and there is no simple way of telling which one is the best in your case. This depends on:
+
+	*  The type of the service (SOAP, REST etc. )
+	*  The way you want to execute the service (in a browser, in a GUI, inside a program or in pipelining system)</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:general_info_on_web_services?rev=1277976317&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-01T10:25:17+01:00</dc:date>
+        <title>public:help:general_info_on_web_services</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:general_info_on_web_services?rev=1277976317&amp;do=diff</link>
+        <description>What are Web Services?
+
+Web Services make it possible to get automated access to data from the Internet without using a browser. Technically a Web Service is a software system designed to support interoperable machine-to-machine interaction over a network. Software applications written in various programming languages and running on various platforms can use Web Services to exchange data over computer networks like the Internet.
+
+The difference between Web Services and Web Servers is that Web Se…</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:getting_started?rev=1264677239&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-01-28T11:13:59+01:00</dc:date>
+        <title>public:help:getting_started</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:getting_started?rev=1264677239&amp;do=diff</link>
+        <description>The BioCatalogue is a centralised registry of curated Life Science Web Services.
+
+It allows you to easily discover, register, annotate, monitor and use Web Services.
+
+Search (by Keywords)
+
+You can search for services using keywords...
+
+
+
+We find all matching services, providers, users and so on. We also automatically include results that have relevant terms. So for example, if you search for “microarray” you also get results that have the term “affymetrix”.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:making_web_services?rev=1265286216&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-04T12:23:36+01:00</dc:date>
+        <title>public:help:making_web_services</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:making_web_services?rev=1265286216&amp;do=diff</link>
+        <description>I have a piece of code - how can I make it a web service - haw can I make it?
+
+There are different solutions based on which programming language you are using.
+It also depends on expected number of users. If you plan to have more than &gt;1000 calls a day, you should probably think about production servers instead of simple scripts.</description>
+    </item>
+</rdf:RDF>

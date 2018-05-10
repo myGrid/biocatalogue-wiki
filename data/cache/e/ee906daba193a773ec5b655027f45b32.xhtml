@@ -1,0 +1,864 @@
+
+<h3 class="sectionedit1" id="data_modeling_process">Data Modeling Process</h3>
+<div class="level3">
+
+<p>
+The data modeling approached adopted for BioCatalogue is the <strong>Agile Modeling Process</strong> which is  both evolutionary(iterative and incremental) and collaborative.<br/>
+
+</p>
+
+<p>
+<strong>Key aspects of this modeling approach include</strong>:
+</p>
+<ul>
+<li class="level1"><div class="li"> The model is developed in parallel with the application that uses the data</div>
+</li>
+<li class="level1"><div class="li"> The project development iterations are in-line with the data model development iterations</div>
+</li>
+<li class="level1"><div class="li"> The model is assumed to be &#039;good enough&#039; to handle the the current application capabilities</div>
+</li>
+<li class="level1"><div class="li"> The modeling approach encourages the development of a high level domain model which identifies main entities and relationships without getting into the specifics of those entities</div>
+</li>
+<li class="level1"><div class="li"> The modeling process STRONGLY discourages attempts to comprehensively develop the data model upfront. </div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Data Modeling Process" [1-809] -->
+<h3 class="sectionedit2" id="data_source_distinction">Data source Distinction</h3>
+<div class="level3">
+
+<p>
+In the design of the model, we have made a distinction between the service structure and meta-data about the service structure. The service structure comes from trusted source, like the service interface document(wsdl document for soap services) while other other meta comes from the community and system
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Data source Distinction" [810-1152] -->
+<h3 class="sectionedit3" id="service_structure">Service Structure</h3>
+<div class="level3">
+
+<p>
+The pilot model introduces an abstract service container. This service container groups different implementations of a particular service as well as different deployments of the same service. The implementations envisaged for the pilot are
+</p>
+<ul>
+<li class="level1"><div class="li"> soap</div>
+</li>
+<li class="level1"><div class="li"> rest</div>
+</li>
+<li class="level1"><div class="li"> das</div>
+</li>
+<li class="level1"><div class="li"> simple scripts</div>
+</li>
+</ul>
+
+<p>
+Each service container will have at least one implementation(and deployment) of a service.
+</p>
+
+<p>
+<strong>Soap Service Structure</strong><br/>
+
+According to this model, a soap service structure has 4 nodes
+</p>
+<ul>
+<li class="level1"><div class="li"> the service envelop, which is a grouping of operations</div>
+</li>
+<li class="level1"><div class="li"> operations, which can take inputs and produce outputs</div>
+</li>
+<li class="level1"><div class="li"> inputs , which have well defined properties</div>
+</li>
+<li class="level1"><div class="li"> outputs, which have will defined properties</div>
+</li>
+</ul>
+
+<p>
+<strong>Rest Service Structure</strong><br/>
+
+This has not been defined as it is not clear yet what the trusted source of the data from which to build the structure should be. It has been proposed that using the <a href="https://wadl.dev.java.net/wadl20061109.pdf" class="urlextern" target="_blank" title="https://wadl.dev.java.net/wadl20061109.pdf"  rel="nofollow">wadl</a> (<a href="http://www.wsper.org/wadl2006.jpg" class="urlextern" target="_blank" title="http://www.wsper.org/wadl2006.jpg"  rel="nofollow">meta model</a>) is probably the way to go. According to the wadl specification we could have,
+</p>
+<ul>
+<li class="level1"><div class="li"> the service envelop( or base <abbr title="Uniform Resource Locator">URL</abbr> ), which is a grouping of the resources</div>
+</li>
+<li class="level1"><div class="li"> the resources</div>
+</li>
+<li class="level1"><div class="li"> the methods</div>
+</li>
+<li class="level1"><div class="li"> the parameters (of requests and responses )</div>
+</li>
+<li class="level1"><div class="li"> the representations (of the resources)</div>
+</li>
+</ul>
+
+<p>
+see <a href="/wiki/_media/development:modelling_rest_v25.pdf" class="media mediafile mf_pdf" title="development:modelling_rest_v25.pdf (6.6 KB)">modelling_rest_v25.pdf</a>
+</p>
+
+<p>
+<strong> Das Service Structure </strong><br/>
+
+TBD
+</p>
+
+<p>
+Diagram shows how annotations relate to a (soap) service structure<br/>
+<br/>
+
+<a href="/wiki/_detail/development:biocatalogue_domain.jpeg?id=development%3Adata_model_pilot" class="media" title="development:biocatalogue_domain.jpeg"><img src="/wiki/_media/development:biocatalogue_domain.jpeg" class="media" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Service Structure" [1153-2640] -->
+<h3 class="sectionedit4" id="annotations">Annotations</h3>
+<div class="level3">
+
+<p>
+Annotations have been abstractly designed as attribute-value pairs that can be attached to any node of a service structure as well as to the service container. According to this annotation method, nodes of the service structure are the annotatable objects, properties of the nodes are the annotation attributes, and the values assigned to these are the annotation values. For implementation details of the annotation component, see: <a href="/wiki/development:annotations" class="wikilink1" title="development:annotations">annotations</a><br/>
+
+</p>
+
+<p>
+The attached diagram shows examples of properties of a service that can be annotated<br/>
+<br/>
+<br/>
+
+<a href="/wiki/_detail/development:annotation_model.jpeg?id=development%3Adata_model_pilot" class="media" title="development:annotation_model.jpeg"><img src="/wiki/_media/development:annotation_model.jpeg" class="media" alt="" /></a>
+</p>
+
+</div>
+<!-- EDIT4 SECTION "Annotations" [2641-3259] -->
+<h3 class="sectionedit5" id="entities">Entities</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="services">Services</h4>
+<div class="level4">
+
+<p>
+Table name: services
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> unique_code</div>
+</li>
+<li class="level1"><div class="li"> submitter_type</div>
+</li>
+<li class="level1"><div class="li"> submitter_id</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="service_versions">Service Versions</h4>
+<div class="level4">
+
+<p>
+Table name: service_versions
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id  </div>
+</li>
+<li class="level1"><div class="li"> service_id</div>
+</li>
+<li class="level1"><div class="li"> service_versionified_type  (e.g.: “SoapService”)</div>
+</li>
+<li class="level1"><div class="li"> service_versionified_id</div>
+</li>
+<li class="level1"><div class="li"> version</div>
+</li>
+<li class="level1"><div class="li"> version_display_text</div>
+</li>
+<li class="level1"><div class="li"> submitter_type</div>
+</li>
+<li class="level1"><div class="li"> submitter_id</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="service_deployments">Service Deployments</h4>
+<div class="level4">
+
+<p>
+Table name: service_deployments
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> service_id</div>
+</li>
+<li class="level1"><div class="li"> service_version_id  (instead of a mapping table for services deployments and service versions).</div>
+</li>
+<li class="level1"><div class="li"> endpoint  (see <a href="/wiki/development:requirements_for_pilot" class="wikilink1" title="development:requirements_for_pilot">requirements_for_pilot</a>).</div>
+</li>
+<li class="level1"><div class="li"> service_provider_id</div>
+</li>
+<li class="level1"><div class="li"> city</div>
+</li>
+<li class="level1"><div class="li"> country</div>
+</li>
+<li class="level1"><div class="li"> submitter_type</div>
+</li>
+<li class="level1"><div class="li"> submitter_id</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="soap_services">SOAP Services</h4>
+<div class="level4">
+
+<p>
+Table name: soap_services
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> wsdl_location</div>
+</li>
+<li class="level1"><div class="li"> wsdl_file_id</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> documentation_url</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="soap_operations">SOAP Operations</h4>
+<div class="level4">
+
+<p>
+Table name: soap_operations
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> soap_service_id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> parameter_order</div>
+</li>
+<li class="level1"><div class="li"> parent_port_type</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="soap_inputs">SOAP Inputs</h4>
+<div class="level4">
+
+<p>
+Table name: soap_inputs
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> soap_operation_id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> computational_type</div>
+</li>
+<li class="level1"><div class="li"> min_occurs</div>
+</li>
+<li class="level1"><div class="li"> max_occurs</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="soap_outputs">SOAP Outputs</h4>
+<div class="level4">
+
+<p>
+Table name: soap_outputs
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> soap_operation_id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> computational_type</div>
+</li>
+<li class="level1"><div class="li"> min_occurs</div>
+</li>
+<li class="level1"><div class="li"> max_occurs</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="service_providers">Service Providers</h4>
+<div class="level4">
+
+<p>
+Table name: service_providers
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="users">Users</h4>
+<div class="level4">
+
+<p>
+Table name: users
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> email   (acts as the username as well)</div>
+</li>
+<li class="level1"><div class="li"> crypted_password</div>
+</li>
+<li class="level1"><div class="li"> salt</div>
+</li>
+<li class="level1"><div class="li"> activated_at</div>
+</li>
+<li class="level1"><div class="li"> security_token</div>
+</li>
+<li class="level1"><div class="li"> display_name</div>
+</li>
+<li class="level1"><div class="li"> openid_url</div>
+</li>
+<li class="level1"><div class="li"> role_id</div>
+</li>
+<li class="level1"><div class="li"> affiliation</div>
+</li>
+<li class="level1"><div class="li"> country</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="schema_migrations">Schema Migrations</h4>
+<div class="level4">
+
+<p>
+Table name : schema_migrations
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> version</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="sessions">Sessions</h4>
+<div class="level4">
+
+<p>
+Table name : sessions
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> session_id</div>
+</li>
+<li class="level1"><div class="li"> data</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="soaplab_servers">Soaplab Servers</h4>
+<div class="level4">
+
+<p>
+Table name: soaplab_servers
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> location</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="content_blobs">Content Blobs</h4>
+<div class="level4">
+
+<p>
+Table name: content_blobs
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> data   (50MB limit)</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="rest_services">Rest Services</h4>
+<div class="level4">
+
+<p>
+Table name: rest_services
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> interface_doc_url</div>
+</li>
+<li class="level1"><div class="li"> documentation_url</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="rest_resources">Rest Resources</h4>
+<div class="level4">
+
+<p>
+Table name: rest_resources
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> rest_service_id</div>
+</li>
+<li class="level1"><div class="li"> path</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> parent_resource_id</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="rest_methods_http_based">Rest Methods (HTTP based)</h4>
+<div class="level4">
+
+<p>
+Table name: rest_methods
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> rest_resource_id</div>
+</li>
+<li class="level1"><div class="li"> method_type</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="rest_parameters">Rest Parameters</h4>
+<div class="level4">
+
+<p>
+Table name: rest_parameters
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> param_style</div>
+</li>
+<li class="level1"><div class="li"> computational_type</div>
+</li>
+<li class="level1"><div class="li"> default_value</div>
+</li>
+<li class="level1"><div class="li"> required</div>
+</li>
+<li class="level1"><div class="li"> multiple</div>
+</li>
+<li class="level1"><div class="li"> constrained</div>
+</li>
+<li class="level1"><div class="li"> constrained_options</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="rest_representations">Rest Representations</h4>
+<div class="level4">
+
+<p>
+Table name: rest_representations
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> content_type</div>
+</li>
+<li class="level1"><div class="li"> http_status</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="rest_method_parameters_joining_model">Rest Method Parameters (joining model)</h4>
+<div class="level4">
+
+<p>
+Table name: rest_method_parameters
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> rest_method_id</div>
+</li>
+<li class="level1"><div class="li"> rest_parameter_id</div>
+</li>
+<li class="level1"><div class="li"> http_cycle</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="rest_method_representations_joining_model">Rest Method Representations (joining model)</h4>
+<div class="level4">
+
+<p>
+Table name: rest_method_representations
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> rest_method_id</div>
+</li>
+<li class="level1"><div class="li"> rest_representation_id</div>
+</li>
+<li class="level1"><div class="li"> http_cycle  </div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="agents">Agents</h4>
+<div class="level4">
+
+<p>
+Table name: agents
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> display_name</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="registries">Registries</h4>
+<div class="level4">
+
+<p>
+Table name: registries
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> homepage</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="urlmonitors">UrlMonitors</h4>
+<div class="level4">
+
+<p>
+Table name : url_monitors
+</p>
+
+<p>
+Fields
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> parent_id</div>
+</li>
+<li class="level1"><div class="li"> parent_type</div>
+</li>
+<li class="level1"><div class="li"> property</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="test_results">Test Results</h4>
+<div class="level4">
+
+<p>
+Table name : test_results
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> test_id</div>
+</li>
+<li class="level1"><div class="li"> test_type</div>
+</li>
+<li class="level1"><div class="li"> result</div>
+</li>
+<li class="level1"><div class="li"> action</div>
+</li>
+<li class="level1"><div class="li"> message</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="service_tests">Service Tests</h4>
+<div class="level4">
+
+<p>
+Table name : service_tests
+</p>
+
+<p>
+Field:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> exec_name</div>
+</li>
+<li class="level1"><div class="li"> running_status</div>
+</li>
+<li class="level1"><div class="li"> testable_id</div>
+</li>
+<li class="level1"><div class="li"> testable_type</div>
+</li>
+<li class="level1"><div class="li"> description</div>
+</li>
+<li class="level1"><div class="li"> filename</div>
+</li>
+<li class="level1"><div class="li"> content_type</div>
+</li>
+<li class="level1"><div class="li"> content_blob_id</div>
+</li>
+<li class="level1"><div class="li"> user_id</div>
+</li>
+<li class="level1"><div class="li"> binding</div>
+</li>
+<li class="level1"><div class="li"> activated_at</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "Entities" [3260-] -->

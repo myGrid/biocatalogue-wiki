@@ -1,0 +1,106 @@
+====== Testing and Monitoring of Services ======
+
+  * [[development:service_testing#Requirements|Requirements]]
+  * [[development:service_testing#Development|Development]]
+  * [[development:service_testing#what_next|What Next on Testing & Monitoring]]
+
+
+
+== Requirements ==
+**Monitoring**
+  - Service Ping
+    - Availability of descriptor document
+    - Availability of endpoint
+  - Test example(s)/workflow(s) to check functionality
+  - Mail service maintainer about changes in service status
+  - Ability to register interest in a service
+  - Monitoring interfaces changes
+    - Changes in the MD5 sum of the interface document(wsdl)
+    - Changes in the number of operations in the wsdl
+    - Changes in the interfaces of the operations
+  - Curating endpoints to make them monitorable, especially for REST services
+  - Set up and integrate BioNanny:
+  - Collecting QoS metrics
+
+**Testing**
+  - Ability to run scripts as tests for services, as per the EMBRACE registry. The status of the scripts is use for the traffic light system 
+  - ability to upload test script
+  - mailing test maintainer about service status changes
+  - API to query status of a particular service
+  - Distinction between tests and examples;
+    - test provided by service provider
+    - examples by any user of the service (note by eric : this contradicts the requirement that only selected users, ie owners of the service should submit test scripts)
+
+== Development ==
+
+It is essential to make the distinction between Monitoring and Testing. Monitoring would aim to provide answers to relatively straight forward questions like:
+  * Can the description document be retrieved?
+  * Is the description document valid. Or more importantly can commonly used toolkits understand the document?
+  * Has the description document changed since we last checked this service. This may also be used to trigger an update of the service description in the catalogue, creating a new revision?
+  * Can the service be contacted, meaning is the endpoint available? 
+  * how often has the service not been available over a period?
+
+Testing of services on the other hand is more elaborate. It would extend into the sphere of service validation and possibly workflow validation which may not necessarily be scoped within the service. The question is whether this should be a core functionality of the catalogue. It would appear that the BioCatalogue effort should be more focused on monitoring because it is more transparent, would generate less overhead and can be scoped easily within the service boundaries.
+
+**Initial Development**
+
+Initial development effort was spent in fulfilling requirement 1 of the testing and requirement 1 of the monitoring. That means providing the backend pieces for checking service endpoint availability and modeling for the test scripts. The diagram below shows the current status of the backend model for the test scripts and the availability checks of the endpoint(urls) {{:development:servicetestdatamodel.png|}}
+
+**Endpoint Monitoring**
+
+One of the attributes of the service deployment, which forms part of the service structure(see pilot DB), is the endpoint. The objective here is to monitor this endpoint at regular intervals and keep the status in the database. The latest status is shown in the UI with the time that the last check was made. The history of these checks can then be used to generate a profile of the service availability over a certain period.
+
+This is achieved by two rails background processes; one which collects the endpoints or urls to be monitored and one which checks the availability of the endpoints. For the soap services endpoints, data is sent to the service to generate a soap fault and the response is checked. For rest endpoints, it is checked whether the endpoints resolves to a valid URL. The utility used for this monitoring of the endpoint [[http://en.wikipedia.org/wiki/CURL|CURL]]. 
+ Currently the script would record one of three statuses : Online, Warning, Unchecked.
+  * Online (green with a tick) : was able to get an expected response within 20 seconds of request
+  * Warning (yellow with exclamation sign ): did not get an expected response within 20 seconds
+  * Unchecked (blue with question mark): this services has not yet been checked. Usually from the time of registration of the service till the next time the process the checks the status runs.
+
+{{:development:service_status_screen.png|Sample Service Status}}
+
+**WSDL Monitoring**
+
+Currently monitoring also checks the accessibility of the WSDL document for SOAP services. The status is registered in the same way as the endpoint status, with different icons representing the states.
+
+**Remarks on Current Monitoring**
+  * The overall status of the service is the AND of all the indicators monitored. So if an if any if the properties monitored generated a warning then the overall status will be a warning.
+  * It has been noted that the SOAP endpoint may not always return a SOAP fault even if it receives non-conforming xml. It is therefore necessary to supplement the automatic monitoring with a manual curation process for the endpoints. For REST service endpoints, they do not always point to a valid html page and may need parameters to generate a valid response. In this case as well, it would be necessary to curate the endpoint in order to have customized monitoring of the endpoint.
+  * Currently the status of the endpoint is shown on the service listing using the traffic light system. In the meeting of the 27/04/2009, it was suggested that the test scripts should be used as the basis of the traffic light system instead of the endpoint availability.
+
+
+**Uploading & Running Test Scripts** ( the EMBRACE idea)
+
+As a requirement for moving the EMBRACE registry content into the BioCatalogue, it was necessary to provide the functionality for users to upload test scripts which could be run against the service. The model above allows for such scripts to be uploaded into the catalogue database. However, it would be necessary for those scripts to be executed for the complete EMBRACE requirement to be fulfilled. This requirement was put on hold until after ISMB as EBI, the hosting Institute expressed security concerns with this approach and those could not be reasonable settled before the ISMB conference. This will now be revisited in future development.
+
+The objective here is to allow **certain users** to be able to upload test scripts to be run against the service. The uploaded scripts be run a very restricted environment and would have to pass a human check before they can be activated. This may be a single file or a bunch of related files. In the case of many files, the user will be required to archive (zip) them and upload them as a single archive. Uploading will put this files into the database from where a process to run them will fetch them asynchronously. The idea is to these tests at a regular interval and record the status in the database. The results of the latest status of the test will be shown in the UI along with the time of the last check.
+
+At the moment, in addition to the test file(s), the uploader is also required to provide a path to the script that will be executed, a name of the test and a description of the test. For the executable scripts themselves, they should not take any parameters and should be executable on the command line. The only expectation from the environment is to provide network access as they will essentially be testing web services located remotely. 
+{{:development:picture_6.png|}}
+
+**Constraints On Scripts**
+
+  - runnable by 'nobody' without write permissions
+  - run under a safe file store
+  - run with an upper bound set on bandwidth usage
+  - run with max execution time and processor time set
+  - restrict source languages to perl, python, ruby and java
+
+== What Next ==
+
+Most of the services in the BioCatalogue at the moment are SOAP, so extending the monitoring for SOAP services maybe be a quick win for the monitoring piece. Some ideas that could easily be explored include:
+  * **monitoring changes in the WSDL document**.
+    * monitoring changes in the md5 sum of the WSDL document
+    * monitoring changes in the number of operation in the WSDL file
+    * monitoring changes in the interfaces of the operations( this could be limited to just the number of parameters, NOT their types) 
+  * **propose to service provides to implement a generic monitoring interface**
+    * this could be an operations with no parameters which returns some service metadata. This sort of operations would confirm the service availability but may also be used to inform users about the services changes, when it does change.
+  * For rest services, choose some parameters with light weight responses to use for endpoint availability checks. This will require a curation effort especially as the responses from these requests are likely to change over time.
+  * **User External monitoring Framework** \\
+  Tools that come to mind for external monitoring include soapUI, Bionanny and QBIOS.
+
+    * **soapUI**
+      [[http://www.soapui.org/|SoapUI]] provides the facilities to create a suite of tests cases for a web service which can be exported as an xml file. One approach could be for users to generate this xml file and upload to the BioCatalogue. BioCatalogue could then use an instance of soapUI to run those tests against the services and then report the results. One way would be to use the command line tools provided by soapUI to run tests. Changes in the xml file describing the test cases could be monitored as well changes in the generated results. 
+
+    * **Bionanny**
+   According to [[http://bionanny.sourceforge.net/|Bionanny]] documentation- "//the purpose of Bionanny project is to measure how often and for how long are individual Web Services called without any need for changing their own code//. "
+And the way that Bionanny achieves through a monitor or request interceptor. Here is how Bionanny documentation describes the interceptor - //A Monitor (or an Interceptor) is a specialized code that runs on the same machine where a Web Service is running, and all incoming requests and produced responses of such Web Service are redirected through this Monitor. Having such monitor allows to know about all requests without a Web Service knowing about their interception. It behave like a Big Brother//. It may be difficult to get service providers provide Bionanny instances from which we could collect results. What is appealing about Bionanny is that it is itself a web service and therefore access to any instance can be done through the SOAP interface.

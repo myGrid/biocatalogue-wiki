@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.biocatalogue.org/wiki/feed.php">
+        <title>BioCatalogue public:help:biocatalogue</title>
+        <description></description>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico" />
+       <dc:date>2018-05-04T13:10:37+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:biocatalogue:annotating_web_services?rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:biocatalogue:discovering_web_services?rev=1266253423&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:biocatalogue:home?rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:biocatalogue:how_we_monitor_web_services?rev=1274954151&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/public:help:biocatalogue:registering_web_services?rev=1278080149&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico">
+        <title>BioCatalogue</title>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <url>https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:biocatalogue:annotating_web_services?rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+01:00</dc:date>
+        <title>public:help:biocatalogue:annotating_web_services</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:biocatalogue:annotating_web_services?rev=1260536560&amp;do=diff</link>
+        <description>The Problem:  “Web Services are poorly described...”
+
+So...
+
+	*  Anyone can describe, tag, recommend, comment on and annotate Web Services in the BioCatalogue
+	*  Expert curators oversee the BioCatalogue and organise “annotation jamborees”
+	*  The wider community participates in this effort through social curation</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:biocatalogue:discovering_web_services?rev=1266253423&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-02-15T17:03:43+01:00</dc:date>
+        <title>public:help:biocatalogue:discovering_web_services</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:biocatalogue:discovering_web_services?rev=1266253423&amp;do=diff</link>
+        <description>The Problem:  “Web Services are hard to find...”
+
+So...
+
+	*  Find the right Web Service using the BioCatalogue
+	*  We offer easy and powerful search and filtering interfaces
+	*  We index metadata made available by service providers, expert curators and the wider community</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:biocatalogue:home?rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+01:00</dc:date>
+        <title>public:help:biocatalogue:home</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:biocatalogue:home?rev=1260536560&amp;do=diff</link>
+        <description>Using the BioCatalogue
+
+	*  Discovering Web Services
+	*  Registering Web Services
+	*  Annotating Web Services
+	*  How we monitor Web Services</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:biocatalogue:how_we_monitor_web_services?rev=1274954151&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-05-27T10:55:51+01:00</dc:date>
+        <title>public:help:biocatalogue:how_we_monitor_web_services</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:biocatalogue:how_we_monitor_web_services?rev=1274954151&amp;do=diff</link>
+        <description>The Problem:  “Web Services are volatile...”
+
+ Web Services can change their location, capabilities, become outdated or simply disappear.
+
+BioCatalogue Approach to minimize the Effects of the Problem
+
+BioCatalogue performs a set of tests on the services to find out if they are still responding to requests in an expected mannner. These tests are run on a regular basis enabling the BioCatalogue to collect historical information on the availability of these services. BioCatalogue displays the lates…</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/public:help:biocatalogue:registering_web_services?rev=1278080149&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-07-02T15:15:49+01:00</dc:date>
+        <title>public:help:biocatalogue:registering_web_services</title>
+        <link>https://www.biocatalogue.org/wiki/public:help:biocatalogue:registering_web_services?rev=1278080149&amp;do=diff</link>
+        <description>The Problem:  “My Web Services are not visible...”
+
+So...
+
+	*  Anyone can easily register Web Services in the BioCatalogue
+	*  These service are instantly available to the community, tool developers and search engines
+	*  Service providers can advertise, describe and monitor their services through the BioCatalogue</description>
+    </item>
+</rdf:RDF>

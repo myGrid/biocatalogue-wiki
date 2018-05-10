@@ -1,0 +1,48 @@
+Date: Tuesday 16th Dec 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:**
+
+**EBI:**
+
+===== Apologies =====
+
+===== Minuting =====
+
+====== Agenda ======
+
+  * Actions from the last telcon
+
+  * Progress with the pilot
+
+  * New requirements timeline and planning
+
+  * Updating the BioCatalogue public wiki
+
+  * AOB
+
+===== Actions from Previous Meeting ===== 
+
+  * Franck : Provide an example of a semantically annotated service(using the SAWSDL model).
+  * Thomas: investigate 'home' link on the public wiki.
+  * Jits/Thomas/Eric: create developer section on the wiki.
+  * Eric: list the features of the current pilot (including annotations stuff), so that they can be used in a email announcing the private beta to the friends list.
+  * Franck: read through the revised requirements and planning doc and update the private wiki roadmap accordingly. Then after approval copy it to the public wiki.
+  * Franck: make an announcement about latest changes to schedule to the friends list.
+  * Thomas: possibly change the "Wiki" link on the main website and beta site to something more descriptive like "More info about the project". Also add this to the "About us" page.
+
+====== Minutes ======
+
+===== New Actions =====
+
+===== Upcoming Meetings ===== 
+
+===== AOB =====
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-12-09|Phone Conference Meeting on Dec 09 2008]] 
+
+Next meeting:

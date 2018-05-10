@@ -1,0 +1,69 @@
+
+<h2 class="sectionedit1" id="th_december_2009">10th December 2009</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Previous release revision: 1350</div>
+</li>
+<li class="level1"><div class="li"> This release revision: 1368</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "10th December 2009" [1-101] -->
+<h3 class="sectionedit2" id="steps_to_take_for_update">Steps To Take for Update</h3>
+<div class="level3">
+
+<p>
+In order…
+</p>
+<ul>
+<li class="level1"><div class="li"> Run database update tasks:</div>
+</li>
+</ul>
+<pre class="code">rake db:migrate RAILS_ENV=production</pre>
+<ul>
+<li class="level1"><div class="li"> Restart the worker(s). For each, do: </div>
+</li>
+</ul>
+<pre class="code">ruby script/worker stop
+ruby script/worker start</pre>
+<ul>
+<li class="level1"><div class="li"> Rebuild assets</div>
+</li>
+</ul>
+<pre class="code">rake asset:packager:build_all</pre>
+<ul>
+<li class="level1"><div class="li"> Restart application instance(s)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Steps To Take for Update" [102-409] -->
+<h3 class="sectionedit3" id="release_notes">Release Notes</h3>
+<div class="level3">
+
+<p>
+<strong> In this release : </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> Partner logos on the Home Page</div>
+</li>
+<li class="level1"><div class="li"> Simplified the text in the info boxes on the Home Page and added “more info” links to the relevant help pages.</div>
+</li>
+<li class="level1"><div class="li"> Removed the “Our Goals” section on the Home Page (moved this to the wiki).</div>
+</li>
+<li class="level1"><div class="li"> Added the various help links to the Getting Started guide, help section and general web services help.</div>
+</li>
+</ul>
+
+<p>
+This release also includes the release candidate version of the EMBRACE import script (for importing users, services and metadata only).
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Release Notes" [410-934] -->
+<h3 class="sectionedit4" id="email_to_friends_list">Email to Friends&#039; List</h3>
+<div class="level3">
+
+</div>
+<!-- EDIT4 SECTION "Email to Friends' List" [935-] -->

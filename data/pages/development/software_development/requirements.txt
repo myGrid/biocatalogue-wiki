@@ -1,0 +1,262 @@
+====== Requirements Overview ======
+
+Note: annotations in '[]' are [[http://en.wikipedia.org/wiki/MoSCoW_Method|MoSCoW]] classifcations.
+
+===== Core Catalogue =====
+
+==== User Details ====
+
+**Note**: this is core information only. Additional information is covered by [[#User Profile]].
+
+  * [Must] [[development:stories:user_registration|User registration]] ({{:create_account.jpg?linkonly|mockup1}} {{:create_account_and_profile_2.jpg?linkonly|mockup2}})
+    * Authentication information
+      * [Should] [[http://openid.net/|OpenID]]
+      * [Must] E-mail address and password
+    * User details
+      * [Must] Name
+      * [Should] Organisation/affiliation
+  * [Must] Login/logout
+  * [Must] Change details
+    * Specifically the core information. This may be integrated into User Profile management (see [[#User Profile]]).
+
+==== Basic Search ====
+
+  * Browsing
+    * [Must] All services
+    * [Could] [[development:stories:catalogue_browsing|Service category/tag navigation]] (i.e. "Amazon-like") ({{:browse.jpg?linkonly|mockup}}). For example:
+      * Function -> Data retrieval -> Entry retrieval -> WSDbfetch
+      * Organisation -> EMBL-EBI -> WSDbfetch
+      * Underlying data resource e.g. BLAST over DDBJ or EMBL etc
+      * Service Technology -> SOAP -> Biomoby
+      * Service Technology -> REST -> DAS
+      * Data Formats -> Fasta, EMBL
+  * [Must] [[development:stories:basic_search|All text search]] (i.e. "Google-like") (mockups: {{:homepage.jpg?linkonly|homepage}} and {{:resultpage_new.jpg?linkonly|results}})
+
+==== Service Submission ====
+
+**Note**: this is core information only. Additional information is covered by [[#Service Annotation]].
+
+  * [Must] To submit a service the user __must__ be registered.
+  * Required information ({{:webservice_registration_form.jpg?linkonly|mockup}}):
+    * [Must] Service name (e.g. WSDbfetch)
+    * [Must] Service location (e.g. http://www.ebi.ac.uk/Tools/webservices/wsdl/WSDbfetch.wsdl). Either a:
+      - [[development:stories:service_submission_with_service_document|service description document]] (i.e. WSDL [[http://www.w3.org/TR/wsdl|1.x]] or [[http://www.w3.org/TR/wsdl20/|2.0]], [[https://wadl.dev.java.net/|WADL]], [[http://www.opensearch.org/|OpenSearch]], etc.) from which operations/resources and annotations can be harvested
+      - [[development:stories:service_submission_without_a_service_document|actual endpoint]], where details of operation/resources and annotations will have to be supplied seperatly.
+  * Optional information (may be initially harvested from service description document) ({{:webservice_registration_form_test_descriptor.jpg?linkonly|mockup}}):
+    * [Must] Service description (e.g. "The WSDbfetch service allows the retrieval of various biological database entries given the database and entry identifier. Database entries can be retrieved in multiple formats (e.g. flatfile, fasta format or XML) and styles (e.g. plain text or HTML). Single or multiple entries (up to 200) can be retrieved in a single request.").
+    * [Must] Service provider (e.g. EMBL-EBI).
+    * Documentation URL (e.g. http://www.ebi.ac.uk/Tools/webservices/services/dbfetch). A URL for additional documentation.
+    * [Must] Contact (e.g http://www.ebi.ac.uk/support/ or <support@ebi.ac.uk>). The submitter may not belong to the team developping the Web Service.
+
+Issues for discussion:
+  * [[development:stories:Versioning policy]]
+  * [[development:stories:Duplicates policy]]
+  * [[IP issues]]
+
+
+===== Service Annotation =====
+
+==== Service Level ====
+
+**Note**: in addition to those described in [[#Service Submission]].
+
+  * [Should] Licensing/Terms of Use/Usage restrictions
+  * [Could] Download details. For services which are available for local installation (e.g. SOAPlab):
+    * Download site
+    * Licence
+  * [Could] Service lifecycle status:
+    * "Prototype"
+    * "Production"
+    * "Deprecated"
+    * "Obsolete"
+  * [Could] Service relationships. For example:
+    * "Identical to"
+    * "Equivalent to"
+    * "Used with"
+    * [[development:stories:deprecation_of_service|"Superseded by"]]
+
+==== Operation/Resource Level ====
+
+Four sources of annotations:
+
+  * [Should] Provider supplied annotations obtained from service description (e.g. WSDL)
+  * [Could] Curator annotation
+  * [Could] User annotation
+  * [Could] Automated agents
+ 
+Below the level of the service there are a number of things that can have annotations attached:
+
+  * Data types
+  * Operations (SOAP) or resources (REST)
+  * Bindings (WSDL)
+
+==== Ontologies Used ====
+
+Ontologies used part of the service description and operation (e.g. Biomoby ontologies) and/or as a component of the data processed/provided by the service (e.g. Gene Ontology).
+
+  * [Could] [[http://sswapmeet.sswap.info/|SSWAP Ontologies]]
+    * Biomoby ontologies
+  * [Should] [[http://www.mygrid.org.uk/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=19|myGrid ontology]]:
+    * Domain
+    * Service
+  * [Won't] [[http://www.geneontology.org/|Gene Ontology]] (GO)
+
+===== User Profile =====
+
+Note: core user information is covered by [[#User Details]], this section deals with additional information which users may want to provide.
+
+==== Additional Information ====
+
+  * [Should] About the user
+    * Interests
+    * Country
+
+==== Profile Management ====
+
+  * [Should] Create profile
+  * [Should] View profile
+  * [Should] Edit profile
+  * [Could] Delete profile? //(Only by an admin, or when a user is deleted)//
+
+===== Community =====
+
+**Note**: registered users only
+
+==== Comments/Reviews ====
+
+  * [Should] Service entries
+  * [Could] Service operations/resources
+
+==== Ratings/Recommendations ====
+
+  * [Should] Rating a service
+  * [Could] "My recommended services"
+
+==== Friends/Networking ====
+
+  * [Should] Requesting "friends"
+  * [Should] Messaging
+  * [Could] Watching friends (service submissions, annotations, etc.)
+
+===== Event Logging and Notifications =====
+
+  * [Must] Granular event logging of all actions internal and external (that are relevant) to BioCatalogue
+  * [Should] Single notifications system with multiple delivery channels (e.g.: email, RSS/ATOM etc)
+
+===== Watching Services =====
+
+==== Detecting Service Changes ====
+
+  * [Should] Checking for changes in service description documents
+  * [Should] Versioning of harvested service information
+  * [Should] Integration of harvested service annotation
+
+==== For Users ====
+
+  * [Could] [[development:stories:service_change_monitoring|Add a service to a watch list]] (i.e. "ebay-like")
+  * [Could] [[development:stories:search_result_alerting|Adding a query to a watch list]]
+  * [Could] Service entry monitoring:
+    * E-mail notification of changes
+    * Service changes RSS/Atom news feed
+    * [[development:stories:notification_aggregation|Aggregated RSS/Atom feed of "My Watches"]]
+
+===== Service QoS =====
+
+==== Service Monitoring ====
+
+  * [Could] Service Ping
+    * Availability of descriptor document
+    * Availability of endpoint
+  * [Won't] Service function
+    * Test example(s)/workflow(s) to check functionality
+    * Submitter/provider notification of problems
+
+===== APIs =====
+
+==== OpenSearch ====
+
+See http://www.opensearch.org/
+
+  * [Must] OpenSearch description document.
+    * Search URL description for HTML results (used for IE7+ and Firefox 2+ browser search).
+    * Browser auto discovery via ''link'' tag in pages.
+  * [Should] Basic search API via RSS results (i.e. Service name, description, entry). Requires search based RSS feed, see [[#Watching Services]] for an application.
+  * [Could] Intermediate search API via Atom feed, since this can contain a document representing the entry.
+
+==== AtomPub ====
+
+See http://www.atomenabled.org/
+
+  * [Could] API for curation tools and data submission tools
+
+==== UDDI ====
+
+See http://uddi.xml.org/
+
+Two main possibilities:
+
+  - Implement UDDI interface on BioCatalogue.
+  - Exchange data with an external UDDI implementation (e.g. [[http://www.grimoires.org/|Grimoires]])
+
+This opens the issue of what to do with services that are not WSDL and therefore not suitable for UDDI
+
+==== Feta ====
+
+For support of existing Feta clients (e.g. [[http://www.mygrid.org.uk/usermanual1.5/taverna_plugins.html#feta|Feta plugin for Taverna]]).
+
+  * Provide the Feta web service ([[http://www.mygrid.org.uk/fetaEngine/services/feta?wsdl|WSDL]]).
+  * Provide [[http://www.mygrid.org.uk/feta/mygrid/descriptions/|Feta annotations]].
+
+===== Exchange with Other Catalogues =====
+
+There are a number of other service registries/catalogues out there (see http://www.biocatalogue.org/links.html). To improve coverage and to encourage service providers it would be useful to be able to exchange service entries with these catalogues.
+
+This requires APIs at both ends to:
+  * Find new entries within a specific time period
+  * Find updated entries within a specific time period
+  * To get service details in a exchange format
+  * To create new entries in the reciving catatlog
+  * To update new entries in the reciving catatlog
+
+This is a possible role for the [[#atompub|AtomPub API]].
+
+===== Synchronise from other Catalogues =====
+
+Since many of the registries are service technology specific, for example:
+  * [[http://www.dasregistry.org/|DAS registry]]
+  * [[http://biomoby.org/|BioMoby]]
+
+Or project specific, for example:
+  * [[http://www.mygrid.org.uk/wiki/Mygrid/BiologicalWebServices|myGrid registry]]
+  * BioSapiens
+  * EMBRACE
+  * ENFIN
+
+There are also framework specific collections, for example:
+  * Soaplab
+  * BioMart
+  * Feta
+
+In each of these cases BioCatalogue needs a mechanism to import and synchronise with these resources. 
+
+===== Integration with Workflow Repositories =====
+
+  * In services catalogue list workflows that use the service and provide link(s) to workflow details
+    * Requires an API to the workflow repository capable of finding those workflows for the specific service.
+  * In workflow repository show basic service information from services catalogue and provide link to service details
+    * Available [[#APIs]] should be sufficient to build this functionality. However some additional search granularity may be required to be sure of getting the correct service from the information available in the workflow description. For example for [[http://taverna.sourceforge.net/|Taverna]]:
+      * BioMoby:
+        * ''mobyEndpoint'': http://moby.ucalgary.ca/moby/MOBY-Central.pl
+        * ''serviceName'': getDragonSimpleAnnotatedImages
+      * SOAPlab: http://www.ebi.ac.uk/soaplab/emboss4/services/protein_2d_structure.tmap
+      * WSDL: http://www.ebi.ac.uk/Tools/webservices/wsdl/WSInterProScan.wsdl
+
+===== Service Invocation =====
+
+A useful feature of seekda is the ability to invoke a service operation from the web interface.
+
+===== Service annotation model =====
+
+Low level description of the requirements are difined in the platinum annotation model 
+{{:development:software_development:annotation_model_platinum.pdf|}}
+ 

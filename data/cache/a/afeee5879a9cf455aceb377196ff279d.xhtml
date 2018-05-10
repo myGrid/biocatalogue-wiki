@@ -1,0 +1,57 @@
+
+<p>
+The Directory Structure<br/>
+
+<br/>
+
+The directory structure for the BioCatalogue application is as follows:<br/>
+
+<br/>
+
+/nfs/public/rw/es/projects/biocatalogue/<br/>
+
+<br/>
+
+</p>
+<pre class="code">      /live\\</pre>
+
+<p>
+<br/>
+
+</p>
+<pre class="code">      /test\\</pre>
+
+<p>
+<br/>
+
+The /live and /test directories have a very similar structure. They contain the files which will power the live and test biocatalogue site respectively. The layout of these directories is as follows:<br/>
+
+<br/>
+
+</p>
+<pre class="code">  backups\\
+      this directory is only present under /live . It is used to store database backups of the live application.\\
+  bin\\
+      This directory contains some shell scripts. This is the place to put any scripts that are use for the maintenance of the application. The following two scripts are used to check out the application and to restart it\\
+      ./biocat_checkout.sh [options] - check out the biocatalogue code base from the repository\\
+      ./biocat_restart.sh [options] - restart the biocatalogue application\\
+  config\\
+      This directory contains server dependent configuration files. After check out of a new release, sym links are created from the application config directory to this directory\\
+  current\\
+      Symbolic link to the trunk_xxx directory where xxxx is the version number of of the checked out release.  This is the latest check out version of the code in production.\\
+  etc_httpd_conf.d\\
+      The directory contain virtual host configuration files for the biocatalogue application\\
+  log\\
+      directory to store the logs files. This must have group write permissions as the application is run under a different user\\
+  trunk_xxxx\\
+      This directory hosts the application files and related configurations that will be use to run the site\\
+  tmp\\
+      directory to store temporary files. This should also have group write permissions\\
+  php\\
+      Directory contain php scripts used to parse the wsdl files before storage into the application db\\</pre>
+
+<p>
+<br/>
+
+
+</p>

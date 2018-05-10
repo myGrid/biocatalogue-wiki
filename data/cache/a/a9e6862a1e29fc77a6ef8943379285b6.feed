@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.biocatalogue.org/wiki/feed.php">
+        <title>BioCatalogue development:stories</title>
+        <description></description>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico" />
+       <dc:date>2018-05-09T05:18:04+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:add_annotation_to_existing_service_in_the_catalogue?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:basic_search?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:catalogue_browsing?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:deprecation_of_service?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:duplicates_policy?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:notification_aggregation?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:search_result_alerting?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:service_change_monitoring?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:service_submission_with_service_document?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:service_submission_without_a_service_document?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:user_registration?rev=1260536559&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:stories:versioning_policy?rev=1260536559&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico">
+        <title>BioCatalogue</title>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <url>https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:add_annotation_to_existing_service_in_the_catalogue?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:add_annotation_to_existing_service_in_the_catalogue</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:add_annotation_to_existing_service_in_the_catalogue?rev=1260536559&amp;do=diff</link>
+        <description>Users will want to add annotation (descriptions, tags, examples, comments...) to existing services in the catalogue. 
+who? and what? are important aspects we should be able to capture. The default annotation displayed should be the one from the provider or Expert or trusted users.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:basic_search?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:basic_search</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:basic_search?rev=1260536559&amp;do=diff</link>
+        <description>Search by a casual user is in the Google style using a simple set of search terms possibly with simple modifers. By default it is expected that the search terms are case insensitive and combined with AND. Results are a list of matching items with either brief descriptions or matched terms in context.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:catalogue_browsing?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:catalogue_browsing</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:catalogue_browsing?rev=1260536559&amp;do=diff</link>
+        <description>For some user searches and for a variety of administration and testing tasks it is useful to be able to browse the catalogue in a number of ways:
+
+	*  Index, possibly with filtering term searches:
+		*  service names
+		*  user tags
+		*  descriptive ontology terms
+		*  type of service (SOAP, REST, DAS...)
+		*  Resource used 
+		*  Result produced</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:deprecation_of_service?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:deprecation_of_service</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:deprecation_of_service?rev=1260536559&amp;do=diff</link>
+        <description>In the life cycle of a service a service provider often needs to be able to discourage use of an old service and encourage users to migrate to a new service, while still running the old service. Thus they need a mechanism to be able to deprecate a service and provide an annotation indicating alternative services.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:duplicates_policy?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:duplicates_policy</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:duplicates_policy?rev=1260536559&amp;do=diff</link>
+        <description>One possible consequence of community based submission of services to the catatlogue is the risk of ending up with a catalogue which contains many entries desribing the same service (i.e. same interface, same location). This pollutes search results and makes service discovery more problematic.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:notification_aggregation?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:notification_aggregation</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:notification_aggregation?rev=1260536559&amp;do=diff</link>
+        <description>Some users may be monitoring many services at both Search Result Alerting and Service Change Monitoring and would prefer to be able to monitor a single feed. Building in aggregation features will make it simple to create a collection of monitors and alerts (possibly customised for specific requirements) which can be handled as a single “My BioCatalogue Alerts” feed.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:search_result_alerting?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:search_result_alerting</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:search_result_alerting?rev=1260536559&amp;do=diff</link>
+        <description>Many developers and systematic users have a requirement for notification if the results of a search change. One basic scenario is the bioinformatican who is using a particular service for a particular piece of functionality (e.g. BLAST), but who has had to workaround a flaw or limitation in the service to be able to get their required result. Thus they have an interest in being informed if an alternative service becomes available that better suits their requirements. The alert could be either vi…</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:service_change_monitoring?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:service_change_monitoring</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:service_change_monitoring?rev=1260536559&amp;do=diff</link>
+        <description>Notification of service changes is a requirement of many users. Unlike Search Result Alerting this is related solely to a changes to specific service. This ties into service versioning. Notification of changes can be via either e-mail or news feed depending on user requirements.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:service_submission_with_service_document?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:service_submission_with_service_document</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:service_submission_with_service_document?rev=1260536559&amp;do=diff</link>
+        <description>Service providers want to be able to submit their service to the catalogue. For services which have a description document, this could be by referencing the service document (e.g. WSDL, WADL, OpenSearch, etc.) and analysis of this document should be used to provide the initial values for the relevant parts of the service information. The user should then be able to review the information and revise it in any way before completing the submission of the service and it appearing in the catalogue. S…</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:service_submission_without_a_service_document?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:service_submission_without_a_service_document</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:service_submission_without_a_service_document?rev=1260536559&amp;do=diff</link>
+        <description>Service providers want to be able to submit their service to the catalogue. Many REST services and some SOAP services do not expose a service document, so the appropriate information will have to be suppiled manually. For these services we require a service name, service description, service location (documentation or endpoint URL).</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:user_registration?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:user_registration</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:user_registration?rev=1260536559&amp;do=diff</link>
+        <description>Before users can submit services they must register. The initial information collected here should be as minimal as possible. For example: name, affiliation/organisation, country, and username/password or OpenID. At this point only the critical information should be collected any additional information that is desired can be done through profile building rather than here.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:stories:versioning_policy?rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:stories:versioning_policy</title>
+        <link>https://www.biocatalogue.org/wiki/development:stories:versioning_policy?rev=1260536559&amp;do=diff</link>
+        <description>The catalogue requires a mechanism for users to find out the details of a service (and its annoation) at a particular time point. This is akin to the versioning methods in in source control systems (e.g. CVS, Subversion, etc.) and in wiki systems. However there are potential issues with the granularity of versioning, the complexity of versioning visible to the user and clarity of conflicts between versions from different sources.</description>
+    </item>
+</rdf:RDF>

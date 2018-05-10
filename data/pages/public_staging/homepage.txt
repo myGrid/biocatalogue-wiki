@@ -1,0 +1,106 @@
+~~NOTOC~~
+
+<html>
+<style type="text/css">
+
+.box_biocatinfo {
+background: #E9F7CC;
+border: 1px solid #DDD;
+color: #333333;
+padding: 0.4em 1.2em;
+margin: 0;
+margin-bottom: 1em; 
+}
+
+</style>
+
+<div style="overflow:auto; line-height: 1.5;">
+
+<div class="box_biocatinfo" style="float: left; width: 78%;">
+
+<img src="http://www.biocatalogue.org/images/logo.png" alt="BioCatalogue Logo" style="float:right; margin-left: 2.5em; margin-bottom: 1.5em;" />
+
+<p style="font-weight: bold; font-size: 115%; margin-top: 0.7em; text-align:left;">
+The BioCatalogue is a registry of biological Web Services. <a href="http://www.biocatalogue.org" target="_blank">The BioCatalogue website</a> is freely accessible to the world as it is searchable and indexable to search engines. It provides an open platform for biological Web Services registration, annotation and monitoring. 
+</p>
+
+<p style="margin-bottom: 0.4em; margin-top: 1.5em;">
+<b>Our Goals:</b>
+</p>
+
+<ul style="margin-top: 0.4em; margin-bottom: 1.2em; color: black;">
+<li>Provide a single registration point for Web Service providers and a single search site for scientists and developers.</li>
+<li>Provide a curated catalogue of life science web services</li>
+<li>Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.</li>
+<li>BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.</li>
+</ul>
+
+<p style="text-align:left;">
+The BioCatalogue is a BBSRC funded project and has been running since 1st June 2008. The project is a joint venture between the EMBL-EBI (led by Rodrigo Lopez) and the myGrid project at the University of Manchester (led by Carole Goble).
+</p>
+
+</div>
+
+<div style="float: right; width: 16%; font-weight: bold;">
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:pilot">The BioCatalogue</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap">The Roadmap</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:team">The Team</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:focus_group">The Focus Group</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:friends">Our Partners</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:publication_list">Publications</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:faq">FAQ</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:help">Help Pages</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:related_links">Related Links</a>
+</p>
+
+<p>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:for_developers">For Developers</a>
+</p>
+
+</div>
+
+</div>
+
+</html>
+
+===== How To Get Involved =====
+
+To be kept up-to-date of the development of the BioCatalogue, please join the **[[http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&A=1|BioCatalogue-Friends Mailing List]]**
+
+===== News & Events =====
+  * The BioCatalogue presented at the [[http://www.rothamsted.bbsrc.ac.uk/bab/conf/ib2010/absposters.php | 2010 International Symposium on Integrative Bioinformatics]] in Cambridge, UK, March
+
+[[public:news|See all News & Events]]
+
+
+===== Latest Site Announcements =====
+
+{{rss>http://www.biocatalogue.org/announcements.atom 10 author date 1h }}
+
+[[http://www.biocatalogue.org/|More]]

@@ -1,0 +1,48 @@
+Date: Monday 22 Nov 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+===== Attending ===== 
+
+**Manchester:** 
+
+**EBI:**
+ 
+===== Apologies =====
+====== Agenda ======
+
+  * Actions from the last telcon
+  * BioCatalogue annual report
+  * BioCatalogue Users' Survey
+  * DAS services in BioCatalogue
+  * Daily operations Report
+  * Planning BioCatalogue release this week 
+ 
+===== Actions from Previous Meeting =====   
+  * Carole to clarify Embrace requirement with Steve
+  * Eric to speak to Andy Jenkinson about DAS and report on feasibility
+  * Frank to speak to Rob about survey and send update to list
+  * Jits to bring API work to releasable state
+  * Carole to speak to BBSRC about yearly report
+  * Testing of the Mass Curation App 
+  
+
+===== Upcoming Meetings =====    
+
+===== AOB =====
+
+Book chapter for BioCatalogue
+
+===== Minutes =====
+
+====== New actions ====== 
+
+  * Eric to put maintenance banner on the site 
+  * Franck: send the user survey 
+  * Eric to send his report on DAS service to the mailing list 
+
+Previous meeting: [[Meetings:PhoneConf:2010-11-08|Phone Conference Meeting on 8 Nov 2010]]

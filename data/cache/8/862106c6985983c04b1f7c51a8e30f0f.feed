@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <image rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico" />
+       <dc:date>2009-06-01T12:29:27+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-05-18&amp;rev=1243853013&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-06-03&amp;rev=1243852945&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:home&amp;rev=1243852638&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1243847945&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:team&amp;rev=1243847826&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:biocatalogue_faq&amp;rev=1243614812&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:caching&amp;rev=1243612840&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:codebase_guidelines&amp;rev=1243600983&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development&amp;rev=1243593570&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public&amp;rev=1243523301&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:strategy_advisory_board_mar_09&amp;rev=1243508877&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <url>http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-05-18&amp;rev=1243853013&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-01T11:43:33+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>meetings:phoneconf:2009-05-18</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-05-18&amp;rev=1243853013&amp;do=diff</link>
+        <description>Date: Monday 18th May 2009
+
+Time: 15:00-16:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester:  Jits, Franck, Steve
+
+
+EBI: Eric, Thomas, Rodrigo
+
+Apologies
+
+Carole
+
+Minuting
+
+
+Franck
+
+	*  Actions from the last telcon
+	*  Update on EMBRACE work, post AGM - SRP
+	*  Hackathon summary 
+	*  Annotation model document
+	*  Progress/developement of the pilot - are we rolling?
+		*  Report back from silent public release</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-06-03&amp;rev=1243852945&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-01T11:42:25+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>meetings:phoneconf:2009-06-03</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:2009-06-03&amp;rev=1243852945&amp;do=diff</link>
+        <description>Date: Wednesday 03rd June 2009
+
+Time: 14:00-15:00 (UK)
+
+
+
+Telcon No: 08445805588
+
+Pin: 70503011
+
+
+Attending
+
+
+Manchester:  
+
+
+EBI: 
+
+Apologies
+
+Minuting
+
+	*  Actions from the last telcon
+	*  Progress/developement of the beta
+	*  Test infrastructure setup at EBI and progress of service testing/monitoring piece.
+	*  Technical meeting 
+		*  Summary of tasks on Rubyforge 
+		*  BioCatalogue support review
+		*  20 Questions analysis</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:home&amp;rev=1243852638&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-01T11:37:18+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>meetings:phoneconf:home</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:phoneconf:home&amp;rev=1243852638&amp;do=diff</link>
+        <description>*  Phone Conference Meeting on May 13 2008
+	*  Phone Conference Meeting on Jun 03 2008
+	*  Phone Conference Meeting on Jun 13 2008
+	*  Phone Conference Meeting on Jun 24 2008
+	*  Phone Conference Meeting on Jul 08 2008
+	*  Phone Conference Meeting on Jul 15 2008
+	*  Phone Conference Meeting on Aug 01 2008
+	*  Phone Conference Meeting on Aug 08 2008
+	*  Phone Conference Meeting on Sept 19 2008
+	*  Phone Conference Meeting on Sept 30 2008
+	*  Phone Conference Meeting on Oct 07 2008
+	*  Phone Confe…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1243847945&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-01T10:19:05+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:pilot_dev_notes</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:pilot_dev_notes&amp;rev=1243847945&amp;do=diff</link>
+        <description>This page should be used to document (or link to) design decisions, data models, plugins/gems used and so on, during the development of the Pilot.
+
+Codebase Guidelines
+
+
+See: codebase_guidelines
+
+Gems (need to be installed seperately)
+
+	*  nkallen-cache-money</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:team&amp;rev=1243847826&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-06-01T10:17:06+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public:team</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:team&amp;rev=1243847826&amp;do=diff</link>
+        <description>*  Carole Goble: Project lead, Manchester.
+	*  Rodrigo Lopez: Project lead, EBI. 
+	*  Hamish McWilliam: Service manager, EBI. 
+	*  Thomas Laurent: Software engineer, EBI.
+	*  Eric Nzuobontane: Software engineer, EBI.
+	*  Jiten Bhagat: Software engineer, Manchester.
+	*  Franck Tanoh: Bioinformatician and curator, Manchester.
+	*  Katy Wolstencroft: Bioinformatician, Manchester.</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:biocatalogue_faq&amp;rev=1243614812&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T17:33:32+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>development:biocatalogue_faq</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:biocatalogue_faq&amp;rev=1243614812&amp;do=diff</link>
+        <description>This is the BioCatalogue FAQ ... to start, I'll list the questions then assign them to members of the team ---
+
+	*  Why BioCatalogue?
+
+While biologist and Bioinformatician find the use of web services critical for their work, they also encounter a number of difficulties associated with the current state of many services and the access to these services. These problems include:</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:caching&amp;rev=1243612840&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T17:00:40+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:caching</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:caching&amp;rev=1243612840&amp;do=diff</link>
+        <description>*  cache-money gem to handle AR caching
+
+Dev Setup
+
+	*  You will need to install memcached (you can also install a cluster of these).
+	*  Then update your /lib/initializers/biocat_local.rb with caching settings from /lib/initializers/biocat_local.rb.pre
+	*  Copy /config/memcache.yml.pre to /config/memcache.yml and configure accordingly</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T15:09:58+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public:howto:annotation</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:annotation&amp;rev=1243606198&amp;do=diff</link>
+        <description>Anytime you see this icon  Click on it; a text box will pop up. Add your description and submit. Note that you need to sign in first before you can annotate a web service in BioCatalogue.</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T15:02:34+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public:howto</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto&amp;rev=1243605754&amp;do=diff</link>
+        <description>How to submit a soaplab service to the BioCatalogue?
+
+How to submit a SOAP service to BioCatalogue?
+
+How to add descriptions to web services in the BioCatalogue?</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:codebase_guidelines&amp;rev=1243600983&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T13:43:03+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:codebase_guidelines</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:codebase_guidelines&amp;rev=1243600983&amp;do=diff</link>
+        <description>The BioCatalogue codebase is:
+
+	*  hosted on Rubyforge (&lt;http://rubyforge.org/projects/biocatalogue/&gt;)
+	*  licensed under the BSD license
+	*  uses Subversion (SVN) (repository info: &lt;http://rubyforge.org/scm/?group_id=6901&gt;)
+	*  mainly written in Rails 2.2.2</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development&amp;rev=1243593570&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-29T11:39:30+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development&amp;rev=1243593570&amp;do=diff</link>
+        <description>Pilot
+
+Requirements
+
+	*  Requirements (for Oct '08)
+	*  Revised Requirements (for Apr '09)
+	*   Content Requirements for Pilot
+	*  Expected performance, scalability, support and so on for the Pilot
+	*  Embrace Registry Capabilities
+	*  20 Questions</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public&amp;rev=1243523301&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-28T16:08:21+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public&amp;rev=1243523301&amp;do=diff</link>
+        <description>BioCatalogue
+
+
+
+BioCatalogue is a BBSRC funded project and has been running since 1st June 2008. The project is a joint venture between the EMBL-EBI (led by Rodrigo Lopez) and the myGrid project at the University of Manchester (led by Carole Goble).</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:strategy_advisory_board_mar_09&amp;rev=1243508877&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-28T12:07:57+01:00</dc:date>
+        <dc:creator>tlaurent</dc:creator>
+        <title>meetings:strategy_advisory_board_mar_09</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=meetings:strategy_advisory_board_mar_09&amp;rev=1243508877&amp;do=diff</link>
+        <description>Date: 20th March 2009
+
+Location: University of Manchester
+
+Attending: Carole Goble, Jiten Bhagat, Steve Pettifer, Franck Tanoh, Rodrigo Lopez, Thomas Laurent, Eric Nzuobontane, Chris Rawlings, Anil Wipat, Jo Dicks, Steve Kemp, Antoine H.C. van Kampen, Holger Lausen, Terry Payne</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-27T11:18:54+01:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public:howto:soap</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=public:howto:soap&amp;rev=1243419534&amp;do=diff</link>
+        <description>Given that most existing SOAP services have a WSDL document, registering a SOAP service entry into the BioCatalogue requires only the WSDL url. The BioCatalogue WSDL parser automatically structures the data from the WSDL file into the BioCatalogue conformant format.</description>
+    </item>
+</rdf:RDF>

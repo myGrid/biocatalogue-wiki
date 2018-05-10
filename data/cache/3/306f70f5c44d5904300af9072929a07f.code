@@ -1,0 +1,24 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;tags</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sort</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort&quot;</span> <span class="re0">urlValue</span>=<span class="st0">&quot;counts&quot;</span><span class="re2">&gt;</span></span>Counts<span class="sc3"><span class="re1">&lt;/sort<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    ...  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;tag</span> ... <span class="re0">resourceType</span>=<span class="st0">&quot;Tag&quot;</span> ...<span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Tag - <span class="sc1">&amp;lt;</span>http://www.mygrid.org.uk/mygrid-moby-service#simpleParameter<span class="sc1">&amp;gt;</span><span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span><span class="sc1">&amp;lt;</span>http://www.mygrid.org.uk/mygrid-moby-service#simpleParameter<span class="sc1">&amp;gt;</span><span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;displayName<span class="re2">&gt;</span></span></span>simpleParameter<span class="sc3"><span class="re1">&lt;/displayName<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;totalItemsCount<span class="re2">&gt;</span></span></span>1203<span class="sc3"><span class="re1">&lt;/totalItemsCount<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+        ...
+      <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/tag<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;next</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/tags?page=2&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Tags&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Next page of results&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/tags<span class="re2">&gt;</span></span></span>

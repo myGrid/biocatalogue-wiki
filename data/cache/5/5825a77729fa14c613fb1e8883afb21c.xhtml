@@ -1,0 +1,131 @@
+
+
+
+<h2><a name="integrating_das_services_into_biocatalogue" id="integrating_das_services_into_biocatalogue">Integrating DAS Services into BioCatalogue</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Integrating DAS Services into BioCatalogue" [1-56] -->
+<h3><a name="about_das" id="about_das">About DAS</a></h3>
+<div class="level3">
+
+<p>
+The DAS registration service provides a repository for registry and discovery of DAS (Distributed Annotation System) services. DAS servers are described with meta data like who is providing a server, what DAS commands are being understood by it, what type of data is being provided, etc. DAS style <acronym title="Extensible Markup Language">XML</acronym>-http as well as <acronym title="Simple Object Access Protocol">SOAP</acronym> based web services can be used to interact with the DAS registry. This is used by DAS clients like EnsEMBL, SPICE, or Dasty to retrieve the list of available services.
+</p>
+
+<p>
+More information about a DAS registry can be found <a href="http://www.dasregistry.org/" class="urlextern" target="_blank" title="http://www.dasregistry.org/"  rel="nofollow"> here</a>
+
+</p>
+
+</div>
+<!-- SECTION "About DAS" [57-657] -->
+<h3><a name="registry_sources_interface" id="registry_sources_interface">Registry Sources Interface</a></h3>
+<div class="level3">
+
+<p>
+
+The DAS registry can return an xml representation of all the sources(services) in the DAS registry. The sources currently available in the DAS registry can be accessed <a href="http://www.dasregistry.org/das/sources" class="urlextern" target="_blank" title="http://www.dasregistry.org/das/sources"  rel="nofollow">here</a>. We can parse this xml file to register DAS services in BioCatalogue
+
+</p>
+
+</div>
+<!-- SECTION "Registry Sources Interface" [658-980] -->
+<h3><a name="importing_das_services_into_biocatalogue" id="importing_das_services_into_biocatalogue">Importing DAS services into BioCatalogue</a></h3>
+<div class="level3">
+
+<p>
+
+It appears that it would be better to sync with the DAS registry periodically and not to allow individual DAS sources to be registered (Though since DAS sources are rest services, one could argue that they may be registered as rest services). This would mean that when things are added/deleted from the DAS registry, they will also be add/deleted from the BioCatalogue during the next sync process.
+</p>
+
+</div>
+
+<h4><a name="format_of_das_source_xml" id="format_of_das_source_xml">Format of DAS source XML</a></h4>
+<div class="level4">
+
+<p>
+
+The DAS sources xml file could contain a number of DAS sources with the source having a format as below
+</p>
+<pre class="code">
+
+&lt;SOURCES&gt;
+  &lt;SOURCE uri=&quot;DS_111&quot; title=&quot;cath&quot; doc_href=&quot;http://cathdb.info&quot; description=&quot;The CATH database annotates PDB  structures with CATH structural domains  as derived from a combination of  automatic and manually methods.&quot;&gt;
+    &lt;MAINTAINER email=&quot;sillitoe@biochem.ucl.ac.uk&quot; /&gt;
+    &lt;VERSION uri=&quot;DS_111&quot; created=&quot;2005-03-21T16:30:26+0000&quot;&gt;
+      &lt;COORDINATES uri=&quot;http://www.dasregistry.org/dasregistry/coordsys/CS_DS7&quot; source=&quot;Protein Structure&quot; authority=&quot;PDBresnum&quot; test_range=&quot;5pti&quot;&gt;PDBresnum,Protein Structure&lt;/COORDINATES&gt;
+      &lt;CAPABILITY type=&quot;das1:features&quot; query_uri=&quot;http://cathdb.info:9000/das/cath_pdb/features&quot; /&gt;
+      &lt;PROP name=&quot;label&quot; value=&quot;BioSapiens&quot; /&gt;
+      &lt;PROP name=&quot;label&quot; value=&quot;eFamily&quot; /&gt;
+      &lt;PROP name=&quot;leaseTime&quot; value=&quot;2010-11-18T07:56:59+0000&quot; /&gt;
+      &lt;PROP name=&quot;projectHome&quot; value=&quot;http://www.biosapiens.info&quot; /&gt;
+      &lt;PROP name=&quot;projectIcon&quot; value=&quot;http://www.dasregistry.org/ProjectIcon?id=74&quot; /&gt;
+      &lt;PROP name=&quot;projectDesc&quot; value=&quot;BioSapiens is a Network of Excellence, funded by the European Union&#039;s 6th Framework Programme, and made up of bioinformatics researchers from 25 institutions based in 14 countries throughout Europe.
+
+The objective of the BioSapiens is to provide a large&quot; /&gt;
+      &lt;PROP name=&quot;projectName&quot; value=&quot;BioSapiens&quot; /&gt;
+      &lt;PROP name=&quot;spec&quot; value=&quot;DAS/1.53E&quot; /&gt;
+      &lt;PROP name=&quot;sources&quot; value=&quot;invalid&quot; /&gt;
+      &lt;PROP name=&quot;features&quot; value=&quot;valid&quot; /&gt;
+      &lt;PROP name=&quot;types&quot; value=&quot;invalid&quot; /&gt;
+    &lt;/VERSION&gt;
+  &lt;/SOURCE&gt;
+&lt;SOURCES&gt;
+
+</pre>
+
+<p>
+From the BioCatalogue side, a parser would be required for the DAS xml.
+</p>
+
+</div>
+
+<h4><a name="effect_on_biocatalogue_data_model" id="effect_on_biocatalogue_data_model">Effect on BioCatalogue Data Model</a></h4>
+<div class="level4">
+
+<p>
+
+Following the pattern which is already being used, it would make sense(actually required) to extend the BioCatalogue model with the DAS service type. This would minimize the impact on the current model and allow annotations to be layered on the DAS services in much the same way as they are done on REST/<acronym title="Simple Object Access Protocol">SOAP</acronym> service types. What attributes would be made annotatable may be determined later after discussion with the DAS people. 
+</p>
+
+</div>
+
+<h4><a name="monitoring" id="monitoring">Monitoring</a></h4>
+<div class="level4">
+
+<p>
+
+Availability monitoring for the DAS services can be done in much the same way as for REST services. The resource <acronym title="Uniform Resource Identifier">URI</acronym> would be checked for availability in the same way that other urls are being check at the moment.
+</p>
+
+</div>
+<!-- SECTION "Importing DAS services into BioCatalogue" [981-3884] -->
+<h3><a name="summary" id="summary">Summary</a></h3>
+<div class="level3">
+
+<p>
+
+The main requirements identified for the integration of DAS services are :
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Parser for parsing the DAS sources xml</div>
+</li>
+<li class="level1"><div class="li"> Extension of the BioCatalogue data model to take care of DAS specific attributes</div>
+</li>
+<li class="level1"><div class="li"> Extension of the Availability monitoring to include DAS endpoints( sources )</div>
+</li>
+<li class="level1"><div class="li"> Extension of the service updates mechanism to refresh DAS services</div>
+</li>
+<li class="level1"><div class="li"> Testing of the DAS extensions to the application</div>
+</li>
+</ul>
+
+<p>
+
+An approximate estimate for this work would be about a (man) calendar month.
+</p>
+
+</div>
+<!-- SECTION "Summary" [3885-] -->

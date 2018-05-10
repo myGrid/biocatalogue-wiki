@@ -1,0 +1,27 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;annotations</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/annotations?arm=%5B84%5D&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;filters<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;group</span> <span class="re0">name</span>=<span class="st0">&quot;Annotatables&quot;</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;type</span> <span class="re0">name</span>=<span class="st0">&quot;REST Methods&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;arm&quot;</span> <span class="re0">description</span>=<span class="st0">&quot;&quot;</span><span class="re2">&gt;</span></span>
+          <span class="sc3"><span class="re1">&lt;filter</span> <span class="re0">urlValue</span>=<span class="st0">&quot;84&quot;</span><span class="re2">&gt;</span></span>Get paths to leaves from a concept in a specific ontology version<span class="sc3"><span class="re1">&lt;/filter<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;/type<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;/group<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/filters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sortBy</span> <span class="re0">urlValue</span>=<span class="st0">&quot;created&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort_by&quot;</span><span class="re2">&gt;</span></span>Created at date<span class="sc3"><span class="re1">&lt;/sortBy<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sortOrder</span> <span class="re0">urlValue</span>=<span class="st0">&quot;desc&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort_order&quot;</span><span class="re2">&gt;</span></span>Descending<span class="sc3"><span class="re1">&lt;/sortOrder<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;page</span> <span class="re0">urlKey</span>=<span class="st0">&quot;page&quot;</span><span class="re2">&gt;</span></span>1<span class="sc3"><span class="re1">&lt;/page<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pageSize</span> <span class="re0">urlKey</span>=<span class="st0">&quot;per_page&quot;</span><span class="re2">&gt;</span></span>10<span class="sc3"><span class="re1">&lt;/pageSize<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>0<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>0<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>19792<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;filters</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/annotations/filters&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Filters&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Filters for the annotations index&quot;</span><span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;filtersOnCurrentResults</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/annotations/filters?arm=%5B84%5D&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Filters&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Filters for the annotations index that will be applied on top of the current results set&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/annotations<span class="re2">&gt;</span></span></span>

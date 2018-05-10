@@ -1,0 +1,32 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;service</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/4&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Service - DBFetch<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>DBFetch<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+  ...
+  <span class="sc3"><span class="re1">&lt;latestMonitoringStatus<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;label<span class="re2">&gt;</span></span></span>PASSED<span class="sc3"><span class="re1">&lt;/label<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;message<span class="re2">&gt;</span></span></span>All tests were successful for this service<span class="sc3"><span class="re1">&lt;/message<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;symbol</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/images/tick-sphere-50.png?1267710902&quot;</span>...<span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;smallSymbol</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/images/small-tick-sphere-50.png?1267710902&quot;</span> ...<span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;lastChecked<span class="re2">&gt;</span></span></span>2010-04-07T04:00:24Z<span class="sc3"><span class="re1">&lt;/lastChecked<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/latestMonitoringStatus<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2008-11-14T12:05:19Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;monitoring</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/4/monitoring&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Service&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;tests<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;serviceTest</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/service_tests/7&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;ServiceTest&quot;</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;testType<span class="re2">&gt;</span></span></span>
+          <span class="sc3"><span class="re1">&lt;urlMonitor<span class="re2">&gt;</span></span></span>
+            <span class="sc3"><span class="re1">&lt;url<span class="re2">&gt;</span></span></span>http://www.ebi.ac.uk/ws/services/WSDbfetch<span class="sc3"><span class="re1">&lt;/url<span class="re2">&gt;</span></span></span>
+            <span class="sc3"><span class="re1">&lt;resource</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/service_deployments/4&quot;</span> ...<span class="re2">&gt;</span><span class="re1">&lt;/resource<span class="re2">&gt;</span></span></span>
+          <span class="sc3"><span class="re1">&lt;/urlMonitor<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;/testType<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-03-09T10:52:00Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+        ...
+      <span class="sc3"><span class="re1">&lt;/serviceTest<span class="re2">&gt;</span></span></span>
+      ...
+    <span class="sc3"><span class="re1">&lt;/tests<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/monitoring<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>

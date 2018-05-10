@@ -1,0 +1,147 @@
+
+<p>
+BioCatalogue Databases<br/>
+
+<br/>
+
+The BioCatalogue runs of mysql databases that are maintained by systems group at EMBL-EBI.  The two instances that run the live and test sites are respectively mysql-biocat-prod and mysql-biocat-dev<br/>
+
+Live Database<br/>
+
+<br/>
+
+Instance Details<br/>
+
+<br/>
+
+host : mysql-biocat-prod <br/>
+
+</p>
+<pre class="code">     port : 4152\\
+     database : biocatalogue_production\\</pre>
+
+<p>
+<br/>
+
+ <br/>
+
+<br/>
+
+Admin User Credentials<br/>
+
+<br/>
+
+user     : admin <br/>
+
+</p>
+<pre class="code">password : x4uKQt6I \\</pre>
+
+<p>
+<br/>
+
+ <br/>
+
+<br/>
+
+Rails database.yml file contents<br/>
+
+<br/>
+
+development:<br/>
+
+</p>
+<pre class="code">adapter: mysql\\
+encoding: utf8\\
+database: biocatalogue_development\\
+username: admin\\
+password: x4uKQt6I\\
+host: mysql-biocat-prod.ebi.ac.uk\\
+port: 4152\\</pre>
+
+<p>
+<br/>
+
+# Warning: The database defined as &#039;test&#039; will be erased and<br/>
+
+# re-generated from your development database when you run &#039;rake&#039;.<br/>
+
+# Do not set this db to the same as development or production.<br/>
+
+test:<br/>
+
+</p>
+<pre class="code">adapter: mysql\\
+encoding: utf8\\
+database: biocatalogue_test\\
+username: admin\\
+password: x4uKQt6I\\
+host: mysql-biocat-prod.ebi.ac.uk\\
+port: 4152\\</pre>
+
+<p>
+<br/>
+
+production:<br/>
+
+</p>
+<pre class="code">adapter: mysql\\
+encoding: utf8\\
+database: biocatalogue_production\\
+username: admin\\
+password: x4uKQt6I\\
+host: mysql-biocat-prod.ebi.ac.uk\\
+port: 4152\\</pre>
+
+<p>
+<br/>
+
+ <br/>
+
+<br/>
+
+ <br/>
+
+Test Database<br/>
+
+</p>
+<pre class="code">           The database instance\\</pre>
+
+<p>
+<br/>
+
+host : mysql-biocat-dev <br/>
+
+</p>
+<pre class="code">     port : 4151\\
+     database : test_production\\</pre>
+
+<p>
+<br/>
+
+Admin user credentials<br/>
+
+<br/>
+
+user     : admin <br/>
+
+</p>
+<pre class="code">password :  89aHDYuq\\</pre>
+
+<p>
+<br/>
+
+Normal User credentials<br/>
+
+<br/>
+
+user     : biocat_user <br/>
+
+</p>
+<pre class="code">password : local_user!  \\</pre>
+
+<p>
+<br/>
+
+ <br/>
+
+</p>

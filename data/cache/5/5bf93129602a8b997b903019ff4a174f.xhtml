@@ -1,0 +1,316 @@
+
+<h1 class="sectionedit1" id="rest_api_requirements">REST API Requirements</h1>
+<div class="level1">
+
+<p>
+<em>By Sergey and Jits</em>
+</p>
+
+<p>
+At the moment the following is mainly for Taverna BioCatalogue plugin. The main priority for me is to be able to read the data first. I would like to able to read all the important data about a service (service details, operations along with inputs/outputs and data formats, most important annotations - tags, comments, etc) - this is required to complete the prototype I&#039;ve shown, make it public and get the feedback on how to start integration with Taverna. When that is done, I&#039;d like to have basic &#039;write&#039; operations - at the beginning for the annotations (tags, comments, example output data).
+</p>
+
+</div>
+<!-- EDIT1 SECTION "REST API Requirements" [1-662] -->
+<h3 class="sectionedit2" id="content">Content</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>Services index — /services.xml :</strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Enrich the services index to provide sufficient data for various listings in applications;</div>
+<ul>
+<li class="level3"><div class="li"> [Jits]: the summary XML document now contains a lot of useful data</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Include things like service name (already available), provider and very high-level monitoring (e.g. for the “traffic light” icon next to the service);</div>
+<ul>
+<li class="level3"><div class="li"> [Jits]: Not sure about provider. Is this really necessary? Also, provider is associated with a ServiceDeployment.</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Add related links - for example, link to the summary XML document</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Service details — /services/{id}.xml :</strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Inside &lt;versions&gt; element instead of &lt;instance&gt; elements use &lt;soap_instance&gt; and &lt;rest_instance&gt; to show soap/rest service info inline</div>
+<ul>
+<li class="level3"><div class="li"> [Jits]: NOTE: I&#039;ve “flattened” the &lt;versions&gt; section so that now there is no more the notion of a “ServiceVersion”.</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> This document should display just the service structure (soap/rest + all operations) – all annotations will be provided in a separate resource which is to be referenced from the &lt;related&gt; section;</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Service summary — /services/{id}/summary.xml :</strong> The idea of the summary document is to serve as a lightweight fusion of the service structure and simplified collection of annotations. This document has to supply enough information for a quick preview of a service.</div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Add resource URIs to summary (categories, service types, tags, etc)</div>
+<ul>
+<li class="level3"><div class="li"> [Jits]: Not sure what to do with service types, so left that for now.</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> &lt;names&gt; section should have the “main name” and “also known as” names distinguished - otherwise difficult to use</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Categories <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /categories</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /categories/{id} </div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Annotations <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> /annotations index (paged + filtered)</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong> Search <abbr title="Application Programming Interface">API</abbr> </strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Can&#039;t combine scope when searching (e.g. need to be able to select &#039;users&#039; and &#039;services&#039; at the same time, not just one at a time).</div>
+</li>
+<li class="level2"><div class="li"> [Jits]: All search strings will be processed using all “special characters” contained in them (e.g. wildcards, etc); to avoid this behaviour and get direct matches (“as is”), search strings need to be quoted. This will allow for proper search for WSDL URLs, etc.</div>
+</li>
+<li class="level2"><div class="li"> [Sergey]: It could be useful to add rankings to search result items. This way the client will be able to fetch multiple result pages in parallel to get all result set quicker - and rankings will allow to reconstruct the correct ordering of results independently of the order that these parallel requests deliver data to the client.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong> Lookup <abbr title="Application Programming Interface">API</abbr> </strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Need a separate <abbr title="Application Programming Interface">API</abbr> endpoint for &#039;looking&#039; up known objects by specifying their specific details. E.g. “give me an operation &#039;getQuery&#039; from WSDL &#039;<a href="http://." class="urlextern" target="_blank" title="http://."  rel="nofollow">http://.</a>..&#039;” which will return a concrete object - &lt;soapOperation&gt;..&lt;/soapOperation&gt;.</div>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="code">http://sandbox.biocatalogue.org/lookup?...</pre>
+
+<p>
+E.g.:
+</p>
+<pre class="code">http://sandbox.biocatalogue.org/lookup.xml?wsdl_location=http://ws.adaptivedisclosure.org/axis/services/IndexWS?wsdl&amp;operation_name=streamContent</pre>
+<ul>
+<li class="level1"><div class="li"> <strong>Tags <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Tag cloud data seems to be present in XML format, but the schema doesn&#039;t have details about it.</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> Can&#039;t search by tags (e.g. /tags/&lt;tag_name&gt;.xml).</div>
+</li>
+<li class="level2"><div class="li"> As discussed - only services (and their components) are taggable, but need to have an option to fetch either the actual tagged component or the parent service of that component.</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> With respect to mapping namespaces - we decided to have “namespace” and “name” attributes for each tag with the view to be able to “join” these into a full tag <abbr title="Uniform Resource Locator">URL</abbr> somehow.</div>
+</li>
+<li class="level2"><div class="li"> For /tags.xml:</div>
+<ul>
+<li class="level3"><div class="li"> <strong>[DONE]</strong> limit returned result count by default; </div>
+</li>
+<li class="level3"><div class="li"> <strong>[DONE]</strong> “limit=none” for all tags;</div>
+</li>
+<li class="level3"><div class="li"> <strong>[DONE]</strong> remove “none” option from allowed “sort” attribute value list;</div>
+</li>
+<li class="level3"><div class="li"> <strong>[DONE]</strong> add pagination of results;</div>
+</li>
+<li class="level3"><div class="li"> <strong>[DONE]</strong> higher default page size needed than for services or other objects;</div>
+<ul>
+<li class="level4"><div class="li"> At the moment this is the same as all others (ie: 10) BUT a custom per_page size can be set (max: 50).</div>
+</li>
+</ul>
+</li>
+<li class="level3"><div class="li"> add “scope” - parent services or actual tagged objects.</div>
+</li>
+<li class="level3"><div class="li"> [Jits]: mixing page / page-size and limit is not consistent. Maybe don&#039;t need limit? Instead stick with paging metaphors?</div>
+<ul>
+<li class="level4"><div class="li"> Now supports either pagination OR limit (with pagination taking precedence).</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> For /tag/&lt;tagname&gt;.xml:</div>
+<ul>
+<li class="level3"><div class="li"> In the &lt;related&gt; section add link to filtered list of objects:</div>
+<ul>
+<li class="level4"><div class="li"> <strong>[DONE]</strong> &lt;taggedServices&gt;</div>
+</li>
+<li class="level4"><div class="li"> &lt;taggedSoapOperations&gt;</div>
+</li>
+<li class="level4"><div class="li"> &lt;taggedSoapOperationInputs&gt;</div>
+</li>
+<li class="level4"><div class="li"> &lt;taggedSoapOperationOutputs&gt;</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>SOAP Operations/Inputs/Outputs <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /soap_operations/{id}</div>
+</li>
+<li class="level2"><div class="li"> /soap_operations/{id}/annotations</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /soap_inputs/{id}</div>
+</li>
+<li class="level2"><div class="li"> /soap_inputs/{id}/annotations</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /soap_outputs/{id}</div>
+</li>
+<li class="level2"><div class="li"> /soap_outputs/{id}/annotations</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Monitoring <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> To start with it would be good to have a very basic service state in service summary (and then in service details) document.</div>
+<ul>
+<li class="level3"><div class="li"> [Jits]: there is now a &lt;latestMonitoringStatus&gt; as part of the core elements of &lt;service&gt;.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Service Providers <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /service_providers</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /service_providers/{id}</div>
+</li>
+<li class="level2"><div class="li"> /service_providers/{id}/annotations</div>
+</li>
+<li class="level2"><div class="li"> /service_providers/{id}/annotations_by</div>
+</li>
+<li class="level2"><div class="li"> /service_providers/{id}/services</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Registries <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /registries</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /registries/{id}</div>
+</li>
+<li class="level2"><div class="li"> /registries/{id}/annotations</div>
+</li>
+<li class="level2"><div class="li"> /registries/{id}/annotations_by</div>
+</li>
+<li class="level2"><div class="li"> /registries/{id}/services</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Users <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /users</div>
+</li>
+<li class="level2"><div class="li"> <strong>[DONE]</strong> /users/{id}</div>
+</li>
+<li class="level2"><div class="li"> /users/{id}/annotations_by</div>
+</li>
+<li class="level2"><div class="li"> /users/{id}/service</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Write <abbr title="Application Programming Interface">API</abbr></strong></div>
+<ul>
+<li class="level2"><div class="li"> Ideally, all parts of the <abbr title="Application Programming Interface">API</abbr> should support &#039;write&#039; operation;</div>
+</li>
+<li class="level2"><div class="li"> The first priority is to be able to submit annotations of various kinds to existing services (e.g. tags, documentation URLs, sample output data, ports of operations, etc);</div>
+</li>
+<li class="level2"><div class="li"> Possibly service submission via the <abbr title="Application Programming Interface">API</abbr> could be useful;</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Content" [663-6770] -->
+<h3 class="sectionedit3" id="other">Other</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> All annotatable resources must have an {resource_type}/{id}/annotations endpoint and subsequent links in main docs</div>
+</li>
+<li class="level1"><div class="li"> All annotation source resources must have an {resource_type}/{id}/annotations_by endpoint and subsequent links in main docs</div>
+</li>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> There&#039;s no mention - anywhere in the returned data - of what the actual size of the search results page is (currently it&#039;s set to 10). Also, can&#039;t request a specific number of items - by this I mean that the results page size could be variable - this way the user could select that 25 results at a time should be fetched, and on request of the next results page the next 25 would be returned (by following a link in the &lt;related&gt; section).</div>
+</li>
+<li class="level1"><div class="li"> Not all the resources can always be reached by following &#039;related&#039; links - it would be very useful if a convention existed to aid generation of links within applications. Especially required for filtering and searching. It can be manually done now using &#039;urlKey&#039; values for filtering, for example.</div>
+<ul>
+<li class="level2"><div class="li"> <strong><em>[Jits - 2009-10-27]</em></strong> Having this type of convention goes against the principles of REST, but there are notable exceptions like for filtering. Could you give examples of resources that cannot be reached by following &#039;related&#039; links? That way I can add them as related links. In some cases I would have to create a convention (eg: for sorting).</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Another requirement is that the content of the XML documents should correspond to the XSD schema, otherwise it is unreachable from applications via automatic binding.</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Other" [6771-8319] -->
+<h3 class="sectionedit4" id="feature_request_priority">Feature Request Priority</h3>
+<div class="level3">
+<ol>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> Basic monitoring data in the service summary item.</div>
+<ul>
+<li class="level2"><div class="li"> [Jits]: This is now part of core elements of &lt;service&gt;</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> “Lookup” endpoint.</div>
+</li>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> Full tags <abbr title="Application Programming Interface">API</abbr> - I will need to have this in order to finish with the search functionality in the prototype.</div>
+<ul>
+<li class="level2"><div class="li"> [Jits]: I&#039;ve done most of the things required, except for the taggedOperations, taggedOperationInputs and taggedOperationOutputs.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> Basic support for retrieving information about users, providers and registries - so that it would be possible to click through to these from the search results.</div>
+</li>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> Ability to combine search scopes for regular “search by query”.</div>
+</li>
+<li class="level1"><div class="li"> <strong>[DONE]</strong> Ability to get full information about service operations (inputs, outputs, data types, etc).</div>
+</li>
+<li class="level1"><div class="li"> Annotations <abbr title="Application Programming Interface">API</abbr> - ability to fetch all available annotations about a service</div>
+</li>
+<li class="level1"><div class="li"> Write <abbr title="Application Programming Interface">API</abbr> - ability to contribute service annotations first</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT4 SECTION "Feature Request Priority" [8320-9284] -->
+<h3 class="sectionedit5" id="for_api_documentation">For API Documentation</h3>
+<div class="level3">
+<ol>
+<li class="level1"><div class="li"> Explain in detail that Services found by tags might be tagged on any their part (e.g. service itself, operations, ports, etc); however, tags on other objects (like operations, ports, etc) would only be &#039;direct matches&#039; - meaning that it&#039;s that object itself which was tagged.</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT5 SECTION "For API Documentation" [9285-] -->

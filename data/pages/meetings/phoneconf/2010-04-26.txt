@@ -1,0 +1,50 @@
+Date: Monday 26th April 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Franck, Jits, Mannie
+
+**EBI:** Eric, Rodrigo
+
+===== Apologies =====
+
+====== Agenda ======
+
+  * Actions from the last telecom
+  * Progress report 
+     * Review of Monitoring & Curation    
+  * Publicity/outreach
+      * Integrative Bioinformatics March 22-24 in Cambridge (Poster accepted)
+      * Plan for ISMB and ECCB 2010? 
+      * EMBRACE service provider workshop
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Jits/Mannie: Service update checker (WSDL checker)
+  * Eric: remove orphaned service providers
+  * Eric: Fix ‘localhost’ provider
+  * Franck: Roster of people to contact for service providers and the material   
+  * required to do that. 
+  * Jits/Mannie: Write API and Mass curation tool via spreadsheets
+
+===== Upcoming Meetings =====  
+
+===== AOB ===== 
+
+===== Minutes =====
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2010-04-19|Phone Conference Meeting on Apr 19 2010]]
+
+Next meeting: 

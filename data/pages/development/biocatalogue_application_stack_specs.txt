@@ -1,0 +1,73 @@
+Host Servers(Live & Test)\\
+\\
+    Operating System : CentOS release 5.5 (Final) x86_64\\
+    Virtual Machine     : KVM\\
+    Virtual CPU            : 1\\
+    RAM                        : 2 GB  (can be easily increased)\\
+    Local Disk              : 20 GB\\
+    File system             : NFS (has access to TB sized file system) \\
+\\
+Search Server\\
+\\
+On each of the servers there is also a Tomcat running localhost:8080 which hosts the solr application. The solr application is used for the search and apart form reading there are also writes happen. This means only one Tomcat server on the live machines can be active at a time. This is done through the Zeus load balancer by configuring an active/passive setup.\\
+\\
+    Tomcat 6.0.26\\
+    Java 1.6.0_20\\
+    Solr 1.3.0\\
+\\
+    test instance -Xms256m -Xmx512m\\
+    prod istance -Xms1024m -Xmx1024m\\
+\\
+Ruby\\
+\\
+We use the Ruby Enterprise Edition as the Ruby runtime. It is installed on NFS under /nfs/public/rw/webadmin/ruby.\\
+\\
+    Ruby (ruby-enterprise-1.8.7-2010.02 ) 1.8.7\\
+\\
+ \\
+\\
+live:\\
+ruby -v\\
+ruby 1.8.7 (2010-04-19 patchlevel 253) [x86_64-linux], MBARI 0x6770, Ruby Enterprise Edition 2010.02\\
+gem -v\\
+1.3.7\\
+\\
+test:\\
+ruby -v\\
+ruby 1.8.7 (2010-04-19 patchlevel 253) [x86_64-linux], MBARI 0x6770, Ruby Enterprise Edition 2010.02\\
+gem -v\\
+1.3.7\\
+\\
+Memcache\\
+\\
+We are using the memcahed provided by the EPEL repository.\\
+\\
+    Memached 1.4.5\\
+    PORT 11211\\
+    CACHESIZE 256MB\\
+\\
+Apache\\
+\\
+There are different ways to host Ruby on Rails application but we choose to use mod_rails which is an Apache module. The Apache is the standard installation provided by Centos 5.5.  \\
+\\
+    Apache 2.2.3 \\
+    passenger 2.2.15 (mod_rails)\\
+\\
+MySQL\\
+\\
+The MySQL database are managed by the DBA team (dba@ebi.ac.uk) in the systems group. There are tow MySQL instances:\\
+\\
+    live (host = mysql-biocat-prod.ebi.ac.uk port = 4152) \\
+    test (host = mysql-biocat-dev.ebi.ac.uk port = 4151)\\
+\\
+Both versions are running MySQL Community Server 5.0.41 . \\
+Test Harness Server\\
+\\
+The test server is running untrusted scripts so we create a one off Linux machine running Fedora 14. fedora was chosen since it offers a lot more and newer \\
+packages for  dynamic languages. The box has no NFS mounted and is kept as isolate as possible. Still this part of the infrastructure is risk for the general security.\\
+Firewall and Proxy Configuration\\
+\\
+The Virtual machines are protected through a firewall which is managed by systems. Systems also provides proxy server (http://www-proxy.ebi.ac.uk:3128) \\
+which must be used by applications if the want to connect to remote hosts with http(s). This restrictions are in place to stop intruders to reload code \\
+from remote hosts if the manage to compromise a web application. This settings also mean that one cannot use any other TCP based protocols (git, twitter, etc)\\
+apart form http(s).\\

@@ -1,0 +1,17 @@
+====== Catalogue Browsing ======
+
+For some user searches and for a variety of administration and testing tasks it is useful to be able to browse the catalogue in a number of ways:
+  - Index, possibly with filtering term searches:
+    - service names
+    - user tags
+    - descriptive ontology terms
+    - type of service (SOAP, REST, DAS...)
+    - Resource used 
+    - Result produced 
+  - Directory:
+    - taxonomy of services
+    - by organisation
+    - by country
+    - type of service (SOAP, REST, DAS...)
+    - by ratings ?
+    - by QoS ?

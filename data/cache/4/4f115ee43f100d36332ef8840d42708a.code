@@ -1,0 +1,27 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;service</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/4&quot;</span> <span class="re0">xmlns:xlink</span>=<span class="st0">&quot;http://www.w3.org/1999/xlink&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Service - DBFetch<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>DBFetch<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+  ...
+  <span class="sc3"><span class="re1">&lt;summary</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/services/4/summary&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Service&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;counts<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;deployments<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/deployments<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;variants<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/variants<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;metadata</span> <span class="re0">by</span>=<span class="st0">&quot;users&quot;</span><span class="re2">&gt;</span></span>94<span class="sc3"><span class="re1">&lt;/metadata<span class="re2">&gt;</span></span></span>
+      ...
+    <span class="sc3"><span class="re1">&lt;/counts<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;alternativeName<span class="re2">&gt;</span></span></span>WSDbfetch (SOAP)<span class="sc3"><span class="re1">&lt;/alternativeName<span class="re2">&gt;</span></span></span>
+    ...
+    <span class="sc3"><span class="re1">&lt;location<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;city<span class="re2">&gt;</span></span><span class="re1">&lt;/city<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;country<span class="re2">&gt;</span></span></span>United Kingdom<span class="sc3"><span class="re1">&lt;/country<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;iso3166CountryCode<span class="re2">&gt;</span></span></span>GB<span class="sc3"><span class="re1">&lt;/iso3166CountryCode<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;flag</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/images/flags/gb.png?1267710900&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Flag icon for this location&quot;</span><span class="re2">&gt;</span><span class="re1">&lt;/flag<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/location<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;documentationUrl<span class="re2">&gt;</span></span></span>http://www.ebi.ac.uk/Tools/webservices/services/dbfetch<span class="sc3"><span class="re1">&lt;/documentationUrl<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/summary<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>

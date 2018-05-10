@@ -1,0 +1,18 @@
+=== Service Life Cycle States ===
+
+Web Service go through an existence life cycle with different states which need to be reflected in BioCatalogue. These states may include:
+  * development
+  * production
+  * deprecated
+  * discontinued
+  * dead
+
+To allow BioCatalogue to handle these states, the following requirements will need to be met:
+
+  - A service in BioCatalogue will be in one and only one state at a time
+  - A user with the correct permissions will be able to change the state of a service
+  - The state of the service will be displayed as a badge
+  - The 'state badge' will be clickable and will return all services in that state
+  - When a change state of a service occurs, information about the user that made the change should be recorded
+  - A notification may be sent out to designated people when a change of state occurs
+  

@@ -1,0 +1,110 @@
+====== Meeting Agenda/Minutes ======
+
+Date: Tuesday 30th September 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** Franck, Carole, Jits, Mike, Paolo
+
+**EBI:** Eric, Thomas
+
+===== Apologies =====
+Katy, Hamish, Rodrigo 
+
+===== Minuting =====
+Franck
+
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Report from Eric's last visit.
+
+  * Progress with the pilot - are we rolling? What is plan B?
+
+  * Wish list for after the pilot (discuss):
+        * Plugins for myexperiment.
+        * Service testing.
+        * Integration with Taverna.
+
+  * AOB.
+
+
+===== Actions from Previous Meeting ===== 
+
+  * Jits: setup a developer design meeting. **Completed**
+  * Jits: Speak to Dave about the new privacy policy in myExperiment **Ongoing**
+  * Everyone: read EBI privacy policy. **Ongoing**
+  * Jits/Thomas: discuss UI coordination. ** Completed**
+  * Eric/Jits: Agree on a date for Eric's visit in Manchester. **Completed**
+  * Thomas : Add the questionnaire to the website. It was decided to drop this action as the pilot is weeks away. **To Be removed**
+ 
+====== Minutes ======
+ === Report from Eric's last visit ===
+ Investigated the Taverna WSDL parser for complex type services but did not find it useful for the pilot. 
+ It was decided that we'll handle complex type service latter on after the pilot. 
+ Eric/Franck/Jits also discussed the handling of services instances. 
+ For SOAP services, Service instance will be based on the WSDL location; each instance can have several versions. 
+ Annotations of a service instance can apply to multiple version. 
+ Eric and Jits did some coding. 
+ 
+ === Progress with the pilot: are we rolling? What is plan B? ===
+
+ No plan B! We've go to deliver the pilot. At worse delay it. 
+Eric working on the submission piece. Jits looking at updating data model, based on latest disucssions, and looking at service mapping and generation of unique service code which could
+be used by myExperiment or Taverna to refer to a specific service in the catalogue. 
+ Thomas has completed the logging mechanism which required user name and password. He added few changes to the UI. 
+
+ Support for annotation being very essential for the pilot, Jits will take more time on doing that than the integration to myExperiment. The latter can be scheduled after the pilot.
+
+ It will be politically incorrect not to support BioMoby services. We don't have to have the ontology at this stage but they may be a possibility to just get all their services and treat the ontology terms as tags. We can find out if Eddy can help. 
+
+===  Evaluation strategy for the pilot ===
+
+  * Mark Wilkinson will be in Manchester so will test it as a provider 
+  * We'll advertise or demo the pilot at the Semantic web service in November 
+  * Show and tell at the EBI
+  * Show and tell in Manchester
+  * Testing by our PALS and friends.
+
+**Continued on: [[Development:eval_strategy_pilot|Evaluation strategy for the pilot]]**
+
+ === Wish list for after the pilot ===
+ 
+We need a clear roadmap after the pilot to tell people what to expect next.
+Some element for the roadmap: 
+              * workflow monitor
+              * usage metrics collection 
+              * notifications
+              * BioMoby support 
+              * Other service type support (Rest...)
+              * Similarity search mechanism
+              * Amazon like search mechanism
+              * Semantic annotation and search mechanism
+**Continued on: [[Development:Roadmap|RoadMap ]]**
+
+Paolo was more interested in the semantic annotation side of the catalogue. He wanted to know if BioCatalogue will 
+support SAWSDL services. Carole suggested that it should be possible to query the catalogue with a SAWSDL interface. 
+  
+
+===== New Actions =====
+  
+ * Gather the Must Could Should Won't requirements (Done: [[Development: Requirements for Pilot]])
+
+  
+
+===== Next Meeting =====
+
+Tues 07/10/2008
+
+===== Upcoming Meetings ===== 
+
+===== AOB =====
+ 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-09-19|Phone Conference Meeting on Sept 09 2008]]
+
+Next meeting: [[Meetings:PhoneConf:2008-10-07|Phone Conference Meeting on Oct 7 2008]]

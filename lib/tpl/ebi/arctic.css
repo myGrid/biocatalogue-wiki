@@ -1,0 +1,78 @@
+﻿/**
+ * extra CSS for ebi-template
+ *
+ * @author Alberto Labarga <alabarga@ebi.ac.uk>
+ */
+
+div.dokuwiki div.left_sidebar div.secedit,
+div.dokuwiki div.right_sidebar div.secedit {
+    text-align:right;
+}
+
+/*
+div.dokuwiki div.left_sidebar div.breadcrumbs,
+div.dokuwiki div.right_sidebar div.breadcrumbs {
+    margin-left:0;
+}
+*/
+
+div.dokuwiki div.left_sidebar div.secedit input.button,
+div.dokuwiki div.right_sidebar div.secedit input.button {
+    float:none;
+    margin:0.1em;
+}
+/*
+div.dokuwiki div.left_sidebar h1,
+div.dokuwiki div.left_sidebar h2,
+div.dokuwiki div.left_sidebar h3,
+div.dokuwiki div.left_sidebar h4,
+div.dokuwiki div.left_sidebar h5,
+div.dokuwiki div.left_sidebar h6,
+div.dokuwiki div.right_sidebar h1,
+div.dokuwiki div.right_sidebar h2,
+div.dokuwiki div.right_sidebar h3,
+div.dokuwiki div.right_sidebar h4,
+div.dokuwiki div.right_sidebar h5,
+div.dokuwiki div.right_sidebar h6 
+{
+  font-size:__FontSize__;
+  font-family: Verdana, "Lucida Grande", Lucida, Helvetica, Arial, sans-serif;
+  font-weight:bold;
+  padding:0;
+  padding-top:0.2em;
+  padding-left:0.2em;
+  margin-top:0.5em;
+  border:none;
+}
+
+div.dokuwiki div.left_sidebar h1,
+div.dokuwiki div.right_sidebar h1
+{
+  background:__SidebarH1Bg__;
+  margin:0.2em;
+  padding-left:0.4em;
+}
+*/
+div.dokuwiki div.left_sidebar ul,
+div.dokuwiki div.right_sidebar ul 
+{
+	margin-top:0;
+}
+
+div.dokuwiki div.left_sidebar div.i_sidebar,
+div.dokuwiki div.left_sidebar div.m_sidebar,
+div.dokuwiki div.left_sidebar div.u_sidebar,
+div.dokuwiki div.left_sidebar div.g_sidebar,
+div.dokuwiki div.left_sidebar div.ns_sidebar,
+div.dokuwiki div.left_sidebar div.bc_sidebar,
+div.dokuwiki div.right_sidebar div.i_sidebar,
+div.dokuwiki div.right_sidebar div.m_sidebar,
+div.dokuwiki div.right_sidebar div.u_sidebar,
+div.dokuwiki div.right_sidebar div.g_sidebar,
+div.dokuwiki div.right_sidebar div.ns_sidebar,
+div.dokuwiki div.right_sidebar div.bc_sidebar
+{
+	border:1px solid __cLightBorder__;
+	padding:0.2em;
+	margin-bottom:0.2em;
+}

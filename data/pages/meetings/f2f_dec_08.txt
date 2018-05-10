@@ -1,0 +1,258 @@
+====== F2F Pilot Development Review - 4th December 2008 @ EBI, Cambridge ======
+
+===== Attending ======
+
+Rodrigo, Dave, Carole, Jits, Thomas, Eric, 
+
+** Notes by Dave ** 
+
+Broadly the Biocatalogue team is going to be very busy over the next 2
+months getting code functionality and content in place, with a view to a
+code freeze in March and content bootstrapped for public release of the
+pilot service in April. What with Christmas, this is all only a few weeks
+away! Hence we're not looking at many interactions with myExperiment in the
+next few weeks, but there are many touch points thereafter.
+
+- myExperiment may be able to help bootstrap the Biocatalogue content by
+providing services extracted from the growing body of workflows (mainly
+Taverna, but even perhaps Kepler on that timescale, and Trident if the
+services are in scope).  It may also be able to provide some metadata for
+the services based on the workflow metadata.
+
+- myExperiment would be able to provide, on an ongoing basis, some of the
+objective data that Biocatalogue uses to establish information about
+services that is then used to assist sorting and comparison during service
+discovery.  For example, the number of workflows that use a service could
+contribute to a popularity measure. (This is one of many possible sources -
+there will be many services on Biocatalogue that are not used by workflows
+on myExperiment.)
+
+- myExperiment will be able to query Biocatalogue for service status
+information.  Steve Pettifer illustrated his traffic light system for
+services.  MyExperiment and/or Taverna will also (in the fullness of time)
+be able to ask Biocatalogue for services that are similar to a given
+service.
+
+- There was a lot of insightful discussion today about discovery.  As
+myExperiment is gaining more content we have not yet developed the discovery
+interface further to cope with this.  Some of the ideas in today's
+discussion are directly applicable to myExperiment - such as not thinking of
+ranking of search results as much as providing an interface for comparing a
+number of workflows.
+
+- The annotation model that is being developed in Biocatalogue is a generic
+RoR 2 plugin which provides attribute-value pairs (together with an initial
+set of possible domain values for the value part). This is a generically
+reusable e-Lab component that we may be able to apply in the evolved
+myExperiment codebase. Jits is currently working on the UI. The data model
+was discussed at lenth and appears to sit comfortably with the future use of
+ontologies.
+
+- The deployment architecture of Biocatalogue has followed similar
+principles to myExperiment but has two levels of redundancy (and hardware
+load-balancing).  There is still work to be done on optimising the SOLR
+config.  It would be very useful to compare notes at some stage.
+
+- A number of lessons from myExperiment were fed into Biocatalogue today,
+including the need to track housekeeping and sysadmin data in order to
+generate stats, and some policy questions relating to content removal.
+
+Thanks very much to our hosts at EBI for a really productive meeting. 
+
+** Notes by Thomas ** 
+
+===== Progress overview =====
+
+All working together better with F2F.
+2 publications out already.
+
+Met already with half of the people on advisory board (Biomoby, Embrace...)
+
+Pbs:
+
+  * web server (solved except SOLR)
+  * manpower estimates -> be more realistic
+  * wiki & website management (content update & look and feel)
+  * documentation not transparent (especially data model) -> needs to be better for outside people
+    * wiki needs to be separated in public and developper
+    * needs UML/ER diagram for data model
+  * review activities
+  * timetable
+
+
+Steve is officially part of the team  -> now part of myGrid family, helping on lot of stuff including management
+
+Words from our users & Pals:
+
+    * ranking: usefulness, stability...
+    * testing & examples
+
+
+Service profile:
+
+    * conditions of use, e.g policy for using (no more than 200 requests/min...)
+
+
+Submit:
+
+    * some user would make an effort in providing meta-data if they could see that it'd boost them in the rankings
+    * submit a test
+    * submit a monitoring mechanism
+    * need a feed telling submitter what is their ranking -> need an automatic feedback to encourage people to go back to their service and annotate further
+    * adding meta-data via email ?
+
+    * need free text annotation (e.g description) as soon as possible
+    * tags will also provide quick and very important infos to sort, ranks and find
+
+    * manage competitiveness: do not discourage people if they've got low rankings. Need to encourage redundancy of services.
+
+
+Search:
+
+    * ranking: search & compare
+    * filter
+    * monitor
+    * review
+
+    * invoke: being able to invoke the service you found
+
+
+Ownership & 3rd party submission => very important and very careful
+If you submit a service which is not yours, you don't want to receive failure emails (should be able to opt out), that's the providers problem.
+Responsibilities have to be clearly defined (provider, submitter, tagger...).
+
+===== Current tasks: =====
+
+    * Ranking: bleed key properties into the list
+    * Should we create our own categories of services and force submitter to select one or more ?
+    * Ranking different from comparing: ranking is easy, but comparing is harder
+
+
+Needs to store queries to be able to do some performance tuning later.
+
+    * Activity audit
+    * Task audit
+
+    * Content audit
+
+
+
+How can we auto-seed the documentation/tags for services -> need to do an annotation jamboree
+
+===== Interface, architecture & functionality =====
+
+    * Need to make the difference between documentation from WSDL and user's description
+    * Be able to search on URLs (not working at the moment) -> see with Franck & Mickael
+    * On register page
+      * delete the word "optional" after "Extra information"
+      * add "instruction for use of services"
+      * "add new description" -> or "describe your service" or "describe the function of your service" (description presented to the user and indexed by search engine)
+      * box: "are you the owner of the service ?"
+      * ownership => careful to address the pb (who to contact? submitter != owner) (ownership claims, ownership confirmation, wikipedia type "I dispute this fact")
+
+What does google see ?
+
+===== Annotation plug-in =====
+
+    * will be able to annotate everything
+    * annotations will be key-value pairs
+    * seeds: pre-populated tag words for example. Where do we get the value set from ? Will probably do it later as it might get tricky to get the value set right.
+
+
+===== Monitoring, Sorting, Filtering =====
+
+    * by strong typing (db fields)
+    * by combination of values (popularity...)
+    * in 1st instance -> strong typing, but which fields do we allow users to sort on ?
+          * identify preferred fields
+          * capability of displaying
+          * subset can be pre-populated
+
+
+
+    * Objective criteria
+      * freshness (date created, date updated)
+      * reliability (test suite success, service uptime)
+      * cost
+      * performance (result from scripts, e.g. returns result in minutes,hours,days,months...)
+      * provider (provenance, certification, compliance to standards)
+      * geotagging
+      * conditions (existence of)
+      * level of annotation (documentation)
+      * is it available now (since we last checked with date time, ping this service now)
+      * nb of workflows in myExperiment using a particular WS
+
+
+    
+
+    * Subjective criteria
+          * popularity (rating, comments, measured by a feed, usage statistics)
+          * scalability ?
+
+
+How do we clean-up (e.g. major change name...) ?
+Use of data policy.
+
+Separate testing script from examples:
+
+    * core tests script by provider
+    * examples by users
+    * building a test suite later as part of the curation process
+
+Would be nice to be able to run tests in a generic way (through workflow in my Experiment).
+
+===== Next steps in the Pilot =====
+
+Steve wrote a DAS parser (BioSapiens is DAS).
+Steve has a collaborator who wrote a WSDL quality validator.
+
+DAS, REST, Generic (not from the 3 other types).
+
+3 biggies still missing:
+
+    * discovery (sorting, filtering)
+    * monitoring
+    * content scrapping (put content in)
+          * partially register WS (put a few WS from a provider, and then tell them we did and ask to take ownership and complete registration) -> we need a mechanism to change the ownership. Avoid misrepresentation. Low level checking of ownership by matching email address with url of WS.
+          * somebody registering a WS but not the owner can only do a partial registration. Need to be the owner to register tests for example.
+
+
+We need to take into account editing (owner, description), but restricted fields.
+
+**Versioning** might be put on the backburner.
+EMBRACEregistry deal with it by spotting changes in WSDL, send email to owner with links in the email you can follow: "minor change, ignore it", "major change, bring me to the page to edit documentation".
+
+
+**Public Beta** -> April to coincide with the EMBRACE exit. (code freeze in March, big population activity during March)
+
+    * no myExperiment integration
+    * no smart ranking
+    * usability stuff on web interface
+    * negotiations with providers in March
+    * start content acquisition NOW
+
+    * 7 weeks of development
+
+
+===== Data Model (Eric's slides) =====
+
+Annotation:
+    * context (service...)
+    * provenance
+    * categories of annotations
+          * provenance
+          * operational
+          * functional
+          * social
+
+
+Cloning VS versioning ?
+In the 1st phase, we should do cloning and later versioning.
+Different service deployments should be nested in the UI as they're the same version of the service.
+
+Might not have full annotations for the operations.
+
+Need a high quality of logging (usage statistics, activity...) -> setup google analytics.
+
+Usecase: user types "input protein sequence" -> needs to return services taking protein sequence as input.
+

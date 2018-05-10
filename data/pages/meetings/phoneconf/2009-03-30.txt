@@ -1,0 +1,115 @@
+Date: Monday 30th Mar 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending ===== 
+
+**Manchester:** Carole, Jits
+
+**EBI:** Rodrigo, Thomas
+
+===== Apologies =====
+
+Franck, Eric, Steve
+
+===== Minuting =====
+
+Jits
+
+====== Agenda ======
+
+   * Actions from the last telcon
+   * what next after the [[Meetings:Strategy Advisory Board Mar 09|SAB]]? 
+   * Possible collaboration with Microsoft-meeting with Rudy   
+   * Progress/developement of the pilot - are we rolling? 
+   * Test infrastructure setup at EBI         
+
+  * Technical meeting 
+    * Summary of tasks on rubyForge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+
+  * Franck: submit ISMB demo abstract by 20th April... **UNKNOWN**
+  * Carole: to talk at the BioIT meeting about our policy... **ONGOING**
+  * Rodrigo: DDBJ, NCBI – ownership and diplomacy... **ONGOING**
+  * Franck: Sourcing from ontology to be added to the task list... **UNKNOWN** 
+  * Jits: Create a mailing list for the SAB team... **ONGOING**
+
+====== Minutes ======
+
+===== Previous Actions =====
+
+Discussed the need to make proper and more comprehensive minutes for the SAB meeting. 
+
+We need a set of recommendations post SAB meeting.
+
+What were the key things from the SAB meeting?
+  * Expectation management of users and making sure BioCatalogue does not endorse any metadata that is not professionally curated.
+  * The need for better search clustering, browsing, and faceting is important, which requires more and better classification of services.
+  * Keeping providers in the loop - continual feedback and providing them with the tools to keep on top of things.
+  * Distinguish between subjective and objective opinions and make this VERY CLEAR to users.
+
+NOTE: the above list is only speculative and the final outcomes of the SAB meeting will be confirmed once full minutes are produced.
+
+Discussed what Carole needs to speak about at the BioIT meeting re policies:
+  * Policy for takedown and responsibilities.
+  * Disclaimers.
+
+**Which brings the need for users to agree to these policies/disclaimers/conditions on signup.**
+
+Discussed the BRO (Biological Resource Ontology?) from MIBBI. Rodrigo: would be useful to speak to them as the have a lot of experience.
+
+We discussed sourcing from ontologies and how we need a much better biologically oriented model of annotations so that we can make discovery of services, especially focusing on inputs, easier and more useful.
+
+Re: annotating inputs - the myGrid ontology has things in it that are important and can be used to start with.
+
+**We need to focus our attentions on this data model and get it at a stable and more useful state!** (This is the conceptual data model rather than any implementation data model).
+
+Observations about current data model and it's documentation:
+  * We need a "clean" data model showing all possible annotations and on what structures of a service.
+  * There are many missing pieces.
+  * It needs to be biologically-driven - it has to cater for our target domain and target users and provide that added value that only comes from real domain knowledge.
+  * We need a minimum information model + any constrained options for values (eg: annotation with attribute "sequence" can only take the following values "x", "y"....). This is very much about the Bronze/Silver/Gold/Platinum model, which needs to be **revisited** and continually evolved.
+  * The documentation is not clear about the whole layered approach - ie: (i) service structures + (ii) generic annotation model + (iii) concrete annotations on the service structures. We need better documentation! Especially for (iii).
+
+Rodrigo proposes that Franck goes down to the EBI for 3 days to work on data model with Eric/Rodrigo/Thomas/Hamish. **Unanimous agreement.**
+
+Carole has emailed Rudi (MS BioIT guy). Drafting a letter - "memorandum of understanding". BioCatalogue isn't a legal entity - MoU with project or per institution? Rodrigo: would have to involve EMBLEM, which we don't want to do!
+
+REST API and myExp integration are not of high priority - we need a richly populated + richly featured site first.
+
+Should be move to mod_rails/Passenger? **Unanimous agreement.**
+
+
+===== Upcoming Meetings =====
+ 
+  * [[http://projects.eml.org/sdbv/events/BiocurationMeeting/index.html|Biocuration]] meeting 16-19 april 
+
+  * ISMB - we have a poster accepted 
+
+===== AOB =====
+
+Should we change the meeting date?
+
+===== New Actions =====
+
+  * Franck: sort out wording for policies/disclaimers/conditions and figure out a plan on where to put these on the site, and where users need to be notified of these.
+  * Jits: make his notes from the SAB meeting (incl new tasks identified) available.
+  * Rodrigo, Franck: update the [[meetings:strategy_advisory_board_mar_09|SAB minutes]] and make them more comprehensive minutes.
+  * Carole: ring BBSRC programme manager to inform her that the SAB has taken place and then see what they have to say.
+  * Jits: send example FETA XML files to list, to show an example of what kind of metadata is in them.
+  * Carole: to dig out MS Word + OBOE plugin/tool.
+  * Steve, Eric: provide an update on what is happening with the test scripts execution environment.
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-03-16|Phone Conference Meeting on Mar 16 2009]] 
+
+Next meeting: [[Meetings:PhoneConf:2009-04-07|Phone Conference Meeting on Apr 07 2009]] 

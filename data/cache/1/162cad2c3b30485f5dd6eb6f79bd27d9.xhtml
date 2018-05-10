@@ -1,0 +1,290 @@
+
+
+
+<h1><a name="annotations_plugin" id="annotations_plugin">Annotations Plugin</a></h1>
+<div class="level1">
+
+<p>
+
+Available here: <a href="http://github.com/jits/annotations" class="urlextern" target="_blank" title="http://github.com/jits/annotations"  rel="nofollow">http://github.com/jits/annotations</a> (with full documentation)
+</p>
+
+<p>
+IMPORTANT: you have to create a controller and model for annotations again in your app (but leaving them blank is fine though they can be used to extend the original ones from the plugin. AND use require_dependency (see examples of usage in BioCatalogue).
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Controller depends on the presence of login_required, logged_in? and current_user methods (these should be in your application controller). The current_user method MUST return nil if no user is currently logged in.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Whilst running in development mode, if you get an error such as: ”<em>A copy of ApplicationController has been removed from the module tree but is still active!</em>”, then restart your server. This is due to the way Rails autoloads files in development mode, which affects the plugin and any extensions in the main app (eg: {app_root}/app/models/annotation.rb).</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Attributes are NOT case-sensitive! (ie: &#039;description&#039; and &#039;Description&#039; will be the same AnnotationAttribute entity and therefore all annotations with those will be the same type od annotation).</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>TODO</strong>: mention how to override controller/models and the purpose of the application controller and application helper and how to get it working in the app.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Due to the way the plugin is set up, the reload behaviour of some files in development mode does not work. Specifically, any changes to the application controller and the application helper require restart of the server.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <em>annotation_add_by_popup_link</em> helper should NOT be used inside a &lt;p&gt; tag since it generates the <acronym title="HyperText Markup Language">HTML</acronym> for the popup box (in a &lt;div&gt;) and places it inline, which would break elements like &lt;p&gt;.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> When displaying the values of annotations, ALWAYS &#039;clean&#039; the data using methods like <em>h</em> (html escape), <em>sanitize</em> and <em>white_list</em>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> By default, duplicate annotations cannot be created (same value for the same attribute, on an annotatable object, regardless of source). For example: a user cannot add a description to a service that matches an existing description for that service.</div>
+<ul>
+<li class="level2"><div class="li"> If you would like to allow duplicate values then use the configuration option: <em>attribute_names_to_allow_duplicates</em></div>
+</li>
+<li class="level2"><div class="li"> NOTE: this is different to the <em>limits_per_source</em> config options, which isn&#039;t about duplicate annotations, but rather limiting the <strong>quantity</strong> of annotations of a specific attribute on a specific annotatable object by a specific source.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> When creating annotations, symbols (eg: :tag) can be used for attribute names, BUT symbols cannot be used when finding annotations (Strings representing the attribute names can only be used).</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> To restrict the values for certain annotations, you can either use the <strong>Annotations::Config.value_restrictions</strong> setting and/or extend the Annotation model in your own codebase (see above), and use the ActiveRecord <strong>validates_inclusion_of</strong> validation. For the latter, an example is below:</div>
+</li>
+</ul>
+<pre class="code ruby">require_dependency RAILS_ROOT <span class="sy0">+</span> <span class="st0">'/vendor/plugins/annotations/lib/app/models/annotation'</span>
+&nbsp;
+<span class="kw1">class</span> Annotation <span class="sy0">&lt;</span> <span class="re2">ActiveRecord::Base</span>
+  ...
+&nbsp;
+  <span class="me1">validates_inclusion_of</span> <span class="re3">:value</span>, 
+                         <span class="re3">:in</span> <span class="sy0">=&gt;</span> <span class="br0">&#91;</span> <span class="st0">&quot;fruit&quot;</span>, <span class="st0">&quot;nut&quot;</span>, <span class="st0">&quot;fibre&quot;</span> <span class="br0">&#93;</span>, 
+                         <span class="re3">:message</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;Please select a valid category.&quot;</span>,
+                         <span class="re3">:if</span> <span class="sy0">=&gt;</span> <span class="kw3">Proc</span>.<span class="me1">new</span> <span class="br0">&#123;</span> <span class="sy0">|</span>ann<span class="sy0">|</span> ann.<span class="me1">attribute_name</span>.<span class="me1">downcase</span> == <span class="st0">&quot;category&quot;</span> <span class="br0">&#125;</span>
+&nbsp;
+  ...
+<span class="kw1">end</span></pre>
+</div>
+<!-- SECTION "Annotations Plugin" [1-3435] -->
+<h2><a name="dependencies" id="dependencies">Dependencies</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <del>Plugin: <a href="http://github.com/jmckible/version_fu/tree/master" class="urlextern" target="_blank" title="http://github.com/jmckible/version_fu/tree/master"  rel="nofollow">version_fu</a></del> - versioning library is now embedded in the plugin.</div>
+</li>
+<li class="level1"><div class="li"> Gem: <a href="http://github.com/pluginaweek/plugin_test_helper/tree/master" class="urlextern" target="_blank" title="http://github.com/pluginaweek/plugin_test_helper/tree/master"  rel="nofollow">plugin_test_helper</a> (in order to run the tests for the plugin).</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Dependencies" [3436-3739] -->
+<h2><a name="versioning" id="versioning">Versioning</a></h2>
+<div class="level2">
+
+<p>
+
+Whenever an annotation is updated, a new annotation_version entry is created in the db (corresponding model name = Annotation::Version). 
+</p>
+
+<p>
+This uses a library from the version_fu plugin - a slightly customised version of this is embedded within the annotations plugin (which won&#039;t conflict if version_fu is installed in the main codebase).
+</p>
+
+<p>
+Notes:
+</p>
+<ul>
+<li class="level1"><div class="li"> The “version_creator_id” is only relevant when there are more than one version of an annotation. I.e: for the first version of the annotation the version_creator_id will be nil.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Versioning" [3740-4294] -->
+<h3><a name="upgrading_the_main_codebase_to_annotation_versioning" id="upgrading_the_main_codebase_to_annotation_versioning">Upgrading The Main Codebase to Annotation Versioning</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Shutdown mongrels / servers</div>
+</li>
+<li class="level1"><div class="li"> Do an svn update (annotation versioning was added to the main codebase in revision 388)</div>
+</li>
+<li class="level1"><div class="li"> Run db:migrate</div>
+</li>
+<li class="level1"><div class="li"> Run the ensure_annotations_initial_version.rb script to ensure that the db gets to a consistent state for existing annotations data.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Upgrading The Main Codebase to Annotation Versioning" [4295-4639] -->
+<h2><a name="data_model" id="data_model">Data Model</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Data Model" [4640-4663] -->
+<h3><a name="entities" id="entities">Entities</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><a name="annotations" id="annotations">Annotations</a></h4>
+<div class="level4">
+
+<p>
+
+Table name: annotations
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> source_type</div>
+</li>
+<li class="level1"><div class="li"> source_id</div>
+</li>
+<li class="level1"><div class="li"> annotatable_type</div>
+</li>
+<li class="level1"><div class="li"> annotatable_id</div>
+</li>
+<li class="level1"><div class="li"> attribute_id</div>
+</li>
+<li class="level1"><div class="li"> value</div>
+</li>
+<li class="level1"><div class="li"> value_type</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+<li class="level1"><div class="li"> version</div>
+</li>
+<li class="level1"><div class="li"> version_creator_id</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="annotation_versions" id="annotation_versions">Annotation Versions</a></h4>
+<div class="level4">
+
+<p>
+
+Table name: annotation_versions
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> annotation_id</div>
+</li>
+<li class="level1"><div class="li"> version</div>
+</li>
+<li class="level1"><div class="li"> version_creator_id</div>
+</li>
+<li class="level1"><div class="li"> source_type</div>
+</li>
+<li class="level1"><div class="li"> source_id</div>
+</li>
+<li class="level1"><div class="li"> annotatable_type</div>
+</li>
+<li class="level1"><div class="li"> annotatable_id</div>
+</li>
+<li class="level1"><div class="li"> attribute_id</div>
+</li>
+<li class="level1"><div class="li"> value</div>
+</li>
+<li class="level1"><div class="li"> value_type</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="annotation_attributes" id="annotation_attributes">Annotation Attributes</a></h4>
+<div class="level4">
+
+<p>
+
+Table name: annotation_attributes
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="annotation_value_seeds" id="annotation_value_seeds">Annotation Value Seeds</a></h4>
+<div class="level4">
+
+<p>
+
+Table name: annotation_value_seeds
+</p>
+
+<p>
+Fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> id</div>
+</li>
+<li class="level1"><div class="li"> attribute_id</div>
+</li>
+<li class="level1"><div class="li"> value</div>
+</li>
+<li class="level1"><div class="li"> created_at</div>
+</li>
+<li class="level1"><div class="li"> updated_at</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Entities" [4664-5458] -->
+<h2><a name="todo" id="todo">TODO</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "TODO" [5459-5476] -->
+<h2><a name="examples" id="examples">Examples</a></h2>
+<div class="level2">
+
+</div>
+
+<h4><a name="find_annotatable_objects_that_have_a_specific_attribute_name_and_value" id="find_annotatable_objects_that_have_a_specific_attribute_name_and_value">Find annotatable objects that have a specific attribute name AND value:</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Gets all annotatables regardless of type:</div>
+</li>
+</ul>
+<pre class="code">Annotation.find_annotatables_with_attribute_name_and_value(&quot;complexity&quot;, &quot;O(x^2)&quot;)</pre>
+<ul>
+<li class="level1"><div class="li"> Gets only annotatables that are Books:</div>
+</li>
+</ul>
+<pre class="code">Book.with_annotations_with_attribute_name_and_value(&quot;Tag&quot;, &quot;Amusing rhetoric&quot;)</pre>
+
+</div>
+<!-- SECTION "Examples" [5477-] -->

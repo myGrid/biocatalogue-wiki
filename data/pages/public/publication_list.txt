@@ -1,0 +1,64 @@
+Below are the publications made by the BioCatalogue team, the citations for the BioCatalogue and the articles about the BioCatalogue.
+
+====== Publications ======
+
+  * Gaudet P, Bairoch A, Field D, Sansone SA, Taylor C, Attwood TK, Bateman A, Blake JA, Bult CJ, Cherry JM, Chisholm RL, Cochrane G, Cook CE, Eppig JT, Galperin MY, Gentleman R, Goble CA, Gojobori T, Hancock JM, Howe DG, Imanishi T, Kelso J, Landsman D, Lewis SE, Karsch Mizrachi I, Orchard S, Ouellette BF, Ranganathan S, Richardson L, Rocca-Serra P, Schofield PN, Smedley D, Southan C, Tan TW, Tatusova T, Whetzel PL, White O, Yamasaki C; on behalf of the BioDBCore working group. **Towards BioDBcore: a community-defined information specification for biological databases**, in Database (2011) Vol. 2011 published online January 4, 2011, doi:10.1093/database/baq027 and Nucl. Acids Res. (2011) 39 (suppl 1) D7-D10 1 January 2011 doi: 10.1093/nar/gkq1173 [[http://nar.oxfordjournals.org/content/39/suppl_1/D7.full.pdf+html]]
+
+
+  * Jiten Bhagat; Franck Tanoh; Eric Nzuobontane; Thomas Laurent; Jerzy Orlowski; Marco Roos; Katy Wolstencroft; Sergejs Aleksejevs; Robert Stevens; Steve Pettifer; Rodrigo Lopez; Carole A. Goble **BioCatalogue: a universal catalogue of web services for the life sciences** Nucleic Acids Research 2010, 38 (suppl 2): W689-W694. Featured paper [[http://nar.oxfordjournals.org/cgi/content/full/gkq394|doi: 10.1093/nar/gkq394]]
+
+
+  * Paolo Missier, Katy Wolstencroft, Franck Tanoh, Peter Li, Sean Bechhofer, Khalid Belhajjame, Steve Pettifer, Carole Goble. **Functional Units: Abstractions for Web Service Annotations** presented at [[http://www.cs.wayne.edu/~shiyong/swf/swf2010.html|IEEE 2010 Fourth International Workshop on Scientific Workflows (SWF 2010)]].  [[http://www.computer.org/portal/web/csdl/doi/10.1109/SERVICES.2010.21|Abstract]] Full paper: {{:public:the_functional_units_paper.pdf|}}
+
+  * Goble CA and De Roure D **Curating Scientific Web Services and Workflows** EDUCAUSE Review, vol. 43, no. 5 (September/October 2008)[[http://eprints.ecs.soton.ac.uk/16561/]]
+
+  * Goble CA, Stevens RD, Hull D, Wolstencroft K, Lopez R **Data Curation + Process Curation = Data Integration + Science**, Briefings in Bioinformatics, 2008 http://bib.oxfordjournals.org/cgi/content/short/bbn034v1?rss=1
+
+  * Khalid Belhajjame, Carole Goble, Franck Tanoh, et al. **Biocatalogue: A Curated Web Service Registry for the Life Science Community**, Microsoft eScience conference 2008. {{:public:biocatalogue_position_paper.pdf|}} and 3rd Intl Conference of BioCurators, published in Nature Precedings, April 2009 http://precedings.nature.com/documents/3132/version/1
+
+
+
+====== Citations ======
+
+1. Damian Smedley et al., in their paper, **[[http://database.oxfordjournals.org/cgi/content/full/2010/0/baq014|Finding and sharing: new approaches to registries of databases and services for the biomedical sciences]]** emphasized the usefulness of the BioCatalogue for the community and advocated the use of the registry by all service providers to publish their services. 
+
+2. Achille Zappa, Mariangela Miele and Paolo Romano in their paper **[[http://nar.oxfordjournals.org/cgi/content/full/gkq416v1?ijkey=7Kwet4crUilIC2A&keytype=ref#B10|IBWS: IST Bioinformatics Web Services]]** present their web services submitted in the BioCatalogue. 
+
+3. Javier Ríos and colleagues mention in their paper, **[[http://ukpmc.ac.uk/articlerender.cgi?artid=1840111|Magallanes: a web services discovery and automatic workflow composition tool]]**, the need to integrate Magallanes and the BioCatalogue.  
+
+4. Michael Gruenberge et al., in their paper, **[[http://hzi.openrepository.com/hzi/handle/10033/96658 |Towards the integration of mouse databases - definition and implementation of solutions to two use-cases in mouse functional genomics]]**, favor the idea to submit to the BioCatalogue any web services developed during the course of their project. 
+
+5. Victoria Martín-Requenaw et al., reference the BioCatalogue in their paper, **[[http://bioinformatics.oxfordjournals.org/cgi/content/abstract/26/4/553|jORCA: easily integrating bioinformatics Web Services]]**
+
+6. María Pérez et al., propose a Semi-Discovery approach of Web service which heavily relies on the BioCatalogue service category classification. The paper is: **[[http://www.springerlink.com/content/e4107636j2343468/|Semi-automatic Discovery of Web Services Driven by User Requirements]]**
+
+7. BioCatalogue is cited in this paper: **[[http://www.biomedcentral.com/1471-2105/11/548/|Protein structure analysis of mutations causing inheritable diseases. An e-Science approach with life scientist friendly interfaces]]**; by Hanka Venselaar et al.
+
+8. Hammad Afzal, James Eales, Robert Stevens and Goran Nenadic. **[[http://www.jbiomedsem.com/content/2/S1/S4|Mining semantic networks of bioinformatics e-resources from the literature http://www.jbiomedsem.com/content/2/S1/S4]]** in the Journal of Biomedical Semantics 2011.
+
+9. Paolo Missier, Norman Paton and Peter Li. **[[http://www.springerlink.com/content/9854m43584547851/|Workflows for Information Integration in the Life Sciences]]** in Lecture Notes in Computer Science, 2011, Volume 6585/2011, 215-225, DOI: 10.1007/978-3-642-19668-3_20
+
+10. Jia Zhang, Wei Tan, John Alexander, Ian Foster, Ravi Madduri . Recommend-As-You-Go: A Novel Approach Supporting Services-Oriented Scientific Workflow Reuse. IEEE Intl Conf on Services Computing (SCC), 2011 (Best Paper Award)
+
+11. Jia Zhang, Ravi Madduri, Wei Tan, Kevin Deichl, John Alexander, Ian Foster. Toward Semantics Empowered Biomedical Web Services. IEEE Intl Conf on Web Services (ICWS), 2011
+
+12. Wei Tan, Jia Zhang, Ian Foster. Network Analysis of Scientific Workflows: a Gateway to Reuse. IEEE Computer, 43(9): 54-61, 2010. doi:10.1109/MC.2010.2622010
+
+
+====== Articles ======
+
+1. [[http://www.nbic.nl/about-nbic/news-press/bioinformatics-news/detail/article/biocatalogue-the-yellow-pages-of-web-services/|BioCatalogue: The 'Yellow Pages' of web services]], an article by Marco Roos published on the Netherlands Bioinformatics Centre (NBIC) website.
+
+2. A cool BioCatalogue [[http://blog.openhelix.eu/?p=4555|introduction video]] on the OpenHelix Blog by Mary Mangan
+
+3. BioCatalogue mentioned by David De Roure in his article [[http://www.computer.org/portal/web/computingnow/0610/whatsnew/computer|e-Science and the Web]] in IEEE Computer Society publications
+
+4. BioCatalogue article in the [[http://www.omii.ac.uk/wiki/Nwsltr0909BioCat|OMII-UK newsletter]] by Franck Tanoh
+
+5. BioCatalogue article in [[http://www.genomeweb.com/informatics/ismb-u-manchester-releases-biocatalogue-web-services-registry-and-social-network/ |genomeweb]] by Vivien Marx
+
+6. BioCatalogue slides and presentations are [[http://www.slideshare.net/BioCatalogue|here]]
+
+7. BioCatalogue on [[http://en.wikipedia.org/wiki/BioCatalogue|wikipedia]]
+
+8. [[http://chembl.blogspot.com/2011/03/chembl-web-services-are-now-in.html|ChEMBL Web Services are now in BioCatalogue]]

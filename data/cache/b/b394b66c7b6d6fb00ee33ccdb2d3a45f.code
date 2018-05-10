@@ -1,0 +1,21 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;annotations</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/annotations?asd=%5B4%5D&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    ...
+    <span class="sc3"><span class="re1">&lt;page</span> <span class="re0">urlKey</span>=<span class="st0">&quot;page&quot;</span><span class="re2">&gt;</span></span>1<span class="sc3"><span class="re1">&lt;/page<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pageSize</span> <span class="re0">urlKey</span>=<span class="st0">&quot;per_page&quot;</span><span class="re2">&gt;</span></span>10<span class="sc3"><span class="re1">&lt;/pageSize<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;annotation</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/annotations/48387&quot;</span> ...<span class="re2">&gt;</span></span>
+      ...
+    <span class="sc3"><span class="re1">&lt;/annotation<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/annotations<span class="re2">&gt;</span></span></span>

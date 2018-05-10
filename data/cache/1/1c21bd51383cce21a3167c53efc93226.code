@@ -1,0 +1,34 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;restMethods</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>9<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>81<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>81<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;restMethod</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/86&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethod&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Rest Method - Search BioPortal (alternate)&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Rest Method - Search BioPortal (alternate)<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>Search BioPortal (alternate)<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;endpointLabel<span class="re2">&gt;</span></span></span>GET /search<span class="sc3"><span class="re1">&lt;/endpointLabel<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;httpMethodType<span class="re2">&gt;</span></span></span>GET<span class="sc3"><span class="re1">&lt;/httpMethodType<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;urlTemplate<span class="re2">&gt;</span></span></span>http://rest.bioontology.org/bioportal/search?email={email}<span class="sc1">&amp;amp;</span>query={query}<span class="sc3"><span class="re1">&lt;/urlTemplate<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;dc:description<span class="re2">&gt;</span></span><span class="re1">&lt;/dc:description<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;documentationUrl<span class="re2">&gt;</span></span><span class="re1">&lt;/documentationUrl<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;submitter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/users/14&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Member - Jiten Bhagat&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Jiten Bhagat&quot;</span><span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-06-29T10:23:42Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;inputs</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/86/inputs&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethod&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;All REST Inputs on this REST endpoint&quot;</span><span class="re2">/&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;outputs</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/86/outputs&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethod&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;All REST Outputs on this REST endpoint&quot;</span><span class="re2">/&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;annotations</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/86/annotations&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Annotations&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;All annotations on this REST endpoint&quot;</span><span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/restMethod<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;next</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods?page=2&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethods&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Next page of results&quot;</span><span class="re2">/&gt;</span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/restMethods<span class="re2">&gt;</span></span></span>

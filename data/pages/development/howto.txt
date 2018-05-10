@@ -1,0 +1,20 @@
+====== Soaplab service in BioCatalogue ======
+
+=== What is Soaplab? ===   
+  * Soaplab is a specialised Web Services software framework for command-line bioinformatics programs. It includes a  library for running command-line programs and provides support to generate Java Web Services web applications based on this library. An important part of the library is a container that manages life cycle of the jobs effectively. Soaplab generic interface[1] makes it possible to use the same interface for all programs deployed. Soaplab is well known to many bioinformaticians since it has built-in support for EMBOSS programs and also because the European Bioinformatics Institute where Soaplab was developed has had an active Soaplab server since year 2003. It can be said that initial development of Soaplab was supported by the UK e-Science program, and it was part of the myGrid project [source: wikipedia].
+     
+=== Submit a Soaplab Server to BioCatalogue ===
+  * To submit a Soaplab server you need to be logged-in. If you do not have an account then please sign up and login.
+  * Click on the "Register a Service" link on the top menu bar
+  * On the next screen, there will be a SOAPLAB button. Click on it to get a page like this\\   {{:development:soaplab_submit.jpg|}}\\
+  * In the text box provided, type the wsdl URL of the service which knows about all the analysis in the soaplab server. 
+    * For soaplab1 servers, this will take the form\\ \\
+      * http:://<my/soaplab/server/base/url>/**services/AnalysisFactory?wsdl** \\ as shown in one of the examples provided on the soaplab submission screen above.
+    * For soaplab2 servers, this will take the form \\ \\ 
+      * http:://<my/soaplab/server/base/url>/**typed/services/list?wsdl**
+  * Click on preview to get a list of the analyses the soaplab server
+  * At the bottom of the screen is the submit button( you may have to scroll down the page is the list of the analyses is long). Click on the submit button to submit the services to BioCatalague.
+**Note**
+  * It may take a little while for all services(analyses) to be registered. 
+
+   

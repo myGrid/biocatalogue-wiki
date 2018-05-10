@@ -1,0 +1,30 @@
+<span class="sc3"><span class="re1">&lt;rest_service<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>Example Service<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;endpoint<span class="re2">&gt;</span></span></span>http://www.example.com<span class="sc3"><span class="re1">&lt;/endpoint<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;rest_resources</span> <span class="re0">type</span>=<span class="st0">&quot;array&quot;</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;rest_resource<span class="re2">&gt;</span></span></span>POST http://www.example.com/examples<span class="sc3"><span class="re1">&lt;/rest_resource<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;rest_resource<span class="re2">&gt;</span></span></span>GET http://www.example.com/examples<span class="sc3"><span class="re1">&lt;/rest_resource<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;rest_resource<span class="re2">&gt;</span></span></span>GET http://www.example.com/examples/{id}<span class="sc3"><span class="re1">&lt;/rest_resource<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;rest_resource<span class="re2">&gt;</span></span></span>PUT http://www.example.com/examples/{id}<span class="sc3"><span class="re1">&lt;/rest_resource<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;rest_resource<span class="re2">&gt;</span></span></span>DELETE http://www.example.com/examples/{id}<span class="sc3"><span class="re1">&lt;/rest_resource<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;rest_resource<span class="re2">&gt;</span></span></span>GET http://www.example.com/search.php?query={query_string}<span class="sc3"><span class="re1">&lt;/rest_resource<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/rest_resources<span class="re2">&gt;</span></span></span>    
+    <span class="sc3"><span class="re1">&lt;annotations<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;documentation_url<span class="re2">&gt;</span></span></span>http://www.example.com/docs.html<span class="sc3"><span class="re1">&lt;/documentation_url<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;alternative_names</span> <span class="re0">type</span>=<span class="st0">&quot;array&quot;</span><span class="re2">&gt;</span></span>
+            <span class="sc3"><span class="re1">&lt;alternative_name<span class="re2">&gt;</span></span></span>alternate name for this service<span class="sc3"><span class="re1">&lt;/alternative_name<span class="re2">&gt;</span></span></span>
+            <span class="sc3"><span class="re1">&lt;alternative_name<span class="re2">&gt;</span></span></span>yet another name for this service<span class="sc3"><span class="re1">&lt;/alternative_name<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;/alternative_names<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;tags</span> <span class="re0">type</span>=<span class="st0">&quot;array&quot;</span><span class="re2">&gt;</span></span>
+            <span class="sc3"><span class="re1">&lt;tag<span class="re2">&gt;</span></span></span>example<span class="sc3"><span class="re1">&lt;/tag<span class="re2">&gt;</span></span></span>
+            <span class="sc3"><span class="re1">&lt;tag<span class="re2">&gt;</span></span></span>test<span class="sc3"><span class="re1">&lt;/tag<span class="re2">&gt;</span></span></span>
+            <span class="sc3"><span class="re1">&lt;tag<span class="re2">&gt;</span></span></span>delete me<span class="sc3"><span class="re1">&lt;/tag<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;/tags<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;description<span class="re2">&gt;</span></span></span>Put a description of the web service here<span class="sc3"><span class="re1">&lt;/description<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;categories</span> <span class="re0">type</span>=<span class="st0">&quot;array&quot;</span><span class="re2">&gt;</span></span>
+            <span class="sc3"><span class="re1">&lt;category<span class="re2">&gt;</span></span></span>http://www.biocatalogue.org/categories/1<span class="sc3"><span class="re1">&lt;/category<span class="re2">&gt;</span></span></span>
+            <span class="sc3"><span class="re1">&lt;category<span class="re2">&gt;</span></span></span>http://www.biocatalogue.org/categories/6<span class="sc3"><span class="re1">&lt;/category<span class="re2">&gt;</span></span></span>
+            <span class="sc3"><span class="re1">&lt;category<span class="re2">&gt;</span></span></span>http://www.biocatalogue.org/categories/17<span class="sc3"><span class="re1">&lt;/category<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;/categories<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/annotations<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/rest_service<span class="re2">&gt;</span></span></span>

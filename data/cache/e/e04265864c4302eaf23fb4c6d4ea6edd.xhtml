@@ -1,0 +1,647 @@
+
+
+
+<h1><a name="requirements_overview" id="requirements_overview">Requirements Overview</a></h1>
+<div class="level1">
+
+<p>
+
+Note: annotations in &#039;[]&#039; are <a href="http://en.wikipedia.org/wiki/MoSCoW_Method" class="urlextern" title="http://en.wikipedia.org/wiki/MoSCoW_Method"  rel="nofollow">MoSCoW</a> classifcations.
+</p>
+
+</div>
+<!-- SECTION "Requirements Overview" [1-138] -->
+<h2><a name="core_catalogue" id="core_catalogue">Core Catalogue</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Core Catalogue" [139-166] -->
+<h3><a name="user_details" id="user_details">User Details</a></h3>
+<div class="level3">
+
+<p>
+
+<strong>Note</strong>: this is core information only. Additional information is covered by <a href="#user_profile" title="development:software_development:requirements &crarr;" class="wikilink1">User Profile</a>.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> [Must] <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:user_registration" class="wikilink1" title="development:stories:user_registration">User registration</a> (<a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=create_account.jpg" class="media mediafile mf_jpg" title="create_account.jpg">mockup1</a> <a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=create_account_and_profile_2.jpg" class="media mediafile mf_jpg" title="create_account_and_profile_2.jpg">mockup2</a>)</div>
+<ul>
+<li class="level2"><div class="li"> Authentication information</div>
+<ul>
+<li class="level3"><div class="li"> [Should] <a href="http://openid.net/" class="urlextern" title="http://openid.net/"  rel="nofollow">OpenID</a></div>
+</li>
+<li class="level3"><div class="li"> [Must] E-mail address and password</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> User details</div>
+<ul>
+<li class="level3"><div class="li"> [Must] Name</div>
+</li>
+<li class="level3"><div class="li"> [Should] Organisation/affiliation</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Must] Login/logout</div>
+</li>
+<li class="level1"><div class="li"> [Must] Change details</div>
+<ul>
+<li class="level2"><div class="li"> Specifically the core information. This may be integrated into User Profile management (see <a href="#user_profile" title="development:software_development:requirements &crarr;" class="wikilink1">User Profile</a>).</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "User Details" [167-830] -->
+<h3><a name="basic_search" id="basic_search">Basic Search</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Browsing</div>
+<ul>
+<li class="level2"><div class="li"> [Must] All services</div>
+</li>
+<li class="level2"><div class="li"> [Could] <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:catalogue_browsing" class="wikilink1" title="development:stories:catalogue_browsing">Service category/tag navigation</a> (i.e. “Amazon-like”) (<a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=browse.jpg" class="media mediafile mf_jpg" title="browse.jpg">mockup</a>). For example:</div>
+<ul>
+<li class="level3"><div class="li"> Function → Data retrieval → Entry retrieval → WSDbfetch</div>
+</li>
+<li class="level3"><div class="li"> Organisation → EMBL-EBI → WSDbfetch</div>
+</li>
+<li class="level3"><div class="li"> Underlying data resource e.g. BLAST over DDBJ or EMBL etc</div>
+</li>
+<li class="level3"><div class="li"> Service Technology → <acronym title="Simple Object Access Protocol">SOAP</acronym> → Biomoby</div>
+</li>
+<li class="level3"><div class="li"> Service Technology → REST → DAS</div>
+</li>
+<li class="level3"><div class="li"> Data Formats → Fasta, EMBL</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Must] <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:basic_search" class="wikilink1" title="development:stories:basic_search">All text search</a> (i.e. “Google-like”) (mockups: <a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=homepage.jpg" class="media mediafile mf_jpg" title="homepage.jpg">homepage</a> and <a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=resultpage_new.jpg" class="media mediafile mf_jpg" title="resultpage_new.jpg">results</a>)</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Basic Search" [831-1532] -->
+<h3><a name="service_submission" id="service_submission">Service Submission</a></h3>
+<div class="level3">
+
+<p>
+
+<strong>Note</strong>: this is core information only. Additional information is covered by <a href="#service_annotation" title="development:software_development:requirements &crarr;" class="wikilink1">Service Annotation</a>.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> [Must] To submit a service the user <em class="u">must</em> be registered.</div>
+</li>
+<li class="level1"><div class="li"> Required information (<a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=webservice_registration_form.jpg" class="media mediafile mf_jpg" title="webservice_registration_form.jpg">mockup</a>):</div>
+<ul>
+<li class="level2"><div class="li"> [Must] Service name (e.g. WSDbfetch)</div>
+</li>
+<li class="level2"><div class="li"> [Must] Service location (e.g. <a href="http://www.ebi.ac.uk/Tools/webservices/wsdl/WSDbfetch.wsdl" class="urlextern" title="http://www.ebi.ac.uk/Tools/webservices/wsdl/WSDbfetch.wsdl"  rel="nofollow">http://www.ebi.ac.uk/Tools/webservices/wsdl/WSDbfetch.wsdl</a>). Either a:</div>
+<ol>
+<li class="level3"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:service_submission_with_service_document" class="wikilink1" title="development:stories:service_submission_with_service_document">service description document</a> (i.e. WSDL <a href="http://www.w3.org/TR/wsdl" class="urlextern" title="http://www.w3.org/TR/wsdl"  rel="nofollow">1.x</a> or <a href="http://www.w3.org/TR/wsdl20/" class="urlextern" title="http://www.w3.org/TR/wsdl20/"  rel="nofollow">2.0</a>, <a href="https://wadl.dev.java.net/" class="urlextern" title="https://wadl.dev.java.net/"  rel="nofollow">WADL</a>, <a href="http://www.opensearch.org/" class="urlextern" title="http://www.opensearch.org/"  rel="nofollow">OpenSearch</a>, etc.) from which operations/resources and annotations can be harvested</div>
+</li>
+<li class="level3"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:service_submission_without_a_service_document" class="wikilink1" title="development:stories:service_submission_without_a_service_document">actual endpoint</a>, where details of operation/resources and annotations will have to be supplied seperatly.</div>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Optional information (may be initially harvested from service description document) (<a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=webservice_registration_form_test_descriptor.jpg" class="media mediafile mf_jpg" title="webservice_registration_form_test_descriptor.jpg">mockup</a>):</div>
+<ul>
+<li class="level2"><div class="li"> [Must] Service description (e.g. “The WSDbfetch service allows the retrieval of various biological database entries given the database and entry identifier. Database entries can be retrieved in multiple formats (e.g. flatfile, fasta format or <acronym title="Extensible Markup Language">XML</acronym>) and styles (e.g. plain text or <acronym title="HyperText Markup Language">HTML</acronym>). Single or multiple entries (up to 200) can be retrieved in a single request.”).</div>
+</li>
+<li class="level2"><div class="li"> [Must] Service provider (e.g. EMBL-EBI).</div>
+</li>
+<li class="level2"><div class="li"> Documentation <acronym title="Uniform Resource Locator">URL</acronym> (e.g. <a href="http://www.ebi.ac.uk/Tools/webservices/services/dbfetch" class="urlextern" title="http://www.ebi.ac.uk/Tools/webservices/services/dbfetch"  rel="nofollow">http://www.ebi.ac.uk/Tools/webservices/services/dbfetch</a>). A <acronym title="Uniform Resource Locator">URL</acronym> for additional documentation.</div>
+</li>
+<li class="level2"><div class="li"> [Must] Contact (e.g <a href="http://www.ebi.ac.uk/support/" class="urlextern" title="http://www.ebi.ac.uk/support/"  rel="nofollow">http://www.ebi.ac.uk/support/</a> or <a href="mailto:&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x40;&#x65;&#x62;&#x69;&#x2e;&#x61;&#x63;&#x2e;&#x75;&#x6b;" class="mail JSnocheck" title="&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x40;&#x65;&#x62;&#x69;&#x2e;&#x61;&#x63;&#x2e;&#x75;&#x6b;">&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x40;&#x65;&#x62;&#x69;&#x2e;&#x61;&#x63;&#x2e;&#x75;&#x6b;</a>). The submitter may not belong to the team developping the Web Service.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+Issues for discussion:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:versioning_policy" class="wikilink1" title="development:stories:versioning_policy">Versioning policy</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:duplicates_policy" class="wikilink1" title="development:stories:duplicates_policy">Duplicates policy</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:software_development:ip_issues" class="wikilink1" title="development:software_development:ip_issues">IP issues</a></div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Service Submission" [1533-3476] -->
+<h2><a name="service_annotation" id="service_annotation">Service Annotation</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Service Annotation" [3477-3508] -->
+<h3><a name="service_level" id="service_level">Service Level</a></h3>
+<div class="level3">
+
+<p>
+
+<strong>Note</strong>: in addition to those described in <a href="#service_submission" title="development:software_development:requirements &crarr;" class="wikilink1">Service Submission</a>.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> [Should] Licensing/Terms of Use/Usage restrictions</div>
+</li>
+<li class="level1"><div class="li"> [Could] Download details. For services which are available for local installation (e.g. SOAPlab):</div>
+<ul>
+<li class="level2"><div class="li"> Download site</div>
+</li>
+<li class="level2"><div class="li"> Licence</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Could] Service lifecycle status:</div>
+<ul>
+<li class="level2"><div class="li"> “Prototype”</div>
+</li>
+<li class="level2"><div class="li"> “Production”</div>
+</li>
+<li class="level2"><div class="li"> “Deprecated”</div>
+</li>
+<li class="level2"><div class="li"> “Obsolete”</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Could] Service relationships. For example:</div>
+<ul>
+<li class="level2"><div class="li"> “Identical to”</div>
+</li>
+<li class="level2"><div class="li"> “Equivalent to”</div>
+</li>
+<li class="level2"><div class="li"> “Used with”</div>
+</li>
+<li class="level2"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:deprecation_of_service" class="wikilink1" title="development:stories:deprecation_of_service">&quot;Superseded by&quot;</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Service Level" [3509-4084] -->
+<h3><a name="operation_resource_level" id="operation_resource_level">Operation/Resource Level</a></h3>
+<div class="level3">
+
+<p>
+
+Four sources of annotations:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> [Should] Provider supplied annotations obtained from service description (e.g. WSDL)</div>
+</li>
+<li class="level1"><div class="li"> [Could] Curator annotation</div>
+</li>
+<li class="level1"><div class="li"> [Could] User annotation</div>
+</li>
+<li class="level1"><div class="li"> [Could] Automated agents</div>
+</li>
+</ul>
+
+<p>
+ 
+Below the level of the service there are a number of things that can have annotations attached:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Data types</div>
+</li>
+<li class="level1"><div class="li"> Operations (<acronym title="Simple Object Access Protocol">SOAP</acronym>) or resources (REST)</div>
+</li>
+<li class="level1"><div class="li"> Bindings (WSDL)</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Operation/Resource Level" [4085-4504] -->
+<h3><a name="ontologies_used" id="ontologies_used">Ontologies Used</a></h3>
+<div class="level3">
+
+<p>
+
+Ontologies used part of the service description and operation (e.g. Biomoby ontologies) and/or as a component of the data processed/provided by the service (e.g. Gene Ontology).
+
+</p>
+<ul>
+<li class="level1"><div class="li"> [Could] <a href="http://sswapmeet.sswap.info/" class="urlextern" title="http://sswapmeet.sswap.info/"  rel="nofollow">SSWAP Ontologies</a></div>
+<ul>
+<li class="level2"><div class="li"> Biomoby ontologies</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Should] <a href="http://www.mygrid.org.uk/index.php?module=pagemaster&amp;PAGE_user_op=view_page&amp;PAGE_id=19" class="urlextern" title="http://www.mygrid.org.uk/index.php?module=pagemaster&amp;PAGE_user_op=view_page&amp;PAGE_id=19"  rel="nofollow">myGrid ontology</a>:</div>
+<ul>
+<li class="level2"><div class="li"> Domain</div>
+</li>
+<li class="level2"><div class="li"> Service</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Won&#039;t] <a href="http://www.geneontology.org/" class="urlextern" title="http://www.geneontology.org/"  rel="nofollow">Gene Ontology</a> (GO)</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Ontologies Used" [4505-5010] -->
+<h2><a name="user_profile" id="user_profile">User Profile</a></h2>
+<div class="level2">
+
+<p>
+
+Note: core user information is covered by <a href="#user_details" title="development:software_development:requirements &crarr;" class="wikilink1">User Details</a>, this section deals with additional information which users may want to provide.
+</p>
+
+</div>
+<!-- SECTION "User Profile" [5011-5178] -->
+<h3><a name="additional_information" id="additional_information">Additional Information</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Should] About the user</div>
+<ul>
+<li class="level2"><div class="li"> Interests</div>
+</li>
+<li class="level2"><div class="li"> Country</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Additional Information" [5179-5271] -->
+<h3><a name="profile_management" id="profile_management">Profile Management</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Should] Create profile</div>
+</li>
+<li class="level1"><div class="li"> [Should] View profile</div>
+</li>
+<li class="level1"><div class="li"> [Should] Edit profile</div>
+</li>
+<li class="level1"><div class="li"> [Could] Delete profile? <em>(Only by an admin, or when a user is deleted)</em></div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Profile Management" [5272-5460] -->
+<h2><a name="community" id="community">Community</a></h2>
+<div class="level2">
+
+<p>
+
+<strong>Note</strong>: registered users only
+</p>
+
+</div>
+<!-- SECTION "Community" [5461-5516] -->
+<h3><a name="comments_reviews" id="comments_reviews">Comments/Reviews</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Should] Service entries</div>
+</li>
+<li class="level1"><div class="li"> [Could] Service operations/resources</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Comments/Reviews" [5517-5615] -->
+<h3><a name="ratings_recommendations" id="ratings_recommendations">Ratings/Recommendations</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Should] Rating a service</div>
+</li>
+<li class="level1"><div class="li"> [Could] “My recommended services”</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Ratings/Recommendations" [5616-5719] -->
+<h3><a name="friends_networking" id="friends_networking">Friends/Networking</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Should] Requesting “friends”</div>
+</li>
+<li class="level1"><div class="li"> [Should] Messaging</div>
+</li>
+<li class="level1"><div class="li"> [Could] Watching friends (service submissions, annotations, etc.)</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Friends/Networking" [5720-5877] -->
+<h2><a name="event_logging_and_notifications" id="event_logging_and_notifications">Event Logging and Notifications</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> [Must] Granular event logging of all actions internal and external (that are relevant) to BioCatalogue</div>
+</li>
+<li class="level1"><div class="li"> [Should] Single notifications system with multiple delivery channels (e.g.: email, <acronym title="Rich Site Summary">RSS</acronym>/ATOM etc)</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Event Logging and Notifications" [5878-6131] -->
+<h2><a name="watching_services" id="watching_services">Watching Services</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Watching Services" [6132-6162] -->
+<h3><a name="detecting_service_changes" id="detecting_service_changes">Detecting Service Changes</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Should] Checking for changes in service description documents</div>
+</li>
+<li class="level1"><div class="li"> [Should] Versioning of harvested service information</div>
+</li>
+<li class="level1"><div class="li"> [Should] Integration of harvested service annotation</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Detecting Service Changes" [6163-6381] -->
+<h3><a name="for_users" id="for_users">For Users</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Could] <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:service_change_monitoring" class="wikilink1" title="development:stories:service_change_monitoring">Add a service to a watch list</a> (i.e. “ebay-like”)</div>
+</li>
+<li class="level1"><div class="li"> [Could] <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:search_result_alerting" class="wikilink1" title="development:stories:search_result_alerting">Adding a query to a watch list</a></div>
+</li>
+<li class="level1"><div class="li"> [Could] Service entry monitoring:</div>
+<ul>
+<li class="level2"><div class="li"> E-mail notification of changes</div>
+</li>
+<li class="level2"><div class="li"> Service changes <acronym title="Rich Site Summary">RSS</acronym>/Atom news feed</div>
+</li>
+<li class="level2"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:stories:notification_aggregation" class="wikilink1" title="development:stories:notification_aggregation">Aggregated RSS/Atom feed of &quot;My Watches&quot;</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "For Users" [6382-6816] -->
+<h2><a name="service_qos" id="service_qos">Service QoS</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "Service QoS" [6817-6841] -->
+<h3><a name="service_monitoring" id="service_monitoring">Service Monitoring</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> [Could] Service Ping</div>
+<ul>
+<li class="level2"><div class="li"> Availability of descriptor document</div>
+</li>
+<li class="level2"><div class="li"> Availability of endpoint</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Won&#039;t] Service function</div>
+<ul>
+<li class="level2"><div class="li"> Test example(s)/workflow(s) to check functionality</div>
+</li>
+<li class="level2"><div class="li"> Submitter/provider notification of problems</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Service Monitoring" [6842-7106] -->
+<h2><a name="apis" id="apis">APIs</a></h2>
+<div class="level2">
+
+</div>
+<!-- SECTION "APIs" [7107-7124] -->
+<h3><a name="opensearch" id="opensearch">OpenSearch</a></h3>
+<div class="level3">
+
+<p>
+
+See <a href="http://www.opensearch.org/" class="urlextern" title="http://www.opensearch.org/"  rel="nofollow">http://www.opensearch.org/</a>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> [Must] OpenSearch description document.</div>
+<ul>
+<li class="level2"><div class="li"> Search <acronym title="Uniform Resource Locator">URL</acronym> description for <acronym title="HyperText Markup Language">HTML</acronym> results (used for IE7+ and Firefox 2+ browser search).</div>
+</li>
+<li class="level2"><div class="li"> Browser auto discovery via <code>link</code> tag in pages.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [Should] Basic search <acronym title="Application Programming Interface">API</acronym> via <acronym title="Rich Site Summary">RSS</acronym> results (i.e. Service name, description, entry). Requires search based <acronym title="Rich Site Summary">RSS</acronym> feed, see <a href="#watching_services" title="development:software_development:requirements &crarr;" class="wikilink1">Watching Services</a> for an application.</div>
+</li>
+<li class="level1"><div class="li"> [Could] Intermediate search <acronym title="Application Programming Interface">API</acronym> via Atom feed, since this can contain a document representing the entry.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "OpenSearch" [7125-7647] -->
+<h3><a name="atompub" id="atompub">AtomPub</a></h3>
+<div class="level3">
+
+<p>
+
+See <a href="http://www.atomenabled.org/" class="urlextern" title="http://www.atomenabled.org/"  rel="nofollow">http://www.atomenabled.org/</a>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> [Could] <acronym title="Application Programming Interface">API</acronym> for curation tools and data submission tools</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "AtomPub" [7648-7761] -->
+<h3><a name="uddi" id="uddi">UDDI</a></h3>
+<div class="level3">
+
+<p>
+
+See <a href="http://uddi.xml.org/" class="urlextern" title="http://uddi.xml.org/"  rel="nofollow">http://uddi.xml.org/</a>
+</p>
+
+<p>
+Two main possibilities:
+
+</p>
+<ol>
+<li class="level1"><div class="li"> Implement UDDI interface on BioCatalogue.</div>
+</li>
+<li class="level1"><div class="li"> Exchange data with an external UDDI implementation (e.g. <a href="http://www.grimoires.org/" class="urlextern" title="http://www.grimoires.org/"  rel="nofollow">Grimoires</a>)</div>
+</li>
+</ol>
+
+<p>
+
+This opens the issue of what to do with services that are not WSDL and therefore not suitable for UDDI
+</p>
+
+</div>
+<!-- SECTION "UDDI" [7762-8081] -->
+<h3><a name="feta" id="feta">Feta</a></h3>
+<div class="level3">
+
+<p>
+
+For support of existing Feta clients (e.g. <a href="http://www.mygrid.org.uk/usermanual1.5/taverna_plugins.html#feta" class="urlextern" title="http://www.mygrid.org.uk/usermanual1.5/taverna_plugins.html#feta"  rel="nofollow">Feta plugin for Taverna</a>).
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Provide the Feta web service (<a href="http://www.mygrid.org.uk/fetaEngine/services/feta?wsdl" class="urlextern" title="http://www.mygrid.org.uk/fetaEngine/services/feta?wsdl"  rel="nofollow">WSDL</a>).</div>
+</li>
+<li class="level1"><div class="li"> Provide <a href="http://www.mygrid.org.uk/feta/mygrid/descriptions/" class="urlextern" title="http://www.mygrid.org.uk/feta/mygrid/descriptions/"  rel="nofollow">Feta annotations</a>.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Feta" [8082-8422] -->
+<h2><a name="exchange_with_other_catalogues" id="exchange_with_other_catalogues">Exchange with Other Catalogues</a></h2>
+<div class="level2">
+
+<p>
+
+There are a number of other service registries/catalogues out there (see <a href="http://www.biocatalogue.org/links.html" class="urlextern" title="http://www.biocatalogue.org/links.html"  rel="nofollow">http://www.biocatalogue.org/links.html</a>). To improve coverage and to encourage service providers it would be useful to be able to exchange service entries with these catalogues.
+</p>
+
+<p>
+This requires APIs at both ends to:
+</p>
+<ul>
+<li class="level1"><div class="li"> Find new entries within a specific time period</div>
+</li>
+<li class="level1"><div class="li"> Find updated entries within a specific time period</div>
+</li>
+<li class="level1"><div class="li"> To get service details in a exchange format</div>
+</li>
+<li class="level1"><div class="li"> To create new entries in the reciving catatlog</div>
+</li>
+<li class="level1"><div class="li"> To update new entries in the reciving catatlog</div>
+</li>
+</ul>
+
+<p>
+
+This is a possible role for the <a href="#atompub" title="development:software_development:requirements &crarr;" class="wikilink1">AtomPub API</a>.
+</p>
+
+</div>
+<!-- SECTION "Exchange with Other Catalogues" [8423-9069] -->
+<h2><a name="synchronise_from_other_catalogues" id="synchronise_from_other_catalogues">Synchronise from other Catalogues</a></h2>
+<div class="level2">
+
+<p>
+
+Since many of the registries are service technology specific, for example:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.dasregistry.org/" class="urlextern" title="http://www.dasregistry.org/"  rel="nofollow">DAS registry</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://biomoby.org/" class="urlextern" title="http://biomoby.org/"  rel="nofollow">BioMoby</a></div>
+</li>
+</ul>
+
+<p>
+
+Or project specific, for example:
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.mygrid.org.uk/wiki/Mygrid/BiologicalWebServices" class="urlextern" title="http://www.mygrid.org.uk/wiki/Mygrid/BiologicalWebServices"  rel="nofollow">myGrid registry</a></div>
+</li>
+<li class="level1"><div class="li"> BioSapiens</div>
+</li>
+<li class="level1"><div class="li"> EMBRACE</div>
+</li>
+<li class="level1"><div class="li"> ENFIN</div>
+</li>
+</ul>
+
+<p>
+
+There are also framework specific collections, for example:
+</p>
+<ul>
+<li class="level1"><div class="li"> Soaplab</div>
+</li>
+<li class="level1"><div class="li"> BioMart</div>
+</li>
+<li class="level1"><div class="li"> Feta</div>
+</li>
+</ul>
+
+<p>
+
+In each of these cases BioCatalogue needs a mechanism to import and synchronise with these resources. 
+</p>
+
+</div>
+<!-- SECTION "Synchronise from other Catalogues" [9070-9630] -->
+<h2><a name="integration_with_workflow_repositories" id="integration_with_workflow_repositories">Integration with Workflow Repositories</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> In services catalogue list workflows that use the service and provide link(s) to workflow details</div>
+<ul>
+<li class="level2"><div class="li"> Requires an <acronym title="Application Programming Interface">API</acronym> to the workflow repository capable of finding those workflows for the specific service.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> In workflow repository show basic service information from services catalogue and provide link to service details</div>
+<ul>
+<li class="level2"><div class="li"> Available <a href="#apis" title="development:software_development:requirements &crarr;" class="wikilink1">APIs</a> should be sufficient to build this functionality. However some additional search granularity may be required to be sure of getting the correct service from the information available in the workflow description. For example for <a href="http://taverna.sourceforge.net/" class="urlextern" title="http://taverna.sourceforge.net/"  rel="nofollow">Taverna</a>:</div>
+<ul>
+<li class="level3"><div class="li"> BioMoby:</div>
+<ul>
+<li class="level4"><div class="li"> <code>mobyEndpoint</code>: <a href="http://moby.ucalgary.ca/moby/MOBY-Central.pl" class="urlextern" title="http://moby.ucalgary.ca/moby/MOBY-Central.pl"  rel="nofollow">http://moby.ucalgary.ca/moby/MOBY-Central.pl</a></div>
+</li>
+<li class="level4"><div class="li"> <code>serviceName</code>: getDragonSimpleAnnotatedImages</div>
+</li>
+</ul>
+</li>
+<li class="level3"><div class="li"> SOAPlab: <a href="http://www.ebi.ac.uk/soaplab/emboss4/services/protein_2d_structure.tmap" class="urlextern" title="http://www.ebi.ac.uk/soaplab/emboss4/services/protein_2d_structure.tmap"  rel="nofollow">http://www.ebi.ac.uk/soaplab/emboss4/services/protein_2d_structure.tmap</a></div>
+</li>
+<li class="level3"><div class="li"> WSDL: <a href="http://www.ebi.ac.uk/Tools/webservices/wsdl/WSInterProScan.wsdl" class="urlextern" title="http://www.ebi.ac.uk/Tools/webservices/wsdl/WSInterProScan.wsdl"  rel="nofollow">http://www.ebi.ac.uk/Tools/webservices/wsdl/WSInterProScan.wsdl</a></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Integration with Workflow Repositories" [9631-10626] -->
+<h2><a name="service_invocation" id="service_invocation">Service Invocation</a></h2>
+<div class="level2">
+
+<p>
+
+A useful feature of seekda is the ability to invoke a service operation from the web interface.
+</p>
+
+</div>
+<!-- SECTION "Service Invocation" [10627-10755] -->
+<h2><a name="service_annotation_model" id="service_annotation_model">Service annotation model</a></h2>
+<div class="level2">
+
+<p>
+
+Low level description of the requirements are difined in the platinum annotation model 
+<a href="/ebiwiki/biocatalogue/lib/exe/fetch.php?id=development%3Asoftware_development%3Arequirements&amp;cache=cache&amp;media=development:software_development:annotation_model_platinum.pdf" class="media mediafile mf_pdf" title="development:software_development:annotation_model_platinum.pdf">annotation_model_platinum.pdf</a>
+ 
+
+</p>
+
+</div>
+<!-- SECTION "Service annotation model" [10756-] -->

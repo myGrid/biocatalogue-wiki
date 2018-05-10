@@ -1,0 +1,70 @@
+====== Meeting Agenda/Minutes ======
+
+Date: Tuesday 28th October 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:**  Franck, Jits
+
+**EBI:** Rodrigo, Eric
+
+===== Apologies =====
+ Carole, Hamish, Thomas, Katy
+
+===== Minuting =====
+  
+====== Agenda ======
+
+  * Action from the last telcon.
+
+  * Progress with the pilot - are we rolling?
+
+  * Annual Report - are we rolling?
+
+  * BioCatalogue public wiki
+
+  * AOB.
+
+===== Actions from Previous Meeting ===== 
+
+  * Jits: Speak to Dave about the new privacy policy in myExperiment. **We'll use EBI privacy policy.** 
+  * Action Thomas : Create a public space on BioCatalogue wiki ...**Done.**
+  * Action Eric, Jits, Thomas, Franck : Establish the list of features for the pilot and road map for future development
+feature for the pilot...**section 3.2 and 3.3 to be completed for the report.** 
+  * Action Thomas : Configure the mailer on the BioCatalogue beta site ...**done, the site is: beta.biocatalogue.org**
+  * Action Eric  : Investigate Biomoby script from Eddie...**done.** Eric thinks that we should extend current model for service group (by providers). 
+  * Action Carole : Complete Annual Report: **still section  3.2 and 3.3 to be completed..**    
+  * Action Robert : Organize the advisory board meeting. Could be at EBI or Manchester and would be desirable for the whole team to be there... could be anywhere hopefully not in the middle of november. 
+  * Eric & Thomas: set up pilot.biocatalogue.org and deploy the current work on the pilot...**done.** 
+
+====== Minutes ======
+
+  * Progress with the pilot - are we rolling?
+
+Slower than expected but we're getting there. By next week we should have the minimum functionality ready. 
+
+  * Annual Report - are we rolling?
+
+Section 3.2 and 3.3 to be completed by Franck, Jits, Eric.
+
+  * BioCatalogue public wiki
+
+Need to keep it simple at this stage with 2 majors items: 
+      where do we come from?(content from the website)
+      where are we going? (roadMap)
+
+===== New Actions =====
+  * Eric: read EBI privacy policy and make sure we have a version appropriate for BioCatalogue
+  * Rodrigo: add content to the public wiki
+
+===== Upcoming Meetings ===== 
+Semantic Web Applications and Tools for Life Sciences - 28/11/08
+http://www.swat4ls.org/
+===== AOB =====
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting:[[Meetings:PhoneConf:2008-10-14|Phone Conference Meeting on Oct 14 2008]] 
+
+Next meeting: [[Meetings:PhoneConf:2008-11-04|Phone Conference Meeting on Nov 04 2008]]

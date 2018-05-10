@@ -1,0 +1,165 @@
+====== Planning for the Pilot ======
+
+This page outlines the tasks that need to be completed in the next few months up to the release of the public pilot. This includes ALL tasks, including development work (for [[Development: Requirements for Pilot 2|functional requirements]]), public wiki updates, [[Development: Content Requirements for Pilot|content acquisition]], community liaising and so on.
+
+===== Dec 08 =====
+
+**Annotation plugin, and UI to allow following annotations:**
+    * <del>Tags on services, operations, inputs and outputs</del>
+    * <del>Descriptions on services, operations, inputs and outputs.</del> 
+
+===== Jan 09 =====
+
+**User Management**
+  * User change details (password mainly)
+  * Forgot Password / Password Reset
+  * Accept T&C on registration
+  * Show sign up date as part of user profile
+\\
+
+**Service Submission**
+  * "General" service support (url + descriptions)
+  * <del>REST services support (url to rest collection</del> + resources + descriptions)
+  * Basic support for DAS services (possibly including: automatic parsing of DAS metadata description documents using BioRuby etc)
+  * <del>Soaplab services support</del>
+  * BioMoby service support
+  * Batch submission of services (user facing)
+\\
+
+**Annotations**
+  * <del>Making tags searchable and clickable</del>
+  * Autosuggest / autocomplete for tags and other annotations
+  * Document annotation plugin
+  * Support for service annotation during submission (more fields)
+  * More types of annotations:
+    * <del>Comments on services</del>
+    * Type(s) of data the service deals with
+    * Project(s) most relevant to the service
+    * Web service description (with some formatting allowed)
+    * Version (provided by submitter)
+    * Optional url to further information (eg: documentation URL)
+\\
+
+**Content Acquisition**
+  * Begin work on the EMBRACE import script
+\\
+
+**Codebase**
+  * Write unit tests for existing models (ie: extend test coverage)
+\\
+
+**Public Wiki Updates**
+  *
+\\
+
+**Community Liaising**
+  *
+\\
+
+
+===== Feb 09 =====
+
+**Service Submission**
+  * Auto-tagging
+  * Handling ownership management (request, confirmation etc) (see: [[development:requirements_for_pilot_2#service_submission_management]])
+  * Submission incentives:
+    * Explain the benefits of adding extra information (eg: will show up in search listings).
+    * Give an indicator on how well annotated the service before submission.
+  * Basic DAS support
+\\
+
+**Service monitoring**
+  * Integration with Workflow Monitor 
+  * Collection of QoS metrics such as availability, stability
+  * Ability to upload scripts/workflows to check service functionality and status
+  * Ability to inform service provider about changes in service status
+  * Show service status (traffic light system)
+\\
+  
+**Service Search and Discovery**
+  * Search result sorting and filtering (by providers, services type, locations, ratings, status ...) (See: [[development:requirements_for_pilot_2#search_discovery]])
+  * View all services, most recent services, your services or top rated services 
+  * Related services (people who used this service used these one...)
+\\
+
+**Service Testing Infrastructure and Ability**
+  * Ability to run scripts as tests for services, as per the EMBRACE registry.
+  * show service status (traffic light system)
+  * ability to upload test script
+  * mailing test maintainer about service status changes
+  * API to query status of a particular service
+  * Distinction between tests and examples;
+  * test provided by service provider
+  * examples by any user of the service
+\\
+
+**Content Acquisition**
+  * Continued work on the EMBRACE import script
+  * SeekDa import
+\\
+
+**Codebase**
+  * Set up continuous integration
+\\
+
+**Public Wiki Updates**
+  *
+\\
+
+**Community Liaising**
+  *
+\\
+
+
+===== Mar 09 =====
+
+**User Interface**
+  * Better search listings
+  * Discovery interface (with sorting and filtering)
+  * Better interface for service annotation and submission
+  * Layering and filtering of annotations so large numbers of annotations can be managed
+
+\\
+
+**Annotations**
+  * Ensure all annotation requirements are met from here: [[development:requirements_for_pilot_2#annotations]]
+\\
+
+** Event Logging / Notifications / News Feeds **
+  * Single notification system for news feeds (exact feeds TBD)
+\\
+
+**Content Acquisition**
+  * Import EMBRACE users profiles, services and annotations
+  * Import BioMoby services
+  * Import FETA services and annotation 
+  * Involve service providers in services submission 
+  * Community annotation 
+\\
+  
+**API**
+  * OpenSearch description document
+  * Preliminary XML REST APIs for internal/private/test usage
+\\
+
+**Public Wiki Updates**
+  *
+\\
+
+**Community Liaising**
+  *
+\\
+
+
+===== Apr 09 =====
+
+**BioCatalogue public release**
+\\
+
+**Public Wiki Updates**
+  *
+\\
+
+**Community Liaising**
+  *
+\\

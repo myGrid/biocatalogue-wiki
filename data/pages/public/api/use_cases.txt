@@ -1,0 +1,24 @@
+====== The BioCatalogue REST API - Use Cases ======
+
+Various use cases have been taken into account in order to build an API that provides a balance between utility and simplicity. 
+
+This includes scenarios ranging from building simple scripts and mashups to integration with scientific workflow workbenches (like [[http://www.taverna.org.uk/|Taverna]]) and other repositories/registries.
+
+Three projects have helped drive the main use cases and requirements so far:
+  * An alpha version BioCatalogue plugin for Taverna has been released. See the [[http://www.taverna.org.uk/documentation/taverna-plugins/taverna-2-x-plugins/|Taverna plugins page]] for more info. This integrates data and functionality from BioCatalogue in order to aid in the workflow design and execution process.
+  * The [[http://www.ncri-onix.org.uk/portal/#S1|ONIX Portal]] developed by the NCRI.
+  * Integration into the [[http://www.myexperiment.org|myExperiment]] workflows repository environment.
+
+Following is a list of various use cases and requirements considered:
+  * Search the registry for services and other things, using simple keyword queries.
+  * Filter the services from the registry based on some criteria.
+  * Get all the important data about a service (service details, operations along with inputs/outputs and data formats, most important annotations, such as tags, descriptions, etc).
+  * Get a summarised view of a service (that includes general information about the service) that allows easy harvesting of content from the BioCatalogue.
+  * Get current monitoring status of a service.
+  * Get monitoring history of a service.
+  * Build a tag cloud of the most popular tags.
+  * Find information about a specific SOAP operation that is used in a workflow. Such as example data, data formats, descriptions, etc.
+  * Search the registry by tags (regular free text tags / those coming from an ontology).
+  * Search for a service by its WSDL location.
+  * Get all available annotations about a service.
+

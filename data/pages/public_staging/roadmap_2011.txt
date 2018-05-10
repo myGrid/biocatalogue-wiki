@@ -1,0 +1,42 @@
+For 2011 we plan to work on the following features, which will be prioritised based on users' feedback and requests. 
+To have your say, please join the [[http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&A=1|BioCatalogue-Friends Mailing List]]
+ 
+===== Functional Units (FU) =====
+  * Functional/task view over web services
+  * FUs as conﬁgurations and compositions of underlying service operations that can then be described, annotated and searched for
+
+ ===== Improving search capabilities and user interface =====
+  * “People who searched for this also searched for x”
+  * Consolidating the filtering and search user interfaces
+
+===== Improving the annotations mechanism =====
+  * Incorporating the EDAM ontology
+  * Richer annotation fields (choice-based, semantic chooser, suggestions, etc.
+
+===== Better curation reports and tools for expert curators =====
+  * Improving the curation dashboard and annotating features
+
+===== “Try it now” service functionality =====
+  * Ability to test and play with a service within the BioCatalogue interface e.g. run SOAP operations or REST endpoints directly
+
+===== Curator community features =====
+  * Improving support for curators and building a community of curators e.g. curator invites and reward badges
+  * Annotation status bar: a status bar to display the overall annotation status of a service. 
+
+===== More customisable and brand-able system =====
+  * More and more people are deploying their own instance using the BioCatalogue software
+  * Need to make the software more customisable as well as more robust
+  * Need to make it easier to configure images, styles, colours etc
+
+===== Integration with myExperiment =====
+  * Services from BioCatalogue displayed in myExperiment so users of myExperiment can browse them. 
+  * Workflows in myExperiment will have links to the relevant services, with metadata and monitoring status pulled from BioCatalogue.
+
+===== Better service filtering and ranking =====
+  * Ability to filter or rank service based on annotations, quality, curators etc.
+  
+===== Service versions =====
+  * Support for different versions of a service (i.e.: SOAP and REST versions of a single service).
+
+===== Notifications and news feeds per service ===== 
+  * RSS/ATOM feeds for services, providing information on all activity on a service within the BioCatalogue.

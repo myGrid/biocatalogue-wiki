@@ -1,0 +1,3 @@
+====== Service Submission with Service Document ======
+
+Service providers want to be able to submit their service to the catalogue. For services which have a description document, this could be by referencing the service document (e.g. WSDL, WADL, OpenSearch, etc.) and analysis of this document should be used to provide the initial values for the relevant parts of the service information. The user should then be able to review the information and revise it in any way before completing the submission of the service and it appearing in the catalogue. Some of the basic information will be required and if not available in the service document then will have to be supplied by the user before the data can be committed to the catalogue.

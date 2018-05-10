@@ -1,0 +1,15 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;testResult</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;testAction<span class="re2">&gt;</span></span></span>http_head<span class="sc3"><span class="re1">&lt;/testAction<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;resultCode<span class="re2">&gt;</span></span></span>0<span class="sc3"><span class="re1">&lt;/resultCode<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-04-07T04:42:45Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;status<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;label<span class="re2">&gt;</span></span></span>PASSED<span class="sc3"><span class="re1">&lt;/label<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;message<span class="re2">&gt;</span></span></span>This check was successful<span class="sc3"><span class="re1">&lt;/message<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/status<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;ancestors<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/ancestors<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/testResult<span class="re2">&gt;</span></span></span>

@@ -1,0 +1,25 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;categories</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;rootsOnly</span> <span class="re0">urlKey</span>=<span class="st0">&quot;roots_only&quot;</span><span class="re2">&gt;</span></span>true<span class="sc3"><span class="re1">&lt;/rootsOnly<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>11<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>60<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;category</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Category&quot;</span> ... <span class="re0">xlink:title</span>=<span class="st0">&quot;Category - Sequence Analysis&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Category - Sequence Analysis<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>Sequence Analysis<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;totalItemsCount<span class="re2">&gt;</span></span></span>138<span class="sc3"><span class="re1">&lt;/totalItemsCount<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;services</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Services&quot;</span> ...<span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/category<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;serviceFilters</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Filters&quot;</span> ...<span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/categories<span class="re2">&gt;</span></span></span>

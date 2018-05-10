@@ -1,0 +1,13 @@
+<span class="br0">&#123;</span>
+  <span class="st0">&quot;annotations&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;documentation_url&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>documentation_url<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;alternative_names&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>alternative_name<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>alternative_name<span class="sy0">&gt;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;tags&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;description&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>description<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;categories&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;</span> <span class="br0">&#93;</span> 
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="st0">&quot;rest_service&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;name&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>rest_service_name<span class="sy0">&gt;</span> 
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="st0">&quot;endpoint&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>base_url_of_the_rest_service<span class="sy0">&gt;</span>
+<span class="br0">&#125;</span>

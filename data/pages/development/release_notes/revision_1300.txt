@@ -1,0 +1,38 @@
+===== 19th November 2009 Release =====
+
+  * Previous release revision: 1266
+  * This release revision: 1300
+
+==== Steps To Take for Update ====
+
+In order...
+
+  * Run database update tasks:
+
+  rake db:migrate RAILS_ENV=production
+
+  * Restart the worker(s). For each, do: 
+
+  ruby script/worker stop
+  ruby script/worker start
+
+  * Rebuild assets
+
+  rake asset:packager:build_all
+
+  * Restart application instance(s)
+
+  * Set Franck as admin
+==== Release Notes ====
+
+Email for the friends' list:
+
+<code>
+Dear all,
+
+We updated the BioCatalogue on Friday 21 November 2009 with the following:
+ - Allow submitters or curators to set alternative names as the preferred display name of a service (so that you can show more descriptive names for service)
+ - User experience improvements for the submission of Soaplab servers. 
+ - Using the classification of the soaplab tools(determined from the wsdl file names) to set the preferred names automatically
+
+</code>

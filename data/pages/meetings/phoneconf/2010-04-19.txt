@@ -1,0 +1,49 @@
+Date: Monday 19th April 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Franck, Jits, Mannie
+
+**EBI:** Eric, Rodrigo
+
+===== Apologies =====
+
+====== Agenda ======
+
+  * Actions from the last telecom
+  * Progress report 
+     * Review of Monitoring & Curation    
+  * Publicity/outreach
+      * Integrative Bioinformatics March 22-24 in Cambridge (Poster accepted)
+      * Plan for ISMB and ECCB 2010? 
+      * EMBRACE service provider workshop
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+ Review action from F2F
+
+===== Upcoming Meetings =====  
+
+===== AOB ===== 
+
+===== Minutes =====
+Email notification for service monitoring now activated \\
+Check the possibility to map BioCatalogue category to EDAM ontology  \\
+Tag pruning: remove unwanted tags. At some point we may need to cluster the different tags. \\
+All VBI services are currently down. Need to find out what the problem is 
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2010-02-18|Phone Conference Meeting on Feb 18 2010]]
+
+Next meeting: 

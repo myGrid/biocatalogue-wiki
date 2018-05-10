@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2009-12-08T15:54:01+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public&amp;rev=1260286196&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public_staging&amp;rev=1260285815&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-monitor&amp;rev=1260278142&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-annotate&amp;rev=1260278114&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-register&amp;rev=1260278081&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-discover&amp;rev=1260278055&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1350&amp;rev=1259934892&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1259757841&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-making-webservices&amp;rev=1259704536&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-executing-webservices&amp;rev=1259703440&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-generalinfo-webservices&amp;rev=1259682001&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help-gettingstarted&amp;rev=1259675318&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:help&amp;rev=1259675293&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1259674166&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public&amp;rev=1260286196&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-08T15:29:56+00:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public&amp;rev=1260286196&amp;do=diff</link>
+        <description>The BioCatalogue website
+
+Our Goals
+
+	*  Provide a single registration point for Web Service providers and a single search site for scientists and developers.
+	*  Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.
+	*  BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public_staging&amp;rev=1260285815&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-08T15:23:35+00:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public_staging</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public_staging&amp;rev=1260285815&amp;do=diff</link>
+        <description>The BioCatalogue website
+
+Our Goals
+
+	*  Provide a single registration point for Web Service providers and a single search site for scientists and developers.
+	*  Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.
+	*  BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-monitor&amp;rev=1260278142&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-08T13:15:42+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:help-internal-monitor</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-monitor&amp;rev=1260278142&amp;do=diff</link>
+        <description>*  Web Services change their location and capability, or become outdated
+	*  The BioCatalogue monitors Web Services and records historical data on the availability, reliability and functionality of these services
+
+
+
+The BioCatalogue regularly monitor services to provide up-to-date information about the status of the service. The catalogue regularly pings the endpoint and the WSDL of the Web Service. The results of the monitoring provide information about the availability and reliability of the s…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-annotate&amp;rev=1260278114&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-08T13:15:14+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:help-internal-annotate</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-annotate&amp;rev=1260278114&amp;do=diff</link>
+        <description>*  Anyone can describe, tag, recommend, comment on and annotate services
+	*  Expert curators oversee the BioCatalogue
+	*  The wider community participates in this effort through social curation
+
+
+
+Web Service annotation can be defined as specific piece of metadata(text, image etc...) associated with a specific aspect of the Web Service. The annotations may be context specific and can be designed for human or for machine.
+
+The point of the annotation is to describe services and their components (…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-register&amp;rev=1260278081&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-08T13:14:41+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:help-internal-register</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-register&amp;rev=1260278081&amp;do=diff</link>
+        <description>*  Anyone can easily register Web Services
+	*  Instantly available to the community, developers and search engines
+	*  Service providers can advertise, describe and monitor their services
+
+
+
+Any registered users (members) can submit any Web Service to the BioCatalogue.  
+You do not have to be the provider of the service to submit it to the BioCatalogue. Click here to become a Member of the BioCatalogue.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-discover&amp;rev=1260278055&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-08T13:14:15+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:help-internal-discover</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-internal-discover&amp;rev=1260278055&amp;do=diff</link>
+        <description>*  Find the right Web Service
+	*  Easy and powerful search and filtering
+	*  Search across metadata by service providers, expert curators and the wider community
+
+
+
+When searching for services in the BioCatalogue there is an auto suggestion based on the content of the catalogue and previous searches by users. 
+Search terms are case insensitive and can be combined with AND. e.g. Blast AND Protein</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1350&amp;rev=1259934892&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-04T13:54:52+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:release_notes:revision_1350</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes:revision_1350&amp;rev=1259934892&amp;do=diff</link>
+        <description>1st December 2009
+
+	*  Previous release revision: 1300
+	*  This release revision: 1350
+
+Steps To Take for Update
+
+
+In order...
+
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do: 
+ruby script/worker stop
+ruby script/worker start
+	*  Run the 'search by data script'</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1259757841&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-02T12:44:01+00:00</dc:date>
+        <dc:creator>franck</dc:creator>
+        <title>public:friends</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1259757841&amp;do=diff</link>
+        <description>The following projects and consortia are actively collaborating with the BioCatalogue project:
+
+
+	*  EU EMBRACE network: The main objective of the EMBRACE Network of Excellence project is to integrate major databases and software tools in bioinformatics using existing integrating technologies and methods, and grid services (&lt;http://www.embracegrid.org&gt;). The deliverables of this project include a services registry (&lt;http://www.embraceregistry.net&gt;), which is aimed at helping users locate service…</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-making-webservices&amp;rev=1259704536&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-01T21:55:36+00:00</dc:date>
+        <dc:creator>jerzyo</dc:creator>
+        <title>public:help-external-making-webservices</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-making-webservices&amp;rev=1259704536&amp;do=diff</link>
+        <description>I have a piece of code - how can I make it a web service - haw can I make it?
+
+There are different solutions based on which programming language you are using.
+It also depends on expected number of users. If you plan to have more than &gt;1000 calls a day, you should probably think about production servers instead of simple scripts.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-executing-webservices&amp;rev=1259703440&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-01T21:37:20+00:00</dc:date>
+        <dc:creator>jerzyo</dc:creator>
+        <title>public:help-external-executing-webservices</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-executing-webservices&amp;rev=1259703440&amp;do=diff</link>
+        <description>I found a nice service - how can I execute it?
+
+There are many ways ways on executing web services and there is no simple way of telling which one is the best in your case. This depends on:
+
+	*  The type of the service (SOAP, REST etc. )
+	*  The way you want to execute the service (in a browser, in a GUI, inside a program or in pipelining system)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-generalinfo-webservices&amp;rev=1259682001&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-01T15:40:01+00:00</dc:date>
+        <dc:creator>jerzyo</dc:creator>
+        <title>public:help-external-generalinfo-webservices</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-external-generalinfo-webservices&amp;rev=1259682001&amp;do=diff</link>
+        <description>What are Web Services?
+
+Web Service is a resource that can be programatically accessed over the Internet. The difference between Web Services and Web Servers is that Web Servers concentrate on user interface which is displayed in a browser and accessible to humans, whereas Web Services concentrate on execution by programs or scripts.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help-gettingstarted&amp;rev=1259675318&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-01T13:48:38+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:help-gettingstarted - created</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help-gettingstarted&amp;rev=1259675318&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:help&amp;rev=1259675293&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-01T13:48:13+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>public:help</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:help&amp;rev=1259675293&amp;do=diff</link>
+        <description>*  Getting Started
+
+Using the BioCatalogue
+
+	*  Discover
+	*  Register
+	*  Annotate
+	*  Monitor
+
+General Info on Web Services
+
+	*  General Info on Web Services
+	*  Making Web Services
+	*  Executing Web Services</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1259674166&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-01T13:29:26+00:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development&amp;rev=1259674166&amp;do=diff</link>
+        <description>From Public Wiki
+
+	*  REST API documentation
+	*  Help Pages
+
+Pilot
+
+Requirements
+
+	*  Requirements (for Oct '08)
+	*  Revised Requirements (for Apr '09)
+	*   Content Requirements for Pilot
+	*  Expected performance, scalability, support and so on for the Pilot
+	*  Embrace Registry Capabilities
+	*  20 Questions
+	*  REST API Requirements</description>
+    </item>
+</rdf:RDF>

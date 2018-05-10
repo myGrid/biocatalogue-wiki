@@ -1,0 +1,19 @@
+<span class="br0">&#123;</span>
+    <span class="st0">&quot;service&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+        <span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;DBFetch&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;self&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/services/4&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;submitter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/users/26&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;service_technology_types&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+            <span class="st0">&quot;SOAP&quot;</span>
+        <span class="br0">&#93;</span><span class="sy0">,</span>
+        <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;WSDbfetch: Database entry retrieval using entry identifiers (see http://www.ebi.ac.uk/Tools/webservices/services/dbfetch)&quot;</span><span class="sy0">,</span>
+        <span class="st0">&quot;latest_monitoring_status&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+            <span class="st0">&quot;message&quot;</span><span class="sy0">:</span> <span class="st0">&quot;All tests were successful for this service&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;symbol&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/images/tick-sphere-50.png&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;small_symbol&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/images/small-tick-sphere-50.png&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;last_checked&quot;</span><span class="sy0">:</span> <span class="st0">&quot;2010-05-17T04:00:24Z&quot;</span><span class="sy0">,</span>
+            <span class="st0">&quot;label&quot;</span><span class="sy0">:</span> <span class="st0">&quot;PASSED&quot;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+        ...
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

@@ -1,0 +1,12 @@
+{
+  &quot;soap_service&quot; : {
+    &quot;wsdl_location&quot; : &quot;http://www.example.com/webservice.wsdl&quot; 
+    },
+    &quot;annotations&quot; : {
+      &quot;documentation_url&quot; : &quot;http://www.example.com/docs.html&quot;,	
+      &quot;alternative_names&quot; : [&quot;alternate name for this service&quot;, &quot;yet another name for web service&quot;],
+      &quot;tags&quot; : [&quot;example&quot;, &quot;test&quot;, &quot;delete me&quot;],
+      &quot;description&quot; : &quot;Put a description of the web service here&quot;,
+      &quot;categories&quot; : [&quot;http://www.biocatalogue.org/categories/1&quot;, &quot;http://www.biocatalogue.org/categories/6&quot;, &quot;http://www.biocatalogue.org/categories/17&quot;]
+    }
+}

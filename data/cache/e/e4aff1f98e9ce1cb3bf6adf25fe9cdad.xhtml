@@ -1,0 +1,421 @@
+
+
+
+<h1><a name="pilot_dev_notes" id="pilot_dev_notes">Pilot Dev Notes</a></h1>
+<div class="level1">
+
+<p>
+
+This page should be used to document (or link to) design decisions, data models, plugins/gems used and so on, during the development of the Pilot.
+</p>
+
+</div>
+<!-- SECTION "Pilot Dev Notes" [1-180] -->
+<h2><a name="codebase_guidelines" id="codebase_guidelines">Codebase Guidelines</a></h2>
+<div class="level2">
+
+<p>
+
+See: <a href="/ebiwiki/biocatalogue/doku.php?id=development:codebase_guidelines" class="wikilink1" title="development:codebase_guidelines">codebase_guidelines</a>
+</p>
+
+</div>
+<!-- SECTION "Codebase Guidelines" [181-255] -->
+<h2><a name="gems_need_to_be_installed_seperately" id="gems_need_to_be_installed_seperately">Gems (need to be installed seperately)</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/nkallen/cache-money/tree/master" class="urlextern" target="_blank" title="http://github.com/nkallen/cache-money/tree/master"  rel="nofollow">nkallen-cache-money</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://wiki.apache.org/solr/solr-ruby" class="urlextern" target="_blank" title="http://wiki.apache.org/solr/solr-ruby"  rel="nofollow">solr-ruby</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://addressable.rubyforge.org/" class="urlextern" target="_blank" title="http://addressable.rubyforge.org/"  rel="nofollow">addressable</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://dnsruby.rubyforge.org/" class="urlextern" target="_blank" title="http://dnsruby.rubyforge.org/"  rel="nofollow">dnsruby</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/pluginaweek/plugin_test_helper/tree/master" class="urlextern" target="_blank" title="http://github.com/pluginaweek/plugin_test_helper/tree/master"  rel="nofollow">plugin_test_helper</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://tzinfo.rubyforge.org/" class="urlextern" target="_blank" title="http://tzinfo.rubyforge.org/"  rel="nofollow">tzinfo</a> (used by Rails 2.2.2)</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://rubyforge.org/frs/?group_id=2524&amp;release_id=14841" class="urlextern" target="_blank" title="http://rubyforge.org/frs/?group_id=2524&amp;release_id=14841"  rel="nofollow">soap4r</a>, user to create rpc driver to soap services</div>
+<ul>
+<li class="level2"><div class="li"> NOTE (1): this gem is in /vendor/gems so no need for any installation.</div>
+</li>
+<li class="level2"><div class="li"> NOTE (2): make sure you do not have the httpclient gem installed locally as this will cause the application to break!</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/norman/disqus/tree/master" class="urlextern" target="_blank" title="http://github.com/norman/disqus/tree/master"  rel="nofollow">disqus</a>, for disqus integration</div>
+<ul>
+<li class="level2"><div class="li"> NOTE: this gem is in /vendor/gems so no need for any installation.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Gems (need to be installed seperately)" [256-1176] -->
+<h3><a name="possibly" id="possibly">Possibly</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="http://rubyforge.org/projects/bioruby/" class="urlextern" target="_blank" title="http://rubyforge.org/projects/bioruby/"  rel="nofollow">BioRuby</a>. The project is also available on <a href="http://github.com/bioruby/bioruby/tree/master" class="urlextern" target="_blank" title="http://github.com/bioruby/bioruby/tree/master"  rel="nofollow">github</a></div>
+<ul>
+<li class="level2"><div class="li"> gem install bio</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/pluginaweek/state_machine/tree/master" class="urlextern" target="_blank" title="http://github.com/pluginaweek/state_machine/tree/master"  rel="nofollow">state_machine</a> (used by some plugins)</div>
+<ul>
+<li class="level2"><div class="li"> gem install state_machine</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Possibly" [1177-1500] -->
+<h2><a name="plugins_already_in_vendor_plugins" id="plugins_already_in_vendor_plugins">Plugins (already in /vendor/plugins/)</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> acts_as_activity_logged from myExperiment</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="/ebiwiki/biocatalogue/doku.php?id=development:annotations" class="wikilink1" title="development:annotations">annotations</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> acts_as_solr -</div>
+<ul>
+<li class="level2"><div class="li"> Was: <a href="http://myexperiment.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/" class="urlextern" target="_blank" title="http://myexperiment.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/"  rel="nofollow">acts_as_solr from myExperiment codebase</a></div>
+</li>
+<li class="level2"><div class="li"> Then: <a href="http://github.com/bcardarella/acts_as_solr/tree/master" class="urlextern" target="_blank" title="http://github.com/bcardarella/acts_as_solr/tree/master"  rel="nofollow">http://github.com/bcardarella/acts_as_solr/tree/master</a></div>
+</li>
+<li class="level2"><div class="li"> Now: <a href="http://github.com/mattmatt/acts_as_solr/tree/master" class="urlextern" target="_blank" title="http://github.com/mattmatt/acts_as_solr/tree/master"  rel="nofollow">http://github.com/mattmatt/acts_as_solr/tree/master</a></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://actsastrashable.rubyforge.org/" class="urlextern" target="_blank" title="http://actsastrashable.rubyforge.org/"  rel="nofollow">acts_as_trashable</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> asset_packager (with YUI compressor support)</div>
+<ul>
+<li class="level2"><div class="li"> Article - <a href="http://railsillustrated.com/more-speed-improvements-with-asset_packager.html" class="urlextern" target="_blank" title="http://railsillustrated.com/more-speed-improvements-with-asset_packager.html"  rel="nofollow">http://railsillustrated.com/more-speed-improvements-with-asset_packager.html</a></div>
+</li>
+<li class="level2"><div class="li"> GitHub - <a href="http://github.com/eandrejko/asset_packager/tree/master" class="urlextern" target="_blank" title="http://github.com/eandrejko/asset_packager/tree/master"  rel="nofollow">http://github.com/eandrejko/asset_packager/tree/master</a></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://wiki.github.com/rails/auto_complete" class="urlextern" target="_blank" title="http://wiki.github.com/rails/auto_complete"  rel="nofollow">auto_complete</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/ihower/country_and_region_select/tree/master" class="urlextern" target="_blank" title="http://github.com/ihower/country_and_region_select/tree/master"  rel="nofollow">country_and_region_select</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://geokit.rubyforge.org/" class="urlextern" target="_blank" title="http://geokit.rubyforge.org/"  rel="nofollow">geokit</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://the.railsi.st/2007/5/3/headliner-dry-up-your-page-titles" class="urlextern" target="_blank" title="http://the.railsi.st/2007/5/3/headliner-dry-up-your-page-titles"  rel="nofollow">headliner</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/why/markaby/tree/master" class="urlextern" target="_blank" title="http://github.com/why/markaby/tree/master"  rel="nofollow">markaby</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/paolodona/rails-widgets/wikis" class="urlextern" target="_blank" title="http://github.com/paolodona/rails-widgets/wikis"  rel="nofollow">rails-widgets</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/jebw/redbox/tree/master" class="urlextern" target="_blank" title="http://github.com/jebw/redbox/tree/master"  rel="nofollow">redbox</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/sgarza/rounded_corners_helper/tree/master" class="urlextern" target="_blank" title="http://github.com/sgarza/rounded_corners_helper/tree/master"  rel="nofollow">rounded_corners_helper</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/henrik/slugalizer/tree/master" class="urlextern" target="_blank" title="http://github.com/henrik/slugalizer/tree/master"  rel="nofollow">slugalizer</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://rails.savvica.com/2007/11/6/email-veracity-plugin" class="urlextern" target="_blank" title="http://rails.savvica.com/2007/11/6/email-veracity-plugin"  rel="nofollow">validates_email_veracity_of</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://blog.hasmanythrough.com/2007/7/14/validate-your-existence" class="urlextern" target="_blank" title="http://blog.hasmanythrough.com/2007/7/14/validate-your-existence"  rel="nofollow">validates_existence</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/henrik/validates_url_format_of/tree/master" class="urlextern" target="_blank" title="http://github.com/henrik/validates_url_format_of/tree/master"  rel="nofollow">validates_url_format_of</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://svn.techno-weenie.net/projects/plugins/white_list/" class="urlextern" target="_blank" title="http://svn.techno-weenie.net/projects/plugins/white_list/"  rel="nofollow">white_list</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="http://github.com/mislav/will_paginate/wikis" class="urlextern" target="_blank" title="http://github.com/mislav/will_paginate/wikis"  rel="nofollow">will_paginate</a></div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Plugins (already in /vendor/plugins/)" [1501-3279] -->
+<h2><a name="important_design_decisions" id="important_design_decisions">Important Design Decisions</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> service_deployments = instances of a service hosted AND provisioned in a location by a provider</div>
+</li>
+<li class="level1"><div class="li"> All the following refer to the actual service type object (eg: SoapService or RestService etc):</div>
+</li>
+</ul>
+<pre class="code">service_version_instance
+service_instance 
+service_versionified
+service_versionified_instance</pre>
+<ul>
+<li class="level1"><div class="li"> For <acronym title="Simple Object Access Protocol">SOAP</acronym> we assume the service structure is all from wsdl doc (ie: provider) whereas REST we assume the service structure is all from the submitter.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Tagging the SoapService object itself is not relevant, only tagging either the root (Service) or SoapOperation/Inputs/Outputs</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Important Design Decisions" [3280-3909] -->
+<h2><a name="search_server_solr" id="search_server_solr">Search Server (solr)</a></h2>
+<div class="level2">
+
+<p>
+
+The solr service comes with the acts_as_solr plugin in our codebase so nothing has to be installed in order to have search enabled.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> To start the search server open a command line in the root of the application and type:</div>
+</li>
+</ul>
+<pre class="code">rake solr:start</pre>
+<ul>
+<li class="level1"><div class="li"> To stop the search server:</div>
+</li>
+</ul>
+<pre class="code">rake solr:stop</pre>
+<ul>
+<li class="level1"><div class="li"> To reindex everything in the production database:</div>
+</li>
+</ul>
+<pre class="code">rake solr:reindex RAILS_ENV=production --trace
+</pre>
+
+<p>
+(make sure that the production solr instance has been started)
+
+</p>
+<ul>
+<li class="level1"><div class="li"> To reindex everything in the development database:</div>
+</li>
+</ul>
+<pre class="code">rake solr:reindex --trace</pre>
+<ul>
+<li class="level1"><div class="li"> To optimise the producton mode index:</div>
+</li>
+</ul>
+<pre class="code">ruby script/runner -e production &quot;Service.solr_optimize&quot;</pre>
+<ul>
+<li class="level1"><div class="li"> To optimise the development mode index:</div>
+</li>
+</ul>
+<pre class="code">ruby script/runner &quot;Service.solr_optimize&quot;</pre>
+
+<p>
+
+<br/>
+
+<del>NOTE: The SynonymFilterFactory is not being used as it is causing problems with the NGramTokenizer</del>
+</p>
+
+</div>
+<!-- SECTION "Search Server (solr)" [3910-4805] -->
+<h2><a name="disqus_integration" id="disqus_integration">Disqus Integration</a></h2>
+<div class="level2">
+
+<p>
+
+The commenting/discussing facility uses the Disqus system (<a href="http://disqus.com/" class="urlextern" target="_blank" title="http://disqus.com/"  rel="nofollow">http://disqus.com/</a>).
+</p>
+
+<p>
+The admin/moderator/profile interface can be accessed on the Disqus website using:
+</p>
+<pre class="code">Username: biocatalogue
+Password: biodog007</pre>
+
+<p>
+
+For the actual comments/discussions data, two separate website accounts have been set up:
+
+</p>
+<ol>
+<li class="level1"><div class="li"> Test/dev account to be used for testing purposes only</div>
+<ul>
+<li class="level2"><div class="li"> Account name: biocatalogue-test</div>
+</li>
+<li class="level2"><div class="li"> Community page: <a href="http://biocatalogue-test.disqus.com/" class="urlextern" target="_blank" title="http://biocatalogue-test.disqus.com/"  rel="nofollow">http://biocatalogue-test.disqus.com/</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Main account to be used for the main website only</div>
+<ul>
+<li class="level2"><div class="li"> Account name: biocatalogue</div>
+</li>
+<li class="level2"><div class="li"> Community page: <a href="http://biocatalogue.disqus.com/" class="urlextern" target="_blank" title="http://biocatalogue.disqus.com/"  rel="nofollow">http://biocatalogue.disqus.com/</a></div>
+</li>
+</ul>
+</li>
+</ol>
+
+<p>
+
+<br/>
+
+<strong>PLEASE NOTE:</strong> 
+Make sure you copy the relevant settings from the local config template…
+</p>
+<pre class="code">/app/config/initializers/biocat_local.rb.pre</pre>
+
+<p>
+… to your local config file…
+</p>
+<pre class="code">/app/config/initializers/biocat_local.rb</pre>
+
+<p>
+It is crucial that the correct account name is configured here: 
+</p>
+<ul>
+<li class="level1"><div class="li"> For the beta/main site it should be “biocatalogue”</div>
+</li>
+<li class="level1"><div class="li"> For local development/testing it should be “biocatalogue-test”.</div>
+</li>
+</ul>
+
+<p>
+
+<br/>
+
+<strong>Customising the look and feel of the comment thread etc:</strong> <a href="http://wiki.disqus.net/CustomCSS" class="urlextern" target="_blank" title="http://wiki.disqus.net/CustomCSS"  rel="nofollow">http://wiki.disqus.net/CustomCSS</a>
+</p>
+
+</div>
+<!-- SECTION "Disqus Integration" [4806-5944] -->
+<h2><a name="background_processing" id="background_processing">Background Processing</a></h2>
+<div class="level2">
+
+<p>
+
+See: <a href="/ebiwiki/biocatalogue/doku.php?id=development:background_processing" class="wikilink1" title="development:background_processing"> Background Processing</a>
+</p>
+
+</div>
+<!-- SECTION "Background Processing" [5945-6025] -->
+<h2><a name="caching" id="caching">Caching</a></h2>
+<div class="level2">
+
+<p>
+
+See: <a href="/ebiwiki/biocatalogue/doku.php?id=development:caching" class="wikilink1" title="development:caching"> Caching</a>
+</p>
+
+</div>
+<!-- SECTION "Caching" [6026-6078] -->
+<h2><a name="production_database" id="production_database">Production Database</a></h2>
+<div class="level2">
+
+<p>
+
+In order to create the production database from scratch DO NOT USE “rake db:migrate RAILS_ENV=production” (see, for example, issues mentioned here: <a href="http://railsforum.com/viewtopic.php?id=26700" class="urlextern" target="_blank" title="http://railsforum.com/viewtopic.php?id=26700"  rel="nofollow">http://railsforum.com/viewtopic.php?id=26700</a>).
+</p>
+
+<p>
+This issue has been fixed (supposedly) in Rails 2.3. In the meantime I have implemented the fix from here: <a href="http://whatcodecraves.com/articles/2009/03/17/rails_2.2.2_chicken_and_egg_migrations_headache/" class="urlextern" target="_blank" title="http://whatcodecraves.com/articles/2009/03/17/rails_2.2.2_chicken_and_egg_migrations_headache/"  rel="nofollow">http://whatcodecraves.com/articles/2009/03/17/rails_2.2.2_chicken_and_egg_migrations_headache/</a>.
+</p>
+
+<p>
+And the proper way to create a fresh new production database:
+
+</p>
+<pre class="code">rake db:schema:load RAILS_ENV=production</pre>
+
+<p>
+
+This will load the schema up from /db/schema.rb (which we should keep up to date with the command “rake db:schema:dump”).
+</p>
+
+<p>
+Then import the data (or use it from empty).
+</p>
+
+<p>
+NOTE: this does mean that the initial Registry entries for Feta and SeekDa will not be in there. We need a proper mechanism for importing initial data.
+</p>
+
+</div>
+<!-- SECTION "Production Database" [6079-6940] -->
+<h2><a name="misc" id="misc">Misc</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Look to using <a href="http://rubyforge.org/projects/background-solr/" class="urlextern" target="_blank" title="http://rubyforge.org/projects/background-solr/"  rel="nofollow">background-solr</a> instead of acts_as_solr.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Misc" [6941-7069] -->
+<h2><a name="problems_errors_and_possible_solutions" id="problems_errors_and_possible_solutions">Problems/Errors and Possible Solutions</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> You see the error <strong>undefined constant XXXX::YYYYY</strong> - </div>
+</li>
+</ul>
+
+<p>
+
+Check if you have the file:
+
+</p>
+<pre class="code">./&lt;APPL_ROOT&gt;/config/initializers/biocat_local.rb </pre>
+
+<p>
+
+If not then copy: 
+
+</p>
+<pre class="code">./&lt;APPL_ROOT&gt;/config/initializers/biocat_local.rb.pre 
+    into 
+./&lt;APPL_ROOT&gt;/config/initializers/biocat_local.rb</pre>
+
+</div>
+<!-- SECTION "Problems/Errors and Possible Solutions" [7070-] -->

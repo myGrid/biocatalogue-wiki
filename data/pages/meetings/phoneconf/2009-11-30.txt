@@ -1,0 +1,63 @@
+Date: Monday 30th November 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+
+===== Attending ===== 
+
+**Manchester:** Steve, Franck, Jits, Mannie, Jerzy
+
+**EBI:** Eric
+
+===== Apologies =====
+
+===== Minuting =====
+
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Jamboree report - Franck needs some numbers for complete report
+  * Progress report
+     * Paper progress (George)
+     * Service execution (George)
+  * Publicity/outreach 
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Franck: organise a SAB telecom meeting for the 2nd week of January (from 11th) **ongoing** 
+  * All: send useful links to Jits **completed** 
+  * Franck: put on the task link <make type of complex services annotatable> **ongoing** 
+  * George: produce check list of the NAR paper **completed** 
+
+===== Minutes =====   
+Service execution: The plan is to implement a prototype and deploy it on the test site then ask Rodrigo, Carole what to do next. \\
+Service testing will be live on the test site before Xmas holidays. 
+
+===== New actions ===== 
+  * Steve to talk to Carole about EMBRACE logo on the main site. 
+  * Eric to send jamboree stats to Franck
+
+
+===== Upcoming Meetings =====  
+
+
+===== AOB =====
+
+BioCatalogue Nucleic Acids paper 
+
+Next SAB virtual meeting 
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-11-23|Phone Conference Meeting on Nov 23 2009]]
+
+Next meeting: [[Meetings:PhoneConf:2009-12-10|Phone Conference Meeting on Dec 10 2009]]

@@ -1,0 +1,12 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1270541618;s:8:"modified";i:1271670662;}s:7:"creator";s:4:"Eric";s:11:"last_change";a:7:{s:4:"date";i:1271670662;s:2:"ip";s:12:"172.22.69.91";s:4:"type";s:1:"E";s:2:"id";s:39:"development:release_notes:revision_1688";s:4:"user";s:8:"ericnzuo";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:8:"ericnzuo";s:4:"Eric";}s:4:"user";s:0:"";s:5:"title";s:37:"BioCatalogue Release , 9th March 2010";s:11:"description";a:2:{s:15:"tableofcontents";a:3:{i:0;a:4:{s:3:"hid";s:35:"biocatalogue_release_9th_march_2010";s:5:"title";s:37:"BioCatalogue Release , 9th March 2010";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:1;a:4:{s:3:"hid";s:24:"steps_to_take_for_update";s:5:"title";s:24:"Steps To Take for Update";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:13:"release_notes";s:5:"title";s:13:"Release Notes";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:255:"BioCatalogue Release , 9th March 2010
+
+	*  Previous release revision: 1368
+	*  This release revision: 1688
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do:";}s:8:"relation";a:2:{s:10:"references";a:1:{s:10:"public:api";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1270541618;s:8:"modified";i:1271670662;}s:7:"creator";s:4:"Eric";s:11:"last_change";a:7:{s:4:"date";i:1271670662;s:2:"ip";s:12:"172.22.69.91";s:4:"type";s:1:"E";s:2:"id";s:39:"development:release_notes:revision_1688";s:4:"user";s:8:"ericnzuo";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:8:"ericnzuo";s:4:"Eric";}s:4:"user";s:0:"";}}

@@ -1,0 +1,48 @@
+====== For Developers ======
+
+<html>
+<div class="box_note">
+<b>Quick links:</b> 
+<a href="http://www.biocatalogue.org/">The BioCatalogue</a> |
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap">Roadmap</a> |
+<a href="http://apidocs.biocatalogue.org">REST API docs</a> |
+<a href="http://rubyforge.org/mailman/listinfo/biocatalogue-hackers" target_blank>biocatalogue-hackers list</a> |
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=development:installation">Installation</a> |
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=development:codebase_guidelines"">Codebase Guidelines</a> |
+<a href="http://www.mygrid.org.uk/dev/issues/browse/BIOCAT">Task List</a> |
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=development:release_notes">Release Notes</a>
+
+</div>
+</html>
+
+The BioCatalogue project is building an open platform for Web Services registration, annotation and monitoring. The **[[http://rubyforge.org/scm/?group_id=6901|codebase]]** that powers the **[[http://www.biocatalogue.org|BioCatalogue]]** is **[[http://biocatalogue.rubyforge.org/svn/trunk/license.txt|BSD licensed]]** and therefore free to download, run and develop (see: **[[development:installation|installation]]**).
+
+As well as the web interface, you can access much of the data and functionality via a public **[[public:api|REST API]]** (currently read only). With this API you can integrate the BioCatalogue into your own tools and environments.
+
+Information about **[[Development: Codebase Guidelines|working with the BioCatalogue codebase]]** is available. 
+
+**[[development:release_notes|Release notes]]** are also available for those updating their instances.
+
+Further below on this page we will be adding detailed design and implementation information for those interested in knowing more about the internals of the BioCatalogue system.
+
+<html>
+<!-- The rest of the **[[Development:|development docs/notes]]** are available too. Note that these are a work in progress and/or rough notes. -->
+</html>
+
+The public **[[http://rubyforge.org/mailman/listinfo/biocatalogue-hackers|biocatalogue-hackers mailing list]]** is for those interested in developing with the BioCatalogue REST API and/or codebase. Please do join and post your questions/feedback/suggestions.
+
+You can also **[[http://www.biocatalogue.org/contact|contact us]]** for any general queries.
+
+If you are interested in what is currently happening with the core development of the BioCatalogue, you can check out:
+  * The current **[[public:roadmap|roadmap]]**
+  * The current **[[http://www.mygrid.org.uk/dev/issues/browse/BIOCAT|task list]]**
+
+
+
+===== Design and Implementation =====
+
+[[development:system_architecture|System Architecture]]
+
+MORE COMING SOON!
+
+

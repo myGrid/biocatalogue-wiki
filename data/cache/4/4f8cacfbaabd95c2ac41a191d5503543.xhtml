@@ -1,0 +1,90 @@
+
+
+
+<h1><a name="biocatalogue_mass_curator" id="biocatalogue_mass_curator">BioCatalogue Mass Curator</a></h1>
+<div class="level1">
+
+<p>
+
+The BioCatalogue Mass Curator application is a small tool which utilizes BioCatalogue&#039;s read/write <acronym title="Application Programming Interface">API</acronym> to handle batch annotation of web services via the use of spreadsheets
+</p>
+
+<p>
+BioCatalogue curators can use the tool to browse and/or search the catalogue for web services and select services they are interested in annotating.  The selected collection of services can then be exported into an annotation template (in the form of an Excel spreadsheet).  Curators can then add different types of annotation to the services within the spreadsheet such as, but not limited to, descriptions, tags, and example data.
+</p>
+
+<p>
+Mass Curator currently supports the annotation of <acronym title="Simple Object Access Protocol">SOAP</acronym> services only; a user can only add annotations to the <acronym title="Simple Object Access Protocol">SOAP</acronym> service, the <acronym title="Simple Object Access Protocol">SOAP</acronym> operations, and the <acronym title="Simple Object Access Protocol">SOAP</acronym> inputs and outputs.  REST service support is yet to come.
+</p>
+
+<p>
+After adding annotations to the spreadsheet, curators can then use the tool to extract the annotations from the spreadsheet and upload them to the BioCatalogue.
+</p>
+
+<p>
+For information on the development of this tool and/or how to build your own Mass Curator instance, visit <a href="/wiki/doku.php?id=public:apps:mass_curator:development" class="wikilink1" title="public:apps:mass_curator:development">Mass Curator Development</a>
+
+</p>
+
+</div>
+<!-- SECTION "BioCatalogue Mass Curator" [1-1200] -->
+<h2><a name="getting_started" id="getting_started">Getting Started</a></h2>
+<div class="level2">
+
+<p>
+
+You can download a copy of Mass Curator from <a href="http://github.com/myGrid/BioCatalogue-Mass-Curator/downloads" class="urlextern" target="_blank" title="http://github.com/myGrid/BioCatalogue-Mass-Curator/downloads"  rel="nofollow">http://github.com/myGrid/BioCatalogue-Mass-Curator/downloads</a>. 
+</p>
+
+<p>
+Once you have downloaded and extracted the contents of the archive, you can either: double click the <code>BioCatalogue-Mass-Curator.jar</code> file to run the application,   *  *OR  *  * open up your command line and enter <code>java -jar BioCatalogue-Mass-Curator.jar</code>
+</p>
+
+<p>
+This will run the application with the default configuration options.  In the application&#039;s directory is a <code>mass-curator.conf</code> file; edit this file to set your own options for Mass Curator.  
+</p>
+
+</div>
+<!-- SECTION "Getting Started" [1201-1793] -->
+<h3><a name="configuration_options" id="configuration_options">Configuration Options</a></h3>
+<div class="level3">
+
+<p>
+
+The default configuration is:
+</p>
+<pre class="code">[application]
+biocatalogue-hostname = &quot;http://www.biocatalogue.org&quot;
+services-per-page = 15
+search-results-per-page = 10</pre>
+<pre class="code">[spreadsheet]
+include-help = true</pre>
+<ul>
+<li class="level1"><div class="li"> <code>application</code></div>
+<ul>
+<li class="level2"><div class="li"> <code>biocatalogue-hostname</code> lets you specify which BioCatalogue instance you would like to use for you session.  We recommend that you do not use the same exported spreadsheet across different BioCatalogue instances.</div>
+</li>
+<li class="level2"><div class="li"> <code>services-per-page</code> is a number between 0 and 50 for the number of services to load per page in the main application browser.</div>
+</li>
+<li class="level2"><div class="li"> <code>search-results-per-page</code> is a number between 0 and 50 for the number of services to load per page the search results browser.</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <code>spreadsheet</code></div>
+<ul>
+<li class="level2"><div class="li"> <code>include-help</code> lets you choose whether to export the “HELP” worksheet along with your selected services or not; this value can either be <code>true</code> or <code>false</code>.  Any other value will be intepreted as <code>false</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+In the event that the application fails to read your config file, the defaults are used.
+
+</p>
+
+</div>
+<!-- SECTION "Configuration Options" [1794-] -->

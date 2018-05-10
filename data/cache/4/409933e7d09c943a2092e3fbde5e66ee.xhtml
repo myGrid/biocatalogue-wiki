@@ -1,0 +1,300 @@
+
+<h1 class="sectionedit1" id="biocatalogue_write_api">BioCatalogue Write API</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "BioCatalogue Write API" [1-38] -->
+<h2 class="sectionedit2" id="authentication">Authentication</h2>
+<div class="level2">
+
+<p>
+All calls to the Write <abbr title="Application Programming Interface">API</abbr> MUST be authenticated and authorised.
+</p>
+
+<p>
+You can use basic authentication (using your BioCatalogue username and password).
+</p>
+
+<p>
+OAuth is currently in test.
+</p>
+
+<p>
+Example using <code>curl</code> to perform basic authentication (only returns headers, not content):
+</p>
+<pre class="code">curl -I --user {username}:{password} -H &quot;Accept: application/json&quot; http://www.biocatalogue.org/url_that_needs_authentication</pre>
+
+<p>
+You will get an HTTP 403 Forbidden if authentication fails.
+</p>
+
+<p>
+Basic authentication can also be done by providing the appropriate HTTP headers in your HTTP client. <strong>NOTE: make sure to set the appropriate <code>Accept</code> and <code>Content-Type</code> headers too!</strong>
+</p>
+
+<p>
+NOTE: basic authentication is only required on pages that require you to be logged in. It will be ignored on all other pages.
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Authentication" [39-843] -->
+<h2 class="sectionedit3" id="submitting_services">Submitting Services</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "Submitting Services" [844-875] -->
+<h3 class="sectionedit4" id="soap_services">SOAP Services</h3>
+<div class="level3">
+
+<p>
+<strong>Endpoint</strong>: POST /soap_services
+</p>
+
+</div>
+
+<h4 id="input_content_template">Input (Content Template)</h4>
+<div class="level4">
+
+<p>
+<strong>Content type</strong>: application/json
+</p>
+
+</div>
+
+<h5 id="without_annotations">Without Annotations</h5>
+<div class="level5">
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;soap_service&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;wsdl_location&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>url_to_soap_service_wsdl<span class="sy0">&gt;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="with_annotations">With Annotations</h5>
+<div class="level5">
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;annotations&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;documentation_url&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>documentation_url<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;alternative_names&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>alternative_name<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>alternative_name<span class="sy0">&gt;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;tags&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;description&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>description<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;categories&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;</span> <span class="br0">&#93;</span> 
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="st0">&quot;soap_service&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;wsdl_location&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>url_to_soap_service_wsdl<span class="sy0">&gt;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="output_content_template">Output (Content Template)</h4>
+<div class="level4">
+
+<p>
+<strong>Content type</strong>: application/json
+</p>
+
+</div>
+
+<h5 id="on_error">On Error</h5>
+<div class="level5">
+
+<p>
+If the service already exists, you will get back an <strong>HTTP 403 Forbidden</strong> with the <em>location</em> header set to the location of the existing service. The body of the response will be set to the JSON content of the service.
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;errors&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>error_message<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>error_message<span class="sy0">&gt;</span> <span class="br0">&#93;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="on_success">On Success</h5>
+<div class="level5">
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;success&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="sy0">&lt;</span>uri_to_created_resource<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;message&quot;</span><span class="sy0">:</span> <span class="sy0">&lt;</span>message<span class="sy0">&gt;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+<strong>Successful submission example output</strong>:
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;success&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;message&quot;</span><span class="sy0">:</span> <span class="st0">&quot;The SOAP Service 'MiriamProviderService' has been successfully submitted.&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://test.biocatalogue.org/services/4&quot;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "SOAP Services" [876-2321] -->
+<h3 class="sectionedit5" id="rest_services">REST Services</h3>
+<div class="level3">
+
+<p>
+<strong>Endpoint</strong>: POST /rest_services
+</p>
+
+</div>
+
+<h4 id="input_content_template1">Input (Content Template)</h4>
+<div class="level4">
+
+<p>
+<strong>Content type</strong>: application/json
+</p>
+
+</div>
+
+<h5 id="without_annotations1">Without Annotations</h5>
+<div class="level5">
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;rest_service&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;name&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>rest_service_name<span class="sy0">&gt;</span> 
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="st0">&quot;endpoint&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>base_url_of_the_rest_service<span class="sy0">&gt;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="with_annotations1">With Annotations</h5>
+<div class="level5">
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;annotations&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;documentation_url&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>documentation_url<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;alternative_names&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>alternative_name<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>alternative_name<span class="sy0">&gt;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;tags&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>tag<span class="sy0">&gt;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;description&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>description<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;categories&quot;</span> <span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>category_uri<span class="sy0">&gt;</span> <span class="br0">&#93;</span> 
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="st0">&quot;rest_service&quot;</span> <span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;name&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>rest_service_name<span class="sy0">&gt;</span> 
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="st0">&quot;endpoint&quot;</span> <span class="sy0">:</span> <span class="sy0">&lt;</span>base_url_of_the_rest_service<span class="sy0">&gt;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="output_content_template1">Output (Content Template)</h4>
+<div class="level4">
+
+<p>
+<strong>Content type</strong>: application/json
+<strong>NB</strong>: If the service already exists, any annotations provided will be added to the REST service.
+</p>
+
+</div>
+
+<h5 id="on_error1">On Error</h5>
+<div class="level5">
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;errors&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="sy0">&lt;</span>error_message<span class="sy0">&gt;,</span> <span class="sy0">&lt;</span>error_message<span class="sy0">&gt;</span> <span class="br0">&#93;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="on_success1">On Success</h5>
+<div class="level5">
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;success&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="sy0">&lt;</span>uri_to_created_resource<span class="sy0">&gt;,</span>
+    <span class="st0">&quot;message&quot;</span><span class="sy0">:</span> <span class="sy0">&lt;</span>message<span class="sy0">&gt;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT5 SECTION "REST Services" [2322-3459] -->
+<h2 class="sectionedit6" id="submitting_annotations_in_bulk">Submitting Annotations in Bulk</h2>
+<div class="level2">
+
+<p>
+<strong>IMPORTANT</strong>: please see the information on <a href="http://www.biocatalogue.org/wiki/doku.php?id=public:api#annotations" class="urlextern" target="_blank" title="http://www.biocatalogue.org/wiki/doku.php?id=public:api#annotations"  rel="nofollow">Annotations</a> and the <a href="http://www.biocatalogue.org/wiki/doku.php?id=public:api#annotation_fields_breakdown" class="urlextern" target="_blank" title="http://www.biocatalogue.org/wiki/doku.php?id=public:api#annotation_fields_breakdown"  rel="nofollow">Annotations fields breakdown</a> before submitting any annotations.
+</p>
+
+<p>
+<strong>Endpoint</strong>: POST /annotations/bulk_create
+</p>
+
+</div>
+
+<h4 id="input">Input</h4>
+<div class="level4">
+
+<p>
+<strong>Content type</strong>: application/json
+</p>
+
+<p>
+<strong>Content template</strong>:
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;bulk_annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&lt;&lt; resource URI for resource to be annotated &gt;&gt;&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;&lt;&lt; annotation attribute name &gt;&gt;&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="st0">&quot;&lt;&lt; value 1 &gt;&gt;&quot;</span><span class="sy0">,</span> <span class="st0">&quot;&lt;&lt; value 2 &gt;&gt;&quot;</span><span class="sy0">,</span> <span class="st0">&quot;&lt;&lt; value 3 &gt;&gt;&quot;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;&lt;&lt; annotation attribute name &gt;&gt;&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&lt;&lt; value &gt;&gt;&quot;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  ... <span class="br0">&#93;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+<strong>Example</strong>:
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;bulk_annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_inputs/23&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;tag&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="st0">&quot;x&quot;</span><span class="sy0">,</span> <span class="st0">&quot;y&quot;</span><span class="sy0">,</span> <span class="st0">&quot;z&quot;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;ihouh uh ouho ouh&quot;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="br0">&#123;</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_operations/237&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;tag&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="st0">&quot;x&quot;</span><span class="sy0">,</span> <span class="st0">&quot;y&quot;</span><span class="sy0">,</span> <span class="st0">&quot;z&quot;</span> <span class="br0">&#93;</span><span class="sy0">,</span>
+    <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;ihouh uh ouho ouh&quot;</span>
+    <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span> <span class="br0">&#93;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="output">Output</h4>
+<div class="level4">
+
+<p>
+<strong>Content type</strong>: application/json
+</p>
+
+<p>
+<strong>Example output</strong>:
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+  <span class="st0">&quot;bulk_annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span> <span class="br0">&#123;</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_inputs/23&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+    <span class="sy0">&lt;&lt;</span> <span class="kw1">new</span> annotations created<span class="sy0">,</span> <span class="kw1">in</span> the Annotation resource JSON format <span class="sy0">&gt;&gt;</span>
+    <span class="br0">&#93;</span>
+  <span class="br0">&#125;</span><span class="sy0">,</span>
+  <span class="br0">&#123;</span>
+    <span class="st0">&quot;resource&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.biocatalogue.org/soap_operations/237&quot;</span><span class="sy0">,</span>
+    <span class="st0">&quot;annotations&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+    <span class="sy0">&lt;&lt;</span> <span class="kw1">new</span> annotations created<span class="sy0">,</span> <span class="kw1">in</span> the Annotation resource JSON formatt <span class="sy0">&gt;&gt;</span>
+    <span class="br0">&#93;</span> 
+  <span class="br0">&#125;</span> <span class="br0">&#93;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="errors">Errors</h4>
+<div class="level4">
+
+<p>
+Duplicate annotations (i.e. annotations that already exist for attributes that disallow duplicates) will not get created and therefore will not show up in the output.
+</p>
+
+</div>
+<!-- EDIT6 SECTION "Submitting Annotations in Bulk" [3460-] -->

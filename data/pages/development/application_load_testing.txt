@@ -1,0 +1,133 @@
+====== Application Load/Stress Testing ======
+
+
+=====  Objectives =====
+
+  * Simulate users in order to estimate the number of concurrent users the application can support
+  * Simulate web requests
+    * access to specific web pages
+    * form posts
+
+
+===== Procedure =====
+
+  * Use JMeter to simulate both user instances and web requests
+  * Record re-playable scenarios that can be used for regression testing
+
+
+===== Setup =====
+
+  * 4 slave instances of JMeter controlled by one master. This permits the scaling of the load without hitting the no of thread limit from a single instance 
+
+
+===== Expected Outputs =====
+
+  * Behavior of the application under extreme conditions
+    * graphs
+    * reports
+
+
+===== Test Cases =====
+==== Test Case 1: Fairly heavy load through the load balancer ====
+
+  * 200 users taking about 400 second to ramp-up. This means at start up, every 400/200 seconds, an addition request is sent. Now running from 4 instances means 2 additional requests every second. 
+
+{{:development:picture_11.png|}}
+
+  * pages included in the tests are home, services and tags
+
+=== Summary Report ===
+
+    * 200 users x 4 instances = 800 request made on each page. This is indicated by the sample column in the report
+    * # Samples - The number of samples with the same label
+    * Average - The average time of a set of results
+    * Median - The median is the time in the middle of a set of results. 50% of the samples took no more than this time; the remainder took at least as long.
+    * 90% Line - 90% of the samples took no more than this time. The remaining samples at least as long as this. (90 th percentile )
+    * Min - The shortest time for the samples with the same label
+    * Max - The longest time for the samples with the same label
+    * Error % - Percent of requests with errors
+    * Throughput - the Throughput is measured in requests per second/minute/hour. \\ **Times are in milliseconds  except where specifically stated, like ramp-up**
+
+
+{{:development:picture_8.png|}}
+
+=== Graph of test run ===
+
+{{:development:picture_10.png|}}
+
+=== Observation ===
+
+This is very heavy lead on the server. It is equivalent to 800 users hitting the same pages every second. And initially the server holds up to this load reasonably well. Over 2000 samples the server throws 500 (server internal errors) errors intermittently. It will be amazing if we could attain such load levels.
+
+==== Test Case 1 On live www.biocatalogue.org: Fairly heavy load through the load balancer ====
+
+=== Summary Report ===
+{{:development:load_test1_report_www_biocat.png|}}
+
+=== Graph of Test Run ===
+{{:development:load_test1_graph_www_biocat.png|}}
+
+=== Observation ===
+
+The server holds well to this load level. There is huge improvement compared to the previous code base. There are not sudden spikes in the response times for the request. It can also be observed that the max response time for the compute intensive pages like the service index page has greatly improved. From over 25 seconds to less that 6 seconds after hitting the cache. A very important note here is that the server does not break at this level.
+
+
+==== Test Case 2: ====
+
+  * 200 users taking about 400 second to ramp-up
+  * Using the server machine directly without going through the load balancer
+  {{:development:picture_11.png|}} 
+  * pages included in the tests are home, signup and tags 
+     * These pages are very lightweight in terms of db lookup
+
+=== Summary Report ===
+
+{{:development:picture_13.png|}}
+
+=== Graph of Results ===
+
+{{:development:picture_12.png|}}
+
+=== Observation ===
+
+  * The server handles this load very well. No noticeable degradation of service.
+
+==== Test Case 3: ====
+
+=== Configurations ===
+
+  * site : beta.biocatalogue.org
+  * No of users 200
+  * ramp up time 200 secs
+  * Pages: home, services, tags, signup
+
+=== Report ===
+
+{{:development:picture_14.png|}} 
+
+=== Graph of Results ===
+
+{{:development:picture_15.png|}}
+
+
+==== Test Case 4: ====
+
+=== Configurations ===
+
+  * site : beta.biocatalogue.org
+  * No of users 100
+  * ramp up time 10 secs
+  * Pages :login, new service, services, users
+
+=== Report ===
+
+{{:development:picture_16.png|}}
+
+
+==== Test Case 5: ====
+
+  * Same as Test Case 1, but on beta.biocatalogue.org
+
+=== Report ===
+
+{{:development:picture_17.png|}}

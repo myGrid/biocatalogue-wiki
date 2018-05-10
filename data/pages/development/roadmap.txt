@@ -1,0 +1,36 @@
+====== The BioCatalogue Roadmap ======
+
+Please note that the time scales listed are estimated. New requirements and changes in the user community may affect the delivery dates and schedule. 
+
+
+===== Fourth quarter of 2008 =====
+
+  * **//Private beta//** - see [[public:pilot|The Pilot]]
+
+
+===== First quarter of 2009 =====
+
+  * **//Public beta//** - see [[public:pilot|The Pilot]]
+  * **Advanced search** - faceted browsing, filtering and advanced search for services.
+  * **Public APIs** - simple RESTful APIs to BioCatalogue.
+  * **REST services support** - ability to register, search and annotate REST services.
+  * **Semantic annotation support** - ability to annotate service using ontologies.
+
+
+===== Second quarter of 2009 =====
+
+  * **Better support for BioMoby services** - including semantic annotations from the BioMody registry.
+  * **Enhanced search functionality** - similarity search and semantic search.
+  * **Workflow monitor** - monitor services to check whether they are up or down. RSS/ATOM feeds and email notification for monitoring information.
+  * **Subscribe to a service** - RSS/ATOM feeds for services, providing information on all activity available on a service.
+
+
+===== Third quarter 2009 =====
+
+  * **Service usage metrics** - usage metrics collection and provider metrics submission. RSS/ATOM feeds and email notifications for these metrics.
+  * **Service test functionality** - ability to test a service within the BioCatalogue interface before using it.
+
+
+===== 2010 =====
+
+  * Set up your own local BioCatalogue registry.

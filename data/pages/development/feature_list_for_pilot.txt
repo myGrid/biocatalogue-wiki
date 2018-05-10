@@ -1,0 +1,37 @@
+====== Feature List for the Pilot ======
+
+== User Registration and Management ==
+  * User registration and user profiles (for both regular users and service providers).
+
+== Service Registration and Management ==
+
+  * Single submission of a SOAP service (registered users only).
+  * Batch submission of many SOAP services (registered users only).
+  * Submission of all services from a SOAPLab server (registered users only).
+  * Duplicate checking of SOAP services, during submission.
+  * Ability to preview basic information about a service before submission
+  * Automatic version detection and handling of versioning for SOAP services (based on changes in the WSDL).
+  * Handling of multiple service deployments of the same service (tied into versioning).
+  * View all information about a service in one place, including the different operations, inputs, outputs and all information about these.
+
+== Search ==
+
+  * Search for services matching some free text.
+  * Browse latest services submitted and last updated services.
+  * Filtering (by category, by provider, by technology)
+
+== Annotation ==
+
+  * Ability to tag a service with specific keywords (tagging).
+  * Ability to add any information to a service or its parts (as annotations) which then become searchable.
+  
+== Notification ==
+
+  * RSS feeds for the latest services submitted and the last updated services.
+ 
+
+== Integration with myExperiment ==
+
+  * Services from BioCatalogue displayed in myExperiment so users of myExperiment can browse them. This includes a "Latest Services" and "Updated Services" list.
+  * Services within workflows in myExperiment reference the appropriate services in BioCatalogue so users can click through to the information in BioCatalogue.
+

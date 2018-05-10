@@ -1,0 +1,219 @@
+====== Accounts & Passwords ======
+
+===== Codebase Guidelines =====
+
+See: [[development:codebase_guidelines]]
+
+===== Disqus Integration =====
+
+The commenting/discussing facility uses the Disqus system (http://disqus.com/).
+
+The admin/moderator/profile interface can be accessed on the Disqus website using:
+  Username: biocatalogue
+  Password: biocateatdogs
+  Email: jits@cs.man.ac.uk
+
+For the actual comments/discussions data, two separate website accounts have been set up:
+
+  - Test/dev account to be used for testing purposes only
+    * Account name: biocatalogue-test
+    * Community page: http://biocatalogue-test.disqus.com/
+  - Main account to be used for the main website only
+    * Account name: biocatalogue
+    * Community page: http://biocatalogue.disqus.com/
+
+\\
+**PLEASE NOTE:** 
+Make sure you copy the relevant settings from the local config template...
+  /app/config/initializers/biocat_local.rb.pre
+... to your local config file...
+  /app/config/initializers/biocat_local.rb
+It is crucial that the correct account name is configured here: 
+  * For the beta/main site it should be "biocatalogue"
+  * For local development/testing it should be "biocatalogue-test".
+
+\\
+**Customising the look and feel of the comment thread etc:** http://wiki.disqus.net/CustomCSS
+
+
+===== SeekDa Import =====
+
+See: script/biocatalogue/seekda_import.rb
+
+We have an account on rubyforge:
+
+  Username: biocatalogue-developers@rubyforge.org
+  Password: biocateatdogs
+
+
+===== reCAPTCHA =====
+
+We use reCAPTCHA to do captchas for things like the Contact Us page.
+
+Account details:
+
+  Username: biocatalogue
+  Password: biocateatdogs
+  Email: biocatalogue-developers@rubyforge.org
+
+Info:
+
+  global-key.biocatalogue.org
+  
+  Domain Name: global-key.biocatalogue.org 
+  This is a global key. It will work across all domains. 
+   
+  Public Key: 6Lff_QYAAAAAABdXktnhabbQguELRw5r6q2xaDTr 
+  Use this in the JavaScript code that is served to your users
+   
+  Private Key: 6Lff_QYAAAAAANDXFRd76iB8jDd0DTxZEhd7Bvin 
+  Use this when communicating between your server and our server. Because this key is a global key, it is OK if the private key is distributed to multiple users.
+
+
+===== Twitter integration =====
+
+Events in the BioCatalogue can be published to twitter.
+
+See /lib/bio_catalogue/twitter.rb
+
+Note the settings in config/initializers/biocat_local.rb.pre
+
+**Accounts**
+
+  * For testing and local dev
+
+  URL: http://twitter.com/biocat_test
+  Username: biocat_test
+  Password: biocateatdogs
+  Email: biocatalogue-developers@rubyforge.org
+
+  * For main site **ONLY**
+
+  URL: http://twitter.com/biocatalogue
+  Username: biocatalogue
+  Password: biocateatdogs
+  Email: jits@cs.man.ac.uk
+
+
+===== Bookmarking widget - addthis.com =====
+
+We use the service provided by http://www.addthis.com.
+
+We have a registered account so that we can get analytics.
+
+  Username: biocatalogue
+  Password: biocateatdogs
+  Email: jits@cs.man.ac.uk
+
+
+===== Google Analytics =====
+
+Tracker ID:
+
+  UA-5011049-1
+
+===== RPX (for single sign of OpenID, Facebook, Google, etc etc) =====
+
+https://rpxnow.com/
+
+We are signed up on the free package (as outlined here: https://rpxnow.com/get) which only allows one administrator. Currently this is **Jits' Google Account for jits@cs.man.ac.uk**.
+
+  Realm: biocatalogue
+  API Key (keep secret): {ask Jits}
+
+This relies on having keys for other things, as below:
+
+===== Facebook App Key =====
+
+This is currently under Jits' Facebook account.
+
+  Application name: BioCatalogue
+  Application ID: 145570006525	
+  Public API Key: 8d92828612317162aba64bbcadfafc69
+  Secret: {ask Jits}
+
+===== Twitter App =====
+
+This is currently under the BioCatalogue Twitter account (as mentioned elsewhere on this page).
+
+  Consumer key: wskROadxBisPqCF04iww
+  Consumer secret: {ask Jits}
+  Request token URL: http://twitter.com/oauth/request_token
+  Access token URL: http://twitter.com/oauth/access_token
+  Authorize URL: http://twitter.com/oauth/authorize
+
+===== SlideShare =====
+
+  http://www.slideshare.net/BioCatalogue
+  Username: BioCatalogue
+  Email: contact@biocatalogue.org
+  Password: biocat
+
+===== Dropbox =====
+
+Use this to share logs, files, etc. 
+
+Place everything in the //**BioCatalogue**// folder to have it shared with anyone else who has that folder shared with their accounts.
+
+  http://www.dropbox.com
+  Email : contact@biocatalogue.org
+  Password: bi0cat
+
+===== Mailing Lists =====
+
+==== Internal BioCatalogue list ====
+
+| Email address | biocatalogue@listserv.manchester.ac.uk |
+| Hosted by | Manchester listerv |
+| To subscribe | must be done in the admin interface by an admin |
+| Admin interface | log in to http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1 with Manchester credentials |
+| Current Admins | Alex, Rob |
+| Archive | N/A |
+
+==== biocatalogue-developers ====
+
+| Email address | biocatalogue-developers@rubyforge.org |
+| Hosted by | RubyForge |
+| To subscribe | http://rubyforge.org/mailman/listinfo/biocatalogue-developers |
+| Admin interface | http://rubyforge.org/mailman/admin/biocatalogue-developers |
+| Admin password | 0091837da58bcf1f |
+| Current Admins | Alex, Rob |
+| Archive | http://rubyforge.org/pipermail/biocatalogue-developers/ |
+
+==== biocatalogue-hackers ====
+
+| Email address | biocatalogue-hackers@rubyforge.org |
+| Hosted by | RubyForge |
+| To subscribe | http://rubyforge.org/mailman/listinfo/biocatalogue-hackers |
+| Admin interface | http://rubyforge.org/mailman/admin/biocatalogue-hackers |
+| Admin password | 4e0727fb3004afa9 |
+| Current Admins | Alex, Rob |
+| Archive | http://rubyforge.org/pipermail/biocatalogue-hackers/ |
+
+==== biocatalogue-friends ====
+
+| Email address | biocatalogue-friends@listserv.manchester.ac.uk |
+| Hosted by | Manchester listerv |
+| To subscribe | http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&A=1 |
+| Admin interface | log in to http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1 with Manchester credentials |
+| Current Admins | Alex, Rob |
+| Archive | http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-FRIENDS |
+
+==== biocatalogue-support ====
+
+| Email address | biocatalogue-support@rubyforge.org |
+| Hosted by | RubyForge |
+| To subscribe | http://rubyforge.org/mailman/listinfo/biocatalogue-support |
+| Admin interface | http://rubyforge.org/mailman/admin/biocatalogue-support |
+| Admin password | e0ff170ee283ea37 |
+| Current Admins | Alex, Rob |
+| Archive | http://rubyforge.org/mailman/private/biocatalogue-support/ (private) |
+
+==== biocatalogue-SAB ====
+
+| Email address | biocatalogue-sab@listserv.manchester.ac.uk |
+| Hosted by | Manchester listerv |
+| To subscribe | must be done in the admin interface by an admin |
+| Admin interface | log in to http://listserv.manchester.ac.uk/cgi-bin/wa?LMGT1 with Manchester credentials |
+| Current Admins | Alex, Rob |
+| Archive | http://listserv.manchester.ac.uk/cgi-bin/wa?A0=BIOCATALOGUE-SAB |

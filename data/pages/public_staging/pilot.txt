@@ -1,0 +1,20 @@
+====== The BioCatalogue Pilot ======
+
+The BioCatalogue is entering its pilot stage. This pilot is a “red beta”. After passing through a capability and stability review by our early adopters it will be launched as “green beta” for wider use in April 2009.
+
+The pilot will support a number of bioinformatics projects and networks, notably EMBRACE and BioSapiens who have temporarily produced service registries. These will be absorbed into the pilot and the BioCatalogue will then takeover from them.
+
+
+[[pilot:Features|Features of the pilot]]\\
+[[pilot:involvement|To get involved]] \\
+[[pilot:Howto|How to]]\\
+
+
+
+
+  
+ 
+
+
+
+

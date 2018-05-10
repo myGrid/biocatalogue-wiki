@@ -1,0 +1,3 @@
+{{:publications_and_presentations:governance1_1_.ppt|SOA Governance1}}
+
+{{:publications_and_presentations:governance2.ppt|SOA Governance2}}

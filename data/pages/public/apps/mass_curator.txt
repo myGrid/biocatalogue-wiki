@@ -1,0 +1,39 @@
+====== BioCatalogue Mass Curator ======
+
+The BioCatalogue Mass Curator application is a small tool which utilizes BioCatalogue's read/write API to handle batch annotation of web services via the use of spreadsheets
+
+BioCatalogue curators can use the tool to browse and/or search the catalogue for web services and select services they are interested in annotating.  The selected collection of services can then be exported into an annotation template (in the form of an Excel spreadsheet).  Curators can then add different types of annotation to the services within the spreadsheet such as, but not limited to, descriptions, tags, and example data.
+
+Mass Curator currently supports the annotation of SOAP services only; a user can only add annotations to the SOAP service, the SOAP operations, and the SOAP inputs and outputs.  REST service support is yet to come.
+
+After adding annotations to the spreadsheet, curators can then use the tool to extract the annotations from the spreadsheet and upload them to the BioCatalogue.
+
+For information on the development of this tool and/or how to build your own Mass Curator instance, visit [[Public:Apps:Mass Curator:Development|Mass Curator Development]]
+===== Getting Started =====
+
+You can download a copy of Mass Curator from http://github.com/myGrid/BioCatalogue-Mass-Curator/downloads. 
+
+Once you have downloaded and extracted the contents of the archive, you can either: double click the ''BioCatalogue-Mass-Curator.jar'' file to run the application,   *  *OR  *  * open up your command line and enter ''java -jar BioCatalogue-Mass-Curator.jar''
+
+This will run the application with the default configuration options.  In the application's directory is a ''mass-curator.conf'' file; edit this file to set your own options for Mass Curator.  
+
+==== Configuration Options ====
+
+The default configuration is:
+  [application]
+  biocatalogue-hostname = "http://www.biocatalogue.org"
+  services-per-page = 15
+  search-results-per-page = 10
+
+  [spreadsheet]
+  include-help = true
+
+  * ''application''
+    * ''biocatalogue-hostname'' lets you specify which BioCatalogue instance you would like to use for you session.  We recommend that you do not use the same exported spreadsheet across different BioCatalogue instances.
+    * ''services-per-page'' is a number between 0 and 50 for the number of services to load per page in the main application browser.
+    * ''search-results-per-page'' is a number between 0 and 50 for the number of services to load per page the search results browser.
+
+  * ''spreadsheet''
+    * ''include-help'' lets you choose whether to export the "HELP" worksheet along with your selected services or not; this value can either be ''true'' or ''false''.  Any other value will be intepreted as ''false''
+
+In the event that the application fails to read your config file, the defaults are used.

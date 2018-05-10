@@ -1,0 +1,25 @@
+====== Curation roadmap ======
+
+Content curation is key to the BioCatalogue. That’s why the BioCatalogue team is working hard to improve the quality and the quantity of annotations in the BioCatalogue. The team will address both technical and social aspects of curation.  
+  * The technical aspect should allow users to find the services to annotate and the tool to use. It should also allow the BioCatalogue to automatically import annotations from different sources. 
+  * The social aspect aims to encourage members of the BioCatalogue to annotate services. 
+
+===== Technical aspect =====
+ 
+  * **UI improvement:** Improve the way service operations are displayed in the BioCatalogue  [//**January-March 2010**//]
+  * **Bulk curation tools:** spreadsheet like tools  [//**January-March 2010**//]
+  * **Curator reports:** to keep curators up to date of the content
+  * **Annotation status:** has all parts of the service been annotated? How many of them have been annotated? revisit bronze-silver-gold-platinum model.
+  * **Write APIs:** possibility to import annotation through the BioCatalogue APIs
+  * **Service ranking and filtering based on annotation**
+  * **Screen scraping:** bespoke scripts to extract service description from web sites
+  * **Who is who?** Curator vs casual annotator. Curators will have a stamp next to their name in the catalogue. 
+  * **Service versioning:** same services or similar services will be grouped together. If one is annotated we can derive the annotation of the others. 
+
+===== Social aspect =====
+ 
+  * **Outreach:** presentation, training and demo of the BioCatalogue
+  * **White paper:** annotation guidelines 
+  * **Jamboree:** organise a number of annotation jamborees  
+
+If you have any suggestions or ideas about how we can improve annotation of web services in the BioCatalogue, please contact us: contact(at)biocatalogue.org

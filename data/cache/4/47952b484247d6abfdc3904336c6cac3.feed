@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2009-10-19T08:24:40+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1226916118&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1226916118&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-11-17T10:01:58+01:00</dc:date>
+        <title>public:friends</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=public:friends&amp;rev=1226916118&amp;do=diff</link>
+        <description>The following projects and consortia are actively collaborating with the BioCatalogue project:
+
+
+	*  myExperiment (&lt;http://www.myexperiment.org&gt;) is a popular, JISC-funded, Virtual Research Environment focusing on scientific social networking, social content-sourcing and social curation for scientific workflows and other, increasingly, scientific protocols. The project is a joint venture between the Universities of Manchester (Carole Goble) and Southampton (David De Roure). myExperiment is the i…</description>
+    </item>
+</rdf:RDF>

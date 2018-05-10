@@ -1,0 +1,64 @@
+====== Caching ======
+
+  * <del>[[http://github.com/nkallen/cache-money/tree/master|cache-money]] gem to handle AR caching</del>
+  * <del>[[http://github.com/onyx/cache-money/tree/master|onyx-cache-money]]</del>
+
+See the **[[http://biocatalogue.rubyforge.org/svn/trunk/lib/bio_catalogue/cache_helper.rb|cache_helper.rb file]]** for more info
+
+Code has been put in place to allow both the ActionController cache (used by fragment and action caching) and the Rails.cache to use a consistent mechanism of accessing memcache (via a special, vendored version of memcache-client).
+
+ActionController caching only works properly in **production** mode. Bear this in mind when testing!
+
+
+===== Dev Setup =====
+
+  * You will need to install [[http://www.danga.com/memcached/|memcached]] (you can also install a cluster of these).
+  * Copy /config/memcache.yml.pre to /config/memcache.yml and configure accordingly.
+  * To disable memcache for any environment, leave the "servers: " part blank in that environment's section.
+    * **IMPORTANT**: it's absolutely crucial that you leave a space after "servers:" otherwise the app will refuse to start! (blame YAML!)
+    * NOTE: in some server set ups, using memcache for caching might actually be worse than just using in memory stores. If performance goes down when memcache is active then try it without memcache.
+
+
+===== Info =====
+
+==== cache-money ====
+
+  * <del>[[http://magicscalingsprinkles.wordpress.com/2008/12/11/introducing-cache-money/|Introducing Cache Money]]</del>
+
+==== Caching in Rails ====
+
+  * [[http://thewebfellas.com/blog/2008/6/9/rails-2-1-now-with-better-integrated-caching|Rails 2.1: now with better integrated caching]]
+  * [[http://guides.rubyonrails.org/caching_with_rails.html|Caching with Rails: An overview]]
+  * [[http://www.jefdean.com/2008/7/5/rails-cache-memcached-development-mode-and-offline-cache-invalidation|Rails.cache: Memcached, development mode and offline cache invalidation]]
+  * [[http://www.slideshare.net/guestac752c/caching-memcached-and-rails|Caching, Memcached And Rails]]
+  * [[http://www.ridingtheclutch.com/2009/01/08/cache-anything-easily-with-rails-and-memcached.html|Cache anything (easily) with Rails and memcached]]
+  * [[http://info.michael-simons.eu/2009/03/23/phusion-passenger-and-memcache-client-revisited/|Phusion Passenger and memcache-client revisited]]
+  * [[http://kineticac.posterous.com/memcached-with-passenger-ree-and-the-memcache|memcached with passenger, ree, and the memcache-client gem]]
+  * [[http://matt.blogs.it/entries/00002974.html|Expiring Rails cache from a background task]]
+  
+
+===== Clearing Caches =====
+
+To clear page and fragment caches only:
+
+  rake tmp:cache:clear RAILS_ENV=production
+
+To clear memcached:
+  * Restart ALL memcached instances.
+
+
+===== POTENTIAL ISSUE WITH MEMCACHED AND PASSENGER =====
+
+http://www.modrails.com/documentation/Users%20guide.html#_example_1_memcached_connection_sharing_harmful
+
+A fix for this has been applied to the codebase in revision 761 onwards.
+
+
+===== Troubleshooting =====
+
+If you get the exception message:
+
+  can't convert Fixnum into String
+
+... then the vendored memcache-client gem is not being used. The vendored memcache-client gem MUST be used and should be loaded at rails boot.
+

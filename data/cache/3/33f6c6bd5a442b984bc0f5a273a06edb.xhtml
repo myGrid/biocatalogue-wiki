@@ -1,0 +1,136 @@
+
+<h3 class="sectionedit1" id="discover_register_annotate_monitor_aob_drama">Discover Register Annotate Monitor Aob (DRAMA)</h3>
+<div class="level3">
+
+<p>
+DRAMA is a procedure in place to functionally test the BioCatalogue features after every release. It has to be carried out on the <a href="http://test.biocatalogue.org/" class="urlextern" target="_blank" title="http://test.biocatalogue.org/"  rel="nofollow">BioCatalogue test site</a>. Below are described the steps required. The aim is to automate the process using tools such as <a href="http://www.molyb.org/confluence/display/molyb/Home" class="urlextern" target="_blank" title="http://www.molyb.org/confluence/display/molyb/Home"  rel="nofollow">Molybdenum</a>
+</p>
+
+</div>
+
+<h4 id="discovery">Discovery</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> From the BioCatalogue home page search for ‘protein’ </div>
+</li>
+<li class="level1"><div class="li"> Click ‘Next page of results’ </div>
+</li>
+<li class="level1"><div class="li"> Click ‘Switch to detail view’ </div>
+</li>
+<li class="level1"><div class="li"> Search for ‘protein sequence’ </div>
+</li>
+<li class="level1"><div class="li"> Select ‘KEGG’ service </div>
+</li>
+<li class="level1"><div class="li"> Click one of the service tag (e.g. enzyme)</div>
+</li>
+<li class="level1"><div class="li"> Back to KEGG service using the back arrow </div>
+</li>
+<li class="level1"><div class="li"> Click one of the similar service on the right (e.g DDBJ)</div>
+</li>
+<li class="level1"><div class="li"> Back to KEGG </div>
+</li>
+<li class="level1"><div class="li"> Select one of the Category of the KEGG service (e.g Motifs)</div>
+</li>
+<li class="level1"><div class="li"> Combine different filter using the panel on the left (e.g member = franck, service type = soap)</div>
+</li>
+<li class="level1"><div class="li"> In the search within box, search for ‘KEGG’. </div>
+</li>
+<li class="level1"><div class="li"> Clear filter </div>
+</li>
+<li class="level1"><div class="li"> Select ‘bioinformatics in the tag cloud </div>
+</li>
+<li class="level1"><div class="li"> Select ‘Search by data’ search for the following example data: MSSRIARALALVVTLLHLTRLALSTCPAACHCPLEAPKCAPGVGLVRDGCGCCKVCAKQL</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="register">Register</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Create an account </div>
+</li>
+<li class="level1"><div class="li"> Sign in using Google, Yahoo, FaceBook </div>
+</li>
+<li class="level1"><div class="li"> Submit a SOAP service (e.g. <a href="http://webservices.genouest.org/typedservices/Xref.wsdl" class="urlextern" target="_blank" title="http://webservices.genouest.org/typedservices/Xref.wsdl"  rel="nofollow">http://webservices.genouest.org/typedservices/Xref.wsdl</a>); fill all the fields, no need to worry about the meanings </div>
+</li>
+<li class="level1"><div class="li"> Register a REST Service </div>
+</li>
+<li class="level1"><div class="li"> Add one new endpoint via the “REST Endpoints” tab and add a name to the REST endpoint.</div>
+</li>
+<li class="level1"><div class="li"> Register a Soaplab service if possible </div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="annotate">Annotate</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Go back to the soap service you’ve registered</div>
+</li>
+<li class="level1"><div class="li"> Annotate each of the components in the service overview (documentation url, description, contact etc…). Don’t worry about the meaning of the terms. </div>
+</li>
+<li class="level1"><div class="li"> Add tags to the same service</div>
+</li>
+<li class="level1"><div class="li"> Go to the operation tab and add annotation and tags to the operations and inputs/outputs</div>
+</li>
+<li class="level1"><div class="li"> Go to the REST service you registered and annotate the REST endpoint you created.</div>
+</li>
+<li class="level1"><div class="li"> Create two new REST endpoints (in one go) and annotate one of the REST endpoints entirely.</div>
+</li>
+<li class="level1"><div class="li"> Add at least two “Input/Output Representations” to the remaining REST endpoint and annotate one REST representation.</div>
+</li>
+<li class="level1"><div class="li"> Go back to the KEGG service </div>
+</li>
+<li class="level1"><div class="li"> Add annotations to the service and operations/inputs/outputs</div>
+</li>
+<li class="level1"><div class="li"> Add several categories to the KEGG service or the service you registered </div>
+</li>
+<li class="level1"><div class="li"> Add an alternative name</div>
+</li>
+<li class="level1"><div class="li"> Promote one the alternative name as service display name</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="monitor">Monitor</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Disable a test script from a selected service </div>
+</li>
+<li class="level1"><div class="li"> Check the outcome </div>
+</li>
+<li class="level1"><div class="li"> Enable the test script again</div>
+</li>
+<li class="level1"><div class="li"> Add a custom monitoring endpoint to a REST service</div>
+</li>
+<li class="level1"><div class="li"> Check the outcome </div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="any_others">Any Others</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Favorite a service </div>
+</li>
+<li class="level1"><div class="li"> Delete service </div>
+</li>
+<li class="level1"><div class="li"> Delete a REST representation.</div>
+</li>
+<li class="level1"><div class="li"> Edit the path of a REST endpoint.</div>
+</li>
+<li class="level1"><div class="li"> Assign a group to a REST endpoint.</div>
+</li>
+<li class="level1"><div class="li"> Edit a REST service&#039;s base <abbr title="Uniform Resource Locator">URL</abbr>.</div>
+</li>
+<li class="level1"><div class="li"> Update a REST parameter, alternating between “optional” and “required” and pay attention to the template generated.</div>
+</li>
+<li class="level1"><div class="li"> Edit a custom monitoring endpoint to a REST service</div>
+</li>
+</ul>
+
+</div>

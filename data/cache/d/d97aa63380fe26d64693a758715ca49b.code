@@ -1,0 +1,28 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;soapServices</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/soap_services&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>159<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>1583<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>1583<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;soapService</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/soap_services/2595&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;SoapService&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Soap Service - wsPrediction&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Soap Service - wsPrediction<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>wsPrediction<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;wsdlLocation<span class="re2">&gt;</span></span></span>http://gmd.mpimp-golm.mpg.de/webservices/wsPrediction.asmx?WSDL<span class="sc3"><span class="re1">&lt;/wsdlLocation<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;submitter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/users/527&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Member - Jan Hummel&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Jan Hummel&quot;</span><span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:description<span class="re2">&gt;</span></span></span>
+These web services provide access to methods for prediction of chemical sub-groups by means of user submitted mass spectra.
+Please send all feedback to <span class="sc1">&amp;lt;</span>a href=&quot;mailto:hummel@mpimp-golm.mpg.de&quot;<span class="sc1">&amp;gt;</span>hummel@mpimp-golm.mpg.de<span class="sc1">&amp;lt;</span>/a<span class="sc1">&amp;gt;</span><span class="sc3"><span class="re1">&lt;/dc:description<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;documentationUrl<span class="re2">&gt;</span></span></span>http://gmd.mpimp-golm.mpg.de/webservices/wsPrediction.asmx<span class="sc3"><span class="re1">&lt;/documentationUrl<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-04-30T13:25:25Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/soapService<span class="re2">&gt;</span></span></span>
+    ...
+    <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;next</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/soap_services?page=2&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethods&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Next page of results&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/soapServices<span class="re2">&gt;</span></span></span>

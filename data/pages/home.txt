@@ -1,0 +1,177 @@
+~~NOTOC~~
+
+<html>
+<style type="text/css">
+
+.box_biocatinfo {
+background: #E9F7CC;
+border: 1px solid #DDD;
+color: #333333;
+padding: 0.4em 1.2em;
+margin: 0;
+margin-bottom: 1em; 
+}
+
+ul.nav_list {
+padding: 0;
+margin: 0;
+}
+
+ul.nav_list li {
+padding: 0;
+margin: 0;
+margin-bottom: 0.7em;
+list-style-type: none;
+text-align: left;
+}
+
+ul.nav_list li:before {
+content: "\00BB \0020";
+}
+
+</style>
+
+<div style="overflow:auto; line-height: 1.5;">
+
+<div class="box_biocatinfo" style="float: left; width: 78%;">
+
+<img src="http://www.biocatalogue.org/images/logo.png" alt="BioCatalogue Logo" style="float:right; margin-left: 2.5em; margin-bottom: 1.5em;" />
+
+<p style="font-weight: bold; font-size: 115%; margin-top: 0.7em; text-align:left;">
+The BioCatalogue is a registry of biological Web Services. <a href="http://www.biocatalogue.org" target="_blank">The BioCatalogue website</a> is freely accessible to the world as it is searchable and indexable to search engines. It provides an open platform for biological Web Services registration, annotation and monitoring.
+</p>
+
+<p style="margin-bottom: 0.4em; margin-top: 1.5em;">
+<b>Our Goals:</b>
+</p>
+
+<ul style="margin-top: 0.4em; margin-bottom: 1.2em; color: black;">
+<li>Provide a single registration point for Web Service providers and a single search site for scientists and developers.</li>
+<li>Provide a curated catalogue of life science web services</li>
+<li>Providers, Expert curators and Users will provide oversight, monitor the catalogue and provide high quality annotations for services.</li>
+<li>BioCatalogue as a place where the community can find, contact and meet the experts and maintainers of these services.</li>
+</ul>
+
+<p style="text-align:left;">
+The BioCatalogue is a BBSRC funded project and has been running since 1st June 2008. The project is a joint venture between the University of Manchester (led by Carole Goble) and the EMBL-EBI (led by Rodrigo Lopez).
+</p>
+
+</div>
+
+<div style="float: right; width: 16%; font-weight: bold;">
+
+<ul class="nav_list">
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:pilot">Features</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap">Roadmap</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:team">People</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:friends">Partners</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:faq">FAQ</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:help">Help Pages</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:api">API Docs</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:for_developers">For Developers</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:publication_list">Publications & Citations</a>
+</li>
+
+<li>
+<a href="http://www.slideshare.net/BioCatalogue/presentations" target="_blank">Presentations</a>
+</li>
+
+<li>
+<a href="http://www.biocatalogue.org/wiki/doku.php?id=public:news">News & Events</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</html>
+
+===== How To Get Involved =====
+
+  * To contact us directly, email contact@biocatalogue.org
+
+  * To be kept up-to-date of the development of the BioCatalogue or to request new features, please join the [[http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&A=1|BioCatalogue-Friends Mailing List]]
+
+  * For information about the BioCatalogue code base, APIs or to set up your own BioCatalogue, please join the [[http://rubyforge.org/mailman/listinfo/biocatalogue-hackers|BioCatalogue Hackers mailing list]]
+
+
+===== How To Cite The Project =====
+
+<html>
+<div class="box_note">
+Bhagat, J., Tanoh, F., Nzuobontane, E., Laurent, T., Orlowski, J., Roos, M., Wolstencroft, K., Aleksejevs, S., Stevens, R., Pettifer, S., Lopez, R., Goble, C.A.: <b>BioCatalogue: a universal catalogue of web services for the life sciences</b>, Nucl. Acids Res., 2010. <a href="http://nar.oxfordjournals.org/cgi/content/full/gkq394">doi:10.1093/nar/gkq394</a>
+</div>
+</html>
+
+
+===== License of Code and Content =====
+
+The BioCatalogue **codebase** is licensed under the [[http://biocatalogue.rubyforge.org/svn/trunk/license.txt|BSD license]]. The **content** contributed on the http://www.biocatalogue.org and http://test.biocatalogue.org sites are licensed under the [[http://creativecommons.org/licenses/publicdomain/|Creative Commons Public Domain License]] unless specified otherwise. Please see the [[http://www.biocatalogue.org/termsofuse|Terms of Use]] for more information.
+
+PLEASE NOTE: the Creative Commons Public Domain License has since been retired (in Oct 2010) and we are in the process of moving to a new license for the content.
+
+
+===== News & Events =====
+
+  * The BioCatalogue iPhone4 and iPad app is now available for free: http://itunes.apple.com/us/app/biocatalogue/id450120348?ls=1&mt=8
+
+  * **Carole Goble** presented a keynote entitled Web Services in the Scientific Wilds at [[http://www.servicescongress.org/2011/|IEEE SERVICES 2011 The 7th World Congress on Services]] in Washington DC, USA on 8th June 2011. ([[http://dl.dropbox.com/u/617206/SERVICES%202011%20GOBLE.ppt|slides]])
+
+  * The BioCatalogue was presented at the 2011 [[http://www.enfin.org/page.php?page=esbCENFIN Enabling Systems Biology conference]] in London, UK on 13th April 2011 by **Jiten Bhagat** ([[http://www.slideshare.net/BioCatalogue/biocatalogue-presentation-enabling-systems-biology-2011-by-jiten-bhagat-7685447|slides]]) and the BioCatalogue iPad app was demoed by **Mannie Tagarira**.
+
+  * **Carole Goble** presented a Webinar on **[[http://www.bioontology.org/e-laboratories-social-computing-for-scientists|Social Computing for Scientists: Building collaborative e-Laboratories]]** for the NCBO, on March 16th 2011. ([[http://www.bioontology.org/sites/default/files/Goble%20-%20NCBO%20Webinar%202011.ppt|Slides]])
+
+  * **Carole Goble** presented BioCatalogue at BioIT Europe 2010 Hannover, Germany 05-09 Oct 2010. ([[http://dl.dropbox.com/u/617206/BioIT10-BioCatalogue-final-clean.ppt|slides]])
+
+  * BioCatalogue first iPhone and iPad app now available for download for free [[http://itunes.apple.com/app/biocatalogue-mobile/id389920173?mt=8|here]]
+
+  * The BioCatalogue Functional Unit paper presented at [[http://www.cs.wayne.edu/~shiyong/swf/swf2010.html|IEEE 2010 Fourth International Workshop on Scientific Workflows]], Miami, Florida, USA, July 5-10, 2010
+  
+  * The National Cancer Research Institute has integrated the BioCatalogue into their ONIX Portal. [[http://www.biocatalogue.org/announcements/20|More details]]
+
+  * The BioCatalogue was presented and demoed at ISMB 2010 in Boston, MA USA [ [[http://www.slideshare.net/BioCatalogue/ismb-2010-biocatalogue-presentation|slides]] ]
+
+  * Check out a cool BioCatalogue introduction video on the [[http://blog.openhelix.eu/?p=4555|OpenHelix Blog]]
+
+  * The BioCatalogue **Nucleic Acids Research (NAR)** paper has now been published. Find it [[http://nar.oxfordjournals.org/cgi/content/abstract/gkq394?ijkey=B1EwjisEXFeONOp&keytype=ref|here]]
+
+  * There is a BioCatalogue demo at [[http://www.iscb.org/cms_addon/conferences/ismb2010/technologytrack.php|ISMB 2010]] in Boston on Sunday, July 11 from 3:30 p.m. - 3:55 p.m, room 309
+
+  * The BioCatalogue team will be at the EMBRACE Workshop for Web Service Providers in Bioinformatics: [[http://www.cbs.dtu.dk/courses/embrace/2010-06-02/ |Syntax, Semantics and Publishing]], June 2-4, 2010, Department of Systems Biology, Technical University of Denmark
+
+
+[[public:news|See all News & Events]]
+
+===== Latest Site Announcements =====
+
+{{rss>http://www.biocatalogue.org/announcements.atom 10 author date 1h }}
+
+[[http://www.biocatalogue.org/|More]]

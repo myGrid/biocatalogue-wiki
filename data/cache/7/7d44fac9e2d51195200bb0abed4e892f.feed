@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue meetings</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2009-10-19T08:25:06+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:advisory_board_mar_09&amp;rev=1238167678&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_aug_08&amp;rev=1219155357&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_dec_08&amp;rev=1233055312&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_jan_09&amp;rev=1233064982&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_sept_09&amp;rev=1252915646&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:joint_myexperiment-biocatalogue_meetings&amp;rev=1224696033&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:project_kick-off_meeting_manchester_april_28-29_2008&amp;rev=1217252289&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:strategy_advisory_board_mar_09&amp;rev=1243508877&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=meetings:strategy_advisory_board_mar_09_revisited&amp;rev=1240867825&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:advisory_board_mar_09&amp;rev=1238167678&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-03-27T15:27:58+01:00</dc:date>
+        <title>meetings:advisory_board_mar_09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:advisory_board_mar_09&amp;rev=1238167678&amp;do=diff</link>
+        <description>BioCatalogue Advisory Board Meeting
+
+Manchester 20/03/09 
+
+
+12:00 - Lunch
+
+13.00 - Introductions
+
+13.05 - Brief Introduction to the BioCatalogue project, and issues for discussion.	(Carole Goble and Rodrigo Lopez)
+
+13.25 - Demo of the BioCatalogue Pilot (Jiten Bhagat, Franck Tanoh, Thomas Laurent and Eric Nzuobontane)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_aug_08&amp;rev=1219155357&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-19T15:15:57+01:00</dc:date>
+        <title>meetings:f2f_aug_08</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_aug_08&amp;rev=1219155357&amp;do=diff</link>
+        <description>Attending
+
+
+Thomas, Eric, Hamish, Katy, Franck, Jits, Don, Sergejs
+
+Note: Jits is also there Mon 18th and Tues 19th.
+
+Expected Outcomes
+
+ This needs more clarification! 
+
+
+	*  Content requirements
+	*  Design document of the system
+	*  Beginnings of code
+	*  Clear and unambiguous definitions and documentation on requirements, what components to use, what is 'in' myExperiment, what is 'in' BioCatalogue, a plan and so on.
+	*  Some information on expected performance, scalability, support and so on …</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_dec_08&amp;rev=1233055312&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-27T11:21:52+01:00</dc:date>
+        <title>meetings:f2f_dec_08</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_dec_08&amp;rev=1233055312&amp;do=diff</link>
+        <description>Attending
+
+
+Rodrigo, Dave, Carole, Jits, Thomas, Eric, 
+
+ Notes by Dave  
+
+Broadly the Biocatalogue team is going to be very busy over the next 2
+months getting code functionality and content in place, with a view to a
+code freeze in March and content bootstrapped for public release of the
+pilot service in April. What with Christmas, this is all only a few weeks
+away! Hence we're not looking at many interactions with myExperiment in the
+next few weeks, but there are many touch points thereafter.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_jan_09&amp;rev=1233064982&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-01-27T14:03:02+01:00</dc:date>
+        <title>meetings:f2f_jan_09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_jan_09&amp;rev=1233064982&amp;do=diff</link>
+        <description>Attending
+
+
+Thomas, Eric, Jits
+
+Drifting in and out: Franck, Steve, Carole
+
+Agenda
+
+	*  Annotations
+	*  Service testing infrastructure (based on EMBRACE capabilities)
+	*  Automated testing and continuous integration of codebase
+	*  EMBRACE + discussions with Steve
+	*  Soaplab server submission
+	*  UI
+	*  Service submission page
+	*  BioMoby support
+	*  Updating the public wiki
+	*  Ownership/provider management
+	*  DAS
+	*  Search/Browse/Filtering</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_sept_09&amp;rev=1252915646&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-09-14T09:07:26+01:00</dc:date>
+        <title>meetings:f2f_sept_09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:f2f_sept_09&amp;rev=1252915646&amp;do=diff</link>
+        <description>BioCatalogue Face-to-Face Meeting at EBI
+
+
+Tentative Agenda
+
+Monday 14th (10.00-18.00pm)
+
+Review of the current beta
+
+	*  Agenda Review
+	*  Developer report
+	*  User report
+	*  Review followed by discussion
+
+Collaborating projects
+
+	*  Embrace registry
+	*  myExperiment
+	*  NCRI
+	*  Taverna
+	*  CASIMIR/ ENFIN
+	*  GenePattern
+	*  BioMoby</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:joint_myexperiment-biocatalogue_meetings&amp;rev=1224696033&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-22T18:20:33+01:00</dc:date>
+        <title>meetings:joint_myexperiment-biocatalogue_meetings</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:joint_myexperiment-biocatalogue_meetings&amp;rev=1224696033&amp;do=diff</link>
+        <description>*  Hackathon in Southampton(August 28-29/2008)
+		*  Present, Eric &amp; Thomas from EBI, Jits from Manchester (Carole, Marco and the myExperiment team at Southampton contributed to the discussion)
+		*  Discussions centred around the database model for the pilot. Emphasis was place in making the model considerably open to extensions and changes as the expectation is that the database model should survive the pilot phase of the project. The db model for the pilot from those discussions is found here</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:project_kick-off_meeting_manchester_april_28-29_2008&amp;rev=1217252289&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-28T14:38:09+01:00</dc:date>
+        <title>meetings:project_kick-off_meeting_manchester_april_28-29_2008</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:project_kick-off_meeting_manchester_april_28-29_2008&amp;rev=1217252289&amp;do=diff</link>
+        <description>BioCatalogue Project Kick-Off Meeting
+
+	*  Place : Manchester  
+	*  Date  : 28/29 April 2008
+
+Agenda
+
+Monday 28th April
+
+
+12.00 Lunch
+
+13.30 Introduction to the meeting: introducing people to each other, their roles -- Carole
+
+14.00 Introduction to the project  including discussion -- Carole (with Rodrigo and Robert joining in)</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:strategy_advisory_board_mar_09&amp;rev=1243508877&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-05-28T12:07:57+01:00</dc:date>
+        <title>meetings:strategy_advisory_board_mar_09</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:strategy_advisory_board_mar_09&amp;rev=1243508877&amp;do=diff</link>
+        <description>Date: 20th March 2009
+
+Location: University of Manchester
+
+Attending: Carole Goble, Jiten Bhagat, Steve Pettifer, Franck Tanoh, Rodrigo Lopez, Thomas Laurent, Eric Nzuobontane, Chris Rawlings, Anil Wipat, Jo Dicks, Steve Kemp, Antoine H.C. van Kampen, Holger Lausen, Terry Payne</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=meetings:strategy_advisory_board_mar_09_revisited&amp;rev=1240867825&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-04-27T22:30:25+01:00</dc:date>
+        <title>meetings:strategy_advisory_board_mar_09_revisited</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=meetings:strategy_advisory_board_mar_09_revisited&amp;rev=1240867825&amp;do=diff</link>
+        <description>Date: 20th March 2009
+
+Location: University of Manchester
+
+Attending: Carole Goble, Jiten Bhagat, Steve Pettifer, Franck Tanoh, Rodrigo Lopez, Thomas Laurent, Eric Nzuobontane, Chris Rawlings, Anil Wipat, Jo Dicks, Steve Kemp, Antoine H.C. van Kampen, Holger Lausen, Terry Payne</description>
+    </item>
+</rdf:RDF>

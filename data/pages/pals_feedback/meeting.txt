@@ -1,0 +1,53 @@
+====== BioCatalogue focus group meeting Nov 27 2009 ======
+
+===== Attending =====
+Ben, Olivier, Chrysanthi, Franck
+
+===== Apologies =====
+ Duncan, Marco
+
+===== Minutes =====
+
+
+==== Introduction ====
+ 
+BioCatalogue is a **curated** registry of Life science services \\
+Some challenges: \\ 
+  * loads of web services using different technology (SOAP, REST)
+  * different standard available 
+  * get users and provider to annotate web services
+ 
+The role of the Focus Group is to discuss the issues and propose some solutions. In addition the Focus Group provides feedback on the BioCatalogue products. 
+
+==== Discussion ====
+ 
+**1-Web service annotation in Life Science** \\
+  * Use of controlled vocabulary
+  * Service categorization 
+  * Tag on service/operations/ inputs/outputs
+  * Annotation quality matrix
+
+**2-Community/provider involvements - How To** \\
+  * Find different ways to add annotation to web service e.g through API
+  * Possibility to import annotation from application using webs services such as Taverna, myExperiment etc.
+  * Service providers or users should gain something in return. For example report the result of service testing to the provider.
+
+**3-What do you expect from the BioCatalogue?** \\
+  * An API to ease the deployment of services; possibility to do everything through the API (service and annotation submission, service testing and monitoring etc…).  
+  * Integration with other tools consuming web service such as Taverna, myExperiment etc…
+  * Link between inputs and outputs of services 
+  * Monitor submitter contact details. With time, some of them will be out of date. For example when a service submitter leaves his project.
+  * Define policy for service which have been offline for a long period of time 
+  * BioCatalogue is serving 2 different communities; it should be clear from the site
+    * Community 1 knows what web services are and wants to use them 
+    * Community 2 wants to know more about web services. 
+  * Possibility to rank search result based on service availability test.
+  * Possibility to test web service from the BioCatalogue
+  * Make it easy for user of the BioCatalogue to contact service provider
+  * How do you know that the service is well annotated? Need a kind of BioCatalogue approved annotation stamp.
+
+==== Action ====
+Franck to create a mailing list for the focus group 
+
+==== Event ====
+BioCatalogue annotation jamboree in Manchester Nov 27 

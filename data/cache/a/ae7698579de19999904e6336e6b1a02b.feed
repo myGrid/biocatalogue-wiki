@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.biocatalogue.org/wiki/feed.php">
+        <title>BioCatalogue development:release_notes</title>
+        <description></description>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico" />
+       <dc:date>2018-05-02T03:39:45+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1266?rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1300?rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1350?rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1367?rev=1260536560&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1688?rev=1271670662&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1808?rev=1271670633&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1829?rev=1271670708&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1838?rev=1271670744&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_1868?rev=1271947338&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_2068?rev=1275470238&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:revision_oct_2010?rev=1308906517&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:v1.0.1?rev=1313413006&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.biocatalogue.org/wiki/development:release_notes:v1.1.0?rev=1316773339&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico">
+        <title>BioCatalogue</title>
+        <link>https://www.biocatalogue.org/wiki/</link>
+        <url>https://www.biocatalogue.org/wiki/lib/tpl/sidemenu/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1266?rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+01:00</dc:date>
+        <title>development:release_notes:revision_1266</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1266?rev=1260536560&amp;do=diff</link>
+        <description>5th November 2009
+
+	*  Previous release revision:
+	*  This release revision: 1266
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+rake db:sessions:clear RAILS_ENV=production
+rake db:migrate RAILS_ENV=production
+	*  Restart memcached server(s)</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1300?rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+01:00</dc:date>
+        <title>development:release_notes:revision_1300</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1300?rev=1260536560&amp;do=diff</link>
+        <description>19th November 2009 Release
+
+	*  Previous release revision: 1266
+	*  This release revision: 1300
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do: 
+ruby script/worker stop
+ruby script/worker start
+	*  Rebuild assets</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1350?rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+01:00</dc:date>
+        <title>development:release_notes:revision_1350</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1350?rev=1260536560&amp;do=diff</link>
+        <description>1st December 2009
+
+	*  Previous release revision: 1300
+	*  This release revision: 1350
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do: 
+ruby script/worker stop
+ruby script/worker start
+	*  Run the 'search by data script'</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1367?rev=1260536560&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:40+01:00</dc:date>
+        <title>development:release_notes:revision_1367</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1367?rev=1260536560&amp;do=diff</link>
+        <description>10th December 2009
+
+	*  Previous release revision: 1350
+	*  This release revision: 1368
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do: 
+ruby script/worker stop
+ruby script/worker start
+	*  Rebuild assets</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1688?rev=1271670662&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:51:02+01:00</dc:date>
+        <title>development:release_notes:revision_1688</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1688?rev=1271670662&amp;do=diff</link>
+        <description>BioCatalogue Release , 9th March 2010
+
+	*  Previous release revision: 1368
+	*  This release revision: 1688
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do:</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1808?rev=1271670633&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:50:33+01:00</dc:date>
+        <title>development:release_notes:revision_1808</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1808?rev=1271670633&amp;do=diff</link>
+        <description>BioCatalogue Release , April 6th 2010
+
+	*  Previous release revision: 1688
+	*  This release revision: 1814
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do:</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1829?rev=1271670708&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:51:48+01:00</dc:date>
+        <title>development:release_notes:revision_1829</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1829?rev=1271670708&amp;do=diff</link>
+        <description>BioCatalogue Release , April 6th 2010
+
+	*  Previous release revision: 1814
+	*  This release revision: 1829
+
+Steps To Take for Update
+
+In order...
+
+	*  Run database update tasks:
+
+	*  Restart the worker(s). For each, do: 
+ruby script/worker stop
+ruby script/worker start
+	*  Rebuild assets</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1838?rev=1271670744&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-19T10:52:24+01:00</dc:date>
+        <title>development:release_notes:revision_1838</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1838?rev=1271670744&amp;do=diff</link>
+        <description>BioCatalogue Release , April 6th 2010
+
+	*  Previous release revision: 1829
+	*  This release revision: 1842
+
+Steps To Take for Update
+
+In order...
+
+	*  Update the biocat_local config file with
+
+
+    # This setting determines whether notifications
+    # about service status should be sent to service
+    # submitters or anyone responsible for the service in 
+    # addition to those included in the status recipients list above.
+    NOTIFY_SERVICE_RESPONSIBLE = false</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_1868?rev=1271947338&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-04-22T15:42:18+01:00</dc:date>
+        <title>development:release_notes:revision_1868</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_1868?rev=1271947338&amp;do=diff</link>
+        <description>BioCatalogue Release , April 22nd 2010
+
+	*  Previous release revision: 1842
+	*  This release revision: 1868
+
+Steps To Take for Update
+
+In order...
+
+	*  Update code base
+
+	*  Run database update tasks:
+rake db:migrate RAILS_ENV=production
+	*  Restart the worker(s). For each, do:</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_2068?rev=1275470238&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2010-06-02T10:17:18+01:00</dc:date>
+        <title>development:release_notes:revision_2068</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_2068?rev=1275470238&amp;do=diff</link>
+        <description>Release Notes for 26 May, 2010 Release
+
+ Instructions for updating the codebase 
+
+	*  Update codebase
+		*  svn update
+
+
+	*  Migrate database
+		*  rake db:migrate RAILS_ENV=production
+
+
+	*  Bring javascript files up to date
+		*  rake asset:packager:build_all</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:revision_oct_2010?rev=1308906517&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-06-24T10:08:37+01:00</dc:date>
+        <title>development:release_notes:revision_oct_2010</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:revision_oct_2010?rev=1308906517&amp;do=diff</link>
+        <description>v1.0.0 Release (Feb 2011)
+
+This is a major release which includes the following:
+
+	*  The REST API
+		*  Both read and write
+		*  Full json and xml support
+		*   Detailed API documentation 
+
+	*  Support for SSL
+		*  All sensitive data are now sent over secure(ssl) connections (to be confirmed)</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:v1.0.1?rev=1313413006&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-08-15T13:56:46+01:00</dc:date>
+        <title>development:release_notes:v1.0.1</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:v1.0.1?rev=1313413006&amp;do=diff</link>
+        <description>v1.0.1 Release (Jun 2011)
+
+This is mainly a big fix release, which includes some important API fixes for the Taverna plugin.</description>
+    </item>
+    <item rdf:about="https://www.biocatalogue.org/wiki/development:release_notes:v1.1.0?rev=1316773339&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2011-09-23T11:22:19+01:00</dc:date>
+        <title>development:release_notes:v1.1.0</title>
+        <link>https://www.biocatalogue.org/wiki/development:release_notes:v1.1.0?rev=1316773339&amp;do=diff</link>
+        <description>v1.1.0 Release (Sep 2011)
+
+This will be a major release with some new features and major improvements.
+
+This will include:
+
+	*  New “examples” tab for services. Surfaces all existing example data and scripts for a service, and provides simple abilities to add examples.
+	*  Richer annotation values support. This will improve semantic annotation capabilities and improve performance in certain areas (like generating tag filters in the Taverna plugin).
+	*  Support for custom monitoring of REST servi…</description>
+    </item>
+</rdf:RDF>

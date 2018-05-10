@@ -1,0 +1,177 @@
+====== Annotations Model ======
+
+At a conceptual level, an Annotation consists of:
+
+    * a link to the thing being annotated - the Annotatable
+    * a link to the source of the annotation - the Source
+    * a link to the attribute which specifies what kind of annotation this is - the Attribute
+    * the value of the annotation (currently only free text and stored as a string) - the Value
+    * the data type of the value (defaults to "String") - the Value Type
+    * version information - Version Info
+    * timestamps for event time info - Timestamps
+
+This can be represented as:
+
+  Annotation = Annotatable + Source + Attribute + Value + Value Type + Version Info + Timestamps
+
+
+====== Annotation predicates in the BioCatalogue ======
+
+<del>
+L: http://www.biocatalogue.org/annotation/add
+
+**Providers**
+  * L#Description [also apply to:  service, operation, input, output] (⇔ dc:description)
+  * L#Website
+  * L#ContactInfo
+
+**Members** 
+  * L#DisplayName
+  * L#EmailAddress
+  * L#Affiliation
+  * L#Country
+ 
+**Service** 
+  * L#Name [also apply to: operations, inputs, outputs]
+  * L#Categories 
+  * L#Documentation
+  * L#License
+  * L#Cost
+  * L#UsageConditions
+  * L#Publications
+  * L#Citation
+  * L#Comments
+
+**Inputs/Outputs** 
+  * L#DataFormat (⇔ dc:format)
+  * L#ExampleData
+
+</del>
+
+\\
+====== New proposal from Jits (21st Feb 2010) ======
+
+Taking the existing annotation attributes found in the database...
+
+BASE: http://biocatalogue.org/attribute/
+
+^ Name: ^ Identifier: ^
+| description | http://purl.org/dc/elements/1.1/description |
+| tag | http://biocatalogue.org/attribute/tag |
+| category | http://biocatalogue.org/attribute/category |
+| display_name | http://biocatalogue.org/attribute/displayName |
+| alternative_name | http://biocatalogue.org/attribute/alternativeName |
+| documentation_url | http://biocatalogue.org/attribute/documentationUrl |
+| example_data | http://biocatalogue.org/attribute/exampleData |
+| example_workflow | http://biocatalogue.org/attribute/exampleWorkflow |
+| cost | http://biocatalogue.org/attribute/cost |
+| contact | http://biocatalogue.org/attribute/contact |
+| version | http://biocatalogue.org/attribute/version |
+| license | http://biocatalogue.org/attribute/license |
+| publication | http://biocatalogue.org/attribute/publication |
+| citation | http://biocatalogue.org/attribute/citation |
+| usage_condition | http://biocatalogue.org/attribute/usageCondition |
+| format | http://purl.org/dc/elements/1.1/format |
+| website | http://biocatalogue.org/attribute/website |
+| example of use | http://biocatalogue.org/attribute/exampleOfUse |
+| rating.documentation | http://biocatalogue.org/attribute/ratingDocumentation |
+| SeekDa:availability | http://biocatalogue.org/attribute/seekDaAvailability |
+
+From myGrid Ontology:
+
+^ Name: ^ Identifier: ^
+| <http://www.mygrid.org.uk/mygrid-moby-service#performsTask> | http://www.mygrid.org.uk/mygrid-moby-service#performsTask |
+| <http://www.mygrid.org.uk/mygrid-moby-service#usesResource> | http://www.mygrid.org.uk/mygrid-moby-service#usesResource |
+| <http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType> | http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType |
+| <http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces> | http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces |
+| <http://www.mygrid.org.uk/mygrid-moby-service#usesMethod> | http://www.mygrid.org.uk/mygrid-moby-service#usesMethod |
+| <http://www.mygrid.org.uk/mygrid-moby-service#objectType> | http://www.mygrid.org.uk/mygrid-moby-service#objectType |
+
+====== New annotation attribute by Franck ======
+
+^ Name: ^ Identifier: ^
+| Performance   | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-1 |
+| Reliability | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-2 |
+| Scalability   |  http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-3 |
+| Capacity | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-4 |
+| Robustness | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-5 |
+| Error handling | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-6 |
+| Accuracy | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-7 |
+| Integrity | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-8 |
+| Accessibility | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-9 |
+| Availability | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-10 |
+| Interoperability | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-11 |
+| Security | http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-12 |
+| Response time |
+|Connection time | 
+====== Annotation field mappings ======
+
+This describes what annotations fields are allowed on which model objects within the BioCatalogue:
+
+NOTE: when the Annotations write API is done, these mappings will also be enforced.
+
+  * **Service**:
+    * tag
+    * category
+    * display_name
+    * alternative_name
+    * rating.xx
+
+  * **ServiceDeployment**:
+    * cost
+    * usage_condition
+    * contact
+
+  * **SoapService**, **RestService**:
+    * documentation_url
+    * description
+    * license
+    * publication
+    * citation
+    * alternative_name
+    * tag
+    * display_name
+
+  * **SoapOperation**:
+    * alternative_name
+    * tag
+    * description
+    * example_workflow
+
+  * **SoapInput**:
+    * alternative_name
+    * tag
+    * description
+    * format
+    * example_data
+
+  * **SoapOutput**:
+    * alternative_name
+    * tag
+    * description
+    * format
+    * example_data
+
+  * **RestMethod**
+    * description
+    * documentation_url
+    * example_endpoint
+    * tag
+
+  * **RestParameter**
+    * description
+    * example_data
+    * tag
+
+  * **RestRepresentation**
+    * description
+    * example_data
+    * tag
+    * data_schema
+    * format
+
+  * **ServiceProvider**:
+    * alternative_name
+    * description
+    * website
+    * contact 

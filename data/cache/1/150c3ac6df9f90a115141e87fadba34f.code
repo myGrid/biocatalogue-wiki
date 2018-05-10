@@ -1,0 +1,12 @@
+require_dependency RAILS_ROOT <span class="sy0">+</span> <span class="st0">'/vendor/plugins/annotations/lib/app/models/annotation'</span>
+&nbsp;
+<span class="kw1">class</span> Annotation <span class="sy0">&lt;</span> <span class="re2">ActiveRecord::Base</span>
+  ...
+&nbsp;
+  <span class="me1">validates_inclusion_of</span> <span class="re3">:value</span>, 
+                         <span class="re3">:in</span> <span class="sy0">=&gt;</span> <span class="br0">&#91;</span> <span class="st0">&quot;fruit&quot;</span>, <span class="st0">&quot;nut&quot;</span>, <span class="st0">&quot;fibre&quot;</span> <span class="br0">&#93;</span>, 
+                         <span class="re3">:message</span> <span class="sy0">=&gt;</span> <span class="st0">&quot;Please select a valid category.&quot;</span>,
+                         <span class="re3">:if</span> <span class="sy0">=&gt;</span> <span class="kw3">Proc</span>.<span class="me1">new</span> <span class="br0">&#123;</span> <span class="sy0">|</span>ann<span class="sy0">|</span> ann.<span class="me1">attribute_name</span>.<span class="me1">downcase</span> == <span class="st0">&quot;category&quot;</span> <span class="br0">&#125;</span>
+&nbsp;
+  ...
+<span class="kw1">end</span>

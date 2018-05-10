@@ -1,0 +1,60 @@
+==== Discover Register Annotate Monitor Aob (DRAMA) ====
+
+DRAMA is a procedure in place to functionally test the BioCatalogue features after every release. It has to be carried out on the [[http://test.biocatalogue.org/|BioCatalogue test site]]. Below are described the steps required. The aim is to automate the process using tools such as [[http://www.molyb.org/confluence/display/molyb/Home|Molybdenum]]
+
+=== Discovery === 
+
+  * From the BioCatalogue home page search for ‘protein’ 
+  * Click ‘Next page of results’ 
+  * Click ‘Switch to detail view’ 
+  * Search for ‘protein sequence’ 
+  * Select ‘KEGG’ service 
+  * Click one of the service tag (e.g. enzyme)
+  * Back to KEGG service using the back arrow 
+  * Click one of the similar service on the right (e.g DDBJ)
+  * Back to KEGG 
+  * Select one of the Category of the KEGG service (e.g Motifs)
+  * Combine different filter using the panel on the left (e.g member = franck, service type = soap)
+  * In the search within box, search for ‘KEGG’. 
+  * Clear filter 
+  * Select ‘bioinformatics in the tag cloud 
+  * Select ‘Search by data’ search for the following example data: MSSRIARALALVVTLLHLTRLALSTCPAACHCPLEAPKCAPGVGLVRDGCGCCKVCAKQL
+
+=== Register ===
+  * Create an account 
+  * Sign in using Google, Yahoo, FaceBook 
+  * Submit a SOAP service (e.g. http://webservices.genouest.org/typedservices/Xref.wsdl); fill all the fields, no need to worry about the meanings 
+  * Register a REST Service 
+  * Add one new endpoint via the "REST Endpoints" tab and add a name to the REST endpoint.
+  * Register a Soaplab service if possible 
+
+=== Annotate ===
+  * Go back to the soap service you’ve registered
+  * Annotate each of the components in the service overview (documentation url, description, contact etc…). Don’t worry about the meaning of the terms. 
+  * Add tags to the same service
+  * Go to the operation tab and add annotation and tags to the operations and inputs/outputs
+  * Go to the REST service you registered and annotate the REST endpoint you created.
+  * Create two new REST endpoints (in one go) and annotate one of the REST endpoints entirely.
+  * Add at least two "Input/Output Representations" to the remaining REST endpoint and annotate one REST representation.
+  * Go back to the KEGG service 
+  * Add annotations to the service and operations/inputs/outputs
+  * Add several categories to the KEGG service or the service you registered 
+  * Add an alternative name
+  * Promote one the alternative name as service display name
+
+=== Monitor ===
+  * Disable a test script from a selected service 
+  * Check the outcome 
+  * Enable the test script again
+  * Add a custom monitoring endpoint to a REST service
+  * Check the outcome 
+
+=== Any Others  ===
+  * Favorite a service 
+  * Delete service 
+  * Delete a REST representation.
+  * Edit the path of a REST endpoint.
+  * Assign a group to a REST endpoint.
+  * Edit a REST service's base URL.
+  * Update a REST parameter, alternating between "optional" and "required" and pay attention to the template generated.
+  * Edit a custom monitoring endpoint to a REST service

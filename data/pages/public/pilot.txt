@@ -1,0 +1,57 @@
+===== Features of the BioCatalogue =====
+
+**[[http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:discovering_web_services|Web service discovery]]** 
+  * Handles service discovery by keywords or browsing the latest services submitted; 
+  * Handles service filtering by tags on services, operations, inputs, and outputs, as well as filtering by providers, submitters, and locations.
+  * Exposes an OpenSearch description document.
+  * Possibility to search the BioCatalogue with your data. [[http://www.biocatalogue.org/search/by_data|Check it out]]
+  * Possibility to search for individual SOAP operation 
+  * Finds similar services given a selected service
+ \\
+**[[http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:annotating_web_services|Web service annotation]]**
+  * Supports annotation of services by tags, user comments(powered by Disqus) and text description. Annotated services or their parts (operations, inputs, outputs etc) are searchable. 
+  * Ability for users to provide many more types of annotations (like examples, name aliases, publication, citations, cost,restrictions, and so on).
+  * Harvests all annotations and services from Feta.
+  * At-a-glance counts of annotations on services (grouped by provider, user and other registries).
+  * Possibility to provide an alternative name for a service and set it as a default display name. 
+  * Posssibility to describe the service provider and set a display name
+\\
+**[[http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:registering_web_services|Web service submission]]**
+  * Supports registration for SOAP (WSDL type services) 
+  * Supports registration for REST and REST service endpoint 
+  * Supports registration for soaplab services. 
+\\
+**[[http://www.biocatalogue.org/wiki/doku.php?id=public:help:biocatalogue:how_we_monitor_web_services|Web service monitoring]]** 
+  * Monitors the WSDL document and enpoints of services 
+  * Supports test scripts for automatic test of the functionality of services in the BioCatalogue 
+  * Members can archive services no longer in used 
+  * Periodically fetches for updates of WSDL documents 
+  * Archives deprecated or discontinued operations from the WSDL document 
+\\
+**Users**
+  * Supports user registration and user profiles for both regular users and service providers.  
+  * Supports Service favouriting and rating 
+  * Sign in using your regular Google, Yahoo, OpenID OR Facebook account details 
+\\
+**[[http://www.biocatalogue.org/wiki/doku.php?id=public:api|BioCatalogue API]]** 
+ 
+  
+
+===== To Get Involved =====
+
+Join our mailing list: \\
+[[http://listserv.manchester.ac.uk/cgi-bin/wa?SUBED1=biocatalogue-friends&A=1|BioCatalogue-Friends Mailing List]]
+
+
+
+===== Still to come ... =====
+
+  * **Integration with myExperiment:** on the one hand services from BioCatalogue will be displayed in myExperiment so users of myExperiment can browse them. On the other hand services within workflows in myExperiment will reference the appropriate services in BioCatalogue so users can click through to the information in BioCatalogue.
+
+  * **Integration to Taverna:** users will be able to import Web Services and annotations to and from BioCatalogue and Taverna. [[http://www.taverna.org.uk/2010/04/14/biocatalogue-plugin-for-taverna-2-1-2/|Alpha version released]]
+
+  * **Public write APIs:**  Services and annotations submission through the API
+
+  * **myBioCatalogue:** setup your private BioCatalogue for your project or organisation
+
+For the list of complete features  [[public:roadmap|The Roadmap]]

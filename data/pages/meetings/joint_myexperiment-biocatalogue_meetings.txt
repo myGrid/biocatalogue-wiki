@@ -1,0 +1,5 @@
+  * Hackathon in Southampton(August 28-29/2008)
+    * Present, Eric & Thomas from EBI, Jits from Manchester (Carole, Marco and the myExperiment team at Southampton contributed to the discussion)
+    * Discussions centred around the database model for the pilot. Emphasis was place in making the model considerably open to extensions and changes as the expectation is that the database model should survive the pilot phase of the project. The db model for the pilot from those discussions is found [[development:data_model_pilot|here]]
+
+  

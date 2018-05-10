@@ -1,0 +1,17 @@
+====== Help Pages ======
+
+===== Using the BioCatalogue =====
+
+  * **[[public:Help:getting started|Getting Started]]**
+  * [[public:help:BioCatalogue:discovering web services|Discovering Web Services]]
+  * [[public:help:BioCatalogue:registering web services|Registering Web Services]]
+  * [[public:help:BioCatalogue:annotating web services|Annotating Web Services]]
+  * [[public:help:BioCatalogue:how we monitor web services|How we monitor Web Services]]
+
+===== General Info on Web Services =====
+
+  * [[public:help:general info on web services|General Info on Web Services]]
+  * [[http://www.w3.org/TR/ws-gloss/|Web Services Glossary]]
+  * [[public:help:making web services|Making Web Services]]
+  * [[public:help:executing web services|Executing Web Services]]
+

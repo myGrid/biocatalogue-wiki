@@ -1,0 +1,127 @@
+
+<h2 class="sectionedit1" id="th_november_2009">5th November 2009</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Previous release revision:</div>
+</li>
+<li class="level1"><div class="li"> This release revision: 1266</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "5th November 2009" [1-95] -->
+<h3 class="sectionedit2" id="steps_to_take_for_update">Steps To Take for Update</h3>
+<div class="level3">
+
+<p>
+In order…
+</p>
+<ul>
+<li class="level1"><div class="li"> Run database update tasks:</div>
+</li>
+</ul>
+<pre class="code">rake db:sessions:clear RAILS_ENV=production
+rake db:migrate RAILS_ENV=production</pre>
+<ul>
+<li class="level1"><div class="li"> Restart memcached server(s)</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Run latest update scripts: </div>
+</li>
+</ul>
+
+<p>
+  ruby script/biocatalogue/update_activity_logs_aug09.rb
+</p>
+<pre class="code">ruby script/biocatalogue/update_providers_sep09.rb
+ruby script/biocatalogue/update_soaplab_sep09.rb -e production</pre>
+<ul>
+<li class="level1"><div class="li"> Update config/initializers/biocat_local.rb with new settings</div>
+<ul>
+<li class="level2"><div class="li"> Including new RPX settings</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Make sure the Solr schema.xml file is updated</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Restart Solr service(s)</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Reindex the search engine:</div>
+</li>
+</ul>
+<pre class="code">rake solr:reindex RAILS_ENV=production --trace</pre>
+<ul>
+<li class="level1"><div class="li"> Restart the worker(s). For each, do: </div>
+</li>
+</ul>
+<pre class="code">ruby script/worker stop
+ruby script/worker start</pre>
+<ul>
+<li class="level1"><div class="li"> Delete public/stats.html</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Update the search query suggestions list:</div>
+</li>
+</ul>
+<pre class="code">rake biocatalogue:submit:update_search_query_suggestions RAILS_ENV=production</pre>
+<ul>
+<li class="level1"><div class="li"> Rebuild assets</div>
+</li>
+</ul>
+<pre class="code">rake asset:packager:build_all</pre>
+<ul>
+<li class="level1"><div class="li"> Restart application instance(s)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Steps To Take for Update" [96-1113] -->
+<h3 class="sectionedit3" id="release_notes">Release Notes</h3>
+<div class="level3">
+
+<p>
+Email sent to the friends list on 6th Nov 09:
+</p>
+<pre class="code">Hi all,
+
+After our successful public beta launch at ISMB 09 we&#039;ve been working hard on improving the BioCatalogue. We&#039;ve recently updated the BioCatalogue live site (http://www.biocatalogue.org) with the following:
+
+- Improved WSDL parsing with the ability to parse and store information on complex types of SOAP inputs and outputs (including complex types defined in external schema files).
+- New user interface for viewing the information on complex types of SOAP inputs and outputs.
+- Significant performance improvements to search, the service index and filtering.
+- New user interface for quickly adding annotations (when signed in).
+- Support for OpenID, Google, Yahoo, Twitter and Facebook accounts. At the moment you can only link one of these external accounts with your BioCatalogue account (or open a new BioCatalogue account with one of these accounts).
+- Simple/detailed service listings views for the search results and service index.
+- More help text and guidance for Soaplab services.
+- Better user interface for viewing example data annotations.
+- Better user interface for filtering by service categories.
+- Revamped user sign in, sign up and edit profile pages.
+- Many more user interface tweaks and bug fixes.
+- More work on our underlying infrastructure and systems.
+
+Please note that we have also updated our Terms of Use (http://www.biocatalogue.org/termsofuse) in which we:
+- Make a clear distinction between Members and Users of the BioCatalogue.
+- Clarify the definitions of the key terms used.
+- Clarify our policies regarding content and the BioCatalogue website and services.
+- Clarify our data preservation policy.
+- Outline our take down / withdrawal policy.
+
+To find out what we will be working on for the rest of the year and next year please see: &lt;http://www.biocatalogue.org/wiki/doku.php?id=public:roadmap#fourth_quarter_2009_oct_-_dec&gt;
+
+We also have a pre-alpha REST API to access the content of the BioCatalogue that we are testing at the moment. If you are interested in getting involved with this, please contact Jiten Bhagat &lt;jits@cs.man.ac.uk&gt;. We are hoping to release the initial version of the API before the end of the year.
+
+As always, we value your feedback, ideas and discussion, so please feel free to get in touch with us with your thoughts.
+
+Regards,
+The BioCatalogue Team</pre>
+
+</div>
+<!-- EDIT3 SECTION "Release Notes" [1114-] -->

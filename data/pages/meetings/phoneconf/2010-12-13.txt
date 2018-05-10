@@ -1,0 +1,33 @@
+Date: Monday 13 Dec 2010
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08444737630
+
+Pin: 70503011
+===== Attending ===== 
+
+**Manchester:** 
+Carole, Franck, Jits, Steve 
+
+**EBI:**
+
+Eric
+ 
+
+===== Apologies =====
+
+Rodrigo, Hamish
+
+====== Agenda ======
+
+  * BioCatalogue annual report
+  * BioCatalogue Survey update
+  * Maintenance over Xmas period 
+  * AOB
+
+===== Minutes =====
+
+
+Previous meeting: [[Meetings:PhoneConf:2010-11-22|Phone Conference Meeting on 22 Nov 2010]]

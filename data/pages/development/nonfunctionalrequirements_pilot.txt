@@ -1,0 +1,35 @@
+====== Expected performance, scalability, support and so on for the pilot ======
+
+===== Scalability =====
+
+==== Processing times ====
+
+Maximum expected times for processing different types of requests:
+  * **Plain retrieval** :: < 5 seconds
+  * **Searching**
+    * Keyword search :: < 10 seconds
+    * Complex query search :: < 20 seconds
+  * **Submission**
+    * pre-fetch of WSDL -- not under our control
+    * parsing of pre-fetched WSDL :: < 7.5 seconds
+    * actual submission :: < 15 seconds
+
+==== Number of services ====
+
+Number of services to be listed: ~1000..5000 by Christmas
+
+==== Number of concurrent users ====
+
+At least 20 concurrent users should be served simultaneously with acceptable quality of service.
+
+
+===== Support =====
+
+  * Users' list model (mailing list, wiki), rather than bug tracking software.
+  * If a request comes in, we want to respond to it within 2 working days.
+  * Documentation
+    * Tutorial / Get Started for BioCatalogue (especially for service submission page)
+    * FAQ
+    * Documentation of the query language (i.e. for the search)
+    * Implement tooltips to improve UI
+

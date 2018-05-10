@@ -1,0 +1,12 @@
+====== Mockups for ISMB 2008 ======
+
+WARNING!!! If you use Firefox, the image might be resized automatically and look blurry because of that. You'll need to click on the image for it to go back to its original size and look sharper.
+
+  * {{:homepage.jpg?linkonly|Home page}}
+  * {{:resultpage_new.jpg?linkonly|Result page}}
+  * {{:entrypage_new.jpg?linkonly|Entry page}}
+  * {{:browse.jpg?linkonly|Browse}}
+  * {{:create_account.jpg?linkonly|Simple account creation}}
+  * {{:create_account_and_profile_2.jpg?linkonly|Account creation + minimum profile}}
+  * {{:webservice_registration_form.jpg?linkonly|Simple service registration form}}
+  * {{:webservice_registration_form_test_descriptor.jpg?linkonly|Simple service registration form + descriptor test}}

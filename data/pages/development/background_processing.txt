@@ -1,0 +1,343 @@
+====== Background Processing ======
+
+===== Tasks That Require Background Processing =====
+
+  * Stats generation
+  * Soaplab server submission
+  * Updating the annotation counts
+  * Solr optimisation
+  * Running the service monitoring URLs checks
+  * Updating the list of urls that should be monitoring
+  * Sending out monitoring status change emails
+
+
+===== Info =====
+
+==== Delayed::Job ====
+
+  * [[http://wiki.github.com/tobi/delayed_job|Home - FAQ]]
+  * [[http://www.magnionlabs.com/2009/2/28/background-job-processing-in-rails-with-delayed_job|Background job processing in Rails with delayed_job (blog post)]]
+  * [[http://www.scribd.com/doc/2589535/Handling-LongRunning-Tasks-in-Rails|Handling Long-Running Tasks in Rails (presentation)]]
+  * [[http://github.com/blog/197-the-new-queue|The New Queue (blog post)]]
+  * [[http://github.com/igal/rubyqueues/tree/master/delayed_job_eg/|rubyqueues - delayed_job (examples of using delayed_job)]]
+  * [[http://wiki.github.com/tobi/delayed_job/running-delayedworker-as-a-daemon|Running Delayed::Worker as a daemon]]
+
+=== Summary ===
+
+(from: http://github.com/igal/rubyqueues/tree/master/delayed_job_eg/ [2009-06-04])
+
+A pure Ruby plugin for Rails that uses the Rails database as a queue and runs jobs from it by polling.
+
+Website: [[http://tobi.github.com/delayed_job/|tobi's Delayed::Job]]
+
+PROS: Easy to setup and use. Can create jobs from methods or objects. Automatically handles serialization of complex objects. Includes friendly job runner, which catches exceptions and retries failed jobs. Queue is as scalable as your database.
+
+CONS: Rails only. Slow and uses polling, not appropriate for fast turnaround or high-volume messaging.
+
+EVALUATION: A good choice for most message queuing needs within Rails applications.
+
+
+==== Misc ====
+
+  * [[http://matt.blogs.it/entries/00002974.html|Expiring Rails cache from a background task]]
+
+
+
+===== Dev Notes =====
+
+Using: [[http://tobi.github.com/delayed_job/|delayed_job]] plugin
+
+==== Concepts ====
+
+  * //Queue// - the list of jobs that need to be run (together with priority and schedule info).
+  * //Jobs// - particular tasks that do something.
+  * //Worker// - aka job runner - the thing that executes the tasks.
+
+==== Overall Runtime Process ====
+
+Submit job -> Job gets queued -> Worker picks up job -> Worker executes job -> If successful then worker removes job from queue, else keeps job in queue for next run.
+
+==== Queue Table ====
+
+  create_table :delayed_jobs, :force => true do |table|
+    table.integer  :priority, :default => 0      # Allows some jobs to jump to the front of the queue
+    table.integer  :attempts, :default => 0      # Provides for retries, but still fail eventually.
+    table.text     :handler                      # YAML-encoded string of the object that will do work
+    table.text     :last_error                   # reason for last failure (See Note below)
+    table.datetime :run_at                       # When to run. Could be Time.now for immediately, or sometime in the future.
+    table.datetime :locked_at                    # Set when a client is working on this object
+    table.datetime :failed_at                    # Set when all retries have failed (actually, by default, the record is deleted instead)
+    table.string   :locked_by                    # Who is working on this object (if locked)
+    table.timestamps
+  end
+
+==== Jobs and Job Submission ====
+
+**Any async/background task SHOULD be wrapped in a Job class that goes under /lib/bio_catalogue/jobs/**. Be sure to follow the Rails' naming conventions for files in the /lib folder (ie: the file: /lib/bio_catalogue/jobs/my_job should correspond to a Ruby class or module BioCatalogue::Jobs::MyJob)
+
+**Submission of jobs to the queue for processing later** - the preferred way to do this is to add a rake task to the file /lib/tasks/submit_jobs.rake that uses Delayed::Job.enqueue to queue a Job mentioned above. This rake task can then be run as part of a cronjob or created as part of user interaction or whatever else.
+
+More information from the Delayed::Job documentation pages on how to use Delayed::Job specifically is below...
+
+----
+
+(from: http://github.com/tobi/delayed_job/tree/master [2009-06-04])
+
+Jobs are simple ruby objects with a method called perform. Any object which responds to perform can be stuffed into the jobs table. Job objects are serialized to yaml so that they can later be resurrected by the job runner.
+
+  class NewsletterJob < Struct.new(:text, :emails)
+    def perform
+      emails.each { |e| NewsletterMailer.deliver_text_to_email(text, e) }
+    end    
+  end
+
+  Delayed::Job.enqueue NewsletterJob.new('lorem ipsum...', Customers.find(:all).collect(&:email))
+
+There is also a second way to get jobs in the queue: send_later.
+
+  BatchImporter.new(Shop.find(1)).send_later(:import_massive_csv, massive_csv)
+
+This will simply create a Delayed::PerformableMethod job in the jobs table which serializes all the parameters you pass to it. There are some special smarts for active record objects which are stored as their text representation and loaded from the database fresh when the job is actually run later.
+
+----
+
+Extra info from FAQ:
+
+To submit a job to run later (say after 5 minutes):
+
+  Delayed::Job.enqueue(NewsletterJob.new('text', User.find(:all).collect(&:email)), 0, 5.minutes.from_now)
+
+Where 0 is the priority.
+
+
+==== Running the Jobs ====
+
+The following command runs the current jobs that are in the queue:
+
+  rake jobs:work
+
+This has been wrapped into a script that makes it work as a //daemon// (ref: http://wiki.github.com/tobi/delayed_job/running-delayedworker-as-a-daemon). This allows you to run:
+
+  ruby script/worker start|stop|run|restart
+
+... to manage workers and have them run continuously. This also allows us to spawn multiple workers (maybe on multiple machines), if required.
+
+NOTE: workers always run in production mode. So if you are testing locally then **ensure that your database config has the same database for both development and production modes** (though it is not recommend to keep this config at all times!)
+
+So, to start:
+
+  ruby script/worker start
+
+.. and to stop:
+
+  ruby script/worker stop
+
+Also, to test that the worker script is starting successfully, either check the logfile:
+
+  /tmp/pids/biocatalogue_worker.log
+
+or:
+
+  /tmp/pids/biocatalogue_worker.output
+
+... or run the worker script using the following:
+
+  ruby script/worker start -t
+
+Every time you do an update to the servers (or locally), you need to restart the worker script! As that way the worker will run on the latest codebase (incl picking up the latest Jobs).
+
+If things don't seem right with the background processing, check the **delayed_jobs** table. Failed jobs stay in there and are logged.
+
+If too many jobs are piling up in this table then they should be cleared (otherwise all of them will be carried out!):
+
+  rake jobs:clear
+
+
+==== Log File ====
+
+The log file and output for the worker daemon are stored under //**tmp/pids/**// as:
+  * biocatalogue_worker.log
+  * biocatalogue_worker.output
+
+\\
+Anything that happens in the background worker that takes place in the Rails application should also write to the production/development logs in //**log/**//
+
+
+==== Current Jobs ====
+
+<html>
+
+<style>
+table { 
+table-layout: auto;
+width: 100%;
+}
+
+</style>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Class</th>
+<th>Info</th>
+<th>Submission</th>
+</tr>
+
+<tr>
+
+<td>
+<b>CalculateAnnotationCountsJob</b>
+</td>
+<td>
+<span class="code">BioCatalogue::Jobs::CalculateAnnotationCountsJob</span>
+</td>
+<td>
+Goes through all the Services in the database and calculates <br>
+the total annotation counts (including grouped totals) and caches <br>
+them (see biocat_main.rb for cache time)
+<br/><br/>
+<ul>
+<li>Internally, it just reuses the <br/><span class="code">BioCatalogue::Annotations::metadata_counts_for_service(service)</span> <br/>method, which takes care of the caching etc.</li>
+<li>Currently, the counts data is cached for 60 mins.</li>
+</ul>
+</td>
+<td>
+Rake task:
+<br/><br/>
+<span class="code">rake biocatalogue:submit:calculate_annotation_counts RAILS_ENV=production</span>
+<br/><br/>
+Cron job should run this rake task every 45 mins.
+</td>
+    
+</tr>
+
+<tr>
+
+<td>
+<b>UpdateUrlsToMonitor</b>
+</td>
+<td>
+<span class="code">BioCatalogue::Jobs::UpdateUrlsToMonitor</span>
+</td>
+<td>
+Create a listing of all the urls (service endpoints and wsdl location) <br>
+to monitor at the first run. Subsequent runs only make an update to the  <br>
+list with nee service urls 
+</td>
+<td>
+<span class="code">rake biocatalogue:submit:update_urls_to_monitor RAILS_ENV=production</span>
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<b>CheckUrlStatus</b>
+</td>
+<td>
+<span class="code">BioCatalogue::Jobs::CheckUrlStatus</span>
+</td>
+<td>
+Check the status of a url (endpoint or wsdl location). For soap endpoint, <br>
+some data is pointed to the file, expecting to get soap fault (xml) back. <br>
+For other urls, http head is obtained and status code is checked. <br>
+200 & 302 are OK, any other code triggers a warning
+</td>
+<td>
+<span class="code">rake biocatalogue:submit:check_url_status RAILS_ENV=production</span>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<b>UpdateSearchQuerySuggestions</b>
+</td>
+<td>
+<span class="code">BioCatalogue::Jobs::UpdateSearchQuerySuggestions</span>
+</td>
+<td>
+Updates the file <i>data/search_query_suggestions.txt</i> with new terms from<br>
+search queries that user's have carried out.
+<br/><br/>
+Internally, it just reuses the <br/><span class="code">BioCatalogue::Search.update_search_query_suggestions_file</span> <br/>method.
+</td>
+<td>
+Rake task:
+<br/><br/>
+<span class="code">rake biocatalogue:submit:update_search_query_suggestions RAILS_ENV=production</span>
+<br/><br/>
+Cron job should run this rake task anywhere between<br>
+once an hour to every 3 hours.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<b>UpdateAnnotationPropertiesFull</b>
+</td>
+<td>
+<span class="code">BioCatalogue::Jobs::UpdateAnnotationPropertiesFull</span>
+</td>
+<td>
+Updates the properties of the annotations<br>
+First the regular expressions are loaded from /data/regex.txt<br/>
+and synchronized with the database<br/>
+Secondly all annotations of examle inputs and outputs for SoapServices are cheched <br/>
+against all regular expressions and matches are stored <br/>
+</td>
+<td>
+<span class="code">rake biocatalogue:submit:update_annotation_properties_full</span><br/><br/>
+Cron job should run this rake task from once a day to once a week<br/>
+Wherever some regexes are deleted from the file,<br/>
+this job should be run in shutdown time
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+<b>RunServiceUpdater</b>
+</td>
+<td>
+<span class="code">BioCatalogue::Jobs::RunServiceUpdater</span>
+</td>
+<td>
+For a given Service, runs any update mechanisms that are required to update the state of that Service.<br/>
+This can include things like WSDL sync methods and automatic curation.
+</td>
+<td>
+Rake task:
+<br/><br/>
+<i>none</i>
+</td>
+    
+</tr>
+
+<td>
+<b>RunServiceUpdateCheckerForAll</b>
+</td>
+<td>
+<span class="code">BioCatalogue::Jobs::RunServiceUpdaterForAll</span>
+</td>
+<td>
+Same as <b>RunServiceUpdater</b> but runs for ALL the services in the catalogue.
+</td>
+<td>
+Rake task:
+<br/><br/>
+<span class="code">rake biocatalogue:submit:run_service_updater_for_all RAILS_ENV=production</span>
+<br/><br/>
+Cron job should run this rake task every week or so.
+</td>
+    
+</tr>
+
+</table>
+
+</html>

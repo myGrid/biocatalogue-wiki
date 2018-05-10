@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue development:software_development</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2013-07-27T23:50:08+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:annotated_pilot_services&amp;rev=1220614151&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:annotation_models&amp;rev=1225367750&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:backend&amp;rev=1217850811&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:ip_issues&amp;rev=1217592586&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:questionnaire_results&amp;rev=1225128715&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:requirements&amp;rev=1218186759&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:user_types&amp;rev=1260536559&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:annotated_pilot_services&amp;rev=1220614151&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-05T12:29:11+01:00</dc:date>
+        <title>development:software_development:annotated_pilot_services</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:annotated_pilot_services&amp;rev=1220614151&amp;do=diff</link>
+        <description>A number of services was selected for the pilot catalogue. .
+These services will be annotated using the platinum model</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:annotation_models&amp;rev=1225367750&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-30T11:55:50+01:00</dc:date>
+        <title>development:software_development:annotation_models</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:annotation_models&amp;rev=1225367750&amp;do=diff</link>
+        <description>Web Service in the catalogue will be ranked base on their annotation quality:
+
+
+We're aiming to get every single service in the catalogue annotated at the platinum level. The platinum annotation contains anything one can think of to describe a given service. The model used:</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:backend&amp;rev=1217850811&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-04T12:53:31+01:00</dc:date>
+        <title>development:software_development:backend</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:backend&amp;rev=1217850811&amp;do=diff</link>
+        <description>Database Model
+
+
+A database backend will drive the BioCatalogue. What sort of metadata will this database hold? Generally, it will be about the users of the system and the services within the system. There are several user types as detailed under User Types. A good share of the metadata about the users will be built over time and collected automatically. For example, what services they use or whether they have been annotating any services.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:ip_issues&amp;rev=1217592586&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-01T13:09:46+01:00</dc:date>
+        <title>development:software_development:ip_issues</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:ip_issues&amp;rev=1217592586&amp;do=diff</link>
+        <description>An issue to be aware of is the ownership of the services, service description documents and annotations. Now this is probably something for a bunch of IP lawyers to worry about rather than a development issue, but it is something we need to be aware of.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:questionnaire_results&amp;rev=1225128715&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-27T17:31:55+01:00</dc:date>
+        <title>development:software_development:questionnaire_results</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:questionnaire_results&amp;rev=1225128715&amp;do=diff</link>
+        <description>User Driven Requirements
+
+
+A questionnaire was used as part of the requirements gathering process for BioCatalogue at ISMB 2008 (and EBI programmatic access to Proteomics training). Below are the questions that served as the guidelines for this requirements gathering exercise.</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:requirements&amp;rev=1218186759&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-08-08T10:12:39+01:00</dc:date>
+        <title>development:software_development:requirements</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:requirements&amp;rev=1218186759&amp;do=diff</link>
+        <description>Note: annotations in '[]' are MoSCoW classifcations.
+
+Core Catalogue
+
+User Details
+
+
+Note: this is core information only. Additional information is covered by .
+
+
+	*  [Must] User registration ([mockup1] [mockup2])
+		*  Authentication information
+			*  [Should] OpenID
+			*  [Must] E-mail address and password</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:user_types&amp;rev=1260536559&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2009-12-11T13:02:39+01:00</dc:date>
+        <title>development:software_development:user_types</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=development:software_development:user_types&amp;rev=1260536559&amp;do=diff</link>
+        <description>From a service provider's perspective there are three broad categories of user, with lots of overlap and a forth type of usage which cuts across all user types.
+
+1. End User
+
+	*  Each use of the service is effectively in isolation
+	*  Access is via a user interface, most often via an HTML form or an application GUI, although some use is command-line orientated.
+	*  Domain knowledge is often high, but may not extend to the specifics of the service used.</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,46 @@
+====== Meeting Agenda/Minutes ======
+
+Date: Friday 19th September 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** 
+
+**EBI:** 
+
+===== Apologies =====
+  
+Katy, Carole 
+
+===== Minuting =====
+
+===== Agenda =====
+
+  * Action Items from previous meeting
+  
+  * Developement of the pilot 
+ 
+  * Discussion: Beanshell repository in BioCatalogue 
+
+===== Actions from Previous Meeting ===== 
+  * Action Jits : Add welcome message to the BioCatalogue friends list which is email upon subscription
+  * Action Thomas : Add the questionnaire to the website
+  * Action EBI/Manchester : Update the wiki with the expectations for F2F at EBI
+  * Action EBI/Manchester : Use the wiki and mailing list to agree on the MUSTS for the BioCatalogue requirements
+ 
+===== Minutes =====
+  
+===== New Actions =====
+ 
+===== Next Meeting =====
+
+===== Upcoming Meetings ===== 
+  
+===== AOB =====
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-08-08|Phone Conference Meeting on Aug 08 2008]]
+
+Next meeting: 

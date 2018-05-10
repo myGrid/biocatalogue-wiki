@@ -1,0 +1,92 @@
+====== Meeting Agenda/Minutes ======
+
+
+===== Attending =====
+Manchester: Carole, Franck, Jits, Khalid, Wang
+
+EBI: Hamish, Rodrigo
+
+===== Apologies =====
+  * Thomas (holiday until Thursday)
+  * Eric (sick)
+  * Katy( at University research day)
+
+===== Minuting =====
+Franck 
+ 
+===== Agenda =====
+
+  * Agree on what to show at ISMB
+  * Khalid's work on workflow and web services - can be useful for biocatalogue 
+  * Using Open Search for the biocatalogue API - short term or longer term?
+  * Dates for the face 2 face meeting at EBI
+  * Biocatalogue position paper for 2008 Microsoft eScience Workshop - deadline 
+  * Khalid's work on workflow and web services
+
+===== Actions from Previous Meeting ===== 
+
+    * Carole -> Resend paper to mailing list
+    * Eric -> Send db schema to mailing list
+    * Eric/Thoman -> Investigate Passenger and Ruby Enterprise Edition for BioCatalogue pilot
+    * Eric/Jiten/Thomas -> Come up with a technical road map for the BioCatalogue project
+    * Rodrigo -> Provide access to the EBI ticketing system to BioCatalogue team in Manchester
+    * Thomas -> Setup BioCatalogue wiki and circulate link on the mailing list
+    * Rodrigo & Thomas -> Provide content for the BioCatalogue home page
+
+===== Round-table =====
+
+===== Upcoming Meetings ===== 
+
+Carole, Katy, Jits, Thomas, Hamish & Rodrigo going to ISMB meeting (20-23 July)
+
+Carole and Katy doing paper for the project kick-off meeting for our sysmo-db project
+
+Jits, will be at BOSC 18-19 July
+
+===== Any Other Business (AOB) =====
+
+  * Individual password for the new wiki- is that possible?  
+  * old wiki?
+
+AOB
+
+===== Minutes =====
+==== Agenda item ====
+  * Agree on what to show at ISMB
+We agreed that it isn't really a demo just a requirement gathering exercise. 
+Franck will prepare of questionnaire of 10 questions maxi. It's not for distribution but 
+will be used as a guideline when talking to people. 
+
+  * Using Open Search for the biocatalogue API - short term or longer term?
+We'll use it for the pilot...General agreement
+
+  * Dates for the face 2 face meeting at EBI
+Rodrigo to send the dates EBI team is available 
+
+  * Biocatalogue position paper for 2008 Microsoft eScience Workshop - deadline 
+Khalid will help the manchester team to write the paper. 
+
+  * Khalid's work on workflow and web services - can be useful for biocatalogue 
+Khalid built a tool called "QASAR" which checks the quality of semantically annotated web services.  
+He will send further documentation on the mailing list.
+
+==== New actions ====
+  * Carole - To speak to Steve petefer about the pilot
+  * Carole/Rodrigo - Schedule an advisery meeting
+  * Rodrigo - To send dates EBI team is available for a Face 2 face meeting 
+  * Franck - prepare a questionnaire for ISMB 
+  * Khalid - To send more info about 'QASAR' on the mailing list.
+
+==== AOB ====
+'Packs' have gone live in myExperiment !!!
+They can be used to group together description, web services etc.
+Might be useful in a service curation environment. 
+
+NB: We didn't have time to run through all the action items in the agenda
+
+===== Previous/Next Minutes =====
+
+
+Previous meeting: [[PhoneMeeting_24_06_2008 ]]
+
+Next meeting: [[Meetings:PhoneConf:2008-07-15|Phone Conference Meeting on Jul 15 2008]]

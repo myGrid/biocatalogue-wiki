@@ -1,0 +1,63 @@
+===== BioCatalogue Strategic Advisory Board Meeting : 22 October 2010 =====
+
+  * Meeting Format : Phone Conference
+  * **Connection Details**
+    * Time  : 13:00 - 15:00 GMT + 1
+    * Phone 
+    
+
+==== Attendance ====
+===Present===
+  - Rodrigo Lopez (EMBL-EBI)
+  - Eric Nzuobontane (EMBL-EBI)
+  - Hamish McWilliams (EMBL-EBI)
+  - Franck Tanoh (Manchester)
+  - Carol Goble  (Manchester)
+  - Steve Pettifer
+  - Joe Dicks (John Innes Centre)
+  - Terry Payne (U Liverpool)
+  - Marco Roos (Netherlands)
+  
+
+=== Apologies ===
+  - Mark Wilkinson (U British Columbia, Canada)
+  - Antoine H.C. van Kampen (Netherlands)
+  - Holger Lausen (SeekDa AG, Austria) 
+  - Chris Rawlings ( Rothamsted Research, UK)
+  - Robert Gill ( STFC Constellation )
+
+==== Agenda ====
+  - Review of Actions of last SAB
+  - Update of Biocatalogue activities 
+    * Presentations, Alliances and Meetings and 
+    * Challenges
+  - Outlook and sustainability plans
+  - AOB
+==== Notes ====
+** Curation & Visibility (community building) **
+  * Community building by review process
+    * through some journals like NAR
+    * through BioCatalogue review process
+  * Present the catalogue to journals as providing them a service
+    * maybe as part of the submission process
+  * Look at research council publishing process. Use their publishing model and see where BioCatalogue fits
+  * Investigate partnership with NAR or other journals
+  * Make a distinction between the content and infrastructure
+  * Promote the BioCatalogue as the central (authoritative) resource rather than just another tool
+  * Harness the communities that already exist by providing plugins for existing tools or communities
+    * Use environments like galaxy
+  * Consider a publication on how to curate. Inform the users on how to curate the services
+  * Mind the data in order to discover which points of annotation which are more relevant to users and make those prominent for users for view and annotations
+
+** Market & Usability**
+  * Clarification of the product and advertising the know-how
+  * Clearly identify the market and focus on it  
+  * Reflect on usability of the catalogue and do some proper usability testing
+
+
+==== Resources ====
+  - {{:meetings:biocatalogue_sab_2010.ppt|Slides for SAB Meeting }}
+  - {{:meetings:biocattechroadmap.ppt|BioCatalogue Tech RoadMap}}
+
+==== Minutes ====
+For the complete minutes: {{:meetings:biocatalogue_strategy_advisory_board_meeting.pdf|}} 

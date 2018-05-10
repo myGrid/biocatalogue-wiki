@@ -1,0 +1,362 @@
+
+
+
+<h1><a name="annotations_model" id="annotations_model">Annotations Model</a></h1>
+<div class="level1">
+
+<p>
+
+At a conceptual level, an Annotation consists of:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> a link to the thing being annotated - the Annotatable</div>
+</li>
+<li class="level2"><div class="li"> a link to the source of the annotation - the Source</div>
+</li>
+<li class="level2"><div class="li"> a link to the attribute which specifies what kind of annotation this is - the Attribute</div>
+</li>
+<li class="level2"><div class="li"> the value of the annotation (currently only free text and stored as a string) - the Value</div>
+</li>
+<li class="level2"><div class="li"> the data type of the value (defaults to “String”) - the Value Type</div>
+</li>
+<li class="level2"><div class="li"> version information - Version Info</div>
+</li>
+<li class="level2"><div class="li"> timestamps for event time info - Timestamps</div>
+</li>
+</ul>
+
+<p>
+
+This can be represented as:
+
+</p>
+<pre class="code">Annotation = Annotatable + Source + Attribute + Value + Value Type + Version Info + Timestamps</pre>
+
+</div>
+<!-- SECTION "Annotations Model" [1-685] -->
+<h1><a name="annotation_predicates_in_the_biocatalogue" id="annotation_predicates_in_the_biocatalogue">Annotation predicates in the BioCatalogue</a></h1>
+<div class="level1">
+
+<p>
+
+<del>
+L: <a href="http://www.biocatalogue.org/annotation/add" class="urlextern" target="_blank" title="http://www.biocatalogue.org/annotation/add"  rel="nofollow">http://www.biocatalogue.org/annotation/add</a>
+
+<strong>Providers</strong>
+  * L#Description [also apply to:  service, operation, input, output] (⇔ dc:description)
+  * L#Website
+  * L#ContactInfo
+
+<strong>Members</strong> 
+  * L#DisplayName
+  * L#EmailAddress
+  * L#Affiliation
+  * L#Country
+ 
+<strong>Service</strong> 
+  * L#Name [also apply to: operations, inputs, outputs]
+  * L#Categories 
+  * L#Documentation
+  * L#License
+  * L#Cost
+  * L#UsageConditions
+  * L#Publications
+  * L#Citation
+  * L#Comments
+
+<strong>Inputs/Outputs</strong> 
+  * L#DataFormat (⇔ dc:format)
+  * L#ExampleData
+
+</del>
+</p>
+
+<p>
+<br/>
+
+
+</p>
+
+</div>
+<!-- SECTION "Annotation predicates in the BioCatalogue" [686-1304] -->
+<h1><a name="new_proposal_from_jits_21st_feb_2010" id="new_proposal_from_jits_21st_feb_2010">New proposal from Jits (21st Feb 2010)</a></h1>
+<div class="level1">
+
+<p>
+
+Taking the existing annotation attributes found in the database…
+</p>
+
+<p>
+BASE: <a href="http://biocatalogue.org/attribute/" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/"  rel="nofollow">http://biocatalogue.org/attribute/</a>
+
+</p>
+<table class="contenttable_lmenu">
+	<tr class="row0">
+		<th class="col0"> Name: </th><th class="col1"> Identifier: </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> description </td><td class="col1"> <a href="http://purl.org/dc/elements/1.1/description" class="urlextern" target="_blank" title="http://purl.org/dc/elements/1.1/description"  rel="nofollow">http://purl.org/dc/elements/1.1/description</a> </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> tag </td><td class="col1"> <a href="http://biocatalogue.org/attribute/tag" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/tag"  rel="nofollow">http://biocatalogue.org/attribute/tag</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> category </td><td class="col1"> <a href="http://biocatalogue.org/attribute/category" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/category"  rel="nofollow">http://biocatalogue.org/attribute/category</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> display_name </td><td class="col1"> <a href="http://biocatalogue.org/attribute/displayName" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/displayName"  rel="nofollow">http://biocatalogue.org/attribute/displayName</a> </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> alternative_name </td><td class="col1"> <a href="http://biocatalogue.org/attribute/alternativeName" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/alternativeName"  rel="nofollow">http://biocatalogue.org/attribute/alternativeName</a> </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> documentation_url </td><td class="col1"> <a href="http://biocatalogue.org/attribute/documentationUrl" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/documentationUrl"  rel="nofollow">http://biocatalogue.org/attribute/documentationUrl</a> </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> example_data </td><td class="col1"> <a href="http://biocatalogue.org/attribute/exampleData" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/exampleData"  rel="nofollow">http://biocatalogue.org/attribute/exampleData</a> </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> example_workflow </td><td class="col1"> <a href="http://biocatalogue.org/attribute/exampleWorkflow" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/exampleWorkflow"  rel="nofollow">http://biocatalogue.org/attribute/exampleWorkflow</a> </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> cost </td><td class="col1"> <a href="http://biocatalogue.org/attribute/cost" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/cost"  rel="nofollow">http://biocatalogue.org/attribute/cost</a> </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> contact </td><td class="col1"> <a href="http://biocatalogue.org/attribute/contact" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/contact"  rel="nofollow">http://biocatalogue.org/attribute/contact</a> </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> version </td><td class="col1"> <a href="http://biocatalogue.org/attribute/version" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/version"  rel="nofollow">http://biocatalogue.org/attribute/version</a> </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> license </td><td class="col1"> <a href="http://biocatalogue.org/attribute/license" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/license"  rel="nofollow">http://biocatalogue.org/attribute/license</a> </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> publication </td><td class="col1"> <a href="http://biocatalogue.org/attribute/publication" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/publication"  rel="nofollow">http://biocatalogue.org/attribute/publication</a> </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> citation </td><td class="col1"> <a href="http://biocatalogue.org/attribute/citation" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/citation"  rel="nofollow">http://biocatalogue.org/attribute/citation</a> </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> usage_condition </td><td class="col1"> <a href="http://biocatalogue.org/attribute/usageCondition" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/usageCondition"  rel="nofollow">http://biocatalogue.org/attribute/usageCondition</a> </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> format </td><td class="col1"> <a href="http://purl.org/dc/elements/1.1/format" class="urlextern" target="_blank" title="http://purl.org/dc/elements/1.1/format"  rel="nofollow">http://purl.org/dc/elements/1.1/format</a> </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0"> website </td><td class="col1"> <a href="http://biocatalogue.org/attribute/website" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/website"  rel="nofollow">http://biocatalogue.org/attribute/website</a> </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0"> example of use </td><td class="col1"> <a href="http://biocatalogue.org/attribute/exampleOfUse" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/exampleOfUse"  rel="nofollow">http://biocatalogue.org/attribute/exampleOfUse</a> </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0"> rating.documentation </td><td class="col1"> <a href="http://biocatalogue.org/attribute/ratingDocumentation" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/ratingDocumentation"  rel="nofollow">http://biocatalogue.org/attribute/ratingDocumentation</a> </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0"> SeekDa:availability </td><td class="col1"> <a href="http://biocatalogue.org/attribute/seekDaAvailability" class="urlextern" target="_blank" title="http://biocatalogue.org/attribute/seekDaAvailability"  rel="nofollow">http://biocatalogue.org/attribute/seekDaAvailability</a> </td>
+	</tr>
+</table>
+
+<p>
+
+From myGrid Ontology:
+
+</p>
+<table class="contenttable_lmenu">
+	<tr class="row0">
+		<th class="col0"> Name: </th><th class="col1"> Identifier: </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> &lt;<a href="http://www.mygrid.org.uk/mygrid-moby-service#performsTask" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#performsTask"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#performsTask</a>&gt; </td><td class="col1"> <a href="http://www.mygrid.org.uk/mygrid-moby-service#performsTask" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#performsTask"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#performsTask</a> </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> &lt;<a href="http://www.mygrid.org.uk/mygrid-moby-service#usesResource" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#usesResource"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#usesResource</a>&gt; </td><td class="col1"> <a href="http://www.mygrid.org.uk/mygrid-moby-service#usesResource" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#usesResource"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#usesResource</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> &lt;<a href="http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType</a>&gt; </td><td class="col1"> <a href="http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#hasParameterType</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> &lt;<a href="http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces</a>&gt; </td><td class="col1"> <a href="http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#inNamespaces</a> </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> &lt;<a href="http://www.mygrid.org.uk/mygrid-moby-service#usesMethod" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#usesMethod"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#usesMethod</a>&gt; </td><td class="col1"> <a href="http://www.mygrid.org.uk/mygrid-moby-service#usesMethod" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#usesMethod"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#usesMethod</a> </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> &lt;<a href="http://www.mygrid.org.uk/mygrid-moby-service#objectType" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#objectType"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#objectType</a>&gt; </td><td class="col1"> <a href="http://www.mygrid.org.uk/mygrid-moby-service#objectType" class="urlextern" target="_blank" title="http://www.mygrid.org.uk/mygrid-moby-service#objectType"  rel="nofollow">http://www.mygrid.org.uk/mygrid-moby-service#objectType</a> </td>
+	</tr>
+</table>
+
+</div>
+<!-- SECTION "New proposal from Jits (21st Feb 2010)" [1305-3551] -->
+<h1><a name="new_annotation_attribute_by_franck" id="new_annotation_attribute_by_franck">New annotation attribute by Franck</a></h1>
+<div class="level1">
+<table class="contenttable_lmenu">
+	<tr class="row0">
+		<th class="col0"> Name: </th><th class="col1"> Identifier: </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 leftalign"> Performance   </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-1" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-1"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-1</a> </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Reliability </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-2" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-2"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-2</a> </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> Scalability   </td><td class="col1 rightalign">  <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-3" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-3"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-3</a> </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Capacity </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-4" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-4"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-4</a> </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Robustness </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-5" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-5"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-5</a> </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Error handling </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-6" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-6"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-6</a> </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> Accuracy </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-7" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-7"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-7</a> </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> Integrity </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-8" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-8"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-8</a> </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> Accessibility </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-9" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-9"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-9</a> </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> Availability </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-10" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-10"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-10</a> </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> Interoperability </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-11" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-11"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-11</a> </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> Security </td><td class="col1"> <a href="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-12" class="urlextern" target="_blank" title="http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-12"  rel="nofollow">http://www.w3c.or.kr/kr-office/TR/2003/ws-qos/#qos-12</a> </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> Response time </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0">Connection time </td>
+	</tr>
+</table>
+
+</div>
+<!-- SECTION "New annotation attribute by Franck" [3552-4523] -->
+<h1><a name="annotation_field_mappings" id="annotation_field_mappings">Annotation field mappings</a></h1>
+<div class="level1">
+
+<p>
+
+This describes what annotations fields are allowed on which model objects within the BioCatalogue:
+</p>
+
+<p>
+NOTE: when the Annotations write <acronym title="Application Programming Interface">API</acronym> is done, these mappings will also be enforced.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Service</strong>:</div>
+<ul>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> category</div>
+</li>
+<li class="level2"><div class="li"> display_name</div>
+</li>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> rating.xx</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>ServiceDeployment</strong>:</div>
+<ul>
+<li class="level2"><div class="li"> cost</div>
+</li>
+<li class="level2"><div class="li"> usage_condition</div>
+</li>
+<li class="level2"><div class="li"> contact</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>SoapService</strong>, <strong>RestService</strong>:</div>
+<ul>
+<li class="level2"><div class="li"> documentation_url</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> license</div>
+</li>
+<li class="level2"><div class="li"> publication</div>
+</li>
+<li class="level2"><div class="li"> citation</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>SoapOperation</strong>:</div>
+<ul>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>SoapInput</strong>:</div>
+<ul>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> format</div>
+</li>
+<li class="level2"><div class="li"> example_data</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>SoapOutput</strong>:</div>
+<ul>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> tag</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> format</div>
+</li>
+<li class="level2"><div class="li"> example_data</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>ServiceProvider</strong>:</div>
+<ul>
+<li class="level2"><div class="li"> display_name</div>
+</li>
+<li class="level2"><div class="li"> alternative_name</div>
+</li>
+<li class="level2"><div class="li"> description</div>
+</li>
+<li class="level2"><div class="li"> website</div>
+</li>
+<li class="level2"><div class="li"> contact </div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Annotation field mappings" [4524-] -->

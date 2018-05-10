@@ -1,0 +1,57 @@
+====== F2F design-a-thon 14th-15th August 2008 @ EBI, Cambridge ======
+
+===== Attending ======
+
+Thomas, Eric, Hamish, Katy, Franck, Jits, Don, Sergejs
+
+**Note:** Jits is also there Mon 18th and Tues 19th.
+
+===== Expected Outcomes =====
+** This needs more clarification! **
+
+  * Content requirements
+  * Design document of the system
+  * Beginnings of code
+  * Clear and unambiguous definitions and documentation on requirements, what components to use, what is 'in' myExperiment, what is 'in' BioCatalogue, a plan and so on.
+  * Some information on expected performance, scalability, support and so on for the pilot.
+
+===== Agenda =====
+
+** Day 1 **
+
+Manchester people arriving at EBI around 11:30am
+
+12:00pm - lunch, 12:30pm start, 5:00pm finish.
+
+  * myExperiment show and tell, and questions (Jits, Don, Sergejs)
+  * EB-eye show and tell, and questions (Franck Valentin)
+  * Current work show and tell, and questions (Thomas, Eric)
+  * Discuss high level architecture of pilot, taking into account integration with other pieces/systems (All)
+
+** Day 2 **
+
+9:30am start, 5:00pm finish, lunch in between.
+
+  * Discuss and finalise functional requirements for the pilot solution (this includes detailing definitions and terms) (All)
+  * Discuss and finalise initial content requirements for the pilot solution (All)
+  * Brainstorm designs for key aspects of the pilot solution (this includes integration pieces and strategies for the integration) (All)
+  * Put together a development plan (All)
+  * Put together information on expected performance, scalability, support and so on for the pilot solution (All)
+
+
+===== Actions =====
+
+  * myExperiment team to investigate putting stuff into plugins, e.g: user authentication, reviews/ratings, (upcoming) event logging and (upcoming) discussion threads.
+  * Ask Stian about the Feta service browser.
+  * Jits to speak to Franck, Katy and Stian about Ontologies to be used in BioCatalogue.
+  * Management to decide on license for source code.
+  * Jits and Eric to come up with proposed designs for the core data model and other core features, before hackfest in Southampton.
+
+
+===== Decisions =====
+
+  * Development tasks coordinated between developers (especially for parallel tasks).  
+  * Use RubyForge to host the source code.
+  * Rails v2.1 will be used.
+  * Source code license: TBD
+  * We will be writing tests for core functionality, especially basic unit and functional tests.

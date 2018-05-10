@@ -1,0 +1,72 @@
+==== v1.1.0 Release (Sep 2011) ====
+
+This will be a major release with some new features and major improvements.
+
+This will include:
+  * New "examples" tab for services. Surfaces all existing example data and scripts for a service, and provides simple abilities to add examples.
+  * Richer annotation values support. This will improve semantic annotation capabilities and improve performance in certain areas (like generating tag filters in the Taverna plugin).
+  * Support for custom monitoring of REST services - maintainer of the service can provide a custom URL to monitor (which can include secret info like an API key).
+  * (possibly) Secure web pages - site will run with SSL turned on for all pages.
+  * Users can now see the list of people who have been granted responsibility for a service.
+  * Some UI and performance tweaks.
+
+<html>
+<div class="box_important">
+<b>IMPORTANT:</b> this releases includes a major change in the way annotations work and thus requires a big data migration of all the Annotations data. When running "rake db:migrate" this could take over 3 hours to complete, and it's important to check the output of this to make sure everything ran OK.
+</div>
+</html>
+
+=== Update instructions (for local and Manchester servers): ===
+
+**NOTE:** when running in production environments make sure to set/add ''RAILS_ENV=production'' to any ruby/rake commands below.
+
+Run:
+
+  svn update
+  rake db:migrate
+  rake db:test:prepare RAILS_ENV=test
+  ruby script/biocatalogue/migrate_display_names_jul11.rb
+    Expected output (something like):
+    > 1184 display names moved to the parent Service
+    > 0 display_name annotations remaining in the db
+  ruby script/biocatalogue/fix_url_monitors_using_annotations_sep11.rb
+    Expected output (something like):
+    > 43 URL monitors updated
+
+You **may** need to reindex your search index if you experience problems - ''rake solr solr:reindex'', but note that it will take a long time to run.
+
+Additionally, for production environments:
+
+  rake asset:packager:build_all RAILS_ENV=production
+
+To restart an app deployed under apache and phusion passenger:
+
+  touch tmp/restart.txt
+
+=== Update instructions (for EBI servers): ===
+
+First, follow instructions here:
+http://www.biocatalogue.org/docs/installing-new-release
+
+**Note**: it's **CRUCIAL** that the full output of the update script is viewed to ensure the migration went ahead smoothly.
+
+Then run the following (in the directory where the code is deployed):
+
+  ruby script/biocatalogue/migrate_display_names_jul11.rb
+  ruby script/biocatalogue/fix_url_monitors_using_annotations_sep11.rb
+  rake asset:packager:build_all RAILS_ENV=production
+  touch tmp/restart.txt
+
+=== Testing ===
+
+  - Run the Rails tests:
+
+  rake test:units RAILS_ENV=test
+  rake test:functionals RAILS_ENV=test
+  rake test:integration RAILS_ENV=test
+
+  - Run [[development:api_tests|API tests]]
+
+  - Use the [[http://www.biocatalogue.org/wiki/doku.php?id=development:system_testing|DRAMA]] procedure to test the system
+
+

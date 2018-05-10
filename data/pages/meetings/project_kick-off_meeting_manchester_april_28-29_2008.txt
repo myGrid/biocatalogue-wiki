@@ -1,0 +1,345 @@
+===== BioCatalogue Project Kick-Off Meeting =====
+
+  * Place : Manchester  
+  * Date  : 28/29 April 2008
+
+==== Agenda ====
+
+===  Monday 28th April ===
+
+12.00 Lunch
+
+13.30 Introduction to the meeting: introducing people to each other, their roles -- Carole
+
+14.00 Introduction to the project  including discussion -- Carole (with Rodrigo and Robert joining in)
+  * Brief demo of myExperiment -- Jiten Bhagat
+
+15.30 Tea break
+
+16.00 Curation Perspective: Service directories, state of the art for service curation, what we have. what we want
+  - Current myGrid practices: good and evil         Franck Tanoh (with Katy joining in)
+  - Bionanny and workflow analytics            Alan and Jits
+  - Current state of the art and other initiatives   (Hunter, Microsoft, UDDI, SAWSDL, SEEKDA etc)  Franck Tanoh (with Katy joining in)
+  - Other similar resources (Strengths and Weaknesses) - Eric Nzuobontane
+  - {{:meetings:kickoff:ws4ls_ebiws-20080428.ppt|Web Services Status from the EBI}} - Hamish
+  - Minimum Information About Open Web Services proposal in submission to the Minimum Information for Biological and Biomedical Investigations (MIBBI) - Duncan Hull http://mibbi.sourceforge.net/
+  - Digitial Library perspective  - David De Roure
+  - Discussion with everyone joining in
+
+17.30 Summary of discussion points and replanning for next day
+
+19.00 Pub and Dinner somewhere nice
+
+=== Tuesday 29th April ===
+
+09.00 Discovery Perspective:  SOTA, what we have and what we want
+   - myExperiment  - Jiten Bhagat
+   - EB-eye            - Rodrigo  Lopez
+   - Feta: an example of what we don't want - Franck
+   - Amazon shopping metaphor  - Carole Goble
+   - Other initiatives
+   - Discussion
+
+11.00 Coffee Break
+
+11.30 Project planning
+   - Architecture
+   - Metadata models
+   - Key standards
+   - Supporting the curation pipeline
+   - Low hanging fruit
+   - Key milestones
+
+12.30  Lunch
+
+13.00 Admin niff-naff
+   - Project management methods - f2f, skype chats, wiki, mailing lists
+   - Tying into myExperiment, Taverna and EBI efforts
+   - BBSRC report
+   - Meetings
+   - Collaborations
+
+15.30  FINISH 
+
+==== Attendees ====
+
+From EBI 
+  * Thomas Laurent
+  * Rodrigo Lopez 
+  * Hamish McWilliam
+  * Eric Nzuobontane
+From Manchester 
+  * Jiten Bhagat
+  * Carole Goble
+  * Duncan Hull 
+  * Robert Stevens
+  * Franck Tanoh
+  * Alan Williams (for BioNanny part of the meeting)
+  * Kaixuan Wang  (Observer)
+  * Katy Wolstencroft
+On Skype:
+  * David De Roure / Danius Michaelides 
+  * Representative from NBIC
+
+==== Apologies ====
+
+==== Discussions ====
+
+=== Day 1 ===
+
+== Introductions from attendees ==
+
+  * **EBI people:**
+  * Eric – Web services and back end guy for biocatalogue
+  * Thomas web site – web developer and interfaces experience with bio background
+  * Hamish – data processing pipelines – srs, blast, fasta etc – involved in web service development at ebi. Hamish is main support person.
+  * Rodrigo – head the external services group – gateway for web etc, web services
+  * We need a logo and possibly a new name. Is Biocatalogue ok? Legal problems last time for biocatalogue at the EBI
+
+=== Introduction to the project ===
+
+  * Carole introducing why web services and workflows are important
+  * Not only web services to consider – java, perl, biomart.
+  * Most users are not in big commercial enterprises – consumers and producers could be different – but some people are both
+  * Workflow analytics important for biocatalogue too – as service analytics is a big part
+  * Web services – domain and shim services have different properties and this affects finding and using them
+
+  * Brief introduction to myExperiment – descriptions of workflows – EMOs – shopping metaphor 
+
+Things being looked at and/or adopted by myExperiment (mostly for EMOs)
+OAI-ORE – model for object reuse and exchange – standard in the library community – W3C community
+PMH – protocol for metadata harvesting
+
+  * Annotation commodities
+  * Object
+  * Annotation Model
+  * Functional
+  * Operational
+  * Provenance
+  * Reputation
+  * Descriptions
+  * Ontologies
+  * Controlled vocab
+  * Tags
+  * Folksonomies
+  * Free text
+
+
+**Tagging** – how do we over-see the tagging rather than controlling? Do we need more that tags? Is there still a place for ontologies as well?
+Everyone agreed that not exposing ontologies to users is a good thing – but they could play a role under the hood
+The important thing is helping users annotate by providing better tooling – keep everything simple – we can’t force people to fill in lots of forms etc.
+Keeping ahead of our competitors – not competing by being uniquely different – it implies a steep learning curve – users don’t want that. Use metaphors that the customers already know – shopping for airline tickets, for example, is the same whatever company you use.
+
+=== A Brief Description of other initiatives in the community ===
+
+
+  * UDDI – is it dying? No longer being used by IBM etc. It is being used for things it wasn’t originally designed for.
+  * Annotation swirl – SMARTER curation – Carole’s acronym 
+  * Wiki professional – Marco suggested we look at it 
+  * Wiki protein – annotation is always connected to a user. If they are an expert, the curation is worth more. Wiki pathway is an extension of this
+
+  * Rodrigo is worried by wiki protein – no peer review – we need provenance of annotations
+
+  * MIBBI – set of data types – not services – MIAOWS proposal is therefore different – how would that work? What IS the minimum?
+
+  * Range of services we need to describe – rest, soap, biomoby – no migration of services.
+
+=== Hamish talks about web services at the EBI ===
+
+  * Domains and technologies mostly bio users but some chemists and systems – see {{:meetings:kickoff:ws4ls_ebiws-20080428.ppt|slides}}
+  * They support REST and SOAP – lots of services have both interfaces
+    * REST – DAS and Http
+  * SeekDa – bioinformatics services feature high in web services cloud
+  * Web services and web interface just as popular according to the ebi graph
+  * Documentation
+    * WSDL documentation – travels with wsdl but are inconsistently done
+    * Good for describing the interface but not the service function usually
+  * Services page
+  * Already got web page docs – to reuse – what’s the api? Methods and data structure
+  * Sample clients – java and perl
+  * Also looking at dotnet
+  * Complex dependencies between parameters – inputs and outputs also
+  * Need to give combinations and ranges of allowed values
+    * Eg blast – protein/nucleotide/db and type of search
+  * Metadata and EB-Eye
+    * Who are your users? Most bench biologists use fill in web forms
+    * Web services – developers writing plugins
+    * Bioinf users doing high throughput – workflows or otherwise
+  * How do we tell users how to use services? How do we stop people doing DOS attacks? Rodrigo told of web service   problems and we described similar
+  * Marco suggested that other users’ documentation would be more useful than developers stuff. Rodrigo suggested that sometimes people don’t or can’t read documentation, so we need to control those situations.
+  * Data is changing all the time and so are the resources – there is a history which needs preserving. Provenance of documentation and annotation very important
+  * In myExp the users are generally the same – small community and self monitoring. All skilled
+
+=== Alan talks about Bionanny ===
+ 
+  * A web service with rest interface. Can monitor workflows of interest.
+
+  * Services being not available – where do you monitor that?
+  * Some people set up alternates before runtime – some just want any old alternate that can be found and some will want to stop the workflow until it is back again
+
+  * Pingers – how do we keep track of services – what is up and working? How does that change with real data?
+
+  * Should ‘get status’ be part of the minimum information model?
+
+  * How does this relate to the open provenance model? Does it have a mechanism to report service problems?
+
+=== Franck talks about current myGrid metadata ===
+
+
+  * We need to remove the annotation tool and start again – Pedro is not suitable. We need a more webby and more dynamic interface. We need to preserve the annotations we already have though, so we need to think about migration
+
+=== Dave talks about the digital library perspective – ===
+ 
+
+  * emo and oai-ore protocols
+
+  * Exchanging metadata about arbitrary objects – harvesting standard – eg used in e-prints, fedora etc. 
+Focus on object reuse and exchange – still in alpha format. Acknowledged the need to group objects together. In myExp this is the emo – a description of all the different pieces and giving it a URI
+
+  * myExp is about working with experimental objects/research objects rather than just workflows or services
+
+
+==== Day 2 ====
+=== Starts with a myExperiment demo ===
+ 
+  * Thomas asked why there is the option to view but not download and we discussed bio practices of  publication and when that could be and why it might be appropriate
+
+  * Marco brought up the publications store concept – making myExperiment THE place to reference workflows in papers
+
+  * Biocatalogue is different because it is a registry and not a repository. 
+  * Myexperiment is a gossip shop and ‘water cooler’
+
+  * Tagging important – who tagged what is interesting and should be preserved
+
+  * Services inside workflows – find out what’s inside – find out when particular services are used
+
+  * When is an operation different? Jits suggests that if the metadata no longer applies, then it is a new version
+Combinations of parameters are important and can be badly selected by users – but we are building this for professionals – they should know a bit about what they are trying to do
+
+  * Marco brought up web service versions – how do you do this? Hamish said there have been attempts – services contain version numbers – but many service providers do not bother, so it is a hard and unsolved problem
+
+=== Franck and Eric on state of the art ===
+ 
+  * UDDI – business to business model – flawed and now on the decline. Only useful for WSDL and we have more than that
+
+  * SeekDa demo – interesting site and already contains a lot of web services. Do we need to collaborate with these people? They suggested it – we need to know their model before we join them – how do they make their money, for example?
+
+  * serviceFinder is a web 2.0 interface for seekda
+
+  * EB-Eye – all about searching for data – how does that map to searching for services?
+
+
+  * Lumina – wsdl-s and owl-s – all these things change frequently – so Carole advocates not adopting them for now
+
+  * SAWSDL – w3 recommendation – could become more widely adopted – we should watch its progress. SAWSDL relies on adding to the WSDL file, so it must be the service providers who adopt this. We cannot add sawsdl to existing wsdls without changing their location
+
+  * Robert asks is there anything that indexes “stuff”, heterogeneous collections of data and resources? Biology links directory – just a web page with links on it
+  * Marco/Robert brought up skos as a search mechanism instead of formal ontologies and we discussed having skos as a search tool and ontology descriptions as mechanisms for knowing how to invoke services
+
+=== Duncan on MIAOWS ===
+ 
+  * Discussion about the differences between finding and invoking
+
+  * What does it do is fundamental – and missing from duncan’s model
+  * No provision for data formats or underlying data resources or algorithms. I would add these to the model also
+
+  * Need examples and mandatory/optional/default. Is this minimum or extra useful stuff?
+
+
+==== Project Planning ====
+
+
+== Workpackages ==
+
+  * Wp1 back end catalogue
+  * Wp2 acquisition and discovery
+  * Wp3 discovery tools
+  * Wp4 content acquisition
+  * Wp5 user engagement & community building
+ 
+  * Carole proposes moving the api work forward – do a thin slice of some model, some backend and some curation – sooner than six months
+
+  * Prototyping model and browser – maybe even as a series of power point slides
+
+  * Rodrigo explained the hardware available – got a sys admin to set up environment for working – franck, jits and eric need to work out what they need
+
+  * Biocatalogue will be set up in ebi and interface myExperiment as well as lots of other applications
+
+  * What should we start with? Thomas suggested – clicking on a service and going to biocatalogue interface – maybe as an advanced feature, we could skin it so it looks like myExperiment
+
+  * Migrate descriptions from Feta and EB-Eye 
+
+  * Would we have time for tagging? What is the tagging bus between myExp and biocat?
+
+   * Simple biocatalogue
+   * Minimal service model
+   * Programming interface
+   * Skinning with myExperiment
+   * Migrate feta
+   * Migrate ebi descriptions
+
+  * Rodrigo suggests by next Friday that we have mock ups and proposals for simple models
+
+**Do we need to consider the curation model?**
+
+  - Nominate your services – 12 or so – representative of range – and used in workflows. Eric and Franck and me
+  - write a simple schema Eric and Franck and me
+  - Thomas and Rodrigo to do interface mock-ups
+  - User type – mapping 
+  - Documentation, wiki etc – Carole, Jits
+  - Set up techy show and tell - jits
+
+  * Document the meeting – Robert and carole writing a briefings paper about annotating web services
+  * Set up techy show and tell backends 
+
+
+**Tuesday 13 May 4-5 pm planning – telecon?**
+
+In detail…..
+
+Infrastructure:
+ 
+  - Domain name (EBI)
+  - Hardware (EBI)
+  - Infrastructure development
+  - Jits + Eric
+  - understanding myExp infrastructure
+  - Understanding the myExp model
+
+
+M1 (throwaway):
+ 
+  - Simple biocatalogue
+  - Minimal service model
+  - Programming interface
+  - 'Skinning' with myExp
+  - Migrate Feta (myGrid)
+  - Migrate EBI description
+   - (tagging)
+   - Tag service? Tag bus?
+ 
+Write up stories by May
+ 
+For Tuesday 13th May, 4pm - 5pm
+ 
+Data show and tell
+ 
+  - Simple schema (Eric & Franck, Katy cheering)
+  - Thomas, Rodrigo mock up (Thomas)
+  - Nominate your services (Franck)
+  - 12 services
+  - Annotated
+  - Representative of range
+  - In workflows
+  - User types (Hamish)
+  - Documentation / Notes from meeting / Wiki / Slides (Carole & Jits)
+  - Set up techy show + tell (myexperiment stuff) (Jits & Eric)
+ 
+ 
+  * Create new mailing list
+  * Create a new space on dev wiki
+
+=== Action Items ====
+
+==== Others ====
+

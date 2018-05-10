@@ -1,0 +1,91 @@
+
+<h2 class="sectionedit1" id="st_december_2009">1st December 2009</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Previous release revision: 1300</div>
+</li>
+<li class="level1"><div class="li"> This release revision: 1350</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "1st December 2009" [1-100] -->
+<h3 class="sectionedit2" id="steps_to_take_for_update">Steps To Take for Update</h3>
+<div class="level3">
+
+<p>
+In order…
+</p>
+<ul>
+<li class="level1"><div class="li"> Run database update tasks:</div>
+</li>
+</ul>
+<pre class="code">rake db:migrate RAILS_ENV=production</pre>
+<ul>
+<li class="level1"><div class="li"> Restart the worker(s). For each, do: </div>
+</li>
+</ul>
+<pre class="code">ruby script/worker stop
+ruby script/worker start</pre>
+<ul>
+<li class="level1"><div class="li"> Run the &#039;search by data script&#039;</div>
+</li>
+</ul>
+<pre class="code">ruby script/biocatalogue/import_annotations_io_examples_nov09.rb</pre>
+<ul>
+<li class="level1"><div class="li"> Set up a cron job to update annotation properties</div>
+</li>
+</ul>
+<pre class="code">rake biocatalogue:submit:update_annotation_properties_full RAILS_ENV=production</pre>
+<ul>
+<li class="level1"><div class="li"> Rebuild assets</div>
+</li>
+</ul>
+<pre class="code">rake asset:packager:build_all</pre>
+<ul>
+<li class="level1"><div class="li"> Restart application instance(s)</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Steps To Take for Update" [101-651] -->
+<h3 class="sectionedit3" id="release_notes">Release Notes</h3>
+<div class="level3">
+
+<p>
+Email for the friends&#039; list:
+</p>
+
+<p>
+By George:
+</p>
+<pre class="code">Hi all
+
+We have just released a brand new &quot;Search by data&quot; feature. It allows
+you to query for services that might analyze or process a given real
+data. For example, given a Fasta file, it returns a list of services
+that possibly consume sequences in Fasta format.
+
+To access the feature go to:
+www.biocatalogue.org/search/by_data
+or click on a drop-down button just on the right site of &quot;Providers&quot; link.
+
+We would appreciate any suggestions or comments which will help us to
+improve this feature.
+Note that &quot;Search by data&quot; depends on example inputs and outputs for
+service operations in BioCatalogue.
+If you add a new service or annotate one, please add example inputs and
+outputs to improve the visibility of the service.
+
+Note also that we are logging your queries, which enables us to monitor
+and improve the quality on results. We hope to use this data to develop
+automatic tools for service annotation in the future. Meanwhile, we
+suggest you not to use secure or confidential data while searching for
+services.
+
+Regards,
+
+The BioCatalogue Team </pre>
+
+</div>
+<!-- EDIT3 SECTION "Release Notes" [652-] -->

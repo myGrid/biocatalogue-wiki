@@ -1,0 +1,17 @@
+==== This page is now deprecated. Please do not update! ====
+
+  * Web Services change their location and capability, or become outdated
+  * The BioCatalogue monitors Web Services and records historical data on the availability, reliability and functionality of these services
+
+
+====== Monitoring of Web Services in the BioCatalogue ======
+The BioCatalogue regularly monitor services to provide up-to-date information about the status of the service. The catalogue regularly pings the endpoint and the WSDL of the Web Service. The results of the monitoring provide information about the availability and reliability of the service and are shown as traffic light in the BioCatalogue. 
+  * Green (put icon):  The service is available, its WSDL and endpoint can be accessed 
+  * Amber (put icon):  The service might not be available, its WSDL or its endpoint or both are not accessible. 
+  * Red (put icon):  The service is not accessible. 
+  * When you first register a service it will be marked blue (icon here) until the automated monitoring check its status.  
+
+The result of the monitoring for the past 4 days are shown. 
+
+
+

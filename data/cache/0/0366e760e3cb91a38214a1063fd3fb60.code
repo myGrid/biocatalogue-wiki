@@ -1,0 +1,43 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;restMethod</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/84&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Rest Method - Get paths to leaves from a concept in a specific ontology version<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>Get paths to leaves from a concept in a specific ontology version<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;endpointLabel<span class="re2">&gt;</span></span></span>GET /concepts/leafpath/{ontologyVersionId}/{conceptId}<span class="sc3"><span class="re1">&lt;/endpointLabel<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;httpMethodType<span class="re2">&gt;</span></span></span>GET<span class="sc3"><span class="re1">&lt;/httpMethodType<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;urlTemplate<span class="re2">&gt;</span></span></span>http://rest.bioontology.org/bioportal/concepts/leafpath/{ontologyVersionId}/{conceptId}?email={email}<span class="sc3"><span class="re1">&lt;/urlTemplate<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;dc:description<span class="re2">&gt;</span></span><span class="re1">&lt;/dc:description<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;documentationUrl<span class="re2">&gt;</span></span><span class="re1">&lt;/documentationUrl<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;submitter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/users/14&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Member - Jiten Bhagat&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Jiten Bhagat&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-06-25T12:41:51Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;inputs</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/84/inputs&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethod&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;restParameter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_parameters/116&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestParameter&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Rest Parameter - conceptId&quot;</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Rest Parameter - conceptId<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>conceptId<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;dc:description<span class="re2">&gt;</span></span><span class="re1">&lt;/dc:description<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;computationalType<span class="re2">&gt;</span></span><span class="re1">&lt;/computationalType<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;defaultValue<span class="re2">&gt;</span></span><span class="re1">&lt;/defaultValue<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;paramStyle<span class="re2">&gt;</span></span></span>template<span class="sc3"><span class="re1">&lt;/paramStyle<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;isOptional<span class="re2">&gt;</span></span></span>false<span class="sc3"><span class="re1">&lt;/isOptional<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;constrainedValues<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;/constrainedValues<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;submitter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/users/14&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Member - Jiten Bhagat&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Jiten Bhagat&quot;</span><span class="re2">/&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-06-25T12:41:51Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;/restParameter<span class="re2">&gt;</span></span></span>
+      ...
+    <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;representations<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/representations<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/inputs<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;outputs</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/84/outputs&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethod&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;representations<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/representations<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/outputs<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;inputs</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/84/inputs&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethod&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;All REST Inputs on this REST endpoint&quot;</span><span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;outputs</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/84/outputs&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestMethod&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;All REST Outputs on this REST endpoint&quot;</span><span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;annotations</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_methods/84/annotations&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;Annotations&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;All annotations on this REST endpoint&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/restMethod<span class="re2">&gt;</span></span></span>

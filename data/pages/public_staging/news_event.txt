@@ -1,0 +1,103 @@
+====== News & Events ======
+
+As we are trying hard to engage with the service providers as well as the consumer communities, we have traveled around the globe to promote our cause. We have been present at these following major events and plan more in the near future.
+
+=== 2010 International Symposium on Integrative Bioinformatics, Cambridge, UK ===
+Website: http://www.rothamsted.bbsrc.ac.uk/bab/conf/ib2010/index.php
+
+"Biological data are scattered across thousands of biological databases and hundreds of scientific journals. Current high throughput genomics technologies generate large quantities of high dimensional data. Microarray, NMR, mass spectrometry, protein chips, gel electrophoresis data, Yeast-Two-Hybrid, QTL mapping, gene silencing, and knockout experiments are all examples of technologies that capture thousands of data points, often in single experiments. The challenge for Integrative Bioinformatics is to capture, model, integrate, and analyse these data in a consistent way to provide new and deeper insights into complex biological systems."
+
+Franck Tanoh presented a BioCatalogue [[http://www.rothamsted.bbsrc.ac.uk/bab/conf/ib2010/posterpdfs/BioCatalogue-Poster34.pdf|poster]] at the event, 22-24 May 2010
+
+=== All Hands Meeting 2009, Oxford, UK ===
+"The meeting provides a forum in which information on e-Science projects from all disciplines can be communicated and where the capabilities being developed within projects can be demonstrated." \\
+
+Two BioCatalogue demos were presented at the UK [[http://www.allhands.org.uk/ |e-Science All Hands meeting 2009]], December 2009
+  * Monday 7th Dec by Jiten Bhagat
+  * Tuesday 8th Dec by Jiten Bhagat
+Poster presented at the conference by Jiten Bhagat: [[http://www.slideshare.net/BioCatalogue/ahm-2009-biocatalogue-poster|poster]]
+
+=== Open House Festival of Interactive Technology 2009, Cambridge, UK ===
+"The 23rd BCS conference on Human Computer Interaction celebrated the people who use technology, the people who create new technologies, and the relationship between them. A centrepiece of the conference was an Open House Festival involving the many Cambridge laboratories and startup companies now creating new displays, devices, games, communications and ubiquitous computing technologies. New developments in HCI depend on technology, and interchange between the communities provided influence in both directions."
+  * Eric Nzuobontane presented a BioCatalogue [[http://www.slideshare.net/BioCatalogue/biocatalogue-poster|poster]] at the [[http://www.cl.cam.ac.uk/conference/hci2009/index.html|workshop]], 02 September 2009
+ 
+=== Data Integration in Life Sciences (DILS) 2009 - ENFIN Collocated Workshop, Manchester, UK ===
+"[[http://intranet.cs.man.ac.uk/dils09//|DILS 2009]] is the sixth in a workshop series that aims at fostering discussion, exchange, and innovation in research and development in the areas of data integration and data management for the life sciences."
+  * Jiten Bhagat and Franck Tanoh presented and demo the BioCatalogue, Manchester, UK, 20-22 July 2009. [[http://www.slideshare.net/BioCatalogue/biocatalogue-dils-enfin-2009-by-jits|Slides]] 
+  * BioCatalogue poster presented at the workshop: [[http://www.slideshare.net/BioCatalogue/biocatalogue-poster|poster]]
+
+=== Intelligent Systems for Molecular Biology (ISMB) 2009, Stockholm, Sweden ===
+"ISMB is a scientific meeting on the subjects of bioinformatics and computational biology. It has been held annually since 1993, and has grown to the largest and most prestigious meetings in these fields"
+
+[[http://www.biocatalogue.org/ |The BioCatalogue]] was officially launched  at [[http://www.iscb.org/ismbeccb2009/|ISMB 2009]]
+
+  * Jiten Bhagat and Franck Tanoh demo the BioCatalogue on 1st July 2009. [[http://www.slideshare.net/BioCatalogue/ismb-2009-demo-introduction|Slide]]
+  * Thomas Laurent and Franck Tanoh presented the BioCatalogue [[http://www.slideshare.net/BioCatalogue/biocatalogue-poster |poster]]
+
+=== BioIT Alliance Lunch, Boston, US ===
+Carole Goble presented the BioCatalogue at [[http://blogs.msdn.com/bioit_alliance/archive/2009/04/30/microsoft-at-the-bio-it-world-conference-in-boston-ma-27-29-april-2009.aspx|the BioIT Alliance Lunch in Boston]], 28 April 2009 \\
+[[http://www.slideshare.net/BioCatalogue/bioit-2009-biocatalogue-slides-by-carole-goble|Slides]] 
+
+=== Biocuration conference 2009, Berlin, Germany ===
+"Biocuration involves the translation and integration of information relevant to biology into a database or resource that enables integration of the scientific literature as well as large data sets. Accurate and comprehensive representation of biological knowledge, as well as easy access to this data for working scientists and a basis for computational analysis, are primary goals of biocuration."
+  * Franck Tanoh presented a BioCatalogue [[http://precedings.nature.com/documents/3132/version/1|poster]] at the [[http://projects.eml.org/sdbv/events/BiocurationMeeting/index.html|event]], Berlin, 15-17 October 2009
+
+=== Microsoft e-Science workshop 2008, Indianapolis, US ===
+	
+**Carole Goble received the inaugural Microsoft Research Jim Gray eScience Award** in recognition of her achievements in the application of computing technology to scientific insight and innovation. The award was presented by Tony Hey, Corporate Vice President of Microsoft External Research.
+
+See [[http://www.microsoft.com/presspass/features/2008/dec08/12-12eScienceworkshop.mspx|the Microsoft Press Feature]] and [[http://www.manchester.ac.uk/aboutus/news/display/?id=4249|Manchester University feature]] for more details official picture. 
+
+====== More events ======
+===== Invited talks and presentations at meetings =====
+  * Microsoft e-Science Workshop, Pittsburgh, US (15-17 Oct 09)
+  * Bio-IT World Expo Europe 2009, Hannover, Germany (6-8 Oct 09) 
+  * CaBig Annual meeting, Washington, US (20-22 Jul) 
+  * EMBL-Australia meetings Brisbane, Perth & Melbourne, Australia (20 July 09) 
+  * EBI Industry Forum, EBI, UK (05 June 09) 
+  * French Connection Meeting, EBI, UK (04 June 09) 
+  * Elixir meeting, Copenhagen, Denmark (18 May 09) 
+  * Embrace fifth annual general meeting, Geneva, Switzerland (12-13 May 09) 
+  * WebSci'09, Athens, Greece (18-19 Mar) 
+  * Eli Lilly Workshop, Manchester, UK (29-30 Jan 09) 
+  * 21st Intl CODATA Conf. Scientific Information for Society, Kyiv, Ukraine (5-8 Oct 08)  
+  * 12th European Conf on Digital Libraries, Aarhus, Denmark (14-19 Sept 08) 
+  * 3rd Intl Digital Curation Conference, Washington DC, USA (11-13 Dec 07)
+
+===== Exhibitions and demo presentations =====
+
+  * NIH-NCRI caBIG meeting, Bethesda, Maryland, USA (2-3 Sept 08) 
+  * EBI/Sanger: Sequence Similarity Search for Curators (18 June 08) 
+  * EBI Hands-on Patterns, Similarities and Differences in Biological Data (9-11 June 08)
+  * EBI Industry Panel meeting, EBI, UK (3-4 June 08)  
+  * 8th IEEE Intl Symposium on Cluster Computing and the Grid 2008, Lyon, France (19-22 May 08) 
+  * EMBRACE: Advanced Protein Domain Analysis meeting (18-20 May 08)
+  * Open Metadata Forum, Sydney Australia (17-19 May 08)
+  * NBIC BioRange project meeting, Netherlands (5-6 Mar 08)
+
+===== Tutorial =====
+
+  * A dip into EBI resources: understanding your data new resources and Future Directions, EBI, UK (19-22 Oct 09) 
+  * Programmatic access of Proteomics Resources, EBI, UK (28-31 July 08)
+  * EraSysBio Summer School, Tenerife, Spain (25-30 July 09) 
+  * Taverna training course, Southampton, UK (21 July 09) 
+  * Taverna training course, MIB Manchester, UK (6 June 09)
+  * Taverna training course, NBIC, Netherland (27-29 May 09) 
+  * Programmatic Access: to biological databases (Java), EBI, UK (27-29 Apr 09) 
+  * Biomed Grid School, Lake Como, Italy (13 May 09) 
+  * e-Science workshop, NESC-Edinburgh, UK (17 April 09) 
+  * Sequence to Genes: Genome Informatics of Microorganisms EBI, UK (16-18 Mar 09) 
+  * Taverna training course, Newcastle, UK (11-12 Mar 09)  
+  * Ondex Taverna Tutorial, NBIC, Netherland (26-27 Feb 09) 
+  * Programmatic access in Java webservices & workflows, EBI, UK (24-27 Nov 08) 
+  * Taverna Tutorial, NERC Oxford, UK (30 Oct 08)
+  * ECCB Interoperability of bioinformatics software and databases tutorial, Sardinia, Italy (22 Sept 08)
+  * ECCB Web Services and Workflows tutorial, Sardinia, Italy (22 Sept 08)
+  * Taverna Tutorial at ECML / PKDD 2008, Antwerp, Belgium (15 Sept 08) 
+  * FELICS Roadshow: Munich (12 Sept 08)
+  * EBI Hands-on: Programmatic access in Perl: web services & workflows, UK (8-11 Sept 08)
+  * FELICS Roadshow: The Hague, The Netherlands(5 Sept 08) 
+  * III Congreso Colombiano de Biotecnología (30 Jul-1Aug 08) 
+  * EMBRACE: Web Services in Systems Biology (28 Aug 08)
+  * EraSysBio Summer School, Tenerife, Spain(28-31 Aug 08)
+  * Taverna Training course, University of Cambridge, UK (27-28 May 08) 

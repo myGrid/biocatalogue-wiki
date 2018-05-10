@@ -1,0 +1,26 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;restResources</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_resources&quot;</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sortBy</span> <span class="re0">urlValue</span>=<span class="st0">&quot;created&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort_by&quot;</span><span class="re2">&gt;</span></span>Created at date<span class="sc3"><span class="re1">&lt;/sortBy<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;sortOrder</span> <span class="re0">urlValue</span>=<span class="st0">&quot;desc&quot;</span> <span class="re0">urlKey</span>=<span class="st0">&quot;sort_order&quot;</span><span class="re2">&gt;</span></span>Descending<span class="sc3"><span class="re1">&lt;/sortOrder<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;page</span> <span class="re0">urlKey</span>=<span class="st0">&quot;page&quot;</span><span class="re2">&gt;</span></span>1<span class="sc3"><span class="re1">&lt;/page<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pageSize</span> <span class="re0">urlKey</span>=<span class="st0">&quot;per_page&quot;</span><span class="re2">&gt;</span></span>10<span class="sc3"><span class="re1">&lt;/pageSize<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>9<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>82<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>82<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;restResource</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_resources/101&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestResource&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Rest Resource - /search&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Rest Resource - /search<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;path<span class="re2">&gt;</span></span></span>/search<span class="sc3"><span class="re1">&lt;/path<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;submitter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/users/14&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Member - Jiten Bhagat&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Jiten Bhagat&quot;</span><span class="re2">/&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-06-29T10:23:42Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/restResource<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;next</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_resources?page=2&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestResources&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Next page of results&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/restResources<span class="re2">&gt;</span></span></span>

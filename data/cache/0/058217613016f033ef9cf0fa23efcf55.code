@@ -1,0 +1,37 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;services</span> ...<span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;parameters<span class="re2">&gt;</span></span></span>
+    ...
+    <span class="sc3"><span class="re1">&lt;pageSize</span> <span class="re0">urlKey</span>=<span class="st0">&quot;per_page&quot;</span><span class="re2">&gt;</span></span>10<span class="sc3"><span class="re1">&lt;/pageSize<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/parameters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;statistics<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;pages<span class="re2">&gt;</span></span></span>1<span class="sc3"><span class="re1">&lt;/pages<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>8<span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;total<span class="re2">&gt;</span></span></span>1627<span class="sc3"><span class="re1">&lt;/total<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/statistics<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;results<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;service</span> ...<span class="re0">resourceType</span>=<span class="st0">&quot;Service&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Service - MegaBlast at SIB&quot;</span><span class="re2">&gt;</span></span>
+      <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Service - MegaBlast at SIB<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>MegaBlast at SIB<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+      ...
+      <span class="sc3"><span class="re1">&lt;serviceTechnologyTypes<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;type<span class="re2">&gt;</span></span></span>SOAP<span class="sc3"><span class="re1">&lt;/type<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;/serviceTechnologyTypes<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;latestMonitoringStatus<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;label<span class="re2">&gt;</span></span></span>PASSED<span class="sc3"><span class="re1">&lt;/label<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;message<span class="re2">&gt;</span></span></span>All tests were successful for this service<span class="sc3"><span class="re1">&lt;/message<span class="re2">&gt;</span></span></span>
+        ...
+      <span class="sc3"><span class="re1">&lt;/latestMonitoringStatus<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2009-06-26T11:42:27Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+      <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+        ...
+      <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/service<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/results<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;filters</span> ...<span class="re0">resourceType</span>=<span class="st0">&quot;Filters&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Filters for the services index&quot;</span><span class="re2">/&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;filtersOnCurrentResults</span> ... <span class="re0">resourceType</span>=<span class="st0">&quot;Filters&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Filters for the services index that will be applied on top of the current results set&quot;</span><span class="re2">/&gt;</span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/services<span class="re2">&gt;</span></span></span>

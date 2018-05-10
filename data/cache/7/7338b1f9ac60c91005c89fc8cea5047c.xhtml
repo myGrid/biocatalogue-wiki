@@ -1,0 +1,117 @@
+
+
+
+<h2><a name="the_pilot" id="the_pilot">The pilot....</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <strong>Covers <acronym title="Simple Object Access Protocol">SOAP</acronym> services from:</strong> DDBJ, EBI, NCBI and community providers such as BioMOBY, myGrid, EMBRACE and BioSapiens and relevant services sourced from SeekDa!. Work on support for DAS and REST services is in progress. </div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "The pilot...." [1-253] -->
+<h2><a name="after_the_pilot" id="after_the_pilot">After the Pilot</a></h2>
+<div class="level2">
+
+</div>
+
+<h5><a name="integration_with_myexperiment" id="integration_with_myexperiment">Integration with myExperiment</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Services from BioCatalogue displayed in myExperiment so users of myExperiment can browse them. This includes a “Latest Services” and “Updated Services” list.</div>
+</li>
+<li class="level1"><div class="li"> Services within workflows in myExperiment reference the appropriate services in BioCatalogue so users can click through to the information in BioCatalogue.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="integration_to_taverna" id="integration_to_taverna">Integration to Taverna</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Ability to import Web Services and annotations to and from BioCatalogue and Taverna.</div>
+</li>
+</ul>
+
+</div>
+
+<h5><a name="mybiocatalogue" id="mybiocatalogue">myBioCatalogue</a></h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Setup your private BioCatalogue for your project or organisation</div>
+</li>
+</ul>
+
+<p>
+<br/>
+
+</p>
+
+<p>
+<strong>For the list of complete features after the pilot see our <a href="/wiki/doku.php?id=public_staging:roadmap" class="wikilink1" title="public_staging:roadmap">Roadmap</a> </strong> 
+
+</p>
+
+</div>
+<!-- SECTION "After the Pilot" [254-952] -->
+<h2><a name="more_about_the_features" id="more_about_the_features">More about the features</a></h2>
+<div class="level2">
+
+</div>
+
+<h5><a name="precious_metals" id="precious_metals">Precious metals</a></h5>
+<div class="level5">
+
+<p>
+
+The BioCatalogue Pilot focuses on the simplest possible search, curation and submission in order to encourage use and to lower barriers of engagement. The emphasis is on wide service coverage. Search will be through keywords; curation through keyword tagging and tags generated from automated analysis of service description documents and submission by simple provision of a <acronym title="Uniform Resource Locator">URL</acronym> and optional metadata. The Basic BioCatalogue Pilot will cater for <acronym title="Simple Object Access Protocol">SOAP</acronym>-based and REST Web Services, that said it will cover over a lot of services, including those from the EMBL-EBI, NCBI, DDBJ and those from many collaborators. We have defined a data model for service annotation with four levels of compliance; from the <strong>bronze</strong> (basic level) through <strong>silver</strong> and <strong>gold</strong> to the very best high quality and comprehensive <strong>platinum</strong>. Simple service monitoring for operational metrics will be in place. 
+</p>
+
+</div>
+
+<h5><a name="machines" id="machines">Machines</a></h5>
+<div class="level5">
+
+<p>
+
+We have established the domain and hardware infrastructure at the EMBL-EBI. Several web nodes have been allocated that will provide the biocatalogue with redundancy in the service as well as fail-over capabilities. We have also clarified our technology choices, for rapid development we are using Ruby On Rails 2 and mySQL, and reusing components from <a href="http://www.myexperiment.org" class="urlextern" target="_blank" title="http://www.myexperiment.org"  rel="nofollow">myExperiment</a>; The choice of Ruby on Rails eases the development of the REST <acronym title="Application Programming Interface">API</acronym> and a highly usable front end. It encourages the development of reusable components which can easily be assembled, all through a simple yet highly functional model driven architecture.
+We have defined the architecture of the BioCatalogue, and specifically that of the Basic BioCatalogue Pilot. 
+</p>
+
+</div>
+
+<h5><a name="data_model" id="data_model">Data model</a></h5>
+<div class="level5">
+
+<p>
+
+We have defined a first cut data model for service annotation that can be incrementally enriched. Identified six classes of metadata: service function, operation, operational metrics, community standing, service provenance, and conditions of use. The data model also takes into account handling of versions of services during their life-cycle, as well as tracking individual deployments or instances of the service that may possess their own data metrics or parameters, operational characteristics and metadata. <a href="/wiki/lib/exe/fetch.php?media=public_staging:biocatalogue_data_model.ppt" class="media mediafile mf_ppt" title="public_staging:biocatalogue_data_model.ppt">biocatalogue_data_model.ppt</a>
+</p>
+
+</div>
+
+<h5><a name="about_service_submission" id="about_service_submission">About service submission</a></h5>
+<div class="level5">
+
+<p>
+
+A simple service provider submission system is in place in the pilot of BioCatalogue. It should take no more than a few seconds to submit a service and automatically annotate it to bronze standard. The basic information includes: name of submitter, email, provider name, hosting institution, name of service, location and exposure of the methods/actions described within it. The methods of a service will be parsed automatically from the WSDL and fed into the data store where they become searchable via the portals’ search engine.  Batch submission of service will also be available to cater for service provider such as SOAPLAB (<a href="http://www.ebi.ac.uk/soaplab" class="urlextern" target="_blank" title="http://www.ebi.ac.uk/soaplab"  rel="nofollow">http://www.ebi.ac.uk/soaplab</a>) and incoming data feeds from collaborators such as SeekDA (<a href="http://www.seekda.com" class="urlextern" target="_blank" title="http://www.seekda.com"  rel="nofollow">http://www.seekda.com</a>)
+</p>
+
+</div>
+
+<h5><a name="searching_for_services" id="searching_for_services">Searching for services</a></h5>
+<div class="level5">
+
+<p>
+
+We are using Solr (apache.solr.org), which is based on the Lucene full-text search library (apache.lucene.org), and for which there is significant expertise build up within the group. The search interface is modelled around <a href="http://www.myexperiment.org" class="urlextern" target="_blank" title="http://www.myexperiment.org"  rel="nofollow">myExperiment.org</a>; . A strong commonality between these projects will lead to an easier and more obvious use of the results by the users.
+</p>
+
+<p>
+The BioCatalogue will feed other search engines such as Google and the <a href="http://www.ebi.ac.uk/ebisearch" class="urlextern" target="_blank" title="http://www.ebi.ac.uk/ebisearch"  rel="nofollow"> EB-eye</a> with data. This will be possible by using the <acronym title="Rich Site Summary">RSS</acronym>/Atom or <acronym title="Resource Description Framework">RDF</acronym> feeds, which are planned to allow registered and non-registered users to stay tuned to BioCatalogue activities. The BioCatalogue pilot already provides support for OpenSearch (<a href="http://www.opensearch.org" class="urlextern" target="_blank" title="http://www.opensearch.org"  rel="nofollow">http://www.opensearch.org</a>) for browsers that use the technology. This will allow users to query the BioCatalogue in a semi-independent fashion from the portal.
+
+</p>
+
+</div>
+<!-- SECTION "More about the features" [953-] -->

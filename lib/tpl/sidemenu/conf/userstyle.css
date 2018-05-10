@@ -1,0 +1,76 @@
+/**
+*
+* Additional style that can be used to override default ones
+* @author Jiten Bhagat
+* @author Eric Nzuobontane
+*/
+
+h1, h2, h3, h4, h5 {
+margin-top: 0.6em !important;
+margin-bottom: 0.8em !important;
+}
+
+.box_important,
+.box_note {
+border: 1px solid #DDD;
+color: #222222;
+padding: 0.3em 0.6em;
+margin: 1em 0;
+line-height: 1.5;
+text-align: left;
+}
+
+.box_important {
+background: #FFFFDF; 
+}
+
+.box_note {
+background: #EFF0EF;
+}
+
+p {
+margin: 1em 0 0.4em 0 !important;
+padding: 0;
+line-height: 1.5;
+}
+
+table { 
+border: 1px solid #cccccc; 
+background-color: #FFF; 
+border-collapse: collapse;
+width: auto;
+table-layout: fixed;
+overflow: hidden;
+margin-top: 1em !important;
+}
+
+th {
+font-weight: bold;
+white-space: nowrap;
+vertical-align: middle;
+color: #333333;
+height: 1.8em;
+background-color: #e9f7cc;
+padding-left: 6px;
+padding-right: 6px;
+border: 1px solid #cccccc;
+text-align: center;
+}
+
+td {
+vertical-align: top;
+white-space: normal;
+padding: 3px 6px 3px 6px;
+border: 1px solid #cccccc;
+text-align: left;
+}
+
+.code { font-family: monospace; }
+
+pre {
+border: 1px solid #DDD !important;
+}
+
+ul li {
+color: #000 !important;
+}

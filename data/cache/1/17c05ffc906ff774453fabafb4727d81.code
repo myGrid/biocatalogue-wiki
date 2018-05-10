@@ -1,0 +1,18 @@
+<span class="br0">&#123;</span>
+  resource <span class="sy0">:</span> <span class="br0">&#123;</span>
+    per_page<span class="sy0">:</span> ... <span class="sy0">,</span>
+    current_page<span class="sy0">:</span> ... <span class="sy0">,</span>
+    pages<span class="sy0">:</span> ... <span class="sy0">,</span>
+    total<span class="sy0">:</span> ... <span class="sy0">,</span>
+    search_query<span class="sy0">:</span> ... <span class="sy0">,</span>
+    per_page<span class="sy0">:</span> <span class="br0">&#91;</span> 
+      <span class="br0">&#123;</span>
+        resource_property_1<span class="sy0">:</span> ...<span class="sy0">,</span>
+        resource_property_2<span class="sy0">:</span> ...<span class="sy0">,</span>
+        resource_property_3<span class="sy0">:</span> ...<span class="sy0">,</span>
+        ...
+      <span class="br0">&#125;</span><span class="sy0">,</span>
+      ...
+    <span class="br0">&#93;</span>
+  <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

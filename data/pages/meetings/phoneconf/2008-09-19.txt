@@ -1,0 +1,68 @@
+====== Meeting Agenda/Minutes ======
+
+Date: Friday 19th September 2008
+
+Time: 15:00-17:00 (UK)
+
+===== Attending =====
+**Manchester:** Jits, Franck 
+
+**EBI:** Eric, Hamish, Rodrigo, Thomas
+
+===== Apologies =====
+  
+Katy, Carole 
+
+===== Minuting =====
+
+Franck 
+
+====== Agenda ======
+
+  * Action Items from previous meeting
+  
+  * Developement of the pilot 
+ 
+  * Discussion: Beanshell repository in BioCatalogue 
+
+===== Actions from Previous Meeting ===== 
+  * Jits : Add welcome message to the BioCatalogue friends list which is email upon subscription - **completed**
+  * Thomas : Add the questionnaire to the website **Ongoing** 
+  * EBI/Manchester : Update the wiki with the expectations for F2F at EBI - **Compeleted**
+  * EBI/Manchester : Use the wiki and mailing list to agree on the MUSTS for the BioCat requirements - **completed**
+ 
+====== Minutes ======
+  
+===== New Actions =====
+  * Jits: setup a developper design meeting. 
+  * Jits: Speak to Dave about the new privacy policy in myExperiment
+  * Everyone: read EBI privacy policy 
+  * Jits/Thomas: discuss UI coordiantion
+  * Eric/Jits: Agree on a date for Eric's visit in Manchester
+
+===== Pilot BioCatalogue =====
+Eric working on getting SOAP service into the database. He produced something he got Franck to test.
+He is having problems finding a WSDL parser through API. 
+
+Thomas has completed the registration piece using RESTful stuff. 
+
+Jits will start working on connecting the work done by Eric from Monday. 
+
+Eric is responsible for the DB migrate script/change. 
+
+  * Discussion: Beanshell repository in BioCatalogue: BioCatologue is a registry not a repository so we can not think of Beanshell repostory. However provided that myExperiment has a beanshell repository, BioCatalogue should be able to point to it.
+ 
+ 
+===== Next Meeting =====
+
+===== Upcoming Meetings ===== 
+
+Rodrigo is going to the ECCB meeting in Italy. Will try to prevent the EMBRACE team to promote "yet!" another catalogue. That is, he will make sure they mention that BioCatalogue will take over the newly created EMBRACE registry. 
+
+===== AOB =====
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2008-08-08|Phone Conference Meeting on Aug 08 2008]]
+
+Next meeting: 

@@ -1,0 +1,20 @@
+1372254234	172.22.68.217	E	development:test_site	plewis		
+1372255033	172.22.68.217	E	development:test_site	plewis		
+1372255143	172.22.68.217	C	development:live_site	plewis	created	
+1372255311	172.22.68.217	C	development:application_directory	plewis	created	
+1372255398	172.22.68.217	E	development:application_directory	plewis		
+1372255535	172.22.68.217	C	development:background_tasks	plewis	created	
+1372255554	172.22.68.217	E	development:background_tasks	plewis	created	
+1372255646	172.22.68.217	C	development:biocatalogue_application_stack_specs	plewis	created	
+1372255730	172.22.68.217	C	development:databases	plewis	created	
+1372255786	172.22.68.217	C	development:file_sharing	plewis	created	
+1372255824	172.22.68.217	C	development:istalled_ruby_gems	plewis	created	
+1372255872	172.22.68.217	C	development:installing_a_new_release	plewis	created	
+1372255916	172.22.68.217	C	development:release_logs	plewis	created	
+1372255962	172.22.68.217	C	development:test_harness_documentation	plewis	created	
+1400492913	130.88.193.235	E	public:team	alex	[The BioCatalogue Core Team] 	
+1400492988	130.88.193.235	E	public:team	alex		
+1400493031	130.88.193.235	E	public:team	alex	[The BioCatalogue Core Team] 	
+1400493085	130.88.193.235	E	public:team	alex	[The BioCatalogue Core Team] 	
+1520875540	130.88.240.64	E	development:installation	niall	[Setting up the BioCatalogue System] 	
+1520875676	130.88.240.64	E	development:codebase_guidelines	niall	[Codebase Guidelines] 	

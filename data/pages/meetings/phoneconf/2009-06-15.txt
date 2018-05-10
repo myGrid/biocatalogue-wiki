@@ -1,0 +1,60 @@
+Date: Monday 15th June 2009
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503011
+===== Attending ===== 
+
+**Manchester:** Franck, Jits
+
+
+**EBI:** Eric, Thomas, Rodrigo
+
+
+===== Apologies =====
+
+Carole, Steve
+===== Minuting =====
+
+====== Agenda ======
+
+  * Actions from the last telcon
+  * Progress/developement of the beta - feedback on the new beta release. 
+  * progress on service monitoring
+  * Technical meeting 
+    * Summary of tasks on Rubyforge 
+    * BioCatalogue support review
+    * [[development:20_questions|20 Questions]] analysis  
+
+===== Actions from Previous Meeting ===== 
+  * Franck and Jits to figure out how to use the annotations already existing to generate more useful search terms...**Ongoing**: service category now in place. 
+  * Eric report on the detailed results of load and throughput testings including peak and average cases...**ongoing** 
+  * Jits and Franck and Steve: Import content of the Embrace registry... **ongoing** 
+  * Franck - draft the demo. **ongoing**: poster done 
+  * Eric: to ask EBI system administrator to install 'MEM' cache on the beta site... **completed**   
+  * Franck: Look at Embrace service category... **completed** 
+  * Jits: to send instruction on how to use Money cache efficiently... **ongoing**  
+
+====== Minutes ======
+
+Release on the beta on the main site is scheduled for Wed 24 
+
+skype meeting on Tues 16 to allocate the tasks. 
+
+===== New actions =====
+ 
+===== Upcoming Meetings =====  
+
+ISMB 
+
+===== AOB =====
+
+
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-06-08|Phone Conference Meeting on June 08 2009]]
+
+Next meeting: [[Meetings:PhoneConf:2009-06-15|Phone Conference Meeting on June 15 2009]]

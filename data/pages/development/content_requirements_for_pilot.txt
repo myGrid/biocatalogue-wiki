@@ -1,0 +1,10 @@
+====== Content Requirements for BioCatalogue Pilot ======
+
+  * [Must] 12 already annotated services
+  * [Must] All Feta services that have been annotated
+  * [Must] Import some Soaplab services
+  * [Must] Embrace services
+  * [Should] EBI services
+  * [Could] All Feta services that have NOT been annotated (taking into account overlap with other content requirements)
+  * [Could] All Feta annotations
+  * [Could] BioMoby (import through API) - ask BioMoby people ?

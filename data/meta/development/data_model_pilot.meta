@@ -1,0 +1,11 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1219849386;s:8:"modified";i:1242980153;}s:7:"creator";s:5:"Jiten";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:4:"jits";s:5:"Jiten";s:8:"ericnzuo";s:4:"Eric";}s:4:"user";s:0:"";s:5:"title";s:21:"Data Modeling Process";s:11:"description";a:2:{s:15:"tableofcontents";a:5:{i:0;a:4:{s:3:"hid";s:21:"data_modeling_process";s:5:"title";s:21:"Data Modeling Process";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:1;a:4:{s:3:"hid";s:23:"data_source_distinction";s:5:"title";s:23:"Data source Distinction";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:17:"service_structure";s:5:"title";s:17:"Service Structure";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:11:"annotations";s:5:"title";s:11:"Annotations";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:8:"entities";s:5:"title";s:8:"Entities";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:503:"Data Modeling Process
+
+The data modeling approached adopted for BioCatalogue is the Agile Modeling Process which is  both evolutionary(iterative and incremental) and collaborative.
+
+
+Key aspects of this modeling approach include:
+
+	*  The model is developed in parallel with the application that uses the data
+	*  The project development iterations are in-line with the data model development iterations
+	*  The model is assumed to be 'good enough' to handle the the current application capabilities
+…";}s:8:"relation";a:2:{s:10:"references";a:2:{s:23:"development:annotations";b:1;s:34:"development:requirements_for_pilot";b:1;}s:10:"firstimage";s:36:"development:biocatalogue_domain.jpeg";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1219849386;s:8:"modified";i:1242980153;}s:7:"creator";s:5:"Jiten";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:4:"jits";s:5:"Jiten";s:8:"ericnzuo";s:4:"Eric";}s:4:"user";s:0:"";}}

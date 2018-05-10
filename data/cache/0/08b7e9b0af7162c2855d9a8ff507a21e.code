@@ -1,0 +1,20 @@
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">&quot;1.0&quot;</span> <span class="re0">encoding</span>=<span class="st0">&quot;UTF-8&quot;</span><span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;restParameter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/rest_parameters/12&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;RestParameter&quot;</span> ... <span class="re2">&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;dc:title<span class="re2">&gt;</span></span></span>Rest Parameter - accession<span class="sc3"><span class="re1">&lt;/dc:title<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;name<span class="re2">&gt;</span></span></span>accession<span class="sc3"><span class="re1">&lt;/name<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;dc:description<span class="re2">&gt;</span></span><span class="re1">&lt;/dc:description<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;computationalType<span class="re2">&gt;</span></span><span class="re1">&lt;/computationalType<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;defaultValue<span class="re2">&gt;</span></span><span class="re1">&lt;/defaultValue<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;paramStyle<span class="re2">&gt;</span></span></span>query<span class="sc3"><span class="re1">&lt;/paramStyle<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;isOptional<span class="re2">&gt;</span></span></span>false<span class="sc3"><span class="re1">&lt;/isOptional<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;constrainedValues<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;/constrainedValues<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;submitter</span> <span class="re0">xlink:href</span>=<span class="st0">&quot;http://www.biocatalogue.org/users/27&quot;</span> <span class="re0">resourceType</span>=<span class="st0">&quot;User&quot;</span> <span class="re0">resourceName</span>=<span class="st0">&quot;Franck Tanoh&quot;</span> <span class="re0">xlink:title</span>=<span class="st0">&quot;Member - Franck Tanoh&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;dcterms:created<span class="re2">&gt;</span></span></span>2010-04-26T16:02:33Z<span class="sc3"><span class="re1">&lt;/dcterms:created<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;ancestors<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/ancestors<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;related<span class="re2">&gt;</span></span></span>
+    ...
+  <span class="sc3"><span class="re1">&lt;/related<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/restParameter<span class="re2">&gt;</span></span></span>

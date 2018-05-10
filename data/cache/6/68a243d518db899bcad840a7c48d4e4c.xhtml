@@ -1,0 +1,111 @@
+
+<h1 class="sectionedit1" id="pseudo-synonyms_for_search">Pseudo-Synonyms for Search</h1>
+<div class="level1">
+
+<p>
+<strong>ONLY USED AT INDEX TIME TO ENRICH METADATA FOR SEARCH</strong> (there are some major issues with using the synonyms at query time, one of them being that they are ANDed and not ORed).
+</p>
+
+<p>
+Current list of synonyms used in SOLR are here: <a href="http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/solr/solr/conf/synonyms.txt" class="urlextern" target="_blank" title="http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/solr/solr/conf/synonyms.txt"  rel="nofollow">http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/solr/solr/conf/synonyms.txt</a>
+</p>
+
+<p>
+Scripts in … to process…
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Pseudo-Synonyms for Search" [1-401] -->
+<h2 class="sectionedit2" id="email_to_explain_changes_2009-06-12">Email to Explain Changes [2009-06-12]</h2>
+<div class="level2">
+
+<p>
+Hi Franck and all,
+</p>
+
+<p>
+There&#039;s been a MAJOR change in the way I am doing the pseudo synonyms now (the ones we intend to use to aid in search).
+</p>
+
+<p>
+BEFORE this change:
+</p>
+
+<p>
+We built a synonyms list where we had mappings where each mapping had the format…
+</p>
+
+<p>
+<em>[ a set of (related) terms that a user might search for ] ⇒ [ the list of pseudo synonyms that should be included in the user&#039;s search to broaden the search and get more useful results]</em>
+</p>
+
+<p>
+So, these pseudo synonyms mapping were used at *query* time to aid in the search when a user provides a search query.
+</p>
+
+<p>
+Unfortunately, SOLR doesn&#039;t work this way with it&#039;s synonyms <img src="/wiki/lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" /> <img src="/wiki/lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" /> <img src="/wiki/lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" /> There are three main issues here (ref: <a href="http://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#head-2c461ac74b4ddd82e453dc68fcfc92da77358d46" class="urlextern" target="_blank" title="http://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#head-2c461ac74b4ddd82e453dc68fcfc92da77358d46"  rel="nofollow">http://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#head-2c461ac74b4ddd82e453dc68fcfc92da77358d46</a>).:
+</p>
+<ul>
+<li class="level1"><div class="li"> the pseudo synonyms get ANDed in the search which means that we get lesser or no results (trying searching for “protein” on the beta site right now).</div>
+</li>
+<li class="level1"><div class="li"> SOLR doesn&#039;t handle multiple word queries very well.</div>
+</li>
+<li class="level1"><div class="li"> The way SOLR parses the query breaks the synonyms search.</div>
+</li>
+</ul>
+
+<p>
+I looked and looked but there was no way I could make SOLR play nice. So I&#039;ve decided to do it differently (and this is the way that is recommended).
+</p>
+
+<p>
+NOW:
+</p>
+
+<p>
+I have changed the synonyms processing to happen at *index* time (ie: when indexing the services into SOLR for search later). This does mean that every time we update the synonyms list we need to reindex all the content.
+</p>
+
+<p>
+So now, the mappings are essentially used to enrich the index for each thing that is being indexed in SOLR. This is basically the opposite of the above, and the format is:
+</p>
+
+<p>
+<em>[ a set of terms that may be in a service&#039;s metadata, or annotation, or whatever, when SOLR comes to indexing something ] ⇒ [ the list of terms that should be put into the index for that specific thing being indexed so that searches for any of these terms will match this item ]</em>
+</p>
+
+<p>
+As you&#039;ve probably guessed, this means we need to be very careful about what we have here. We CANNOT have things like this (which would be caused by ambiguous terms):
+</p>
+
+<p>
+Multiple Alignment ⇒ Multiple Alignment, Protein Sequence Analysis, Nucleotide Sequence Analysis
+</p>
+
+<p>
+… because otherwise every service etc that has the words “multiple alignment” will also get the words “Protein Sequence Analysis” AND “Nucleotide Sequence Analysis” and one of those will be incorrect for that service.
+</p>
+
+<p>
+Based on this new knowledge, please can you verify the list of synonyms that we now have for SOLR - <a href="http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/solr/solr/conf/synonyms.txt" class="urlextern" target="_blank" title="http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/solr/solr/conf/synonyms.txt"  rel="nofollow">http://biocatalogue.rubyforge.org/svn/trunk/vendor/plugins/acts_as_solr/solr/solr/conf/synonyms.txt</a>. Note the ones I have commented out (with a &#039;#&#039;) - this is because they are ambiguous.
+</p>
+
+<p>
+Note that you can still produce the raw synonyms list in the previous format because I have a script to convert it from the old format to the new (reversed) format. However there may be the danger of ambiguous terms so we should be vigilant about this.
+</p>
+
+<p>
+One added benefit to doing it this way is that we can use this to also suggest tags to users and better enrich the metadata of the services…
+</p>
+
+<p>
+Phew!
+</p>
+
+<p>
+Jits
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Email to Explain Changes [2009-06-12]" [402-] -->

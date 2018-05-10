@@ -1,0 +1,7 @@
+====== Best Practice Guidelines ======
+
+===== Other Guideline Suggestions =====
+
+  * [[http://taverna.sourceforge.net/wsguidelines|Taverna guidelines for web service providers]]
+  * [[http://www.embracegrid.info/files/pub/products/DevelopmentGuide_v2.pdf|EMBRACE - Web Services development guide]]
+  * [[http://www.xml.com/pub/a/2004/08/11/rest.html|XML.com - Implementing REST Web Services: Best Practices and Guidelines]]

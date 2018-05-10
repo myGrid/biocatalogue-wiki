@@ -1,0 +1,480 @@
+
+
+
+<h1><a name="f2f_pilot_development_review_-_4th_december_2008_ebi_cambridge" id="f2f_pilot_development_review_-_4th_december_2008_ebi_cambridge">F2F Pilot Development Review - 4th December 2008 @ EBI, Cambridge</a></h1>
+<div class="level1">
+
+</div>
+<!-- SECTION "F2F Pilot Development Review - 4th December 2008 @ EBI, Cambridge" [1-81] -->
+<h2><a name="attending" id="attending">Attending</a></h2>
+<div class="level2">
+
+<p>
+
+Rodrigo, Dave, Carole, Jits, Thomas, Eric, 
+</p>
+
+<p>
+<strong> Notes by Dave </strong> 
+</p>
+
+<p>
+Broadly the Biocatalogue team is going to be very busy over the next 2
+months getting code functionality and content in place, with a view to a
+code freeze in March and content bootstrapped for public release of the
+pilot service in April. What with Christmas, this is all only a few weeks
+away! Hence we&#039;re not looking at many interactions with myExperiment in the
+next few weeks, but there are many touch points thereafter.
+</p>
+
+<p>
+- myExperiment may be able to help bootstrap the Biocatalogue content by
+providing services extracted from the growing body of workflows (mainly
+Taverna, but even perhaps Kepler on that timescale, and Trident if the
+services are in scope).  It may also be able to provide some metadata for
+the services based on the workflow metadata.
+</p>
+
+<p>
+- myExperiment would be able to provide, on an ongoing basis, some of the
+objective data that Biocatalogue uses to establish information about
+services that is then used to assist sorting and comparison during service
+discovery.  For example, the number of workflows that use a service could
+contribute to a popularity measure. (This is one of many possible sources -
+there will be many services on Biocatalogue that are not used by workflows
+on myExperiment.)
+</p>
+
+<p>
+- myExperiment will be able to query Biocatalogue for service status
+information.  Steve Pettifer illustrated his traffic light system for
+services.  MyExperiment and/or Taverna will also (in the fullness of time)
+be able to ask Biocatalogue for services that are similar to a given
+service.
+</p>
+
+<p>
+- There was a lot of insightful discussion today about discovery.  As
+myExperiment is gaining more content we have not yet developed the discovery
+interface further to cope with this.  Some of the ideas in today&#039;s
+discussion are directly applicable to myExperiment - such as not thinking of
+ranking of search results as much as providing an interface for comparing a
+number of workflows.
+</p>
+
+<p>
+- The annotation model that is being developed in Biocatalogue is a generic
+RoR 2 plugin which provides attribute-value pairs (together with an initial
+set of possible domain values for the value part). This is a generically
+reusable e-Lab component that we may be able to apply in the evolved
+myExperiment codebase. Jits is currently working on the UI. The data model
+was discussed at lenth and appears to sit comfortably with the future use of
+ontologies.
+</p>
+
+<p>
+- The deployment architecture of Biocatalogue has followed similar
+principles to myExperiment but has two levels of redundancy (and hardware
+load-balancing).  There is still work to be done on optimising the SOLR
+config.  It would be very useful to compare notes at some stage.
+</p>
+
+<p>
+- A number of lessons from myExperiment were fed into Biocatalogue today,
+including the need to track housekeeping and sysadmin data in order to
+generate stats, and some policy questions relating to content removal.
+</p>
+
+<p>
+Thanks very much to our hosts at EBI for a really productive meeting. 
+</p>
+
+<p>
+<strong> Notes by Thomas </strong> 
+</p>
+
+</div>
+<!-- SECTION "Attending" [82-3130] -->
+<h2><a name="progress_overview" id="progress_overview">Progress overview</a></h2>
+<div class="level2">
+
+<p>
+
+All working together better with F2F.
+2 publications out already.
+</p>
+
+<p>
+Met already with half of the people on advisory board (Biomoby, Embrace…)
+</p>
+
+<p>
+Pbs:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> web server (solved except SOLR)</div>
+</li>
+<li class="level1"><div class="li"> manpower estimates → be more realistic</div>
+</li>
+<li class="level1"><div class="li"> wiki &amp; website management (content update &amp; look and feel)</div>
+</li>
+<li class="level1"><div class="li"> documentation not transparent (especially data model) → needs to be better for outside people</div>
+<ul>
+<li class="level2"><div class="li"> wiki needs to be separated in public and developper</div>
+</li>
+<li class="level2"><div class="li"> needs UML/ER diagram for data model</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> review activities</div>
+</li>
+<li class="level1"><div class="li"> timetable</div>
+</li>
+</ul>
+
+<p>
+Steve is officially part of the team  → now part of myGrid family, helping on lot of stuff including management
+</p>
+
+<p>
+Words from our users &amp; Pals:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> ranking: usefulness, stability…</div>
+</li>
+<li class="level2"><div class="li"> testing &amp; examples</div>
+</li>
+</ul>
+
+<p>
+Service profile:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> conditions of use, e.g policy for using (no more than 200 requests/min…)</div>
+</li>
+</ul>
+
+<p>
+Submit:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> some user would make an effort in providing meta-data if they could see that it&#039;d boost them in the rankings</div>
+</li>
+<li class="level2"><div class="li"> submit a test</div>
+</li>
+<li class="level2"><div class="li"> submit a monitoring mechanism</div>
+</li>
+<li class="level2"><div class="li"> need a feed telling submitter what is their ranking → need an automatic feedback to encourage people to go back to their service and annotate further</div>
+</li>
+<li class="level2"><div class="li"> adding meta-data via email ?</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> need free text annotation (e.g description) as soon as possible</div>
+</li>
+<li class="level2"><div class="li"> tags will also provide quick and very important infos to sort, ranks and find</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> manage competitiveness: do not discourage people if they&#039;ve got low rankings. Need to encourage redundancy of services.</div>
+</li>
+</ul>
+
+<p>
+Search:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> ranking: search &amp; compare</div>
+</li>
+<li class="level2"><div class="li"> filter</div>
+</li>
+<li class="level2"><div class="li"> monitor</div>
+</li>
+<li class="level2"><div class="li"> review</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> invoke: being able to invoke the service you found</div>
+</li>
+</ul>
+
+<p>
+Ownership &amp; 3rd party submission ⇒ very important and very careful
+If you submit a service which is not yours, you don&#039;t want to receive failure emails (should be able to opt out), that&#039;s the providers problem.
+Responsibilities have to be clearly defined (provider, submitter, tagger…).
+</p>
+
+</div>
+<!-- SECTION "Progress overview" [3131-5091] -->
+<h2><a name="current_tasks" id="current_tasks">Current tasks:</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Ranking: bleed key properties into the list</div>
+</li>
+<li class="level2"><div class="li"> Should we create our own categories of services and force submitter to select one or more ?</div>
+</li>
+<li class="level2"><div class="li"> Ranking different from comparing: ranking is easy, but comparing is harder</div>
+</li>
+</ul>
+
+<p>
+Needs to store queries to be able to do some performance tuning later.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Activity audit</div>
+</li>
+<li class="level2"><div class="li"> Task audit</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Content audit</div>
+</li>
+</ul>
+
+<p>
+
+How can we auto-seed the documentation/tags for services → need to do an annotation jamboree
+</p>
+
+</div>
+<!-- SECTION "Current tasks:" [5092-5579] -->
+<h2><a name="interface_architecture_functionality" id="interface_architecture_functionality">Interface, architecture &amp; functionality</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Need to make the difference between documentation from WSDL and user&#039;s description</div>
+</li>
+<li class="level2"><div class="li"> Be able to search on URLs (not working at the moment) → see with Franck &amp; Mickael</div>
+</li>
+<li class="level2"><div class="li"> On register page</div>
+<ul>
+<li class="level3"><div class="li"> delete the word “optional” after “Extra information”</div>
+</li>
+<li class="level3"><div class="li"> add “instruction for use of services”</div>
+</li>
+<li class="level3"><div class="li"> “add new description” → or “describe your service” or “describe the function of your service” (description presented to the user and indexed by search engine)</div>
+</li>
+<li class="level3"><div class="li"> box: “are you the owner of the service ?”</div>
+</li>
+<li class="level3"><div class="li"> ownership ⇒ careful to address the pb (who to contact? submitter != owner) (ownership claims, ownership confirmation, wikipedia type “I dispute this fact”)</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+
+What does google see ?
+</p>
+
+</div>
+<!-- SECTION "Interface, architecture & functionality" [5580-6348] -->
+<h2><a name="annotation_plug-in" id="annotation_plug-in">Annotation plug-in</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> will be able to annotate everything</div>
+</li>
+<li class="level2"><div class="li"> annotations will be key-value pairs</div>
+</li>
+<li class="level2"><div class="li"> seeds: pre-populated tag words for example. Where do we get the value set from ? Will probably do it later as it might get tricky to get the value set right.</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Annotation plug-in" [6349-6630] -->
+<h2><a name="monitoring_sorting_filtering" id="monitoring_sorting_filtering">Monitoring, Sorting, Filtering</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> by strong typing (db fields)</div>
+</li>
+<li class="level2"><div class="li"> by combination of values (popularity…)</div>
+</li>
+<li class="level2"><div class="li"> in 1st instance → strong typing, but which fields do we allow users to sort on ?</div>
+<ul>
+<li class="level5"><div class="li"> identify preferred fields</div>
+</li>
+<li class="level5"><div class="li"> capability of displaying</div>
+</li>
+<li class="level5"><div class="li"> subset can be pre-populated</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Objective criteria</div>
+<ul>
+<li class="level3"><div class="li"> freshness (date created, date updated)</div>
+</li>
+<li class="level3"><div class="li"> reliability (test suite success, service uptime)</div>
+</li>
+<li class="level3"><div class="li"> cost</div>
+</li>
+<li class="level3"><div class="li"> performance (result from scripts, e.g. returns result in minutes,hours,days,months…)</div>
+</li>
+<li class="level3"><div class="li"> provider (provenance, certification, compliance to standards)</div>
+</li>
+<li class="level3"><div class="li"> geotagging</div>
+</li>
+<li class="level3"><div class="li"> conditions (existence of)</div>
+</li>
+<li class="level3"><div class="li"> level of annotation (documentation)</div>
+</li>
+<li class="level3"><div class="li"> is it available now (since we last checked with date time, ping this service now)</div>
+</li>
+<li class="level3"><div class="li"> nb of workflows in myExperiment using a particular WS</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Subjective criteria</div>
+<ul>
+<li class="level5"><div class="li"> popularity (rating, comments, measured by a feed, usage statistics)</div>
+</li>
+<li class="level5"><div class="li"> scalability ?</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+How do we clean-up (e.g. major change name…) ?
+Use of data policy.
+</p>
+
+<p>
+Separate testing script from examples:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> core tests script by provider</div>
+</li>
+<li class="level2"><div class="li"> examples by users</div>
+</li>
+<li class="level2"><div class="li"> building a test suite later as part of the curation process</div>
+</li>
+</ul>
+
+<p>
+
+Would be nice to be able to run tests in a generic way (through workflow in my Experiment).
+</p>
+
+</div>
+<!-- SECTION "Monitoring, Sorting, Filtering" [6631-7990] -->
+<h2><a name="next_steps_in_the_pilot" id="next_steps_in_the_pilot">Next steps in the Pilot</a></h2>
+<div class="level2">
+
+<p>
+
+Steve wrote a DAS parser (BioSapiens is DAS).
+Steve has a collaborator who wrote a WSDL quality validator.
+</p>
+
+<p>
+DAS, REST, Generic (not from the 3 other types).
+</p>
+
+<p>
+3 biggies still missing:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> discovery (sorting, filtering)</div>
+</li>
+<li class="level2"><div class="li"> monitoring</div>
+</li>
+<li class="level2"><div class="li"> content scrapping (put content in)</div>
+<ul>
+<li class="level5"><div class="li"> partially register WS (put a few WS from a provider, and then tell them we did and ask to take ownership and complete registration) → we need a mechanism to change the ownership. Avoid misrepresentation. Low level checking of ownership by matching email address with url of WS.</div>
+</li>
+<li class="level5"><div class="li"> somebody registering a WS but not the owner can only do a partial registration. Need to be the owner to register tests for example.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+We need to take into account editing (owner, description), but restricted fields.
+</p>
+
+<p>
+<strong>Versioning</strong> might be put on the backburner.
+EMBRACEregistry deal with it by spotting changes in WSDL, send email to owner with links in the email you can follow: “minor change, ignore it”, “major change, bring me to the page to edit documentation”.
+</p>
+
+<p>
+
+<strong>Public Beta</strong> → April to coincide with the EMBRACE exit. (code freeze in March, big population activity during March)
+
+</p>
+<ul>
+<li class="level1"><div class="li"> no myExperiment integration</div>
+</li>
+<li class="level2"><div class="li"> no smart ranking</div>
+</li>
+<li class="level2"><div class="li"> usability stuff on web interface</div>
+</li>
+<li class="level2"><div class="li"> negotiations with providers in March</div>
+</li>
+<li class="level2"><div class="li"> start content acquisition NOW</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> 7 weeks of development</div>
+</li>
+</ul>
+
+</div>
+<!-- SECTION "Next steps in the Pilot" [7991-9409] -->
+<h2><a name="data_model_eric_s_slides" id="data_model_eric_s_slides">Data Model (Eric&#039;s slides)</a></h2>
+<div class="level2">
+
+<p>
+
+Annotation:
+</p>
+<ul>
+<li class="level1"><div class="li"> context (service…)</div>
+</li>
+<li class="level2"><div class="li"> provenance</div>
+</li>
+<li class="level2"><div class="li"> categories of annotations</div>
+<ul>
+<li class="level5"><div class="li"> provenance</div>
+</li>
+<li class="level5"><div class="li"> operational</div>
+</li>
+<li class="level5"><div class="li"> functional</div>
+</li>
+<li class="level5"><div class="li"> social</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Cloning VS versioning ?
+In the 1st phase, we should do cloning and later versioning.
+Different service deployments should be nested in the UI as they&#039;re the same version of the service.
+</p>
+
+<p>
+Might not have full annotations for the operations.
+</p>
+
+<p>
+Need a high quality of logging (usage statistics, activity…) → setup google analytics.
+</p>
+
+<p>
+Usecase: user types “input protein sequence” → needs to return services taking protein sequence as input.
+</p>
+
+</div>
+<!-- SECTION "Data Model (Eric's slides)" [9410-] -->

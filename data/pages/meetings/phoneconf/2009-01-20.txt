@@ -1,0 +1,82 @@
+Date: Tuesday 20th Jan 2008
+
+Time: 15:00-16:00 (UK)
+
+\\
+Telcon No: 08445805588
+
+Pin: 70503010
+
+===== Attending =====
+**Manchester:** Franck, Carole, Steve, David
+
+**EBI:** Thomas, Eric
+
+
+
+===== Apologies =====
+Rodrigo
+
+
+===== Minuting =====
+
+Eric
+
+
+====== Agenda ======
+
+  * Franck had a baby! (well, not him exactly, his wife, but you know what I mean)
+
+  * Actions from the last telcon 
+
+  * Progress with the pilot 
+
+  * Progress of [[development:20_questions|20 Questions]] (to clarify user requirements)
+
+  * Updating the BioCatalogue public wiki and announcement to friends list
+
+  * Planning for hackathon
+
+  * AOB
+
+===== Actions from Previous Meeting ===== 
+
+  * Franck : Provide an example of a semantically annotated service(using the SAWSDL model).
+  * Thomas: investigate 'home' link on the public wiki.
+  * Jits/Thomas/Eric: create developer section on the wiki.
+  * Eric: list the features of the current pilot (including annotations stuff), so that they can be used in a email announcing the private beta to the friends list.
+  * Franck: read through the revised requirements and planning doc and update the private wiki roadmap accordingly. Then after approval copy it to the public wiki.
+  * Franck: make an announcement about latest changes to schedule to the friends list.
+  * Action all : update the 20 questions section on the wiki
+  * Action Rodrigo & Carole : Check the public staging part of the wiki to approve content meant for general public
+  * Action Rodrigo : mail Eric his set of questions to put on the wiki
+  * Action Jits/Thomas/Eric : Plan for effort to spend developing know-how to effectively use solr. Possibly investigate other ways of using the server with/without the acts_as_solr plugin
+  * Action Jits/Eric : Investigate how to add some form of classification of the services
+
+
+====== Minutes ======
+There was a discussion on whether it makes sense to tag operations and inputs/outputs. Steve mentioned that in most cases that they have seen in the context of the embrace registry, there is one operation that does the 'task' of the service and other service management operations. Therefore only the tags associated with that 'functional' operation make sense beyond the context of that service. It make sense in the first instance to focus on tagging services and not necessarily operations and inputs/outputs.
+While there are cases where there are more than a single 'functional' operation within the service envelop, as seen in some DDBJ services, this seems to be the exception. In such cases, it is important to tag the different operations
+
+
+===== New Actions =====
+  * **Action David/Carole** : Review the wiki pages intended for general public. It is important to free the public wiki of internal terminology
+  * **Action Franck** : Put up a service classification draft on the wiki
+  * **Action all** : Add to and/or review the questions on the list of the "20 Questions"
+  * **Action Jits/Thomas/Eric/Franck** : Prepare for the hackathon in Manchester. 
+
+===== Upcoming Meetings ===== 
+ 
+ * Developer F2F at Manchester, week of the 19th
+
+===== AOB =====
+
+  * There will be a demo at the Strategic Advisory Board Meeting in February
+  * There is potential for collaboration with Microsoft. Initial discussions on-going with Carole
+  * Jit doing a presentation on BioCatalogue on the 29th  
+ 
+===== Previous/Next Meetings =====
+
+Previous meeting: [[Meetings:PhoneConf:2009-01-13|Phone Conference Meeting on Jan 13 2009]] 
+
+Next meeting: [[Meetings:PhoneConf:2009-01-27|Phone Conference Meeting on Jan 27 2009]] 

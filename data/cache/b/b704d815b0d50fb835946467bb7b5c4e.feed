@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.biocatalogue.org/wiki/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.biocatalogue.org/wiki/feed.php">
+        <title>Biocatalogue publications_and_presentations</title>
+        <description></description>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <image rdf:resource="http://www.biocatalogue.org/wiki/lib/images/favicon.ico" />
+       <dc:date>2009-08-25T15:40:24+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:codata_talk_2008&amp;rev=1224062121&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:ismb_2008&amp;rev=1216295662&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:soa_governance_2008&amp;rev=1223044167&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.biocatalogue.org/wiki/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.biocatalogue.org/wiki/</link>
+        <url>http://www.biocatalogue.org/wiki/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:codata_talk_2008&amp;rev=1224062121&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-15T10:15:21+01:00</dc:date>
+        <title>publications_and_presentations:codata_talk_2008</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:codata_talk_2008&amp;rev=1224062121&amp;do=diff</link>
+        <description>&lt;http://www.cs.man.ac.uk/~carole/Talks/CodatakeynoteGOBLEfinalpublish.ppt&gt;</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:ismb_2008&amp;rev=1216295662&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-07-17T12:54:22+01:00</dc:date>
+        <title>publications_and_presentations:ismb_2008</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:ismb_2008&amp;rev=1216295662&amp;do=diff</link>
+        <description>Preparation
+
+	*  Mockups
+	*  Questionnaire
+	*  Flyer</description>
+    </item>
+    <item rdf:about="http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:soa_governance_2008&amp;rev=1223044167&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-10-03T15:29:27+01:00</dc:date>
+        <title>publications_and_presentations:soa_governance_2008</title>
+        <link>http://www.biocatalogue.org/wiki/doku.php?id=publications_and_presentations:soa_governance_2008&amp;rev=1223044167&amp;do=diff</link>
+        <description>[SOA Governance1]
+
+[SOA Governance2]</description>
+    </item>
+</rdf:RDF>

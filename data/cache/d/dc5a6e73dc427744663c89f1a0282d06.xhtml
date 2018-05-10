@@ -1,0 +1,68 @@
+
+<h4><a name="next_steps_for_service_monitoring" id="next_steps_for_service_monitoring">Next Steps for Service Monitoring</a></h4>
+<div class="level4">
+
+<p>
+
+<strong>How does monitoring work at the moment?</strong>
+</p>
+
+<p>
+There are two ways monitoring is done:
+</p>
+<ol>
+<li class="level1"><div class="li"> By running simple checks on <acronym title="Uniform Resource Locator">URL</acronym> (endpoints and wsdl locations)</div>
+</li>
+<li class="level1"><div class="li"> By executing test scripts (on a separate server)</div>
+</li>
+</ol>
+
+<p>
+
+To a large extent this all works well especially with the non-endpoint <acronym title="Uniform Resource Locator">URL</acronym> checks. However, the issues which were raised at the beginning especially with maintainability of the test script approach are still there. Now that the system is in place, it is probably a good time to examine what could be improved.
+</p>
+
+<p>
+The two main issues with the current system are :
+</p>
+<ul>
+<li class="level1"><div class="li"> maintainability of the test script mechanism in the long term, especially if there is no full time effort for the BioCalogue at EBI</div>
+</li>
+<li class="level1"><div class="li"> The correctness of the implementation of the endpoint checks( for REST and <acronym title="Simple Object Access Protocol">SOAP</acronym> services )</div>
+</li>
+</ul>
+
+<p>
+   At the moment, this is implemented for soap services by sending an empty soap message to the endpoint which in many cases would respond with a soap fault. However, there is no consistency in the format of the responses sent meaning that there is no certainty in the case of a failure. Given this situation, it is either necessary to customize monitoring for failing endpoints or to try a different approach.
+</p>
+
+<p>
+<strong>Using Nagios for <acronym title="Uniform Resource Locator">URL</acronym> checks</strong>
+</p>
+
+<p>
+[[<a href="http://www.nagios.org" class="urlextern" target="_blank" title="http://www.nagios.org"  rel="nofollow">http://www.nagios.org</a>|Nagios) is a purpose built system for monitoring network infrastructure. Nagios will be able to give us monitoring, reporting and alerts. Also, as an industry standard tool, there is already a community around it with the possibility that tooling for our future monitoring needs may already exist. Additionally, at EBI, nagios is already being used for monitoring all sorts of network infrastructure. This will be one way of getting some sustainability effort for BioCatalogue through the system administrators who already maintain the nagios system.
+</p>
+
+<p>
+<strong>Use current test scripts only as examples. Not executed</strong>
+</p>
+
+<p>
+The current test script mechanism would serve as a way to let users submit sample clients which other users could download and execute in their own environments. The BioCatalogue should not have to execute these. These will shield the BioCatalogue from potential issues of keeping the script library versions in sync with developer environments. Users can therefore provide scripts independent of the BioCatalogue&#039;s capability of executing them.
+</p>
+
+<p>
+<strong>Promote the soapUI mechanism as the way to do functional testing with BioCatalogue</strong>
+</p>
+
+<p>
+It seems that many developers of services in BioCatalogue are already using soapUI for their development. I have not done any survey on this so this is just anecdotal from talking to people. The advantage of using this soapUI approach is that it actually serves both as an availability and functional test. This especially the endpoint availability which is not handled completely by the current endpoint checking mechanism. Also given that all the user needs is to submit is an xml file, it is cleaner and safer.
+</p>
+
+<p>
+<strong>Note</strong>
+Having examined the current test scripts in BioCatalogue, it seems that most are doing very trivial functional testing anyway.  The INB tests for example, just construct a <acronym title="Uniform Resource Locator">URL</acronym> which they call and then parse the expected  trivial <acronym title="Extensible Markup Language">XML</acronym>. Soaplab test scripts are generated via builder script. According to Mahmut, he could generate soapUI project files in more less the same manner. While these are not the most pressing issues on the catalogue, it will be good to have them in perpective.
+</p>
+
+</div>

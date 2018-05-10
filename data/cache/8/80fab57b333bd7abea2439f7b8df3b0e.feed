@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/feed.php">
+        <title>Biocatalogue</title>
+        <description></description>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <image rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico" />
+       <dc:date>2008-09-12T11:05:55+01:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development:annotated_pilot_services&amp;rev=1220614151&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1220610809&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development:annotation_models&amp;rev=1220557330&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development&amp;rev=1220547031&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=home&amp;rev=1220535506&amp;do=diff"/>
+                <rdf:li rdf:resource="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:requirements_for_pilot&amp;rev=1220258433&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico">
+        <title>Biocatalogue</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/</link>
+        <url>http://www.ebi.ac.uk/ebiwiki/biocatalogue/lib/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development:annotated_pilot_services&amp;rev=1220614151&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-05T12:29:11+01:00</dc:date>
+        <dc:creator>biocat-guest</dc:creator>
+        <title>development:software_development:annotated_pilot_services</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development:annotated_pilot_services&amp;rev=1220614151&amp;do=diff</link>
+        <description>A number of services was selected for the pilot catalogue. .
+These services will be annotated using the platinum model</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1220610809&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-05T11:33:29+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:data_model_pilot</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:data_model_pilot&amp;rev=1220610809&amp;do=diff</link>
+        <description>Entities
+
+Service
+
+
+Table name: services
+
+Fields:
+
+	*  id
+	*  type
+	*  unique_code
+	*  submitter_id
+
+SOAP Service
+
+
+Table name: soap_services
+
+Fields:
+
+	*  id
+	*  service_entry_id
+	*  version
+	*  name
+	*  wsdl_location
+	*  wsdl_file
+	*  description
+	*  documentation_url</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development:annotation_models&amp;rev=1220557330&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-04T20:42:10+01:00</dc:date>
+        <dc:creator>biocat-guest</dc:creator>
+        <title>development:software_development:annotation_models</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development:annotation_models&amp;rev=1220557330&amp;do=diff</link>
+        <description>Web Service in the catalogue will be ranked base on their annotation quality:
+
+
+We're aiming to get every single service in the catalogue annotated at the platinum level. The platinum annotation contains anything one can think of to describe a given service. The model used:</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development&amp;rev=1220547031&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-04T17:50:31+01:00</dc:date>
+        <dc:creator>biocat-guest</dc:creator>
+        <title>development:software_development</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:software_development&amp;rev=1220547031&amp;do=diff</link>
+        <description>*  Requirements
+	*  User Types
+	*  Questionnaire_results
+	*  Annotation models
+	*  Backend
+	*  Frontend
+	*  Middleware
+	*  Annotated pilot services</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=home&amp;rev=1220535506&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-04T14:38:26+01:00</dc:date>
+        <dc:creator>biocat-guest</dc:creator>
+        <title>home</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=home&amp;rev=1220535506&amp;do=diff</link>
+        <description>This is the wiki home page of the BioCatalogue Project.
+
+BioCatalogue will provide a curated and comprehensive catalogue of biological web services, thereby enabling users (people and programs) to discover and use these services easily. It also aims to provide a platform with several (standardized) interfaces and a suite of tools for registration of services by the community of users as well empower the community to extend and enhance the system. BioCatalogue will provide a centralized biologica…</description>
+    </item>
+    <item rdf:about="http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:requirements_for_pilot&amp;rev=1220258433&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2008-09-01T09:40:33+01:00</dc:date>
+        <dc:creator>jits</dc:creator>
+        <title>development:requirements_for_pilot - Updated time estimate</title>
+        <link>http://www.ebi.ac.uk/ebiwiki/biocatalogue/doku.php?id=development:requirements_for_pilot&amp;rev=1220258433&amp;do=diff</link>
+        <description>Note(1): annotations in '[]' are MoSCoW classifications.
+
+Note(2): estimated development and testing times ares included in the titles. These only take into account [Must] and [Should] requirements, and reflect “one FTE developer” days.
+
+Core Catalogue
+
+User Management (3-5 days)
+
+
+Note: this is core information only. Additional information is covered by .</description>
+    </item>
+</rdf:RDF>

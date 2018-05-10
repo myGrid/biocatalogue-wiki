@@ -1,0 +1,23 @@
+====== Making Web Services ======
+**I have a piece of code - how can I make it a web service - haw can I make it?**
+
+There are different solutions based on which programming language you are using.
+It also depends on expected number of users. If you plan to have more than >1000 calls a day, you should probably think about production servers instead of simple scripts.
+
+==== Best Practice ====
+Make your web service [[http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html|WS-I compliance]] 
+
+==== Command line applications ====
+To turn a command line application into SOAP server use [[http://soaplab.sourceforge.net/soaplab1/ServiceProviderGuide.html |Soaplab]]
+
+==== Programming languages ====
+  * **Java:** [[http://ws.apache.org/axis/|Apache axis]]
+  * **Python:** use [[http://trac.optio.webfactional.com/|Soaplib]]
+  * **C++**
+  * **Ruby**
+  * **Perl**
+
+==== Web frameworks ====
+Possibility of adding REST interface to existing websites is available in most of the web frameworks
+  * Rails
+  * ..
