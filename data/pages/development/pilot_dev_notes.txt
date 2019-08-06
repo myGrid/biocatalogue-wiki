@@ -147,7 +147,7 @@ This is currently under the BioCatalogue Twitter account (as mentioned elsewhere
   http://www.slideshare.net/BioCatalogue
   Username: BioCatalogue
   Email: contact@biocatalogue.org
-  Password: biocat
+  Password: {ask Jits}
 
 ===== Dropbox =====
 
@@ -157,7 +157,7 @@ Place everything in the //**BioCatalogue**// folder to have it shared with anyon
 
   http://www.dropbox.com
   Email : contact@biocatalogue.org
-  Password: bi0cat
+  Password: {ask Jits}
 
 ===== Mailing Lists =====
 
