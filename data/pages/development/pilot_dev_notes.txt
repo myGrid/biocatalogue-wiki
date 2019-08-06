@@ -43,7 +43,7 @@ See: script/biocatalogue/seekda_import.rb
 We have an account on rubyforge:
 
   Username: biocatalogue-developers@rubyforge.org
-  Password: biocateatdogs
+  Password: <OLD_JITS_PASSWORD>
 
 
 ===== reCAPTCHA =====
@@ -84,14 +84,14 @@ Note the settings in config/initializers/biocat_local.rb.pre
 
   URL: http://twitter.com/biocat_test
   Username: biocat_test
-  Password: biocateatdogs
+  Password: <OLD_JITS_PASSWORD>
   Email: biocatalogue-developers@rubyforge.org
 
   * For main site **ONLY**
 
   URL: http://twitter.com/biocatalogue
   Username: biocatalogue
-  Password: biocateatdogs
+  Password: <OLD_JITS_PASSWORD>
   Email: jits@cs.man.ac.uk
 
 
@@ -102,7 +102,7 @@ We use the service provided by http://www.addthis.com.
 We have a registered account so that we can get analytics.
 
   Username: biocatalogue
-  Password: biocateatdogs
+  Password: <OLD_JITS_PASSWORD>
   Email: jits@cs.man.ac.uk
 
 
