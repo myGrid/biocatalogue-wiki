@@ -176,7 +176,7 @@ Place everything in the //**BioCatalogue**// folder to have it shared with anyon
 | Hosted by | RubyForge |
 | To subscribe | http://rubyforge.org/mailman/listinfo/biocatalogue-developers |
 | Admin interface | http://rubyforge.org/mailman/admin/biocatalogue-developers |
-| Admin password | 0091837da58bcf1f |
+| Admin password | {ask Jits} |
 | Current Admins | Alex, Rob |
 | Archive | http://rubyforge.org/pipermail/biocatalogue-developers/ |
 
@@ -186,7 +186,7 @@ Place everything in the //**BioCatalogue**// folder to have it shared with anyon
 | Hosted by | RubyForge |
 | To subscribe | http://rubyforge.org/mailman/listinfo/biocatalogue-hackers |
 | Admin interface | http://rubyforge.org/mailman/admin/biocatalogue-hackers |
-| Admin password | 4e0727fb3004afa9 |
+| Admin password | {ask Jits} |
 | Current Admins | Alex, Rob |
 | Archive | http://rubyforge.org/pipermail/biocatalogue-hackers/ |
 
@@ -205,7 +205,7 @@ Place everything in the //**BioCatalogue**// folder to have it shared with anyon
 | Hosted by | RubyForge |
 | To subscribe | http://rubyforge.org/mailman/listinfo/biocatalogue-support |
 | Admin interface | http://rubyforge.org/mailman/admin/biocatalogue-support |
-| Admin password | e0ff170ee283ea37 |
+| Admin password | {ask Jits} |
 | Current Admins | Alex, Rob |
 | Archive | http://rubyforge.org/mailman/private/biocatalogue-support/ (private) |
 
