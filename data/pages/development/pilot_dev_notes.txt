@@ -10,7 +10,7 @@ The commenting/discussing facility uses the Disqus system (http://disqus.com/).
 
 The admin/moderator/profile interface can be accessed on the Disqus website using:
   Username: biocatalogue
-  Password: biocateatdogs
+  Password: <OLD_JITS_PASSWORD>
   Email: jits@cs.man.ac.uk
 
 For the actual comments/discussions data, two separate website accounts have been set up:
@@ -53,7 +53,7 @@ We use reCAPTCHA to do captchas for things like the Contact Us page.
 Account details:
 
   Username: biocatalogue
-  Password: biocateatdogs
+  Password: <OLD_JITS_PASSWORD>
   Email: biocatalogue-developers@rubyforge.org
 
 Info:
